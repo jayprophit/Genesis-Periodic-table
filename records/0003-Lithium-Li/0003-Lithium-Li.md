@@ -2252,10 +2252,22 @@ remaining:
 
 ```yaml
 status: "RESEARCHED"
-migration_status: "CONTENT-CORE-MIGRATED"
-schema_validation_status: "PENDING"
-visual_specification: "NOT-YET-LOCKED"
-visual_assets: "NOT-GENERATED"
+completeness: "RESEARCHED"
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  source_architecture: "PASS"
+  isotope_semantics: "PASS"
+  bulk_material_architecture: "PASS"
+  electrochemical_architecture: "PASS"
+  nuclear_architecture: "PASS"
+  evidence_architecture: "PASS"
+  scientific_core: "CORE-VALIDATED"
+  exhaustive_content: false
+visuals:
+  specification: "LOCKED"
+  generated: false
 ```
 
 The bulk reference values above are consistent with current-accessible WebElements data: about `535 kg/m³`, `4.9 GPa` Young's modulus, `9.5×10⁻⁸ Ω·m` resistivity and `85 W·m⁻¹·K⁻¹` thermal conductivity. ([WebElements][1]) DOE also describes Li-ion batteries in terms of lithium ions moving between electrodes while electrons move through the external circuit, so keeping the **ion, host and whole-cell objects separate** is the right architecture. ([The Department of Energy's Energy.gov][2])

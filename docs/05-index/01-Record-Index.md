@@ -50,8 +50,8 @@ Initial mapping:
 |---|---|---|---:|---|
 | 0001 | Hydrogen | H | 1 | IN-PROGRESS |
 | 0002 | Helium | He | 2 | IN-PROGRESS |
-| 0003 | Lithium | Li | 3 | IN-PROGRESS |
-| 0004 | Beryllium | Be | 4 |
+| 0003 | Lithium | Li | 3 | CORE-VALIDATED |
+| 0004 | Beryllium | Be | 4 | IN-PROGRESS |
 | 0005 | Boron | B | 5 |
 | 0006 | Carbon | C | 6 |
 | 0007 | Nitrogen | N | 7 |

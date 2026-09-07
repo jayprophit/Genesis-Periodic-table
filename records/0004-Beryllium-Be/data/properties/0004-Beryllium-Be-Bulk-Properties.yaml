@@ -1,0 +1,78 @@
+registry_id: "MAT:0004:REG:BULK-PROPERTIES"
+record_id: "MAT:0004"
+version: "1.0.0"
+
+reference_state:
+  material: "ELEMENTAL-BERYLLIUM-METAL"
+  phase: "MAT:0004:PHASE:HCP"
+  temperature: "ROOM-TEMPERATURE-REFERENCE"
+  pressure: "NEAR-AMBIENT"
+  warning: >
+    Beryllium is elastically anisotropic. Values here are reference
+    bulk values and do not replace direction-resolved measurements.
+
+properties:
+
+  density:
+    value: 1848
+    unit: "kg/m3"
+    source_id: "SRC-000056"
+
+  young_modulus:
+    value: 287
+    unit: "GPa"
+    source_id: "SRC-000056"
+
+  shear_modulus:
+    value: 132
+    unit: "GPa"
+    source_id: "SRC-000056"
+
+  bulk_modulus:
+    value: 130
+    unit: "GPa"
+    source_id: "SRC-000056"
+
+  poisson_ratio:
+    value: 0.032
+    unit: "1"
+    source_id: "SRC-000056"
+
+  electrical_resistivity:
+    value: 3.8e-8
+    unit: "ohm*m"
+    source_id: "SRC-000056"
+
+  electrical_conductivity:
+    value: 2.6315789e7
+    unit: "S/m"
+    derived: true
+    equation: "sigma = 1/rho"
+
+  thermal_conductivity:
+    value: 190
+    unit: "W/(m*K)"
+    source_id: "SRC-000056"
+
+  linear_thermal_expansion:
+    value: 11.3e-6
+    unit: "1/K"
+    source_id: "SRC-000056"
+
+  sound_velocity:
+    value: 13000
+    unit: "m/s"
+    source_id: "SRC-000056"
+
+derived:
+
+  specific_young_modulus:
+    value: 1.5530303e8
+    unit: "m2/s2"
+    equation: "E/rho"
+    calculation_id: "MAT:0004:CALC:001"
+
+rules:
+  bulk_property_equals_atomic_property: false
+  reference_value_is_universal: false
+  crystallographic_direction_may_matter: true

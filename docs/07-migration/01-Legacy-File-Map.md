@@ -12,8 +12,8 @@ This file maps old Genesis files to new MAT locations.
 | G0000 | records/0000-Origin-State/ | IN-PROGRESS |
 | G0001 | records/0001-Hydrogen-H/ | MIGRATED-PENDING-ARCHIVE |
 | G0002 | records/0002-Helium-He/ | IN-PROGRESS |
-| G0003 | records/0003-Lithium-Li/ | IN-PROGRESS |
-| G0004 | records/0004-Beryllium-Be/ | NOT-STARTED |
+| G0003 | records/0003-Lithium-Li/ | MIGRATED-PENDING-ARCHIVE |
+| G0004 | records/0004-Beryllium-Be/ | IN-PROGRESS |
 | G0005 | records/0005-Boron-B/ | NOT-STARTED |
 | G0006 | records/0006-Carbon-C/ | NOT-STARTED |
 | G0007 | records/0007-Nitrogen-N/ | NOT-STARTED |
