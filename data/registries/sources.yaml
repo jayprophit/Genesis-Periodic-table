@@ -1,0 +1,363 @@
+registry:
+  name: "MAT Global Source Registry"
+  registry_id: "MAT:REG:SOURCES"
+  version: "1.0.0"
+
+sources:
+
+  # =========================================================
+  # MAT 0000
+  # =========================================================
+
+  - source_id: "SRC-000001"
+    source_aliases:
+      - "SRC-0000-001"
+    title: "G0000 — Universal Reference / Origin State"
+    source_type: "PROJECT-HISTORICAL-SOURCE"
+    supports:
+      - "MAT:0000 migration history"
+
+  - source_id: "SRC-000002"
+    source_aliases:
+      - "SRC-0000-002"
+    organization: "National Institute of Standards and Technology"
+    topic: "SI units and thermodynamic temperature"
+    source_type: "AUTHORITATIVE-METROLOGY"
+    supports:
+      - kelvin
+      - SI
+      - absolute_zero_context
+
+  - source_id: "SRC-000003"
+    source_aliases:
+      - "SRC-0000-003"
+    organization: "International Union of Pure and Applied Chemistry"
+    title: "Quantities, Units and Symbols in Physical Chemistry"
+    common_name: "IUPAC Green Book"
+    source_type: "AUTHORITATIVE-SCIENTIFIC-REFERENCE"
+    supports:
+      - standard_state_conventions
+      - thermodynamic_reference_conditions
+
+  - source_id: "SRC-000004"
+    source_aliases:
+      - "SRC-0000-004"
+    organization: "American Physical Society"
+    topic: "Quantum vacuum and vacuum fluctuations"
+    source_type: "SCIENTIFIC-REFERENCE"
+    supports:
+      - quantum_vacuum_context
+
+  # =========================================================
+  # MAT 0001 HYDROGEN
+  # =========================================================
+
+  - source_id: "SRC-000005"
+    source_aliases:
+      - "SRC-H-001"
+    title: "NIST Atomic Spectra Database"
+    organization: "National Institute of Standards and Technology"
+    version: "5.12"
+    doi: "10.18434/T4W30F"
+    source_type: "EVALUATED-DATABASE"
+    supports:
+      - atomic_ground_configuration
+      - atomic_ground_level
+      - ionization_energy
+      - atomic_spectroscopy
+
+  - source_id: "SRC-000006"
+    source_aliases:
+      - "SRC-H-002"
+    title: "Atomic Weights and Isotopic Compositions for Hydrogen"
+    organization: "National Institute of Standards and Technology"
+    source_type: "SCIENTIFIC-DATABASE"
+    supports:
+      - standard_atomic_weight
+      - isotope_masses
+      - representative_isotopic_composition
+
+  - source_id: "SRC-000007"
+    source_aliases:
+      - "SRC-H-003"
+    title: "NIST Chemistry WebBook — Atomic Hydrogen"
+    organization: "National Institute of Standards and Technology"
+    source_type: "EVALUATED-DATABASE"
+    supports:
+      - electron_affinity
+      - atomic_thermochemistry
+
+  - source_id: "SRC-000008"
+    source_aliases:
+      - "SRC-H-004"
+    title: "The NUBASE2020 Evaluation of Nuclear Physics Properties"
+    authors:
+      - "F. G. Kondev"
+      - "M. Wang"
+      - "W. J. Huang"
+      - "S. Naimi"
+      - "G. Audi"
+    year: 2021
+    doi: "10.1088/1674-1137/abddae"
+    source_type: "EVALUATED-NUCLEAR-DATA"
+    supports:
+      - isotope_stability
+      - nuclear_spin_parity
+      - half_life
+      - decay_modes
+
+  - source_id: "SRC-000009"
+    source_aliases:
+      - "SRC-H-005"
+    title: "Measurement of the Unperturbed Hydrogen Hyperfine Transition Frequency"
+    authors:
+      - "Helmut Hellwig"
+      - "Robert F. C. Vessot"
+      - "Martin W. Levine"
+      - "Paul W. Zitzewitz"
+      - "David W. Allan"
+      - "David J. Glaze"
+    year: 1970
+    source_type: "PRIMARY-EXPERIMENT"
+    supports:
+      - hydrogen_21cm_hyperfine_frequency
+
+  - source_id: "SRC-000010"
+    source_aliases:
+      - "SRC-H-006"
+    title: "NIST Chemistry WebBook — Molecular Hydrogen"
+    organization: "National Institute of Standards and Technology"
+    source_type: "EVALUATED-DATABASE"
+    supports:
+      - H2_identity
+      - H2_spectroscopy
+      - H2_thermochemistry
+
+  - source_id: "SRC-000011"
+    source_aliases:
+      - "SRC-H-007"
+    title: "Heats of Combustion and Related Properties of Pure Substances — Updated 2026"
+    organization: "National Institute of Standards and Technology"
+    report: "NIST TN 2126-upd1"
+    year: 2026
+    source_type: "EVALUATED-COMPILATION"
+    supports:
+      - hydrogen_boiling_point
+      - combustion_properties
+      - ortho_para_context
+
+  - source_id: "SRC-000012"
+    source_aliases:
+      - "SRC-H-008"
+    title: "Fundamental Equations of State for Parahydrogen, Normal Hydrogen, and Orthohydrogen"
+    authors:
+      - "J. W. Leachman"
+      - "R. T. Jacobsen"
+      - "S. G. Penoncello"
+      - "E. W. Lemmon"
+    year: 2009
+    journal: "Journal of Physical and Chemical Reference Data"
+    volume: 38
+    pages: "721-748"
+    doi: "10.1063/1.3160306"
+    source_type: "REFERENCE-EQUATION-OF-STATE"
+    supports:
+      - parahydrogen
+      - normal_hydrogen
+      - orthohydrogen
+      - thermophysical_properties
+
+  - source_id: "SRC-000013"
+    source_aliases:
+      - "SRC-H-009"
+    title: "Hydrogen Storage"
+    organization: "United States Department of Energy"
+    source_type: "GOVERNMENT-TECHNICAL-REFERENCE"
+    supports:
+      - compressed_storage
+      - cryogenic_storage
+      - cryo_compressed_storage
+      - energy_density
+
+  - source_id: "SRC-000014"
+    source_aliases:
+      - "SRC-H-010"
+    title: "Materials-Based Hydrogen Storage"
+    organization: "United States Department of Energy"
+    source_type: "GOVERNMENT-TECHNICAL-REFERENCE"
+    supports:
+      - hydrides
+      - chemical_storage
+      - sorbents
+
+  - source_id: "SRC-000015"
+    source_aliases:
+      - "SRC-H-011"
+    title: "Is Hydrogen Safe?"
+    organization: "United States Department of Energy"
+    source_type: "GOVERNMENT-SAFETY-REFERENCE"
+    supports:
+      - hydrogen_safety
+      - leakage
+      - embrittlement_context
+      - material_compatibility
+
+  - source_id: "SRC-000016"
+    source_aliases:
+      - "SRC-H-012"
+    title: "Metal Hydride Storage Materials"
+    organization: "United States Department of Energy"
+    source_type: "GOVERNMENT-TECHNICAL-REFERENCE"
+    supports:
+      - metal_hydride_storage
+      - storage_capacity
+      - kinetics
+      - cycle_life
+
+  - source_id: "SRC-000017"
+    source_aliases:
+      - "SRC-H-013"
+    title: "Measurement of 6H Ground State Energy in an Electron Scattering Experiment at MAMI-A1"
+    authors:
+      - "Tianhao Shao"
+      - "Jinhui Chen"
+      - "Josef Pochodzalla"
+      - "Patrick Achenbach"
+      - "et al."
+    journal: "Physical Review Letters"
+    year: 2025
+    volume: 134
+    article: "162501"
+    doi: "10.1103/PhysRevLett.134.162501"
+    source_type: "PRIMARY-EXPERIMENT"
+    supports:
+      - hydrogen_6_ground_state
+
+  - source_id: "SRC-000018"
+    source_aliases:
+      - "SRC-H-014"
+    title: "CODATA Recommended Values of the Fundamental Physical Constants: 2022"
+    organization: "CODATA / NIST"
+    source_type: "EVALUATED-CONSTANTS"
+    supports:
+      - speed_of_light
+      - atomic_mass_energy_equivalent
+      - fundamental_constants
+
+  - source_id: "SRC-000019"
+    source_aliases:
+      - "SRC-H-015"
+    title: "Atomic Weights and Isotopic Compositions for Helium"
+    organization: "National Institute of Standards and Technology"
+    source_type: "SCIENTIFIC-DATABASE"
+    supports:
+      - helium_3_mass
+      - helium_4_mass
+      - DT_fusion_calculation
+
+  # =========================================================
+  # HYDROGEN HISTORY
+  # =========================================================
+
+  - source_id: "SRC-000020"
+    source_aliases:
+      - "SRC-H-HIST-001"
+    title: "Hydrogen — Historical Information"
+    organization: "WebElements / University of Sheffield"
+    source_type: "HISTORY-REFERENCE"
+    supports:
+      - Boyle
+      - Cavendish
+      - Lavoisier
+
+  - source_id: "SRC-000021"
+    source_aliases:
+      - "SRC-H-HIST-002"
+    title: "Harold C. Urey, Ferdinand G. Brickwedde, and the Discovery of Deuterium"
+    organization: "National Institute of Standards and Technology"
+    source_type: "INSTITUTIONAL-HISTORY"
+    supports:
+      - Urey
+      - Murphy
+      - Brickwedde
+      - deuterium_discovery
+
+  - source_id: "SRC-000022"
+    source_aliases:
+      - "SRC-H-HIST-003"
+    title: "James Dewar"
+    organization: "Royal Institution"
+    source_type: "INSTITUTIONAL-HISTORY"
+    supports:
+      - hydrogen_liquefaction
+      - solid_hydrogen
+
+  - source_id: "SRC-000023"
+    source_aliases:
+      - "SRC-H-HIST-004"
+    title: "Transmutation Effects observed with Heavy Hydrogen"
+    authors:
+      - "M. L. Oliphant"
+      - "P. Harteck"
+      - "Ernest Rutherford"
+    journal: "Nature"
+    year: 1934
+    volume: 133
+    page: 413
+    doi: "10.1038/133413a0"
+    source_type: "PRIMARY-HISTORICAL-EXPERIMENT"
+    supports:
+      - heavy_hydrogen_transmutation
+      - tritium_nuclear_lineage
+  - source_id: "SRC-000024"
+    source_aliases:
+      - "SRC-He-001"
+    title: "NIST Chemistry WebBook — Helium"
+    organization: "National Institute of Standards and Technology"
+    source_type: "EVALUATED-DATABASE"
+    supports:
+      - helium_identity
+      - helium_phase_data
+      - gas_phase_ion_energetics
+
+  - source_id: "SRC-000025"
+    source_aliases:
+      - "SRC-He-002"
+    title: "Thermophysical Properties of Helium-4 from 0.8 to 1500 K with Pressures to 2000 MPa"
+    authors:
+      - "V. D. Arp"
+      - "R. D. McCarty"
+      - "D. G. Friend"
+    organization: "National Institute of Standards and Technology"
+    report: "NIST Technical Note 1334"
+    source_type: "EVALUATED-THERMOPHYSICAL-REFERENCE"
+    supports:
+      - helium4_normal_boiling_point
+      - helium4_critical_point
+      - helium4_lambda_line
+      - helium4_phase_behavior
+      - helium4_thermophysical_properties
+
+  - source_id: "SRC-000026"
+    source_aliases:
+      - "SRC-He-003"
+    title: "Equation of State and Thermophysical Properties of Helium-3"
+    authors:
+      - "Yonghua Huang"
+      - "G. B. Chen"
+      - "V. Arp"
+      - "Ray Radebaugh"
+    organization: "National Institute of Standards and Technology"
+    year: 2007
+    source_type: "THERMOPHYSICAL-MODEL"
+    supports:
+      - helium3_equation_of_state
+      - helium3_phase_lines
+      - helium3_thermophysical_properties
+
+rules:
+  ids_are_global: true
+  ids_are_recycled: false
+  source_aliases_are_permitted: true
+  alias_is_canonical_identity: false
+  AI_tool_is_source: false

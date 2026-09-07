@@ -49,7 +49,7 @@ Initial mapping:
 | MAT | Element | Symbol | Atomic Number | Status |
 |---|---|---|---:|---|
 | 0001 | Hydrogen | H | 1 | IN-PROGRESS |
-| 0002 | Helium | He | 2 |
+| 0002 | Helium | He | 2 | IN-PROGRESS |
 | 0003 | Lithium | Li | 3 |
 | 0004 | Beryllium | Be | 4 |
 | 0005 | Boron | B | 5 |

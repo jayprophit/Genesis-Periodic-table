@@ -10,8 +10,8 @@ This file maps old Genesis files to new MAT locations.
 |---|---|---|
 | README.md | Root README + Causali E archive | IN-PROGRESS |
 | G0000 | records/0000-Origin-State/ | IN-PROGRESS |
-| G0001 | records/0001-Hydrogen-H/ | IN-PROGRESS |
-| G0002 | records/0002-Helium-He/ | NOT-STARTED |
+| G0001 | records/0001-Hydrogen-H/ | MIGRATED-PENDING-ARCHIVE |
+| G0002 | records/0002-Helium-He/ | IN-PROGRESS |
 | G0003 | records/0003-Lithium-Li/ | NOT-STARTED |
 | G0004 | records/0004-Beryllium-Be/ | NOT-STARTED |
 | G0005 | records/0005-Boron-B/ | NOT-STARTED |

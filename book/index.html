@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materials Atlas Table Codex — MAT (e-book)</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#0f141b">
+</head>
+<body>
+<div id="progress"></div>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">MAT</div>
+      <div>
+        <div class="brand-title">Materials Atlas Table Codex</div>
+        <div class="brand-sub">digital book · preview</div>
+      </div>
+      <button id="toc-toggle" aria-label="Toggle table of contents">☰</button>
+    </div>
+    <input id="search" type="search" placeholder="Filter chapters…" aria-label="Filter chapters">
+    <nav id="toc" aria-label="Table of contents"></nav>
+    <div class="side-foot">
+      <span id="count"></span>
+      <button id="print-btn" title="Print / save as PDF">⎙ Print</button>
+    </div>
+  </aside>
+  <main id="reader">
+    <section id="cover">
+      <p class="kicker">Materials Atlas Table Codex</p>
+      <h1>Atlas of Matter, Materials, Properties, States, Processes and Transformations</h1>
+      <p class="lede">A structured scientific atlas from atomic identity to engineered material — human-readable and machine-readable, evidence-graded and condition-aware.</p>
+      <button id="start-btn">Start reading →</button>
+      <p class="cover-note">Use the table of contents to browse. ← → keys turn pages. Works offline once loaded.</p>
+    </section>
+    <article id="content" hidden>
+      <p id="crumb"></p>
+      <div id="page"></div>
+      <div class="pager">
+        <button id="prev">← Previous</button>
+        <button id="next">Next →</button>
+      </div>
+    </article>
+  </main>
+</div>
+<script src="./book.js"></script>
+<script>
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(() => {});
+</script>
+<script>
+if (window.MathJax === undefined) {
+  var s = document.createElement("script");
+  s.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+  s.async = true;
+  document.head.appendChild(s);
+}
+</script>
+</body>
+</html>

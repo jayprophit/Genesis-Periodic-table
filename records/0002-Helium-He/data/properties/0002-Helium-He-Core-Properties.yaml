@@ -1,0 +1,106 @@
+property_registry_id: "MAT:0002:REG:CORE-PROPERTIES"
+record_id: "MAT:0002"
+version: "1.0.0"
+
+properties:
+
+  - property_id: "identity.atomic-number"
+    value: 2
+    unit: "1"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+
+  - property_id: "identity.standard-atomic-weight"
+    value: 4.002602
+    uncertainty: 0.000002
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000019"
+
+  - property_id: "electronic.ground-configuration"
+    value: "1s2"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000005"
+
+  - property_id: "electronic.ground-level"
+    value: "1S0"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000005"
+
+  - property_id: "electronic.ionization-energy.first"
+    value: 24.587389011
+    uncertainty: 0.000000025
+    unit: "eV"
+    state: "neutral atomic helium ground state"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000005"
+
+  - property_id: "electronic.ionization-energy.second"
+    value: 54.4177655282
+    uncertainty: 0.0000000010
+    unit: "eV"
+    state: "He+ ground state"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000005"
+
+  - property_id: "thermal.normal-boiling-point"
+    value: 4.2221
+    unit: "K"
+    isotope: "4He"
+    pressure:
+      value: 101325
+      unit: "Pa"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000025"
+
+  - property_id: "thermal.critical-temperature"
+    value: 5.1953
+    unit: "K"
+    isotope: "4He"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000025"
+
+  - property_id: "pressure.critical"
+    value: 227460
+    unit: "Pa"
+    isotope: "4He"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000025"
+
+  - property_id: "phase.lambda-transition.lower"
+    value: 2.1768
+    unit: "K"
+    isotope: "4He"
+    pressure:
+      value: 5041.8
+      unit: "Pa"
+    transition:
+      from: "He-I"
+      to: "He-II"
+    evidence_type: "EVALUATED"
+    confidence: "A"
+    source_id: "SRC-000025"
+
+null_properties:
+
+  ordinary_stable_neutral_diatomic_molecule:
+    value: "NOT-ESTABLISHED"
+    note: >
+      Ordinary ground-state bulk helium is monatomic.
+      Specialized excited and ionic dimer states are separate child objects.
+
+  conventional_atmospheric_pressure_melting_point:
+    value: "NOT-APPLICABLE"
+    note: >
+      Helium solidification requires pressure; phase behavior must be
+      recorded with pressure rather than as one generic melting point.
+
+  permanent_engineered_magnetization:
+    value: "NOT-APPLICABLE"

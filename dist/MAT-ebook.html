@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materials Atlas Table Codex — MAT (e-book)</title>
+<style>
+:root {
+  --bg: #0f141b; --panel: #161d27; --ink: #e8edf3; --muted: #9aa7b8;
+  --accent: #6cb2ff; --line: #26313f; --code: #0b0f15;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.65 system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+#progress { height: 3px; background: var(--accent); width: 0; position: fixed; top: 0; left: 0; z-index: 50; }
+#app { display: flex; min-height: 100vh; }
+#sidebar { width: 340px; flex: 0 0 340px; background: var(--panel);
+  border-right: 1px solid var(--line); display: flex; flex-direction: column;
+  position: sticky; top: 0; height: 100vh; }
+.brand { display: flex; gap: 10px; align-items: center; padding: 14px; border-bottom: 1px solid var(--line); }
+.brand-mark { background: var(--accent); color: #06121f; font-weight: 800;
+  border-radius: 8px; padding: 6px 9px; }
+.brand-title { font-weight: 700; font-size: 14px; }
+.brand-sub { color: var(--muted); font-size: 12px; }
+#toc-toggle { display: none; margin-left: auto; background: none; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+#search { margin: 10px 12px; padding: 8px 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--code); color: var(--ink); }
+#toc { overflow-y: auto; padding: 0 12px 12px; flex: 1; }
+.toc-sec { color: var(--muted); text-transform: uppercase; font-size: 11px;
+  letter-spacing: .08em; margin: 14px 0 6px; }
+.toc-item { display: block; width: 100%; text-align: left; background: none;
+  border: 0; color: var(--ink); padding: 5px 8px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+.toc-item:hover { background: #1e2836; }
+.toc-item.active { background: #22344d; color: #fff; }
+.side-foot { display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+#print-btn { background: none; color: var(--ink); border: 1px solid var(--line);
+  border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+#reader { flex: 1; min-width: 0; padding: 48px clamp(20px, 6vw, 90px); }
+#cover { max-width: 640px; margin: 12vh auto; text-align: center; }
+.kicker { color: var(--accent); letter-spacing: .2em; text-transform: uppercase; font-size: 12px; }
+#cover h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.2; }
+.lede { color: var(--muted); font-size: 18px; }
+#start-btn { font-size: 17px; padding: 10px 22px; border-radius: 10px; border: 0;
+  background: var(--accent); color: #06121f; font-weight: 700; cursor: pointer; }
+.cover-note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+#crumb { color: var(--muted); font-size: 13px; }
+#page { max-width: 760px; }
+#page h1, #page h2, #page h3 { line-height: 1.3; }
+#page table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 12px 0; }
+#page th, #page td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
+#page code { background: var(--code); padding: 1px 5px; border-radius: 5px; font-size: .9em; }
+#page pre { background: var(--code); padding: 12px; border-radius: 8px; overflow-x: auto; }
+#page pre code { background: none; padding: 0; }
+#page blockquote { border-left: 3px solid var(--accent); margin: 12px 0; padding: 4px 12px; color: var(--muted); }
+#page img { max-width: 100%; }
+.pager { display: flex; justify-content: space-between; max-width: 760px; margin: 28px 0 60px; }
+.pager button { background: #1c2634; color: var(--ink); border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+@media (max-width: 860px) {
+  #sidebar { position: fixed; z-index: 20; transform: translateX(-100%); transition: .2s; }
+  body.toc-open #sidebar { transform: none; }
+  #toc-toggle { display: inline-block; }
+}
+@media print {
+  #sidebar, .pager, #progress, #cover { display: none; }
+  body { background: #fff; color: #000; }
+  #page { max-width: 100%; }
+}
+
+</style>
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+
+<meta name="theme-color" content="#0f141b">
+</head>
+<body>
+<div id="progress"></div>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">MAT</div>
+      <div>
+        <div class="brand-title">Materials Atlas Table Codex</div>
+        <div class="brand-sub">digital book · preview</div>
+      </div>
+      <button id="toc-toggle" aria-label="Toggle table of contents">☰</button>
+    </div>
+    <input id="search" type="search" placeholder="Filter chapters…" aria-label="Filter chapters">
+    <nav id="toc" aria-label="Table of contents"></nav>
+    <div class="side-foot">
+      <span id="count"></span>
+      <button id="print-btn" title="Print / save as PDF">⎙ Print</button>
+    </div>
+  </aside>
+  <main id="reader">
+    <section id="cover">
+      <p class="kicker">Materials Atlas Table Codex</p>
+      <h1>Atlas of Matter, Materials, Properties, States, Processes and Transformations</h1>
+      <p class="lede">A structured scientific atlas from atomic identity to engineered material — human-readable and machine-readable, evidence-graded and condition-aware.</p>
+      <button id="start-btn">Start reading →</button>
+      <p class="cover-note">Use the table of contents to browse. ← → keys turn pages. Works offline once loaded.</p>
+    </section>
+    <article id="content" hidden>
+      <p id="crumb"></p>
+      <div id="page"></div>
+      <div class="pager">
+        <button id="prev">← Previous</button>
+        <button id="next">Next →</button>
+      </div>
+    </article>
+  </main>
+</div>
+<script>window.MAT_PRINT_ALL = true;</script>
+<script>
+/* MAT e-book reader: manifest TOC + dependency-free Markdown rendering. */
+const tocEl = document.getElementById("toc");
+const pageEl = document.getElementById("page");
+const contentEl = document.getElementById("content");
+const coverEl = document.getElementById("cover");
+const crumbEl = document.getElementById("crumb");
+const searchEl = document.getElementById("search");
+const countEl = document.getElementById("count");
+let flat = []; let current = -1;
+
+function esc(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+function inline(s) {
+  s = esc(s);
+  s = s.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, a, u) =>
+    `<img alt="${a}" src="${resolveUrl(u)}">`);
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, t, u) => {
+    if (/\.md(#.*)?$/i.test(u)) return `<a href="#" data-md="${u}">${t}</a>`;
+    if (/^https?:/.test(u)) return `<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+    return `<a href="${resolveUrl(u)}">${t}</a>`;
+  });
+  s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|\W)\*([^*\n]+)\*/g, "$1<em>$2</em>");
+  return s;
+}
+function resolveUrl(u) {
+  if (/^(https?:|data:|#)/.test(u)) return u;
+  const base = flat[current] ? flat[current].path.split("/").slice(0, -1).join("/") + "/" : "";
+  return base + u;
+}
+function renderMarkdown(src) {
+  const lines = src.replace(/\r\n/g, "\n").split("\n");
+  let html = "", i = 0, inCode = false, codeLang = "", buf = [];
+  let listStack = [];
+  const closeLists = (depth = 0) => {
+    while (listStack.length > depth) html += listStack.pop() === "ul" ? "</ul>" : "</ol>";
+  };
+  const flushPara = () => {
+    if (buf.length) { html += `<p>${inline(buf.join(" "))}</p>`; buf = []; }
+  };
+  const isTableRow = (l) => /^\s*\|.*\|\s*$/.test(l);
+  while (i < lines.length) {
+    const line = lines[i];
+    const fence = line.match(/^(`{3,})(\w*)/);
+    if (fence) {
+      if (!inCode) { flushPara(); closeLists(); inCode = true; codeLang = fence[2]; buf = []; }
+      else {
+        html += `<pre><code>${esc(buf.join("\n"))}</code></pre>`; buf = []; inCode = false;
+      }
+      i++; continue;
+    }
+    if (inCode) { buf.push(line); i++; continue; }
+    if (/^\s*$/.test(line)) { flushPara(); i++; continue; }
+    const h = line.match(/^(#{1,4})\s+(.*)/);
+    if (h) { flushPara(); closeLists(); html += `<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`; i++; continue; }
+    if (/^---+\s*$/.test(line)) { flushPara(); closeLists(); html += "<hr>"; i++; continue; }
+    if (/^>\s?/.test(line)) { flushPara(); html += `<blockquote>${inline(line.replace(/^>\s?/, ""))}</blockquote>`; i++; continue; }
+    if (isTableRow(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|?[\s:|-]*$/.test(lines[i + 1])) {
+      flushPara(); closeLists();
+      const cells = (r) => r.trim().replace(/^\||\|$/g, "").split("|").map((c) => `<th>${inline(c.trim())}</th>`).join("");
+      html += `<table><thead><tr>${cells(line)}</tr></thead><tbody>`;
+      i += 2;
+      while (i < lines.length && isTableRow(lines[i])) {
+        const tds = lines[i].trim().replace(/^\||\|$/g, "").split("|").map((c) => `<td>${inline(c.trim())}</td>`).join("");
+        html += `<tr>${tds}</tr>`; i++;
+      }
+      html += "</tbody></table>"; continue;
+    }
+    const ul = line.match(/^(\s*)[-*]\s+(.*)/);
+    const ol = line.match(/^(\s*)\d+[.)]\s+(.*)/);
+    if (ul || ol) {
+      flushPara();
+      const depth = Math.floor(((ul ? ul[1] : ol[1]).length) / 2);
+      const tag = ul ? "ul" : "ol";
+      closeLists(depth);
+      if (listStack[depth] !== tag) { closeLists(depth); html += `<${tag}>`; listStack[depth] = tag; listStack.length = depth + 1; }
+      html += `<li>${inline(ul ? ul[2] : ol[2])}</li>`; i++; continue;
+    }
+    buf.push(line.trim()); i++;
+  }
+  flushPara(); closeLists();
+  return html;
+}
+
+async function loadChapter(idx) {
+  if (idx < 0 || idx >= flat.length) return;
+  current = idx;
+  const ch = flat[idx];
+  document.querySelectorAll(".toc-item").forEach((b) => b.classList.toggle("active", +b.dataset.idx === idx));
+  coverEl.hidden = true; contentEl.hidden = false;
+  crumbEl.textContent = `${ch.section} · ${ch.title}`;
+  pageEl.innerHTML = "<p>Loading…</p>";
+  try {
+    const res = await fetch(ch.path);
+    if (!res.ok) throw new Error(res.status);
+    pageEl.innerHTML = renderMarkdown(await res.text());
+  } catch {
+    pageEl.innerHTML = "<p><em>Could not load this chapter. Is the preview server running?</em></p>";
+  }
+  document.getElementById("prev").disabled = idx === 0;
+  document.getElementById("next").disabled = idx === flat.length - 1;
+  document.getElementById("progress").style.width = `${((idx + 1) / flat.length) * 100}%`;
+  window.scrollTo(0, 0);
+  if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise();
+  location.hash = "#/" + idx;
+}
+
+function buildTOC(manifest) {
+  tocEl.innerHTML = "";
+  flat = [];
+  manifest.chapters.forEach((sec) => {
+    const h = document.createElement("div");
+    h.className = "toc-sec"; h.textContent = sec.section;
+    tocEl.appendChild(h);
+    sec.items.forEach((it) => {
+      const idx = flat.length;
+      flat.push({ ...it, section: sec.section });
+      const b = document.createElement("button");
+      b.className = "toc-item"; b.dataset.idx = idx; b.textContent = it.title;
+      b.onclick = () => loadChapter(idx);
+      tocEl.appendChild(b);
+    });
+  });
+  countEl.textContent = `${flat.length} chapters`;
+}
+
+fetch("../book/manifest.json").then((r) => r.json()).then((m) => {
+  buildTOC(m);
+  document.getElementById("start-btn").onclick = () => loadChapter(0);
+  document.getElementById("prev").onclick = () => loadChapter(current - 1);
+  document.getElementById("next").onclick = () => loadChapter(current + 1);
+  document.getElementById("print-btn").onclick = () => window.print();
+  document.getElementById("toc-toggle").onclick = () => document.body.classList.toggle("toc-open");
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") loadChapter(current + 1);
+    if (e.key === "ArrowLeft") loadChapter(current - 1);
+  });
+  pageEl.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-md]");
+    if (!a) return;
+    e.preventDefault();
+    const target = a.getAttribute("data-md").split("#")[0].toLowerCase();
+    const found = flat.findIndex((c) => c.path.toLowerCase().endsWith(target));
+    if (found >= 0) loadChapter(found);
+  });
+  searchEl.oninput = () => {
+    const q = searchEl.value.toLowerCase();
+    document.querySelectorAll(".toc-item").forEach((b) => {
+      b.style.display = b.textContent.toLowerCase().includes(q) ? "" : "none";
+    });
+    document.querySelectorAll(".toc-sec").forEach((s) => {
+      let n = s.nextElementSibling, any = false;
+      while (n && !n.classList.contains("toc-sec")) {
+        if (n.style.display !== "none") { any = true; break; }
+        n = n.nextElementSibling;
+      }
+      s.style.display = any ? "" : "none";
+    });
+  };
+  const fromHash = parseInt((location.hash.match(/#\/(\d+)/) || [])[1], 10);
+  if (!isNaN(fromHash)) loadChapter(fromHash);
+  if (window.MAT_PRINT_ALL) {
+    // Linear export mode: render every chapter into one printable document.
+    (async () => {
+      coverEl.hidden = true; contentEl.hidden = false;
+      crumbEl.textContent = "Complete edition — all chapters";
+      pageEl.innerHTML = "<p>Assembling complete edition…</p>";
+      let out = "";
+      for (let k = 0; k < flat.length; k++) {
+        try {
+          const res = await fetch(flat[k].path);
+          const md = await res.text();
+          const saved = current; current = k;
+          out += `<h1>${esc(flat[k].section)} — ${esc(flat[k].title)}</h1>` + renderMarkdown(md) + "<hr>";
+          current = saved;
+        } catch { out += `<h1>${esc(flat[k].title)}</h1><p><em>Load failed.</em></p>`; }
+      }
+      pageEl.innerHTML = out;
+      document.getElementById("progress").style.width = "100%";
+      if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise();
+    })();
+  }
+  window.addEventListener("hashchange", () => {
+    const i = parseInt((location.hash.match(/#\/(\d+)/) || [])[1], 10);
+    if (!isNaN(i) && i !== current) loadChapter(i);
+  });
+});
+
+</script>
+<script>
+if ("serviceWorker" in navigator) Promise.reject(new Error("no-sw-in-export")).catch(() => {});
+</script>
+<script>
+if (window.MathJax === undefined) {
+  var s = document.createElement("script");
+  s.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+  s.async = true;
+  document.head.appendChild(s);
+}
+</script>
+</body>
+</html>

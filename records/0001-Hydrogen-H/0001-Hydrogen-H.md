@@ -3258,11 +3258,23 @@ remaining:
 # 55. Current Record Status
 
 ```yaml
-status: RESEARCHED
-migration_status: CONTENT-MIGRATED
-validation_status: FINAL-AUDIT-PENDING
-visual_specification: LOCKED
-visual_assets: NOT-GENERATED
+status: "RESEARCHED"
+completeness: "RESEARCHED"
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+schema_validation_status: "PASS"
+scientific_validation_status: "CORE-VALIDATED"
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  filenames: "PASS"
+  evidence_architecture: "PASS"
+  source_registry: "PASS"
+  forward_references: "PASS"
+  scientific_core: "VALIDATED"
+  exhaustive_content: false
+visuals:
+  specification: "LOCKED"
+  generated: false
 ```
 
 Do not yet mark the legacy `G0001` file archived or fully migrated.
