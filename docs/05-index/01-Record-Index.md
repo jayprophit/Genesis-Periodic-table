@@ -46,9 +46,9 @@ NNNN-ElementName-Symbol.md
 
 Initial mapping:
 
-| MAT | Element | Symbol | Atomic Number |
-|---|---|---|---:|
-| 0001 | Hydrogen | H | 1 |
+| MAT | Element | Symbol | Atomic Number | Status |
+|---|---|---|---:|---|
+| 0001 | Hydrogen | H | 1 | IN-PROGRESS |
 | 0002 | Helium | He | 2 |
 | 0003 | Lithium | Li | 3 |
 | 0004 | Beryllium | Be | 4 |

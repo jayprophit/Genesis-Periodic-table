@@ -1,0 +1,289 @@
+registry_id: "MAT:0001:REL-REGISTRY"
+record_id: "MAT:0001"
+version: "1.0.0"
+
+relationships:
+
+  # ---------------------------
+  # ISOTOPE FAMILY
+  # ---------------------------
+
+  - relationship_id: "REL-H-0001"
+    source: "MAT:0001:ISO:H-1"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "ESTABLISHED"
+
+  - relationship_id: "REL-H-0002"
+    source: "MAT:0001:ISO:H-2"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "ESTABLISHED"
+
+  - relationship_id: "REL-H-0003"
+    source: "MAT:0001:ISO:H-3"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "ESTABLISHED"
+
+  - relationship_id: "REL-H-0004"
+    source: "MAT:0001:ISO:H-4"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "MEASURED"
+
+  - relationship_id: "REL-H-0005"
+    source: "MAT:0001:ISO:H-5"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "MEASURED"
+
+  - relationship_id: "REL-H-0006"
+    source: "MAT:0001:ISO:H-6"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "MEASURED"
+
+  - relationship_id: "REL-H-0007"
+    source: "MAT:0001:ISO:H-7"
+    type: "ISOTOPE-OF"
+    target: "MAT:0001"
+    evidence: "MEASURED"
+
+  # ---------------------------
+  # IONIC STATES
+  # ---------------------------
+
+  - relationship_id: "REL-H-0010"
+    source: "MAT:0001:ION:H-1"
+    type: "ION-STATE-OF"
+    target: "MAT:0001"
+    charge: -1
+
+  - relationship_id: "REL-H-0011"
+    source: "MAT:0001:ION:H0"
+    type: "NEUTRAL-ATOMIC-STATE-OF"
+    target: "MAT:0001"
+    charge: 0
+
+  - relationship_id: "REL-H-0012"
+    source: "MAT:0001:ION:H+1"
+    type: "ION-STATE-OF"
+    target: "MAT:0001"
+    charge: 1
+    note: >
+      Nuclear identity must remain attached because H+, D+ and T+
+      contain different nuclei.
+
+  # ---------------------------
+  # MOLECULAR FAMILY
+  # ---------------------------
+
+  - relationship_id: "REL-H-0020"
+    source: "MAT:0001"
+    type: "FORMS-MOLECULE"
+    target: "MAT:0001:MOL:H2"
+    formula: "H2"
+
+  - relationship_id: "REL-H-0021"
+    source: "MAT:0001:MOL:HD"
+    type: "ISOTOPOLOGUE-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0022"
+    source: "MAT:0001:MOL:D2"
+    type: "ISOTOPOLOGUE-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0023"
+    source: "MAT:0001:MOL:HT"
+    type: "ISOTOPOLOGUE-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0024"
+    source: "MAT:0001:MOL:DT"
+    type: "ISOTOPOLOGUE-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0025"
+    source: "MAT:0001:MOL:T2"
+    type: "ISOTOPOLOGUE-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0026"
+    source: "MAT:0001:MOL:H2:ORTHO"
+    type: "NUCLEAR-SPIN-ISOMER-OF"
+    target: "MAT:0001:MOL:H2"
+
+  - relationship_id: "REL-H-0027"
+    source: "MAT:0001:MOL:H2:PARA"
+    type: "NUCLEAR-SPIN-ISOMER-OF"
+    target: "MAT:0001:MOL:H2"
+
+  # ---------------------------
+  # RADIOACTIVE DECAY
+  # ---------------------------
+
+  - relationship_id: "REL-H-0030"
+    source: "MAT:0001:ISO:H-3"
+    type: "DECAYS-TO"
+    target: "MAT:0002:ISO:He-3"
+    mechanism: "BETA-MINUS"
+    branching_fraction: 1.0
+    source_ids:
+      - "SRC-H-004"
+
+  - relationship_id: "REL-H-0031"
+    source: "MAT:0001:ISO:H-4"
+    type: "DECAYS-TO"
+    target: "MAT:0001:ISO:H-3"
+    mechanism: "NEUTRON-EMISSION"
+    source_ids:
+      - "SRC-H-004"
+
+  - relationship_id: "REL-H-0032"
+    source: "MAT:0001:ISO:H-5"
+    type: "DECAYS-TO"
+    target: "MAT:0001:ISO:H-3"
+    mechanism: "TWO-NEUTRON-EMISSION"
+    source_ids:
+      - "SRC-H-004"
+
+  # ---------------------------
+  # NUCLEAR FUSION
+  # ---------------------------
+
+  - relationship_id: "REL-H-0040"
+    source: "MAT:0001:ISO:H-2"
+    type: "FUSES-WITH"
+    target: "MAT:0001:ISO:H-3"
+    products:
+      - "MAT:0002:ISO:He-4"
+      - "NEUTRON"
+    reaction: "2H + 3H -> 4He + n"
+    reaction_class: "NUCLEAR"
+    approximate_q_value_MeV: 17.5893
+
+  # ---------------------------
+  # CHEMICAL RELATIONSHIPS
+  # REPRESENTATIVE, NOT EXHAUSTIVE
+  # ---------------------------
+
+  - relationship_id: "REL-H-0050"
+    source: "MAT:0001"
+    type: "FORMS-COMPOUNDS-WITH"
+    target: "MAT:0008"
+    target_name: "Oxygen"
+    examples:
+      - "H2O"
+      - "H2O2"
+
+  - relationship_id: "REL-H-0051"
+    source: "MAT:0001"
+    type: "FORMS-COMPOUNDS-WITH"
+    target: "MAT:0006"
+    target_name: "Carbon"
+    examples:
+      - "hydrocarbons"
+      - "organic compounds"
+
+  - relationship_id: "REL-H-0052"
+    source: "MAT:0001"
+    type: "FORMS-COMPOUNDS-WITH"
+    target: "MAT:0007"
+    target_name: "Nitrogen"
+    examples:
+      - "NH3"
+
+  - relationship_id: "REL-H-0053"
+    source: "MAT:0001"
+    type: "FORMS-COMPOUNDS-WITH"
+    target: "MAT:0016"
+    target_name: "Sulfur"
+    examples:
+      - "H2S"
+
+  # ---------------------------
+  # MATERIAL / STORAGE
+  # ---------------------------
+
+  - relationship_id: "REL-H-0060"
+    source: "MAT:0001"
+    type: "FORMS-HYDRIDE-WITH"
+    target: "MAT:0012"
+    target_name: "Magnesium"
+    example: "MgH2"
+
+  - relationship_id: "REL-H-0061"
+    source: "MAT:0001"
+    type: "ABSORBED-BY"
+    target: "MAT:0046"
+    target_name: "Palladium"
+    conditions_required: true
+
+  - relationship_id: "REL-H-0062"
+    source: "MAT:0001"
+    type: "CATALYTIC-RELATIONSHIP-WITH"
+    target: "MAT:0028"
+    target_name: "Nickel"
+    note: "Catalytic relationship does not automatically imply storage."
+
+  - relationship_id: "REL-H-0063"
+    source: "MAT:0001"
+    type: "STORAGE-MATERIAL-RELATIONSHIP-WITH"
+    target: "MAT:0005"
+    target_name: "Boron"
+    mechanism: "COMPLEX-HYDRIDE / CHEMICAL-STORAGE-FAMILY"
+
+  - relationship_id: "REL-H-0064"
+    source: "MAT:0001"
+    type: "ADSORPTION-RELATIONSHIP-WITH"
+    target: "MAT:0006"
+    target_name: "Carbon"
+    mechanism: "POROUS-CARBON-ADSORPTION"
+
+  # ---------------------------
+  # MATERIAL DEGRADATION
+  # ---------------------------
+
+  - relationship_id: "REL-H-0070"
+    source: "MAT:0001"
+    type: "CAN-AFFECT-MECHANICAL-BEHAVIOUR-OF"
+    target_scope: "HYDROGEN-SUSCEPTIBLE-HOST-MATERIALS"
+    mechanism_family: "HYDROGEN-ASSISTED-DEGRADATION"
+    intrinsic_property_of_hydrogen: false
+    conditions_required: true
+
+  # ---------------------------
+  # BIOLOGICAL CONTEXT
+  # ---------------------------
+
+  - relationship_id: "REL-H-0080"
+    source: "MAT:0001"
+    type: "BIOLOGICAL-CONTEXT-WITH"
+    targets:
+      - "MAT:0006"
+      - "MAT:0007"
+      - "MAT:0008"
+      - "MAT:0015"
+      - "MAT:0016"
+    context:
+      - biomolecular_structure
+      - proton_transfer
+      - water
+      - hydrogen_bonding
+
+  # ---------------------------
+  # PROJECT HISTORY
+  # ---------------------------
+
+  - relationship_id: "REL-H-0090"
+    source: "MAT:0001"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0001"
+
+rules:
+  graph_is_exhaustive: false
+  relationship_requires_conditions_when_state_dependent: true
+  chemical_relation_equals_compound_property: false
+  host_interaction_equals_intrinsic_element_property: false

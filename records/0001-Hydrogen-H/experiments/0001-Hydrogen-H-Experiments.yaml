@@ -1,0 +1,88 @@
+registry_id: "MAT:0001:EXP-REGISTRY"
+record_id: "MAT:0001"
+version: "1.0.0"
+
+experiments:
+
+  - experiment_id: "MAT:0001:EXP:HYPERFINE-1970"
+    name: "Unperturbed Atomic-Hydrogen Hyperfine Frequency Measurement"
+    year: 1970
+    source_id: "SRC-H-005"
+
+    system:
+      isotope: "1H"
+      state: "atomic ground-state hyperfine transition"
+
+    measured:
+      frequency:
+        value: 1420405751.768
+        unit: "Hz"
+        uncertainty: 0.002
+        uncertainty_type: "ONE-SIGMA"
+
+    evidence_type: "MEASURED"
+    replication_status: "MULTIPLE-MEASUREMENT-PATHS"
+    confidence: "A"
+
+  - experiment_id: "MAT:0001:EXP:EA-1991"
+    name: "Atomic Hydrogen Electron-Affinity Laser Photoelectron Measurement"
+    year: 1991
+    source_id: "SRC-H-003"
+
+    measured:
+      electron_affinity:
+        value: 0.754195
+        uncertainty: 0.000018
+        unit: "eV"
+
+    evidence_type: "MEASURED"
+    confidence: "A"
+
+  - experiment_id: "MAT:0001:EXP:H6-MAMI-2025"
+    name: "Hydrogen-6 Ground-State Measurement at MAMI-A1"
+    year: 2025
+    source_id: "SRC-H-013"
+
+    reaction:
+      target: "7Li"
+      method: "ELECTRON-SCATTERING / MISSING-MASS"
+      produced_state: "6H"
+
+    measured:
+      ground_state_energy_above_threshold:
+        value: 2.3
+        statistical_uncertainty: 0.5
+        systematic_uncertainty: 0.4
+        unit: "MeV"
+        threshold: "3H + n + n + n"
+
+      width:
+        value: 1.9
+        statistical_uncertainty: 1.0
+        systematic_uncertainty: 0.4
+        unit: "MeV"
+
+    evidence_type: "MEASURED"
+    confidence: "B"
+
+    evaluation_status:
+      incorporated_into_NUBASE2020: false
+      reason: "Experiment published after NUBASE2020 evaluation cutoff."
+
+evaluations:
+
+  - evaluation_id: "MAT:0001:EVAL:NUBASE2020"
+    source_id: "SRC-H-004"
+    type: "NUCLEAR-DATA-EVALUATION"
+
+  - evaluation_id: "MAT:0001:EVAL:NIST-ASD"
+    source_id: "SRC-H-001"
+    type: "ATOMIC-SPECTROSCOPY-EVALUATION"
+
+  - evaluation_id: "MAT:0001:EVAL:NIST-TN2126"
+    source_id: "SRC-H-007"
+    type: "THERMOPHYSICAL-COMPILATION"
+
+rules:
+  new_measurement_silently_replaces_evaluated_value: false
+  conflicting_results_retained: true

@@ -1,0 +1,51 @@
+isotope_id: "MAT:0001:ISO:H-6"
+parent_id: "MAT:0001"
+name: "Hydrogen-6"
+notation: "6H"
+
+nucleus:
+  protons: 1
+  neutrons: 5
+  mass_number: 6
+  adopted_spin_parity: "2-#"
+
+relative_atomic_mass:
+  value: 6.04496
+  uncertainty: 0.00027
+  unit: "u"
+  source_id: "SRC-H-002"
+
+evaluated_nuclear_state:
+  source_id: "SRC-H-004"
+
+  half_life:
+    value: 294
+    uncertainty: 67
+    unit: "ys"
+
+  decay_modes:
+    - "n?"
+    - "3n?"
+
+post_evaluation_measurements:
+  - "MAT:0001:EXP:H6-MAMI-2025"
+
+latest_recorded_measurement:
+  ground_state_energy_above_3H_plus_3n_threshold:
+    value: 2.3
+    statistical_uncertainty: 0.5
+    systematic_uncertainty: 0.4
+    unit: "MeV"
+    source_id: "SRC-H-013"
+
+  width:
+    value: 1.9
+    statistical_uncertainty: 1.0
+    systematic_uncertainty: 0.4
+    unit: "MeV"
+    source_id: "SRC-H-013"
+
+rules:
+  latest_measurement_automatically_replaces_evaluation: false
+
+status: "ACTIVE-RESEARCH"
