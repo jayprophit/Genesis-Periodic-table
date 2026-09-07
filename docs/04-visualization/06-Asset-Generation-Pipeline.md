@@ -37,3 +37,15 @@ continuity. Missing data stays visibly `NOT-MEASURED` / `DATA-NOT-AVAILABLE`.
 2. Fill manifests first, data second, generator support third.
 3. Run `node book/generate-assets.mjs`, then `node book/build-manifest.mjs`.
 4. Never fabricate a measurement to fill an empty graph.
+
+## Standing process for every new prompt or data drop
+
+1. Ingest: write/append the spec files exactly; never silently correct sources.
+2. Amend: apply patches, resolve forward references whose targets now exist.
+3. Generate: run `generate-assets.mjs` + `generate-schematics.mjs` (+ record
+   passes like `generate-pass3.mjs`); new failures mean missing inputs, not
+   permission to invent.
+4. Manifests: flip statuses only for files on disk; rebuild
+   `build-manifest.mjs` and `export-single.mjs`.
+5. Verify: load `http://localhost:4173/book/` in a real browser — 0 console
+   errors, chapter tables render, new SVGs return 200.

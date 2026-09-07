@@ -1,3 +1,46 @@
+isotope_id: "MAT:0002:ISO:He-3"
 parent_id: "MAT:0002"
-status: "PLANNED"
-note: "Individual isotope record stub. Canonical data currently in 0002-Helium-He-Isotopes.yaml."
+name: "Helium-3"
+notation: "3He"
+
+nucleus:
+  protons: 2
+  neutrons: 1
+  mass_number: 3
+  spin_parity: "1/2+"
+
+relative_atomic_mass:
+  value: 3.0160293201
+  uncertainty: 0.0000000025
+  unit: "u"
+  source_id: "SRC-000019"
+
+stability:
+  status: "STABLE"
+  half_life: "NOT-APPLICABLE"
+  source_id: "SRC-000008"
+
+quantum_statistics:
+  class: "FERMION"
+  basis: "half-integer nuclear spin"
+
+important_relationships:
+  - type: "DAUGHTER-OF"
+    source: "MAT:0001:ISO:H-3"
+    process: "BETA-MINUS"
+
+  - type: "NEUTRON-CAPTURE-REACTANT"
+    reaction: "3He + n -> 3H + 1H"
+
+cryogenic:
+  quantum_fluid: true
+  superfluid_states: true
+  transition_temperature: "STATE-AND-PRESSURE-DEPENDENT"
+
+applications:
+  - neutron_detection
+  - cryogenic_refrigeration
+  - low_temperature_physics
+  - nuclear_magnetic_resonance
+
+status: "RESEARCHED"

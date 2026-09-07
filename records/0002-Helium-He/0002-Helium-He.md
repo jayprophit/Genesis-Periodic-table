@@ -808,7 +808,23 @@ Helium therefore differs fundamentally from Hydrogen's ordinary molecular state:
 H2
 ```
 
-No ordinary stable neutral He₂ ground-state molecule is used as the canonical bulk gaseous state.
+Ordinary bulk elemental Helium is monatomic.
+
+However, neutral \(^{4}He_2\) does possess an extraordinarily weak
+van-der-Waals bound state.
+
+Therefore:
+
+\[
+\boxed{
+\text{He}_2\text{ exists as a fragile quantum dimer}
+\neq
+\text{ordinary bulk Helium is molecular}
+}
+\]
+
+This differs fundamentally from Hydrogen, whose ordinary elemental
+gas is predominantly \(H_2\).
 
 ---
 
@@ -1396,10 +1412,18 @@ remaining:
 # 39. Current Record Status
 
 ```yaml
-status: RESEARCHED
-migration_status: IN-PROGRESS
-schema_validation_status: PENDING
-scientific_core: RESEARCHED
-visual_specification: NOT-YET-LOCKED
-visual_assets: NOT-GENERATED
+status: "RESEARCHED"
+completeness: "RESEARCHED"
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  source_registry: "PASS"
+  relationship_architecture: "PASS"
+  evidence_architecture: "PASS"
+  scientific_core: "CORE-VALIDATED"
+  exhaustive_content: false
+visuals:
+  specification: "LOCKED"
+  generated: false
 ```

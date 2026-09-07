@@ -1,0 +1,99 @@
+registry_id: "MAT:0003:REG:PROCESSES"
+record_id: "MAT:0003"
+
+processes:
+
+  - process_id: "MAT:0003:PROC:MELTING"
+    input: "MAT:0003:PHASE:BCC"
+    output: "MAT:0003:PHASE:LIQUID"
+    family: "THERMAL"
+
+  - process_id: "MAT:0003:PROC:OXIDATION"
+    input: "Li metal"
+    family: "CHEMICAL"
+    products: "CONDITION-DEPENDENT"
+
+  - process_id: "MAT:0003:PROC:WATER"
+    reaction: "2Li + 2H2O -> 2LiOH + H2"
+    family: "CHEMICAL"
+    safety_relevant: true
+
+  - process_id: "MAT:0003:PROC:HYDRIDE"
+    reaction: "2Li + H2 -> 2LiH"
+    family: "CHEMICAL"
+
+  - process_id: "MAT:0003:PROC:NITRIDE"
+    reaction: "6Li + N2 -> 2Li3N"
+    family: "CHEMICAL"
+
+  - process_id: "MAT:0003:PROC:INTERCALATION"
+    family: "ELECTROCHEMICAL"
+    carrier: "MAT:0003:ION:Li+1"
+
+  - process_id: "MAT:0003:PROC:PLATING"
+    family: "ELECTROCHEMICAL"
+    output: "Li metal deposit"
+
+  - process_id: "MAT:0003:PROC:LI6-NEUTRON"
+    family: "NUCLEAR"
+    reaction: "6Li + n -> 4He + 3H"
+    calculation_id: "MAT:0003:CALC:001"
+
+  - process_id: "MAT:0003:PROC:LI7-NEUTRON"
+    family: "NUCLEAR"
+    reaction: "7Li + n -> 4He + 3H + n"
+    calculation_id: "MAT:0003:CALC:002"
+
+environments:
+
+  AMBIENT_DRY_INERT:
+    preferred_for_elemental_metal_preservation: true
+
+  AIR_MOISTURE:
+    effects:
+      - surface_reaction
+      - oxidation
+      - chemical_degradation
+
+  WATER:
+    effects:
+      - lithium_hydroxide_formation
+      - hydrogen_generation
+      - heat_release
+    hazard: "HIGH"
+
+  HIGH_TEMPERATURE:
+    effects:
+      - melting
+      - increased_reactivity
+      - liquid_metal_state
+
+  HIGH_PRESSURE:
+    effects:
+      - crystal_phase_transitions
+      - electronic_structure_changes
+      - possible_superconducting_states
+
+  ELECTROCHEMICAL:
+    effects:
+      - Li_ion_transport
+      - insertion
+      - extraction
+      - plating
+      - stripping
+      - interphase_growth
+
+  NEUTRON_FIELD:
+    isotope_specific: true
+    effects:
+      - Li6_tritium_breeding
+      - Li7_threshold_reactions
+
+  MAGNETIC_FIELD_LIQUID_METAL:
+    possible_effect:
+      - MHD_coupling
+    conditions_required: true
+
+  BIOLOGICAL:
+    relevant_species: "Li+"
+    elemental_metal_state: "NOT-APPLICABLE-AS-NORMAL-BIOLOGICAL-STATE"

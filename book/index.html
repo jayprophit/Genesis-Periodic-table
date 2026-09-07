@@ -38,6 +38,30 @@
     </section>
     <article id="content" hidden>
       <p id="crumb"></p>
+      <div id="tools" role="toolbar" aria-label="Reading tools">
+        <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
+        <button id="stop-btn" title="Stop reading">■ Stop</button>
+        <select id="voice" aria-label="Voice"></select>
+        <select id="rate" aria-label="Speech rate">
+          <option value="0.9">0.9×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.25">1.25×</option>
+          <option value="1.5">1.5×</option>
+        </select>
+        <select id="lang" aria-label="Translation language">
+          <option value="">Translate to…</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="pt">Português</option>
+          <option value="ar">العربية</option>
+          <option value="zh-CN">中文</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ur">اردو</option>
+        </select>
+        <button id="translate-btn" title="Machine-translate chapter">Translate</button>
+      </div>
+      <p id="mt-note" hidden><em>Machine translation — the English source remains authoritative.</em></p>
       <div id="page"></div>
       <div class="pager">
         <button id="prev">← Previous</button>

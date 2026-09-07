@@ -186,4 +186,83 @@ fetch("./manifest.json").then((r) => r.json()).then((m) => {
     const i = parseInt((location.hash.match(/#\/(\d+)/) || [])[1], 10);
     if (!isNaN(i) && i !== current) loadChapter(i);
   });
+
+  /* ---- Audio read-aloud (built-in Web Speech API, works offline where voices exist) ---- */
+  const speakBtn = document.getElementById("speak-btn");
+  const stopBtn = document.getElementById("stop-btn");
+  const voiceSel = document.getElementById("voice");
+  const rateSel = document.getElementById("rate");
+  function pickVoices() {
+    if (!("speechSynthesis" in window)) {
+      speakBtn.disabled = true;
+      speakBtn.title = "Speech synthesis not supported in this browser";
+      return;
+    }
+    const vs = speechSynthesis.getVoices();
+    voiceSel.innerHTML = vs.map((v, i) =>
+      `<option value="${i}">${v.name} (${v.lang})</option>`).join("");
+  }
+  if ("speechSynthesis" in window) {
+    pickVoices();
+    speechSynthesis.onvoiceschanged = pickVoices;
+  } else pickVoices();
+  speakBtn.onclick = () => {
+    if (!("speechSynthesis" in window)) return;
+    speechSynthesis.cancel();
+    const text = document.getElementById("crumb").textContent + ". " +
+      document.getElementById("page").innerText.slice(0, 20000);
+    // Chunk so long chapters don't get cut off by engine limits.
+    const chunks = text.match(/[^.!?]+[.!?]+|\S.{0,200}[.!? ]/g) || [text];
+    let queue = chunks.filter((c) => c.trim().length > 1).slice(0, 400);
+    const speakNext = () => {
+      if (!queue.length) return;
+      const u = new SpeechSynthesisUtterance(queue.shift());
+      const vs = speechSynthesis.getVoices();
+      if (vs[+voiceSel.value]) { u.voice = vs[+voiceSel.value]; u.lang = u.voice.lang; }
+      u.rate = parseFloat(rateSel.value || "1");
+      u.onend = speakNext;
+      speechSynthesis.speak(u);
+    };
+    speakNext();
+  };
+  stopBtn.onclick = () => { if ("speechSynthesis" in window) speechSynthesis.cancel(); };
+
+  /* ---- Chapter translation (free MyMemory API, labelled machine output) ---- */
+  const langSel = document.getElementById("lang");
+  const trBtn = document.getElementById("translate-btn");
+  const mtNote = document.getElementById("mt-note");
+  trBtn.onclick = async () => {
+    const lang = langSel.value;
+    if (!lang) { langSel.focus(); return; }
+    const paras = [...document.querySelectorAll("#page p, #page li, #page h1, #page h2, #page h3")]
+      .slice(0, 60);
+    trBtn.disabled = true;
+    trBtn.textContent = "Translating…";
+    try {
+      for (const el of paras) {
+        const q = el.innerText.trim().slice(0, 450);
+        if (q.length < 2) continue;
+        const r = await fetch(
+          "https://api.mymemory.translated.net/get?q=" +
+          encodeURIComponent(q) + "&langpair=en|" + encodeURIComponent(lang));
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const j = await r.json();
+        const t = j?.responseData?.translatedText;
+        if (t && t.toLowerCase() !== q.toLowerCase()) {
+          const d = document.createElement("div");
+          d.className = "mt-text";
+          d.style.cssText = "border-left:3px solid #e0a100;padding-left:10px;margin:6px 0;color:var(--ink)";
+          d.innerText = t;
+          el.after(d);
+        }
+        await new Promise((res) => setTimeout(res, 350)); // stay inside free quota
+      }
+      mtNote.hidden = false;
+    } catch {
+      mtNote.hidden = false;
+      mtNote.innerHTML = "<em>Translation unavailable (network or quota). English source unchanged.</em>";
+    }
+    trBtn.disabled = false;
+    trBtn.textContent = "Translate";
+  };
 });
