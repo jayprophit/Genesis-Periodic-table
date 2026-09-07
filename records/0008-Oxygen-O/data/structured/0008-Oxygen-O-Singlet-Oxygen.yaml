@@ -1,0 +1,39 @@
+state_id: "MAT:0008:ESTATE:O2-a1DeltaG"
+parent_molecule: "MAT:0008:MOL:O2"
+
+name: "Singlet Oxygen"
+term: "a1Delta_g"
+
+classification:
+  electronically_excited: true
+  chemical_element_changed: false
+  molecular_formula_changed: false
+
+term_energy:
+  value: 7918.1
+  unit: "cm-1"
+
+approximate_excitation_energy:
+  value: 0.982
+  unit: "eV"
+
+relative_to:
+  state: "MAT:0008:MOL:O2"
+  term: "X3Sigma_g-"
+
+reactivity:
+  greater_than_ground_triplet_for_many_reactions: true
+  mechanism_specific: true
+
+generation_classes:
+  - photosensitized
+  - chemical
+  - photochemical
+  - plasma_related
+
+rules:
+  singlet_oxygen_equals_atomic_oxygen: false
+  singlet_oxygen_equals_ozone: false
+  excited_state_requires_state_id: true
+
+source_id: "SRC-000127"

@@ -1,0 +1,53 @@
+registry_id: "MAT:0009:REG:PLASMA-PROCESSING"
+
+record_id: "MAT:0009"
+
+precursor_families:
+  - fluorocarbons
+  - NF3_related
+  - SF6_related
+  - other_fluorine_containing_process_gases
+
+plasma_species_can_include:
+  - F_radicals
+  - molecular_fragments
+  - positive_ions
+  - negative_ions
+  - electronically_excited_species
+
+target_material_families:
+  - Si
+  - SiO2
+  - dielectric_materials
+  - semiconductor_films
+
+mechanisms:
+  - chemical_etching
+  - ion_assisted_etching
+  - passivation
+  - sidewall_film_formation
+  - chamber_cleaning
+  - surface_modification
+
+anisotropic_etching:
+  requires_balance_between:
+    - material_removal
+    - protective_surface_film
+    - directional_ion_bombardment
+    - gas_phase_chemistry
+
+process_variables:
+  - precursor_identity
+  - plasma_state
+  - ion_energy
+  - radical_density
+  - pressure
+  - surface_temperature
+  - substrate_composition
+
+rules:
+  stable_precursor_equals_reactive_plasma_fragment: false
+  fluorine_radical_equals_F2: false
+  etching_is_not_intrinsic_elemental_property: true
+
+source_id: "SRC-000173"

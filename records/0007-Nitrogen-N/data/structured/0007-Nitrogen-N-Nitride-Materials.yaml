@@ -1,0 +1,151 @@
+registry_id: "MAT:0007:REG:NITRIDES"
+record_id: "MAT:0007"
+
+materials:
+
+  boron_nitride:
+
+    future_family: "MAT:CMP:BN"
+
+    elements:
+      - "MAT:0005"
+      - "MAT:0007"
+
+    parent_targets_resolved: true
+
+    polymorphs:
+      - h_BN
+      - c_BN
+      - w_BN
+
+    carbon_analogies:
+      h_BN: "GRAPHENE/GRAPHITE-LIKE-TOPOLOGY"
+      c_BN: "DIAMOND-LIKE-TOPOLOGY"
+
+    rule: >
+      Similar topology does not imply identical electronic properties.
+
+  aluminium_nitride:
+
+    formula: "AlN"
+
+    elements:
+      - "MAT:0013"
+      - "MAT:0007"
+
+    target_status:
+      aluminium: "RESERVED-PENDING-ALUMINIUM"
+
+    structure_family: "WURTZITE"
+
+    band_gap_reference:
+      value: 6.28
+      unit: "eV"
+      classification: "REFERENCE"
+      source_id: "SRC-000112"
+
+    applications:
+      - UV_optoelectronics
+      - high_power_electronics
+      - thermal_management
+
+  gallium_nitride:
+
+    formula: "GaN"
+
+    elements:
+      - "MAT:0031"
+      - "MAT:0007"
+
+    target_status:
+      gallium: "RESERVED-PENDING-GALLIUM"
+
+    structure_family: "WURTZITE"
+
+    band_gap_reference:
+      value: 3.5
+      unit: "eV"
+      classification: "REFERENCE"
+      source_id: "SRC-000112"
+
+    applications:
+      - LEDs
+      - lasers
+      - RF_electronics
+      - high_power_electronics
+
+  silicon_nitride:
+
+    formula: "Si3N4"
+
+    elements:
+      - "MAT:0014"
+      - "MAT:0007"
+
+    target_status:
+      silicon: "RESERVED-PENDING-SILICON"
+
+    material_class:
+      - ceramic
+      - electrical_insulator
+      - structural_material
+
+    polymorphs:
+      - alpha_Si3N4
+      - beta_Si3N4
+
+    property_examples:
+
+      representative_polycrystal_density:
+        value: 3.25
+        unit: "g/cm3"
+
+      representative_room_temperature_hardness:
+        value: 24.4
+        uncertainty: 0.7
+        unit: "GPa"
+
+      caution:
+        "Sample/process-specific values."
+
+    source_id: "SRC-000113"
+
+  titanium_nitride:
+
+    formula: "TiN"
+
+    elements:
+      - "MAT:0022"
+      - "MAT:0007"
+
+    target_status:
+      titanium: "RESERVED-PENDING-TITANIUM"
+
+    material_class:
+      - refractory
+      - conductive_ceramic_like
+      - coating
+
+    emergent_combination:
+      - hardness
+      - electrical_conductivity
+
+  lithium_nitride:
+
+    formula: "Li3N"
+
+    elements:
+      - "MAT:0003"
+      - "MAT:0007"
+
+    target_status:
+      lithium: "RESOLVED"
+
+    material_class:
+      - ionic_solid
+      - lithium_ion_conductor_related_material
+
+rules:
+  nitride_property_equals_elemental_nitrogen_property: false
+  one_formula_equals_one_processing_state: false
+  band_gap_is_condition_independent: false

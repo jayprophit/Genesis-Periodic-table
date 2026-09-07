@@ -1,0 +1,254 @@
+mat_id: "MAT:0009"
+record_name: "Fluorine"
+symbol: "F"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 9
+
+legacy:
+  legacy_id: "G0009"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 9
+  neutral_electron_count: 9
+  period: 2
+  group: 17
+  block: "p"
+
+atomic_weight:
+  value: 18.998403163
+  uncertainty: 0.000000006
+  type: "STANDARD-ATOMIC-WEIGHT"
+  source_id: "SRC-000158"
+
+electronic_ground_state:
+  configuration: "1s2 2s2 2p5"
+  term: "2P°3/2"
+  open_shell: true
+  source_id: "SRC-000157"
+
+electron_affinity:
+  selected_value:
+    value: 3.401191
+    uncertainty: 0.000026
+    unit: "eV"
+  source_id: "SRC-000159"
+
+electronegativity:
+  scale: "PAULING"
+  value: 3.98
+  source_id: "SRC-000161"
+
+ionization:
+
+  first:
+    value: 17.42282
+    uncertainty: 0.00005
+    unit: "eV"
+
+  second:
+    value: 34.97081
+    uncertainty: 0.00012
+    unit: "eV"
+
+  third:
+    value: 62.70798
+    uncertainty: 0.00025
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  fourth:
+    value: 87.175
+    uncertainty: 0.017
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  fifth:
+    value: 114.249
+    uncertainty: 0.006
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  sixth:
+    value: 157.16311
+    uncertainty: 0.00025
+    unit: "eV"
+
+  seventh:
+    value: 185.1868
+    uncertainty: 0.0006
+    unit: "eV"
+
+  eighth:
+    value: 953.8983
+    uncertainty: 0.0003
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  ninth:
+    value: 1103.1175302
+    uncertainty: 0.0000019
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  source_id: "SRC-000157"
+
+atomic_state:
+  id: "MAT:0009:ATOM:F"
+  magnetic:
+    open_shell: true
+    paramagnetic: true
+
+fluoride:
+
+  id: "MAT:0009:ION:F-1"
+
+  electron_configuration:
+    "1s2 2s2 2p6"
+
+  charge: -1
+
+  mobile_ion_possible: true
+
+ordinary_molecular_state:
+
+  id: "MAT:0009:MOL:F2"
+
+  formula: "F2"
+
+  ground_electronic_state:
+    term: "X1Sigma_g+"
+    closed_shell: true
+
+  geometry:
+    type: "LINEAR"
+
+  equilibrium_bond_length:
+    approximate_value: 1.412
+    unit: "angstrom"
+
+  omega_e:
+    approximate_value: 916.93
+    unit: "cm-1"
+
+  B_e:
+    approximate_value: 0.8893
+    unit: "cm-1"
+
+  magnetism:
+    diamagnetic: true
+
+  source_id: "SRC-000160"
+
+phase_reference:
+
+  melting_point:
+    value: 53.48
+    unit: "K"
+
+  normal_boiling_point:
+    value: 85.04
+    unit: "K"
+
+  ordinary_state:
+    state: "GAS"
+    appearance: "VERY-PALE-YELLOW"
+
+  source_id: "SRC-000161"
+
+oxidation_state:
+
+  elemental:
+    value: 0
+
+  compounds:
+    conventional_value: -1
+
+bond_reference:
+
+  F_F:
+    approximate_enthalpy: 155
+    unit: "kJ/mol"
+
+  H_F:
+    approximate_enthalpy: 565
+    unit: "kJ/mol"
+
+  C_F:
+    approximate_enthalpy: 485
+    unit: "kJ/mol"
+
+  classification: "REPRESENTATIVE-BOND-ENTHALPIES"
+  source_id: "SRC-000161"
+
+isotope_branch:
+
+  NIST_mass_range:
+    minimum: 14
+    maximum: 31
+
+  stable:
+    - "MAT:0009:ISO:F-19"
+
+  diagnostic:
+    - "MAT:0009:ISO:F-18"
+
+  other_key:
+    - "MAT:0009:ISO:F-17"
+    - "MAT:0009:ISO:F-20"
+    - "MAT:0009:ISO:F-21"
+
+materials_relationships:
+
+  resolved:
+    - "MAT:0001"
+    - "MAT:0003"
+    - "MAT:0004"
+    - "MAT:0005"
+    - "MAT:0006"
+    - "MAT:0007"
+    - "MAT:0008"
+
+  high_priority:
+    - HF
+    - LiF
+    - BeF2
+    - FLiBe
+    - BF3
+    - BF4_minus
+    - PTFE
+    - NF3
+
+future_relationships:
+  - MAT:0011
+  - MAT:0012
+  - MAT:0013
+  - MAT:0014
+  - MAT:0016
+  - MAT:0018
+  - MAT:0036
+  - MAT:0054
+  - MAT:0078
+  - MAT:0092
+
+process_architecture:
+  - fluorination
+  - electrolysis
+  - plasma_activation
+  - semiconductor_etching
+  - surface_modification
+  - molten_salt
+  - isotope_tracing
+
+scientific_status:
+
+  atomic_identity: "ESTABLISHED"
+  electron_affinity: "ESTABLISHED"
+  monoisotopic_natural_composition: "ESTABLISHED"
+  F2_ground_state: "ESTABLISHED"
+  fluoride_state: "ESTABLISHED"
+  extreme_electronegativity: "ESTABLISHED"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

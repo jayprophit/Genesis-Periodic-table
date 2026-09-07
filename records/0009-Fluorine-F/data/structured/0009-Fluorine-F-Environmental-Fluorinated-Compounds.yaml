@@ -1,0 +1,90 @@
+registry_id: "MAT:0009:REG:ENVIRONMENTAL-FLUORINATED-COMPOUNDS"
+
+core_rule:
+  "FLUORINATED COMPOUND != AUTOMATIC PFAS"
+
+classes:
+
+  inorganic_fluorides:
+    examples:
+      - fluoride_minerals
+      - LiF
+      - CaF2
+    PFAS: false
+
+  simple_molecular_fluorides:
+    examples:
+      - HF
+      - BF3
+      - NF3
+      - SiF4
+    PFAS: false
+
+  organofluorines:
+    description:
+      "Broad class of carbon-containing fluorinated compounds."
+
+    PFAS_status:
+      depends_on_structure_definition: true
+
+  PFAS:
+
+    OECD_2021:
+
+      definition_basis:
+        - fully_fluorinated_methyl_carbon
+        - fully_fluorinated_methylene_carbon
+
+      simplified_rule: >
+        With stated exceptions, substances containing at least one
+        saturated -CF3 or -CF2- unit with no H/Cl/Br/I attached to
+        that carbon fall within the broad OECD structural definition.
+
+      source_id: "SRC-000186"
+
+    EPA_program_specific:
+
+      definition_is_single_universal_US_rule: false
+
+      CCL5:
+        uses_specific_structural_patterns: true
+
+      TSCA_OPPT:
+        working_definition_can_differ: true
+
+      source_id: "SRC-000187"
+
+  fluoropolymers:
+
+    examples:
+      - PTFE
+      - PFA
+      - FEP
+      - PVDF
+      - ETFE
+
+    PFAS_classification:
+      definition_dependent: true
+
+    environmental_behavior:
+      polymer_specific: true
+
+environmental_properties_require:
+  - exact_structure
+  - molecular_weight
+  - polymer_vs_nonpolymer
+  - chain_length
+  - functional_groups
+  - mobility
+  - volatility
+  - degradation_products
+  - bioavailability
+  - persistence
+  - exposure
+
+rules:
+  elemental_fluorine_toxicity_equals_PFAS_toxicity: false
+  C_F_bond_strength_alone_predicts_environmental_risk: false
+  all_organofluorines_are_PFAS: false
+  all_PFAS_have_identical_toxicity: false
+  regulatory_definition_requires_jurisdiction_and_program: true

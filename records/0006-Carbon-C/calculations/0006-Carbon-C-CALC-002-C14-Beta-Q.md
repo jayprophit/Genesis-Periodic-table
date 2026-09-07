@@ -63,7 +63,7 @@ classification: "DERIVED"
 
 parent: "MAT:0006:ISO:C-14"
 daughter: "MAT:0007:ISO:N-14"
-daughter_status: "RESERVED-PENDING-NITROGEN"
+daughter_status: "RESOLVED"
 
 q_value:
   value: 0.1564761

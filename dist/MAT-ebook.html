@@ -39,9 +39,22 @@ body { margin: 0; background: var(--bg); color: var(--ink);
 #adv label { display: flex; gap: 6px; align-items: center; }
 #adv select { background: var(--panel); color: var(--ink);
   border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; }
-#studio { padding: 4px 12px 12px; display: flex; flex-direction: column; gap: 8px; }
+#studio { padding: 4px 12px 12px; display: flex; flex-direction: column; gap: 6px; }
 #studio.shut { display: none; }
 #studio-head.shut > .caret::before { content: "▸"; }
+.studio-row .studio-toggle { width: 100%; text-align: left; background: #1a2330;
+  color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+  padding: 5px 8px; cursor: pointer; font-size: 13px; }
+.studio-row .studio-toggle.open::before { content: "▾ "; font-size: 10px; }
+.studio-row .studio-toggle::before { content: "▸ "; font-size: 10px; }
+.studio-row .studio-body { padding: 4px 0 2px; }
+.studio-row select { width: 100%; background: var(--code); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+.studio-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+#adv { margin: 0 12px 6px; padding: 6px 8px; border: 1px solid var(--line);
+  border-radius: 8px; background: var(--code); font-size: 12px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px; }
+#adv[hidden] { display: none; }
 #studio button { background: #1c2634; color: var(--ink);
   border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; cursor: pointer; }
 #studio label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
@@ -171,6 +184,13 @@ body { margin: 0; background: var(--bg); color: var(--ink);
   width: max-content; max-width: 280px; white-space: normal; pointer-events: none;
 }
 
+/* record visuals gallery (GENERATED only; pending listed as text) */
+.vis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+.vis-cell { margin: 0; background: var(--code); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.vis-cell img { width: 100%; display: block; }
+.vis-cell figcaption { font-size: 11px; color: var(--muted); padding: 4px 8px; }
+.vis-pend { font-size: 13px; color: var(--muted); margin: 8px 0; }
+
 /* light theme + font scaling */
 body.light { --bg: #f6f4ec; --panel: #fffdf6; --ink: #1c2430; --muted: #5c6b80;
   --accent: #0b5cad; --line: #e0d9c4; --code: #efe9d8; }
@@ -218,34 +238,55 @@ body.fs-3 #page { font-size: 18.5px; }
       <label><input type="checkbox" id="opt-related" checked> Include related chapters</label>
     </div>
     <div id="results" hidden aria-label="Search results"></div>
-    <div class="toc-sec collapsible" id="studio-head"><span class="caret"></span><span>Studio · listen &amp; translate</span></div>
-    <div class="toc-group" id="studio">
+    <div class="toc-sec collapsible shut" id="studio-head"><span class="caret"></span><span>Studio · listen &amp; translate</span></div>
+    <div class="toc-group shut" id="studio">
       <p class="studio-cur">Chapter: <span id="studio-chapter">none open</span></p>
-      <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
-      <button id="stop-btn" title="Stop reading">■ Stop</button>
-      <label>Voice <select id="voice" aria-label="Voice"></select></label>
-      <label>Rate
-        <select id="rate" aria-label="Speech rate">
-          <option value="0.9">0.9×</option>
-          <option value="1" selected>1×</option>
-          <option value="1.25">1.25×</option>
-          <option value="1.5">1.5×</option>
-        </select>
-      </label>
-      <label>Language
-        <select id="lang" aria-label="Translation language">
-          <option value="">Translate to…</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="es">Español</option>
-          <option value="pt">Português</option>
-          <option value="ar">العربية</option>
-          <option value="zh-CN">中文</option>
-          <option value="hi">हिन्दी</option>
-          <option value="ur">اردو</option>
-        </select>
-      </label>
-      <button id="translate-btn" title="Machine-translate chapter">Translate</button>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Voice</button>
+        <div class="studio-body" hidden>
+          <select id="voice" aria-label="Voice"></select>
+        </div>
+      </div>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Speech rate</button>
+        <div class="studio-body" hidden>
+          <select id="rate" aria-label="Speech rate">
+            <option value="0.9">0.9×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+          </select>
+        </div>
+      </div>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Language</button>
+        <div class="studio-body" hidden>
+          <select id="lang" aria-label="Translation language">
+            <option value="">Translate to…</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="ar">العربية</option>
+            <option value="zh-CN">中文</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ur">اردو</option>
+            <option value="it">Italiano</option>
+            <option value="nl">Nederlands</option>
+            <option value="ru">Русский</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="pl">Polski</option>
+            <option value="tr">Türkçe</option>
+            <option value="sw">Kiswahili</option>
+          </select>
+        </div>
+      </div>
+      <div class="studio-actions">
+        <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
+        <button id="stop-btn" title="Stop reading">■ Stop</button>
+        <button id="translate-btn" title="Machine-translate chapter">Translate</button>
+      </div>
       <p class="studio-note">Audio and translation live here — one home for listening and languages.</p>
     </div>
     <nav id="toc" aria-label="Table of contents"></nav>
@@ -401,8 +442,44 @@ async function loadChapter(idx) {
   tagMatIds();
   buildJump();
   buildRecommend();
+  buildVisuals();
   document.getElementById("studio-chapter").textContent = ch.title;
   buildExternal();
+}
+
+// Visuals gallery for the current chapter's record: GENERATED SVGs render
+// inline; pending slots are named honestly (never faked).
+let visualsIdx = null;
+async function buildVisuals() {
+  document.getElementById("vis")?.remove();
+  const ch = flat[current];
+  if (!ch) return;
+  const rm = ch.path.match(/records\/(\d{4})-[^/]+\//);
+  if (!rm) return;
+  try {
+    if (!visualsIdx) visualsIdx = await (await fetch("./visuals-index.json")).json();
+  } catch { return; }
+  const rec = (visualsIdx.visuals || []).find((v) => v.record === rm[1]);
+  if (!rec) return;
+  const base = "../" + rec.dir + "/";
+  const gen = rec.items.filter((it) => it.found && /\.svg$/i.test(it.file));
+  const pend = rec.items.filter((it) => !it.found);
+  if (!gen.length && !pend.length) return;
+  const div = document.createElement("div");
+  div.id = "vis";
+  let html = `<h3>Record visuals — ${esc(rm[1])}</h3>`;
+  if (gen.length) {
+    html += `<div class="vis-grid">` + gen.map((it) =>
+      `<figure class="vis-cell"><img src="${base + it.path + it.file}" alt="${esc(it.file)}"><figcaption>${esc(it.file.replace(/^.*-(FIG|DIAGRAM|GRAPH)-/, "").replace(/\.svg$/, "").replace(/-/g, " "))}</figcaption></figure>`
+    ).join("") + `</div>`;
+  }
+  if (pend.length) {
+    html += `<details class="vis-pend"><summary>Pending visuals (${pend.length}) — not yet generated</summary><ul>` +
+      pend.map((it) => `<li>${esc(it.file)} — <em>${esc(it.status.replace(/-/g, " "))}</em></li>`).join("") + `</ul></details>`;
+  }
+  div.innerHTML = html;
+  const anchor = document.getElementById("extern") || document.getElementById("reco") || pageEl;
+  anchor.after(div);
 }
 
 // External resources for the current chapter: encyclopedia, papers, video,
@@ -671,6 +748,18 @@ const ready = fetch("../book/manifest.json").then((r) => r.json()).then((m) => {
     studioHead.classList.remove("shut");
     studioBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
+  // Cascading rows inside Studio (voice / rate / language collapse independently).
+  document.querySelectorAll(".studio-row").forEach((row) => {
+    const btn = row.querySelector(".studio-toggle");
+    const body = row.querySelector(".studio-body");
+    btn.onclick = () => {
+      const open = body.hidden;
+      document.querySelectorAll(".studio-row .studio-body").forEach((b) => (b.hidden = true));
+      document.querySelectorAll(".studio-row .studio-toggle").forEach((t) => t.classList.remove("open"));
+      body.hidden = !open;
+      btn.classList.toggle("open", open);
+    };
+  });
 
   // Advanced search controls.
   document.getElementById("adv-toggle").onclick = () => {

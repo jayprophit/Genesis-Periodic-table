@@ -1,0 +1,53 @@
+registry_id: "MAT:0008:REG:BATTERY-OXYGEN-REDOX"
+record_id: "MAT:0008"
+
+classification:
+  electrochemical_material_mechanism: true
+  universal_to_all_cathodes: false
+
+lithium_rich_layered_oxide_example:
+
+  material:
+    formula: "Li1.2Ni0.13Co0.13Mn0.54O2"
+
+  conventional_transition_metal_redox:
+    present: true
+
+  oxygen_redox:
+    present: true
+
+  mechanism_observed_2024:
+
+    charged_state:
+      transformation:
+        "lattice O^2- -> molecular O2 in nanoscale voids"
+
+    discharged_state:
+      reversible_reduction_to_O2_minus:
+        initially_possible: true
+
+    extended_cycling:
+      effects:
+        - reduced_O2_reduction_reversibility
+        - trapped_electrochemically_inactive_O2
+        - O2_loss
+        - void_growth
+        - particle_cracking
+        - voltage_fade
+
+  source_id: "SRC-000137"
+
+state_variables:
+  - lithium_content
+  - transition_metal_state
+  - oxygen_redox_state
+  - vacancy_cluster_size
+  - trapped_O2
+  - cycle_number
+  - voltage
+  - temperature
+
+rules:
+  oxygen_redox_equals_O2_gas_release_in_every_material: false
+  reversible_oxygen_redox_is_material_specific: true
+  molecular_O2_can_exist_inside_solid_cathode_voids: true

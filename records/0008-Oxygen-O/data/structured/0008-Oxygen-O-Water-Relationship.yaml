@@ -1,0 +1,51 @@
+relationship_id: "MAT:0008:REL:WATER"
+record_id: "MAT:0008"
+
+elements:
+  - "MAT:0001"
+  - "MAT:0008"
+
+compound:
+  id: "MAT:CMP:H2O"
+
+formation:
+
+  gas:
+    reference_enthalpy:
+      value: -241.826
+      uncertainty: 0.040
+      unit: "kJ/mol"
+      temperature:
+        value: 298.15
+        unit: "K"
+
+  liquid:
+    reference_enthalpy:
+      value: -285.830
+      uncertainty: 0.040
+      unit: "kJ/mol"
+      temperature:
+        value: 298.15
+        unit: "K"
+
+reaction_liquid_reference:
+  equation: "2H2(g) + O2(g) -> 2H2O(l)"
+
+  standard_enthalpy:
+    value: -571.660
+    unit: "kJ"
+    stoichiometric_basis: "2 mol H2O"
+
+emergent_properties:
+  - hydrogen_bonding
+  - high_heat_capacity
+  - solvent_behavior
+  - density_anomaly
+  - proton_transport
+  - multiple_solid_phases
+
+rules:
+  water_property_equals_oxygen_property: false
+  water_property_equals_hydrogen_property: false
+
+source_id: "SRC-000134"

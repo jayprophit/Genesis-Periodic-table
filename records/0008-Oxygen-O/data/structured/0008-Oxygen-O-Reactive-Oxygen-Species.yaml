@@ -1,0 +1,72 @@
+registry_id: "MAT:0008:REG:REACTIVE-OXYGEN"
+record_id: "MAT:0008"
+version: "1.0.0"
+
+species:
+
+  superoxide:
+    id: "MAT:SPEC:O2-RADICAL-ANION"
+    notation: "O2•-"
+    parent: "MAT:0008:MOL:O2"
+
+    class:
+      - REACTIVE-OXYGEN-SPECIES
+      - RADICAL
+      - ONE-ELECTRON-REDUCED-DIOXYGEN
+
+    biological_roles:
+      - redox_signalling_precursor
+      - oxidative_stress_at_excess_levels
+
+  hydrogen_peroxide:
+    id: "MAT:CMP:H2O2"
+    notation: "H2O2"
+
+    class:
+      - REACTIVE-OXYGEN-SPECIES
+      - NONRADICAL-PEROXIDE
+
+    biological_roles:
+      - redox_signalling
+      - oxidative_stress_at_excess_levels
+
+  hydroxyl_radical:
+    id: "MAT:SPEC:OH-RADICAL"
+    notation: "•OH"
+
+    class:
+      - REACTIVE-OXYGEN-SPECIES
+      - RADICAL
+
+    reactivity:
+      highly_reactive: true
+      signalling_specificity_lower_than_H2O2: true
+
+  singlet_oxygen:
+    id: "MAT:0008:ESTATE:O2-a1DeltaG"
+    notation: "1O2"
+
+    class:
+      - REACTIVE-OXYGEN-SPECIES
+      - ELECTRONICALLY-EXCITED-DIOXYGEN
+
+    radical: false
+
+  ozone:
+    id: "MAT:0008:MOL:O3"
+
+    class:
+      - STRONG-OXIDANT
+
+    broad_ROS_taxonomy:
+      context_dependent: true
+
+source_id: "SRC-000154"
+
+rules:
+  ROS_are_all_radicals: false
+  superoxide_equals_peroxide: false
+  hydrogen_peroxide_equals_hydroxyl_radical: false
+  singlet_oxygen_equals_ground_triplet_oxygen: false
+  ROS_are_only_harmful: false
+  concentration_location_duration_and_context_are_required: true

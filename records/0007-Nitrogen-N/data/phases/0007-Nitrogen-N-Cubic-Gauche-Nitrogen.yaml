@@ -1,0 +1,68 @@
+phase_id: "MAT:0007:ALLOTROPE:CG-N"
+parent_id: "MAT:0007"
+
+name: "Cubic-gauche polymeric nitrogen"
+abbreviation: "cg-N"
+
+classification:
+  elemental: true
+  polymeric: true
+  high_pressure: true
+  high_energy_density_research: true
+
+structure:
+  extended_network: true
+  dominant_bond_descriptor: "SINGLE-N-N"
+  molecular_N2_units: false
+  three_dimensional: true
+
+synthesis_original_report:
+
+  pressure:
+    relation: "GREATER-THAN"
+    value: 110
+    unit: "GPa"
+
+  temperature:
+    relation: "GREATER-THAN"
+    value: 2000
+    unit: "K"
+
+  technique:
+    - diamond_anvil_cell
+    - laser_heating
+    - xray_characterization
+    - Raman_characterization
+
+metastability:
+  important: true
+
+  required_state_variables:
+    - pressure
+    - temperature
+    - time
+    - decompression_path
+    - defects
+    - sample_history
+
+energy_relationship:
+
+  ordinary_state:
+    object: "MAT:0007:MOL:N2"
+    bonding: "N_TRIPLE_N"
+    relative_energy: "LOW"
+
+  polymeric_state:
+    object: "MAT:0007:ALLOTROPE:CG-N"
+    bonding: "EXTENDED-SINGLE-BOND-NETWORK"
+    relative_energy: "HIGHER"
+
+  interpretation:
+    "Bond topology is an energy-state variable."
+
+source_id: "SRC-000105"
+
+rules:
+  cgN_is_ambient_equilibrium_nitrogen: false
+  stored_energy_means_practical_energy_system: false
+  polymeric_nitrogen_equals_explosive_instruction: false

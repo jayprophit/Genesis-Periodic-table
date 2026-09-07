@@ -1,0 +1,43 @@
+registry_id: "MAT:0009:REG:BATTERY-FLUORINE"
+
+roles:
+
+  electrolyte_salts:
+    fluorinated_anions_possible: true
+
+  solvents_and_additives:
+    fluorinated_molecules_possible: true
+
+  interphases:
+    LiF_rich_states:
+      possible: true
+      material_and_condition_specific: true
+
+  solid_electrolytes:
+    halide_and_fluoride_families: true
+
+  electrode_materials:
+    metal_fluorides:
+      conversion_reactions: true
+
+  fluoride_ion_battery:
+    charge_carrier: "F-"
+
+potential_benefits:
+  - interphase_stability
+  - oxidative_stability
+  - thermal_stability
+  - altered_surface_chemistry
+
+tradeoffs:
+  - bond_strength_can_reduce_reversibility
+  - irreversible_LiF_formation_possible
+  - compatibility_constraints
+  - fluorinated_material_environmental_considerations
+
+rule:
+  "Fluorination is a design variable, not an automatically beneficial modification."
+
+source_ids:
+  - "SRC-000175"
+  - "SRC-000172"

@@ -1317,12 +1317,33 @@ This is foundational for future inverse material design.
 # 39. Current Status
 
 ```yaml
-status: RESEARCHED
-migration_status: CONTENT-CORE-MIGRATED
-schema_validation_status: PENDING
-scientific_core: RESEARCHED
-visual_specification: NOT-YET-LOCKED
-visual_assets: NOT-GENERATED
+status: "RESEARCHED"
+completeness: "RESEARCHED"
+
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  isotope_semantics: "PASS"
+  nuclear_architecture: "PASS"
+  metrology_architecture: "PASS"
+  allotrope_architecture: "PASS"
+  topology_architecture: "PASS"
+  dimensionality_architecture: "PASS"
+  nanocarbon_architecture: "PASS"
+  organic_architecture: "PASS"
+  transport_architecture: "PASS"
+  spectral_architecture: "PASS"
+  biological_architecture: "PASS"
+  carbon_cycle_architecture: "PASS"
+  evidence_architecture: "PASS"
+  scientific_core: "CORE-VALIDATED"
+  exhaustive_content: false
+
+visuals:
+  specification: "LOCKED"
+  generated: false
 ```
 
 The atomic values above are from NIST ASD: Carbon is `1s²2s²2p²`, \(^{3}P_0\), with first ionisation energy **11.2602880 ± 0.0000011 eV** and the higher ionisation ladder shown above. ([NIST][1]) NIST gives ¹²C abundance `0.9893(8)`, ¹³C `0.0107(8)`, and the standard atomic-weight interval `[12.0096,12.0116]`. ([NIST][2])

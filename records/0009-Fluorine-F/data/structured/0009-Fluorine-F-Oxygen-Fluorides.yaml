@@ -1,0 +1,53 @@
+registry_id: "MAT:0009:REG:OXYGEN-FLUORIDES"
+
+parents:
+  - "MAT:0008"
+  - "MAT:0009"
+
+species:
+
+  OF2:
+
+    id: "MAT:CMP:OF2"
+    formula: "OF2"
+
+    geometry:
+      type: "BENT"
+
+    formal_oxidation_states:
+      O: 2
+      F: -1
+
+    significance:
+      - oxygen_positive_oxidation_state
+      - fluorine_electronegativity_exception
+      - strong_oxidizing_fluorinating_chemistry
+
+    source_id: "SRC-000181"
+
+  O2F2:
+
+    id: "MAT:CMP:O2F2"
+    formula: "O2F2"
+
+    connectivity:
+      idealized: "F-O-O-F"
+
+    O_O_bond_present: true
+
+    formal_oxidation_states:
+      average_O: 1
+      F: -1
+
+    classification:
+      - dioxygen_difluoride
+      - reactive_oxygen_fluoride
+
+    exact_geometry:
+      status: "DATA-EXTRACTION-REQUIRED"
+
+rules:
+  O_is_always_minus_2: false
+  F_in_normal_compounds_positive_oxidation_state: false
+  OF2_equals_oxygen_difluoride_not_fluorine_oxide_formalism: true
+  oxygen_fluoride_properties_are_compound_specific: true

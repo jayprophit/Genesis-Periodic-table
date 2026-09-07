@@ -1,0 +1,45 @@
+registry_id: "MAT:0008:REG:CORROSION"
+record_id: "MAT:0008"
+
+corrosion:
+  classification: "ELECTROCHEMICAL-MATERIAL-DEGRADATION"
+
+required_or_common_variables:
+  - metal_or_alloy
+  - water_activity
+  - electrolyte
+  - dissolved_oxygen
+  - pH
+  - temperature
+  - potential
+  - chloride_or_other_aggressive_ions
+  - flow
+  - surface_condition
+
+representative_aerated_iron_model:
+
+  anodic:
+    "Fe -> Fe2+ + 2e-"
+
+  cathodic_neutral_or_alkaline:
+    "O2 + 2H2O + 4e- -> 4OH-"
+
+  subsequent_products:
+    classification: "MULTIPLE-HYDRATED-IRON-OXIDE/OXYHYDROXIDE-STATES"
+
+  warning:
+    "Rust is not one unique pure compound."
+
+prevention_classes:
+  - coatings
+  - cathodic_protection
+  - alloy_selection
+  - inhibitor_chemistry
+  - environment_control
+
+rules:
+  oxidation_equals_corrosion: false
+  corrosion_requires_state_environment_context: true
+  oxide_formation_can_be_protective_or_degrading: true
+
+source_id: "SRC-000138"

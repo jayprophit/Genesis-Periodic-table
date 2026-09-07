@@ -1,0 +1,180 @@
+registry_id: "MAT:0007:REG:RELATIONSHIPS"
+record_id: "MAT:0007"
+version: "1.0.0"
+
+relationships:
+
+  # ISOTOPES / NUCLEAR
+
+  - relationship_id: "MAT:0007:REL:0001"
+    source: "MAT:0006:ISO:C-14"
+    type: "DECAYS-TO"
+    target: "MAT:0007:ISO:N-14"
+    mechanism: "BETA-MINUS"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0007:REL:0002"
+    source: "MAT:0007:ISO:N-13"
+    type: "DECAYS-TO"
+    target: "MAT:0006:ISO:C-13"
+    mechanism: "BETA-PLUS"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0007:REL:0003"
+    source: "MAT:0007:ISO:N-16"
+    type: "DECAYS-TO"
+    target: "MAT:0008:ISO:O-16"
+    mechanism: "BETA-MINUS"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0007:REL:0004"
+    source: "MAT:0007:ISO:N-17"
+    type: "BETA-DELAYED-NEUTRON-DECAY"
+    target_family:
+      - "MAT:0008:ISO:O-17"
+      - "MAT:0008:ISO:O-16 + neutron"
+    target_status: "RESOLVED"
+
+  # MOLECULAR STATE
+
+  - relationship_id: "MAT:0007:REL:0010"
+    source: "MAT:0007"
+    type: "FORMS-HOMONUCLEAR-MOLECULE"
+    target: "MAT:0007:MOL:N2"
+    mechanism: "TRIPLE-BOND"
+
+  # HYDROGEN
+
+  - relationship_id: "MAT:0007:REL:0020"
+    source:
+      - "MAT:0007:MOL:N2"
+      - "MAT:0001:MOL:H2"
+    type: "CATALYTIC-FIXATION"
+    target: "MAT:CMP:NH3"
+    mechanism: "HABER-BOSCH"
+
+  # CARBON
+
+  - relationship_id: "MAT:0007:REL:0030"
+    source: "MAT:0007"
+    type: "CHEMICAL-NETWORK-WITH"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+    families:
+      - C-N
+      - C=N
+      - C#N
+      - amines
+      - amides
+      - nitriles
+      - heterocycles
+      - peptides
+      - nucleobases
+
+  # BORON
+
+  - relationship_id: "MAT:0007:REL:0040"
+    source: "MAT:0007"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0005"
+    target_status: "RESOLVED"
+    product_family: "BN"
+
+  # LITHIUM
+
+  - relationship_id: "MAT:0007:REL:0050"
+    source: "MAT:0007"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0003"
+    target_status: "RESOLVED"
+    product: "Li3N"
+
+  # OXYGEN / REACTIVE-N
+
+  - relationship_id: "MAT:0007:REL:0060"
+    source: "MAT:0007"
+    type: "FORMS-OXIDES-WITH"
+    target: "MAT:0008"
+    target_status: "RESOLVED"
+    products:
+      - NO
+      - NO2
+      - N2O
+      - higher_nitrogen_oxides
+
+  # ALUMINIUM
+
+  - relationship_id: "MAT:0007:REL:0070"
+    source: "MAT:0007"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0013"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+    product: "AlN"
+
+  # SILICON
+
+  - relationship_id: "MAT:0007:REL:0071"
+    source: "MAT:0007"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0014"
+    target_status: "RESERVED-PENDING-SILICON"
+    product_family:
+      - Si3N4
+      - SiNx
+
+  # TITANIUM
+
+  - relationship_id: "MAT:0007:REL:0072"
+    source: "MAT:0007"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0022"
+    target_status: "RESERVED-PENDING-TITANIUM"
+    product: "TiN"
+
+  # GALLIUM
+
+  - relationship_id: "MAT:0007:REL:0073"
+    source: "MAT:0007"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0031"
+    target_status: "RESERVED-PENDING-GALLIUM"
+    product: "GaN"
+
+  # BIOLOGY
+
+  - relationship_id: "MAT:0007:REL:0080"
+    source: "MAT:0007:MOL:N2"
+    type: "BIOLOGICALLY-FIXED-BY"
+    target: "NITROGENASE"
+
+  - relationship_id: "MAT:0007:REL:0081"
+    source: "MAT:0007"
+    type: "BIOLOGICAL-FRAMEWORK-ELEMENT"
+    target: "TERRESTRIAL-LIFE"
+
+  # PLANETARY CYCLE
+
+  - relationship_id: "MAT:0007:REL:0090"
+    source: "MAT:0007"
+    type: "PLANETARY-CYCLE"
+    target: "NITROGEN-CYCLE"
+
+  # EXTREME STATE
+
+  - relationship_id: "MAT:0007:REL:0100"
+    source: "MAT:0007:MOL:N2"
+    type: "TRANSFORMS-UNDER-HIGH-P-T"
+    target: "MAT:0007:ALLOTROPE:CG-N"
+
+  # LEGACY
+
+  - relationship_id: "MAT:0007:REL:0999"
+    source: "MAT:0007"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0007"
+
+rules:
+  chemical_and_nuclear_edges_are_distinct: true
+  nitrogen_oxide_species_are_distinct: true
+  compound_property_equals_nitrogen_property: false
+  graph_is_exhaustive: false

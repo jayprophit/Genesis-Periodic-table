@@ -53,10 +53,10 @@ Initial mapping:
 | 0003 | Lithium | Li | 3 | CORE-VALIDATED |
 | 0004 | Beryllium | Be | 4 | IN-PROGRESS |
 | 0005 | Boron | B | 5 | CORE-VALIDATED |
-| 0006 | Carbon | C | 6 |
-| 0007 | Nitrogen | N | 7 |
-| 0008 | Oxygen | O | 8 |
-| 0009 | Fluorine | F | 9 |
+| 0006 | Carbon | C | 6 | CORE-VALIDATED |
+| 0007 | Nitrogen | N | 7 | CORE-VALIDATED | IN-PROGRESS |
+| 0008 | Oxygen | O | 8 | CORE-VALIDATED |
+| 0009 | Fluorine | F | 9 | CORE-VALIDATED |
 | 0010 | Neon | Ne | 10 |
 | 0011 | Sodium | Na | 11 |
 | 0012 | Magnesium | Mg | 12 |

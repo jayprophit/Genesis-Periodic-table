@@ -112,8 +112,44 @@ async function loadChapter(idx) {
   tagMatIds();
   buildJump();
   buildRecommend();
+  buildVisuals();
   document.getElementById("studio-chapter").textContent = ch.title;
   buildExternal();
+}
+
+// Visuals gallery for the current chapter's record: GENERATED SVGs render
+// inline; pending slots are named honestly (never faked).
+let visualsIdx = null;
+async function buildVisuals() {
+  document.getElementById("vis")?.remove();
+  const ch = flat[current];
+  if (!ch) return;
+  const rm = ch.path.match(/records\/(\d{4})-[^/]+\//);
+  if (!rm) return;
+  try {
+    if (!visualsIdx) visualsIdx = await (await fetch("./visuals-index.json")).json();
+  } catch { return; }
+  const rec = (visualsIdx.visuals || []).find((v) => v.record === rm[1]);
+  if (!rec) return;
+  const base = "../" + rec.dir + "/";
+  const gen = rec.items.filter((it) => it.found && /\.svg$/i.test(it.file));
+  const pend = rec.items.filter((it) => !it.found);
+  if (!gen.length && !pend.length) return;
+  const div = document.createElement("div");
+  div.id = "vis";
+  let html = `<h3>Record visuals — ${esc(rm[1])}</h3>`;
+  if (gen.length) {
+    html += `<div class="vis-grid">` + gen.map((it) =>
+      `<figure class="vis-cell"><img src="${base + it.path + it.file}" alt="${esc(it.file)}"><figcaption>${esc(it.file.replace(/^.*-(FIG|DIAGRAM|GRAPH)-/, "").replace(/\.svg$/, "").replace(/-/g, " "))}</figcaption></figure>`
+    ).join("") + `</div>`;
+  }
+  if (pend.length) {
+    html += `<details class="vis-pend"><summary>Pending visuals (${pend.length}) — not yet generated</summary><ul>` +
+      pend.map((it) => `<li>${esc(it.file)} — <em>${esc(it.status.replace(/-/g, " "))}</em></li>`).join("") + `</ul></details>`;
+  }
+  div.innerHTML = html;
+  const anchor = document.getElementById("extern") || document.getElementById("reco") || pageEl;
+  anchor.after(div);
 }
 
 // External resources for the current chapter: encyclopedia, papers, video,
@@ -382,6 +418,18 @@ const ready = fetch("./manifest.json").then((r) => r.json()).then((m) => {
     studioHead.classList.remove("shut");
     studioBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
+  // Cascading rows inside Studio (voice / rate / language collapse independently).
+  document.querySelectorAll(".studio-row").forEach((row) => {
+    const btn = row.querySelector(".studio-toggle");
+    const body = row.querySelector(".studio-body");
+    btn.onclick = () => {
+      const open = body.hidden;
+      document.querySelectorAll(".studio-row .studio-body").forEach((b) => (b.hidden = true));
+      document.querySelectorAll(".studio-row .studio-toggle").forEach((t) => t.classList.remove("open"));
+      body.hidden = !open;
+      btn.classList.toggle("open", open);
+    };
+  });
 
   // Advanced search controls.
   document.getElementById("adv-toggle").onclick = () => {

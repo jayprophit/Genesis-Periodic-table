@@ -1,0 +1,65 @@
+registry_id: "MAT:0007:REG:NUCLEAR-FUNCTIONS"
+record_id: "MAT:0007"
+
+nitrogen_13:
+
+  isotope: "MAT:0007:ISO:N-13"
+
+  function:
+    - positron_emission
+    - PET
+    - short_duration_tracing
+
+  half_life:
+    value: 9.965
+    unit: "min"
+
+  daughter: "MAT:0006:ISO:C-13"
+  q_calculation: "MAT:0007:CALC:001"
+
+nitrogen_16:
+
+  isotope: "MAT:0007:ISO:N-16"
+
+  function:
+    - activation_product
+    - gamma_radiation_monitor
+    - nuclear_system_diagnostic
+
+  half_life:
+    value: 7.13
+    unit: "s"
+
+  prominent_gamma:
+    energy:
+      value: 6.12863
+      unit: "MeV"
+
+    approximate_yield: 0.67
+    source_id: "SRC-000106"
+
+  q_calculation: "MAT:0007:CALC:002"
+
+nitrogen_17:
+
+  isotope: "MAT:0007:ISO:N-17"
+
+  function:
+    - beta_delayed_neutron_source_in_decay_chains
+    - nuclear_structure_research
+
+  half_life:
+    value: 4.173
+    unit: "s"
+
+  beta_delayed_neutron_probability:
+    value: 95.1
+    uncertainty: 0.7
+    unit: "percent"
+
+  q_calculation: "MAT:0007:CALC:003"
+
+rules:
+  decay_energy_equals_storage_utility: false
+  gamma_line_equals_total_decay_Q: false
+  beta_delayed_neutron_is_direct_ground_state_neutron_emission: false

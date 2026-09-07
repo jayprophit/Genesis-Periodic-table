@@ -1,0 +1,69 @@
+registry_id: "MAT:0009:REG:FLUOROPOLYMERS"
+
+PTFE:
+
+  id: "MAT:MAT:PTFE"
+
+  repeat_unit:
+    "[-CF2-CF2-]n"
+
+  parents:
+    - "MAT:0006"
+    - "MAT:0009"
+
+  material_class:
+    - fluoropolymer
+    - semicrystalline_polymer
+
+  characteristic_properties:
+    - high_chemical_resistance
+    - low_surface_energy
+    - low_friction
+    - electrical_insulation
+    - thermal_resistance
+
+  melting_region:
+    approximate_value: 327
+    unit: "degC"
+
+  processing:
+    conventional_melt_processing_difficult: true
+
+  history:
+    discovery_year: 1938
+    person: "Roy_J_Plunkett"
+
+other_fluoropolymer_families:
+  - PVDF
+  - PFA
+  - FEP
+  - ETFE
+  - PCTFE
+  - fluoroelastomers
+
+surface_principle:
+
+  fluorine_content_can_change:
+    - surface_energy
+    - wetting
+    - friction
+    - adhesion
+    - chemical_resistance
+
+  but:
+    property_is_not_monotonic_with_F_content_in_every_polymer: true
+
+environment:
+
+  persistence_is_compound_specific: true
+  fluoropolymer_recycling_and_F_recovery:
+    active_research: true
+
+rules:
+  PTFE_property_equals_fluorine_property: false
+  all_fluoropolymers_equal_PTFE: false
+  C_F_bond_strength_alone_determines_all_polymer_behavior: false
+
+source_ids:
+  - "SRC-000174"
+  - "SRC-000178"

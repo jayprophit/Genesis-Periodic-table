@@ -1,0 +1,35 @@
+registry_id: "MAT:0008:REG:NEUTRON-DRIPLINE"
+record_id: "MAT:0008"
+
+particle_bound_edge:
+  isotope: "MAT:0008:ISO:O-24"
+
+unbound_sequence:
+
+  O25:
+    mode: "1n"
+    lifetime: "5.18(35) zs"
+
+  O26:
+    mode: "2n"
+    lifetime: "4.2(3.3) ps"
+
+  O27:
+    status: "OBSERVED-2023"
+    mode: "3n-NET"
+    sequential_via: "O26"
+
+  O28:
+    status: "OBSERVED-2023"
+    mode: "4n-NET"
+    sequential_via: "O26"
+
+rules:
+  mass_number_entry_equals_bound_isotope: false
+  direct_observation_equals_particle_stability: false
+  resonance_equals_long_lived_nuclide: false
+  historical_evaluation_may_be_superseded: true
+
+source_ids:
+  - "SRC-000008"
+  - "SRC-000132"

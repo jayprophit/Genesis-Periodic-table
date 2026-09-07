@@ -1,0 +1,200 @@
+registry_id: "MAT:0009:REG:ISOTOPES"
+parent_id: "MAT:0009"
+version: "1.0.0"
+
+NIST_mass_range:
+  minimum: 14
+  maximum: 31
+  source_id: "SRC-000158"
+
+isotopes:
+
+  - isotope_id: "MAT:0009:ISO:F-14"
+    mass_number: 14
+    relative_atomic_mass:
+      value: 14.034315
+      uncertainty: 0.000044
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-15"
+    mass_number: 15
+    relative_atomic_mass:
+      value: 15.018043
+      uncertainty: 0.000067
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-16"
+    mass_number: 16
+    relative_atomic_mass:
+      value: 16.0114657
+      uncertainty: 0.0000089
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-17"
+    mass_number: 17
+    relative_atomic_mass:
+      value: 17.00209524
+      uncertainty: 0.00000027
+      unit: "u"
+
+    nuclear_reference:
+      half_life:
+        value: 64.49
+        uncertainty: 0.16
+        unit: "s"
+      principal_decay: "BETA-PLUS"
+      spin_parity: "5/2+"
+
+  - isotope_id: "MAT:0009:ISO:F-18"
+    mass_number: 18
+    relative_atomic_mass:
+      value: 18.00093733
+      uncertainty: 0.00000050
+      unit: "u"
+
+    nuclear_reference:
+      half_life:
+        approximate_value: 109.7
+        unit: "min"
+      principal_decay:
+        - BETA-PLUS
+        - ELECTRON-CAPTURE
+      spin_parity: "1+"
+
+    daughter:
+      id: "MAT:0008:ISO:O-18"
+      status: "RESOLVED"
+
+    applications:
+      - PET
+      - radiochemistry
+      - molecular_imaging
+
+  - isotope_id: "MAT:0009:ISO:F-19"
+    mass_number: 19
+    protons: 9
+    neutrons: 10
+
+    relative_atomic_mass:
+      value: 18.99840316273
+      uncertainty: 0.00000000092
+      unit: "u"
+
+    isotopic_composition:
+      value: 1
+
+    stability: "STABLE"
+    half_life: "NOT-APPLICABLE"
+
+    spin_parity: "1/2+"
+
+    NMR_active: true
+
+  - isotope_id: "MAT:0009:ISO:F-20"
+    mass_number: 20
+    relative_atomic_mass:
+      value: 19.999981252
+      uncertainty: 0.000000031
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-21"
+    mass_number: 21
+    relative_atomic_mass:
+      value: 20.9999489
+      uncertainty: 0.0000019
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-22"
+    mass_number: 22
+    relative_atomic_mass:
+      value: 22.002999
+      uncertainty: 0.000013
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-23"
+    mass_number: 23
+    relative_atomic_mass:
+      value: 23.003557
+      uncertainty: 0.000054
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-24"
+    mass_number: 24
+    relative_atomic_mass:
+      value: 24.008115
+      uncertainty: 0.000078
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-25"
+    mass_number: 25
+    relative_atomic_mass:
+      value: 25.012199
+      uncertainty: 0.000081
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-26"
+    mass_number: 26
+    relative_atomic_mass:
+      value: 26.020038
+      uncertainty: 0.000083
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-27"
+    mass_number: 27
+    relative_atomic_mass:
+      value: 27.02644
+      uncertainty: 0.00020
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-28"
+    mass_number: 28
+    relative_atomic_mass:
+      value: 28.03534
+      uncertainty: 0.00021
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-29"
+    mass_number: 29
+    relative_atomic_mass:
+      value: 29.04254
+      uncertainty: 0.00054
+      estimated: true
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-30"
+    mass_number: 30
+    relative_atomic_mass:
+      value: 30.05165
+      uncertainty: 0.00064
+      estimated: true
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+  - isotope_id: "MAT:0009:ISO:F-31"
+    mass_number: 31
+    relative_atomic_mass:
+      value: 31.05971
+      uncertainty: 0.00056
+      estimated: true
+      unit: "u"
+    nuclear_details: "NEXT-BATCH"
+
+rules:
+  stable_half_life_representation: "NOT-APPLICABLE"
+  F19_natural_composition: 1
+  mass_table_entry_implies_bound_nuclide: false
+  estimated_mass_requires_flag: true
+  nuclear_semantics_require_evaluated_data: true

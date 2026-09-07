@@ -1,0 +1,97 @@
+registry_id: "MAT:0008:REG:SOLID-PHASES"
+record_id: "MAT:0008"
+version: "1.0.0"
+
+ambient_pressure_phases:
+
+  alpha:
+    id: "MAT:0008:PHASE:ALPHA-O2"
+    molecular: true
+    magnetic_order: "ANTIFERROMAGNETIC"
+    low_temperature: true
+
+  beta:
+    id: "MAT:0008:PHASE:BETA-O2"
+    molecular: true
+    magnetic_state: "SHORT-RANGE / STATE-DEPENDENT"
+    low_temperature: true
+
+  gamma:
+    id: "MAT:0008:PHASE:GAMMA-O2"
+    molecular: true
+    higher_temperature_solid_phase: true
+
+pressure_induced:
+
+  delta:
+    id: "MAT:0008:PHASE:DELTA-O2"
+
+    onset_reference:
+      approximate_value: 5.5
+      unit: "GPa"
+
+    molecular: true
+    magnetic:
+      antiferromagnetic_states: true
+      multiple_magnetic_structures: true
+
+  epsilon:
+    id: "MAT:0008:PHASE:EPSILON-O2"
+
+    onset_reference:
+      approximate_value: 8
+      unit: "GPa"
+
+    molecular: true
+
+    cluster_structure:
+      descriptor: "(O2)4"
+      equivalent_atom_count: 8
+      common_label: "O8-CLUSTER"
+
+    magnetic:
+      collapse_relative_to_lower_pressure_order: true
+
+    crystallographic_reference:
+      system: "MONOCLINIC"
+      space_group: "C2/m"
+
+  zeta:
+    id: "MAT:0008:PHASE:ZETA-O2"
+
+    transition_reference:
+      approximate_value: 96
+      unit: "GPa"
+
+    electronic:
+      metallic: true
+
+    superconductivity:
+      observed: true
+      pressure_reference:
+        approximate_value: 100
+        unit: "GPa"
+
+      Tc:
+        approximate_value: 0.6
+        unit: "K"
+
+  high_temperature_dense_phases:
+    known_families:
+      - ETA
+      - ETA-PRIME
+
+    detailed_boundaries:
+      status: "DATA-EXTRACTION-REQUIRED"
+
+source_ids:
+  - "SRC-000144"
+  - "SRC-000145"
+  - "SRC-000146"
+
+rules:
+  molecular_O2_always_paramagnetic_bulk_solid: false
+  phase_magnetism_is_pressure_temperature_dependent: true
+  metallic_oxygen_is_ambient_oxygen: false
+  superconducting_oxygen_is_ambient_oxygen: false
+  phase_boundary_values_are_approximate_until_full_dataset_extracted: true

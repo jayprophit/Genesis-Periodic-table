@@ -1,0 +1,70 @@
+registry_id: "MAT:0008:REG:BIOLOGICAL-OXYGEN"
+record_id: "MAT:0008"
+
+oxygenic_photosynthesis:
+
+  photosystem_II:
+    function:
+      - absorb_photonic_energy
+      - oxidize_water
+      - release_electrons
+      - release_protons
+      - form_molecular_oxygen
+
+    oxygen_evolving_complex:
+      cluster: "Mn4CaO5"
+
+    simplified_net_water_oxidation:
+      "2H2O -> O2 + 4H+ + 4e-"
+
+    important_rule:
+      "The evolved O2 originates from water oxidation."
+
+    source_id: "SRC-000139"
+
+photosynthetic_carbon_fixation:
+
+  oxygen_evolution_equals_carbon_fixation_step: false
+
+  relationship:
+    light_reactions_produce:
+      - ATP
+      - NADPH
+
+    carbon_fixation_uses:
+      - CO2
+      - ATP
+      - reducing_power
+
+aerobic_respiration:
+
+  molecular_oxygen:
+    role: "TERMINAL-ELECTRON-ACCEPTOR"
+
+  mitochondrial_chain:
+    electron_path:
+      - reducing_equivalents
+      - respiratory_complexes
+      - cytochrome_c
+      - complex_IV
+      - O2
+
+    product:
+      - H2O
+
+    proton_gradient_drives_ATP_synthesis: true
+
+    source_id: "SRC-000140"
+
+relationship_cycle:
+
+  photosynthesis:
+    water_oxidation_produces_O2: true
+
+  respiration:
+    O2_reduction_produces_water: true
+
+rules:
+  respiration_equals_open_flame_combustion: false
+  photosynthesis_is_one_single_reaction: false
+  oxygen_atom_tracking_requires_isotope_or_mechanistic_context: true

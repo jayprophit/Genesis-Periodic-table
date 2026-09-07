@@ -58,11 +58,26 @@ try {
   throw new Error("no scenes");
 }
 const sel = document.getElementById("scene");
-scenes.forEach((s, i) => {
-  const o = document.createElement("option");
-  o.value = i; o.textContent = s.id;
-  sel.appendChild(o);
-});
+// Group models by record (MAT:NNNN in caption) so each element is one folder.
+{
+  const groups = new Map();
+  scenes.forEach((s, i) => {
+    const key = s.record || ((s.caption || "").match(/MAT:(00\d\d)/) || [])[1] || "general";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push([s, i]);
+  });
+  const order = [...groups.keys()].sort((a, b) => a === "general" ? 1 : b === "general" ? -1 : a.localeCompare(b));
+  order.forEach((key) => {
+    const og = document.createElement("optgroup");
+    og.label = key === "general" ? "General" : "Record " + key;
+    groups.get(key).forEach(([s, i]) => {
+      const o = document.createElement("option");
+      o.value = i; o.textContent = s.id;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  });
+}
 let THREE, OrbitControls;
 try {
   THREE = await import("three");

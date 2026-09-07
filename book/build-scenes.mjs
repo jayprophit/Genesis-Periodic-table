@@ -10,7 +10,8 @@ const F = (re, t, label) => { const m = t.match(re); if (!m) throw new Error("mi
 
 const scenes = [];
 function add(id, title, caption, units, atoms, bonds, cell) {
-  scenes.push({ id, file: `${id}.json` });
+  const rm = (caption.match(/MAT:(00\d\d)/) || [])[1] || "general";
+  scenes.push({ id, file: `${id}.json`, record: rm });
   writeFileSync(join(out, `${id}.json`),
     JSON.stringify({ id, title, caption, units, atoms, bonds, cell }, null, 1));
   console.log("scene " + id);
@@ -82,6 +83,32 @@ function add(id, title, caption, units, atoms, bonds, cell) {
   });
   add("mat0000-refs", "MAT:0000 reference channels", "15 reference channels as spokes (MAT:0000 registry). Computational vs physical status per channel.", "relative",
     atoms, codes.map((_, k) => [0, k + 1]), []);
+}
+
+// O2 molecule: re = 1.20752 A.
+{
+  const t = R("records/0008-Oxygen-O/data/structured/0008-Oxygen-O.yaml");
+  const re = parseFloat(F(/value: (1\.20752)/, t, "O2 re"));
+  add("o2-molecule", "O2 molecule", `X3Sigma_g- ground state, equilibrium separation re = ${re} A (MAT:0008). Triplet: two pi* electrons.`, "angstrom",
+    [[-re / 2, 0, 0, "O", "#ff4033"], [re / 2, 0, 0, "O", "#ff4033"]], [[0, 1]], []);
+}
+
+// O3 molecule: r = 1.278 A, angle 116.8 deg (experimental).
+{
+  const t = R("records/0008-Oxygen-O/data/structured/0008-Oxygen-O.yaml");
+  if (!t.includes("1.278") || !t.includes("116.8")) throw new Error("O3 geometry missing");
+  const r = 1.278, half = (116.8 / 2) * (Math.PI / 180);
+  const x = +(r * Math.sin(half)).toFixed(4), y = +(-r * Math.cos(half)).toFixed(4);
+  add("o3-molecule", "O3 molecule (bent)", "C2v, r = 1.278 A, O-O-O angle 116.8 deg, experimental CCCBDB (MAT:0008).", "angstrom",
+    [[0, 0, 0, "O central", "#ff4033"], [x, y, 0, "O terminal", "#ff6b5e"], [-x, y, 0, "O terminal", "#ff6b5e"]], [[0, 1], [0, 2]], []);
+}
+
+// F2 molecule: re = 1.412 A.
+{
+  const t = R("records/0009-Fluorine-F/data/structured/0009-Fluorine-F.yaml");
+  const re = parseFloat(F(/approximate_value: (1\.412)/, t, "F2 re"));
+  add("f2-molecule", "F2 molecule", `X1Sigma_g+ ground state, equilibrium separation re = ${re} A (MAT:0009, NIST diatomic).`, "angstrom",
+    [[-re / 2, 0, 0, "F", "#73ff66"], [re / 2, 0, 0, "F", "#73ff66"]], [[0, 1]], []);
 }
 
 writeFileSync(join(out, "index.json"), JSON.stringify({ scenes }, null, 1));

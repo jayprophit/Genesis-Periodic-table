@@ -1,0 +1,189 @@
+registry_id: "MAT:0009:REG:RELATIONSHIPS"
+record_id: "MAT:0009"
+version: "1.0.0"
+
+relationships:
+
+  # NUCLEAR
+
+  - relationship_id: "MAT:0009:REL:0001"
+    source: "MAT:0009:ISO:F-18"
+    type: "DECAYS-TO"
+    target: "MAT:0008:ISO:O-18"
+    target_status: "RESOLVED"
+    mechanism:
+      - BETA-PLUS
+      - ELECTRON-CAPTURE
+
+  - relationship_id: "MAT:0009:REL:0002"
+    source: "MAT:0009:ISO:F-17"
+    type: "DECAYS-TO"
+    target: "MAT:0008:ISO:O-17"
+    target_status: "RESOLVED"
+
+  # HOMONUCLEAR
+
+  - relationship_id: "MAT:0009:REL:0010"
+    source: "MAT:0009"
+    type: "FORMS-HOMONUCLEAR-MOLECULE"
+    target: "MAT:0009:MOL:F2"
+
+  # HYDROGEN
+
+  - relationship_id: "MAT:0009:REL:0020"
+    source: "MAT:0009"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0001"
+    target_status: "RESOLVED"
+    products:
+      - HF
+
+  # LITHIUM
+
+  - relationship_id: "MAT:0009:REL:0030"
+    source: "MAT:0009"
+    type: "FORMS-FLUORIDE-WITH"
+    target: "MAT:0003"
+    target_status: "RESOLVED"
+    product: "LiF"
+
+  # BERYLLIUM
+
+  - relationship_id: "MAT:0009:REL:0040"
+    source: "MAT:0009"
+    type: "FORMS-FLUORIDE-WITH"
+    target: "MAT:0004"
+    target_status: "RESOLVED"
+    product: "BeF2"
+
+  - relationship_id: "MAT:0009:REL:0041"
+    source:
+      - "MAT:0003"
+      - "MAT:0004"
+      - "MAT:0009"
+    type: "FORMS-MOLTEN-SALT-FAMILY"
+    target: "FLiBe"
+    target_status: "RESOLVED-PARENT-TRIAD"
+
+  # BORON
+
+  - relationship_id: "MAT:0009:REL:0050"
+    source: "MAT:0009"
+    type: "CHEMICAL-NETWORK-WITH"
+    target: "MAT:0005"
+    target_status: "RESOLVED"
+    products:
+      - BF3
+      - BF4_minus
+
+  # CARBON
+
+  - relationship_id: "MAT:0009:REL:0060"
+    source: "MAT:0009"
+    type: "CHEMICAL-NETWORK-WITH"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+    families:
+      - C_F_bonds
+      - fluorocarbons
+      - fluoropolymers
+      - organofluorines
+      - PFAS_subsets
+
+  # NITROGEN
+
+  - relationship_id: "MAT:0009:REL:0070"
+    source: "MAT:0009"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0007"
+    target_status: "RESOLVED"
+    product: "NF3"
+
+  # OXYGEN
+
+  - relationship_id: "MAT:0009:REL:0080"
+    source: "MAT:0009"
+    type: "FORMS-OXYGEN-FLUORIDES"
+    target: "MAT:0008"
+    target_status: "RESOLVED"
+    products:
+      - OF2
+      - O2F2
+
+  # FUTURE SILICON
+
+  - relationship_id: "MAT:0009:REL:0090"
+    source: "MAT:0009"
+    type: "FORMS-FLUORIDE-WITH"
+    target: "MAT:0014"
+    target_status: "RESERVED-PENDING-SILICON"
+    product: "SiF4"
+
+  # FUTURE SULFUR
+
+  - relationship_id: "MAT:0009:REL:0091"
+    source: "MAT:0009"
+    type: "FORMS-HIGH-OXIDATION-FLUORIDE"
+    target: "MAT:0016"
+    target_status: "RESERVED-PENDING-SULFUR"
+    product: "SF6"
+
+  # FUTURE XENON
+
+  - relationship_id: "MAT:0009:REL:0092"
+    source: "MAT:0009"
+    type: "FORMS-NOBLE-GAS-FLUORIDES"
+    target: "MAT:0054"
+    target_status: "RESERVED-PENDING-XENON"
+    products:
+      - XeF2
+      - XeF4
+      - XeF6
+
+  # FUTURE PLATINUM
+
+  - relationship_id: "MAT:0009:REL:0093"
+    source: "MAT:0009"
+    type: "STABILIZES-HIGH-OXIDATION-STATE"
+    target: "MAT:0078"
+    target_status: "RESERVED-PENDING-PLATINUM"
+    product: "PtF6"
+
+  # FUTURE URANIUM
+
+  - relationship_id: "MAT:0009:REL:0094"
+    source: "MAT:0009"
+    type: "FORMS-VOLATILE-FLUORIDE"
+    target: "MAT:0092"
+    target_status: "RESERVED-PENDING-URANIUM"
+    product: "UF6"
+
+  # MINERALS
+
+  - relationship_id: "MAT:0009:REL:0100"
+    source: "MAT:0009"
+    type: "NATURAL-MINERAL-RESERVOIR"
+    targets:
+      - fluorite
+      - fluorapatite
+      - cryolite
+
+  # TRANSPORT
+
+  - relationship_id: "MAT:0009:REL:0110"
+    source: "MAT:0009:ION:F-1"
+    type: "MOBILE-ION-IN"
+    target: "FLUORIDE-ION-CONDUCTORS"
+
+  # LEGACY
+
+  - relationship_id: "MAT:0009:REL:0999"
+    source: "MAT:0009"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0009"
+
+rules:
+  compound_property_equals_element_property: false
+  surface_fluorination_equals_bulk_fluorination: false
+  PFAS_equals_all_fluorine_chemistry: false
+  chemical_and_nuclear_edges_are_distinct: true

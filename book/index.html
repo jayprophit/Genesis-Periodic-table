@@ -44,34 +44,55 @@
       <label><input type="checkbox" id="opt-related" checked> Include related chapters</label>
     </div>
     <div id="results" hidden aria-label="Search results"></div>
-    <div class="toc-sec collapsible" id="studio-head"><span class="caret"></span><span>Studio · listen &amp; translate</span></div>
-    <div class="toc-group" id="studio">
+    <div class="toc-sec collapsible shut" id="studio-head"><span class="caret"></span><span>Studio · listen &amp; translate</span></div>
+    <div class="toc-group shut" id="studio">
       <p class="studio-cur">Chapter: <span id="studio-chapter">none open</span></p>
-      <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
-      <button id="stop-btn" title="Stop reading">■ Stop</button>
-      <label>Voice <select id="voice" aria-label="Voice"></select></label>
-      <label>Rate
-        <select id="rate" aria-label="Speech rate">
-          <option value="0.9">0.9×</option>
-          <option value="1" selected>1×</option>
-          <option value="1.25">1.25×</option>
-          <option value="1.5">1.5×</option>
-        </select>
-      </label>
-      <label>Language
-        <select id="lang" aria-label="Translation language">
-          <option value="">Translate to…</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="es">Español</option>
-          <option value="pt">Português</option>
-          <option value="ar">العربية</option>
-          <option value="zh-CN">中文</option>
-          <option value="hi">हिन्दी</option>
-          <option value="ur">اردو</option>
-        </select>
-      </label>
-      <button id="translate-btn" title="Machine-translate chapter">Translate</button>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Voice</button>
+        <div class="studio-body" hidden>
+          <select id="voice" aria-label="Voice"></select>
+        </div>
+      </div>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Speech rate</button>
+        <div class="studio-body" hidden>
+          <select id="rate" aria-label="Speech rate">
+            <option value="0.9">0.9×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+          </select>
+        </div>
+      </div>
+      <div class="studio-row">
+        <button class="studio-toggle">▸ Language</button>
+        <div class="studio-body" hidden>
+          <select id="lang" aria-label="Translation language">
+            <option value="">Translate to…</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="ar">العربية</option>
+            <option value="zh-CN">中文</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ur">اردو</option>
+            <option value="it">Italiano</option>
+            <option value="nl">Nederlands</option>
+            <option value="ru">Русский</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="pl">Polski</option>
+            <option value="tr">Türkçe</option>
+            <option value="sw">Kiswahili</option>
+          </select>
+        </div>
+      </div>
+      <div class="studio-actions">
+        <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
+        <button id="stop-btn" title="Stop reading">■ Stop</button>
+        <button id="translate-btn" title="Machine-translate chapter">Translate</button>
+      </div>
       <p class="studio-note">Audio and translation live here — one home for listening and languages.</p>
     </div>
     <nav id="toc" aria-label="Table of contents"></nav>

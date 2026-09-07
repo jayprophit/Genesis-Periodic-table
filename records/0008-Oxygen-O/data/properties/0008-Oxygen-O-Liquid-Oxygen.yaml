@@ -1,0 +1,59 @@
+phase_id: "MAT:0008:PHASE:LIQUID-O2"
+parent_molecule: "MAT:0008:MOL:O2"
+
+classification:
+  cryogenic_liquid: true
+  oxidizer: true
+  fuel: false
+  paramagnetic: true
+
+phase_reference:
+
+  normal_boiling_point:
+    value: 90.188
+    unit: "K"
+
+  triple_point_temperature:
+    value: 54.361
+    unit: "K"
+
+  critical_temperature:
+    value: 154.58
+    unit: "K"
+
+  critical_pressure:
+    value: 5.0430
+    unit: "MPa"
+
+thermophysical_dataset:
+
+  density:
+    status: "TABLE-AVAILABLE"
+    source_id: "SRC-000133"
+
+  heat_capacity:
+    status: "NIST-FLUID-DATASET-AVAILABLE"
+
+  viscosity:
+    status: "NIST-FLUID-DATASET-AVAILABLE"
+
+  thermal_conductivity:
+    status: "NIST-FLUID-DATASET-AVAILABLE"
+
+  exact_condition_resolved_curves:
+    status: "DATA-EXTRACTION-REQUIRED"
+
+applications:
+  - industrial_oxygen_storage
+  - cryogenic_processing
+  - propulsion_oxidizer
+  - laboratory_magnetism_demonstration
+
+safety:
+  oxygen_enrichment_increases_combustion_hazard: true
+  cryogenic_hazard: true
+  confined_liquid_requires_pressure_management: true
+
+source_ids:
+  - "SRC-000129"
+  - "SRC-000133"

@@ -1,0 +1,152 @@
+registry_id: "MAT:0008:REG:OXIDE-FAMILIES"
+record_id: "MAT:0008"
+version: "1.0.0"
+
+families:
+
+  simple_binary_oxides:
+    patterns:
+      - MO
+      - M2O3
+      - MO2
+      - M2O5
+    caution:
+      "Stoichiometry does not uniquely determine crystal structure or oxidation state."
+
+  mixed_oxides:
+    multiple_cation_species: true
+
+  perovskites:
+    idealized_formula: "ABO3"
+
+    variables:
+      - A_site
+      - B_site
+      - oxygen_stoichiometry
+      - octahedral_tilting
+      - cation_order
+      - defects
+      - pressure
+      - temperature
+
+    possible_functions:
+      - dielectric
+      - ferroelectric
+      - magnetic
+      - catalytic
+      - ionic_conduction
+      - electronic_conduction
+      - superconductivity
+
+  spinels:
+    idealized_formula: "AB2O4"
+
+    cation_distribution:
+      first_class_variable: true
+
+    possible_states:
+      - normal_spinel
+      - inverse_spinel
+      - mixed_distribution
+
+  ferrites:
+    iron_oxide_containing: true
+
+    possible_functions:
+      - magnetic
+      - microwave
+      - electronic
+      - catalytic
+
+  garnet_related_oxides:
+    three_dimensional_framework: true
+
+    possible_functions:
+      - magnetic
+      - optical
+      - solid_electrolyte
+
+    exact_formula_requires_material_child: true
+
+  transparent_conducting_oxides:
+
+    defining_combination:
+      - optical_transmission
+      - electrical_conduction
+
+    examples:
+      - ITO
+      - FTO
+      - AZO
+      - In2O3
+      - SnO2
+      - ZnO
+      - IGZO_family
+
+    rule:
+      "Transparency and conductivity must be wavelength-, thickness-, carrier- and process-resolved."
+
+  oxide_ion_conductors:
+
+    examples:
+      - stabilized_zirconia
+      - doped_ceria
+      - selected_perovskites
+
+    transported_species:
+      - "O^2-"
+
+    key_variables:
+      - oxygen_vacancy_concentration
+      - dopant
+      - temperature
+      - phase
+      - grain_boundary
+      - oxygen_partial_pressure
+
+  superconducting_oxides:
+
+    representative_family:
+      - cuprates
+
+    canonical_future_example:
+      formula: "YBa2Cu3O7-x"
+
+    oxygen_stoichiometry:
+      first_class_variable: true
+
+    possible_effects:
+      - carrier_concentration
+      - crystal_order
+      - phase_state
+      - superconducting_transition
+
+  catalytic_oxides:
+
+    active_variables:
+      - surface_termination
+      - oxidation_state
+      - oxygen_vacancy
+      - adsorbate
+      - temperature
+      - pressure
+
+  battery_oxides:
+
+    mechanisms:
+      - transition_metal_redox
+      - oxygen_redox
+      - oxygen_vacancy_formation
+      - phase_transition
+
+source_ids:
+  - "SRC-000135"
+  - "SRC-000136"
+  - "SRC-000137"
+
+rules:
+  oxide_means_insulator: false
+  oxide_means_nonmagnetic: false
+  oxide_means_stoichiometric: false
+  vacancy_concentration_is_optional_metadata: false
+  nominal_formula_alone_is_complete_material_state: false

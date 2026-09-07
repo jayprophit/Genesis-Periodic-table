@@ -1,0 +1,66 @@
+registry_id: "MAT:0008:REG:OXYGEN-ANION-SPECIES"
+record_id: "MAT:0008"
+
+species:
+
+  oxide:
+
+    object: "O^2-"
+
+    oxygen_atoms: 1
+    net_charge: -2
+
+    common_material_context:
+      - metal_oxides
+      - ceramics
+      - oxide_ion_electrolytes
+
+  neutral_dioxygen:
+
+    object: "O2"
+
+    oxygen_atoms: 2
+    net_charge: 0
+
+    molecular_orbital_bond_order_model:
+      approximate_value: 2
+
+    ground_spin_state: "TRIPLET"
+
+  superoxide:
+
+    object: "O2^-"
+
+    oxygen_atoms: 2
+    net_charge: -1
+
+    molecular_orbital_bond_order_model:
+      approximate_value: 1.5
+
+    unpaired_electron: true
+
+    example_family:
+      - KO2
+      - selected_alkali_superoxides
+      - electrochemical_intermediates
+
+  peroxide:
+
+    object: "O2^2-"
+
+    oxygen_atoms: 2
+    net_charge: -2
+
+    molecular_orbital_bond_order_model:
+      approximate_value: 1
+
+    examples:
+      - H2O2
+      - Li2O2
+      - Na2O2
+
+rules:
+  peroxide_equals_superoxide: false
+  oxide_equals_peroxide: false
+  bond_order_is_model_descriptor: true
+  solid_state_charge_distribution_can_be_nonideal: true
