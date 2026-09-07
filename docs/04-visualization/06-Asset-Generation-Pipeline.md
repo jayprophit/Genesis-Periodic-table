@@ -36,6 +36,10 @@ continuity. Missing data stays visibly `NOT-MEASURED` / `DATA-NOT-AVAILABLE`.
    `docs/04-visualization/05-Asset-Naming.md`).
 2. Fill manifests first, data second, generator support third.
 3. Run `node book/generate-assets.mjs`, then `node book/build-manifest.mjs`.
+   Record-specific passes live beside them (`generate-pass3/4/5.mjs`).
+   Interactive 3D scenes come from `node book/build-scenes.mjs`, which parses
+   lattice/molecular record data into `book/scenes/` for the `book/3d.html`
+   viewer (rotate/pan/zoom, layer toggles).
 4. Never fabricate a measurement to fill an empty graph.
 
 ## Standing process for every new prompt or data drop

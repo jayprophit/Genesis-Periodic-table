@@ -1,0 +1,64 @@
+registry_id: "MAT:0005:REG:NUCLEAR-FUNCTIONS"
+record_id: "MAT:0005"
+version: "1.0.0"
+
+boron_10:
+
+  isotope: "MAT:0005:ISO:B-10"
+  principal_role: "NEUTRON-ABSORBER"
+
+  absorption_cross_section_reference:
+    neutron_velocity:
+      value: 2200
+      unit: "m/s"
+
+    value:
+      value: 3835
+      uncertainty: 9
+      unit: "barn"
+
+    source_id: "SRC-000066"
+
+  capture:
+    reaction: "10B + n -> 7Li + 4He"
+    q_calculation: "MAT:0005:CALC:001"
+
+    dominant_excited_branch:
+      approximately: 0.937
+      daughter: "7Li*"
+      gamma:
+        approximately: 0.478
+        unit: "MeV"
+      source_id: "SRC-000067"
+
+  functions:
+    - neutron_detection
+    - neutron_absorption
+    - shielding
+    - control_material
+    - neutron_metrology
+
+boron_11:
+
+  isotope: "MAT:0005:ISO:B-11"
+
+  proton_reaction:
+    reaction: "1H + 11B -> 3(4He)"
+    calculation_id: "MAT:0005:CALC:003"
+
+    primary_products:
+      charged_particles: true
+      alpha_particles: 3
+
+    scientific_status: "ESTABLISHED-REACTION"
+
+    fusion_system_status:
+      classification: "ADVANCED-RESEARCH"
+      high_temperature_requirement: true
+      source_id: "SRC-000068"
+
+rules:
+  isotope_functions_are_interchangeable: false
+  thermal_capture_cross_section_is_energy_independent: false
+  primary_charged_products_mean_zero_neutrons_in_every_real_system: false
+  established_reaction_means_commercial_fusion: false

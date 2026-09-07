@@ -1,0 +1,248 @@
+mat_id: "MAT:0006"
+record_name: "Carbon"
+symbol: "C"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 6
+
+legacy:
+  legacy_id: "G0006"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 6
+  neutral_electron_count: 6
+  period: 2
+  group: 14
+  block: "p"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 12.0096
+  maximum: 12.0116
+  source_id: "SRC-000080"
+
+electronic_ground_state:
+  configuration: "1s2 2s2 2p2"
+  term: "3P0"
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    value: 11.2602880
+    uncertainty: 0.0000011
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  second:
+    value: 24.383143
+    uncertainty: 0.000012
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  third:
+    value: 47.88778
+    uncertainty: 0.00025
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  fourth:
+    value: 64.49352
+    uncertainty: 0.00019
+    unit: "eV"
+    source_id: "SRC-000005"
+
+states:
+
+  - id: "MAT:0006:ATOM:C"
+    charge: 0
+
+  - id: "MAT:0006:ION:C+1"
+    charge: 1
+
+  - id: "MAT:0006:ION:C+2"
+    charge: 2
+
+  - id: "MAT:0006:ION:C+3"
+    charge: 3
+
+  - id: "MAT:0006:ION:C+4"
+    charge: 4
+
+  - id: "MAT:0006:ION:C+5"
+    charge: 5
+
+  - id: "MAT:0006:ION:C+6"
+    charge: 6
+
+isotope_branch:
+
+  NIST_mass_range:
+    minimum: 8
+    maximum: 23
+
+  stable:
+    - "MAT:0006:ISO:C-12"
+    - "MAT:0006:ISO:C-13"
+
+  major_radionuclides:
+    - "MAT:0006:ISO:C-11"
+    - "MAT:0006:ISO:C-14"
+
+carbon_12:
+
+  isotope_id: "MAT:0006:ISO:C-12"
+
+  relative_atomic_mass:
+    value: 12
+    exact_in_u: true
+
+  representative_isotopic_composition:
+    value: 0.9893
+    uncertainty: 0.0008
+
+  nuclear_spin: 0
+
+  mass_reference:
+    dalton_definition_relationship: true
+    source_id: "SRC-000081"
+
+carbon_13:
+
+  isotope_id: "MAT:0006:ISO:C-13"
+
+  relative_atomic_mass:
+    value: 13.00335483507
+    uncertainty: 0.00000000023
+    unit: "u"
+
+  representative_isotopic_composition:
+    value: 0.0107
+    uncertainty: 0.0008
+
+  nuclear_spin: "1/2"
+  NMR_active: true
+
+carbon_14:
+
+  isotope_id: "MAT:0006:ISO:C-14"
+
+  relative_atomic_mass:
+    value: 14.0032419884
+    uncertainty: 0.0000000040
+    unit: "u"
+
+  stability: "RADIOACTIVE"
+
+  principal_decay:
+    mode: "BETA-MINUS"
+    daughter: "MAT:0007:ISO:N-14"
+    daughter_status: "RESERVED-PENDING-NITROGEN"
+
+  half_life_reference:
+    value: 5700
+    uncertainty: 30
+    unit: "y"
+    source_id: "SRC-000082"
+
+  conventional_radiocarbon_age:
+    libby_half_life:
+      value: 5568
+      unit: "y"
+      classification: "METHOD-CONVENTION"
+
+allotrope_and_material_architecture:
+
+  fundamental_or_major_states:
+    - "MAT:0006:ALLOTROPE:DIAMOND"
+    - "MAT:0006:ALLOTROPE:GRAPHITE"
+    - "MAT:0006:ALLOTROPE:GRAPHENE"
+
+  molecular_nanostructures:
+    - "MAT:0006:MOL:FULLERENE"
+
+  engineered_nanostructures:
+    - "MAT:0006:MAT:CNT"
+
+  disordered_materials:
+    - "MAT:0006:MAT:AMORPHOUS-CARBON"
+
+  engineered_materials:
+    - carbon_fibre
+    - activated_carbon
+    - porous_carbon
+
+bonding_geometry:
+
+  idealized_local_models:
+
+    sp:
+      angle_deg: 180
+      geometry: "LINEAR"
+
+    sp2:
+      angle_deg: 120
+      geometry: "TRIGONAL-PLANAR"
+
+    sp3:
+      angle_deg: 109.471
+      geometry: "TETRAHEDRAL"
+
+  rule: >
+    Hybridization labels are useful local bonding models and
+    should not be treated as rigid classical orbitals.
+
+dimensionality:
+
+  zero_D:
+    - fullerenes
+    - carbon_quantum_dots
+
+  one_D:
+    - carbon_nanotubes
+    - chain_like_carbon_states
+
+  two_D:
+    - graphene
+
+  three_D:
+    - diamond
+    - graphite_crystals
+    - amorphous_networks
+    - porous_engineered_materials
+
+electronic_architecture:
+  structure_dependent: true
+
+  examples:
+    diamond: "WIDE-GAP"
+    graphite: "SEMIMETALLIC-CONDUCTING"
+    graphene: "DIRAC-LIKE"
+    CNT: "CHIRALITY-DEPENDENT"
+    amorphous: "PROCESS-DEPENDENT"
+
+chemistry:
+  catenation: true
+  organic_chemistry_hub: true
+  multiple_oxidation_states: true
+
+biology:
+  terrestrial_life_framework_element: true
+
+planetary_cycle:
+  enabled: true
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  stable_isotopes: "ESTABLISHED"
+  diamond: "ESTABLISHED"
+  graphite: "ESTABLISHED"
+  graphene: "ESTABLISHED"
+  CNT: "ESTABLISHED"
+  fullerene: "ESTABLISHED"
+  radiocarbon: "ESTABLISHED"
+  Hoyle_state: "ESTABLISHED-NUCLEAR-STATE"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

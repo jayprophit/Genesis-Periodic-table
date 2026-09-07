@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAT 3D Models — interactive</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+#view3d { display: flex; min-height: 100vh; }
+#panel3d { width: 300px; flex: 0 0 300px; background: var(--panel); border-right: 1px solid var(--line); padding: 14px; }
+#panel3d h1 { font-size: 18px; margin: 0 0 4px; }
+#panel3d select { width: 100%; background: var(--code); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px; margin: 8px 0; }
+#panel3d label { display: block; font-size: 13px; margin: 4px 0; }
+#cap { font-size: 12px; color: var(--muted); }
+#stage { flex: 1; position: relative; min-height: 60vh; }
+#stage canvas { display: block; }
+#fallback { padding: 40px; max-width: 640px; }
+#back { display: inline-block; margin-bottom: 10px; color: var(--accent); }
+.hint { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div id="view3d">
+  <div id="panel3d">
+    <a id="back" href="./">← Back to book</a>
+    <h1>MAT 3D Models</h1>
+    <p class="hint">Rotate: drag · Pan: right-drag · Zoom: wheel / pinch.</p>
+    <select id="scene" aria-label="Choose model"></select>
+    <label><input type="checkbox" id="lay-atoms" checked> Atoms / nodes</label>
+    <label><input type="checkbox" id="lay-bonds" checked> Bonds / spokes</label>
+    <label><input type="checkbox" id="lay-cell" checked> Unit cell edges</label>
+    <label><input type="checkbox" id="lay-labels" checked> Labels</label>
+    <label><input type="checkbox" id="lay-spin"> Auto-rotate</label>
+    <button id="reset">Reset view</button>
+    <p id="cap"></p>
+  </div>
+  <div id="stage"><div id="fallback" hidden></div></div>
+</div>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+const stage = document.getElementById("stage");
+const fallback = (msg) => {
+  const f = document.getElementById("fallback");
+  f.hidden = false;
+  f.innerHTML = `<h2>3D unavailable offline</h2><p>${msg}</p><p>The scene data below is still the record-derived geometry:</p><pre id="raw"></pre>`;
+  return f;
+};
+let scenes = [];
+try {
+  scenes = (await fetch("./scenes/index.json").then((r) => r.json())).scenes;
+} catch {
+  fallback("Could not load the scene index. Is the preview server running?");
+  throw new Error("no scenes");
+}
+const sel = document.getElementById("scene");
+scenes.forEach((s, i) => {
+  const o = document.createElement("option");
+  o.value = i; o.textContent = s.id;
+  sel.appendChild(o);
+});
+let THREE, OrbitControls;
+try {
+  THREE = await import("three");
+  ({ OrbitControls } = await import("three/addons/controls/OrbitControls.js"));
+} catch {
+  fallback("The Three.js CDN could not be reached (network needed once). Scene files remain available under book/scenes/.");
+  throw new Error("no three");
+}
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setClearColor(0x0f141b);
+stage.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 1000);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+const lamp = new THREE.DirectionalLight(0xffffff, 1.2);
+lamp.position.set(5, 8, 6);
+scene.add(lamp);
+function sizeStage() {
+  const w = stage.clientWidth || 600, h = Math.max(stage.clientHeight, 400);
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener("resize", sizeStage);
+const groups = {};
+function clearGroup(name) {
+  if (groups[name]) { scene.remove(groups[name]); groups[name] = null; }
+}
+function textSprite(text) {
+  const c = document.createElement("canvas");
+  c.width = 256; c.height = 64;
+  const g = c.getContext("2d");
+  g.font = "28px system-ui,sans-serif";
+  g.fillStyle = "#9aa7b8";
+  g.textAlign = "center";
+  g.fillText(text.slice(0, 24), 128, 42);
+  const t = new THREE.CanvasTexture(c);
+  const m = new THREE.SpriteMaterial({ map: t, transparent: true });
+  const s = new THREE.Sprite(m);
+  s.scale.set(1.4, 0.35, 1);
+  return s;
+}
+async function loadScene(i) {
+  const meta = scenes[i];
+  const d = await fetch("./scenes/" + meta.file).then((r) => r.json());
+  document.getElementById("cap").textContent = d.title + " — " + d.caption + ` [${d.units}]`;
+  ["atoms", "bonds", "cell", "labels"].forEach(clearGroup);
+  // normalize coordinates into view
+  const pts = d.atoms.map((a) => a.slice(0, 3));
+  const c = [0, 1, 2].map((k) => pts.reduce((s, p) => s + p[k], 0) / pts.length);
+  const span = Math.max(0.001, ...pts.flatMap((p) => p.map((v, k) => Math.abs(v - c[k])))) * 2;
+  const S = 4 / span;
+  const P = (p) => [(p[0] - c[0]) * S, (p[1] - c[1]) * S, (p[2] - c[2]) * S];
+  const gA = new THREE.Group(), gB = new THREE.Group(), gC = new THREE.Group(), gL = new THREE.Group();
+  const r0 = span > 50 ? 0.35 : 0.22;
+  d.atoms.forEach((a) => {
+    const m = new THREE.Mesh(
+      new THREE.SphereGeometry(r0, 24, 18),
+      new THREE.MeshStandardMaterial({ color: a[4] || "#6cb2ff" }));
+    m.position.set(...P(a));
+    gA.add(m);
+    const lb = textSprite(a[3] || "");
+    lb.position.set(...P(a).map((v, k) => v + (k === 1 ? r0 + 0.25 : 0)));
+    gL.add(lb);
+  });
+  const seg = (p, q, color, w) => {
+    const dir = new THREE.Vector3(...q).sub(new THREE.Vector3(...p));
+    const m = new THREE.Mesh(
+      new THREE.CylinderGeometry(w, w, dir.length(), 8),
+      new THREE.MeshStandardMaterial({ color }));
+    m.position.set(...p).addScaledVector(dir, 0.5);
+    m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.clone().normalize());
+    return m;
+  };
+  (d.bonds || []).forEach(([i2, j2]) => {
+    if (typeof i2 === "number") {
+      const A2 = d.atoms[i2].slice(0, 3), B2 = d.atoms[j2].slice(0, 3);
+      gB.add(seg(P(A2), P(B2), 0x6cb2ff, 0.05));
+    } else gB.add(seg(P(i2), P(j2), 0x6cb2ff, 0.05));
+  });
+  (d.cell || []).forEach(([p2, q2]) => gC.add(seg(P(p2), P(q2), 0xe0a100, 0.03)));
+  groups.atoms = gA; groups.bonds = gB; groups.cell = gC; groups.labels = gL;
+  Object.values(groups).forEach((g) => g && scene.add(g));
+  applyLayers();
+  camera.position.set(5.5, 4, 6.5);
+  controls.target.set(0, 0, 0);
+  sizeStage();
+}
+function applyLayers() {
+  const on = (id) => document.getElementById(id).checked;
+  if (groups.atoms) groups.atoms.visible = on("lay-atoms");
+  if (groups.bonds) groups.bonds.visible = on("lay-bonds");
+  if (groups.cell) groups.cell.visible = on("lay-cell");
+  if (groups.labels) groups.labels.visible = on("lay-labels");
+  controls.autoRotate = on("lay-spin");
+}
+["lay-atoms", "lay-bonds", "lay-cell", "lay-labels", "lay-spin"].forEach((id) =>
+  document.getElementById(id).addEventListener("change", applyLayers));
+sel.addEventListener("change", () => loadScene(+sel.value));
+document.getElementById("reset").addEventListener("click", () => {
+  camera.position.set(5.5, 4, 6.5);
+  controls.target.set(0, 0, 0);
+});
+(function tick() { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); })();
+loadScene(0);
+sizeStage();
+</script>
+</body>
+</html>

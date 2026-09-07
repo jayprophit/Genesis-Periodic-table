@@ -1,0 +1,256 @@
+registry_id: "MAT:0005:REG:RELATIONSHIPS"
+record_id: "MAT:0005"
+version: "1.0.0"
+
+relationships:
+
+  # --------------------------------------------------
+  # ISOTOPE FAMILY
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0001"
+    source: "MAT:0005:ISO:B-10"
+    type: "ISOTOPE-OF"
+    target: "MAT:0005"
+
+  - relationship_id: "MAT:0005:REL:0002"
+    source: "MAT:0005:ISO:B-11"
+    type: "ISOTOPE-OF"
+    target: "MAT:0005"
+
+  # --------------------------------------------------
+  # BORON-10 NEUTRON CAPTURE
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0010"
+    source:
+      - "MAT:0005:ISO:B-10"
+      - "NEUTRON"
+    type: "NEUTRON-CAPTURE"
+    products:
+      - "MAT:0003:ISO:Li-7"
+      - "MAT:0002:ISO:He-4"
+    calculation_id: "MAT:0005:CALC:001"
+    source_id: "SRC-000066"
+
+  - relationship_id: "MAT:0005:REL:0011"
+    source:
+      - "MAT:0005:ISO:B-10"
+      - "NEUTRON"
+    type: "NEUTRON-CAPTURE-EXCITED-BRANCH"
+    intermediate: "Li-7*"
+    products:
+      - "MAT:0003:ISO:Li-7"
+      - "MAT:0002:ISO:He-4"
+      - "GAMMA"
+    gamma_energy_approx:
+      value: 0.478
+      unit: "MeV"
+    calculation_id: "MAT:0005:CALC:002"
+
+  # --------------------------------------------------
+  # PROTON-BORON
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0020"
+    source:
+      - "MAT:0001:ISO:H-1"
+      - "MAT:0005:ISO:B-11"
+    type: "NUCLEAR-FUSION-REACTION"
+    products:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+    calculation_id: "MAT:0005:CALC:003"
+    scientific_status: "ESTABLISHED-REACTION"
+    engineering_status: "ADVANCED-RESEARCH"
+
+  # --------------------------------------------------
+  # BERYLLIUM -> BORON
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0030"
+    source: "MAT:0004:ISO:Be-10"
+    type: "DECAYS-TO"
+    target: "MAT:0005:ISO:B-10"
+    mechanism: "BETA-MINUS"
+    target_status: "RESOLVED"
+
+  # --------------------------------------------------
+  # CARBON
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0040"
+    source: "MAT:0005"
+    type: "FORMS-MATERIAL-WITH"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+    material_family:
+      - "B4C"
+      - "BORON-DOPED-CARBON"
+      - "BORON-DOPED-DIAMOND"
+
+  # --------------------------------------------------
+  # NITROGEN
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0041"
+    source: "MAT:0005"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0007"
+    target_status: "RESERVED-PENDING-NITROGEN"
+    material_family:
+      - "h-BN"
+      - "c-BN"
+      - "w-BN"
+
+  # --------------------------------------------------
+  # OXYGEN / GLASS
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0042"
+    source: "MAT:0005"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0008"
+    target_status: "RESERVED-PENDING-OXYGEN"
+    product: "MAT:CMP:B2O3"
+
+  - relationship_id: "MAT:0005:REL:0043"
+    source: "MAT:0005"
+    type: "GLASS-NETWORK-RELATIONSHIP"
+    targets:
+      - "MAT:0014"
+      - "MAT:0008"
+    target_status:
+      silicon: "RESERVED-PENDING-SILICON"
+      oxygen: "RESERVED-PENDING-OXYGEN"
+    material_family: "BOROSILICATE"
+
+  # --------------------------------------------------
+  # HYDROGEN / BORANES
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0050"
+    source: "MAT:0005"
+    type: "FORMS-BORANES-WITH"
+    target: "MAT:0001"
+    target_status: "RESOLVED"
+    formula_family: "BxHy"
+    bonding:
+      multicentre: true
+      cluster_geometry: true
+
+  # --------------------------------------------------
+  # MAGNESIUM / SUPERCONDUCTOR
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0060"
+    source: "MAT:0005"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0012"
+    target_name: "Magnesium"
+    target_status: "RESERVED-PENDING-MAGNESIUM"
+    product: "MAT:CMP:MgB2"
+    function:
+      - "SUPERCONDUCTING-MATERIAL"
+
+  # --------------------------------------------------
+  # SILICON DOPING
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0070"
+    source: "MAT:0005"
+    type: "DOPANT-IN"
+    target: "MAT:0014"
+    target_name: "Silicon"
+    target_status: "RESERVED-PENDING-SILICON"
+    role: "ACCEPTOR / P-TYPE"
+
+  # --------------------------------------------------
+  # METAL BORIDES
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0080"
+    source: "MAT:0005"
+    type: "FORMS-BORIDE-WITH"
+    target: "MAT:0022"
+    target_name: "Titanium"
+    target_status: "RESERVED-PENDING-TITANIUM"
+    example: "TiB2"
+
+  - relationship_id: "MAT:0005:REL:0081"
+    source: "MAT:0005"
+    type: "FORMS-BORIDE-WITH"
+    target: "MAT:0040"
+    target_name: "Zirconium"
+    target_status: "RESERVED-PENDING-ZIRCONIUM"
+    example: "ZrB2"
+
+  - relationship_id: "MAT:0005:REL:0082"
+    source: "MAT:0005"
+    type: "FORMS-BORIDE-WITH"
+    target: "MAT:0072"
+    target_name: "Hafnium"
+    target_status: "RESERVED-PENDING-HAFNIUM"
+    example: "HfB2"
+
+  # --------------------------------------------------
+  # PERIODICITY
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0090"
+    source: "MAT:0005"
+    type: "PERIODIC-FAMILY-RELATIONSHIP-WITH"
+    target: "MAT:0013"
+    target_name: "Aluminium"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+
+  # --------------------------------------------------
+  # BIOLOGY
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0100"
+    source: "MAT:0005"
+    type: "BIOLOGICAL-ESSENTIALITY"
+    target: "PLANTS"
+    status: "ESTABLISHED-MICRONUTRIENT"
+
+  # --------------------------------------------------
+  # GEOMETRY
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0110"
+    source: "MAT:0005"
+    type: "HAS-STRUCTURAL-MOTIF"
+    target: "B12-ICOSAHEDRON"
+
+  - relationship_id: "MAT:0005:REL:0111"
+    source: "MAT:0005"
+    type: "HAS-ALLOTROPE"
+    target: "MAT:0005:ALLOTROPE:GAMMA-B28"
+
+  - relationship_id: "MAT:0005:REL:0112"
+    source: "MAT:0005"
+    type: "HAS-ALLOTROPE"
+    target: "MAT:0005:ALLOTROPE:ALPHA-B12"
+
+  - relationship_id: "MAT:0005:REL:0113"
+    source: "MAT:0005"
+    type: "HAS-ALLOTROPE"
+    target: "MAT:0005:ALLOTROPE:BETA-B106"
+
+  # --------------------------------------------------
+  # LEGACY
+  # --------------------------------------------------
+
+  - relationship_id: "MAT:0005:REL:0999"
+    source: "MAT:0005"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0005"
+
+rules:
+  chemical_and_nuclear_edges_are_distinct: true
+  isotope_functions_are_distinct: true
+  doped_host_property_equals_boron_property: false
+  compound_property_equals_element_property: false
+  graph_is_exhaustive: false

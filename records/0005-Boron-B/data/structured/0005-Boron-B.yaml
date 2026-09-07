@@ -1,0 +1,152 @@
+mat_id: "MAT:0005"
+record_name: "Boron"
+symbol: "B"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 5
+
+legacy:
+  legacy_id: "G0005"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 5
+  neutral_electron_count: 5
+  period: 2
+  group: 13
+  block: "p"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 10.806
+  maximum: 10.821
+  source_id: "SRC-000063"
+
+electronic_ground_state:
+  configuration: "1s2 2s2 2p1"
+  term: "2P°1/2"
+  open_shell: true
+  source_id: "SRC-000005"
+
+electron_affinity:
+  value: 0.279743
+  uncertainty: 0.000044
+  unit: "eV"
+  source_id: "SRC-000064"
+
+ionization:
+
+  first:
+    value: 8.298019
+    uncertainty: 0.000003
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  second:
+    value: 25.15483
+    uncertainty: 0.00005
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  third:
+    value: 37.93059
+    uncertainty: 0.00007
+    unit: "eV"
+    source_id: "SRC-000005"
+
+atomic_states:
+  - id: "MAT:0005:ATOM:B"
+    charge: 0
+
+  - id: "MAT:0005:ION:B+1"
+    charge: 1
+
+  - id: "MAT:0005:ION:B+2"
+    charge: 2
+
+  - id: "MAT:0005:ION:B+3"
+    charge: 3
+
+  - id: "MAT:0005:ION:B+4"
+    charge: 4
+
+  - id: "MAT:0005:ION:B+5"
+    charge: 5
+
+bulk_reference:
+  state: "SOLID"
+
+  density:
+    representative_value: 2.34
+    unit: "g/cm3"
+    source_id: "SRC-000065"
+
+  melting_point:
+    representative_value: 2350
+    unit: "K"
+    source_id: "SRC-000065"
+
+  boiling_point:
+    representative_value: 4273
+    unit: "K"
+    source_id: "SRC-000065"
+
+allotropy:
+  multiple_elemental_structures: true
+
+  major_families:
+    - alpha_rhombohedral
+    - beta_rhombohedral
+    - gamma_B28
+    - tetragonal
+    - amorphous
+
+bonding:
+  electron_deficient: true
+  multicentre_bonding: true
+  three_centre_two_electron: true
+
+geometry:
+  B12_icosahedral_motif: true
+  polyhedral_clusters: true
+
+isotope_branch:
+  mass_range:
+    minimum: 6
+    maximum: 21
+
+  stable:
+    - "MAT:0005:ISO:B-10"
+    - "MAT:0005:ISO:B-11"
+
+nuclear:
+  B10_neutron_capture: true
+  B11_proton_fusion_research: true
+
+chemistry:
+  boranes: true
+  borides: true
+  borates: true
+  boron_oxide: true
+  boron_carbide: true
+  boron_nitride: true
+
+electronic_materials:
+  semiconductor_like_elemental_states: true
+  dopant_role: true
+  state_dependent: true
+
+biology:
+  plant_essentiality: "ESTABLISHED"
+  human_essentiality: "NOT-EQUIVALENTLY-ESTABLISHED"
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  stable_isotopes: "ESTABLISHED"
+  B12_cluster_motif: "ESTABLISHED"
+  allotropy: "ESTABLISHED"
+  gamma_B28: "ESTABLISHED"
+  proton_boron_fusion: "ACTIVE-RESEARCH"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

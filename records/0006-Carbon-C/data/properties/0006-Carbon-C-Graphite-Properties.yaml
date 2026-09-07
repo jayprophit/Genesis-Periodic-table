@@ -1,0 +1,76 @@
+registry_id: "MAT:0006:REG:GRAPHITE-PROPERTIES"
+material_id: "MAT:0006:ALLOTROPE:GRAPHITE"
+parent_id: "MAT:0006"
+version: "1.0.0"
+
+structure:
+  dominant_family: "HEXAGONAL-GRAPHITIC"
+
+  lattice_reference:
+    a:
+      value: 2.4612
+      unit: "angstrom"
+
+    c:
+      value: 6.708
+      unit: "angstrom"
+
+    interlayer_spacing_d002:
+      value: 3.354
+      unit: "angstrom"
+
+    source_id: "SRC-000092"
+
+bonding:
+  in_plane: "STRONG-SP2-LIKE-COVALENT"
+  interlayer: "WEAKER-INTERLAYER-INTERACTION"
+
+electronic:
+  class: "SEMIMETALLIC / CONDUCTING"
+
+anisotropy:
+  first_class_variable: true
+
+  electrical_resistivity_reference:
+
+    in_plane:
+      minimum: 4e-7
+      maximum: 7e-7
+      unit: "ohm*m"
+
+    c_axis:
+      minimum: 1e-3
+      maximum: 5e-3
+      unit: "ohm*m"
+
+    classification: "REPRESENTATIVE-RANGE"
+    universal: false
+    source_id: "SRC-000092"
+
+  thermal_conductivity_HOPG_example:
+
+    in_plane:
+      value: 1950
+      unit: "W/(m*K)"
+
+    cross_plane:
+      value: 6.9
+      unit: "W/(m*K)"
+
+    classification: "SAMPLE-SPECIFIC-REFERENCE"
+    universal: false
+    source_id: "SRC-000092"
+
+lithium_intercalation:
+  enabled: true
+
+  stage_1_reference:
+    formula: "LiC6"
+
+  relationship:
+    target: "MAT:0003"
+
+rules:
+  direction_required_for_transport_property: true
+  HOPG_equals_all_graphite: false
+  graphite_property_equals_graphene_property: false

@@ -1,0 +1,67 @@
+registry_id: "MAT:0005:REG:GRAPHS"
+record_id: "MAT:0005"
+version: "1.0.0"
+
+graphs:
+
+  - graph_id: "MAT:0005:GRAPH:001"
+    filename: "0005-Boron-B-GRAPH-001-Isotope-Lifetime-Map.svg"
+    data_filename: "0005-Boron-B-GRAPH-001-Isotope-Lifetime-Map.csv"
+    source_id: "SRC-000008"
+    status: "GENERATED"
+    rule: "Bounds must be shown as bounds, not point measurements."
+
+  - graph_id: "MAT:0005:GRAPH:002"
+    filename: "0005-Boron-B-GRAPH-002-Atomic-Energy-Levels.svg"
+    data_filename: "0005-Boron-B-GRAPH-002-Atomic-Energy-Levels.csv"
+    source_id: "SRC-000079"
+    status: "DATA-EXTRACTION-REQUIRED"
+
+  - graph_id: "MAT:0005:GRAPH:003"
+    filename: "0005-Boron-B-GRAPH-003-UV-Spectrum.svg"
+    data_filename: "0005-Boron-B-GRAPH-003-UV-Spectrum.csv"
+    source_id: "SRC-000079"
+    status: "READY-FOR-DATA-EXTRACTION"
+
+  - graph_id: "MAT:0005:GRAPH:004"
+    filename: "0005-Boron-B-GRAPH-004-B10-B11-Nuclear-Functions.svg"
+    data_filename: "0005-Boron-B-GRAPH-004-B10-B11-Nuclear-Functions.csv"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0005:GRAPH:005"
+    filename: "0005-Boron-B-GRAPH-005-B10-Capture-Branches.svg"
+    data_filename: "0005-Boron-B-GRAPH-005-B10-Capture-Branches.csv"
+    calculations:
+      - "MAT:0005:CALC:001"
+      - "MAT:0005:CALC:002"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0005:GRAPH:006"
+    filename: "0005-Boron-B-GRAPH-006-pB11-Energetics.svg"
+    data_filename: "0005-Boron-B-GRAPH-006-pB11-Energetics.csv"
+    calculation_id: "MAT:0005:CALC:003"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0005:GRAPH:007"
+    filename: "0005-Boron-B-GRAPH-007-Pressure-Phase-Map.svg"
+    data_filename: "0005-Boron-B-GRAPH-007-Pressure-Phase-Map.csv"
+    source_ids:
+      - "SRC-000069"
+      - "SRC-000075"
+    status: "DATASET-EXTRACTION-REQUIRED"
+
+  - graph_id: "MAT:0005:GRAPH:008"
+    filename: "0005-Boron-B-GRAPH-008-Pressure-Superconductivity.svg"
+    data_filename: "0005-Boron-B-GRAPH-008-Pressure-Superconductivity.csv"
+    source_id: "SRC-000070"
+    status: "READY-FOR-DATA-EXTRACTION"
+
+  - graph_id: "MAT:0005:GRAPH:009"
+    filename: "0005-Boron-B-GRAPH-009-Cluster-Geometry-Map.svg"
+    data_filename: "0005-Boron-B-GRAPH-009-Cluster-Geometry-Map.csv"
+    status: "SCHEMATIC-READY"
+
+  - graph_id: "MAT:0005:GRAPH:010"
+    filename: "0005-Boron-B-GRAPH-010-Material-Family-Property-Map.svg"
+    data_filename: "0005-Boron-B-GRAPH-010-Material-Family-Property-Map.csv"
+    status: "MULTI-MATERIAL-DATASET-REQUIRED"

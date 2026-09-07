@@ -1,0 +1,161 @@
+registry_id: "MAT:0006:REG:RELATIONSHIPS"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+relationships:
+
+  - relationship_id: "MAT:0006:REL:0010"
+    source:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+    type: "TRIPLE-ALPHA-NET"
+    target: "MAT:0006:ISO:C-12"
+    calculation_id: "MAT:0006:CALC:001"
+
+  - relationship_id: "MAT:0006:REL:0011"
+    source:
+      - "MAT:0004:ISO:Be-8"
+      - "MAT:0002:ISO:He-4"
+    type: "FORMS-NUCLEAR-RESONANCE"
+    target: "MAT:0006:QSTATE:C12-HOYLE"
+
+  - relationship_id: "MAT:0006:REL:0020"
+    source: "MAT:0006:ISO:C-14"
+    type: "DECAYS-TO"
+    target: "MAT:0007:ISO:N-14"
+    target_status: "RESERVED-PENDING-NITROGEN"
+    mechanism: "BETA-MINUS"
+
+  - relationship_id: "MAT:0006:REL:0030"
+    source: "MAT:0006"
+    type: "BONDS-WITH"
+    target: "MAT:0001"
+    target_status: "RESOLVED"
+    relationship_family:
+      - hydrocarbons
+      - biological_molecules
+      - polymers
+      - hydrogenated_carbon
+
+  - relationship_id: "MAT:0006:REL:0040"
+    source: "MAT:0006:ALLOTROPE:GRAPHITE"
+    type: "HOSTS-BY-INTERCALATION"
+    target: "MAT:0003"
+    target_status: "RESOLVED"
+    stage_1_reference: "LiC6"
+
+  - relationship_id: "MAT:0006:REL:0050"
+    source: "MAT:0006"
+    type: "FORMS-MATERIAL-WITH"
+    target: "MAT:0005"
+    target_status: "RESOLVED"
+    material_family:
+      - B4C
+      - boron_doped_diamond
+      - boron_doped_graphitic_carbon
+
+  - relationship_id: "MAT:0006:REL:0060"
+    source: "MAT:0006"
+    type: "OXIDIZES-WITH"
+    target: "MAT:0008"
+    target_status: "RESERVED-PENDING-OXYGEN"
+    products:
+      - CO
+      - CO2
+
+  - relationship_id: "MAT:0006:REL:0070"
+    source: "MAT:0006"
+    type: "FORMS-CARBIDE-WITH"
+    target: "MAT:0014"
+    target_name: "Silicon"
+    target_status: "RESERVED-PENDING-SILICON"
+    product: "SiC"
+
+  - relationship_id: "MAT:0006:REL:0071"
+    source: "MAT:0006"
+    type: "ALLOYS-AND-PHASES-WITH"
+    target: "MAT:0026"
+    target_name: "Iron"
+    target_status: "RESERVED-PENDING-IRON"
+    material_family:
+      - steel
+      - cast_iron
+      - iron_carbides
+
+  - relationship_id: "MAT:0006:REL:0072"
+    source: "MAT:0006"
+    type: "FORMS-CARBIDE-WITH"
+    target: "MAT:0022"
+    target_name: "Titanium"
+    target_status: "RESERVED-PENDING-TITANIUM"
+    product: "TiC"
+
+  - relationship_id: "MAT:0006:REL:0073"
+    source: "MAT:0006"
+    type: "FORMS-CARBIDE-WITH"
+    target: "MAT:0074"
+    target_name: "Tungsten"
+    target_status: "RESERVED-PENDING-TUNGSTEN"
+    product: "WC"
+
+  - relationship_id: "MAT:0006:REL:0074"
+    source: "MAT:0006"
+    type: "FORMS-CARBIDE-WITH"
+    target: "MAT:0073"
+    target_name: "Tantalum"
+    target_status: "RESERVED-PENDING-TANTALUM"
+    product: "TaC"
+
+  - relationship_id: "MAT:0006:REL:0075"
+    source: "MAT:0006"
+    type: "FORMS-CARBIDE-WITH"
+    target: "MAT:0072"
+    target_name: "Hafnium"
+    target_status: "RESERVED-PENDING-HAFNIUM"
+    product: "HfC"
+
+  - relationship_id: "MAT:0006:REL:0080"
+    source: "MAT:0006"
+    type: "BIOLOGICAL-FRAMEWORK-ELEMENT"
+    target: "TERRESTRIAL-ORGANIC-LIFE"
+
+  - relationship_id: "MAT:0006:REL:0090"
+    source: "MAT:0006"
+    type: "PLANETARY-CYCLE"
+    target: "CARBON-CYCLE"
+
+  - relationship_id: "MAT:0006:REL:0100"
+    source: "MAT:0006"
+    type: "HAS-ALLOTROPE"
+    target: "MAT:0006:ALLOTROPE:DIAMOND"
+
+  - relationship_id: "MAT:0006:REL:0101"
+    source: "MAT:0006"
+    type: "HAS-ALLOTROPE"
+    target: "MAT:0006:ALLOTROPE:GRAPHITE"
+
+  - relationship_id: "MAT:0006:REL:0102"
+    source: "MAT:0006"
+    type: "HAS-2D-STATE"
+    target: "MAT:0006:ALLOTROPE:GRAPHENE"
+
+  - relationship_id: "MAT:0006:REL:0103"
+    source: "MAT:0006"
+    type: "HAS-NANOSTRUCTURE"
+    target: "MAT:0006:MAT:CNT"
+
+  - relationship_id: "MAT:0006:REL:0104"
+    source: "MAT:0006"
+    type: "HAS-MOLECULAR-CAGE-FAMILY"
+    target: "MAT:0006:MOL:FULLERENE"
+
+  - relationship_id: "MAT:0006:REL:0999"
+    source: "MAT:0006"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0006"
+
+rules:
+  nuclear_and_chemical_edges_are_distinct: true
+  carbon_allotropes_are_not_interchangeable: true
+  engineered_carbon_equals_fundamental_allotrope: false

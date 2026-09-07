@@ -1,0 +1,109 @@
+registry_id: "MAT:0006:REG:MATERIAL-RELATIONSHIPS"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+relationships:
+
+  lithium_graphite:
+
+    source:
+      - "MAT:0003"
+      - "MAT:0006:ALLOTROPE:GRAPHITE"
+
+    mechanism: "INTERCALATION"
+
+    stage_1_reference:
+      formula: "LiC6"
+      stoichiometric: true
+      source_id: "SRC-000088"
+
+    resolved_previous_forward_reference: true
+
+  boron_carbon:
+
+    source:
+      - "MAT:0005"
+      - "MAT:0006"
+
+    material_families:
+      - B4C
+      - boron_doped_diamond
+      - boron_doped_graphitic_carbon
+
+    target_status: "RESOLVED"
+
+  silicon_carbide:
+
+    future_id: "MAT:CMP:SiC"
+
+    source:
+      - "MAT:0006"
+      - "MAT:0014"
+
+    target_status: "RESERVED-PENDING-SILICON"
+
+    material_classes:
+      - ceramic
+      - semiconductor
+      - wide_bandgap_power_material
+
+  iron_carbon:
+
+    source:
+      - "MAT:0006"
+      - "MAT:0026"
+
+    target_status: "RESERVED-PENDING-IRON"
+
+    material_families:
+      - steels
+      - cast_irons
+
+    variables:
+      - carbon_fraction
+      - temperature
+      - cooling_rate
+      - phase
+      - heat_treatment
+      - microstructure
+
+  transition_metal_carbides:
+
+    representative_future_materials:
+      - TiC
+      - WC
+      - TaC
+      - HfC
+
+    possible_properties:
+      - hardness
+      - refractory_behavior
+      - wear_resistance
+      - electrical_conduction
+
+  hydrogen_carbon:
+
+    element_target: "MAT:0001"
+    target_status: "RESOLVED"
+
+    mechanisms:
+      - covalent_C_H_bonding
+      - H2_physisorption
+      - hydrogenated_carbon
+      - hydrocarbon_chemistry
+      - biological_molecules
+
+  oxygen_carbon:
+
+    target: "MAT:0008"
+    target_status: "RESERVED-PENDING-OXYGEN"
+
+    products:
+      - CO
+      - CO2
+      - carbonate_systems
+
+rules:
+  alloy_or_compound_property_equals_carbon_property: false
+  graphite_intercalation_equals_elemental_lithium_property: false
+  hydrogen_carbon_relationship_has_one_mechanism: false

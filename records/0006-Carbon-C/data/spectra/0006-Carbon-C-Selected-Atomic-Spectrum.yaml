@@ -1,0 +1,77 @@
+registry_id: "MAT:0006:REG:ATOMIC-SPECTRUM"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+species:
+
+  C_I:
+
+    ground_state:
+      configuration: "1s2 2s2 2p2"
+      term: "3P0"
+
+    selected_persistent_lines:
+
+      - wavelength:
+          value: 127.72452
+          unit: "nm"
+        lower_level_cm1: 0.00000
+        upper_level_cm1: 78293.50
+        lower_term: "3P0"
+        upper_term: "3D°1"
+
+      - wavelength:
+          value: 127.75497
+          unit: "nm"
+        lower_level_cm1: 43.41350
+        upper_level_cm1: 78318.23
+        lower_term: "3P2"
+        upper_term: "3D°3"
+
+      - wavelength:
+          value: 156.1438
+          unit: "nm"
+        lower_level_cm1: 43.41350
+        upper_level_cm1: 64086.95
+        lower_term: "3P2"
+        upper_term: "3D°3"
+
+      - wavelength:
+          value: 165.7008
+          unit: "nm"
+        lower_level_cm1: 43.41350
+        upper_level_cm1: 60393.15
+        lower_term: "3P2"
+        upper_term: "3P°2"
+
+      - wavelength:
+          value: 193.0906
+          unit: "nm"
+        lower_level_cm1: 10192.66
+        upper_level_cm1: 61981.82
+        lower_term: "1D2"
+        upper_term: "1P°1"
+
+      - wavelength:
+          value: 247.8561
+          unit: "nm"
+        lower_level_cm1: 21648.02
+        upper_level_cm1: 61981.82
+        lower_term: "1S0"
+        upper_term: "1P°1"
+
+  C_II:
+    selected_persistent_lines:
+      - 68.70526
+      - 68.7346
+      - 90.41416
+      - 103.63367
+
+    unit: "nm"
+
+source_id: "SRC-000098"
+
+rules:
+  wavelength_medium_must_be_checked_for_precision_export: true
+  atomic_spectrum_equals_raman_spectrum: false
+  universal_carbon_frequency: false

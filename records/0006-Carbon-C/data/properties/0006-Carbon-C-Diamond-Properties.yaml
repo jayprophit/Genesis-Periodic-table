@@ -1,0 +1,73 @@
+registry_id: "MAT:0006:REG:DIAMOND-PROPERTIES"
+material_id: "MAT:0006:ALLOTROPE:DIAMOND"
+parent_id: "MAT:0006"
+version: "1.0.0"
+
+structure:
+  crystal_system: "CUBIC"
+  space_group: "Fd-3m"
+  network: "3D-COVALENT"
+  local_coordination: 4
+  local_geometry: "TETRAHEDRAL"
+  bonding_descriptor: "SP3-LIKE"
+
+  carbon_carbon_bond_length_reference:
+    approximate_value: 1.54
+    unit: "angstrom"
+    source_id: "SRC-000091"
+
+electronic:
+  intrinsic_class: "WIDE-BANDGAP-SEMICONDUCTOR / INSULATING"
+
+  band_gap:
+    value: 5.47
+    unit: "eV"
+    temperature:
+      value: 300
+      unit: "K"
+    source_id: "SRC-000091"
+
+  doping_can_modify_conductivity: true
+
+  boron_doping:
+    possible_effects:
+      - p_type_conduction
+      - metallic_like_conduction_at_high_doping
+      - superconducting_state_at_suitable_doping
+
+    relationship:
+      target: "MAT:0005"
+
+thermal:
+  classification: "VERY-HIGH-THERMAL-CONDUCTIVITY-POSSIBLE"
+
+  exact_reference_value:
+    status: "STATE-RESOLVED-DATASET-REQUIRED"
+
+  dependencies:
+    - isotope_composition
+    - impurities
+    - defects
+    - temperature
+    - crystal_quality
+    - measurement_direction
+
+mechanical:
+  hardness: "EXTREME"
+  elastic_dataset: "DIRECTION-RESOLVED-DATA-REQUIRED"
+
+spectroscopy:
+  raman_first_order:
+    approximate_value: 1332
+    unit: "cm-1"
+
+  dependencies:
+    - temperature
+    - stress
+    - isotope_composition
+    - defects
+
+rules:
+  diamond_property_equals_carbon_property: false
+  doped_diamond_equals_intrinsic_diamond: false
+  raman_peak_is_universal_constant: false

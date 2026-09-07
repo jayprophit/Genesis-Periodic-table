@@ -1,0 +1,66 @@
+registry_id: "MAT:0006:REG:RAMAN"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+diamond:
+
+  principal_first_order_band:
+    approximate_position:
+      value: 1332
+      unit: "cm-1"
+
+  dependencies:
+    - stress
+    - isotope_composition
+    - temperature
+    - crystal_quality
+
+graphitic_carbon:
+
+  D:
+    approximate_position:
+      value: 1350
+      unit: "cm-1"
+
+    classification: "DEFECT-ACTIVATED"
+
+    meaning:
+      - disorder
+      - edges
+      - translational_symmetry_breaking
+
+  G:
+    approximate_position:
+      value: 1580
+      unit: "cm-1"
+
+    mode: "E2g"
+    classification: "FIRST-ORDER-IN-PLANE-OPTICAL"
+
+  two_D:
+    approximate_position:
+      value: 2700
+      unit: "cm-1"
+
+    aliases:
+      - "2D"
+      - "G-prime"
+
+    classification: "SECOND-ORDER"
+
+dependencies:
+  - laser_excitation_energy
+  - strain
+  - doping
+  - defect_density
+  - layer_number
+  - stacking
+  - temperature
+  - edge_geometry
+
+rules:
+  D_peak_is_required_in_perfect_graphene: false
+  universal_carbon_raman_frequency: false
+  peak_position_is_condition_independent: false
+
+source_id: "SRC-000087"

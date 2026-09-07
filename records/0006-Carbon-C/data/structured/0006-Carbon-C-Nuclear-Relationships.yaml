@@ -1,0 +1,57 @@
+registry_id: "MAT:0006:REG:NUCLEAR-RELATIONSHIPS"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+relationships:
+
+  triple_alpha_stage_1:
+
+    reactants:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+
+    intermediate:
+      - "MAT:0004:ISO:Be-8"
+
+    mechanism: "NUCLEAR-RESONANT-PATHWAY"
+
+  triple_alpha_stage_2:
+
+    reactants:
+      - "MAT:0004:ISO:Be-8"
+      - "MAT:0002:ISO:He-4"
+
+    intermediate:
+      id: "MAT:0006:QSTATE:C12-HOYLE"
+
+      excitation_energy_approx:
+        value: 7.654
+        unit: "MeV"
+
+      spin_parity: "0+"
+
+    final_product:
+      - "MAT:0006:ISO:C-12"
+
+  net_triple_alpha:
+
+    reaction: "3(4He) -> 12C"
+    calculation_id: "MAT:0006:CALC:001"
+
+  Be10_decay:
+
+    parent: "MAT:0004:ISO:Be-10"
+    daughter: "MAT:0005:ISO:B-10"
+    note: "Earlier Be->B relationship; retained as neighboring network context."
+
+  C14_decay:
+
+    parent: "MAT:0006:ISO:C-14"
+    daughter: "MAT:0007:ISO:N-14"
+    daughter_status: "RESERVED-PENDING-NITROGEN"
+    calculation_id: "MAT:0006:CALC:002"
+
+rules:
+  Hoyle_excitation_energy_equals_triple_alpha_q_value: false
+  nuclear_cluster_geometry_equals_literal_fixed_alpha_positions: false
+  nuclear_relationship_equals_chemical_relationship: false
