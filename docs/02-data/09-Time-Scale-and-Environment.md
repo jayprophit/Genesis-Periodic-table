@@ -1,210 +1,308 @@
-# MAT Time, Scale and Environment
+# MAT Time, Scale and Environment Standard
 
 ## Purpose
 
-MAT treats time, scale and environment as first-class variables, not optional metadata.
+Three variables are fundamental to MAT:
 
-A material cannot be represented only by composition and formula without context.
+\[
+t=\text{time}
+\]
+
+\[
+s=\text{scale}
+\]
+
+\[
+E=\text{environment}
+\]
+
+A material is not always fully defined without them.
 
 ---
 
 # 1. Time
 
-Every material state should be associated with the relevant time context.
+The MAT state should be treated as potentially time-dependent:
 
-Possible values include:
+\[
+M=M(t)
+\]
 
-- observation time;
-- elapsed time;
-- measurement duration;
-- exposure time;
-- ageing time;
-- reaction time;
-- relaxation time;
-- lifetime;
-- service time;
-- process time;
-- thermal history duration.
+Examples include:
+
+- radioactive decay;
+- excited-state relaxation;
+- diffusion;
+- corrosion;
+- oxidation;
+- ageing;
+- creep;
+- fatigue;
+- phase transformation;
+- battery degradation;
+- polymer degradation;
+- radiation damage;
+- grain growth.
 
 ---
 
-## Time States
+# 2. Time Categories
+
+Fields may include:
+
+```text
+measurement timestamp
+measurement duration
+process duration
+sample age
+time since manufacture
+time since treatment
+relaxation time
+decay lifetime
+exposure duration
+service duration
+cycle count
+```
+
+---
+
+# 3. Initial and Final State
+
+Processes should distinguish:
+
+\[
+S_0=\text{initial state}
+\]
+
+from:
+
+\[
+S_f=\text{final state}
+\]
+
+and may contain intermediate states:
+
+\[
+S_0\rightarrow S_1\rightarrow S_2\rightarrow \cdots \rightarrow S_f
+\]
+
+---
+
+# 4. History Dependence
+
+Two specimens with the same composition can have different properties because they experienced different histories.
+
+Therefore:
+
+\[
+M_f =
+F(
+M_0,
+P_1,
+P_2,
+\dots,
+P_n
+)
+\]
+
+Examples:
+
+- heating;
+- cooling;
+- quenching;
+- irradiation;
+- deformation;
+- magnetic-field treatment;
+- electrical cycling;
+- ageing.
+
+---
+
+# 5. Scale
+
+A record may specify both qualitative and numerical scale.
+
+Qualitative classes:
+
+```text
+SUBNUCLEAR
+NUCLEAR
+ATOMIC
+MOLECULAR
+NANO
+MICRO
+MESO
+MACRO
+BULK
+PLANETARY
+ASTROPHYSICAL
+```
+
+---
+
+# 6. Characteristic Length
+
+Where possible, store:
+
+```yaml
+characteristic_length:
+unit:
+```
+
+For example:
+
+```yaml
+scale_class: NANO
+characteristic_length: 20
+unit: nm
+```
+
+---
+
+# 7. Scale Effects
+
+Properties may change with scale because of:
+
+- surface-to-volume ratio;
+- quantum confinement;
+- defect density;
+- grain-boundary fraction;
+- finite-size effects;
+- thermal transport regime;
+- electromagnetic confinement;
+- mechanical size effects.
+
+A nanoscale property should not automatically be assigned to bulk material.
+
+---
+
+# 8. Environment
+
+Environment is represented as a structured state.
+
+Possible fields include:
+
+```yaml
+temperature:
+pressure:
+atmosphere:
+gas_composition:
+humidity:
+electric_field:
+magnetic_field:
+radiation_field:
+particle_flux:
+gravity:
+acceleration:
+mechanical_load:
+chemical_environment:
+solvent:
+pH:
+biological_environment:
+vacuum_level:
+illumination:
+frequency:
+wavelength:
+```
+
+---
+
+# 9. Atmosphere
+
+Examples:
+
+```text
+AIR
+OXYGEN
+NITROGEN
+ARGON
+HELIUM
+HYDROGEN
+INERT
+REDUCING
+OXIDISING
+VACUUM
+ULTRA-HIGH-VACUUM
+CUSTOM-MIXTURE
+```
+
+Gas composition should be stored numerically where relevant.
+
+---
+
+# 10. Vacuum
+
+Vacuum is not simply a boolean.
+
+Store pressure where possible.
 
 Examples:
 
 ```yaml
-time:
-  start: 0
-  end: 30
-  unit: min
-  context: annealing
+environment: VACUUM
+pressure:
+unit: Pa
 ```
 
-or:
+---
+
+# 11. Electric Fields
+
+Fields should include:
 
 ```yaml
-age: 3.2
-age_unit: years
+electric_field:
+magnitude:
+unit: V/m
+direction:
+frequency:
+phase:
+waveform:
 ```
 
 ---
 
-## Dynamic Behaviour
+# 12. Magnetic Fields
 
-If a system evolves over time, MAT should retain:
-
-- initial state;
-- transition rule;
-- final state;
-- time series where available;
-- rate of change;
-- mechanism;
-- duration;
-- boundary conditions.
-
----
-
-# 2. Scale
-
-Scale is not a decorative label; it is a physically meaningful variable.
-
-Possible classes include:
-
-- atomic scale;
-- molecular scale;
-- nanoscopic scale;
-- microscopic scale;
-- mesoscopic scale;
-- macroscopic scale;
-- bulk scale;
-- device scale;
-- system scale;
-- planetary scale;
-- astrophysical scale.
-
----
-
-## Scale Fields
-
-Recommended scale metadata:
+Fields should include:
 
 ```yaml
-scale_class:
-length:
-length_unit:
-feature_size:
-feature_size_unit:
-geometry:
-resolution:
+magnetic_field:
+magnitude:
+unit: T
+vector:
+orientation:
+gradient:
+frequency:
+phase:
+field_source:
+```
+
+For manufactured permanent magnets, distinguish:
+
+```text
+applied magnetising field
+```
+
+from:
+
+```text
+resulting remanent magnetic state
+```
+
+and from:
+
+```text
+intrinsic magnetic properties
 ```
 
 ---
 
-# 3. Environment
-
-Environment defines the context in which a material exists or is observed.
-
-Examples:
-
-- vacuum;
-- inert atmosphere;
-- oxygen-rich atmosphere;
-- aqueous environment;
-- acid environment;
-- saline environment;
-- cryogenic environment;
-- high-temperature environment;
-- radiation environment;
-- pressure environment;
-- magnetic environment;
-- electric-field environment;
-- gravitational environment.
-
----
-
-# 4. Temperature Environment
-
-Temperature is explicitly recorded as part of the state.
-
-```yaml
-temperature: 298.15
-temperature_unit: K
-```
-
-Do not assume room temperature or ambient conditions unless clearly specified.
-
----
-
-# 5. Pressure Environment
-
-Pressure is a state variable.
-
-```yaml
-pressure: 1e5
-pressure_unit: Pa
-```
-
-This must be retained because phase and reaction behaviour may change dramatically with pressure.
-
----
-
-# 6. Atmosphere and Chemical Environment
-
-If atmosphere matters, store it explicitly.
-
-Examples:
-
-```yaml
-atmosphere: N2
-atmosphere: Ar
-atmosphere: O2
-atmosphere: vacuum
-```
-
-For chemical conditions:
-
-```yaml
-pH: 7.4
-solute: NaCl
-solvent: water
-ionic_strength: 0.15
-```
-
----
-
-# 7. Electric Field
-
-Example:
-
-```yaml
-electric_field: 1e6
-electric_field_unit: V/m
-```
-
-Where field direction matters, include orientation and frame of reference.
-
----
-
-# 8. Magnetic Field
-
-Example:
-
-```yaml
-magnetic_field: 1.5
-magnetic_field_unit: T
-```
-
-The field may be applied, residual, intrinsic or measured externally.
-
-These need separate labels when the distinction matters.
-
----
-
-# 9. Radiation Environment
+# 13. Radiation Environment
 
 Radiation should identify:
 
-- particle or photon type;
+- particle/photon type;
 - energy;
 - spectrum;
 - flux;
@@ -214,7 +312,7 @@ Radiation should identify:
 - direction;
 - duration.
 
-Possible classes include:
+Possible classes:
 
 - ultraviolet;
 - X-ray;
@@ -228,7 +326,7 @@ Possible classes include:
 
 ---
 
-# 10. Gravity and Acceleration
+# 14. Gravity and Acceleration
 
 MAT may distinguish:
 
@@ -241,7 +339,7 @@ Store numerical acceleration where meaningful.
 
 ---
 
-# 11. Mechanical Environment
+# 15. Mechanical Environment
 
 Possible fields include:
 
@@ -266,7 +364,7 @@ Include:
 
 ---
 
-# 12. Chemical Environment
+# 16. Chemical Environment
 
 Possible information:
 
@@ -281,7 +379,7 @@ Possible information:
 
 ---
 
-# 13. Biological Environment
+# 17. Biological Environment
 
 Where relevant:
 
@@ -296,7 +394,7 @@ Where relevant:
 
 ---
 
-# 14. Combined Environment
+# 18. Combined Environment
 
 MAT should support multiple simultaneous conditions.
 
@@ -317,7 +415,7 @@ environment:
 
 ---
 
-# 15. State Equality
+# 19. State Equality
 
 Two records should not automatically be considered the same physical state merely because they have the same chemical formula.
 
@@ -338,8 +436,8 @@ At minimum this may include:
 \text{structure},
 T,
 P,
-\text{time},
-\text{scale},
+t,
+s,
 \text{environment},
 \text{history}
 \}
@@ -347,7 +445,7 @@ P,
 
 ---
 
-# 16. MAT State Signature
+# 20. MAT State Signature
 
 A future machine-readable MAT state may therefore use a state signature such as:
 
@@ -370,13 +468,3 @@ time:
 ```
 
 This state signature becomes the context for every property attached to the material.
-
-These changes are consistent with the strongest parts of the present `G0000`: it already separates multiple reference modes instead of treating zero as literal physical nothingness, distinguishes several different spectral/frequency mechanisms, separates ordinary material synthesis from nuclear transformation, and explicitly treats failed experiments, time and scale as data.
-
-There is also one deliberate upgrade from the old evidence system: `E0-E6` is retained for migration, but new MAT uses descriptive evidence types plus independent confidence and replication fields. That will make the database much easier to audit and eventually use with AI or a materials-search engine.
-
----
-
-## Technical Note
-
-This section closes the MAT universal schema and standards layer. The next work should keep these rules stable while migrating legacy material records into their new structured form.

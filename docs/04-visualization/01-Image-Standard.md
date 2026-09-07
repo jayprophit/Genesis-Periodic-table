@@ -1,65 +1,253 @@
 # MAT Image Standard
 
-## Purpose
+## 1. Image Categories
 
-This document defines quality, scaling, labeling, and provenance requirements for visual assets used in MAT.
+Primary image categories are:
 
----
-
-## 1. Quality Requirements
-
-Images must be legible, interpretable, and scientifically traceable.
-
-At a minimum, materials visuals should have:
-
-- an explicit subject;
-- a clear scale or dimension reference where needed;
-- appropriate labeling for axes, geometry, or features;
-- a known source and provenance;
-- an evidence class if the image is intended to support a scientific claim.
-
----
-
-## 2. Scaling and Orientation
-
-Any image that represents a physical object, field, phase region, structure, or device must include:
-
-- scale bar or dimensional information where relevant;
-- orientation when direction matters;
-- coordinate system if the image implies anisotropy or vector information;
-- magnification or resolution information where appropriate.
+```text
+NATURAL
+SCHEMATIC
+ATOMIC
+QUANTUM
+MOLECULAR
+CRYSTAL
+ISOTOPE
+SPECTRAL
+PROPERTY
+FIELD
+PROCESS
+APPLICATION
+HISTORICAL
+REFERENCE
+```
 
 ---
 
-## 3. Labeling Rules
+# 2. Natural-State Image
 
-MAT labels should be precise and not decorative.
+The natural/material image should show a scientifically plausible manifestation.
 
-Standard labeling includes:
+Metadata should include:
 
-- material or state name;
-- measurement context;
-- axis labels and units;
-- scale or magnification;
-- date or experiment identifier where relevant;
-- provenance note when the figure is derived or digitized.
+```yaml
+phase:
+temperature:
+pressure:
+purity:
+sample_form:
+environment:
+```
 
----
-
-## 4. Provenance
-
-All images should record:
-
-- acquisition or generation method;
-- source document or instrument;
-- date of creation;
-- whether it is original, processed, or derived;
-- whether it is historical, illustrative, or measured.
+where known.
 
 ---
 
-## 5. Interpretation
+# 3. False Colour
 
-A beautiful or detailed image is not automatically strong evidence.
+False colour is acceptable when it improves scientific interpretation.
 
-MAT requires the evidence type to remain explicit so that figures cannot be mistaken for direct measurement or independent validation.
+It must be labelled:
+
+```text
+FALSE-COLOUR
+```
+
+and preferably state what the colour scale represents.
+
+---
+
+# 4. Microscopy
+
+Microscopy images should state:
+
+- technique;
+- magnification;
+- scale bar;
+- sample;
+- preparation;
+- imaging conditions.
+
+Possible methods include:
+
+```text
+OPTICAL
+SEM
+TEM
+AFM
+STM
+X-RAY
+NEUTRON
+```
+
+---
+
+# 5. Atomic Images
+
+Claims that an image shows individual atoms should identify the imaging/reconstruction technique.
+
+A rendered atom graphic is:
+
+```text
+SCIENTIFIC-SCHEMATIC
+```
+
+or:
+
+```text
+COMPUTATIONAL
+```
+
+not a photograph.
+
+---
+
+# 6. Quantum Probability Images
+
+Electron probability images should identify, where applicable:
+
+- orbital/state;
+- quantum numbers;
+- probability or density convention;
+- isosurface threshold;
+- calculation method.
+
+---
+
+# 7. Molecular Images
+
+Specify representation:
+
+```text
+BALL-AND-STICK
+SPACE-FILLING
+WIRE
+SURFACE
+ELECTRON-DENSITY
+ELECTROSTATIC-POTENTIAL
+```
+
+---
+
+# 8. Crystal Images
+
+Specify:
+
+- crystal system;
+- space group;
+- unit-cell dimensions;
+- orientation;
+- scale;
+- atomic occupancy where relevant.
+
+---
+
+# 9. Isotope Visuals
+
+Avoid representing isotope nuclei as though exact nucleon positions are known classical objects.
+
+Use:
+
+```text
+NUCLEAR-SCHEMATIC
+```
+
+unless a more advanced nuclear-density calculation is being shown.
+
+---
+
+# 10. Field Images
+
+Magnetic and electric field maps should include:
+
+- magnitude;
+- direction;
+- coordinate system;
+- scale;
+- boundary conditions;
+- measurement or simulation status.
+
+---
+
+# 11. Generated Images
+
+Computer-generated scientific images must state whether they are:
+
+```text
+DATA-DRIVEN
+MODEL-DRIVEN
+SCHEMATIC
+CONCEPTUAL
+```
+
+---
+
+# 12. Image Placeholder
+
+If an image has not yet been generated, preserve the slot:
+
+```markdown
+<!-- MAT-VISUAL: V04 -->
+<!-- STATUS: PLACEHOLDER -->
+<!-- ASSET-ID: MAT:0001:FIG:V04:001 -->
+<!-- DESCRIPTION: Electron probability representation -->
+```
+
+This enables automated generation later.
+
+---
+
+# 13. Captions
+
+Each caption should answer:
+
+1. What is shown?
+2. Under what conditions?
+3. Is it measured, calculated or conceptual?
+4. What source/data generated it?
+
+---
+
+# 14. Cropping
+
+Do not crop away:
+
+- axes;
+- legends;
+- scale bars;
+- labels;
+- uncertainty;
+- scientifically important boundaries.
+
+---
+
+# 15. Image Manipulation
+
+Scientific images must not be altered in a manner that changes the scientific interpretation without disclosure.
+
+---
+
+# 16. Historical Visuals
+
+Historical models may be shown if explicitly labelled.
+
+Example:
+
+```text
+HISTORICAL ATOMIC MODEL
+NOT MODERN ELECTRON-PROBABILITY DESCRIPTION
+```
+
+---
+
+# 17. Standard Aspect Roles
+
+MAT may use:
+
+```text
+1:1    record tile / property tile
+4:3    scientific diagram
+16:9   overview / process
+3:4    page illustration
+```
+
+Scientific clarity takes priority over rigid aspect ratio.

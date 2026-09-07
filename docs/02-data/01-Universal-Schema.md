@@ -843,6 +843,20 @@ E_\text{output}
 
 with theoretical and demonstrated efficiency separated.
 
+## Decay-Energy Utilisation
+
+Radioactive energy production is retained separately from generic energy generation.
+
+Namespaces include `energy.decay.*` and `energy.decay-conversion.*` (see Property Index).
+
+Covers alpha/beta/gamma/neutron/conversion-electron emission, decay heat, specific power, shielding/thermal burden, and betavoltaic / radioluminescent / thermoelectric conversion routes.
+
+## Combustion and Reaction Energy
+
+Combustion is retained as a chemical reaction process, not merely generic heating.
+
+Namespace: `energy.combustion.*` (heat, ignition temperature, flame temperature, oxygen demand, products, rate, recoverable heat, reversibility).
+
 ---
 
 # 22. Environment and Sustainability Layer
@@ -892,6 +906,16 @@ Fields may include:
 - excretion pathway.
 
 A biological association must not be interpreted as proof of medical benefit.
+
+## Cryogenic / Low-Temperature Behaviour
+
+Cryogenic behaviour is strongly condition-dependent and is not an intrinsic room-temperature property.
+
+Namespace: `cryogenic.*` (phase transition, superconductivity, superfluidity, thermal contraction, brittleness, quantum coherence, heat capacity, magnetic response, carrier mobility).
+
+## Organic / Inorganic / Biological Context
+
+`context.organic`, `context.inorganic`, `context.biological`, and `context.biofabrication` are contextual relationships, not intrinsic element properties.
 
 ---
 
@@ -1072,3 +1096,5 @@ MAT records may carry:
 Completeness does not equal scientific certainty.
 
 A `REVIEWED` record may still contain explicitly labelled unknown values.
+
+---

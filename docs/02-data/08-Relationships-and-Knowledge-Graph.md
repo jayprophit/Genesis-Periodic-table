@@ -2,192 +2,338 @@
 
 ## Purpose
 
-A material is not only a single record. It sits in a graph of relationships.
+MAT is not merely a collection of independent documents.
 
-MAT relations should represent how entities connect in a scientifically meaningful and machine-readable way.
+It is a network of entities connected by scientifically meaningful relationships.
+
+The general graph model is:
+
+\[
+G=(V,E)
+\]
+
+where:
+
+- \(V\) = MAT entities/nodes;
+- \(E\) = relationships/edges.
 
 ---
 
-# 1. Core Relationship Types
+# 1. Node Types
 
-Recommended relationship categories:
+Nodes may represent:
 
-- `is_a`;
-- `part_of`;
-- `contains`;
-- `derived_from`;
-- `transforms_into`;
-- `has_state`;
-- `has_measurement`;
-- `has_source`;
-- `supports_claim`;
-- `contradicts_claim`;
-- `same_as`;
-- `related_to`;
-- `depends_on`;
-- `occurs_under`;
-- `has_process`;
-- `influences`;
-- `is_observed_in`;
-- `is_applied_in`;
-- `precedes`;
-- `follows`;
-- `is_child_of`;
-- `is_parent_of`.
+- element;
+- isotope;
+- ion;
+- atomic state;
+- nuclear state;
+- molecule;
+- compound;
+- allotrope;
+- crystal;
+- material;
+- phase;
+- property;
+- process;
+- reaction;
+- environment;
+- experiment;
+- calculation;
+- source;
+- person;
+- institution;
+- equation;
+- theory;
+- application.
 
 ---
 
 # 2. Relationship Object
 
-A relationship object should at minimum contain:
+Every relationship should contain:
 
 ```yaml
-relation_id:
-source_record_id:
-target_record_id:
-relation_type:
-confidence:
+relationship_id:
 source_id:
+relationship_type:
+target_id:
 conditions:
+direction:
+evidence_type:
+confidence:
+source_ids:
 notes:
 ```
 
 ---
 
-# 3. Hierarchical Structures
+# 3. Core Relationship Types
 
-Parent-child relationships are common in MAT.
-
-Examples:
+## Composition
 
 ```text
-Material -> Phase -> Structure -> Measurement
-Element -> Isotope -> Ion -> State
-Compound -> Polymorph -> Crystal Structure
+CONTAINS
+CONSTITUENT-OF
+COMPOSED-OF
+HAS-ISOTOPE
+IS-ISOTOPE-OF
 ```
 
 ---
 
-# 4. Material-to-Process Relationships
-
-Examples:
-
-- material `is_processed_by` process;
-- process `produces` material;
-- material `decomposes_under` condition;
-- material `transforms_to` other material.
-
----
-
-# 5. State-to-Measurement Relationships
-
-Examples:
+## Chemistry
 
 ```text
-Material-State -> has_measurement -> Thermal-Conductivity
-Material-State -> has_measurement -> Magnetic-Susceptibility
+BONDS-WITH
+FORMS-COMPOUND
+REACTS-WITH
+CATALYSES
+OXIDISES-TO
+REDUCES-TO
+DISSOLVES-IN
+ADSORBS
+ABSORBS
 ```
-
-Each measured value must refer back to the applicable state and conditions.
 
 ---
 
-# 6. Source-to-Claim Relationships
-
-Examples:
+## Structure
 
 ```text
-Paper -> supports_claim -> Property value
-Dataset -> supports_claim -> Observed phase transition
+HAS-PHASE
+HAS-ALLOTROPE
+CRYSTALLISES-AS
+TRANSFORMS-TO
+HAS-DEFECT
+HAS-INTERFACE
 ```
-
-This allows MAT to evaluate evidence quality and provenance separately from the material state itself.
 
 ---
 
-# 7. Contradiction Graphs
-
-Where different sources disagree, the relationship graph should preserve conflict rather than auto-resolve it.
+## Process
 
 ```text
-Claim A -> contradicts -> Claim B
+PRODUCED-BY
+PROCESSED-BY
+ANNEALED-BY
+DEPOSITED-BY
+SYNTHESISED-BY
+MACHINED-BY
+TRANSFORMED-BY
 ```
-
-A separate recommended/consensus value may be attached to the record without deleting the disagreement graph.
 
 ---
 
-# 8. Edge Semantics
+## Nuclear
 
-A relationship edge should explain the meaning of the connection, not just provide a label.
+```text
+DECAYS-TO
+CAPTURES-NEUTRON
+FUSES-WITH
+FISSION-PRODUCES
+TRANSMUTES-TO
+```
+
+---
+
+## Energy
+
+```text
+GENERATES
+STORES
+CONDUCTS
+CONVERTS
+ABSORBS-ENERGY
+EMITS-ENERGY
+```
+
+---
+
+## Evidence
+
+```text
+SUPPORTED-BY
+CONTRADICTED-BY
+MEASURED-BY
+CALCULATED-BY
+PREDICTED-BY
+REPORTED-IN
+```
+
+---
+
+## People and History
+
+```text
+DISCOVERED-BY
+PROPOSED-BY
+MEASURED-BY-PERSON
+DEVELOPED-BY
+NAMED-AFTER
+```
+
+---
+
+## Application
+
+```text
+USED-IN
+CANDIDATE-FOR
+UNSUITABLE-FOR
+```
+
+---
+
+# 4. Direction
+
+Some relationships are symmetric.
+
+Example:
+
+```text
+BONDS-WITH
+```
+
+may be treated as bidirectional in certain graph contexts.
+
+Others are directional:
+
+```text
+DECAYS-TO
+```
+
+because:
+
+```text
+A DECAYS-TO B
+```
+
+does not imply:
+
+```text
+B DECAYS-TO A
+```
+
+---
+
+# 5. Conditional Relationships
+
+A relationship may only exist under certain conditions.
 
 Example:
 
 ```yaml
-relation_type: transforms_into
-source: MAT:0007
-target: MAT:0008
+source: graphite
+relationship: TRANSFORMS-TO
+target: diamond
 conditions:
-  temperature: 1200
-  temperature_unit: K
-  atmosphere: ARGON
+  pressure: high
+  temperature: elevated
 ```
 
-This is more informative than a vague `related_to` edge.
+Therefore the relationship edge itself may contain state information.
 
 ---
 
-# 9. Graph Responsibilities
+# 6. Multi-Step Paths
 
-The graph is responsible for:
+A MAT transformation pathway can be represented:
 
-- linking records;
-- representing dependencies;
-- tracking evidence flow;
-- storing process history;
-- mapping contradictions;
-- representing state transitions;
-- preserving lineage.
+\[
+A
+\xrightarrow{P_1}
+B
+\xrightarrow{P_2}
+C
+\xrightarrow{P_3}
+D
+\]
 
-It should not replace the structured record fields.
-
----
-
-# 10. Relationship Validation
-
-Each relationship should be checked for:
-
-- source existence;
-- target existence;
-- valid relation type;
-- conditions compatibility;
-- confidence;
-- source quality;
-- date/version.
+Each edge must retain process conditions.
 
 ---
 
-# 11. Temporal Graphs
+# 7. Reverse Search
 
-Some relationships are time-dependent.
-
-Example:
+MAT should eventually support queries such as:
 
 ```text
-A -> transforms_into -> B
-at time t = 1200 K
+Find materials with:
+high thermal conductivity
+low density
+electrical insulation
+temperature stability > target
 ```
 
-Temporal edges are distinct from static structural edges.
+The system can traverse:
+
+```text
+TARGET PROPERTY
+↓
+MATERIAL
+↓
+STRUCTURE
+↓
+COMPOSITION
+↓
+PROCESS
+```
+
+This makes the knowledge graph useful for materials design rather than merely reference lookup.
 
 ---
 
-# 12. Knowledge Graph Principles
+# 8. Causali E Relationship
 
-MAT graph rules:
+Causali E may operate over MAT graph states conceptually as:
 
-- keep edges typed and explicit;
-- preserve provenance of each edge;
-- never infer a relationship without evidence or a stated theoretical model;
-- keep historical, hypothetical and confirmed relations distinct;
-- do not hide conflicting relationships.
+\[
+C=F(A,B,E)
+\]
+
+where:
+
+- \(A\) = intervention/change;
+- \(B\) = starting or constrained state;
+- \(E\) = environment;
+- \(C\) = resulting accessible state.
+
+All generated candidate pathways must still be tested against established physics, chemistry and evidence.
+
+---
+
+# 9. Forbidden and Unresolved Paths
+
+MAT may record:
+
+```text
+OBSERVED
+PREDICTED
+POSSIBLE
+CONDITIONALLY-POSSIBLE
+KINETICALLY-INACCESSIBLE
+THERMODYNAMICALLY-UNFAVOURABLE
+FORBIDDEN
+FAILED
+UNKNOWN
+HYPOTHETICAL
+```
+
+A pathway failing under one condition does not automatically establish impossibility under every physically meaningful condition.
+
+Conversely, mathematical generation of a candidate state does not establish that the state is physically possible.
+
+---
+
+# 10. Relationship Evidence
+
+Every relationship should ultimately be traceable to:
+
+- experimental observation;
+- established theory;
+- computation;
+- historical source;
+- hypothesis.
+
+---

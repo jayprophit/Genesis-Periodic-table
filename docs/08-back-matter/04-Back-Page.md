@@ -1,6 +1,7 @@
 # Materials Atlas Table Codex
 
 ## MAT
+
 Matter is not defined only by what it contains.
 
 Its behaviour also depends on structure, state, environment, energy, scale, history and time.

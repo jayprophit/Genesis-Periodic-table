@@ -2,59 +2,115 @@
 
 ## Purpose
 
-This file lists the primary MAT record structure and the relationship between a record and its child records, associated measurements, and evidence objects.
+This file is the canonical human-readable index of MAT primary records.
 
----
-
-## 1. Record Index Structure
-
-The MAT record system is based on a hierarchy such as:
-
-- primary record;
-- child record;
-- measurement object;
-- process object;
-- relationship object;
-- evidence attachment;
-- provenance object.
-
----
-
-## 2. Primary Record Pattern
-
-Primary records follow a numbered pattern:
+Machine-readable indexing may later exist under:
 
 ```text
-0000
-0001
-0002
-...
+data/indexes/
 ```
 
-Each record should eventually be listed as:
+---
+
+# Record Sequence
+
+## 0000
 
 ```text
-MAT:0001 — Hydrogen
-MAT:0002 — Helium
+0000-Origin-State
 ```
 
-with a corresponding child record or state hierarchy as needed.
+Classification:
+
+```text
+MAT FOUNDATION / REFERENCE RECORD
+```
+
+Status:
+
+```text
+IN-PROGRESS
+```
 
 ---
 
-## 3. Record Relationship Model
+## Chemical Elements
 
-Examples of valid record relations include:
+The element sequence begins after `0000`.
 
-- material to isotope;
-- material to phase;
-- material to process;
-- material to application;
-- phase to property measurement;
-- material to evidence record.
+Canonical filename format:
+
+```text
+NNNN-ElementName-Symbol.md
+```
+
+Initial mapping:
+
+| MAT | Element | Symbol | Atomic Number |
+|---|---|---|---:|
+| 0001 | Hydrogen | H | 1 |
+| 0002 | Helium | He | 2 |
+| 0003 | Lithium | Li | 3 |
+| 0004 | Beryllium | Be | 4 |
+| 0005 | Boron | B | 5 |
+| 0006 | Carbon | C | 6 |
+| 0007 | Nitrogen | N | 7 |
+| 0008 | Oxygen | O | 8 |
+| 0009 | Fluorine | F | 9 |
+| 0010 | Neon | Ne | 10 |
+| 0011 | Sodium | Na | 11 |
+| 0012 | Magnesium | Mg | 12 |
+| 0013 | Aluminium | Al | 13 |
+| 0014 | Silicon | Si | 14 |
+| 0015 | Phosphorus | P | 15 |
+| 0016 | Sulfur | S | 16 |
+| 0017 | Chlorine | Cl | 17 |
+| 0018 | Argon | Ar | 18 |
+| 0019 | Potassium | K | 19 |
+| 0020 | Calcium | Ca | 20 |
+| 0021 | Scandium | Sc | 21 |
+| 0022 | Titanium | Ti | 22 |
+| 0023 | Vanadium | V | 23 |
+| 0024 | Chromium | Cr | 24 |
+| 0025 | Manganese | Mn | 25 |
+| 0026 | Iron | Fe | 26 |
+| 0027 | Cobalt | Co | 27 |
+| 0028 | Nickel | Ni | 28 |
+| 0029 | Copper | Cu | 29 |
+| 0030 | Zinc | Zn | 30 |
+| 0031 | Gallium | Ga | 31 |
+| 0032 | Germanium | Ge | 32 |
+| 0033 | Arsenic | As | 33 |
+| 0034 | Selenium | Se | 34 |
+| 0035 | Bromine | Br | 35 |
+| 0036 | Krypton | Kr | 36 |
+
+Continue sequentially through all confirmed chemical elements.
 
 ---
 
-## 4. Indexing Practice
+# Record Status Fields
 
-The record index should remain concise and structural, while the detailed content lives in the actual record files and measurement objects.
+Each entry should eventually include:
+
+```text
+record_id
+record_name
+class
+status
+version
+last_reviewed
+completeness
+```
+
+---
+
+# Future Record Classes
+
+MAT may later include primary records for classes beyond individual elements.
+
+Any expansion of primary numbering must be documented before IDs are allocated.
+
+Permanent identifiers must not be recycled.
+
+---

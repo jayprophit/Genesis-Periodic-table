@@ -3,6 +3,7 @@
 ## MAT
 
 ### Atlas of Matter, Materials, Properties, States, Processes and Transformations
+
 MAT is a structured scientific atlas designed to connect the chemical elements to the larger universe of materials that can arise from them.
 
 It begins with fundamental atomic and nuclear identity and expands through electronic structure, bonding, spectra, phases, material structure, fields, temperature, pressure, manufacturing, energy, environment, time, scale and application.
@@ -28,3 +29,5 @@ MAT treats matter not merely as a list of substances, but as a network of possib
 MAT is a living dataset.
 
 Data may be corrected, extended or superseded as scientific evidence develops.
+
+---

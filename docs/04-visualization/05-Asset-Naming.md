@@ -1,64 +1,188 @@
-# MAT Asset Naming
+# MAT Asset Naming Standard
 
-## Purpose
+## 1. Primary Principle
 
-Asset names in MAT must be stable, searchable, and semantically informative.
-
----
-
-## 1. Naming Rules
-
-A MAT asset should generally follow:
-
-```text
-<record-id>-<descriptor>-<asset-type>-<sequence>.<extension>
-```
+All assets belonging to a numbered record begin with that record's canonical filename stem.
 
 Example:
 
 ```text
-0001-Hydrogen-H-FIG-001.png
-0001-Hydrogen-H-GRAPH-001.svg
-0001-Hydrogen-H-TABLE-001.csv
-0001-Hydrogen-H-MODEL-001.glb
+0001-Hydrogen-H
 ```
 
 ---
 
-## 2. Asset Type Codes
+# 2. Image Naming
 
-Recommended codes include:
-
-- FIG = figure or image;
-- GRAPH = plot or chart;
-- TABLE = structured table;
-- MODEL = 3D or computational model;
-- DIAGRAM = schematic or process diagram;
-- SPECTRUM = spectral dataset;
-- MAP = spatial or field map.
+```text
+0001-Hydrogen-H-FIG-001.png
+0001-Hydrogen-H-FIG-002.svg
+```
 
 ---
 
-## 3. Descriptor Rules
+# 3. Graph Naming
 
-The descriptor should be short and descriptive, for example:
+```text
+0001-Hydrogen-H-GRAPH-001.svg
+0001-Hydrogen-H-GRAPH-001.csv
+```
 
-- phase-diagram;
-- conductivity-curve;
-- lattice-structure;
-- process-flow;
-- uncertainty-band.
-
-Avoid vague names such as `image1` or `newplot`.
+The same graph number links rendered graph and source data.
 
 ---
 
-## 4. Versioning
+# 4. Table Naming
 
-When a figure or model is revised, the version should be maintained in metadata rather than by changing the scientific identity of the asset unless the asset is conceptually new.
+```text
+0001-Hydrogen-H-TABLE-001.md
+0001-Hydrogen-H-TABLE-001.csv
+```
 
 ---
 
-## 5. Metadata Traces
+# 5. Diagram Naming
 
-The file name should remain readable, but the true record of provenance lives in the asset metadata and the associated MAT record.
+```text
+0001-Hydrogen-H-DIAGRAM-001.svg
+```
+
+---
+
+# 6. Model Naming
+
+```text
+0001-Hydrogen-H-MODEL-SCI-001.glb
+0001-Hydrogen-H-MODEL-DATA-001.glb
+```
+
+---
+
+# 7. Calculation Naming
+
+```text
+0001-Hydrogen-H-CALC-001.py
+0001-Hydrogen-H-CALC-001.ipynb
+```
+
+---
+
+# 8. Source Data
+
+```text
+0001-Hydrogen-H-DATA-001.csv
+0001-Hydrogen-H-DATA-002.json
+```
+
+---
+
+# 9. Visual Slot Suffixes
+
+Optional descriptive suffixes may be appended.
+
+Example:
+
+```text
+0001-Hydrogen-H-FIG-001-Natural-State.png
+0001-Hydrogen-H-FIG-002-Atomic-Schematic.svg
+0001-Hydrogen-H-FIG-003-Electron-Probability.png
+0001-Hydrogen-H-GRAPH-001-Emission-Spectrum.svg
+```
+
+The numerical ID remains authoritative.
+
+---
+
+# 10. Character Rules
+
+Use:
+
+```text
+letters
+numbers
+hyphens
+period only for extension
+```
+
+Avoid:
+
+```text
+spaces
+em dashes
+slashes
+colons
+special filename symbols
+```
+
+Machine identifiers inside files may still use colons.
+
+---
+
+# 11. Asset Folder Structure
+
+Recommended numbered-record structure:
+
+```text
+records/
+└── 0001-Hydrogen-H/
+    ├── 0001-Hydrogen-H.md
+    │
+    ├── data/
+    │   ├── properties/
+    │   ├── spectra/
+    │   ├── isotopes/
+    │   ├── phases/
+    │   └── structured/
+    │
+    ├── images/
+    │   ├── natural/
+    │   ├── scientific/
+    │   ├── quantum/
+    │   ├── isotope/
+    │   ├── spectral/
+    │   ├── properties/
+    │   └── applications/
+    │
+    ├── diagrams/
+    │   ├── bonding/
+    │   ├── processes/
+    │   ├── relationships/
+    │   └── fields/
+    │
+    ├── graphs/
+    │   └── data/
+    │
+    ├── tables/
+    │
+    ├── models/
+    │   ├── scientific/
+    │   ├── data-extruded/
+    │   └── printable/
+    │
+    ├── calculations/
+    ├── relationships/
+    ├── experiments/
+    └── sources/
+```
+
+Use this same overall structure for `0000` and subsequent primary MAT records.
+
+Folders may remain empty until applicable content exists.
+
+---
+
+# 12. Never Rename Published Asset IDs Casually
+
+If an asset has already been cited or published, preserve its ID.
+
+A replacement may use:
+
+```text
+revision
+version
+superseded_by
+```
+
+rather than reusing the identity for unrelated content.
+
+Now create the reusable record templates.

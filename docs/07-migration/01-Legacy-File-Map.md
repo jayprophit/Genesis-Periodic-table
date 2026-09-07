@@ -1,61 +1,46 @@
-# Legacy File Map
+# MAT Legacy File Map
 
 ## Purpose
 
-This document tracks the relationship between legacy Genesis files and their MAT successors or archival locations.
+This file maps old Genesis files to new MAT locations.
 
 ---
 
-## 1. Mapping Model
+| Legacy | MAT Destination | Status |
+|---|---|---|
+| README.md | Root README + Causali E archive | IN-PROGRESS |
+| G0000 | records/0000-Origin-State/ | IN-PROGRESS |
+| G0001 | records/0001-Hydrogen-H/ | NOT-STARTED |
+| G0002 | records/0002-Helium-He/ | NOT-STARTED |
+| G0003 | records/0003-Lithium-Li/ | NOT-STARTED |
+| G0004 | records/0004-Beryllium-Be/ | NOT-STARTED |
+| G0005 | records/0005-Boron-B/ | NOT-STARTED |
+| G0006 | records/0006-Carbon-C/ | NOT-STARTED |
+| G0007 | records/0007-Nitrogen-N/ | NOT-STARTED |
+| G0008 | records/0008-Oxygen-O/ | NOT-STARTED |
+| G0009 | records/0009-Fluorine-F/ | NOT-STARTED |
+| G0010 | records/0010-Neon-Ne/ | NOT-STARTED |
 
-Every legacy record should eventually carry:
-
-- original path;
-- original record identifier;
-- current MAT destination or status;
-- archival or retained status;
-- migration notes;
-- whether the file is preserved unchanged, transformed, or superseded.
+Continue this mapping through every legacy file.
 
 ---
 
-## 2. Typical Mapping Pattern
+# Mapping Rule
 
-Legacy Genesis record:
+Do not mark a record:
 
 ```text
-G0001
+MIGRATED
 ```
 
-becomes:
+until its new MAT package exists.
+
+Do not mark:
 
 ```text
-records/0001-.../
+VALIDATED
 ```
 
-or remains in:
-
-```text
-archive/legacy-genesis/
-```
-
-depending on whether it is being re-expressed as a MAT record or preserved as historical context.
+until scientific/source checks are complete.
 
 ---
-
-## 3. Migration Status Categories
-
-Use categories such as:
-
-- preserved-only;
-- mapped-to-MAT;
-- migrated-in-part;
-- archived-as-reference;
-- superseded;
-- not-yet-processed.
-
----
-
-## 4. Practical Rule
-
-Do not delete or rewrite the original legacy record during migration. Preserve a traceable link to the historical version.

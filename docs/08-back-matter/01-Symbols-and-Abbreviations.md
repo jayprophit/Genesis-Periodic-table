@@ -1,59 +1,91 @@
 # MAT Symbols and Abbreviations
 
-## Purpose
+## Project
 
-This document records the notation used across MAT so that records remain interpretable and consistent.
-
----
-
-## 1. Common Abbreviations
-
-- MAT = Materials Atlas Table Codex
-- SI = International System of Units
-- K = kelvin
-- Pa = pascal
-- T = tesla
-- Hz = hertz
-- eV = electronvolt
-- UHV = ultra-high vacuum
-- P = pressure
-- T = temperature
-- t = time
-- s = scale or state variable in formal expressions
-- SRC = source record or source identifier
-- ID = identifier
-- EDR = evidence and data review
+```text
+MAT — Materials Atlas Table Codex
+CE  — Causali E
+```
 
 ---
 
-## 2. Common Mathematical Symbols
+# General Physical Symbols
 
-- \(M\) = material or material state
-- \(S\) = state
-- \(A\) = intervention or action
-- \(B\) = boundary conditions or fixed constraints
-- \(E\) = environment or external conditions
-- \(t\) = time
-- \(P\) = pressure
-- \(T\) = temperature
-- \(\lambda\) = decay constant or rate constant
-- \(\nu\) = frequency
-- \(\omega\) = angular frequency
-- \(\rho\) = density
-- \(\sigma\) = stress or standard deviation depending on context
-- \(\mu\) = magnetic permeability or chemical potential depending on context
+| Symbol | Meaning |
+|---|---|
+| \(t\) | time |
+| \(T\) | temperature |
+| \(P\) | pressure |
+| \(m\) | mass |
+| \(V\) | volume or potential depending on context |
+| \(\rho\) | density or density operator depending on context |
+| \(E\) | energy or electric field depending on typography/context |
+| \(\mathbf E\) | electric-field vector |
+| \(\mathbf B\) | magnetic flux density |
+| \(\mathbf H\) | magnetic-field intensity |
+| \(Q\) | charge, reaction quotient, or heat depending on context |
+| \(S\) | entropy or state depending on context |
+| \(G\) | Gibbs free energy or graph depending on context |
+| \(F\) | force, Helmholtz free energy, or function depending on context |
+| \(\nu\) | frequency |
+| \(\lambda\) | wavelength or decay constant depending on context |
+| \(\omega\) | angular frequency |
+| \(h\) | Planck constant |
+| \(\hbar\) | reduced Planck constant |
+| \(k_B\) | Boltzmann constant |
+| \(c\) | speed of light in vacuum |
+| \(N_A\) | Avogadro constant |
 
 ---
 
-## 3. Standard Writing Rules
+# Context Rule
 
-- use SI symbols where possible;
-- retain source units when historical or migration data is preserved;
-- use explicit null-state names rather than blank entries;
-- avoid overloaded symbols without definition in context.
+Because scientific symbols are reused across disciplines, MAT equations must define their symbols locally.
+
+For example:
+
+```text
+A
+```
+
+in radioactive decay may mean activity.
+
+In Causali E:
+
+```text
+A
+```
+
+may refer to causal change/intervention.
+
+Namespace and context prevent ambiguity.
 
 ---
 
-## 4. Usage Note
+# Evidence Abbreviations
 
-Symbols should always be defined when they are introduced in a record or section. The glossary and this symbol list are intended to support consistency, not to force a single interpretation for every context.
+Legacy:
+
+```text
+E0
+E1
+E2
+E3
+E4
+E5
+E6
+```
+
+New MAT should prefer descriptive evidence labels.
+
+---
+
+# Visual IDs
+
+```text
+V01–V18
+```
+
+represent standardized MAT visual slots.
+
+---

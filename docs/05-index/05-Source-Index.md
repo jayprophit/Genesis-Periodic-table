@@ -2,39 +2,72 @@
 
 ## Purpose
 
-This index associates references, standards, datasets, and other evidence sources with MAT records and claims.
+The Source Index provides human-readable navigation into MAT's global source registry.
 
 ---
 
-## 1. Source Categories
+# Source ID Format
 
-The source index should group references by:
-
-- journal articles;
-- datasets;
-- standards bodies;
-- patents;
-- theses;
-- technical reports;
-- historical records;
-- laboratory or instrument outputs;
-- computational models.
+```text
+SRC-000001
+SRC-000002
+SRC-000003
+```
 
 ---
 
-## 2. Indexing Rules
+# Source Categories
 
-Each source should be linked to:
-
-- the relevant record or material;
-- the relevant claim or measurement;
-- the source type;
-- provenance and date;
-- quality or evidence status;
-- whether it is primary or secondary.
+```text
+PRIMARY-JOURNAL
+REVIEW
+DATABASE
+STANDARD
+HANDBOOK
+TEXTBOOK
+PATENT
+THESIS
+TECHNICAL-REPORT
+GOVERNMENT
+INSTRUMENT-DATA
+SIMULATION
+HISTORICAL
+WEB
+```
 
 ---
 
-## 3. Scientific Purpose
+# Canonical Source Entry
 
-This supports traceability, review, and conflict resolution across different materials claims and migration stages.
+```yaml
+source_id:
+title:
+authors:
+year:
+organization:
+doi:
+url:
+source_type:
+license:
+used_by:
+```
+
+---
+
+# Primary Origin
+
+Where a database reproduces data originating in a paper, MAT should retain both:
+
+```text
+DISTRIBUTION SOURCE
+```
+
+and:
+
+```text
+ORIGINAL SCIENTIFIC SOURCE
+```
+
+where known.
+
+---

@@ -2,265 +2,198 @@
 
 ## Purpose
 
-MAT distinguishes between:
+Uncertainty and confidence describe different things.
 
-- measurement uncertainty;
-- modelling uncertainty;
-- confidence in the claim;
-- quality of the underlying evidence;
-- replication status.
+### Uncertainty
 
-A single number is not enough.
+Quantifies limits or spread associated with a value.
 
----
+### Confidence
 
-# 1. Uncertainty Types
+Represents MAT's assessment of how securely the claim is supported.
 
-Possible categories include:
-
-- statistical uncertainty;
-- systematic uncertainty;
-- calibration uncertainty;
-- rounding uncertainty;
-- interpolation uncertainty;
-- extrapolation uncertainty;
-- model-form uncertainty;
-- sampling uncertainty;
-- environmental uncertainty;
-- hidden-variable uncertainty;
-- classification uncertainty;
-- transcription uncertainty.
+They must not be merged into one field.
 
 ---
 
-# 2. Measurement Uncertainty
-
-Measurement uncertainty should include:
-
-```yaml
-value:
-unit:
-uncertainty_value:
-uncertainty_unit:
-uncertainty_type:
-confidence_interval:
-confidence_level:
-method:
-```
-
-Examples:
-
-```yaml
-uncertainty_type: ONE_SIGMA
-confidence_level: 0.68
-```
-
-or:
-
-```yaml
-uncertainty_type: 95_PERCENT_CONFIDENCE
-confidence_level: 0.95
-```
-
----
-
-# 3. Standard Deviation and Distribution
-
-Where a value is distributional rather than single-value, record:
-
-- mean;
-- median;
-- variance;
-- standard deviation;
-- confidence interval;
-- full distribution when necessary;
-- skewness;
-- kurtosis;
-- sample size.
-
----
-
-# 4. Systematic Error
-
-Systematic error must be distinguished from statistical noise.
-
-Examples:
-
-- calibration drift;
-- instrument offset;
-- temperature bias;
-- beam misalignment;
-- sample contamination;
-- reference mismatch.
-
----
-
-# 5. Model Uncertainty
-
-A theoretical or computational estimate may be uncertain because the model itself is incomplete.
-
-This should be recorded separately from statistical error.
-
-Examples:
-
-- approximations in the model;
-- omitted variables;
-- hidden assumptions;
-- unknown boundary conditions;
-- numerically converged but physically unvalidated result.
-
----
-
-# 6. Confidence
-
-Confidence is a qualitative and separate evaluation from uncertainty.
-
-Recommended values:
-
-```text
-VERY-LOW
-LOW
-MODERATE
-HIGH
-VERY-HIGH
-```
-
-The confidence field describes trust in the relevant claim, under the stated conditions.
-
----
-
-# 7. Confidence is Not Provenance
-
-High confidence does not automatically mean:
-
-- high certainty;
-- original-source status;
-- independent replication;
-- universal validity.
-
-These are different dimensions.
-
----
-
-# 8. Evidence Weighting
-
-A value may carry:
-
-- evidence strength;
-- expert review status;
-- number of independent sources;
-- degree of agreement across sources;
-- presence of contradiction.
-
----
-
-# 9. Contradiction and Consensus
-
-If multiple sources disagree, MAT should not collapse them automatically.
-
-Instead store:
-
-```yaml
-consensus_status: CONFLICTING
-supporting_sources:
-contradictory_sources:
-preferred_value:
-```
-
-The recommended value, if present, must remain explicitly labelled as a synthesis or evaluation.
-
----
-
-# 10. Sensitivity
-
-A property may be sensitive to:
-
-- temperature;
-- pressure;
-- geometry;
-- sample history;
-- field orientation;
-- scale;
-- environment;
-- defect density;
-- preparation route.
-
-Sensitivity should be explicit when it affects interpretation.
-
----
-
-# 11. Outlier Handling
-
-Outliers should not be silently removed.
-
-Store:
-
-- source reference;
-- measurement conditions;
-- reason for flagging;
-- whether it was included or excluded;
-- who/what flagged it;
-- whether it was later replicated.
-
----
-
-# 12. Uncertainty Propagation
-
-When calculations derive a value from multiple variables, record the propagation method.
-
-Examples:
-
-- linear propagation;
-- Monte Carlo propagation;
-- analytically derived uncertainty;
-- finite-difference sensitivity analysis;
-- Bayesian inference.
-
----
-
-# 13. Confidence in Models
-
-Models may also carry confidence in their assumptions.
+# 1. Measurement Uncertainty
 
 Example:
 
+\[
+x = 5.32 \pm 0.04\ \text{mm}
+\]
+
+Store:
+
 ```yaml
-model_confidence: MODERATE
-assumption_list:
-known_limitations:
+value: 5.32
+unit: mm
+uncertainty: 0.04
+uncertainty_type: standard
 ```
 
-This is different from confidence in the measured observation.
-
 ---
 
-# 14. Experimental Reproducibility
+# 2. Uncertainty Types
 
-Reproducibility should not be conflated with a property's physical truth.
-
-A hard-to-repeat measurement may still be valid; a repeatable measurement may still be wrong.
-
----
-
-# 15. Null-State and Uncertainty
-
-An unknown or not-measured state is not equivalent to a numerical zero or uncertainty-free value.
-
-A blank field should be converted to one of the explicit MAT null states.
-
----
-
-# 16. Quality Tiers
-
-Possible quality tiers include:
+Possible classifications:
 
 ```text
-EXPLORATORY
-PRELIMINARY
-ROUTINE
-REPRODUCIBLE
-VALIDATED
-STANDARDISED
+STANDARD
+EXPANDED
+STATISTICAL
+SYSTEMATIC
+COMBINED
+RANGE
+CONFIDENCE-INTERVAL
+SOURCE-REPORTED
+ESTIMATED
+UNKNOWN
 ```
 
-These are operational quality labels and do not replace quantitative uncertainty.
+---
+
+# 3. Confidence Grades
+
+Recommended MAT confidence classes:
+
+```text
+A — HIGH
+B — MODERATE
+C — LOW
+D — SPECULATIVE
+U — UNASSESSED
+```
+
+---
+
+## A — HIGH
+
+Typically:
+
+- strong source quality;
+- appropriate methodology;
+- compatible independent evidence;
+- no major unresolved contradiction.
+
+---
+
+## B — MODERATE
+
+Generally supported, but one or more limitations remain.
+
+---
+
+## C — LOW
+
+Limited evidence, poor replication, large uncertainty or important unresolved disagreement.
+
+---
+
+## D — SPECULATIVE
+
+Primarily theoretical, exploratory or hypothetical where empirical support is currently insufficient.
+
+---
+
+## U — UNASSESSED
+
+MAT has not yet evaluated confidence.
+
+---
+
+# 4. Confidence Is Not Evidence Type
+
+Example:
+
+A computational prediction can have:
+
+```text
+evidence_type: COMPUTATIONAL
+confidence: A
+```
+
+if a well-established computational method predicts a narrowly defined quantity accurately.
+
+Another simulation might be:
+
+```text
+evidence_type: COMPUTATIONAL
+confidence: D
+```
+
+if assumptions dominate the result.
+
+Likewise, one experimental measurement may still have low confidence.
+
+---
+
+# 5. Agreement Between Sources
+
+Where multiple measurements exist, MAT may calculate:
+
+- mean;
+- median;
+- standard deviation;
+- weighted mean;
+- between-study variance;
+- confidence interval.
+
+The raw observations must remain available.
+
+---
+
+# 6. Model Uncertainty
+
+Computational values should distinguish:
+
+- numerical error;
+- model-form uncertainty;
+- parameter uncertainty;
+- input-data uncertainty;
+- convergence uncertainty.
+
+---
+
+# 7. Prediction Intervals
+
+Predictions should state ranges where practical.
+
+Avoid presenting:
+
+```text
+predicted value = 123.456789
+```
+
+when the model cannot justify that precision.
+
+---
+
+# 8. Disagreement Flag
+
+Possible states:
+
+```text
+CONSISTENT
+MINOR-DISAGREEMENT
+SIGNIFICANT-DISAGREEMENT
+CONTRADICTORY
+INSUFFICIENT-DATA
+```
+
+---
+
+# 9. Uncertainty Propagation
+
+For derived quantities:
+
+\[
+y=f(x_1,x_2,\ldots,x_n)
+\]
+
+uncertainty should be propagated using an appropriate mathematical method when sufficient input uncertainty information is available.
+
+The calculation method should be documented.
+
+---

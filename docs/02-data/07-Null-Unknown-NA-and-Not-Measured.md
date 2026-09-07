@@ -1,177 +1,217 @@
-# MAT Null, Unknown, NA and Not Measured
+# MAT Null, Unknown, N/A and Missing-Data Standard
 
 ## Purpose
 
-MAT requires explicit handling for missing or inapplicable values.
+Blank fields are ambiguous.
 
-Blank fields are not permitted to mean ambiguous physical absence.
-
-A missing value must resolve to a defined MAT state.
+MAT therefore avoids undefined empty values wherever practical.
 
 ---
 
 # 1. Canonical Null States
 
-Recommended canonical set:
-
-```text
-UNKNOWN
-NOT-MEASURED
-NOT-AVAILABLE
-NOT-APPLICABLE
-NOT-ESTABLISHED
-```
-
-Additional domain-specific states may be defined if needed, but all must be explicit and stable.
-
----
-
-# 2. Distinctions
+Use the following controlled states.
 
 ## UNKNOWN
 
-The value is not known, but the property may be meaningful in principle.
+The information may exist, but MAT does not currently know it.
+
+```text
+UNKNOWN
+```
+
+---
 
 ## NOT-MEASURED
 
-The value was not measured in the reported context.
+The quantity is meaningful but has not been measured or no measurement has been identified.
+
+```text
+NOT-MEASURED
+```
+
+---
 
 ## NOT-AVAILABLE
 
-The value is not available from the source or data pipeline at the time of recording.
+The information is believed to exist but is unavailable to MAT.
+
+```text
+NOT-AVAILABLE
+```
+
+---
 
 ## NOT-APPLICABLE
 
-The property is not relevant for the object or state.
+The field has no meaningful application to this record/state.
+
+```text
+NOT-APPLICABLE
+```
+
+---
 
 ## NOT-ESTABLISHED
 
-The property may be relevant, but there is no accepted or sufficiently reliable determination.
-
----
-
-# 3. Zero is not the Same as Missing
-
-A numeric zero is a valid physical value when it is physically meaningful.
-
-Examples:
-
-- zero charge;
-- zero defect concentration in a defined model;
-- zero applied field within a specified calibration;
-- zero diffusion in a modelled ideal case.
-
-But a blank or omitted value is not the same as zero.
-
----
-
-# 4. Null State Examples
-
-```yaml
-temperature: UNKNOWN
-magnetic_field: NOT-MEASURED
-spectral_data: NOT-AVAILABLE
-orbital_count: NOT-APPLICABLE
-phase_transition: NOT-ESTABLISHED
-```
-
----
-
-# 5. Provenance of Null State
-
-Null states should still include provenance where possible.
-
-Example:
-
-```yaml
-pressure_state: NOT-MEASURED
-reason: experiment did not report pressure
-source_id: SRC-00412
-```
-
----
-
-# 6. Legacy `NA` Handling
-
-Legacy data may use:
+A proposed phenomenon/value has not been scientifically established.
 
 ```text
-NA
-N/A
-null
-blank
+NOT-ESTABLISHED
 ```
 
-These must be migrated to one of the MAT canonical states rather than retained as ambiguous placeholders.
+---
+
+## BELOW-DETECTION-LIMIT
+
+The measurement method did not detect a value above its detection threshold.
+
+```text
+BELOW-DETECTION-LIMIT
+```
+
+This is not the same as zero.
 
 ---
 
-# 7. Null-State Migration Rule
+## NOT-DETECTED
 
-When migrating old records:
+No signal/event was detected under the reported conditions.
 
-- `blank` ⇒ `NOT-MEASURED` unless historical context requires `NOT-AVAILABLE`;
-- `N/A` for a property that is irrelevant ⇒ `NOT-APPLICABLE`;
-- `N/A` for a property that may exist but is uncertain ⇒ `NOT-ESTABLISHED`;
-- missing value from a dataset or OCR extraction ⇒ `NOT-AVAILABLE`;
-- unspecified but likely relevant value ⇒ `UNKNOWN`.
+```text
+NOT-DETECTED
+```
 
----
-
-# 8. Half-Life and Stable/Infinite Cases
-
-For radioactive isotopes:
-
-- finite measured half-life should be stored numerically;
-- stable isotope should be marked as `STABLE` if appropriate;
-- effectively unobserved or theoretically indefinite behaviour must not be falsified into a numeric zero or a meaningless blank.
-
-This is not a null-value issue only; it is a semantics issue.
+Again, this does not prove absolute absence.
 
 ---
 
-# 9. Half-Life Semantics
+## ZERO
 
-Example:
+Use numerical `0` only when zero is an actual quantitative result.
+
+Never use zero as a substitute for missing information.
+
+---
+
+# 2. Examples
+
+Incorrect:
 
 ```yaml
-half_life: "STABLE"
-status: STABLE-ISOTOPE
+magnetic_moment: 0
+```
+
+when no value was found.
+
+Correct:
+
+```yaml
+magnetic_moment: UNKNOWN
+```
+
+---
+
+Incorrect:
+
+```yaml
+half_life:
+```
+
+for a stable isotope.
+
+Preferred:
+
+```yaml
+half_life: NOT-APPLICABLE
+stability: STABLE
+```
+
+---
+
+# 3. Stable Versus Infinite Half-Life
+
+Do not casually encode the half-life of a stable isotope as mathematical infinity.
+
+Use:
+
+```text
+STABLE
+```
+
+with:
+
+```text
+half_life: NOT-APPLICABLE
+```
+
+unless a scientific context explicitly requires a lower bound or lifetime constraint.
+
+---
+
+# 4. Estimated Values
+
+Estimated values are still values.
+
+Use:
+
+```yaml
+value:
+value_status: ESTIMATED
+```
+
+not `UNKNOWN`.
+
+---
+
+# 5. Predicted Values
+
+Likewise:
+
+```yaml
+value:
+evidence_type: COMPUTATIONAL
 ```
 
 or:
 
 ```yaml
-half_life: 1.5e20
-unit: y
-status: RADIOACTIVE
+value:
+evidence_type: THEORETICAL
 ```
-
-The difference between “stable”, “not measured”, and “not established” must remain explicit.
 
 ---
 
-# 10. Explicit State Logic
+# 6. Missing Source
 
-A MAT rule is:
+A value without a known source should be flagged:
 
 ```text
-missing value ≠ zero value
-missing value ≠ not applicable
-not applicable ≠ unknown
-unknown ≠ not measured
+SOURCE-UNKNOWN
 ```
 
-These definitions must be maintained in record validation.
+rather than silently accepted.
 
 ---
 
-# 11. Recommended Validation Pattern
+# 7. Legacy N/A
 
-Every field should pass one of these tests:
+Existing Genesis records may contain `N/A`.
+
+During migration:
 
 ```text
-value is defined and valid;
-OR value is explicit MAT null state;
-OR value is intentionally absent and justified as not applicable.
+N/A
 ```
+
+must be interpreted and replaced with the specific MAT state whenever possible.
+
+For example:
+
+```text
+NOT-APPLICABLE
+NOT-MEASURED
+UNKNOWN
+```
+
+are not interchangeable.

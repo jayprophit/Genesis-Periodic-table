@@ -2,82 +2,134 @@
 
 ## Purpose
 
-MAT requires a governance structure that supports scientific transparency, version control, and careful distinction between archival history and current evidence.
+MAT is a living scientific knowledge system.
+
+Governance exists to protect:
+
+- scientific integrity;
+- data provenance;
+- authorship;
+- identifier stability;
+- reproducibility;
+- project continuity.
 
 ---
 
-## 1. Governance Principles
+# 1. Core Governance Principles
 
-MAT governance rests on the following principles:
+MAT should be:
 
-- preserve historical material without misrepresenting it as current science;
-- separate formalized interpretations from original theory;
-- ensure evidence, provenance, and uncertainty are visible;
-- maintain record-level traceability and reviewability;
-- allow iterative revision without destroying lineage;
-- encourage reproducibility and explicit null states.
-
----
-
-## 2. Decision Making
-
-Major decisions in MAT should be based on:
-
-- scientific evidence;
-- consistency with the MAT schema;
-- impact on records or migration;
-- clarity of provenance and metadata;
-- compatibility with the project's governance rules.
-
-Changes that affect record semantics, schema, null states, or scientific classification should be explicit and reviewable.
+```text
+TRACEABLE
+VERSIONED
+EVIDENCE-AWARE
+CORRECTABLE
+NON-DESTRUCTIVE
+REPRODUCIBLE
+ATTRIBUTED
+```
 
 ---
 
-## 3. Review Structure
+# 2. Scientific Evidence Has Priority
 
-The project should support at least:
+Project ownership does not grant authority to alter scientific facts.
 
-- record review;
-- schema review;
-- migration review;
-- evidence-quality review;
-- governance review for sensitive or high-impact materials.
-
-A record is not assumed correct simply because it is present; it is reviewed and classified based on evidence and context.
+Where evidence contradicts a MAT hypothesis, the contradiction must remain visible.
 
 ---
 
-## 4. Contribution Rules
+# 3. Original Author Work
 
-Contributors should:
+Original theory and project architecture may be preserved as historical author work.
 
-- identify the source of the information;
-- record assumptions and uncertainty;
-- preserve lineage when revising or superseding work;
-- avoid silent overwriting of historical content;
-- distinguish measured, calculated, and theoretical statements.
+Later correction does not require deleting the original version.
 
 ---
 
-## 5. Change Control
+# 4. Permanent Identity
 
-MAT should treat changes as structured revisions rather than informal edits.
+Published MAT identifiers should remain stable.
 
-Each significant change should record:
+Do not recycle:
 
-- what changed;
-- why it changed;
-- which record or schema it affects;
-- whether it is a correction, migration, revision, or supersession;
-- which evidence or source supported the update.
+```text
+MAT IDs
+source IDs
+person IDs
+measurement IDs
+relationship IDs
+principle IDs
+```
 
 ---
 
-## 6. Scientific Integrity
+# 5. Correction Policy
 
-Governance protects the project from two common failure modes:
+Errors should be corrected through documented revisions.
 
-- mistaking historical speculation for established fact;
-- mistaking attractive models for validated knowledge.
+Preferred:
 
-MAT's governance framework is built to reduce both.
+```text
+OLD VERSION
+↓
+CHANGE RECORD
+↓
+NEW VERSION
+```
+
+not silent replacement.
+
+---
+
+# 6. Scientific Review
+
+A future record may have review states:
+
+```text
+UNREVIEWED
+INTERNAL-REVIEW
+DOMAIN-REVIEWED
+EXTERNALLY-REVIEWED
+```
+
+These should not be confused with peer-reviewed journal publication.
+
+---
+
+# 7. Automation
+
+Automated systems may assist with:
+
+- extraction;
+- consistency;
+- calculation;
+- validation;
+- visualization;
+- indexing.
+
+Automation should not erase source provenance.
+
+---
+
+# 8. AI Governance
+
+AI-generated or AI-assisted content must be classified.
+
+The AI itself is not treated as the scientific source when an underlying scientific source exists.
+
+---
+
+# 9. Security
+
+Repository permissions, releases and backups should protect against accidental loss or unauthorized destructive change.
+
+---
+
+# 10. Governance Evolution
+
+MAT governance may evolve.
+
+Governance revisions themselves must be versioned.
+
+---

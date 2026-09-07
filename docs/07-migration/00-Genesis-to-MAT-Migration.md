@@ -2,81 +2,229 @@
 
 ## Purpose
 
-This document records how legacy Genesis content is being migrated into the MAT architecture without destroying the historical source material.
+The Materials Atlas Table Codex developed from the earlier Genesis Periodic Table project.
+
+This document defines how legacy Genesis material is migrated without losing historical work.
 
 ---
 
-## 1. Migration Principle
+# 1. Migration Principle
 
-The migration strategy is explicit and conservative:
+Migration is:
 
-- retain original Genesis records as historical material;
-- preserve the original theory in archival form;
-- formalize and reinterpret as MAT science only in new files and documents;
-- map legacy concepts into new MAT identifiers, fields, and state systems;
-- avoid silently rewriting the historical record.
+```text
+PRESERVE
+↓
+EXTRACT
+↓
+CLASSIFY
+↓
+NORMALIZE
+↓
+RESTRUCTURE
+↓
+VALIDATE
+↓
+SUPERSEDE
+```
 
----
+not:
 
-## 2. Legacy Content Categories
-
-Legacy materials may be separated into:
-
-- primary historical records;
-- supporting notes or experiment logs;
-- interpreted summaries;
-- theoretical or speculative material;
-- generated or derived datasets;
-- inconsistent or ambiguous values.
-
-Each category should be treated differently in migration.
-
----
-
-## 3. Expected Mapping
-
-Legacy Genesis concepts should be mapped into MAT structures such as:
-
-- record identity → MAT identifier system;
-- material state → MAT state signature;
-- null values → MAT null-state vocabulary;
-- evidence codes → evidence and provenance standards;
-- process notes → process history and relationship graph;
-- historical theory → Causali E archive and formalization;
-- time and scale notes → MAT time/scale/environment fields.
+```text
+DELETE
+↓
+REWRITE FROM MEMORY
+```
 
 ---
 
-## 4. Preserved Material
+# 2. Legacy Archive
 
-The original Genesis material remains important because it preserves:
+Create:
 
-- authorial intent;
-- historical context;
-- earlier scientific reasoning;
-- legacy conditions and terminology;
-- the route by which the field evolved.
+```text
+archive/
+└── legacy-genesis/
+```
 
-Historical preservation is a feature, not a weakness.
+The archive should eventually contain preserved copies of legacy Genesis project files once the new MAT versions have been verified.
 
----
-
-## 5. Migration Steps
-
-A typical migration workflow is:
-
-1. identify the source record or dataset;
-2. classify it as historical, theoretical, measured, or derived;
-3. map it into a MAT record or child record structure;
-4. preserve the original raw material in archive form;
-5. convert values to MAT schema using explicit null states and provenance;
-6. connect evidence and sources;
-7. review whether the migrated result is partial, validated, or still provisional.
+Do not delete the active legacy records until migration is complete.
 
 ---
 
-## 6. Legacy Terminology Safeguards
+# 3. Legacy README
 
-Deprecated terms must be tracked separately. MAT should maintain a map between old terms and modern standards rather than silently replacing them.
+The original theory text from the legacy README should be preserved in:
 
-This preserves traceability and reduces the risk of semantic drift.
+```text
+docs/01-foundations/01-Causali-E/01-Causali-E-Original-Text.md
+```
+
+The wording of this historical copy should not be silently corrected.
+
+---
+
+# 4. Legacy G Prefix
+
+Legacy record examples:
+
+```text
+G0000
+G0001
+G0002
+```
+
+New primary record names become:
+
+```text
+0000-Origin-State.md
+0001-Hydrogen-H.md
+0002-Helium-He.md
+```
+
+The `G` prefix is deprecated.
+
+---
+
+# 5. Record Migration
+
+For each legacy record:
+
+```text
+LEGACY RECORD
+↓
+IDENTITY
+↓
+EXTRACT PROPERTY DATA
+↓
+EXTRACT SOURCES
+↓
+EXTRACT EQUATIONS
+↓
+EXTRACT THEORY
+↓
+EXTRACT RELATIONSHIPS
+↓
+EXTRACT VISUAL REQUIREMENTS
+↓
+MAP TO MAT SCHEMA
+↓
+VALIDATE
+↓
+CREATE NEW RECORD PACKAGE
+```
+
+---
+
+# 6. Do Not Blindly Copy
+
+Legacy values should be checked for:
+
+- units;
+- source;
+- scientific status;
+- precision;
+- conditions;
+- contradictory values.
+
+---
+
+# 7. Legacy N/A
+
+Legacy:
+
+```text
+N/A
+```
+
+must be mapped where possible to:
+
+```text
+NOT-APPLICABLE
+UNKNOWN
+NOT-MEASURED
+NOT-AVAILABLE
+```
+
+---
+
+# 8. Legacy Evidence
+
+Legacy E0–E6 evidence codes remain preserved for migration history but are mapped to descriptive MAT evidence fields.
+
+---
+
+# 9. Legacy 0000
+
+The old `G0000` contains both:
+
+- origin/reference concepts;
+- project architecture/schema.
+
+MAT separates these.
+
+Project architecture belongs in:
+
+```text
+docs/
+```
+
+Record-specific origin/reference material belongs in:
+
+```text
+records/0000-Origin-State/
+```
+
+---
+
+# 10. Scientific Separation
+
+During migration distinguish:
+
+```text
+ESTABLISHED SCIENCE
+```
+
+from:
+
+```text
+AUTHOR THEORY
+```
+
+and:
+
+```text
+SPECULATION
+```
+
+without deleting any historically relevant author material.
+
+---
+
+# 11. Migration Status
+
+Each old file may use:
+
+```text
+NOT-STARTED
+IN-PROGRESS
+MIGRATED
+VALIDATED
+ARCHIVED
+```
+
+---
+
+# 12. Migration Completion
+
+A legacy file is considered migrated only after:
+
+- data extracted;
+- sources retained;
+- relationships mapped;
+- theories classified;
+- new folder created;
+- new record validated.
+
+---

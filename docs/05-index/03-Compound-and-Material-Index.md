@@ -2,48 +2,95 @@
 
 ## Purpose
 
-This index groups compounds, materials, phases, and engineered structures by identity and relationship so that MAT records remain discoverable.
+This index links primary MAT records to compounds, allotropes and engineered materials.
 
 ---
 
-## 1. Material Families
+# Compound Registry
 
-Representative families include:
+Recommended entry:
 
-- elements;
-- isotopes;
-- ions;
-- molecules;
-- compounds;
-- alloys;
-- phases;
-- allotropes;
-- crystals;
-- nanostructures;
-- composites;
-- engineered materials.
-
----
-
-## 2. Relationship-Based Indexing
-
-Records should be grouped not only by name but also by:
-
-- parent material;
-- child state or phase;
-- process relationship;
-- application relationship;
-- source lineage.
-
----
-
-## 3. Practical Indexing Pattern
-
-```text
-MAT:0006 — Carbon
-  ├─ MAT:0006:ALLOTROPE:DIAMOND
-  ├─ MAT:0006:ALLOTROPE:GRAPHITE
-  └─ MAT:0006:STATE:GRAPHENE
+```yaml
+compound_id:
+name:
+formula:
+constituent_mat_ids:
+record_location:
+status:
 ```
 
-This makes it clear that the material family and its sub-states are distinct record classes.
+---
+
+# Material Registry
+
+Recommended entry:
+
+```yaml
+material_id:
+name:
+class:
+composition:
+constituent_ids:
+record_location:
+status:
+```
+
+---
+
+# Material Classes
+
+Possible classes include:
+
+```text
+ELEMENTAL
+ALLOY
+CERAMIC
+POLYMER
+COMPOSITE
+SEMICONDUCTOR
+SUPERCONDUCTOR
+GLASS
+MINERAL
+BIOMATERIAL
+NANOMATERIAL
+METAMATERIAL
+MOLECULAR-MATERIAL
+POROUS-MATERIAL
+MAGNETIC-MATERIAL
+ENERGY-MATERIAL
+```
+
+---
+
+# Allotropes
+
+Allotropes remain linked to the corresponding element.
+
+Example:
+
+```text
+MAT:0006
+├── diamond
+├── graphite
+├── graphene
+└── fullerene-family
+```
+
+Each may require distinct state/property records.
+
+---
+
+# Compound Relationships
+
+Recommended edges:
+
+```text
+COMPOSED-OF
+FORMS-COMPOUND
+CONSTITUENT-OF
+DECOMPOSES-TO
+REACTS-WITH
+TRANSFORMS-TO
+```
+
+---

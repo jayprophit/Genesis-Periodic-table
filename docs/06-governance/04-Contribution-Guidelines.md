@@ -2,61 +2,108 @@
 
 ## Purpose
 
-MAT is a living research and documentation project. Contributions should improve scientific traceability, not create confusion.
+Contributions should improve MAT without compromising scientific traceability.
 
 ---
 
-## 1. Contribution Standards
+# Contribution Types
 
-Contributors should:
+Contributions may include:
 
-- preserve historical material;
-- record provenance for all added claims;
-- distinguish measured, calculated, theoretical, and historical content;
-- use MAT null states for missing or ambiguous values;
-- respect the canonical schema and naming conventions;
-- document assumptions and limitations clearly.
-
----
-
-## 2. What to Add
-
-Good contributions include:
-
-- improved record metadata;
-- validated data values with source links;
-- new process or state connections;
-- stronger uncertainty or evidence classification;
-- clearer references and provenance;
-- migration notes for legacy material.
+```text
+DATA
+SOURCE
+CORRECTION
+CALCULATION
+CODE
+VISUAL
+DOCUMENTATION
+REVIEW
+THEORY
+HYPOTHESIS
+EXPERIMENT
+```
 
 ---
 
-## 3. What to Avoid
+# Data Contribution
 
-Contributors should avoid:
+Provide:
 
-- silently overwriting historical theory;
-- converting a hypothesis into a fact;
-- removing source provenance;
-- leaving blank values without MAT null-state labels;
-- changing a record's identity without a clear reason;
-- merging conflicting source values without preserving them.
+```yaml
+record_id:
+property:
+value:
+unit:
+conditions:
+source:
+evidence_type:
+```
 
----
-
-## 4. Review Expectations
-
-Before a contribution is considered final, it should be checked for:
-
-- schema compliance;
-- evidential traceability;
-- unit consistency;
-- scientific status labeling;
-- clarity of assumptions.
+where applicable.
 
 ---
 
-## 5. Documentation Discipline
+# Correction
 
-A contribution is not complete when the data is added alone; it must also be documented in a way that other researchers can understand and assess.
+A correction should identify:
+
+```text
+CURRENT VALUE
+PROPOSED VALUE
+REASON
+SOURCE
+```
+
+---
+
+# Theory Contribution
+
+New theoretical work must be clearly identified as:
+
+```text
+HYPOTHESIS
+MODEL
+SPECULATION
+```
+
+unless it is already part of established science.
+
+---
+
+# Code Contribution
+
+Code should identify:
+
+- purpose;
+- dependencies;
+- version;
+- input/output;
+- reproducibility.
+
+---
+
+# Visual Contribution
+
+Visuals should comply with the MAT Visual System.
+
+---
+
+# Source Contribution
+
+Prefer persistent scientific identifiers where available.
+
+---
+
+# Contributor Conduct
+
+Scientific disagreement should address:
+
+- data;
+- mathematics;
+- methodology;
+- evidence.
+
+Personal authority alone is not evidence.
+
+---

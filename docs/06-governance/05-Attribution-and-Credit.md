@@ -2,51 +2,94 @@
 
 ## Purpose
 
-MAT must preserve the intellectual lineage of science, records, methods, and data without confusing historical contribution with current acceptance.
+MAT should distinguish:
+
+- scientific discovery;
+- source authorship;
+- project authorship;
+- data contribution;
+- software contribution;
+- visual contribution;
+- review.
 
 ---
 
-## 1. Credit Types
+# Project Origin
 
-MAT distinguishes between:
-
-- authorship of a source document;
-- authorship of a record or derivation;
-- curation and editorial work;
-- review or validation work;
-- funding or institutional support;
-- intellectual lineage or conceptual inheritance.
+The creation and authorship of MAT as a project architecture should be credited separately from the scientific discoveries incorporated into it.
 
 ---
 
-## 2. Record-Level Attribution
+# Scientific Attribution
 
-A record may carry relevant attribution fields such as:
-
-- contributors;
-- reviewers;
-- curator;
-- source authors;
-- institutional link;
-- funding note;
-- version history.
+Established scientific work remains attributed to the relevant scientists, teams, institutions and sources.
 
 ---
 
-## 3. Scientific Lineage
+# MAT Contributions
 
-Where a concept, dataset, method, or material family has historical development, MAT should preserve lineage without implying that every historical idea remains scientifically accepted.
+Recommended contribution roles include:
+
+```text
+PROJECT-CREATOR
+ARCHITECTURE
+AUTHOR
+DATA-CURATION
+RESEARCH
+SOFTWARE
+VISUALIZATION
+CALCULATION
+SCIENTIFIC-REVIEW
+EDITORIAL
+SOURCE-VERIFICATION
+```
 
 ---
 
-## 4. Funding and Institutional Context
+# Multiple Contributors
 
-Funding and institutional support should be visible when relevant, but may remain separate from the scientific claim itself.
+A record may contain multiple roles:
 
-This preserves transparency without conflating provenance with validity.
+```yaml
+contributors:
+  - person_id:
+    role:
+```
 
 ---
 
-## 5. Good Practice
+# AI Contribution
 
-A record should credit not only the latest update but also the original source of the claim, the method used, and the review context that elevated or contextualised it.
+AI systems may be identified in process metadata for transparency.
+
+However:
+
+```text
+AI TOOL
+```
+
+should not replace the human/project authorship or scientific source attribution.
+
+---
+
+# Intellectual Lineage
+
+Citing a scientific theory means acknowledging the scientific lineage of the idea.
+
+It does not imply that the original scientist authored MAT.
+
+---
+
+# Causali E
+
+The original Causali E text should preserve its project authorship.
+
+Established scientific concepts used to formalize or test it retain their separate historical attribution.
+
+---
+
+# Credit Persistence
+
+Credits should not be removed solely because later contributors substantially revise a record.
+
+Historical contributions should remain traceable.

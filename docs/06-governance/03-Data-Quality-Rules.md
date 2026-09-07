@@ -1,71 +1,166 @@
 # MAT Data Quality Rules
 
-## Purpose
+## DQ-001 — Identity
 
-MAT quality rules ensure that records remain scientifically usable, consistent, and easy to audit.
-
----
-
-## 1. Minimum Acceptance Criteria
-
-A record should not be considered ready for inclusion in a primary MAT set until it has:
-
-- a clear identity and scope;
-- relevant conditions and context;
-- provenance for each scientific claim;
-- units and uncertainty where relevant;
-- explicit handling of null-state values;
-- a record status and completeness label;
-- links to source material or method description.
+Every data object must identify what it describes.
 
 ---
 
-## 2. Evidence Thresholds
+## DQ-002 — Units
 
-A value or claim is not automatically accepted because it appears in a trusted source.
-
-Evidence quality should be assessed according to:
-
-- directness;
-- replication;
-- method transparency;
-- uncertainty reporting;
-- source quality;
-- independence of measurement or observation.
+Numerical physical values require units where dimensions apply.
 
 ---
 
-## 3. Data Quality Checks
+## DQ-003 — Conditions
 
-MAT should apply checks for:
-
-- unit consistency;
-- null-state compliance;
-- condition completeness;
-- record duplication;
-- missing source metadata;
-- conflicting values not labelled as such;
-- erroneous or unsupported conversions.
+Condition-dependent data must retain scientifically relevant conditions.
 
 ---
 
-## 4. Record Status Logic
+## DQ-004 — Sources
 
-Records may be labelled as:
-
-- skeleton;
-- partial;
-- researched;
-- validated;
-- reviewed;
-- superseded.
-
-These labels should reflect status, not certainty.
+Scientific claims should have traceable sources wherever possible.
 
 ---
 
-## 5. Quality Bounded by Context
+## DQ-005 — Evidence
 
-A material record may be excellent within one context and incomplete within another.
+Measured, calculated, predicted and hypothetical information must remain distinguishable.
 
-Therefore MAT records must retain state-specific metadata rather than treating one value as universal without conditions.
+---
+
+## DQ-006 — Uncertainty
+
+Retain source uncertainty where available.
+
+---
+
+## DQ-007 — No False Precision
+
+Do not manufacture precision through conversion or calculation.
+
+---
+
+## DQ-008 — No Silent Averaging
+
+Conflicting measurements should remain accessible.
+
+---
+
+## DQ-009 — Null Semantics
+
+Do not use blank, zero, `N/A` and unknown interchangeably.
+
+---
+
+## DQ-010 — No Universal Frequency
+
+Frequency data must identify the physical mechanism.
+
+---
+
+## DQ-011 — Magnetic State Separation
+
+Do not mix:
+
+```text
+INTRINSIC MAGNETISM
+```
+
+with:
+
+```text
+ENGINEERED MAGNETIZATION
+```
+
+---
+
+## DQ-012 — Atomic Versus Nuclear
+
+Chemical transformation and nuclear transformation must remain distinct.
+
+---
+
+## DQ-013 — Scale
+
+Do not assume bulk properties apply unchanged at nanoscale or atomic scale.
+
+---
+
+## DQ-014 — History
+
+Store process history where final state depends on it.
+
+---
+
+## DQ-015 — Visual Integrity
+
+Conceptual graphics must not be represented as direct measurement.
+
+---
+
+## DQ-016 — AI Verification
+
+AI-assisted extraction must retain its underlying scientific source.
+
+---
+
+## DQ-017 — Replication
+
+Multiple websites quoting one original study do not constitute independent replication.
+
+---
+
+## DQ-018 — Patent Claims
+
+Patent claims do not automatically equal experimentally replicated results.
+
+---
+
+## DQ-019 — Stable Isotopes
+
+Do not automatically encode stable isotopes as having measured infinite half-life.
+
+---
+
+## DQ-020 — Contradictions
+
+Do not delete contradictory evidence merely because it conflicts with a preferred model.
+
+---
+
+## DQ-021 — Equations
+
+Every quantitative equation must identify:
+
+- variables;
+- units;
+- assumptions;
+- domain.
+
+---
+
+## DQ-022 — Calculations
+
+Derived quantities must retain input and equation provenance.
+
+---
+
+## DQ-023 — State Identity
+
+Same composition does not automatically mean same material state.
+
+---
+
+## DQ-024 — Sources Versus Claims
+
+A bibliography alone is insufficient when it is unclear which source supports which claim.
+
+---
+
+## DQ-025 — Safety
+
+Unknown safety does not mean safe.
+
+---

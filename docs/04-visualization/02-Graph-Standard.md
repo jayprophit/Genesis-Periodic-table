@@ -1,73 +1,188 @@
 # MAT Graph Standard
 
-## Purpose
+## 1. Purpose
 
-Graphs in MAT are used to communicate relationships, trends, spectra, process behaviour, and comparative properties.
-
-They must remain scientifically readable and not present a summary as if it were a direct measurement.
+Graphs must expose scientific information rather than merely make records visually attractive.
 
 ---
 
-## 1. Graph Types
+# 2. Required Graph Components
 
-Common MAT graph types include:
+Every graph should normally contain:
 
-- property vs temperature;
-- phase diagrams;
-- spectra and intensity curves;
-- process response curves;
-- uncertainty plots;
-- comparison graphs across materials;
-- time series and dynamic response curves;
-- relationship graphs and network diagrams.
+- graph ID;
+- title;
+- x-axis name;
+- x-axis unit;
+- y-axis name;
+- y-axis unit;
+- legend where required;
+- conditions;
+- source;
+- evidence status.
 
 ---
 
-## 2. Required Elements
+# 3. Raw Data Separation
 
-Every graph should include:
+Graph source data should be stored separately.
 
-- clearly labeled axes;
+Example:
+
+```text
+graphs/
+├── 0001-Hydrogen-H-GRAPH-001.svg
+└── data/
+    └── 0001-Hydrogen-H-GRAPH-001.csv
+```
+
+The rendered plot should be reproducible from its data.
+
+---
+
+# 4. Measured Versus Fitted
+
+Measured data points and fitted/model curves must be distinguishable.
+
+Metadata:
+
+```yaml
+measured_data:
+fit:
+fit_equation:
+fit_parameters:
+fit_uncertainty:
+```
+
+---
+
+# 5. Interpolation
+
+Interpolation must not be confused with measurement.
+
+---
+
+# 6. Extrapolation
+
+Extrapolated regions should be explicitly identified.
+
+---
+
+# 7. Error Bars
+
+Where source uncertainty exists, include it when scientifically useful.
+
+Error bars must state what they represent:
+
+```text
+STANDARD-DEVIATION
+STANDARD-ERROR
+CONFIDENCE-INTERVAL
+MEASUREMENT-UNCERTAINTY
+RANGE
+```
+
+---
+
+# 8. Logarithmic Axes
+
+Log scales must be visibly labelled.
+
+Do not use a logarithmic scale merely to dramatize differences.
+
+---
+
+# 9. Frequency Graphs
+
+Spectral plots must identify the independent axis correctly.
+
+Possible axes:
+
+```text
+Hz
+THz
+cm^-1
+eV
+nm
+um
+```
+
+Conversions may be provided but the original measurement convention should remain available.
+
+---
+
+# 10. Temperature Graphs
+
+State temperature scale:
+
+```text
+K
+°C
+```
+
+MAT canonical comparison uses K where appropriate.
+
+---
+
+# 11. Phase Diagrams
+
+Phase diagrams must identify:
+
+- variables;
+- phase labels;
+- pressure/composition axes;
+- data/model status;
+- metastable states where known.
+
+---
+
+# 12. Property Comparison Charts
+
+When comparing materials, ensure values refer to compatible:
+
+- conditions;
 - units;
-- legend where needed;
-- source or provenance;
-- condition labels;
-- uncertainty band or error bars when relevant;
-- data type label such as measured, derived, or simulated.
+- phases;
+- orientations;
+- purity.
+
+Otherwise the comparison must state the differences.
 
 ---
 
-## 3. Conditions and Context
+# 13. No Invented Continuity
 
-A graph is often meaningless unless it states which conditions apply.
-
-Examples include:
-
-- temperature;
-- pressure;
-- atmosphere;
-- field strength;
-- time;
-- scale;
-- preparation history.
+Do not draw a smooth continuous curve through sparse measurements unless the interpolation/model is explicitly identified.
 
 ---
 
-## 4. Interpretation Standard
+# 14. Graph IDs
 
-Graphs should avoid implying a universal law from a narrow context.
+Format:
 
-If a graph summarizes a subset of conditions, the domain of validity must be stated.
+```text
+MAT:0001:GRAPH:001
+```
+
+Filename:
+
+```text
+0001-Hydrogen-H-GRAPH-001.svg
+```
 
 ---
 
-## 5. Data Integrity
+# 15. Calculation Link
 
-MAT graphs should preserve raw data or source traceability whenever practical.
+If a graph is computed:
 
-A graph should not hide the distinction between:
+```yaml
+calculation_id:
+script:
+software:
+version:
+```
 
-- raw data;
-- processed data;
-- fitted model;
-- extrapolated estimate.
+should be retained.
+
+---

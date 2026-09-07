@@ -1,72 +1,126 @@
 # MAT Table Standard
 
-## Purpose
+## 1. Purpose
 
-MAT tables are the primary machine-readable scientific communication format for values, conditions, and metadata.
+Tables are primary scientific data containers.
 
----
-
-## 1. Required Structure
-
-Each table should define:
-
-- property or quantity;
-- value;
-- unit;
-- uncertainty where relevant;
-- conditions;
-- source or provenance;
-- evidence type;
-- date or version;
-- notes or qualifiers.
+They should remain usable by both humans and software.
 
 ---
 
-## 2. Unit Rules
+# 2. Markdown Versus Structured Data
 
-Units must be stored explicitly and consistently.
+Human-readable table:
 
-A numeric value in a table should not be read as self-contained unless the units are visible and traceable.
+```text
+.md
+```
 
----
+Machine-readable equivalent:
 
-## 3. Null and Missing Values
+```text
+.csv
+.json
+.yaml
+```
 
-Blank cells are not permitted for scientific entries unless the cell is explicitly marked by a MAT null-state value such as:
-
-- UNKNOWN;
-- NOT-MEASURED;
-- NOT-AVAILABLE;
-- NOT-APPLICABLE;
-- NOT-ESTABLISHED.
-
----
-
-## 4. Evidence Column
-
-Every table carrying scientific meaning should include an evidence or status column so that the table reflects whether a value is:
-
-- measured;
-- derived;
-- calculated;
-- theoretical;
-- historical;
-- hypothetical.
+should be maintained where the table contains substantial structured data.
 
 ---
 
-## 5. Formatting
+# 3. Required Table Metadata
 
-MAT tables should be:
-
-- readable in plain text and markdown;
-- stable in ordering;
-- consistent in naming convention;
-- careful with precision and rounding;
-- annotated when values are processed or normalised.
+```yaml
+table_id:
+title:
+record_id:
+data_type:
+units:
+conditions:
+source_ids:
+evidence:
+version:
+```
 
 ---
 
-## 6. Legacy Data Tables
+# 4. Unit Columns
 
-Legacy tables may be preserved as historical data, but should not be treated as validated contemporary values without explicit migration status.
+Preferred:
+
+| Property | Value | Unit |
+|---|---:|---|
+
+rather than embedding units inside every number.
+
+---
+
+# 5. Conditions
+
+If each row has different conditions, store explicit columns.
+
+Example:
+
+| Temperature | Pressure | Conductivity | Unit |
+|---:|---:|---:|---|
+
+---
+
+# 6. Null States
+
+Use MAT null values:
+
+```text
+UNKNOWN
+NOT-MEASURED
+NOT-AVAILABLE
+NOT-APPLICABLE
+BELOW-DETECTION-LIMIT
+```
+
+Do not leave ambiguous blank cells.
+
+---
+
+# 7. Sorting
+
+Canonical data should use a predictable sort.
+
+Examples:
+
+- isotopes by mass number;
+- spectra by frequency/energy;
+- processes by process ID;
+- citations by source ID.
+
+---
+
+# 8. Table IDs
+
+```text
+MAT:0001:TABLE:001
+```
+
+Filename:
+
+```text
+0001-Hydrogen-H-TABLE-001.csv
+```
+
+---
+
+# 9. Precision
+
+Do not standardize all values to the same number of decimal places if source precision differs.
+
+---
+
+# 10. Source-Level Data
+
+When several sources report different values, preserve them as separate rows.
+
+Do not overwrite them with one chosen figure.
+
+An evaluated value can be added separately.
+
+---

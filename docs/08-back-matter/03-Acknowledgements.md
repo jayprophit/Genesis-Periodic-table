@@ -1,40 +1,41 @@
 # MAT Acknowledgements
 
-## Purpose
+The Materials Atlas Table Codex is built upon centuries of scientific, mathematical, engineering and experimental work.
 
-This page records the people, institutions, datasets, and communities that support the ongoing development of MAT.
+MAT therefore acknowledges the scientists, mathematicians, engineers, inventors, technicians, institutions, laboratories, standards bodies and data curators whose work forms the scientific foundation of the project.
 
----
+Scientific knowledge represented in MAT remains attributable to its original researchers and sources.
 
-## 1. Scientific and Technical Foundations
+MAT also acknowledges future contributors who may improve:
 
-MAT draws on established scientific fields including:
+- data quality;
+- software;
+- documentation;
+- visualisation;
+- calculations;
+- experimental verification;
+- scientific review.
 
-- materials science;
-- chemistry;
-- condensed matter physics;
-- quantum and nuclear science;
-- systems science;
-- statistical inference;
-- information science;
-- evidence-based research methodology.
-
----
-
-## 2. Legacy and Historical Contributions
-
-The project also preserves and respects the historical work from which it developed, including earlier Genesis-era records and the conceptual framework that shaped the current scientific reformulation.
+Individual contributions should be recorded in the People, Contributors and Intellectual Lineage directory.
 
 ---
 
-## 3. Data Sources and Standards
+# Project Authorship
 
-MAT relies on and cites scientific databases, technical standards, review articles, and institutional reference material when such sources are used for formal records.
+The MAT architecture, documentation structure, record system and original Causali E material should retain their corresponding project authorship and revision history.
 
 ---
 
-## 4. Contribution Note
+# Scientific Principle
 
-This document is intentionally open-ended because the project is intended to remain evolving and community-supported.
+MAT recognizes that progress comes not only from confirming ideas but also from:
 
-Attribution is maintained at both the record level and the broader project level so that scientific lineage remains visible.
+- correction;
+- disagreement;
+- failed experiments;
+- refinement;
+- replication.
+
+Contributions that demonstrate that a MAT assumption is incorrect are therefore scientifically valuable.
+
+---

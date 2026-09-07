@@ -64,6 +64,7 @@
 ---
 
 ## MAT Records
+
 Record sequence begins:
 
 `0000`
@@ -75,6 +76,7 @@ The detailed record index is maintained separately in:
 ---
 
 ## People and Intellectual Lineage
+
 Scientists, engineers, mathematicians, inventors, authors, datasets and MAT contributors are indexed separately so that contributions can be traced to the relevant discoveries, equations, measurements and MAT records.
 
 See:
@@ -84,8 +86,11 @@ See:
 ---
 
 ## References
+
 Global references:
 
 `../08-back-matter/02-References.md`
 
 Record-specific references remain attached to their corresponding records.
+
+---

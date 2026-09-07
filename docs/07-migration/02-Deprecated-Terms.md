@@ -1,45 +1,136 @@
-# Deprecated Terms
+# MAT Deprecated Terms
 
 ## Purpose
 
-This appendix lists legacy terms or naming conventions retained for historical traceability but not considered standard MAT vocabulary.
+This file prevents old terminology from becoming mixed with the new architecture.
 
 ---
 
-## 1. Legacy Terms to Track
+# Genesis Periodic Table
 
-Examples may include:
+Deprecated project name.
 
-- Genesis-style labels;
-- historical shorthand;
-- nonstandard source codes;
-- ambiguous property names;
-- superseded process names;
-- experimental labels that lack MAT null-state precision.
-
----
-
-## 2. Migration Principle
-
-Deprecated terms should remain visible as historical terms, but every modern MAT record should prefer the canonical MAT vocabulary.
-
----
-
-## 3. Example Mapping
+Replacement:
 
 ```text
-old term: G0000 reference mode
-modern MAT term: reference-state or state-context
+Materials Atlas Table Codex
+```
 
-old term: naive zero
-modern MAT term: explicit zero, or explicit null state where appropriate
+Abbreviation:
 
-old term: legacy evidence code E0-E6
-modern MAT term: descriptive evidence type with independent confidence and replication metadata
+```text
+MAT
+```
+
+Historical references may still use the old name when describing project origin.
+
+---
+
+# G0000 / G0001 / etc.
+
+Deprecated filename prefix.
+
+Replacement:
+
+```text
+0000
+0001
+0002
 ```
 
 ---
 
-## 4. Historical Preservation
+# N/A
 
-The purpose is not to erase history, but to avoid confusing historical language with current scientific standards.
+Deprecated as a universal missing-data state.
+
+Replace with:
+
+```text
+NOT-APPLICABLE
+UNKNOWN
+NOT-MEASURED
+NOT-AVAILABLE
+NOT-ESTABLISHED
+```
+
+---
+
+# Element Frequency
+
+Deprecated when used as though every element has one universal scalar frequency.
+
+Replace with mechanism-specific terms such as:
+
+```text
+electronic-transition-frequency
+vibrational-frequency
+rotational-frequency
+hyperfine-frequency
+nuclear-transition-frequency
+phonon-frequency
+plasma-frequency
+acoustic-resonance
+```
+
+---
+
+# Atomic Orbit
+
+Avoid as a literal description of modern quantum electron motion.
+
+Use:
+
+```text
+orbital
+electron-probability-density
+quantum-state
+```
+
+where scientifically appropriate.
+
+---
+
+# Infinite Half-Life
+
+Avoid for stable isotopes unless explicitly used as a mathematical idealization.
+
+Preferred:
+
+```text
+STABLE
+half_life: NOT-APPLICABLE
+```
+
+or an experimentally justified lower limit.
+
+---
+
+# Magnetic Property
+
+Too broad when engineered magnetization is involved.
+
+Distinguish:
+
+```text
+intrinsic magnetic property
+engineered magnetization state
+applied magnetic field
+resulting field topology
+```
+
+---
+
+# Zero Field
+
+Avoid interpreting laboratory `0 T` as absolute universal absence of all electromagnetic fields.
+
+Use:
+
+```text
+zero specified externally applied field
+```
+
+within the stated reference condition.
+
+---
