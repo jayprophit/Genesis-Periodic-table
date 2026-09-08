@@ -1,0 +1,34 @@
+/* MAT Styles: Reader Settings & Sidebar Footer */
+.reader-settings { border-top: 1px solid var(--line); padding: 14px 0; font-size: 12px }
+.reader-settings summary { font-weight: 600 }
+.reader-settings label { margin: 12px 0 }
+.reader-settings select { width: 100%; font-size: 12px }
+#studio-chapter { color: var(--muted) }
+.button-row { display: flex; gap: 6px; flex-wrap: wrap }
+.button-row button { font-size: 12px }
+.tool-note { font-size: 12px; color: var(--muted); line-height: 1.6 }
+.side-foot { border-top: 1px solid var(--line); padding-top: 18px }
+.side-foot small, .side-foot p { font-size: 10px; color: var(--muted) }
+.foot-links { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; margin: 14px 0 }
+#offline-btn { font-size: 11px; width: 100% }
+#my-reading h4 { font: 600 12px var(--serif); margin: 12px 0 6px; color: var(--muted) }
+#my-reading .empty-note { font-size: 11px; color: var(--muted); font-style: italic }
+.bookmark-entry, .note-entry, .favorite-entry, .search-hist-entry {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 6px 8px; border-bottom: 1px solid var(--line); font-size: 11px;
+}
+.bookmark-entry a, .note-entry a, .favorite-entry a, .search-hist-entry a {
+  flex: 1; text-decoration: none; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.bookmark-entry button, .note-entry button, .favorite-entry button {
+  flex-shrink: 0; margin-left: 6px; font-size: 10px; padding: 2px 6px;
+}
+.note-entry .note-text { font-size: 10px; color: var(--muted); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 200px; }
+.highlight-marker { background: #f0d887; padding: 1px 2px; border-radius: 2px; cursor: pointer; }
+#bookmark-btn.bookmarked { color: var(--gold); font-weight: 600 }
+.chapter-tools button.active { background: var(--accent); color: var(--bg); border-color: var(--accent) }
+.reader-data-controls { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px }
+.reader-data-controls h4 { font: 600 12px var(--serif); margin: 0 0 8px; color: var(--muted) }
+.warn-btn { background: var(--code) !important; border-color: var(--line) !important; color: var(--muted) !important }
+.danger-btn { background: #5c2020 !important; border-color: #a33 !important; color: #fcc !important }
+.danger-btn:hover { background: #733 !important }

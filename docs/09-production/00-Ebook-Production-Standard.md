@@ -1,0 +1,163 @@
+# Materials Atlas Table Codex (MAT) — Ebook & Digital Book Production Standard
+### A senior-level design, editorial, and technical production review
+
+*Prepared from a direct review of the live repository `jayprophit/Materials-Atlas-Table-Codex---MAT`: the reader application (`book/`), the compiled edition (`dist/MAT-ebook.html`), the documentation set (`docs/00-front-matter` through `docs/08-back-matter`), the record architecture (`records/`), the templates (`templates/`), the schemas (`data/schema/`), and the build/validation scripts (`scripts/`, `book/build/`). Recommendations are anchored to your actual files, not generic ebook advice.*
+
+---
+
+## Contents
+
+1. [Executive Summary](#1-executive-summary)
+2. [What's Already at a Professional Standard](#2-whats-already-at-a-professional-standard)
+3. [The Core Decision: Four Coordinated Editions, Not One File](#3-the-core-decision-four-coordinated-editions-not-one-file)
+4. [Editorial & Content Architecture](#4-editorial--content-architecture)
+5. [Visual & Typographic Design System](#5-visual--typographic-design-system)
+6. [Accessibility & Inclusive Design](#6-accessibility--inclusive-design)
+7. [Metadata, Discoverability & Citation Infrastructure](#7-metadata-discoverability--citation-infrastructure)
+8. [Technical Production Pipeline](#8-technical-production-pipeline)
+9. [Legal, Licensing & Rights](#9-legal-licensing--rights)
+10. [Editorial QA & Review Workflow](#10-editorial-qa--review-workflow)
+11. [Prioritized Checklist — Now / Next / Later](#11-prioritized-checklist--now--next--later)
+
+---
+
+## 1. Executive Summary
+
+- MAT is not a manuscript that needs "turning into an ebook" — it is a structured scientific data system that already outputs one edition (an interactive web reader) well. The job ahead is **packaging the same source of truth into three more coordinated editions** (retail EPUB, print-ready PDF, and a citable dataset release), not starting design from scratch.
+- The single biggest structural gap is that **no true e-reader format (EPUB) exists yet**. What you have is a web app plus a single-file HTML "print" build. Neither one opens on a Kindle, in Apple Books, or in most library systems. As of March 2025 Amazon no longer even accepts `.mobi` — **EPUB 3.3 is now the universal target format** across Kindle, Apple Books, Kobo, and Google Play.
+- Your accessibility foundation (skip links, ARIA landmarks, focus states, dark/light themes, semantic HTML) is genuinely strong — better than most published ebooks. The one concrete, verified hole is that **your visuals have no alt-text/description field anywhere in the pipeline** (`book/visuals-index.json`, the Visual-Specification template). That's a fast, mechanical fix given the engineering discipline you already have.
+- **Licensing is the gating decision**, and you've already flagged it yourself in the README ("An AI must not invent this choice"). Correct — but it now blocks everything downstream: you cannot legally publish a retail edition, decide pricing, or register an ISBN until the content license and code license are chosen.
+- There is no persistent citation mechanism (no ISBN, no DOI, no versioned snapshot policy) for a project that explicitly describes itself as permanently unfinished ("No MAT record should be regarded as permanently complete"). For a scientific reference, **citability is a core feature, not an afterthought**.
+- Metadata is currently invisible to the outside world: no Open Graph tags, no schema.org structured data, no canonical URLs. This doesn't affect the reading experience, but it determines whether the work is discoverable, shareable, and indexable by Google Scholar and similar tools.
+- Nothing below asks you to rebuild what you have. It asks you to **add a fourth output tier on top of your existing three-layer model** (prose → canonical data → generated indexes), consistent with your own stated philosophy that derived artifacts are rebuilt, never hand-edited.
+
+---
+
+## 2. What's Already at a Professional Standard
+
+Worth saying plainly, because a lot of ebook advice assumes you're starting from a blank manuscript. You aren't. Keep and build on:
+
+- **A genuine three-layer single-source-of-truth architecture** — authoritative Markdown prose, canonical YAML/JSON data, and generated reader/search assets that are explicitly rebuilt rather than hand-edited (`book/build/*.mjs`). This is the correct way to run a project this size, and most publishing operations never achieve it.
+- **A distinctive, deliberate visual identity** — the teal/gold/serif-and-system-sans palette in `book/styles.css` (`--accent`, `--gold`, `--research`, `--claims` tokens, light and dark themes) reads as an editorial product, not a template. The evidence-tier color coding (Core / Research–Emerging / Historical–Claims) applied consistently across the UI is exactly the right instinct for a work that mixes established science with original hypothesis.
+- **A real print stylesheet**, not an afterthought — `@page` rules, A4 sizing, print color overrides, `break-before`/`break-after`/`break-inside` control, orphan/widow control, and a proper half-title-style `print-title` treatment. Most self-published technical books get none of this right.
+- **A working accessibility baseline** — skip-to-content link, ARIA landmarks and live regions in the markup, visible focus states with a dedicated focus color, semantic `<nav>`/`<aside>`/`<article>`, and a `noscript` fallback message.
+- **A already-unusual feature set for a reference work**: full-text search with filters, adjustable font size, dark/light mode, text-to-speech, on-the-fly translation (transparently labeled as machine translation, which is the right call), offline/PWA support via a service worker, and a periodic-table quick-navigation dialog with visibly muted "not yet published" cells.
+- **A documented internal style guide already** — `docs/04-visualization/00-Visual-System.md` through `06-Asset-Generation-Pipeline.md` covers image, graph, table, 3D-model, and naming standards. Most of what a design system needs already exists; it mainly needs to be treated as canonical and cross-checked against the CSS.
+- **Machine-enforced data integrity** — versioned JSON Schemas, and a real validation suite (`npm run validate` covering records, sources, relationships, assets, links, identifiers, and book-sync). This habit is exactly what will make the recommendations below cheap to implement, because you already have the automation culture to bolt them onto.
+- **A per-source `license:` field already in `templates/Source-Template.md`.** You are already tracking provenance and rights at the citation level — the gap is a project-level license, covered in [Section 9](#9-legal-licensing--rights), not the per-source tracking itself.
+
+---
+
+## 3. The Core Decision: Four Coordinated Editions, Not One File
+
+This is the highest-leverage decision in the whole project, because everything else (typography, file size budgets, accessibility targets, what "the cover" even means) depends on it.
+
+An interactive, searchable, text-to-speech-enabled, 3D-model-linked web application **cannot** be losslessly converted into a single file that also works on a Kindle and also prints cleanly at a commercial press. No published technical reference does this with one file — they maintain parallel, coordinated outputs from one source. You're already halfway there (two of the four exist). Formalize the other two.
+
+| Edition | Purpose | Status | Built from |
+|---|---|---|---|
+| **1. Living Reference (Web/PWA)** | The primary, always-current, fully interactive experience — search, 3D models, TTS, translation | **Exists** — `book/index.html` + `book.js` | Canonical YAML/Markdown, rebuilt on every change |
+| **2. Print-Ready Edition (PDF)** | A stable, paginated, citable snapshot for printing, deposit, or offline reading as a document | **Exists in prototype form** — `dist/MAT-ebook.html` + print CSS, exported via the browser's print dialog | Same source, compiled by `export-single.mjs` |
+| **3. Retail/Reflowable Edition (EPUB 3.3)** | Distribution through Kindle, Apple Books, Kobo, Google Play, and library systems (OverDrive/Libby, etc.) | **Missing** — no `.epub` packaging exists anywhere in the build pipeline | Should be generated from the same Markdown/YAML, not hand-authored |
+| **4. Dataset/Citation Edition** | A versioned, DOI-stamped snapshot that scientists and other authors can formally cite | **Structurally present, not formalized** — the YAML/JSON already is the dataset | Same source, archived as a release (see [Section 7](#7-metadata-discoverability--citation-infrastructure)) |
+
+Practical consequences of treating these as genuinely different outputs rather than one file wearing different hats:
+
+- **3D models, live search, and speech synthesis are web-only.** EPUB 3 technically permits some scripting, but Kindle and most reading systems don't reliably execute it — design for EPUB as a **static, reflowable, cross-referenced document**, and use a consistent in-book convention (a short link and/or QR code per record: "View the interactive 3D model and live data at mat-codex.example/0001") to send EPUB and print readers back to the living edition for anything genuinely interactive. Don't try to shrink the web app into EPUB; give EPUB readers a clear bridge instead.
+- **Browser "print to PDF" is a good prototype, not a production print file.** Chrome/Firefox print rendering is inconsistent for CSS Paged Media edge cases (running headers, footnotes, complex table breaks across pages) compared to a dedicated paginated-layout engine. For anything beyond a personal/casual PDF, route the same HTML+CSS through a proper CSS Paged Media processor (**Vivliostyle**, **Paged.js**, or **Prince**) or, if you want a fully separate professional interior, a layout tool built for it (Adobe InDesign). This matters specifically once you target **print-on-demand distribution** (KDP Print, IngramSpark), which enforces its own trim-size, bleed, and margin rules independent of anything a browser produces.
+- **The retail EPUB should be generated, not written by hand**, exactly like your search index and manifest are. Given your source is already clean Markdown + YAML, **Pandoc** is the natural toolchain choice — it converts Markdown directly to valid EPUB 3, and you keep the same "generated, never hand-edited" discipline that governs the rest of `book/build/`.
+- **Positioning changes by edition.** The Living Reference can afford to say "no record is ever permanently complete." A retail EPUB sold or distributed under a specific version number needs a **fixed, dated statement of what that edition contains** — readers of a purchased book reasonably expect it to stop changing underneath them. This is the versioning problem addressed in [Section 7](#7-metadata-discoverability--citation-infrastructure).
+
+---
+
+## 4. Editorial & Content Architecture
+
+- **Formalize a "chapter contract" for the retail/print editions, separate from the data schema.** Your `data/schema/1.0.0/` governs structural correctness of the data; it doesn't govern reading order or narrative pacing for a linear reader. Define, once, the fixed sequence every published element/record follows in EPUB and print (e.g., Identity → At-a-Glance → Properties → Isotopes/States → Applications → Evidence & Sources → Related Records), and apply it uniformly. Readers of a 118-element atlas will build a mental model fast; any inconsistency in structure between Hydrogen's chapter and Carbon's chapter will read as an error, not a stylistic choice.
+- **Carry the evidence-tier system into static editions deliberately.** In the web app, "Core / Research–Emerging / Historical–Claims" is communicated with live color and a legend. In EPUB and print, color may not render identically on every device (e-ink Kindles are grayscale). Add a **redundant, non-color signal** — a small bracketed label or icon glyph before affected passages (`[RESEARCH]`, `[CLAIM]`) — so the classification survives on any device. This is especially important for **Causali E**: because it's explicitly an original author framework rather than established physics, every appearance of it in every edition needs the same unmistakable, redundant (not color-only) treatment, plus a standing disclaimer in the front matter of each edition, not only in `docs/01-foundations/01-Causali-E/`.
+- **Add the front-matter pages a bound or purchased book is expected to have, to every compiled edition, not just to the docs folder.** You have excellent source docs (`00-Front-Page`, `01-Project-Context`, `02-Purpose-and-Scope`, `03-How-to-Use-MAT-Codex`, `04-Reading-Guide`). Confirm each compiled edition actually opens with: half-title → full title page → copyright/colophon page (rights holder, edition/version number, print date, ISBN/DOI once assigned) → this front matter → table of contents. A reference work without a visible edition statement can't be cited reliably (again, ties to [Section 7](#7-metadata-discoverability--citation-infrastructure)).
+- **Write one explicit "How this atlas will grow" page** aimed at a first-time reader (distinct from the contributor-facing governance docs), since the periodic table dialog currently shows visibly empty/muted cells for unpublished elements. A general reader encountering nine populated cells out of 118 needs one sentence of framing before that reads as "incomplete" rather than "in progress by design."
+- **Keep the per-record depth, but add a second, shorter "entry-level" pass per element for non-specialist editions.** The Hydrogen record alone runs to calculations, spectroscopic tables, and intellectual-lineage files — extraordinary for a specialist, potentially overwhelming as someone's first page in a purchased ebook. Consider a "Reader's summary" block at the top of each chapter (a few sentences plus the at-a-glance figures you already generate) with the full technical depth following after, so both audiences are served by the same chapter without one being underserved.
+
+---
+
+## 5. Visual & Typographic Design System
+
+- **Promote `docs/04-visualization/00-Visual-System.md` to the single canonical source, and reference the actual CSS tokens inside it.** Right now the design intent lives in the doc, and the implementation lives in `:root` custom properties in `styles.css`. Nothing currently forces these to stay in sync as either evolves. Paste the literal token values (`--accent: #8dd4c6`, etc.) into the visual-system doc, or better, generate the doc's palette table from the CSS at build time the same way you generate the search index — one more artifact your existing pipeline can own.
+- **Run a formal contrast audit before locking the palette for print/EPUB.** The dark theme's `--muted` gray-green (`#acbbb9`) on `--paper` (`#1b2d33`) and the light theme's equivalents are close to typical body-text sizes where WCAG 2.2 AA's 4.5:1 minimum gets tight. This is a five-minute automated check (axe, Lighthouse, or a contrast-checker CLI against your token list) worth running now, before the palette is baked into a print run.
+- **Design a dedicated retail cover, separate from the in-app hero screen.** The animated "orbit" cover in `book/index.html` is a strong piece of interaction design for the web app landing page — but it's DOM/CSS, not an image file, and retail platforms need one static portrait image (commonly landing around 1,600×2,560 px, roughly a 1:1.6 ratio, RGB, JPEG or PNG — confirm exact current minimums with KDP/Apple Books at export time, as retailers do adjust these). Treat the cover as its own design deliverable, not an export of the web hero.
+- **Stress-test the layout at accessibility zoom levels, not just responsive breakpoints.** The five-column element-card grid and three-column "at a glance" grid are handsome at default size; check them specifically at 200% browser zoom / large font-size settings (WCAG 1.4.4 territory), since that's a different failure mode than a narrow phone viewport and is easy to miss if only mobile width was tested.
+- **Add `prefers-reduced-motion` handling for the animated cover diagram.** A nice-to-have accessibility and polish detail: users who've set that OS-level preference should get the static version of the orbit illustration, not the animation.
+- **Keep Georgia/Times as the serif for display type, but confirm embeddable licensing for the EPUB/print editions specifically.** System-available fonts referenced by name in CSS are fine for a web app (the visitor's own OS supplies the font); an EPUB or print PDF that wants the identical look needs either a properly licensed embeddable font file or a deliberate, tested fallback — this is a different licensing question from anything else in the project and easy to overlook because it "already works" in the browser.
+
+---
+
+## 6. Accessibility & Inclusive Design
+
+Your baseline (semantic structure, skip link, focus-visible states, ARIA landmarks) is genuinely ahead of most independently produced ebooks. Treat the items below as closing real, specific gaps rather than starting from zero — and note that **EPUB Accessibility 1.1 is now formally integrated into the EPUB 3.3 standard itself** (a W3C Recommendation since May 2025, aligned with the EU's European Accessibility Act), so this is no longer an optional add-on for a retail EPUB — it's part of what "valid EPUB 3.3" means.
+
+- **Add an `alt`/long-description field to the visual asset pipeline — this is the one concrete, verified gap.** `book/visuals-index.json` currently records filename, path, and generation status for every diagram, graph, and image, but no description field. `templates/` and the per-record Visual-Specification files don't carry one either. With potentially thousands of generated SVGs ahead as records scale past ten, retrofitting this later is far more expensive than adding a required field to the generation step now, especially since you already enforce required fields through `scripts/validate-assets.mjs` — extend that script to fail the build on a missing description, the same way it presumably already fails on a missing file.
+- **Verify MathML/assistive output alongside the visual MathJax (`tex-svg.js`) rendering.** Causali E's formalized equations and the periodic identities are central content, not decoration; confirm screen readers can access an equivalent text/MathML representation, not only the visual SVG rendering.
+- **Do a dedicated keyboard-only and screen-reader pass on the interactive-heavy surfaces specifically**: the periodic-table `<dialog>` grid (large number of focusable cells), the nested `<details>` table of contents (deeply nested sections), the live search results list (confirm result counts are announced via an `aria-live` region, not just visually updated), and the translation/TTS panel.
+- **Treat text-to-speech as a bonus, not an accessibility substitute, and test it as such.** Browser Web Speech API support and voice quality vary significantly between Chrome, Firefox, and Safari/iOS — confirm the feature degrades gracefully (clear messaging, not a silent failure) where it's unsupported, and don't let its presence be read as satisfying a screen-reader requirement it doesn't actually meet.
+- **Write a real Accessibility Conformance Statement** (a standard back-matter page in professionally produced EPUBs) once the above is verified — naming the target (WCAG 2.2 AA / EPUB Accessibility 1.1) and being honest about any known exceptions. This is both good practice and, for anyone distributing in the EU, increasingly an expectation rather than a courtesy.
+
+---
+
+## 7. Metadata, Discoverability & Citation Infrastructure
+
+- **Add the metadata that makes the work findable and shareable.** Confirmed absent from the current `<head>` in both `book/index.html` and `dist/MAT-ebook.html`: Open Graph and Twitter Card tags (so a shared link renders properly rather than as bare text), a `schema.org` JSON-LD block (`Dataset`, `Book`, or `ScholarlyArticle` type, whichever fits best per page), and canonical `<link>` tags. None of this changes what a reader sees on the page; all of it changes whether Google, Google Scholar, and social platforms can represent the work correctly.
+- **Decide a citation format now, not after publication.** Because MAT is explicitly a living document ("No MAT record should be regarded as permanently complete"), anyone wanting to cite a specific claim needs a way to reference an unchanging snapshot, not a moving target. The standard solution for exactly this situation in open scientific projects is to archive tagged releases with **Zenodo** (free, DOI-per-version plus one stable "concept DOI" that always resolves to the latest version) or a comparable archive. Publish a one-line "How to cite this edition" format in the front matter of every edition, e.g. a pattern like: *Author Surname, First Initial. (Year). Materials Atlas Table Codex (Version X.Y.Z) [Data set]. DOI.* — the specific fields matter less than committing to one consistent pattern.
+- **Treat ISBN as edition-specific, not project-wide.** Amazon's KDP assigns a free ASIN automatically and doesn't require an ISBN for a Kindle-only edition — but Apple Books, Kobo, and most library/aggregator distribution (IngramSpark, Draft2Digital) generally do expect one, and print and EPUB editions of the same content conventionally get **separate ISBNs**. Decide distribution scope first (Kindle-only vs. wide) and secure ISBNs accordingly, rather than defaulting to "one ISBN for everything."
+- **If the web reader stays publicly hosted, add `sitemap.xml` and `robots.txt`** so search engines can index individual records properly — genuinely useful for a reference work whose value partly depends on people finding record 0006 (Carbon) directly from a web search rather than only through the in-app periodic table.
+
+---
+
+## 8. Technical Production Pipeline
+
+- **Add an EPUB export stage to `book/build/`, alongside your existing `manifest.mjs`, `search-index.mjs`, `visuals-index.mjs`, etc.** Given clean Markdown + YAML as the source of truth, **Pandoc** is the natural converter (Markdown → valid EPUB 3 directly), keeping the same "generated artifact, never hand-edited" principle that already governs everything else in that folder.
+- **Validate every EPUB build automatically with EPUBCheck** (the official W3C/EDRLab validator, currently 5.x) as a new `validate:epub` script — the same pattern as your existing `validate:records`, `validate:sources`, `validate:links`, etc. Retailers including KDP will reject an EPUB that fails this validation, so catching it in your own pipeline before upload is strictly better than finding out from a rejection email.
+- **Plan index sharding before it becomes a performance problem, not after.** `book/search-index.json` (currently ~400 KB) and `book/offline-index.json` (~68 KB) cover ten records. At 118 elements before a single compound, isotope, or material is added, a linear extrapolation puts a monolithic search index well into multi-megabyte territory, loaded in full by every visitor on every device. Move to per-letter or per-section index shards loaded on demand, and apply the same thinking to the periodic-table grid and search-results rendering (pagination or virtualization) well before it's user-visible as lag.
+- **Set an explicit file-size budget per edition**, and enforce it the way you already enforce schema validity. This is concretely tied to money for a KDP release: Amazon's 70% royalty tier deducts a delivery cost of roughly $0.15 per MB, which matters directly for an atlas this image- and diagram-dense. An SVG-optimization pass (SVGO) and a defined per-record image budget belong in the same `npm run validate` habit you've already built.
+- **Extend CI beyond structural validation to include a Lighthouse pass** (performance, accessibility, and SEO scoring) on the web reader, and a visual-regression check on generated pages, so a styling or asset regression is caught the same way a broken relationship ID already is.
+
+---
+
+## 9. Legal, Licensing & Rights
+
+*(Factual options, not legal advice — confirm final choices with a qualified professional before publication, especially before any commercial sale.)*
+
+- **This is the actual blocking decision**, and you've correctly flagged in the README that it shouldn't be invented for you. What's worth adding is the shape of the decision itself: a project like this commonly needs **two separate licenses, not one** — a code license for the toolchain (`scripts/`, `book/*.mjs` — something like MIT or Apache-2.0 is standard for this kind of tooling) and a content license for the prose/data/figures (options range from fully open, e.g., CC BY 4.0, through share-alike, to fully proprietary/all-rights-reserved for a commercial trade edition). These choices aren't mutually exclusive, and a common pattern for exactly this situation is: **open/free living web edition** paired with an **all-rights-reserved retail EPUB/print edition** sold commercially — but that hybrid needs to be a deliberate choice, stated once, not an accident of never having decided.
+- **Add this decision explicitly to the README's existing "Repository administration (owner decisions)" section**, next to the LICENSE note that's already there — you've already built the right place for exactly this kind of decision; use it rather than creating a new one.
+- **Run a systematic rights-clearance pass before wide retail distribution**, distinct from the per-source `license:` field you already track in `templates/Source-Template.md`. The field tells you the license of a *citation*; it doesn't automatically confirm that every *image or plot* traced or adapted from a copyrighted third-party figure (a journal plot, a textbook diagram, a NIST-derived chart) has been cleared for republication in a book you distribute or sell — versus visuals your own pipeline (`gen3d.mjs`, `generate-schematics.mjs`) generated directly from raw numeric data, which is a much cleaner rights position. A one-time audit tagging every visual as "originally generated from data" vs. "adapted from a specific external source" resolves this cleanly given how well-organized your sources registry already is.
+- **Consider trademark exposure for the "MAT" / "Materials Atlas Table Codex" name and any logomark**, specifically if you move toward commercial distribution — a basic clearance search before print is standard practice.
+- **Give Causali E a standing legal/editorial disclaimer**, not only a data classification. Because it's explicitly original author work presented alongside established physics and chemistry, a published (especially sold) edition benefits from a plain-language statement in the front matter — separate from, and in addition to, the evidence-tier labeling covered in [Section 4](#4-editorial--content-architecture).
+
+---
+
+## 10. Editorial QA & Review Workflow
+
+- **Separate "structurally valid" from "well-written" and "scientifically reviewed" — you currently have strong tooling for the first and no visible process for the other two.** Your validation suite confirms a record conforms to schema; it doesn't confirm consistent voice, tense, and terminology across what will eventually be many contributors, and it doesn't substitute for subject-matter expert sign-off on scientific content. Write a short **editorial style guide** (voice, tense, terminology, how numbers/units are formatted in prose) as a companion to the existing Visual System doc, and track **expert review status per record** with the same discipline you already apply to sources and relationships (an additional field, not a new system).
+- **Run a small structured usability test before a public or retail launch** — three to five readers, deliberately mixing general-interest readers with domain specialists, specifically checking: whether the first five minutes in the web reader are self-explanatory, whether people can find a specific fact by search within a reasonable number of tries, whether the mobile navigation (hamburger sidebar toggle) is discoverable without instruction, and whether the exported PDF is usable as a document once actually printed on paper rather than only viewed on-screen.
+- **Add the retail edition to your own `CHANGELOG.md` "Pending" section as concrete line items** — you already keep an honest, specific backlog there (e.g., "Register Carbon sources SRC-000084–SRC-000090," "Publish element records 0010+"). Adding items like "Select project LICENSE," "Register ISBN/DOI," "Ship EPUB 3.3 export," and "Add alt-text field to visuals pipeline" puts this review directly into the tracking system you already trust and use daily, rather than leaving it as a one-off document that's easy to lose track of.
+
+---
+
+## 11. Prioritized Checklist — Now / Next / Later
+
+| Tier | Item | Why it's in this tier |
+|---|---|---|
+| **Now** | Choose the code license and content license; add the decision to the README's "owner decisions" section | Gates every distribution and monetization decision below it |
+| **Now** | Add a required `alt`/description field to `visuals-index.json` and the Visual-Specification template; enforce via `validate-assets.mjs` | Cheapest to fix before the visual count multiplies past 10 records |
+| **Now** | Add Open Graph, Twitter Card, and `schema.org` JSON-LD metadata to `book/index.html` | Near-zero effort, immediate discoverability/shareability gain |
+| **Next** | Build an EPUB 3.3 export step (Pandoc-based) into `book/build/`, validated with EPUBCheck | The concrete deliverable that makes "ebook" mean something beyond the web app |
+| **Next** | Design a dedicated static retail cover, separate from the in-app hero | Required before any retail listing can exist at all |
+| **Next** | Register a Zenodo (or equivalent) DOI and publish a "how to cite this edition" statement | Needed the moment anyone outside the project wants to reference it reliably |
+| **Next** | Run a WCAG 2.2 / EPUB Accessibility 1.1 pass: contrast audit, keyboard/screen-reader test of the periodic-table dialog, TOC, and search | Now formally part of the EPUB 3.3 standard itself, not optional polish |
+| **Later** | Shard `search-index.json`/`offline-index.json`; add pagination/virtualization to the periodic-table grid | Becomes urgent as records scale from 10 → 118 → beyond, not urgent today |
+| **Later** | Route the print edition through Vivliostyle/Paged.js/Prince instead of browser print-to-PDF; secure a separate ISBN for print | Only needed once true print-on-demand distribution is in scope |
+| **Later** | Rights-clearance audit distinguishing originally generated visuals from adapted third-party figures | Do before wide/commercial distribution, not before the first internal draft |
+| **Later** | Editorial style guide + tracked expert-review status per record | Matters more as contributor count grows past one |
+
+---
+
+*This document is itself a candidate for `docs/` — consider adding it as a new numbered section (e.g., `docs/09-production/00-Ebook-Production-Standard.md`) so it's versioned and tracked the same way the rest of the project's standards are.*

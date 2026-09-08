@@ -12,11 +12,21 @@ export function buildOfflineIndex(manifest) {
   let scenes = [];
   const si = readJson("scenes/index.json", { scenes: [] });
   scenes = (si.scenes || []).map((s) => `./scenes/${s.file}`);
+  const cssModules = [
+    "./styles/variables.css", "./styles/base.css", "./styles/layout.css", "./styles/toc.css",
+    "./styles/sidebar-settings.css", "./styles/reader.css", "./styles/content.css",
+    "./styles/visuals.css", "./styles/responsive.css", "./styles/print.css"
+  ];
+  const dataFiles = [
+    "./data/elements-118.json", "./data/chart-datasets.json"
+  ];
   const app = ["./", "./index.html", "./3d.html", "./styles.css", "./book.js", "./reader-core.mjs",
     "./math-config.js", "./manifest.json", "./search-index.json", "./visuals-index.json",
     "./elements.json", "./identities.json", "./periodic.json", "./offline-index.json",
     "./manifest.webmanifest", "./scenes/index.json",
-    "./vendor/marked.mjs", "./vendor/tex-svg.js", "./vendor/three.module.js", "./vendor/OrbitControls.js"];
+    "./vendor/marked.mjs", "./vendor/tex-svg.js", "./vendor/three.module.js", "./vendor/OrbitControls.js",
+    "./vendor/chart.min.js",
+    ...cssModules, ...dataFiles];
   const all = [...new Set([...app, ...chapters, ...figures, ...scenes])];
   writeJson("offline-index.json", { app, chapters, figures, scenes, all }, 1);
   console.log(`offline: ${all.length} resources (${chapters.length} chapters, ${figures.length} figures, ${scenes.length} scenes) -> book/offline-index.json`);

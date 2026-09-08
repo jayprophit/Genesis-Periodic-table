@@ -1,0 +1,70 @@
+/* MAT Styles: Responsive Breakpoints */
+@media (max-width: 1150px) {
+  #sidebar { width: 270px; flex-basis: 270px; padding: 24px 18px }
+  .cover-diagram { height: 310px }
+  .cover-grid { gap: 10px }
+  .cover-meta { font-size: 9px }
+  .cover-actions { gap: 12px }
+  .element-cards { gap: 6px }
+  .element-card { padding: 10px }
+  .collection-guide { gap: 12px }
+}
+@media (max-width: 850px) {
+  .mobile-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 40; background: var(--bg);
+    border-bottom: 1px solid var(--line); padding: 10px 18px; font-size: 12px;
+  }
+  .mobile-bar button { font-size: 12px }
+  .mobile-bar a { font: 20px var(--serif); text-decoration: none }
+  .mobile-bar a span { font-size: 12px }
+  #sidebar {
+    position: fixed; left: 0; top: 58px; width: min(340px, 88vw);
+    height: calc(100dvh - 58px); transform: translateX(-101%);
+    z-index: 50; transition: transform .18s;
+  }
+  .toc-open #sidebar { transform: none }
+  #scrim { position: fixed; inset: 58px 0 0; background: #07161599; border: 0; border-radius: 0; z-index: 45 }
+  #reader { padding: 28px 24px 60px }
+  .cover-grid { margin: 38px 0; grid-template-columns: 1.15fr 1fr }
+  #cover h1 { font-size: clamp(38px, 7vw, 62px) }
+  .cover-diagram { height: 300px }
+  .chapter-tools { gap: 7px }
+  .chapter-tools a { margin-left: 0 }
+  body { --font-size: 16px }
+}
+@media (max-width: 560px) {
+  #reader { padding: 24px 18px 50px }
+  .edition-line { font-size: 8px; letter-spacing: .08em }
+  .cover-grid { grid-template-columns: 1fr; margin: 30px 0 35px; gap: 30px }
+  #cover h1 { font-size: 48px }
+  .cover-diagram { height: 300px; max-width: 360px; width: 100%; justify-self: center }
+  .cover-meta { grid-template-columns: repeat(3, 1fr); gap: 12px }
+  .cover-meta strong { font-size: 23px }
+  .section-heading { align-items: flex-start; gap: 10px }
+  .section-heading h2 { font-size: 24px }
+  .section-heading button { max-width: 125px }
+  .element-cards { grid-template-columns: repeat(3, 1fr); gap: 8px }
+  .collection-guide { grid-template-columns: 1fr; gap: 12px }
+  .collection-guide > div { border-bottom: 1px solid var(--line) }
+  .collection-guide p { font-size: 12px; margin-top: 4px }
+  .key-numbers { grid-template-columns: repeat(2, 1fr) }
+  .key-number strong { font-size: 19px }
+  #page > h1 { font-size: 32px }
+  #page h2 { font-size: 27px }
+  #page h3 { font-size: 22px }
+  .vis-grid, .related-links { grid-template-columns: 1fr }
+  .chapter-summary ul { columns: 1 }
+  .chapter-tools select { min-width: 100%; max-width: 100% }
+  .chapter-top { font-size: 10px }
+  .identity-name { font-size: 25px }
+  .pager, .element-pager { gap: 15px }
+  dialog { padding: 20px }
+  th, td { padding: 10px }
+  .page-context { padding: 14px }
+  .chapter-summary { padding: 18px }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto }
+  *, *::before, *::after { animation: none !important; transition: none !important }
+}

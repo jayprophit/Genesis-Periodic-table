@@ -1,0 +1,32 @@
+/* MAT Styles: Reset, Typography, Forms, Utilities */
+*, *::before, *::after { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 80px }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: var(--font-size) / 1.7 system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+button, input, select, textarea { font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 5px }
+button { padding: 8px 12px; cursor: pointer; line-height: 1.4 }
+button:hover { background: var(--soft) }
+button:disabled { opacity: .55; cursor: default }
+a { color: var(--accent); text-underline-offset: 3px }
+a:hover { text-decoration-thickness: 2px }
+button:focus-visible, a:focus-visible, summary:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+[tabindex]:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px }
+input, select, textarea { padding: 9px; max-width: 100% }
+select { min-height: 42px }
+label { display: block }
+summary { cursor: pointer; list-style-position: inside }
+summary::marker { color: var(--accent) }
+[hidden] { display: none !important }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+.skip-link { position: fixed; top: -90px; left: 16px; z-index: 100; background: var(--paper); padding: 12px }
+.skip-link:focus { top: 10px }
+#progress { height: 3px; width: 0; background: var(--gold); position: fixed; top: 0; left: 0; z-index: 60 }

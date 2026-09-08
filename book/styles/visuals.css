@@ -1,0 +1,65 @@
+/* MAT Styles: Visuals, Related, Navigation, Dialogs */
+.section-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 32px }
+.section-heading h2 { font: 28px var(--serif); margin: 0 }
+.section-heading button { font-size: 12px }
+.vis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin: 18px 0 }
+.vis-item { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--paper); text-decoration: none; color: var(--ink); transition: border-color .12s }
+.vis-item:hover { border-color: var(--accent) }
+.vis-item img { width: 100%; height: 160px; object-fit: cover; display: block }
+.vis-item .vis-caption { padding: 10px 12px; font-size: 12px }
+.vis-item .vis-caption strong { display: block; margin-bottom: 2px }
+.related-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; margin: 16px 0 }
+.related-links a { display: block; padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-size: 13px; border-radius: 5px; transition: border-color .12s }
+.related-links a:hover { border-color: var(--accent) }
+.related-links a small { display: block; font-size: 11px; color: var(--muted) }
+.pager { display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); padding-top: 24px; margin-top: 40px }
+.pager a { display: block; padding: 14px 18px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); border-radius: 5px; flex: 1; max-width: 48%; transition: border-color .12s }
+.pager a:hover { border-color: var(--accent) }
+.pager a small { display: block; font-size: 11px; color: var(--muted) }
+.pager a strong { display: block; margin-top: 2px }
+.element-pager { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 }
+.element-pager a { padding: 8px 12px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); border-radius: 5px; font-size: 12px; transition: border-color .12s }
+.element-pager a:hover { border-color: var(--accent) }
+dialog { max-width: min(1120px, 96vw); width: 1120px; border: 1px solid var(--line); border-radius: 12px; padding: 32px; color: var(--ink); background: var(--bg); max-height: 90vh; overflow: auto }
+dialog::backdrop { background: #071615b8 }
+dialog > p { font-size: 13px }
+.periodic-scroll { overflow-x: auto; padding-bottom: 15px }
+#periodic-grid { display: grid; grid-template-columns: repeat(18, minmax(38px, 1fr)); gap: 4px; min-width: 820px; grid-auto-rows: minmax(50px, auto) }
+.periodic-cell { min-height: 50px; padding: 4px; text-decoration: none; background: var(--soft); border: 1px solid var(--line); text-align: center; color: var(--muted) }
+a.periodic-cell { background: var(--accent); color: var(--bg); border-color: var(--accent) }
+.periodic-cell small { display: block; font-size: 8px }
+.periodic-cell strong { font: 18px / 1.1 var(--serif) }
+.periodic-cell[aria-disabled=true] { opacity: .65 }
+.periodic-cell.f-block { background: var(--panel) }
+.periodic-controls { margin: 12px 0; font-size: 12px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap }
+.periodic-controls label { display: flex; align-items: center; gap: 6px }
+.periodic-controls select { font-size: 12px; padding: 6px 8px }
+.element-dossier { margin: 16px 0; padding: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px }
+.element-dossier h3 { font: 20px var(--serif); margin: 0 0 10px }
+.dossier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px }
+.dossier-item { font-size: 12px }
+.dossier-item small { display: block; color: var(--muted); font-size: 10px }
+.dossier-item strong { display: block; font-size: 14px }
+.periodic-cell.heat-1 { background: #0c4a6e; color: #e0f2fe }
+.periodic-cell.heat-2 { background: #0369a1; color: #e0f2fe }
+.periodic-cell.heat-3 { background: #0284c7; color: #e0f2fe }
+.periodic-cell.heat-4 { background: #0ea5e9; color: #0c4a6e }
+.periodic-cell.heat-5 { background: #38bdf8; color: #0c4a6e }
+.periodic-cell.heat-6 { background: #7dd3fc; color: #0c4a6e }
+.periodic-cell.heat-7 { background: #bae6fd; color: #0c4a6e }
+.periodic-cell[aria-disabled=true].heat-1,
+.periodic-cell[aria-disabled=true].heat-2,
+.periodic-cell[aria-disabled=true].heat-3,
+.periodic-cell[aria-disabled=true].heat-4,
+.periodic-cell[aria-disabled=true].heat-5,
+.periodic-cell[aria-disabled=true].heat-6,
+.periodic-cell[aria-disabled=true].heat-7 { opacity: .5 }
+.data-viz-section { margin-top: 40px }
+.viz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0 }
+.viz-card { border: 1px solid var(--line); border-radius: 6px; padding: 16px; background: var(--paper) }
+.viz-card h3 { font: 600 14px var(--serif); margin: 0 0 12px; color: var(--muted) }
+.chart-container { position: relative; height: 220px }
+.cite-options { display: flex; gap: 8px; margin: 12px 0 }
+.cite-options button { padding: 8px 16px; font-size: 12px }
+#cite-output { width: 100%; font-size: 12px; font-family: Consolas, monospace; resize: vertical; background: var(--code); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: 10px }
+#cite-dialog .button-row { margin-top: 12px }

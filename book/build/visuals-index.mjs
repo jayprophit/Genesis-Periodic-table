@@ -36,19 +36,22 @@ export function buildVisualsIndex() {
       }
       return null;
     };
-    let pending = [], slotStatus = "";
+    let pending = [], pendingDesc = "", slotStatus = "";
     const items = [];
     const flush = () => {
       pending.forEach((f) => {
         const at = locate(f);
-        items.push({ file: f, path: at ? at.slice(0, at.length - f.length) : "", status: slotStatus || "UNKNOWN", found: !!at });
+        items.push({ file: f, path: at ? at.slice(0, at.length - f.length) : "", status: slotStatus || "UNKNOWN", found: !!at, alt: pendingDesc || "" });
       });
       pending = [];
+      pendingDesc = "";
     };
     for (const ln of lines) {
       let pm;
-      if ((pm = ln.match(/^  V\d+:/))) { flush(); slotStatus = ""; }
+      if ((pm = ln.match(/^  V\d+:/))) { flush(); slotStatus = ""; pendingDesc = ""; }
       else if ((pm = ln.match(/^    status: "([^"]+)"/))) { slotStatus = pm[1]; flush(); }
+      else if ((pm = ln.match(/^\s*description:\s*"([^"]+)"/))) { pendingDesc = pm[1]; }
+      else if ((pm = ln.match(/^\s*alt[-_]?[Tt]ext:\s*"([^"]+)"/))) { pendingDesc = pm[1]; }
       else if ((pm = ln.match(/(?:filename|file): "([^"]+)"/))) pending.push(pm[1]);
       else if ((pm = ln.match(/^\s+-\s+"([^"]+)"/))) pending.push(pm[1]);
     }

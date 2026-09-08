@@ -1,0 +1,51 @@
+/* MAT Styles: Reader & Content */
+#reader {
+  flex: 1; min-width: 0; max-width: 1700px;
+  padding: 40px clamp(24px, 4.8vw, 88px) 80px; outline: none;
+}
+#cover { max-width: 1100px; margin: auto }
+.edition-line {
+  display: flex; justify-content: space-between;
+  border-bottom: 1px solid var(--line); padding-bottom: 15px;
+  color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-size: 10px;
+}
+.cover-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 24px; margin: 56px 0 42px }
+.kicker { text-transform: uppercase; letter-spacing: .16em; font-size: 10px; font-weight: 650; color: var(--accent); margin: 0 0 18px }
+#cover h1 { font: clamp(38px, 4.5vw, 76px) / 1.06 var(--serif); letter-spacing: -.045em; margin: 0 0 26px; font-weight: 400 }
+#cover h1 em { font-weight: 400; color: var(--accent) }
+.lede { font-size: 15px; line-height: 1.8; max-width: 390px; color: var(--muted) }
+.cover-actions { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 26px; font-size: 12px }
+.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); padding: 13px 18px }
+.primary:hover { background: var(--ink); color: var(--bg) }
+.cover-diagram { position: relative; height: 390px; color: var(--accent); display: flex; justify-content: center; align-items: center }
+.orbit { position: absolute; border: 1px solid var(--line); border-radius: 50%; width: 92%; height: 72% }
+.o2 { transform: rotate(60deg); width: 88%; height: 48%; border-color: var(--accent); opacity: .45 }
+.o3 { transform: rotate(-60deg); width: 88%; height: 48%; border-color: var(--gold); opacity: .65 }
+.state-core {
+  width: 126px; height: 144px; border: 1px solid var(--accent); background: var(--bg);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  z-index: 1; box-shadow: 9px 9px 0 var(--soft);
+}
+.state-core small { font-size: 9px; letter-spacing: .1em; text-transform: uppercase }
+.state-core strong { font: 70px / 1.25 var(--serif) }
+.state-core strong span { font-size: 26px; font-style: italic }
+.orbit-word { position: absolute; background: var(--bg); z-index: 2; padding: 3px 9px; font: italic 12px var(--serif); color: var(--muted) }
+.w1 { top: 14%; left: 8% }
+.w2 { right: 0; top: 26% }
+.w3 { right: 0; bottom: 20% }
+.w4 { left: 8%; bottom: 26% }
+.cover-meta { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 28px }
+.cover-meta small { display: block; color: var(--muted); font-size: 10px }
+.cover-meta strong { display: block; font: 30px / 1.2 var(--serif); font-variant-numeric: tabular-nums }
+.cover-note { margin-top: 32px; font-size: 10px; color: var(--muted) }
+.continue-reading, .recently-read { margin-top: 24px }
+.continue-reading h3, .recently-read h3 { font: 600 14px var(--serif); margin: 0 0 12px; color: var(--muted) }
+.continue-item, .recent-item {
+  display: block; padding: 12px 16px; background: var(--paper);
+  border: 1px solid var(--line); border-radius: 6px; margin-bottom: 8px;
+  text-decoration: none; color: var(--ink); transition: border-color .12s;
+}
+.continue-item:hover, .recent-item:hover { border-color: var(--accent) }
+.continue-item small, .recent-item small { display: block; font-size: 11px; color: var(--muted) }
+.continue-item strong, .recent-item strong { display: block; margin-top: 2px }
+.recent-item .recent-time { font-size: 10px; color: var(--muted); float: right }

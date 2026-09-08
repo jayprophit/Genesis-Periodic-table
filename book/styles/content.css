@@ -1,0 +1,82 @@
+/* MAT Styles: Content — Headings, Text, Tables, Code, Figures */
+#content { max-width: 1000px; margin: auto }
+.chapter-top { display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); font-size: 11px; color: var(--muted); align-items: baseline }
+#crumb { max-width: 78%; overflow-wrap: anywhere }
+.chapter-top a { white-space: nowrap }
+.chapter-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 16px 0 30px; font-size: 11px }
+.chapter-tools select { max-width: 300px; flex: 1; font-size: 11px }
+.chapter-tools button { font-size: 11px }
+.chapter-tools a { margin-left: auto }
+#identity { display: flex; align-items: center; gap: 22px; margin: 30px 0 20px }
+.identity-symbol {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px solid var(--accent); width: 90px; height: 100px;
+  flex-shrink: 0; color: var(--accent); font: 48px var(--serif);
+}
+.identity-symbol small { font: 10px system-ui }
+.identity-name { font: 28px / 1.2 var(--serif); margin: 6px 0 }
+.identity-desc { font-size: 12px; color: var(--muted) }
+.page-context { padding: 14px 18px; background: var(--soft); font-size: 12px; line-height: 1.7; border-left: 3px solid var(--accent); margin: 24px 0 }
+.page-context.claims { border-color: var(--claims) }
+.page-context.research { border-color: var(--research) }
+.page-context strong { display: block; color: var(--ink) }
+.glance { border: 1px solid var(--line); padding: 20px; margin: 26px 0 32px; background: var(--paper) }
+.glance h2 { font: 22px var(--serif); margin: 0 0 16px }
+.key-numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px }
+.key-number { min-width: 0 }
+.key-number small { display: block; color: var(--muted); font-size: 10px }
+.key-number strong { display: block; font: 21px / 1.4 var(--serif); overflow-wrap: anywhere; font-variant-numeric: tabular-nums }
+.glance p { font-size: 10px; color: var(--muted); margin: 16px 0 0 }
+#page { overflow-wrap: anywhere }
+#page > h1 {
+  font: clamp(30px, 3.4vw, 48px) / 1.15 var(--serif);
+  letter-spacing: -.025em; margin: 32px 0;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.chapter-opener {
+  font-size: 15px; line-height: 1.8; color: var(--muted);
+  border-left: 3px solid var(--accent); padding-left: 16px;
+  margin: 0 0 24px; font-style: italic;
+}
+#page h2 { font: 30px / 1.3 var(--serif); margin: 50px 0 20px; padding-top: 22px; border-top: 1px solid var(--line) }
+#page h3 { font: 23px / 1.4 var(--serif); margin: 32px 0 14px }
+#page h4, #page h5, #page h6 { margin: 26px 0 12px; font-size: 17px }
+#page p, #page li { max-width: 80ch }
+#page p { margin: 16px 0 }
+#page li { margin: 6px 0 }
+#page strong { font-weight: 650 }
+#page blockquote { border-left: 3px solid var(--gold); margin: 24px 0; padding: 5px 22px; color: var(--muted) }
+#page hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0 }
+code { background: var(--code); padding: 2px 5px; border-radius: 3px; font: .84em / 1.5 Consolas, monospace }
+pre { background: var(--code); padding: 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; line-height: 1.65; white-space: pre }
+pre code { padding: 0; background: transparent }
+.table-scroll { overflow-x: auto; max-width: 100%; margin: 24px 0; border: 1px solid var(--line); border-radius: 4px; scrollbar-width: thin }
+table { border-collapse: collapse; width: 100%; font-size: 12px; line-height: 1.65; font-variant-numeric: tabular-nums }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); min-width: 95px }
+th { background: var(--soft); font-weight: 650; color: var(--ink) }
+tbody tr:nth-child(even) { background: var(--paper) }
+tbody tr:last-child td { border-bottom: 0 }
+.align-right { text-align: right }
+.align-center { text-align: center }
+td code { overflow-wrap: anywhere }
+#page img { max-width: 100%; height: auto }
+figure { margin: 25px 0 }
+figcaption { font-size: 12px; line-height: 1.6; color: var(--muted); padding: 12px 0 }
+.math { overflow-x: auto; max-width: 100% }
+div.math { margin: 25px 0; padding: 12px; text-align: center }
+mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden }
+.mat-id { font-variant-numeric: tabular-nums }
+.chapter-summary { border-top: 2px solid var(--accent); margin: 45px 0 24px; padding: 22px; background: var(--paper) }
+.chapter-summary h2 { font: 25px var(--serif); margin: 0 0 12px }
+.chapter-summary p { font-size: 13px; margin: 8px 0 }
+.chapter-summary ul { margin: 8px 0; padding-left: 20px; font-size: 13px }
+.chapter-summary li { margin: 4px 0 }
+.chapter-summary .cite { font-size: 11px; color: var(--muted) }
+.glossary-tooltip {
+  position: fixed; z-index: 100; max-width: 320px; padding: 10px 14px;
+  background: var(--paper); border: 1px solid var(--accent); border-radius: 6px;
+  font-size: 12px; line-height: 1.5; color: var(--ink);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); pointer-events: none;
+}

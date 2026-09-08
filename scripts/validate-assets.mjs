@@ -36,7 +36,10 @@ for (const { re, schema, kind } of sched) {
       for (const [slot, s] of Object.entries(doc.visuals)) {
         const files = [...(s.assets || []).map((a) => a.filename).filter(Boolean),
           s.filename, s.file, ...(s.files || [])].filter(Boolean);
-        for (const name of files) entries.push({ slot, name, status: s.status || "", sub: s.path || "" });
+        const desc = s.description || s.alt_text || s.alt || "";
+        for (const name of files) entries.push({ slot, name, status: s.status || "", sub: s.path || "", desc });
+        if (files.length && !desc && DONE.test(s.status || ""))
+          warn(f, rec, slot, `Visual slot "${slot}" has no description/alt-text`, "add description or alt_text field for accessibility");
       }
     }
     if (kind === "table") for (const t of doc.tables || []) {
