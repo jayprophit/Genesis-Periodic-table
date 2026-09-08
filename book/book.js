@@ -7,6 +7,7 @@ import {
   savePosition, getPosition, addToHistory, getHistory, getLastChapter,
   addBookmark, removeBookmark, getBookmarks, isBookmarked,
   addNote, updateNote, deleteNote, getNotes,
+  addHighlight, removeHighlight, getHighlights,
   addSearchHistory, getSearchHistory,
   setPref, getPref, addFavorite, removeFavorite, getFavorites,
   exportReaderData, importReaderData, clearTemporaryCache, clearReadingPreferences, deleteAllData,
@@ -393,8 +394,9 @@ async function showChapter(id, anchor) {
   updateBookmarkBtn();
   getPosition(doc.id).then((pos) => {
     if (pos && pos.scrollPct > 5) {
-      const h = page.scrollHeight - page.clientHeight;
-      if (h > 0) page.scrollTop = Math.round(h * (pos.scrollPct / 100));
+      const reader = $("reader");
+      const h = reader.scrollHeight - reader.clientHeight;
+      if (h > 0) reader.scrollTop = Math.round(h * (pos.scrollPct / 100));
     }
   }).catch(() => {});
 }
@@ -692,7 +694,7 @@ function initChrome() {
     try {
       const idx = await getJSON("./offline-index.json", null);
       if (!idx || !idx.all) throw new Error("no index");
-      const c = await caches.open("mat-ebook-v2");
+      const c = await caches.open("mat-codex-v3");
       let ok = 0;
       const failedUrls = [];
       for (const u of idx.all) {
@@ -738,22 +740,27 @@ function initScrollSave() {
 }
 
 /* ---------- citation export ---------- */
+let pubMeta = { author: "Powe, Jay", year: 2025, title: "Materials Atlas Table Codex" };
 function initCitations() {
+  /* Load publication metadata */
+  getJSON("./data/publication/metadata.json", pubMeta).then((m) => { if (m) pubMeta = m; }).catch(() => {});
   const dlg = $("cite-dialog");
   $("cite-btn").onclick = () => {
     if (!currentId) return;
     const doc = byId.get(currentId);
     const rec = recordOf(currentId);
     const num = rec?.number || "0000";
+    const a = pubMeta.author || "Powe, Jay";
+    const y = pubMeta.year || 2025;
     $("cite-apa").onclick = () => {
-      $("cite-output").value = `Powe, J. (2025). ${doc?.title || "MAT:" + num}. In Materials Atlas Table Codex. MAT:${num}. Retrieved from ${location.href}`;
+      $("cite-output").value = `${a} (${y}). ${doc?.title || "MAT:" + num}. In ${pubMeta.title || "Materials Atlas Table Codex"}. MAT:${num}. Retrieved from ${location.href}`;
     };
     $("cite-bibtex").onclick = () => {
-      const key = `powe2025mat${num}`;
-      $("cite-output").value = `@misc{${key},\n  author = {Powe, Jay},\n  title = {${doc?.title || "MAT:" + num}},\n  year = {2025},\n  howpublished = {Materials Atlas Table Codex, MAT:${num}},\n  url = {${location.href}}\n}`;
+      const key = `powe${y}mat${num}`;
+      $("cite-output").value = `@misc{${key},\n  author = {${a.split(", ").reverse().join(", ")}},\n  title = {${doc?.title || "MAT:" + num}},\n  year = {${y}},\n  howpublished = {${pubMeta.title || "Materials Atlas Table Codex"}, MAT:${num}},\n  url = {${location.href}}\n}`;
     };
     $("cite-ris").onclick = () => {
-      $("cite-output").value = `TY  - GEN\nAU  - Powe, Jay\nTI  - ${doc?.title || "MAT:" + num}\nPY  - 2025\nPB  - Materials Atlas Table Codex\nUR  - ${location.href}\nER  -`;
+      $("cite-output").value = `TY  - GEN\nAU  - ${a}\nTI  - ${doc?.title || "MAT:" + num}\nPY  - ${y}\nPB  - ${pubMeta.title || "Materials Atlas Table Codex"}\nUR  - ${location.href}\nER  -`;
     };
     $("cite-apa").click();
     dlg.showModal();
