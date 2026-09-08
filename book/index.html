@@ -63,9 +63,15 @@
   </section>
   <article id="content" hidden>
     <div class="chapter-top"><p id="crumb"></p><a id="source-link">Read source ↗</a></div>
-    <div id="tools" class="chapter-tools" aria-label="Reading tools"><label class="sr-only" for="jump">Jump to section</label><select id="jump"><option>On this page</option></select><button id="periodic-btn">Periodic table</button><button id="goto-studio">Listen / translate</button>    <button id="bookmark-btn" title="Bookmark this page">☆ Bookmark</button><button id="highlight-btn" title="Highlight selected text">🖍 Highlight</button><button id="cite-btn" title="Export citation">📎 Cite</button><a id="citations-link" href="#">Sources & evidence ↓</a></div>
+    <div id="tools" class="chapter-tools" aria-label="Reading tools"><label class="sr-only" for="jump">Jump to section</label><select id="jump"><option>On this page</option></select><button id="periodic-btn">Periodic table</button><button id="goto-studio">Listen / translate</button><button id="bookmark-btn" title="Bookmark this page">☆ Bookmark</button><button id="highlight-btn" title="Highlight selected text">🖍 Highlight</button><button id="cite-btn" title="Export citation">📎 Cite</button><div class="mode-bar" role="radiogroup" aria-label="Reading mode"><button data-mode="codex" class="active" title="Codex mode — full interactive">Codex</button><button data-mode="book" title="Book mode — wide text">Book</button><button data-mode="focus" title="Focus mode — distraction-free">Focus</button></div></div>
     <div id="identity"></div><p id="page-context" class="page-context"></p><div id="at-glance"></div><p id="mt-note" hidden role="status"></p><div id="page" aria-busy="false"></div>
     <section id="chapter-summary" class="chapter-summary" aria-label="Chapter review"></section><div id="supplement"></div>
+    <div id="codex-overview" class="codex-overview" hidden><h3>Chapter Overview</h3><div id="codex-map" class="codex-map"></div><div id="info-boxes" class="info-box"></div></div>
+    <div id="media-placeholders"></div>
+    <div id="evidence-panel" class="evidence-panel" hidden><h4>Evidence & Sources</h4><div id="evidence-sources"></div></div>
+    <div id="discovery-panel" class="discovery-panel" hidden><h4>Supplementary Resources</h4><div id="discovery-links" class="Discovery-links"></div></div>
+    <div class="pub-preview-bar" aria-label="Publication previews"><span style="font-size:11px;color:var(--muted)">Preview as:</span><button id="preview-web">Web/PWA</button><button id="preview-epub">Reflowable EPUB</button><button id="preview-6x9">6×9 Paperback</button><button id="preview-a4">A4 Technical PDF</button></div>
+    <div class="read-selection-controls" id="read-sel-controls" hidden><button id="read-sel-btn">🔊 Read selection</button><span id="read-sel-status" role="status"></span></div>
     <nav class="element-pager" aria-label="Previous and next element"><a id="prev-element"></a><a id="next-element"></a></nav><nav class="pager" aria-label="Previous and next page"><a id="prev"></a><a id="next"></a></nav>
   </article>
   <p id="book-status" role="status" class="sr-only"></p><noscript><p>This interactive reader requires JavaScript. The complete print edition and original Markdown files remain available.</p></noscript>
@@ -73,7 +79,8 @@
 </div>
 <dialog id="periodic-dialog" aria-labelledby="periodic-title"><div class="section-heading"><div><p class="kicker">Direct navigation</p><h2 id="periodic-title">Material Atlas Table</h2></div><button id="close-periodic" aria-label="Close periodic table">Close ×</button></div><p>Choose a published record. Muted cells mark elements awaiting a MAT record.</p>
 <div class="periodic-controls"><label>Color by: <select id="heatmap-mode"><option value="">Default</option><option value="electronegativity">Electronegativity</option><option value="ionization">Ionization Energy</option><option value="radius">Atomic Radius</option><option value="density">Density</option><option value="melting">Melting Point</option><option value="abundance">Crust Abundance</option></select></label></div>
-<div class="periodic-scroll"><div id="periodic-grid"></div></div>
+<div class="table-mode-bar" role="tablist"><button data-table="standard" class="active" role="tab">Standard (IUPAC)</button><button data-table="russell" role="tab">Russell Octave</button><button data-table="overlay" role="tab">Combined Overlay</button></div>
+<div class="periodic-scroll"><div id="periodic-grid"></div><div id="russell-table" hidden></div><div id="overlay-table" hidden></div></div>
 <div id="element-dossier" class="element-dossier" hidden></div>
 <p class="tool-note">Atomic number and symbol locate each element. MAT:0000 is a separate reference state.</p><a id="origin-link">Open Origin State (0000) →</a></dialog>
 <dialog id="cite-dialog" aria-labelledby="cite-title"><h2 id="cite-title">Export Citation</h2><p>Select a format:</p>

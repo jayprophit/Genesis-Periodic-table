@@ -4,10 +4,16 @@
 #toc details details { margin-left: 10px; border-left: 1px solid var(--line); padding-left: 10px }
 .atlas-head {
   display: flex; justify-content: space-between; align-items: center;
-  border-top: 2px solid var(--accent); padding-top: 15px;
+  border-top: 2px solid var(--accent); padding-top: 15px; flex-wrap: wrap; gap: 8px;
 }
 .atlas-head h2 { font: 600 20px / 1.25 var(--serif); margin: 0 }
-.atlas-head button { border: 0; background: transparent; font-size: 18px }
+.atlas-controls { display: flex; gap: 4px; }
+.atlas-btn {
+  border: 1px solid var(--line, #ddd); background: var(--paper, #fff);
+  font-size: 10px; padding: 3px 8px; border-radius: 3px; cursor: pointer;
+  color: var(--muted, #888); transition: all 0.15s;
+}
+.atlas-btn:hover { border-color: var(--accent); color: var(--accent); }
 #toc .atlas-record > summary { font-size: 13px }
 .toc-item {
   display: block; color: var(--muted); border-left: 2px solid transparent;

@@ -1,0 +1,35 @@
+/* MAT Styles: Codex Overview Panels, Media Placeholders, Evidence, Discovery */
+.codex-overview { border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 24px 0; background: var(--panel) }
+.codex-overview h3 { font: 600 16px var(--serif); margin: 0 0 12px; color: var(--accent) }
+.codex-map { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 12px 0 }
+.codex-map-item { padding: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; font-size: 12px }
+.codex-map-item strong { display: block; font-size: 14px; margin-bottom: 4px }
+.codex-map-item small { color: var(--muted) }
+.info-box { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 16px 0 }
+.info-box-item { padding: 10px; background: var(--soft); border-radius: 5px; font-size: 12px }
+.info-box-item small { display: block; color: var(--muted); font-size: 10px }
+.info-box-item strong { display: block; font-size: 15px }
+.media-placeholder { border: 2px dashed var(--line); border-radius: 8px; padding: 24px; margin: 16px 0; text-align: center; color: var(--muted); font-size: 13px }
+.media-placeholder .media-icon { font-size: 28px; display: block; margin-bottom: 8px }
+.media-placeholder .media-label { font-size: 11px; color: var(--muted) }
+.evidence-panel { border: 1px solid var(--line); border-radius: 6px; padding: 14px 18px; margin: 16px 0; background: var(--paper); font-size: 12px }
+.evidence-panel h4 { font: 600 13px var(--serif); margin: 0 0 8px; color: var(--ink) }
+.evidence-panel .ev-source { margin: 4px 0; padding: 6px 0; border-bottom: 1px solid var(--line) }
+.evidence-panel .ev-source:last-child { border-bottom: 0 }
+.evidence-panel .ev-source a { color: var(--accent); text-decoration: none }
+.evidence-panel .ev-source a:hover { text-decoration: underline }
+.evidence-panel .ev-type { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; margin-right: 6px }
+.evidence-panel .ev-type.core { background: #0c4a6e; color: #bae6fd }
+.evidence-panel .ev-type.research { background: #78350f; color: #fef3c7 }
+.evidence-panel .ev-type.claims { background: #831843; color: #fce7f3 }
+.discovery-panel { margin: 20px 0; padding: 14px 18px; background: var(--soft); border-radius: 6px }
+.discovery-panel h4 { font: 600 13px var(--serif); margin: 0 0 10px; color: var(--muted) }
+.discovery-links { display: flex; flex-wrap: wrap; gap: 8px }
+.discovery-links a { display: inline-flex; align-items: center; gap: 4px; padding: 5px 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; font-size: 11px; text-decoration: none; color: var(--ink); transition: border-color .12s }
+.discovery-links a:hover { border-color: var(--accent) }
+.discovery-links a .dl-label { font-size: 9px; color: var(--muted); display: block }
+.pub-preview-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0; padding: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px }
+.pub-preview-bar button { font-size: 11px; padding: 6px 14px }
+.read-selection-controls { display: flex; gap: 6px; align-items: center; margin: 8px 0; font-size: 11px }
+.read-selection-controls button { font-size: 11px; padding: 4px 10px }
+@media print { .discovery-panel, .pub-preview-bar, .media-placeholder, .read-selection-controls { display: none } }

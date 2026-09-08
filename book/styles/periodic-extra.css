@@ -1,0 +1,247 @@
+/* Russell + Combined Overlay Periodic Table Styles */
+
+/* --- Russell Table --- */
+.russell-table {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 3px;
+  margin: 1rem 0;
+}
+.russell-cell {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  border: 1px solid var(--border, #333);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.russell-cell:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px rgba(255, 200, 60, 0.5);
+  z-index: 2;
+}
+.russell-cell.empty { opacity: 0.15; cursor: default; }
+.russell-cell.empty:hover { transform: none; box-shadow: none; }
+.russell-cell .z { font-weight: 700; font-size: 0.8rem; }
+.russell-cell .sym { font-size: 1rem; font-weight: 800; line-height: 1; }
+.russell-cell .freq { font-size: 0.5rem; opacity: 0.7; line-height: 1; }
+/* W group (generative) */
+.russell-cell.w-group {
+  background: linear-gradient(135deg, #1a3a2a 0%, #0d2618 100%);
+  border-color: #2d6b4a;
+  color: #7dffb3;
+}
+/* F group (radiative) */
+.russell-cell.f-group {
+  background: linear-gradient(135deg, #3a1a2a 0%, #260d1a 100%);
+  border-color: #6b2d4a;
+  color: #ff7db3;
+}
+
+/* Octave header row */
+.russell-octave-label {
+  grid-column: 1 / -1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent, #ffd700);
+  background: var(--bg, #0a0a0f);
+  border-bottom: 1px solid var(--border, #333);
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.russell-octave-label .oct { font-weight: 800; }
+.russell-octave-label .spectrum { opacity: 0.6; }
+.russell-octave-label .freq-range { opacity: 0.4; margin-left: auto; }
+
+/* Legend */
+.russell-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+}
+.russell-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.russell-legend .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid #555;
+}
+.russell-legend .w-swatch { background: #1a3a2a; border-color: #2d6b4a; }
+.russell-legend .f-swatch { background: #3a1a2a; border-color: #6b2d4a; }
+
+/* --- Combined Overlay Table --- */
+.overlay-table {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 2px;
+  margin: 1rem 0;
+  position: relative;
+}
+.overlay-cell {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  border: 1px solid var(--border, #333);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.overlay-cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 200, 60, 0.5);
+  z-index: 2;
+}
+.overlay-cell.empty { opacity: 0.1; cursor: default; }
+.overlay-cell.empty:hover { transform: none; box-shadow: none; }
+/* Split diagonal: std top-left, russ bottom-right */
+.overlay-cell.split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0d1b2a 50%, #1a0d2a 50%);
+  border-radius: 3px;
+}
+.overlay-cell.split .z { position: relative; font-weight: 700; font-size: 0.7rem; color: #90caf9; z-index: 1; }
+.overlay-cell.split .sym { position: relative; font-size: 0.9rem; font-weight: 800; color: #fff; z-index: 1; }
+.overlay-cell.split .std-label { position: absolute; top: 1px; left: 2px; font-size: 0.4rem; color: #64b5f6; z-index: 1; }
+.overlay-cell.split .russ-label { position: absolute; bottom: 1px; right: 2px; font-size: 0.4rem; color: #ce93d8; z-index: 1; }
+/* Russell octave strip at bottom */
+.overlay-cell.split .russ-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  z-index: 1;
+}
+.overlay-cell.split .russ-strip.w { background: #2d6b4a; }
+.overlay-cell.split .russ-strip.f { background: #6b2d4a; }
+/* Standard group strip at top */
+.overlay-cell.split .std-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: #1565c0;
+  z-index: 1;
+}
+
+/* Russell-only cells in overlay */
+.overlay-cell.russ-only {
+  background: linear-gradient(135deg, #1a0d2a 0%, #0d0520 100%);
+  border-color: #4a2d6b;
+  color: #b39ddb;
+}
+.overlay-cell.russ-only .z { color: #b39ddb; }
+/* Standard-only cells in overlay */
+.overlay-cell.std-only {
+  background: linear-gradient(135deg, #0d1b2a 0%, #051520 100%);
+  border-color: #2d4a6b;
+  color: #90caf9;
+}
+
+/* Table mode switcher */
+.table-mode-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+.table-mode-bar button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bg, #111);
+  color: var(--text, #ccc);
+  border: 1px solid var(--border, #333);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.table-mode-bar button:hover {
+  border-color: var(--accent, #ffd700);
+  color: var(--accent, #ffd700);
+}
+.table-mode-bar button.active {
+  background: var(--accent, #ffd700);
+  color: #000;
+  border-color: var(--accent, #ffd700);
+}
+
+/* Frequency spectrum bar */
+.freq-spectrum-bar {
+  display: flex;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border, #333);
+}
+.freq-spectrum-bar .seg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+.freq-spectrum-bar .seg.s1 { background: #1b5e20; }
+.freq-spectrum-bar .seg.s2 { background: #2e7d32; }
+.freq-spectrum-bar .seg.s3 { background: #558b2f; }
+.freq-spectrum-bar .seg.s4 { background: #f9a825; color: #000; }
+.freq-spectrum-bar .seg.s5 { background: #ff6f00; }
+.freq-spectrum-bar .seg.s6 { background: #d84315; }
+.freq-spectrum-bar .seg.s7 { background: #ad1457; }
+.freq-spectrum-bar .seg.s8 { background: #6a1b9a; }
+.freq-spectrum-bar .seg.s9 { background: #1a237e; }
+
+/* Tooltip */
+.pt-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg, #111);
+  color: var(--text, #eee);
+  border: 1px solid var(--border, #555);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.65rem;
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.pt-tooltip .tt-name { font-weight: 700; font-size: 0.8rem; }
+.pt-tooltip .tt-std { color: #64b5f6; }
+.pt-tooltip .tt-russ { color: #ce93d8; }
+
+/* Print */
+@media print {
+  .russell-table, .overlay-table { font-size: 0.4rem; }
+  .russell-cell, .overlay-cell { border-width: 0.5px; }
+}

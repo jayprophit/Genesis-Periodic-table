@@ -8,7 +8,11 @@ const CORE = ["./", "./index.html", "./3d.html", "./styles.css", "./book.js", ".
   "./vendor/chart.min.js", "./data/elements-118.json", "./data/chart-datasets.json",
   "./styles/variables.css", "./styles/base.css", "./styles/layout.css", "./styles/toc.css",
   "./styles/sidebar-settings.css", "./styles/reader.css", "./styles/content.css",
-  "./styles/visuals.css", "./styles/responsive.css", "./styles/print.css"];
+  "./styles/visuals.css", "./styles/responsive.css", "./styles/print.css",
+  "./styles/reading-modes.css", "./styles/codex-panels.css", "./styles/periodic-extra.css",
+  "./styles/onboarding.css",
+  "./data/russell-periodic.json", "./data/combined-periodic.json",
+  "./data/publication/metadata.json"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

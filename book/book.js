@@ -24,7 +24,7 @@ const say = (t) => { if (statusEl) statusEl.textContent = t; };
 
 let flat = [], byId = new Map(), legacy = [];
 let searchDocs = [], searchById = new Map(), related = [];
-let visuals = [], elements = [], identities = {}, periodic = { cells: [] };
+let visuals = [], elements = [], identities = {}, periodic = { cells: [] }, russellData = {}, combinedData = {};
 let currentId = "";
 let lastExpandedRecord = null;
 
@@ -71,7 +71,7 @@ function buildTOC(manifest) {
   // second level grouped from actual subdirectories (no empty groups).
   // The main NNNN chapter always comes first.
   const atlas = document.createElement("div");
-  atlas.innerHTML = `<div class="atlas-head"><h2>${esc(ATLAS)}</h2></div>`;
+  atlas.innerHTML = `<div class="atlas-head"><h2>${esc(ATLAS)}</h2><div class="atlas-controls"><button class="atlas-btn" data-action="expand" title="Expand all records">Expand all</button><button class="atlas-btn" data-action="collapse" title="Collapse all records">Collapse all</button><button class="atlas-btn" data-action="clear" title="Clear saved TOC state">Reset</button></div></div>`;
   const GROUP_OF = [
     [/\/calculations\//, "Calculations"],
     [/\/data\//, "Data & Properties"],
@@ -140,6 +140,27 @@ function buildTOC(manifest) {
   });
   flushRecord();
   toc.appendChild(atlas);
+
+  // Expand/Collapse/Reset controls
+  atlas.querySelectorAll(".atlas-btn").forEach((btn) => btn.addEventListener("click", () => {
+    const action = btn.dataset.action;
+    const allRecords = atlas.querySelectorAll("details.atlas-record");
+    const allSubs = atlas.querySelectorAll("details.atlas-sub");
+    if (action === "expand") {
+      allRecords.forEach((d) => { d.open = true; });
+      allSubs.forEach((d) => { d.open = true; });
+      allRecords.forEach((d) => { const k = d.querySelector("summary")?.textContent?.match(/^(\d{4})/)?.[1]; if (k) open["rec-" + k] = true; });
+    } else if (action === "collapse") {
+      allRecords.forEach((d) => { d.open = false; });
+      allSubs.forEach((d) => { d.open = false; });
+      Object.keys(open).forEach((k) => { if (k.startsWith("rec-")) delete open[k]; });
+    } else if (action === "clear") {
+      Object.keys(open).forEach((k) => delete open[k]);
+      allRecords.forEach((d) => { d.open = false; });
+      allSubs.forEach((d) => { d.open = false; });
+    }
+    persist();
+  }));
 
   // Guide, Reference & Book Information: the ten supporting sections as one group.
   const guide = document.createElement("details");
@@ -384,6 +405,10 @@ async function showChapter(id, anchor) {
   page.setAttribute("aria-busy", "false");
   fillSupplement(doc);
   fillPagers(doc);
+  renderCodexOverview(doc);
+  renderMediaPlaceholders(doc);
+  renderEvidencePanel(doc);
+  renderDiscoveryLinks(doc);
   document.title = `${doc.title} — MAT Codex`;
   typeset();
   say(`Opened ${doc.title}`);
@@ -426,6 +451,7 @@ function initSearch() {
 /* ---------- studio: speech + translation ---------- */
 function initStudio() {
   const voiceSel = $("voice"), rateSel = $("rate"), langSel = $("lang");
+  if (!voiceSel || !rateSel || !langSel) return;
   voiceSel.value = localStorage.getItem("mat-voice") || "";
   rateSel.value = localStorage.getItem("mat-rate") || "1";
   langSel.value = localStorage.getItem("mat-lang") || "";
@@ -450,7 +476,7 @@ function initStudio() {
     pickVoices();
     speechSynthesis.onvoiceschanged = pickVoices;
   } else pickVoices();
-  $("speak-btn").onclick = () => {
+  $("speak-btn")?.addEventListener("click", () => {
     if (!("speechSynthesis" in window)) return;
     speechSynthesis.cancel();
     const mtLang = (!$("mt-note").hidden && langSel.value) || "";
@@ -474,11 +500,11 @@ function initStudio() {
     };
     next();
   };
-  $("stop-btn").onclick = () => {
+  $("stop-btn")?.addEventListener("click", () => {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
     $("speech-status").textContent = "Stopped.";
   };
-  $("translate-btn").onclick = async () => {
+  $("translate-btn")?.addEventListener("click", async () => {
     const lang = langSel.value;
     if (!lang) { langSel.focus(); return; }
     const btn = $("translate-btn");
@@ -510,7 +536,7 @@ function initStudio() {
     btn.disabled = false;
     btn.textContent = "Translate prose";
   };
-  $("clear-translation").onclick = () => {
+  $("clear-translation")?.addEventListener("click", () => {
     document.querySelectorAll(".mt-text").forEach((n) => n.remove());
     $("mt-note").hidden = true;
   };
@@ -523,6 +549,7 @@ function elementChapter(number) {
 function initAtlas() {
   // Cover element cards.
   const cards = $("element-cards");
+  if (!cards) return;
   cards.innerHTML = "";
   elements.forEach((e) => {
     const a = document.createElement("a");
@@ -542,7 +569,7 @@ function initAtlas() {
   if (origin && origin.status) $("cover-origin").textContent = `origin reference · ${origin.status.toLowerCase().replace(/-/g, " ")}`;
   const howto = flat.find((d) => d.id.endsWith("03-How-to-Use-MAT-Codex.md"));
   if (howto) $("guide-link").href = route(howto.id);
-  $("start-btn").onclick = () => { const c = elementChapter("0000") || (flat.find((d) => d.section === ATLAS) || {}).id; if (c) location.hash = route(c); };
+  $("start-btn")?.addEventListener("click", () => { const c = elementChapter("0000") || (flat.find((d) => d.section === ATLAS) || {}).id; if (c) location.hash = route(c); });
 
   // Periodic grid: 118-element layout with heatmap support.
   const grid = $("periodic-grid");
@@ -626,70 +653,541 @@ function initAtlas() {
   }
 
   const dlg = $("periodic-dialog");
-  const open = () => { if (typeof dlg.showModal === "function") dlg.showModal(); };
-  $("periodic-cover").onclick = open;
-  $("periodic-btn").onclick = open;
-  $("close-periodic").onclick = () => { dlg.close(); $("element-dossier").hidden = true; };
-  dlg.addEventListener("click", (e) => { if (e.target === dlg) { dlg.close(); $("element-dossier").hidden = true; } });
+  if (dlg) {
+    const open = () => { if (typeof dlg.showModal === "function") dlg.showModal(); };
+    $("periodic-cover")?.addEventListener("click", open);
+    $("periodic-btn")?.addEventListener("click", open);
+    $("close-periodic")?.addEventListener("click", () => { dlg.close(); $("element-dossier").hidden = true; });
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) { dlg.close(); $("element-dossier").hidden = true; } });
+  }
   const oc = elementChapter("0000");
   if (oc) $("origin-link").href = route(oc);
+
+  // --- Russell periodic table ---
+  function buildRussellTable() {
+    const box = $("russell-table");
+    if (!box) return;
+    box.innerHTML = "";
+    const octaves = russellData.octaves || [];
+    const freqRanges = russellData.frequency_ranges_hz || {};
+    // Spectrum bar
+    let barHTML = '<div class="freq-spectrum-bar">';
+    for (let i = 1; i <= 9; i++) {
+      const r = freqRanges[i];
+      const label = r ? r.label : "";
+      barHTML += `<div class="seg s${i}" title="${esc(label)}">${esc(label)}</div>`;
+    }
+    barHTML += "</div>";
+    box.innerHTML += barHTML;
+    // Legend
+    box.innerHTML += `<div class="russell-legend"><span><span class="swatch w-swatch"></span>W — Wavelength (generative)</span><span><span class="swatch f-swatch"></span>F — Frequency (radiative)</span></div>`;
+    // Octave rows
+    octaves.forEach((oct) => {
+      const elMap = new Map();
+      oct.elements.forEach((el) => { elMap.set(el.z, el); });
+      // Build grid cells for 118-element layout
+      const grid = document.createElement("div");
+      grid.className = "russell-table";
+      // Octave header
+      const hdr = document.createElement("div");
+      hdr.className = "russell-octave-label";
+      hdr.innerHTML = `<span class="oct">Octave ${oct.octave}</span> <span class="spectrum">${esc(oct.spectrum)}</span> <span class="freq-range">${esc(oct.wavelength_range_m)} m · ${esc(oct.frequency_range_hz.replace(/–/g,"–"))} Hz</span>`;
+      grid.appendChild(hdr);
+      // Place elements
+      const placed = new Set();
+      oct.elements.forEach((el) => {
+        const stdCell = (periodic.cells || []).find((c) => c.z === el.z);
+        if (!stdCell) return;
+        placed.add(el.z);
+        const cell = document.createElement(stdCell.published ? "a" : "span");
+        const cls = el.russell_class || "";
+        cell.className = "russell-cell " + (cls.startsWith("W") ? "w-group" : "f-group");
+        cell.style.gridColumn = String(stdCell.group);
+        cell.style.gridRow = String(stdCell.period);
+        if (stdCell.published) cell.href = route(stdCell.chapter);
+        cell.innerHTML = `<span class="z">${el.z}</span><span class="sym">${esc(el.symbol)}</span><span class="freq">${esc(cls)}</span>`;
+        cell.title = `${esc(el.name)} · ${esc(cls)} · ${esc(oct.spectrum)}`;
+        cell.dataset.z = el.z;
+        grid.appendChild(cell);
+      });
+      // Fill empty slots
+      const allStd = periodic.cells || [];
+      allStd.filter((c) => !c.f && !placed.has(c.z)).forEach((c) => {
+        const cell = document.createElement("span");
+        cell.className = "russell-cell empty";
+        cell.style.gridColumn = String(c.group);
+        cell.style.gridRow = String(c.period);
+        grid.appendChild(cell);
+      });
+      box.appendChild(grid);
+    });
+  }
+  buildRussellTable();
+
+  // --- Combined overlay table ---
+  function buildOverlayTable() {
+    const box = $("overlay-table");
+    if (!box) return;
+    box.innerHTML = "";
+    const overlay = combinedData.overlay || [];
+    const elByZ = new Map(elements118.map((e) => [e.z, e]));
+    const byStd = new Map();
+    overlay.forEach((o) => byStd.set(o.z, o));
+    const grid = document.createElement("div");
+    grid.className = "overlay-table";
+    // Render main table cells
+    (periodic.cells || []).filter((c) => !c.f).forEach((c) => {
+      const ovr = byStd.get(c.z);
+      const cell = document.createElement(c.published ? "a" : "span");
+      const layer = ovr ? ovr.layer : "std-only";
+      cell.className = "overlay-cell " + (layer === "both" ? "split" : layer === "russell" ? "russ-only" : "std-only");
+      cell.style.gridColumn = String(c.group);
+      cell.style.gridRow = String(c.period);
+      if (c.published && layer !== "russ-only") cell.href = route(c.chapter);
+      const stdLabel = `G${c.group}·P${c.period}`;
+      const russLabel = ovr ? `O${ovr.russ.octave}·${ovr.russ.class}` : "";
+      const russStrip = ovr ? `<div class="russ-strip ${ovr.russ.class.startsWith('W') ? 'w' : 'f'}"></div>` : "";
+      const stdStrip = `<div class="std-strip"></div>`;
+      cell.innerHTML = `${stdStrip}<span class="z">${c.z}</span><span class="sym">${esc(c.symbol)}</span><span class="std-label">${stdLabel}</span><span class="russ-label">${russLabel}</span>${russStrip}`;
+      cell.title = `${esc(c.name)} · Std: G${c.group} P${c.period}${ovr ? ' · Russ: O' + ovr.russ.octave + ' ' + ovr.russ.class : ''}`;
+      cell.dataset.z = c.z;
+      cell.addEventListener("click", (e) => {
+        if (!c.published && layer === "russ-only") { e.preventDefault(); showDossier(c.z); }
+      });
+      grid.appendChild(cell);
+    });
+    // Lanthanide row
+    (periodic.cells || []).filter((c) => c.f === "lanthanide").forEach((c) => {
+      const ovr = byStd.get(c.z);
+      const cell = document.createElement(c.published ? "a" : "span");
+      const layer = ovr ? ovr.layer : "std-only";
+      cell.className = "overlay-cell " + (layer === "both" ? "split" : layer === "russell" ? "russ-only" : "std-only");
+      cell.style.gridColumn = String(3 + c.fOrder);
+      cell.style.gridRow = String(9);
+      if (c.published && layer !== "russ-only") cell.href = route(c.chapter);
+      const stdLabel = `Ln·${c.fOrder+1}`;
+      const russLabel = ovr ? `O${ovr.russ.octave}·${ovr.russ.class}` : "";
+      const russStrip = ovr ? `<div class="russ-strip ${ovr.russ.class.startsWith('W') ? 'w' : 'f'}"></div>` : "";
+      cell.innerHTML += `<div class="std-strip"></div><span class="z">${c.z}</span><span class="sym">${esc(c.symbol)}</span><span class="std-label">${stdLabel}</span><span class="russ-label">${russLabel}</span>${russStrip}`;
+      cell.title = `${esc(c.name)} · Lanthanide${ovr ? ' · Russ: O' + ovr.russ.octave + ' ' + ovr.russ.class : ''}`;
+      cell.dataset.z = c.z;
+      grid.appendChild(cell);
+    });
+    // Actinide row
+    (periodic.cells || []).filter((c) => c.f === "actinide").forEach((c) => {
+      const ovr = byStd.get(c.z);
+      const cell = document.createElement(c.published ? "a" : "span");
+      const layer = ovr ? ovr.layer : "std-only";
+      cell.className = "overlay-cell " + (layer === "both" ? "split" : layer === "russell" ? "russ-only" : "std-only");
+      cell.style.gridColumn = String(3 + c.fOrder);
+      cell.style.gridRow = String(10);
+      if (c.published && layer !== "russ-only") cell.href = route(c.chapter);
+      const stdLabel = `Ac·${c.fOrder+1}`;
+      const russLabel = ovr ? `O${ovr.russ.octave}·${ovr.russ.class}` : "";
+      const russStrip = ovr ? `<div class="russ-strip ${ovr.russ.class.startsWith('W') ? 'w' : 'f'}"></div>` : "";
+      cell.innerHTML += `<div class="std-strip"></div><span class="z">${c.z}</span><span class="sym">${esc(c.symbol)}</span><span class="std-label">${stdLabel}</span><span class="russ-label">${russLabel}</span>${russStrip}`;
+      cell.title = `${esc(c.name)} · Actinide${ovr ? ' · Russ: O' + ovr.russ.octave + ' ' + ovr.russ.class : ''}`;
+      cell.dataset.z = c.z;
+      grid.appendChild(cell);
+    });
+    box.appendChild(grid);
+  }
+  buildOverlayTable();
+
+  // Table mode switcher
+  const modeBtns = document.querySelectorAll(".table-mode-bar button[data-table]");
+  const gridEl = $("periodic-grid");
+  const russBox = $("russell-table");
+  const ovrBox = $("overlay-table");
+  modeBtns.forEach((btn) => btn.addEventListener("click", () => {
+    modeBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const mode = btn.dataset.table;
+    gridEl.hidden = mode !== "standard";
+    russBox.hidden = mode !== "russell";
+    ovrBox.hidden = mode !== "overlay";
+    $("heatmap-mode").hidden = mode !== "standard";
+  }));
 }
+
+/* ---------- reading modes: Codex, Book, Focus ---------- */
+function tryGet(k, fallback) { try { return localStorage.getItem(k) || fallback; } catch { return fallback; } }
+function initReadingModes() {
+  const modeBar = document.querySelector(".mode-bar");
+  if (!modeBar) return;
+  const btns = modeBar.querySelectorAll("button[data-mode]");
+  function setMode(mode) {
+    document.body.classList.remove("mode-codex", "mode-book", "mode-focus");
+    document.body.classList.add("mode-" + mode);
+    btns.forEach((b) => b.classList.toggle("active", b.dataset.mode === mode));
+    try { localStorage.setItem("mat-mode", mode); } catch {}
+  }
+  btns.forEach((b) => b.addEventListener("click", () => setMode(b.dataset.mode)));
+  setMode(tryGet("mat-mode", "codex"));
+}
+
+/* ---------- read-selection TTS ---------- */
+function initReadSelection() {
+  const btn = $("read-sel-btn");
+  const status = $("read-sel-status");
+  const controls = $("read-sel-controls");
+  if (!btn) return;
+  document.addEventListener("selectionchange", () => {
+    const sel = window.getSelection();
+    const text = sel?.toString().trim();
+    controls.hidden = !(text && text.length > 2);
+  });
+  btn.addEventListener("click", () => {
+    const sel = window.getSelection();
+    const text = sel?.toString().trim();
+    if (!text) return;
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.rate = parseFloat(tryGet("mat-rate", "1"));
+    const voiceName = tryGet("mat-voice", "");
+    if (voiceName) { const v = speechSynthesis.getVoices().find((v) => v.name === voiceName); if (v) utter.voice = v; }
+    utter.onstart = () => { status.textContent = "Reading selection…"; };
+    utter.onend = () => { status.textContent = ""; };
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utter);
+  });
+}
+
+/* ---------- codex chapter overview ---------- */
+function renderCodexOverview(doc) {
+  const box = $("codex-overview");
+  const mapBox = $("codex-map");
+  const infoBox = $("info-boxes");
+  if (!box || !doc) { if (box) box.hidden = true; return; }
+  box.hidden = false;
+  const rec = recordOf(doc.id);
+  const num = rec?.number || "";
+  const ident = identities[num] || {};
+  const sections = [
+    { label: "Identity", desc: ident.record_class || "Element record" },
+    { label: "Properties", desc: "Physical, chemical, and nuclear" },
+    { label: "Data", desc: "Structured datasets, isotopes, spectra" },
+    { label: "Relationships", desc: "Cross-references and transformations" },
+    { label: "Evidence", desc: "Sources, calculations, experiments" },
+    { label: "Visuals", desc: "Diagrams, graphs, models" },
+  ];
+  mapBox.innerHTML = sections.map((s) => `<div class="codex-map-item"><strong>${esc(s.label)}</strong><small>${esc(s.desc)}</small></div>`).join("");
+  const infoItems = [
+    { label: "Record", value: `MAT:${esc(num)}` },
+    { label: "Section", value: esc(doc.section) },
+    { label: "Status", value: esc(ident.status || "Unknown") },
+    { label: "Symbol", value: esc(ident.symbol || "") },
+  ];
+  infoBox.innerHTML = infoItems.map((i) => `<div class="info-box-item"><small>${i.label}</small><strong>${i.value}</strong></div>`).join("");
+}
+
+/* ---------- media placeholders ---------- */
+function renderMediaPlaceholders(doc) {
+  const box = $("media-placeholders");
+  if (!box || !doc) { if (box) box.innerHTML = ""; return; }
+  const rec = recordOf(doc.id);
+  const num = rec?.number || "";
+  const types = [
+    { icon: "📊", label: "Data Tables" },
+    { icon: "📈", label: "Charts & Graphs" },
+    { icon: "🔬", label: "Spectra & Diagrams" },
+    { icon: "🧊", label: "3D Models" },
+    { icon: "📐", label: "Schematics" },
+  ];
+  box.innerHTML = types.map((t) => `<div class="media-placeholder"><span class="media-icon">${t.icon}</span>${t.label}<br><span class="media-label">MAT:${esc(num)} — ${t.label}</span></div>`).join("");
+}
+
+/* ---------- evidence panel ---------- */
+function renderEvidencePanel(doc) {
+  const box = $("evidence-panel");
+  const srcBox = $("evidence-sources");
+  if (!box || !doc) { if (box) box.hidden = true; return; }
+  box.hidden = false;
+  const lane = laneOf(doc);
+  const laneLabel = lane === "core" ? "Core Data" : lane === "research" ? "Research" : "Claims";
+  srcBox.innerHTML = `<div class="ev-source"><span class="ev-type ${lane}">${laneLabel}</span> ${esc(doc.title)}</div><div class="ev-source"><small>Chapter: ${esc(doc.id)}</small></div>`;
+}
+
+/* ---------- discovery links ---------- */
+function renderDiscoveryLinks(doc) {
+  const box = $("discovery-panel");
+  const linksBox = $("discovery-links");
+  if (!box || !doc) { if (box) box.hidden = true; return; }
+  box.hidden = false;
+  const q = encodeURIComponent(doc.title || "");
+  linksBox.innerHTML = [
+    { href: `https://en.wikipedia.org/wiki/Special:Search?search=${q}`, label: "Wikipedia", type: "Encyclopedia" },
+    { href: `https://scholar.google.com/scholar?q=${q}`, label: "Google Scholar", type: "Academic" },
+    { href: `https://www.youtube.com/results?search_query=${q}`, label: "YouTube", type: "Video" },
+    { href: `https://www.reddit.com/search/?q=${q}`, label: "Reddit", type: "Community" },
+    { href: `https://pubmed.ncbi.nlm.nih.gov/?term=${q}`, label: "PubMed", type: "Biomedical" },
+  ].map((l) => `<a href="${l.href}" target="_blank" rel="noopener"><span class="dl-label">${l.type}</span>${l.label}</a>`).join("");
+}
+
+/* ---------- publication previews ---------- */
+function initPubPreviews() {
+  $("preview-web")?.addEventListener("click", () => { alert("You are viewing the Web/PWA edition."); });
+  $("preview-epub")?.addEventListener("click", () => { alert("EPUB 3.3 generation is planned. See docs/09-production/00-Ebook-Production-Standard.md"); });
+  $("preview-6x9")?.addEventListener("click", () => { window.print(); });
+  $("preview-a4")?.addEventListener("click", () => { window.print(); });
+}
+
+/* ---------- onboarding walkthrough tour ---------- */
+function initOnboarding() {
+  const SEEN_KEY = "mat-tour-seen";
+  const TOUR_VERSION = 1;
+  let currentStep = 0;
+  let backdrop = null;
+  let tip = null;
+  let highlightEl = null;
+
+  const steps = [
+    {
+      title: "Welcome to MAT Codex",
+      body: "A living scientific reference covering elements, material states, and transformations. This quick tour will show you how to navigate the atlas.",
+      target: null,
+      position: "center",
+      welcome: true,
+    },
+    {
+      title: "Table of Contents",
+      body: "Browse all records here. Each element has its own section with data, visuals, and sources. Click any chapter to open it.",
+      target: "#toc",
+      position: "right",
+    },
+    {
+      title: "Periodic Table",
+      body: "Open the interactive periodic table to jump to any element. Try the heatmap modes and the new Russell Octave view.",
+      target: "#periodic-cover",
+      position: "bottom",
+    },
+    {
+      title: "Search Everything",
+      body: "Full-text search across all chapters, properties, and sources. Use filters to narrow results by section or evidence level.",
+      target: ".search-box",
+      position: "right",
+    },
+    {
+      title: "Reader Tools",
+      body: "Text-to-speech, translation, bookmarks, highlights, and reading modes — all in the sidebar. Try Codex, Book, or Focus mode.",
+      target: "#studio",
+      position: "right",
+    },
+    {
+      title: "My Reading",
+      body: "Your bookmarks, notes, and reading history are saved here. Export or import your data anytime.",
+      target: "#my-reading",
+      position: "right",
+    },
+    {
+      title: "Start Exploring",
+      body: "Click \"Explore the atlas\" or open the periodic table to begin. Welcome to MAT Codex!",
+      target: "#start-btn",
+      position: "bottom",
+      final: true,
+    },
+  ];
+
+  function cleanup() {
+    if (backdrop) { backdrop.remove(); backdrop = null; }
+    if (tip) { tip.remove(); tip = null; }
+    if (highlightEl) { highlightEl.classList.remove("tour-highlight"); highlightEl = null; }
+  }
+
+  function positionTip(targetEl) {
+    if (!tip) return;
+    const step = steps[currentStep];
+    if (!targetEl || step.position === "center") {
+      tip.style.top = "50%";
+      tip.style.left = "50%";
+      tip.style.transform = "translate(-50%, -50%)";
+      return;
+    }
+    const rect = targetEl.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    let top, left;
+    switch (step.position) {
+      case "right":
+        top = rect.top + rect.height / 2 - tipRect.height / 2;
+        left = rect.right + 16;
+        break;
+      case "left":
+        top = rect.top + rect.height / 2 - tipRect.height / 2;
+        left = rect.left - tipRect.width - 16;
+        break;
+      case "bottom":
+        top = rect.bottom + 16;
+        left = rect.left + rect.width / 2 - tipRect.width / 2;
+        break;
+      case "top":
+        top = rect.top - tipRect.height - 16;
+        left = rect.left + rect.width / 2 - tipRect.width / 2;
+        break;
+    }
+    // Clamp to viewport
+    top = Math.max(8, Math.min(top, window.innerHeight - tipRect.height - 8));
+    left = Math.max(8, Math.min(left, window.innerWidth - tipRect.width - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+    tip.style.transform = "none";
+  }
+
+  function renderStep() {
+    cleanup();
+    const step = steps[currentStep];
+    // Backdrop
+    backdrop = document.createElement("div");
+    backdrop.className = "tour-backdrop";
+    backdrop.addEventListener("click", skipTour);
+    document.body.appendChild(backdrop);
+    // Tip
+    tip = document.createElement("div");
+    tip.className = "tour-tip";
+    if (step.welcome) tip.innerHTML = `
+      <div class="tour-welcome">
+        <div class="tour-logo">MAT <span>Codex</span></div>
+        <h2>${esc(step.title)}</h2>
+        <p>${esc(step.body)}</p>
+        <button class="tour-start-btn" data-action="next">Begin Tour →</button>
+        <p style="margin-top:0.8rem;font-size:0.7rem;opacity:0.5">Press Esc to skip</p>
+      </div>`;
+    else {
+      const arrowDir = step.position === "right" ? "left" : step.position === "left" ? "right" : step.position === "top" ? "bottom" : "top";
+      tip.innerHTML = `
+        <div class="tour-arrow ${arrowDir}"></div>
+        <span class="tour-step-num">${currentStep + 1} / ${steps.length}</span>
+        <h3>${esc(step.title)}</h3>
+        <p>${esc(step.body)}</p>
+        <div class="tour-btns">
+          <button class="tour-skip" data-action="skip">Skip tour</button>
+          <div class="tour-nav">
+            ${currentStep > 0 ? '<button class="tour-prev" data-action="prev">← Back</button>' : ''}
+            <button class="tour-next" data-action="next">${step.final ? 'Finish ✓' : 'Next →'}</button>
+          </div>
+        </div>
+        <div class="tour-progress">${steps.map((_, i) => `<span class="dot${i === currentStep ? " active" : ""}"></span>`).join("")}</div>`;
+    }
+    document.body.appendChild(tip);
+    // Highlight target
+    if (step.target) {
+      highlightEl = document.querySelector(step.target);
+      if (highlightEl) {
+        highlightEl.classList.add("tour-highlight");
+        highlightEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+    // Button handlers
+    tip.querySelectorAll("[data-action]").forEach((btn) => btn.addEventListener("click", () => {
+      const action = btn.dataset.action;
+      if (action === "next") nextStep();
+      else if (action === "prev") prevStep();
+      else if (action === "skip") skipTour();
+    }));
+    // Position after render
+    requestAnimationFrame(() => positionTip(step.target ? document.querySelector(step.target) : null));
+  }
+
+  function nextStep() {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      renderStep();
+    } else {
+      finishTour();
+    }
+  }
+  function prevStep() {
+    if (currentStep > 0) { currentStep--; renderStep(); }
+  }
+  function skipTour() { finishTour(); }
+  function finishTour() {
+    cleanup();
+    try { localStorage.setItem(SEEN_KEY, JSON.stringify({ version: TOUR_VERSION, ts: Date.now() })); } catch {}
+  }
+  function startTour() { currentStep = 0; renderStep(); }
+  function hasSeenTour() {
+    try { const d = JSON.parse(localStorage.getItem(SEEN_KEY)); return d && d.version === TOUR_VERSION; } catch { return false; }
+  }
+
+  // Keyboard nav
+  document.addEventListener("keydown", (e) => {
+    if (!tip) return;
+    if (e.key === "Escape") skipTour();
+    else if (e.key === "ArrowRight" || e.key === "Enter") { e.preventDefault(); nextStep(); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); prevStep(); }
+  });
+
+  // Re-launch button in sidebar
+  const relBtn = document.createElement("button");
+  relBtn.className = "relaunch-tour";
+  relBtn.textContent = "Take the tour";
+  relBtn.addEventListener("click", startTour);
+  const brandEl = document.querySelector(".brand");
+  if (brandEl) brandEl.appendChild(relBtn);
+
+  // Auto-start on first visit
+  if (!hasSeenTour()) startTour();
+}
+
 function initChrome() {
   // Section filter options from the manifest.
   const secSel = $("opt-section");
-  [...new Set(flat.map((d) => d.section))].forEach((s) => {
+  if (secSel) [...new Set(flat.map((d) => d.section))].forEach((s) => {
     const o = document.createElement("option");
     o.value = s;
     o.textContent = s === ATLAS ? s : s;
     secSel.appendChild(o);
   });
-  $("print-btn").onclick = () => window.print();
+  $("print-btn")?.addEventListener("click", () => window.print());
   const toggle = $("toc-toggle"), scrim = $("scrim");
-  const setToc = (open) => {
-    document.body.classList.toggle("toc-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    scrim.hidden = !open;
-  };
-  toggle.onclick = () => setToc(!document.body.classList.contains("toc-open"));
-  scrim.onclick = () => setToc(false);
-  $("goto-studio").onclick = () => {
+  if (toggle && scrim) {
+    const setToc = (open) => {
+      document.body.classList.toggle("toc-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      scrim.hidden = !open;
+    };
+    toggle.onclick = () => setToc(!document.body.classList.contains("toc-open"));
+    scrim.onclick = () => setToc(false);
+  }
+  $("goto-studio")?.addEventListener("click", () => {
     $("studio").open = true;
     $("studio").scrollIntoView({ behavior: "smooth", block: "nearest" });
-  };
-  $("citations-link").onclick = (e) => {
+  });
+  const citeBtn = $("cite-btn");
+  if (citeBtn) citeBtn.onclick = (e) => {
     e.preventDefault();
     const sdoc = searchById.get(currentId) || {};
     if ((sdoc.dois || []).length) fillSupplement(byId.get(currentId));
-    $("supplement").scrollIntoView({ behavior: "smooth" });
+    $("supplement")?.scrollIntoView({ behavior: "smooth" });
   };
   document.addEventListener("keydown", (e) => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "");
-    if (e.key === "Escape") { setToc(false); const d = $("periodic-dialog"); if (d.open) d.close(); }
+    if (e.key === "Escape") { setToc(false); const d = $("periodic-dialog"); if (d?.open) d.close(); }
     if (typing) return;
-    if (e.key === "/" && document.activeElement !== $("search")) { e.preventDefault(); $("search").focus(); }
-    if (e.key === "ArrowRight") $("next").click?.();
-    if (e.key === "ArrowLeft") $("prev").click?.();
+    if (e.key === "/" && document.activeElement !== $("search")) { e.preventDefault(); $("search")?.focus(); }
+    if (e.key === "ArrowRight") $("next")?.click?.();
+    if (e.key === "ArrowLeft") $("prev")?.click?.();
   });
   // Theme + font size (persisted).
   const applyTheme = () => {
     const light = localStorage.getItem("mat-theme") !== "dark";
     document.body.classList.toggle("light", light);
-    $("theme-btn").textContent = light ? "Dark theme" : "Light theme";
-    $("theme-btn").setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
+    if ($("theme-btn")) {
+      $("theme-btn").textContent = light ? "Dark theme" : "Light theme";
+      $("theme-btn").setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
+    }
   };
   applyTheme();
-  $("theme-btn").onclick = () => {
+  $("theme-btn")?.addEventListener("click", () => {
     localStorage.setItem("mat-theme", document.body.classList.contains("light") ? "dark" : "light");
     applyTheme();
-  };
+  });
   let fs = +(localStorage.getItem("mat-fs") || 17);
   const applyFs = () => document.body.style.setProperty("--font-size", fs + "px");
   applyFs();
-  $("font-inc").onclick = () => { fs = Math.min(fs + 1, 21); localStorage.setItem("mat-fs", fs); applyFs(); };
-  $("font-dec").onclick = () => { fs = Math.max(fs - 1, 14); localStorage.setItem("mat-fs", fs); applyFs(); };
+  $("font-inc")?.addEventListener("click", () => { fs = Math.min(fs + 1, 21); localStorage.setItem("mat-fs", fs); applyFs(); });
+  $("font-dec")?.addEventListener("click", () => { fs = Math.max(fs - 1, 14); localStorage.setItem("mat-fs", fs); applyFs(); });
   // Offline snapshot: the generated index lists every local resource so a
   // complete save caches chapters, figures, scenes and libraries — and says so honestly.
-  $("offline-btn").onclick = async () => {
+  $("offline-btn")?.addEventListener("click", async () => {
     const st = $("offline-status");
     try {
       const idx = await getJSON("./offline-index.json", null);
@@ -719,6 +1217,7 @@ let scrollProgressEl = null;
 function initScrollSave() {
   scrollProgressEl = $("progress");
   const reader = $("reader");
+  if (!reader) return;
   reader.addEventListener("scroll", () => {
     /* Progress bar */
     if (scrollProgressEl) {
@@ -745,7 +1244,8 @@ function initCitations() {
   /* Load publication metadata */
   getJSON("./data/publication/metadata.json", pubMeta).then((m) => { if (m) pubMeta = m; }).catch(() => {});
   const dlg = $("cite-dialog");
-  $("cite-btn").onclick = () => {
+  if (!dlg) return;
+  $("cite-btn")?.addEventListener("click", () => {
     if (!currentId) return;
     const doc = byId.get(currentId);
     const rec = recordOf(currentId);
@@ -765,8 +1265,8 @@ function initCitations() {
     $("cite-apa").click();
     dlg.showModal();
   };
-  $("cite-copy").onclick = () => { navigator.clipboard.writeText($("cite-output").value).catch(() => {}); $("cite-copy").textContent = "Copied!"; setTimeout(() => $("cite-copy").textContent = "Copy", 1500); };
-  $("cite-close").onclick = () => dlg.close();
+  $("cite-copy")?.addEventListener("click", () => { navigator.clipboard.writeText($("cite-output").value).catch(() => {}); $("cite-copy").textContent = "Copied!"; setTimeout(() => $("cite-copy").textContent = "Copy", 1500); });
+  $("cite-close")?.addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 }
 
@@ -858,7 +1358,7 @@ async function updateBookmarkBtn() {
 }
 
 function initBookmarks() {
-  $("bookmark-btn").onclick = async () => {
+  $("bookmark-btn")?.addEventListener("click", async () => {
     if (!currentId) return;
     const bm = await isBookmarked(currentId, null);
     if (bm) {
@@ -873,7 +1373,7 @@ function initBookmarks() {
 }
 
 function initHighlights() {
-  $("highlight-btn").onclick = async () => {
+  $("highlight-btn")?.addEventListener("click", async () => {
     if (!currentId) return;
     const sel = window.getSelection();
     const text = sel?.toString().trim();
@@ -885,7 +1385,7 @@ function initHighlights() {
 
 /* ---------- export / import / reset ---------- */
 function initDataManagement() {
-  $("export-btn").onclick = async () => {
+  $("export-btn")?.addEventListener("click", async () => {
     const data = await exportReaderData();
     const blob = new Blob([data], { type: "application/json" });
     const a = document.createElement("a");
@@ -894,8 +1394,8 @@ function initDataManagement() {
     a.click();
     URL.revokeObjectURL(a.href);
   };
-  $("import-btn").onclick = () => $("import-file").click();
-  $("import-file").onchange = async (e) => {
+  $("import-btn")?.addEventListener("click", () => $("import-file")?.click());
+  $("import-file")?.addEventListener("change", async (e) => {
     const file = e.target.files[0];
     if (!file) return;
     try {
@@ -908,17 +1408,17 @@ function initDataManagement() {
     }
     e.target.value = "";
   };
-  $("clear-cache-btn").onclick = async () => {
+  $("clear-cache-btn")?.addEventListener("click", async () => {
     if (!confirm("Clear translation cache? This won't affect bookmarks or notes.")) return;
     await clearTemporaryCache();
     alert("Cache cleared.");
-  };
-  $("clear-prefs-btn").onclick = async () => {
+  });
+  $("clear-prefs-btn")?.addEventListener("click", async () => {
     if (!confirm("Reset reading preferences (theme, font size)?")) return;
     await clearReadingPreferences();
     alert("Preferences reset. Reload to apply.");
-  };
-  $("delete-all-btn").onclick = async () => {
+  });
+  $("delete-all-btn")?.addEventListener("click", async () => {
     if (!confirm("DELETE ALL saved data? This cannot be undone.")) return;
     if (!confirm("Are you absolutely sure?")) return;
     await deleteAllData();
@@ -984,7 +1484,8 @@ async function renderMyReading() {
 const CSS_MODULES = [
   "variables.css", "base.css", "layout.css", "toc.css",
   "sidebar-settings.css", "reader.css", "content.css",
-  "visuals.css", "responsive.css", "print.css"
+  "visuals.css", "responsive.css", "print.css",
+  "reading-modes.css", "codex-panels.css", "periodic-extra.css", "onboarding.css"
 ];
 
 async function concatCSS() {
@@ -1014,13 +1515,15 @@ async function loadChartData() {
 /* ---------- init ---------- */
 (async function init() {
   await concatCSS();
-  const [manifest, sidx, vidx, els, ids, per] = await Promise.all([
+  const [manifest, sidx, vidx, els, ids, per, russ, comb] = await Promise.all([
     getJSON("./manifest.json", null),
     getJSON("./search-index.json", { docs: [], related: [] }),
     getJSON("./visuals-index.json", { visuals: [] }),
     getJSON("./elements.json", { elements: [] }),
     getJSON("./identities.json", { identities: {} }),
     getJSON("./periodic.json", { cells: [] }),
+    getJSON("./data/russell-periodic.json", { octaves: [], frequency_ranges_hz: {} }),
+    getJSON("./data/combined-periodic.json", { overlay: [] }),
   ]);
   if (!manifest) {
     $("book-status").textContent = "Could not load the book manifest. Is the preview server running?";
@@ -1033,37 +1536,44 @@ async function loadChartData() {
   elements = els.elements || [];
   identities = ids.identities || {};
   periodic = per;
+  russellData = russ;
+  combinedData = comb;
   await loadElements118();
   await loadChartData();
   buildTOC(manifest);
-  initChrome();
-  initSearch();
-  initStudio();
-  initAtlas();
-  initScrollSave();
-  initBookmarks();
-  initHighlights();
-  initDataManagement();
-  initCitations();
-  /* Hover glossary */
-  initGlossary();
-  /* Charts: wait for Chart.js to load */
-  function tryInitCharts() {
-    if (typeof Chart !== "undefined" && chartData) {
-      const charts = initCharts({ $, chartData });
-      if (charts && chartData.abundanceDatasets) {
-        if (chartData.abundanceDatasets.universe) charts.renderAbundancePie("chart-cosmic", chartData.abundanceDatasets.universe);
-        if (chartData.abundanceDatasets.crust) charts.renderAbundancePie("chart-crust", chartData.abundanceDatasets.crust);
-        if (chartData.abundanceDatasets.human) charts.renderAbundancePie("chart-human", chartData.abundanceDatasets.human);
-        charts.renderRadar("chart-radar");
+  const safeInit = (fn, label) => { try { fn(); } catch (e) { console.error("MAT init error:", label, e); } };
+  safeInit(initChrome, "initChrome");
+  safeInit(initSearch, "initSearch");
+  safeInit(initStudio, "initStudio");
+  safeInit(initAtlas, "initAtlas");
+  safeInit(initScrollSave, "initScrollSave");
+  safeInit(initBookmarks, "initBookmarks");
+  safeInit(initHighlights, "initHighlights");
+  safeInit(initDataManagement, "initDataManagement");
+  safeInit(initCitations, "initCitations");
+  safeInit(initReadingModes, "initReadingModes");
+  safeInit(initReadSelection, "initReadSelection");
+  safeInit(initPubPreviews, "initPubPreviews");
+  safeInit(initOnboarding, "initOnboarding");
+  safeInit(initGlossary, "initGlossary");
+  safeInit(() => {
+    function tryInitCharts() {
+      if (typeof Chart !== "undefined" && chartData) {
+        const charts = initCharts({ $, chartData });
+        if (charts && chartData.abundanceDatasets) {
+          if (chartData.abundanceDatasets.universe) charts.renderAbundancePie("chart-cosmic", chartData.abundanceDatasets.universe);
+          if (chartData.abundanceDatasets.crust) charts.renderAbundancePie("chart-crust", chartData.abundanceDatasets.crust);
+          if (chartData.abundanceDatasets.human) charts.renderAbundancePie("chart-human", chartData.abundanceDatasets.human);
+          charts.renderRadar("chart-radar");
+        }
+      } else {
+        setTimeout(tryInitCharts, 200);
       }
-    } else {
-      setTimeout(tryInitCharts, 200);
     }
-  }
-  tryInitCharts();
+    tryInitCharts();
+  }, "initCharts");
   window.addEventListener("hashchange", routeFromHash);
   routeFromHash();
-  renderCoverHistory();
-  renderMyReading();
+  safeInit(renderCoverHistory, "renderCoverHistory");
+  safeInit(renderMyReading, "renderMyReading");
 })();
