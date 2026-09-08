@@ -1,0 +1,65 @@
+registry_id: "MAT:0002:REG:QUANTUM-FLUIDS"
+record_id: "MAT:0002"
+version: "1.0.0"
+
+helium_4:
+
+  isotope_id: "MAT:0002:ISO:He-4"
+  statistics: "BOSONIC"
+
+  phases:
+
+    He_I:
+      class: "NORMAL-LIQUID"
+      isotope: "4He"
+      phase_transition_boundary: "LAMBDA-LINE"
+
+    He_II:
+      class: "SUPERFLUID"
+      isotope: "4He"
+      collective_quantum_state: true
+      phase_transition_boundary: "LAMBDA-LINE"
+
+  lower_lambda_reference:
+    temperature: 2.1768
+    unit: "K"
+    pressure: 5041.8
+    pressure_unit: "Pa"
+    source_id: "SRC-000025"
+
+  important_phenomena:
+    - superfluid_flow
+    - quantized_vortices
+    - second_sound
+    - collective_excitations
+    - fountain_effect
+
+helium_3:
+
+  isotope_id: "MAT:0002:ISO:He-3"
+  statistics: "FERMIONIC"
+
+  normal_fluid:
+    equation_of_state_source: "SRC-000026"
+
+  superfluid:
+    exists: true
+    mechanism_class: "PAIRED-FERMION-CONDENSATE"
+    discovered: 1972
+
+    principal_phases:
+      - "A"
+      - "B"
+      - "A1 under appropriate field conditions"
+
+    transition_conditions:
+      temperature: "MILLIKELVIN-RANGE"
+      pressure_dependent: true
+      magnetic_field_dependent: true
+
+    source_id: "SRC-000029"
+
+rules:
+  helium3_and_helium4_share_one_superfluid_temperature: false
+  phase_transition_changes_element_identity: false
+  isotope_quantum_statistics_are_interchangeable: false

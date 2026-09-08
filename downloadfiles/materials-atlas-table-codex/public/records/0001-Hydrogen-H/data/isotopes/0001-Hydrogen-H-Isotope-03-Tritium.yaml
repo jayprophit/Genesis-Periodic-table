@@ -1,0 +1,46 @@
+isotope_id: "MAT:0001:ISO:H-3"
+parent_id: "MAT:0001"
+name: "Tritium"
+notation: "3H"
+common_symbol: "T"
+
+nucleus:
+  protons: 1
+  neutrons: 2
+  mass_number: 3
+  spin_parity: "1/2+"
+
+relative_atomic_mass:
+  value: 3.0160492779
+  uncertainty: 0.0000000024
+  unit: "u"
+  source_id: "SRC-000006"
+  source_alias: "SRC-H-002"
+
+stability:
+  status: "RADIOACTIVE"
+
+  half_life:
+    value: 12.32
+    uncertainty: 0.02
+    unit: "year"
+    source_id: "SRC-000008"
+    source_alias: "SRC-H-004"
+
+decay:
+  mode: "BETA-MINUS"
+  branching_fraction: 1.0
+  daughter: "MAT:0002:ISO:He-3"
+
+derived_calculations:
+  - "MAT:0001:CALC:001"
+
+nuclear_relationships:
+  - type: "FUSION-REACTANT"
+    with: "MAT:0001:ISO:H-2"
+
+safety:
+  radioactive: true
+  isotope_specific_controls_required: true
+
+status: "RESEARCHED"

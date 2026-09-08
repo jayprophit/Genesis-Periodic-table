@@ -1,0 +1,58 @@
+molecule_id: "MAT:0008:MOL:O3"
+parent_id: "MAT:0008"
+
+formula: "O3"
+
+geometry:
+  type: "BENT"
+  point_group: "C2v"
+
+  O_O_distance:
+    value: 1.278
+    unit: "angstrom"
+
+  O_O_O_angle:
+    value: 116.8
+    unit: "degree"
+
+vibrations:
+
+  symmetric_stretch:
+    approximate_value: 1103
+    unit: "cm-1"
+
+  bend:
+    approximate_value: 701
+    unit: "cm-1"
+
+  antisymmetric_stretch:
+    approximate_value: 1042
+    unit: "cm-1"
+
+atmospheric_formation:
+
+  stage_1:
+    "O2 + photon -> 2O"
+
+  stage_2:
+    "O + O2 + M -> O3 + M"
+
+  environment_variables:
+    - photon_wavelength
+    - altitude
+    - pressure
+    - temperature
+    - collision_partner
+
+roles:
+  stratosphere:
+    ultraviolet_absorption: true
+
+  troposphere:
+    air_pollutant_and_oxidant: true
+
+rules:
+  stratospheric_and_tropospheric_contexts_are_distinct: true
+  O3_property_equals_O2_property: false
+
+source_id: "SRC-000130"

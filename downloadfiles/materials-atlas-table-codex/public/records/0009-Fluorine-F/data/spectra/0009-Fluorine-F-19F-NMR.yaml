@@ -1,0 +1,42 @@
+registry_id: "MAT:0009:REG:F19-NMR"
+isotope_id: "MAT:0009:ISO:F-19"
+
+nuclear_spin:
+  value: "1/2"
+
+natural_isotopic_fraction:
+  value: 1
+
+NMR_active: true
+
+resonance:
+
+  equation:
+    "nu = (gamma / 2pi) * B0"
+
+  frequency:
+    status: "FIELD-DEPENDENT"
+
+  chemical_shift:
+    reference_required: true
+    reference_scale_or_standard_required: true
+
+advantages:
+  - effectively_monoisotopic_natural_fluorine
+  - spin_one_half
+  - high_NMR_sensitivity
+  - broad_chemical_environment_information
+
+applications:
+  - organic_fluorine
+  - pharmaceuticals
+  - fluoropolymers
+  - fluoride_materials
+  - molten_salts
+  - battery_materials
+  - reaction_monitoring
+
+rules:
+  19F_NMR_frequency_is_not_constant_without_B0: true
+  chemical_shift_requires_reference_context: true
+  one_isotope_does_not_mean_one_NMR_peak: true

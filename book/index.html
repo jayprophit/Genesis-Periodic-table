@@ -6,7 +6,7 @@
 <title>MAT Codex — Materials Atlas Table</title>
 <meta property="og:title" content="MAT Codex — Materials Atlas Table"><meta property="og:description" content="A source-led atlas of matter, materials, states and transformations. Explore elements, material states and transformations through their properties, conditions and evidence."><meta property="og:type" content="website"><meta property="og:site_name" content="MAT Codex"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MAT Codex — Materials Atlas Table"><meta name="twitter:description" content="A source-led atlas of matter, materials, states and transformations.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Materials Atlas Table Codex","description":"A source-led atlas of matter, materials, states and transformations.","author":{"@type":"Person","name":"Jay Powe"},"publisher":{"@type":"Organization","name":"MAT Codex"},"inLanguage":"en","genre":"Science","about":[{"@type":"Thing","name":"Materials Science"},{"@type":"Thing","name":"Chemistry"},{"@type":"Thing","name":"Physics"}]}</script>
-<link id="styles-link" rel="stylesheet" href="./styles.css"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
+<link id="styles-link" rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/reader-overrides.css?v=4"><link rel="stylesheet" href="./styles/popup-sections.css"><link rel="stylesheet" href="./styles/periodic-extra.css"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
 <script src="./math-config.js"></script><script defer src="./vendor/tex-svg.js"></script><script defer src="./vendor/chart.min.js"></script>
 </head>
 <body class="light">
@@ -21,12 +21,12 @@
   </div>
   <div id="search-status" class="sr-only" role="status"></div><div id="results" hidden aria-label="Search results"></div>
   <nav id="toc" aria-label="Table of contents"></nav>
-  <details id="studio" class="reader-settings"><summary>Listen, translate & reading tools</summary><p id="studio-chapter">Open a chapter to begin.</p>
-    <label>Voice<select id="voice" aria-label="Reading voice"></select></label><label>Speech rate<select id="rate"><option value="0.9">0.9×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><div class="button-row"><button id="speak-btn">Read aloud</button><button id="stop-btn">Stop</button></div>
-    <label>Translate into<select id="lang"><option value="">Choose language…</option><option value="ar">Arabic</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="nl">Dutch</option><option value="fr">French</option><option value="de">German</option><option value="hi">Hindi</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="es">Spanish</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option></select></label>
-    <p class="tool-note">Translate sends this chapter’s prose to MyMemory. Machine translations appear beside the English source. Equations, tables and citations retain their original wording.</p><div class="button-row"><button id="translate-btn">Translate prose</button><button id="clear-translation">Clear translation</button></div><p id="speech-status" role="status" class="tool-note"></p>
-  </details>
-  <footer class="side-foot">
+  <footer id="side-foot" class="side-foot">
+    <details id="studio" class="reader-settings"><summary>Listen, translate & reading tools</summary><p id="studio-chapter">Open a chapter to begin.</p>
+      <label>Voice<select id="voice" aria-label="Reading voice"></select></label><label>Speech rate<select id="rate"><option value="0.9">0.9×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><div class="button-row"><button id="speak-btn">Read aloud</button><button id="stop-btn">Stop</button></div>
+      <label>Translate into<select id="lang"><option value="">Choose language…</option><option value="ar">Arabic</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="nl">Dutch</option><option value="fr">French</option><option value="de">German</option><option value="hi">Hindi</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="es">Spanish</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option></select></label>
+      <p class="tool-note">Translate sends this chapter’s prose to MyMemory. Machine translations appear beside the English source. Equations, tables and citations retain their original wording.</p><div class="button-row"><button id="translate-btn">Translate prose</button><button id="clear-translation">Clear translation</button></div><p id="speech-status" role="status" class="tool-note"></p>
+    </details>
     <details id="my-reading" class="reader-settings"><summary>My Reading</summary>
       <div id="my-bookmarks"><h4>Bookmarks</h4><div id="bookmarks-list"></div></div>
       <div id="my-notes"><h4>Notes</h4><div id="notes-list"></div></div>
@@ -50,13 +50,15 @@
       <div class="cover-diagram" aria-label="Conceptual illustration: a material state connects composition, structure, conditions, processes and evidence. This is not a measured model." role="img"><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div><span class="orbit-word w1">Composition</span><span class="orbit-word w2">Structure</span><span class="orbit-word w3">Conditions</span><span class="orbit-word w4">Process</span><span class="orbit-word w5">Evidence</span><div class="state-core"><small>MAT</small><strong>M<span>i</span></strong><small>Material state</small></div><p>Composition → state → possibility<br><span>Conceptual illustration</span></p></div>
     </div>
     <div class="cover-meta"><span><strong id="record-count">…</strong> records in this edition</span><span><strong id="cover-range">…</strong> chemical elements</span><span><strong>0000</strong> <span id="cover-origin">origin reference</span></span></div>
-    <section class="atlas-directory" aria-labelledby="atlas-title"><div class="section-heading"><div><p class="kicker">Begin with an element</p><h2 id="atlas-title">Material Atlas Table</h2></div><button id="periodic-cover">Open periodic table →</button></div><div id="element-cards" class="element-cards"></div></section>
+    <section class="atlas-directory" aria-labelledby="atlas-title"><div class="section-heading"><div><p class="kicker">Begin with an element</p><h2 id="atlas-title">Material Atlas Table</h2></div><button id="periodic-cover">Open periodic table →</button></div><div class="atlas-tools"><label for="atlas-filter">Find an element</label><input id="atlas-filter" type="search" placeholder="Name, symbol, or atomic number" autocomplete="off"><span id="atlas-filter-status" role="status">119 entries</span></div><div class="atlas-key" aria-label="Material Atlas Table key"><span><i class="key-swatch key-standard"></i>Element record</span><span><i class="key-swatch key-f"></i>f-block element</span><span>Click a card to open its record</span></div><div id="element-cards" class="element-cards"></div></section>
     <section class="collection-guide" aria-label="Evidence collections"><div><span class="evidence-label core">MAT Core Data</span><p>Reference properties, conditions, equations and traceable sources. Individual values retain their evidence status.</p></div><div><span class="evidence-label research">Research / Emerging</span><p>Models, predictions and developing results, with their validation limits visible.</p></div><div><span class="evidence-label claims">Historical / Alternative / Claims</span><p>Original ideas and historical accounts, preserved with provenance and separate from measured data.</p></div></section>
     <p class="cover-note">An evolving reference. Record coverage and scientific certainty are different measures. Author material, contributors and source history remain part of the book.</p>
     <section class="data-viz-section" aria-labelledby="viz-title"><div class="section-heading"><div><p class="kicker">Data in context</p><h2 id="viz-title">Elemental Distributions</h2></div></div>
     <div class="viz-grid">
-      <div class="viz-card"><h3>Cosmic Abundance</h3><div class="chart-container"><canvas id="chart-cosmic"></canvas></div></div>
+      <div class="viz-card"><h3>Space / cosmic matter</h3><div class="chart-container"><canvas id="chart-cosmic"></canvas></div></div>
       <div class="viz-card"><h3>Earth's Crust</h3><div class="chart-container"><canvas id="chart-crust"></canvas></div></div>
+      <div class="viz-card"><h3>Sea water</h3><div class="chart-container"><canvas id="chart-ocean"></canvas></div></div>
+      <div class="viz-card"><h3>Air</h3><div class="chart-container"><canvas id="chart-atmosphere"></canvas></div></div>
       <div class="viz-card"><h3>Human Body</h3><div class="chart-container"><canvas id="chart-human"></canvas></div></div>
       <div class="viz-card"><h3>Carbon Allotropes</h3><div class="chart-container"><canvas id="chart-radar"></canvas></div></div>
     </div></section>
@@ -81,10 +83,26 @@
 <div class="periodic-controls"><label>Color by: <select id="heatmap-mode"><option value="">Default</option><option value="electronegativity">Electronegativity</option><option value="ionizationEnergy">Ionization Energy</option><option value="atomicWeight">Atomic Weight</option></select></label></div>
 <div class="table-mode-bar" role="tablist"><button data-table="standard" class="active" role="tab">Standard (IUPAC)</button><button data-table="russell" role="tab">Russell Octave</button><button data-table="overlay" role="tab">Combined Overlay</button></div>
 <div class="periodic-scroll"><div id="periodic-grid"></div><div id="russell-table" hidden></div><div id="overlay-table" hidden></div></div>
+<section class="russell-reference" aria-labelledby="russell-reference-title"><div class="section-heading"><div><p class="kicker">Downloaded references</p><h3 id="russell-reference-title">Russell visual studies</h3></div></div><p class="tool-note">Historical reference images are kept separate from the MAT redraws. Select an image for a larger view, zoom, download, or a new tab.</p><div class="russell-reference-grid">
+<figure class="visual-open"><img src="./reference-visuals/walter russel.webp" alt="Walter Russell reference portrait and periodic model"><figcaption>Walter Russell reference</figcaption></figure>
+<figure class="visual-open"><img src="./reference-visuals/angular form walter russel.png" alt="Angular form Walter Russell periodic diagram"><figcaption>Angular form study 1</figcaption></figure>
+<figure class="visual-open"><img src="./reference-visuals/angular form walter russel2.png" alt="Angular form Walter Russell periodic diagram, alternate view"><figcaption>Angular form study 2</figcaption></figure>
+<figure class="visual-open"><img src="./reference-visuals/angular form walter russel3.png" alt="Angular form Walter Russell periodic diagram, compact view"><figcaption>Angular form study 3</figcaption></figure>
+<figure class="visual-open"><img src="./reference-visuals/angular form walter russel4.png" alt="Angular form Walter Russell periodic diagram, extended view"><figcaption>Angular form study 4</figcaption></figure>
+</div></section>
 <div id="element-dossier" class="element-dossier" hidden></div>
 <p class="tool-note">Atomic number and symbol locate each element. MAT:0000 is a separate reference state.</p><a id="origin-link">Open Origin State (0000) →</a></dialog>
 <dialog id="cite-dialog" aria-labelledby="cite-title"><h2 id="cite-title">Export Citation</h2><p>Select a format:</p>
 <div class="cite-options"><button id="cite-apa">APA</button><button id="cite-bibtex">BibTeX</button><button id="cite-ris">RIS</button></div>
 <textarea id="cite-output" rows="6" readonly></textarea><div class="button-row"><button id="cite-copy">Copy</button><button id="cite-close">Close</button></div></dialog>
-<script type="module" src="./book.js"></script>
+<dialog id="visual-dialog" class="visual-dialog" aria-labelledby="visual-title">
+  <div class="dialog-heading"><div><p class="kicker">Visual viewer</p><h2 id="visual-title">Image</h2></div><button id="visual-close" type="button">Close ×</button></div>
+  <div class="visual-stage"><img id="visual-image" alt=""><span id="visual-empty" hidden>Image unavailable.</span></div>
+  <p id="visual-caption" class="tool-note"></p>
+  <div class="visual-controls" aria-label="Image controls">
+    <button type="button" data-visual-action="zoom-out">−</button><button type="button" data-visual-action="reset">Reset</button><button type="button" data-visual-action="zoom-in">+</button><button type="button" data-visual-action="fit">Fit</button>
+    <a id="visual-download" download>Download</a><a id="visual-new" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
+  </div>
+</dialog>
+<script type="module" src="./book.js?v=2"></script>
 </body></html>

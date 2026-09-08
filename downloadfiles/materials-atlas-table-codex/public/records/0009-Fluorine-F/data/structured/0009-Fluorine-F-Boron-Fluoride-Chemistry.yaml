@@ -1,0 +1,58 @@
+registry_id: "MAT:0009:REG:BORON-FLUORIDES"
+record_id: "MAT:0009"
+
+BF3:
+
+  id: "MAT:CMP:BF3"
+
+  parents:
+    - "MAT:0005"
+    - "MAT:0009"
+
+  formula: "BF3"
+
+  geometry:
+    idealized: "TRIGONAL-PLANAR"
+    point_group: "D3h"
+    F_B_F_angle:
+      approximate_value: 120
+      unit: "degree"
+
+  formal_oxidation_states:
+    B: 3
+    F: -1
+
+  electronic_role:
+    Lewis_acid: true
+    electron_pair_acceptor: true
+
+  source_id: "SRC-000180"
+
+BF4_minus:
+
+  id: "MAT:ION:BF4-"
+
+  formula: "BF4-"
+
+  geometry:
+    idealized: "TETRAHEDRAL"
+    point_group: "Td"
+
+  formal_oxidation_states:
+    B: 3
+    F: -1
+
+  relationship:
+    "BF3 + F- -> BF4-"
+
+  contexts:
+    - salts
+    - electrolytes
+    - ionic_liquids
+    - coordination_chemistry
+
+rules:
+  BF3_geometry_equals_BF4_geometry: false
+  Lewis_acidity_is_molecular_context_dependent: true
+  BF3_property_equals_elemental_boron_property: false
+  BF3_property_equals_elemental_fluorine_property: false

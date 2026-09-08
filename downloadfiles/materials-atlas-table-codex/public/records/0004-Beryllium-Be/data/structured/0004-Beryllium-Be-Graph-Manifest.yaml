@@ -1,0 +1,61 @@
+registry_id: "MAT:0004:REG:GRAPHS"
+record_id: "MAT:0004"
+version: "1.0.0"
+
+graphs:
+
+  - graph_id: "MAT:0004:GRAPH:001"
+    filename: "0004-Beryllium-Be-GRAPH-001-Isotope-Lifetime-Map.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-001-Isotope-Lifetime-Map.csv"
+    source_id: "SRC-000008"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0004:GRAPH:002"
+    filename: "0004-Beryllium-Be-GRAPH-002-Atomic-Energy-Levels.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-002-Atomic-Energy-Levels.csv"
+    source_id: "SRC-000005"
+    status: "DATA-EXTRACTION-REQUIRED"
+
+  - graph_id: "MAT:0004:GRAPH:003"
+    filename: "0004-Beryllium-Be-GRAPH-003-UV-Spectrum.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-003-UV-Spectrum.csv"
+    source_id: "SRC-000005"
+    status: "READY-FOR-DATA-EXTRACTION"
+
+  - graph_id: "MAT:0004:GRAPH:004"
+    filename: "0004-Beryllium-Be-GRAPH-004-Specific-Stiffness.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-004-Specific-Stiffness.csv"
+    calculation_id: "MAT:0004:CALC:001"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0004:GRAPH:005"
+    filename: "0004-Beryllium-Be-GRAPH-005-Be8-Decay-Energy.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-005-Be8-Decay-Energy.csv"
+    calculation_id: "MAT:0004:CALC:002"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0004:GRAPH:006"
+    filename: "0004-Beryllium-Be-GRAPH-006-Nuclear-Reaction-Energetics.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-006-Nuclear-Reaction-Energetics.csv"
+    calculations:
+      - "MAT:0004:CALC:003"
+      - "MAT:0004:CALC:004"
+    status: "GENERATED"
+
+  - graph_id: "MAT:0004:GRAPH:007"
+    filename: "0004-Beryllium-Be-GRAPH-007-Xray-Attenuation.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-007-Xray-Attenuation.csv"
+    status: "PHOTON-ATTENUATION-DATASET-REQUIRED"
+
+  - graph_id: "MAT:0004:GRAPH:008"
+    filename: "0004-Beryllium-Be-GRAPH-008-BeO-Thermal-Conductivity.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-008-BeO-Thermal-Conductivity.csv"
+    source_ids:
+      - "SRC-000057"
+      - "SRC-000058"
+    status: "READY-FOR-DATA-EXTRACTION"
+
+  - graph_id: "MAT:0004:GRAPH:009"
+    filename: "0004-Beryllium-Be-GRAPH-009-Pressure-Phase-Map.svg"
+    data_filename: "0004-Beryllium-Be-GRAPH-009-Pressure-Phase-Map.csv"
+    status: "HIGH-PRESSURE-DATASET-REQUIRED"

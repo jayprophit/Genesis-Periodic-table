@@ -188,7 +188,8 @@ function buildTOC(manifest) {
     toc.appendChild(h);
     flat.filter((d) => d.section === sec.section).forEach((d) => toc.appendChild(chapterLink(d)));
   });
-  toc.appendChild(guide);
+  const sideFoot = $("side-foot");
+  sideFoot.prepend(guide);
   $("count").textContent = `${flat.length} chapters · ${elements.length || ""} records`;
 }
 
@@ -271,13 +272,14 @@ function fillSupplement(doc) {
         let html = `<h2>Record visuals — ${esc(rec.number)}</h2>`;
         if (gen.length) html += `<div class="vis-grid">` + gen.map((it) => {
           const cap = it.file.replace(/^.*-(FIG|DIAGRAM|GRAPH)-/, "").replace(/\.svg$/i, "").replace(/-/g, " ");
-          return `<figure class="vis-cell"><img src="../${entry.dir}/${it.path}${it.file}" alt="${esc(it.file)}"><figcaption>${esc(cap)}</figcaption></figure>`;
+          return `<figure class="vis-cell"><button class="visual-open" type="button" aria-label="Open ${esc(cap)} in image viewer"><img src="../${entry.dir}/${it.path}${it.file}" alt="${esc(it.file)}"><figcaption>${esc(cap)}</figcaption></button></figure>`;
         }).join("") + `</div>`;
         if (pend.length) html += `<details class="vis-pend"><summary>Pending visuals (${pend.length}) — not yet generated</summary><ul>` +
           pend.map((it) => `<li>${esc(it.file)} — <em>${esc(String(it.status).replace(/-/g, " "))}</em></li>`).join("") + `</ul></details>`;
         s.innerHTML = html;
         sup.appendChild(s);
       }
+
     }
   }
   // External resources: encyclopedia, papers, video, chapter citations.
@@ -335,6 +337,87 @@ function fillSupplement(doc) {
     };
   }
 }
+function enhanceChapterSections() {
+  const page = $("page");
+  const headings = [...page.children].filter((element) => element.matches("h2"));
+  headings.forEach((heading, index) => {
+    const parent = heading.parentNode;
+    let next = heading.nextSibling;
+    const details = document.createElement("details");
+    details.className = "chapter-section";
+    details.open = index === 0;
+    const summary = document.createElement("summary");
+    summary.appendChild(heading);
+    details.appendChild(summary);
+    while (next && !(next.nodeType === 1 && next.matches("h2"))) {
+      const current = next;
+      next = next.nextSibling;
+      details.appendChild(current);
+    }
+    parent.insertBefore(details, next);
+  });
+}
+
+function initVisualViewer() {
+  const dlg = $("visual-dialog");
+  const image = $("visual-image");
+  const title = $("visual-title");
+  const caption = $("visual-caption");
+  const download = $("visual-download");
+  const newTab = $("visual-new");
+  let scale = 1;
+  const update = () => { image.style.transform = `scale(${scale})`; image.dataset.zoom = `${Math.round(scale * 100)}%`; };
+  const fit = () => {
+    const stage = image.parentElement;
+    if (!image.naturalWidth || !image.naturalHeight) return;
+    scale = Math.min(1, (stage.clientWidth - 36) / image.naturalWidth, (stage.clientHeight - 36) / image.naturalHeight);
+    update();
+  };
+  const open = (source) => {
+    const sourceImage = source.querySelector("img") || source;
+    const label = source.querySelector("figcaption")?.textContent?.trim() || sourceImage.alt || "Image";
+    title.textContent = label;
+    caption.textContent = sourceImage.alt && sourceImage.alt !== label ? sourceImage.alt : "Use the controls to zoom, fit, download, or open the original visual.";
+    image.src = sourceImage.currentSrc || sourceImage.src;
+    image.alt = sourceImage.alt || label;
+    download.href = image.src;
+    newTab.href = image.src;
+    scale = 1;
+    image.onload = fit;
+    update();
+    dlg.showModal();
+  };
+  $("page").addEventListener("click", (event) => {
+    const target = event.target.closest("img");
+    if (target && !target.closest("canvas")) { event.preventDefault(); open(target); }
+  });
+  $("supplement").addEventListener("click", (event) => {
+    const target = event.target.closest(".visual-open");
+    if (target) { event.preventDefault(); open(target); }
+  });
+  $("periodic-dialog")?.addEventListener("click", (event) => {
+    const target = event.target.closest?.(".visual-open");
+    if (target) { event.preventDefault(); open(target); }
+  });
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest?.("#periodic-dialog .visual-open");
+    if (target) { event.preventDefault(); open(target); }
+  });
+  document.querySelectorAll("#periodic-dialog .visual-open").forEach((target) => {
+    target.addEventListener("click", (event) => { event.preventDefault(); open(target); });
+  });
+  $("visual-close").onclick = () => dlg.close();
+  dlg.addEventListener("click", (event) => { if (event.target === dlg) dlg.close(); });
+  dlg.querySelectorAll("[data-visual-action]").forEach((button) => button.addEventListener("click", () => {
+    const action = button.dataset.visualAction;
+    if (action === "zoom-in") scale = Math.min(4, scale + 0.25);
+    if (action === "zoom-out") scale = Math.max(0.25, scale - 0.25);
+    if (action === "reset") scale = 1;
+    if (action === "fit") fit();
+    update();
+  }));
+  image.addEventListener("wheel", (event) => { event.preventDefault(); scale = Math.max(0.25, Math.min(4, scale + (event.deltaY < 0 ? 0.15 : -0.15))); update(); }, { passive: false });
+}
 function fillPagers(doc) {
   const i = flat.findIndex((d) => d.id === doc.id);
   const set = (el, j, label) => {
@@ -388,6 +471,7 @@ async function showChapter(id, anchor) {
     if (!res.ok) throw new Error(res.status);
     const { html, outline } = renderDocument(await res.text(), doc.id, { docs: flat });
     page.innerHTML = html;
+    enhanceChapterSections();
     const jump = $("jump");
     jump.innerHTML = `<option value="">On this page</option>`;
     outline.forEach((o) => {
@@ -551,12 +635,39 @@ function initAtlas() {
   const cards = $("element-cards");
   if (!cards) return;
   cards.innerHTML = "";
+  const periodicByZ = new Map((periodic.cells || []).filter((cell) => cell.z).map((cell) => [cell.z, cell]));
   elements.forEach((e) => {
     const a = document.createElement("a");
     a.className = "element-card";
+    a.dataset.search = `${e.number} ${e.z || ""} ${e.symbol} ${e.name}`.toLowerCase();
     a.href = route(e.chapter);
     a.innerHTML = `<small>${esc(e.number)}${e.z ? " · Z " + e.z : ""}</small><strong>${esc(e.symbol)}</strong><span>${esc(e.name)}</span>`;
+    const cell = periodicByZ.get(Number(e.z));
+    if (cell?.f) {
+      a.classList.add("f-block");
+      a.style.gridColumn = String(3 + cell.fOrder);
+      a.style.gridRow = String(cell.f === "lanthanide" ? 9 : 10);
+    } else if (cell?.group && cell?.period) {
+      a.style.gridColumn = String(cell.group);
+      a.style.gridRow = String(cell.period);
+    } else {
+      a.classList.add("atlas-origin");
+      a.style.gridColumn = "1 / -1";
+      a.style.gridRow = "11";
+    }
     cards.appendChild(a);
+  });
+  const filter = $("atlas-filter");
+  const filterStatus = $("atlas-filter-status");
+  filter?.addEventListener("input", () => {
+    const query = filter.value.trim().toLowerCase();
+    let visible = 0;
+    cards.querySelectorAll(".element-card").forEach((card) => {
+      const matches = !query || card.dataset.search.includes(query);
+      card.hidden = !matches;
+      if (matches) visible++;
+    });
+    if (filterStatus) filterStatus.textContent = query ? `${visible} matching ${visible === 1 ? "entry" : "entries"}` : `${elements.length} entries`;
   });
   $("record-count").textContent = elements.length;
   const zs = elements.filter((e) => e.z).map((e) => parseInt(e.number, 10));
@@ -611,6 +722,12 @@ function initAtlas() {
       grid.appendChild(cell);
     });
     ["lanthanide", "actinide"].forEach((series, r) => {
+      const label = document.createElement("div");
+      label.className = "f-block-label";
+      label.style.gridColumn = "1 / 3";
+      label.style.gridRow = String(9 + r);
+      label.textContent = series === "lanthanide" ? "Lanthanides" : "Actinides";
+      grid.appendChild(label);
       allCells.filter((c) => c.f === series).forEach((c) => {
         const el = elByZ.get(c.z);
         const cell = document.createElement(c.published ? "a" : "span");
@@ -692,7 +809,9 @@ function initAtlas() {
       // Octave header
       const hdr = document.createElement("div");
       hdr.className = "russell-octave-label";
-      hdr.innerHTML = `<span class="oct">Octave ${oct.octave}</span> <span class="spectrum">${esc(oct.spectrum)}</span> <span class="freq-range">${esc(oct.wavelength_range_m)} m · ${esc(oct.frequency_range_hz.replace(/–/g,"–"))} Hz</span>`;
+      const wCount = oct.elements.filter((el) => el.russell_class.startsWith("W")).length;
+      const fCount = oct.elements.length - wCount;
+      hdr.innerHTML = `<span class="oct">Octave ${oct.octave}</span><span class="spectrum">${esc(oct.spectrum)}</span><span class="octave-count">${oct.elements.length} elements · W${wCount} / F${fCount}</span><span class="freq-range">${esc(oct.wavelength_range_m)} m · ${esc(oct.frequency_range_hz)} Hz</span>`;
       grid.appendChild(hdr);
       // Place elements
       const placed = new Set();
@@ -706,9 +825,11 @@ function initAtlas() {
         cell.style.gridColumn = String(stdCell.group);
         cell.style.gridRow = String(stdCell.period);
         if (stdCell.published) cell.href = route(stdCell.chapter);
-        cell.innerHTML = `<span class="z">${el.z}</span><span class="sym">${esc(el.symbol)}</span><span class="freq">${esc(cls)}</span>`;
+        cell.innerHTML = `<span class="z">${el.z}</span><span class="sym">${esc(el.symbol)}</span><span class="freq">${esc(cls)}</span><span class="sr-only">${esc(el.frequency_note || "")}</span>`;
         cell.title = `${esc(el.name)} · ${esc(cls)} · ${esc(oct.spectrum)}`;
         cell.dataset.z = el.z;
+        cell.dataset.octave = oct.octave;
+        cell.dataset.note = el.frequency_note || "";
         grid.appendChild(cell);
       });
       // Fill empty slots
@@ -1557,6 +1678,7 @@ async function loadChartData() {
   safeInit(initReadSelection, "initReadSelection");
   safeInit(initPubPreviews, "initPubPreviews");
   safeInit(initOnboarding, "initOnboarding");
+  safeInit(initVisualViewer, "initVisualViewer");
   safeInit(initGlossary, "initGlossary");
   safeInit(() => {
     function tryInitCharts() {
@@ -1565,6 +1687,8 @@ async function loadChartData() {
         if (charts && chartData.abundanceDatasets) {
           if (chartData.abundanceDatasets.universe) charts.renderAbundancePie("chart-cosmic", chartData.abundanceDatasets.universe);
           if (chartData.abundanceDatasets.crust) charts.renderAbundancePie("chart-crust", chartData.abundanceDatasets.crust);
+          if (chartData.abundanceDatasets.ocean) charts.renderAbundancePie("chart-ocean", chartData.abundanceDatasets.ocean);
+          if (chartData.abundanceDatasets.atmosphere) charts.renderAbundancePie("chart-atmosphere", chartData.abundanceDatasets.atmosphere);
           if (chartData.abundanceDatasets.human) charts.renderAbundancePie("chart-human", chartData.abundanceDatasets.human);
           charts.renderRadar("chart-radar");
         }

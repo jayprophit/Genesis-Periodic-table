@@ -1,0 +1,80 @@
+compound_id: "MAT:CMP:HF"
+
+parents:
+  - "MAT:0001"
+  - "MAT:0009"
+
+formula: "HF"
+
+gas_phase_molecule:
+
+  ground_state:
+    term: "X1Sigma+"
+
+  geometry:
+    type: "LINEAR"
+
+  equilibrium_bond_length:
+    value: 0.916808
+    unit: "angstrom"
+
+  omega_e:
+    value: 4138.32
+    unit: "cm-1"
+
+  B_e:
+    value: 20.9557
+    unit: "cm-1"
+
+  dipole_moment_v0_J1:
+    value: 1.82618
+    unit: "D"
+
+thermochemistry:
+
+  standard_gas_formation_enthalpy:
+    value: -273.30
+    uncertainty: 0.70
+    unit: "kJ/mol"
+    temperature:
+      value: 298.15
+      unit: "K"
+
+phase_reference:
+
+  boiling_point:
+    value: 292.7
+    unit: "K"
+
+  fusion_temperature:
+    approximate_value: 190
+    unit: "K"
+
+state_architecture:
+
+  - "HF(g)"
+  - "HF(l)"
+  - "ANHYDROUS-HF"
+  - "AQUEOUS-HF"
+  - "FLUORIDE/HF-MIXED-SOLUTION"
+  - "HYDROGEN-BONDED-HF-CLUSTERS"
+
+chemical_functions:
+  - acid_base_chemistry
+  - hydrogen_bonding
+  - silica_processing
+  - fluoride_chemistry
+  - spectroscopy
+
+safety:
+  classification: "SEVERE-CHEMICAL-HAZARD"
+  systemic_fluoride_toxicity: true
+  corrosive: true
+  compound_specific: true
+
+rules:
+  HF_gas_equals_aqueous_HF: false
+  HF_property_equals_elemental_F_property: false
+  acid_strength_requires_medium_definition: true
+
+source_id: "SRC-000169"

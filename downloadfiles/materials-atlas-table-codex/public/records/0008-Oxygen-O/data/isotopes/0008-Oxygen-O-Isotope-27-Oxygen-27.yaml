@@ -1,0 +1,61 @@
+isotope_id: "MAT:0008:ISO:O-27"
+parent_id: "MAT:0008"
+name: "Oxygen-27"
+notation: "27O"
+
+nucleus:
+  protons: 8
+  neutrons: 19
+  mass_number: 27
+
+spin_parity:
+  direct_measurement: "NOT-ESTABLISHED"
+  tentative_2023_assignment:
+    - "3/2+"
+    - "7/2-"
+
+relative_atomic_mass:
+  value: 27.04772
+  uncertainty: 0.00054
+  estimated_mass_table_value: true
+  unit: "u"
+  source_id: "SRC-000126"
+
+current_experimental_status:
+  status: "OBSERVED-NEUTRON-UNBOUND-RESONANCE"
+  first_direct_observation:
+    year: 2023
+    source_id: "SRC-000132"
+
+decay:
+  net_channel: "24O + 3n"
+  sequential_path:
+    - "27O -> 26O + n"
+    - "26O -> 24O + 2n"
+
+decay_energy:
+  value: 1.09
+  statistical_uncertainty: 0.04
+  systematic_uncertainty: 0.02
+  unit: "MeV"
+
+resonance_width:
+  relation: "UPPER-LIMIT"
+  value: 0.18
+  unit: "MeV"
+  confidence_interval_percent: 68
+
+historical_NUBASE2020_status:
+  half_life_limit:
+    relation: "LESS-THAN"
+    value: 260
+    unit: "ns"
+  classification: "PRE-2023-LIMIT-ENTRY"
+  superseded_for_observation_status: true
+
+source_ids:
+  - "SRC-000126"
+  - "SRC-000008"
+  - "SRC-000132"
+
+status: "CURRENT-RESEARCH"

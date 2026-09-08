@@ -1,0 +1,193 @@
+```yaml
+registry_id: "MAT:0000:REF-REGISTRY"
+record_id: "MAT:0000"
+version: "1.0.0"
+
+reference_states:
+
+  - reference_id: "MAT:0000:REF:ORIGIN"
+    code: "ORIGIN"
+    name: "Computational Coordinate Origin"
+    class: "COMPUTATIONAL"
+    physical_state: false
+    description: >
+      Zero coordinate used only after quantities have been transformed
+      into a compatible representation.
+    required_fields:
+      - coordinate_definition
+      - normalization
+      - dimensions
+    legacy_alias: "G0000"
+
+  - reference_id: "MAT:0000:REF:LAB"
+    code: "LAB"
+    name: "Laboratory Baseline"
+    class: "EXPERIMENTAL_REFERENCE"
+    physical_state: true
+    required_fields:
+      - temperature
+      - pressure
+      - atmosphere
+      - measurement_context
+    optional_fields:
+      - humidity
+      - electric_field
+      - magnetic_field
+      - radiation_background
+      - vibration
+      - gravity
+    legacy_alias: "G0000-LAB"
+
+  - reference_id: "MAT:0000:REF:THERMO"
+    code: "THERMO"
+    name: "Thermodynamic and Chemical Reference"
+    class: "THERMODYNAMIC_REFERENCE"
+    physical_state: true
+    required_fields:
+      - temperature
+      - pressure
+      - composition
+      - phase
+      - reference_convention
+    legacy_alias: "G0000-STP"
+    legacy_alias_status: "DEPRECATED-GENERIC-STP"
+
+  - reference_id: "MAT:0000:REF:T0"
+    code: "T0"
+    name: "Selected Temperature Reference"
+    class: "TEMPERATURE_REFERENCE"
+    physical_quantity: "thermodynamic_temperature"
+    canonical_unit: "K"
+    default_value: "UNDEFINED"
+    note: >
+      T0 is not automatically equal to 0 K.
+    legacy_alias: "G0000-T0"
+
+  - reference_id: "MAT:0000:REF:P0"
+    code: "P0"
+    name: "Selected Pressure Reference"
+    class: "PRESSURE_REFERENCE"
+    physical_quantity: "pressure"
+    canonical_unit: "Pa"
+    default_value: "UNDEFINED"
+    legacy_alias: "G0000-P0"
+
+  - reference_id: "MAT:0000:REF:E0"
+    code: "E0"
+    name: "Zero Specified Externally Applied Electric Field"
+    class: "ELECTRIC_FIELD_REFERENCE"
+    physical_quantity: "electric_field"
+    canonical_unit: "V/m"
+    nominal_external_value: 0
+    note: >
+      Does not assert absence of microscopic, internal,
+      background or quantum electromagnetic fields.
+    legacy_alias: "G0000-E0"
+
+  - reference_id: "MAT:0000:REF:B0"
+    code: "B0"
+    name: "Zero Specified Externally Applied Magnetic Flux Density"
+    class: "MAGNETIC_FIELD_REFERENCE"
+    physical_quantity: "magnetic_flux_density"
+    canonical_unit: "T"
+    nominal_external_value: 0
+    note: >
+      Distinct from intrinsic magnetic moments,
+      remanence, domains and environmental background fields.
+    legacy_alias: "G0000-B0"
+
+  - reference_id: "MAT:0000:REF:R0"
+    code: "R0"
+    name: "No Added Radiation Reference"
+    class: "RADIATION_REFERENCE"
+    default_value: "NO-SPECIFIED-ADDED-SOURCE"
+    note: >
+      Background radiation must still be characterized where relevant.
+    legacy_alias: "G0000-R0"
+
+  - reference_id: "MAT:0000:REF:N0"
+    code: "N0"
+    name: "No Added Atomic or Nuclear Species"
+    class: "SPECIES_ADDITION_REFERENCE"
+    default_value: "NO-SPECIFIED-ADDED-SPECIES"
+    note: >
+      Starting composition and environmental species remain explicit.
+    legacy_alias: "G0000-N0"
+
+  - reference_id: "MAT:0000:REF:C0"
+    code: "C0"
+    name: "No Added Chemical Reactant"
+    class: "CHEMICAL_REFERENCE"
+    default_value: "NO-SPECIFIED-ADDED-REACTANT"
+    required_fields:
+      - starting_composition
+    legacy_alias: "G0000-C0"
+
+  - reference_id: "MAT:0000:REF:S0"
+    code: "S0"
+    name: "Selected Unstrained Structural State"
+    class: "MECHANICAL_REFERENCE"
+    default_strain: 0
+    required_fields:
+      - strain_definition
+      - reference_geometry
+    legacy_alias: "G0000-S0"
+
+  - reference_id: "MAT:0000:REF:X0"
+    code: "X0"
+    name: "Process-Start State"
+    class: "PROCESS_REFERENCE"
+    required_fields:
+      - initial_state_id
+      - timestamp_or_process_origin
+      - conditions
+    legacy_alias: "G0000-X0"
+
+  - reference_id: "MAT:0000:REF:TIME0"
+    code: "TIME0"
+    name: "Temporal Origin"
+    class: "TIME_REFERENCE"
+    canonical_unit: "s"
+    default_value: 0
+    note: >
+      Defines elapsed time relative to a selected event;
+      it is not a universal cosmic time origin.
+
+  - reference_id: "MAT:0000:REF:VAC"
+    code: "VAC"
+    name: "Laboratory Vacuum Reference"
+    class: "VACUUM_REFERENCE"
+    physical_state: true
+    required_fields:
+      - pressure
+      - temperature
+    optional_fields:
+      - residual_gas_composition
+      - chamber_geometry
+      - electromagnetic_environment
+      - outgassing
+    note: >
+      Vacuum is characterized by physical conditions and is not
+      synonymous with literal nothingness.
+
+  - reference_id: "MAT:0000:REF:QV"
+    code: "QV"
+    name: "Quantum-Vacuum Reference"
+    class: "THEORETICAL_PHYSICAL_REFERENCE"
+    physical_state: "MODEL-DEPENDENT"
+    required_fields:
+      - theory
+      - fields
+      - background_spacetime
+      - boundary_conditions
+      - quantity_being_referenced
+    optional_fields:
+      - observer_frame
+      - renormalization_convention
+    note: >
+      Model-defined vacuum state. It is not classical empty space
+      and MAT does not define one universal QV state for all theories.
+    legacy_alias: "G0000-QV"
+```
+
+Then add the supporting reference table, calculations, relationships, validation tests and source notes.

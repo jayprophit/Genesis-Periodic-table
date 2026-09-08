@@ -1,0 +1,119 @@
+registry_id: "MAT:0005:REG:ALLOTROPES"
+record_id: "MAT:0005"
+version: "1.0.0"
+
+allotropes:
+
+  - id: "MAT:0005:ALLOTROPE:ALPHA-B12"
+    name: "alpha-rhombohedral Boron"
+    short_name: "alpha-B12"
+
+    crystal_family: "RHOMBOHEDRAL"
+
+    primary_structural_unit:
+      type: "B12-ICOSAHEDRON"
+      count_per_primitive_description: 1
+
+    electronic_class:
+      ambient: "SEMICONDUCTING"
+
+    scientific_status: "ESTABLISHED"
+
+    source_ids:
+      - "SRC-000075"
+
+  - id: "MAT:0005:ALLOTROPE:BETA-B106"
+    name: "beta-rhombohedral Boron"
+    short_name: "beta-B106"
+
+    crystal_family: "RHOMBOHEDRAL"
+
+    structure:
+      complexity: "VERY-HIGH"
+      partially_occupied_sites: true
+      intrinsic_disorder: true
+
+    B12_related_units: true
+
+    scientific_status: "ESTABLISHED"
+
+    source_ids:
+      - "SRC-000075"
+
+  - id: "MAT:0005:ALLOTROPE:GAMMA-B28"
+    name: "gamma-B28"
+    short_name: "gamma-B28"
+
+    crystal_family: "ORTHORHOMBIC"
+    space_group: "Pnnm"
+    atoms_per_cell: 28
+
+    structural_units:
+      - "B12-ICOSAHEDRON"
+      - "B2-PAIR"
+
+    topology:
+      approximate_description: "NaCl-type arrangement of B12 and B2 units"
+
+    bonding:
+      predominantly_covalent: true
+      partial_charge_transfer: true
+      charge_transfer_estimate:
+        approximate_delta: 0.48
+        caution: "MODEL/ANALYSIS-DEPENDENT"
+
+    pressure_stability_original_report:
+      minimum: 19
+      maximum: 89
+      unit: "GPa"
+
+    scientific_status: "ESTABLISHED"
+
+    source_id: "SRC-000069"
+
+  - id: "MAT:0005:ALLOTROPE:T-B52"
+    name: "tetragonal Boron family"
+    short_name: "t-B52"
+
+    crystal_family: "TETRAGONAL"
+    scientific_status: "ESTABLISHED-WITH-STRUCTURAL-COMPLEXITY"
+
+    source_id: "SRC-000075"
+
+  - id: "MAT:0005:ALLOTROPE:T-B192"
+    name: "tetragonal Boron"
+    short_name: "t-B192"
+
+    crystal_family: "TETRAGONAL"
+    scientific_status: "ESTABLISHED-ALLOTROPE-FAMILY"
+
+    source_id: "SRC-000075"
+
+  - id: "MAT:0005:ALLOTROPE:AMORPHOUS"
+    name: "Amorphous Boron"
+
+    crystal_family: "NONCRYSTALLINE"
+    long_range_periodicity: false
+
+    scientific_status: "ESTABLISHED"
+
+geometry_primitives:
+
+  B12_icosahedron:
+    geometry: "ICOSAHEDRAL"
+    atoms: 12
+    literal_fixed_regular_icosahedron: false
+
+    rule: >
+      Real B12 clusters are distorted quantum/material structures.
+      A perfect mathematical icosahedron is only an idealized descriptor.
+
+  B2_pair:
+    atoms: 2
+    important_in:
+      - "gamma-B28"
+
+rules:
+  boron_has_one_universal_crystal_structure: false
+  perfect_icosahedron_equals_real_cluster_geometry: false
+  phase_properties_are_interchangeable: false

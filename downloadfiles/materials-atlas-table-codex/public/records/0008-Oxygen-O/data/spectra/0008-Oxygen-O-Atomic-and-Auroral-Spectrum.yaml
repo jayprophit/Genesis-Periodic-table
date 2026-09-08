@@ -1,0 +1,114 @@
+registry_id: "MAT:0008:REG:ATOMIC-SPECTRUM"
+record_id: "MAT:0008"
+version: "1.0.0"
+
+O_I_metastable_lines:
+
+  green_5577:
+    wavelength_air:
+      observed: 557.734
+      ritz: 557.7339
+      unit: "nm"
+
+    emission:
+      upper:
+        configuration: "2s2 2p4"
+        term: "1S"
+        J: 0
+        energy:
+          value: 4.1897463
+          unit: "eV"
+
+      lower:
+        configuration: "2s2 2p4"
+        term: "1D"
+        J: 2
+        energy:
+          value: 1.9673642
+          unit: "eV"
+
+    transition_type: "E2"
+    Aki:
+      value: 1.26
+      unit: "s^-1"
+
+    contexts:
+      - aurora
+      - airglow
+      - low_density_atomic_oxygen
+
+  red_6300:
+    wavelength_air:
+      ritz: 630.0304
+      unit: "nm"
+
+    emission:
+      upper:
+        term: "1D"
+        J: 2
+        energy:
+          value: 1.9673642
+          unit: "eV"
+
+      lower:
+        term: "3P"
+        J: 2
+        energy:
+          value: 0
+          unit: "eV"
+
+    dominant_transition_type: "M1"
+
+    Aki:
+      value: 5.63e-3
+      unit: "s^-1"
+
+    contexts:
+      - aurora
+      - airglow
+      - thermosphere
+
+  red_6364:
+    wavelength_air:
+      ritz: 636.3776
+      unit: "nm"
+
+    emission:
+      upper:
+        term: "1D"
+        J: 2
+        energy:
+          value: 1.9673642
+          unit: "eV"
+
+      lower:
+        term: "3P"
+        J: 1
+        energy:
+          value: 0.0196224
+          unit: "eV"
+
+    dominant_transition_type: "M1"
+
+    Aki:
+      value: 1.82e-3
+      unit: "s^-1"
+
+  weak_6392:
+    wavelength_air:
+      ritz: 639.1733
+      unit: "nm"
+
+    transition:
+      upper: "1D2"
+      lower: "3P0"
+      type: "E2"
+
+source_id: "SRC-000143"
+
+rules:
+  auroral_line_equals_universal_oxygen_frequency: false
+  atomic_emission_equals_O2_vibration: false
+  atomic_emission_equals_ozone_vibration: false
+  forbidden_means_impossible: false
+  low_density_environment_affects_metastable_emission: true

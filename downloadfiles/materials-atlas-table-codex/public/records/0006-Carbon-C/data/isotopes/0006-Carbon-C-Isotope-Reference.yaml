@@ -1,0 +1,100 @@
+registry_id: "MAT:0006:REG:ISOTOPES"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+NIST_mass_range:
+  minimum_mass_number: 8
+  maximum_mass_number: 23
+  source_id: "SRC-000080"
+
+key_isotopes:
+
+  - isotope_id: "MAT:0006:ISO:C-11"
+    mass_number: 11
+    relative_atomic_mass:
+      value: 11.0114336
+      uncertainty: 0.0000010
+      unit: "u"
+    stability: "RADIOACTIVE"
+    principal_decay: "BETA-PLUS"
+    half_life_class: "ABOUT-20-MINUTES"
+    applications:
+      - PET
+      - radiotracing
+
+  - isotope_id: "MAT:0006:ISO:C-12"
+    mass_number: 12
+    relative_atomic_mass:
+      value: 12
+      exact_in_u: true
+    representative_isotopic_composition:
+      value: 0.9893
+      uncertainty: 0.0008
+    stability: "STABLE"
+    half_life: "NOT-APPLICABLE"
+    spin_parity: "0+"
+    measurement_reference: true
+
+  - isotope_id: "MAT:0006:ISO:C-13"
+    mass_number: 13
+    relative_atomic_mass:
+      value: 13.00335483507
+      uncertainty: 0.00000000023
+      unit: "u"
+    representative_isotopic_composition:
+      value: 0.0107
+      uncertainty: 0.0008
+    stability: "STABLE"
+    half_life: "NOT-APPLICABLE"
+    spin_parity: "1/2-"
+    NMR_active: true
+
+  - isotope_id: "MAT:0006:ISO:C-14"
+    mass_number: 14
+    relative_atomic_mass:
+      value: 14.0032419884
+      uncertainty: 0.0000000040
+      unit: "u"
+    stability: "RADIOACTIVE"
+    spin_parity: "0+"
+    principal_decay: "BETA-MINUS"
+    daughter: "MAT:0007:ISO:N-14"
+    daughter_status: "RESOLVED"
+
+    adopted_reference_half_life:
+      value: 5700
+      uncertainty: 30
+      unit: "y"
+      source_id: "SRC-000082"
+
+    applications:
+      - radiocarbon_dating
+      - tracer_science
+      - carbon_cycle_research
+
+remaining_isotope_children:
+  required_mass_numbers:
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+
+  detailed_NUBASE_extraction_status: "NEXT-BATCH"
+
+rules:
+  stable_half_life: "NOT-APPLICABLE"
+  isotope_abundance_is_universal: false
+  radiocarbon_convention_equals_physical_half_life: false
+  mass_table_entry_equals_stable_bound_nuclide: false

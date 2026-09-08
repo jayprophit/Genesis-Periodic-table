@@ -3,9 +3,12 @@
 /* --- Russell Table --- */
 .russell-table {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 3px;
+  grid-template-columns: repeat(18, minmax(0, 1fr));
+  gap: 2px;
   margin: 1rem 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 .russell-cell {
   position: relative;
@@ -15,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 0.65rem;
+  font-size: clamp(0.42rem, 0.75vw, 0.62rem);
   border: 1px solid var(--border, #333);
   transition: transform 0.15s, box-shadow 0.15s;
   cursor: pointer;
@@ -27,9 +30,9 @@
 }
 .russell-cell.empty { opacity: 0.15; cursor: default; }
 .russell-cell.empty:hover { transform: none; box-shadow: none; }
-.russell-cell .z { font-weight: 700; font-size: 0.8rem; }
-.russell-cell .sym { font-size: 1rem; font-weight: 800; line-height: 1; }
-.russell-cell .freq { font-size: 0.5rem; opacity: 0.7; line-height: 1; }
+.russell-cell .z { font-weight: 700; font-size: clamp(0.48rem, 0.8vw, 0.7rem); }
+.russell-cell .sym { font-size: clamp(0.62rem, 1.1vw, 0.9rem); font-weight: 800; line-height: 1; }
+.russell-cell .freq { font-size: clamp(0.38rem, 0.6vw, 0.5rem); opacity: 0.7; line-height: 1; }
 /* W group (generative) */
 .russell-cell.w-group {
   background: linear-gradient(135deg, #1a3a2a 0%, #0d2618 100%);
@@ -60,6 +63,7 @@
 }
 .russell-octave-label .oct { font-weight: 800; }
 .russell-octave-label .spectrum { opacity: 0.6; }
+.russell-octave-label .octave-count { opacity: 0.55; }
 .russell-octave-label .freq-range { opacity: 0.4; margin-left: auto; }
 
 /* Legend */
@@ -219,6 +223,38 @@
 .freq-spectrum-bar .seg.s8 { background: #6a1b9a; }
 .freq-spectrum-bar .seg.s9 { background: #1a237e; }
 
+/* Downloaded Russell references remain compact until opened in the viewer. */
+.russell-reference {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border, #333);
+  padding-top: 0.75rem;
+}
+.russell-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.russell-reference-grid figure {
+  margin: 0;
+  min-width: 0;
+  cursor: zoom-in;
+}
+.russell-reference-grid img {
+  display: block;
+  width: 100%;
+  height: 84px;
+  object-fit: contain;
+  background: #101821;
+  border: 1px solid var(--border, #333);
+  border-radius: 4px;
+}
+.russell-reference-grid figcaption {
+  margin-top: 0.25rem;
+  font-size: 0.62rem;
+  color: var(--muted, #9aa);
+  text-align: center;
+}
+
 /* Tooltip */
 .pt-tooltip {
   position: absolute;
@@ -244,4 +280,18 @@
 @media print {
   .russell-table, .overlay-table { font-size: 0.4rem; }
   .russell-cell, .overlay-cell { border-width: 0.5px; }
+}
+
+@media (max-width: 720px) {
+  .russell-octave-label {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.4rem;
+  }
+  .russell-octave-label .freq-range {
+    width: 100%;
+    margin-left: 0;
+  }
+  .russell-reference-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

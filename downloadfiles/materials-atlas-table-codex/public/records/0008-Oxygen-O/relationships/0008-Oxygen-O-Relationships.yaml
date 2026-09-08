@@ -1,0 +1,284 @@
+registry_id: "MAT:0008:REG:RELATIONSHIPS"
+record_id: "MAT:0008"
+version: "1.0.0"
+
+relationships:
+
+  # --------------------------------------------
+  # ELEMENTAL / MOLECULAR STATES
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0001"
+    source: "MAT:0008"
+    type: "FORMS-HOMONUCLEAR-MOLECULE"
+    target: "MAT:0008:MOL:O2"
+
+  - relationship_id: "MAT:0008:REL:0002"
+    source: "MAT:0008:MOL:O2"
+    type: "HAS-ELECTRONIC-STATE"
+    target: "MAT:0008:ESTATE:O2-a1DeltaG"
+
+  - relationship_id: "MAT:0008:REL:0003"
+    source: "MAT:0008"
+    type: "FORMS-ALLOTROPIC-MOLECULE"
+    target: "MAT:0008:MOL:O3"
+
+  - relationship_id: "MAT:0008:REL:0004"
+    source: "MAT:0008:MOL:O2"
+    type: "CONDENSES-TO"
+    target: "MAT:0008:PHASE:LIQUID-O2"
+
+  - relationship_id: "MAT:0008:REL:0005"
+    source: "MAT:0008:MOL:O2"
+    type: "HAS-SOLID-PHASE"
+    targets:
+      - "MAT:0008:PHASE:ALPHA-O2"
+      - "MAT:0008:PHASE:BETA-O2"
+      - "MAT:0008:PHASE:GAMMA-O2"
+      - "MAT:0008:PHASE:DELTA-O2"
+      - "MAT:0008:PHASE:EPSILON-O2"
+      - "MAT:0008:PHASE:ZETA-O2"
+
+  # --------------------------------------------
+  # HYDROGEN
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0010"
+    source: "MAT:0008"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0001"
+    target_status: "RESOLVED"
+    product_family:
+      - H2O
+      - H2O2
+      - OH_species
+
+  # --------------------------------------------
+  # LITHIUM
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0020"
+    source: "MAT:0008"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0003"
+    target_status: "RESOLVED"
+    product_family:
+      - Li2O
+      - Li2O2
+      - lithium_transition_metal_oxides
+      - oxygen_redox_cathodes
+
+  # --------------------------------------------
+  # BERYLLIUM
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0030"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0004"
+    target_status: "RESOLVED"
+    product: "BeO"
+
+  # --------------------------------------------
+  # BORON
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0040"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0005"
+    target_status: "RESOLVED"
+    product: "B2O3"
+
+  # --------------------------------------------
+  # CARBON
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0050"
+    source: "MAT:0008"
+    type: "CHEMICAL-NETWORK-WITH"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+    products:
+      - CO
+      - CO2
+      - carbonates
+      - carbonyls
+      - carboxylates
+
+  # --------------------------------------------
+  # NITROGEN
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0060"
+    source: "MAT:0008"
+    type: "CHEMICAL-NETWORK-WITH"
+    target: "MAT:0007"
+    target_status: "RESOLVED"
+    products:
+      - NO
+      - NO2
+      - N2O
+      - nitrite
+      - nitrate
+
+  # --------------------------------------------
+  # FUTURE PERIODIC RELATIONSHIPS
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0070"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0011"
+    target_name: "Sodium"
+    target_status: "RESERVED-PENDING-SODIUM"
+    families:
+      - Na2O
+      - Na2O2
+      - NaO2
+
+  - relationship_id: "MAT:0008:REL:0071"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0012"
+    target_name: "Magnesium"
+    target_status: "RESERVED-PENDING-MAGNESIUM"
+    product: "MgO"
+
+  - relationship_id: "MAT:0008:REL:0072"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0013"
+    target_name: "Aluminium"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+    product: "Al2O3"
+
+  - relationship_id: "MAT:0008:REL:0073"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-NETWORK-WITH"
+    target: "MAT:0014"
+    target_name: "Silicon"
+    target_status: "RESERVED-PENDING-SILICON"
+    product_family:
+      - SiO2
+      - silicates
+
+  - relationship_id: "MAT:0008:REL:0074"
+    source: "MAT:0008"
+    type: "FORMS-OXO-CHEMISTRY-WITH"
+    target: "MAT:0015"
+    target_name: "Phosphorus"
+    target_status: "RESERVED-PENDING-PHOSPHORUS"
+
+  - relationship_id: "MAT:0008:REL:0075"
+    source: "MAT:0008"
+    type: "FORMS-OXO-CHEMISTRY-WITH"
+    target: "MAT:0016"
+    target_name: "Sulfur"
+    target_status: "RESERVED-PENDING-SULFUR"
+    families:
+      - SO2
+      - SO3
+      - sulfate
+      - sulfite
+
+  - relationship_id: "MAT:0008:REL:0076"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0022"
+    target_name: "Titanium"
+    target_status: "RESERVED-PENDING-TITANIUM"
+    product: "TiO2"
+
+  - relationship_id: "MAT:0008:REL:0077"
+    source: "MAT:0008"
+    type: "CORROSION-AND-OXIDE-NETWORK-WITH"
+    target: "MAT:0026"
+    target_name: "Iron"
+    target_status: "RESERVED-PENDING-IRON"
+    products:
+      - FeO
+      - Fe2O3
+      - Fe3O4
+      - oxyhydroxides
+
+  - relationship_id: "MAT:0008:REL:0078"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0029"
+    target_name: "Copper"
+    target_status: "RESERVED-PENDING-COPPER"
+    products:
+      - Cu2O
+      - CuO
+
+  - relationship_id: "MAT:0008:REL:0079"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-WITH"
+    target: "MAT:0030"
+    target_name: "Zinc"
+    target_status: "RESERVED-PENDING-ZINC"
+    product: "ZnO"
+
+  - relationship_id: "MAT:0008:REL:0080"
+    source: "MAT:0008"
+    type: "FORMS-OXIDE-ION-CONDUCTOR-WITH"
+    target: "MAT:0040"
+    target_name: "Zirconium"
+    target_status: "RESERVED-PENDING-ZIRCONIUM"
+    family:
+      - ZrO2
+      - stabilized_zirconia
+
+  # --------------------------------------------
+  # BIOLOGY / PLANET
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0090"
+    source: "MAT:0008:MOL:O2"
+    type: "TERMINAL-ELECTRON-ACCEPTOR-IN"
+    target: "AEROBIC-RESPIRATION"
+
+  - relationship_id: "MAT:0008:REL:0091"
+    source: "MAT:CMP:H2O"
+    type: "OXIDIZED-TO"
+    target: "MAT:0008:MOL:O2"
+    mechanism: "PHOTOSYSTEM-II"
+
+  - relationship_id: "MAT:0008:REL:0092"
+    source: "MAT:0008"
+    type: "PLANETARY-CYCLE"
+    target: "OXYGEN-CYCLE"
+
+  # --------------------------------------------
+  # ATMOSPHERIC
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0100"
+    source: "MAT:0008:MOL:O2"
+    type: "PHOTODISSOCIATES-TO"
+    target: "MAT:0008:ATOM:O"
+
+  - relationship_id: "MAT:0008:REL:0101"
+    source:
+      - "MAT:0008:ATOM:O"
+      - "MAT:0008:MOL:O2"
+    type: "THREE-BODY-FORMS"
+    target: "MAT:0008:MOL:O3"
+
+  # --------------------------------------------
+  # LEGACY
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0008:REL:0999"
+    source: "MAT:0008"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0008"
+
+rules:
+  graph_is_exhaustive: false
+  chemical_and_nuclear_edges_are_distinct: true
+  compound_property_equals_element_property: false
+  oxygen_state_is_required: true
+  oxygen_stoichiometry_is_first_class: true
+  oxygen_defects_are_first_class: true

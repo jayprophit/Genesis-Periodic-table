@@ -1,0 +1,69 @@
+registry_id: "MAT:0008:REG:SOLID-OXIDE-ELECTROCHEMISTRY"
+record_id: "MAT:0008"
+
+SOFC:
+
+  full_name: "SOLID-OXIDE-FUEL-CELL"
+
+  cathode:
+    simplified_reduction:
+      "O2 + 4e- -> 2O^2-"
+
+  electrolyte:
+    mobile_species: "O^2-"
+
+    requirements:
+      - oxide_ion_conductivity
+      - low_electronic_leakage
+      - chemical_stability
+
+  anode_hydrogen_example:
+    simplified_reaction:
+      "H2 + O^2- -> H2O + 2e-"
+
+  system:
+    fuel_supplied_continuously: true
+    oxidant_supplied_continuously: true
+
+  source_id: "SRC-000135"
+
+SOEC:
+
+  full_name: "SOLID-OXIDE-ELECTROLYSIS-CELL"
+
+  steam_cathode:
+    simplified_reaction:
+      "H2O + 2e- -> H2 + O^2-"
+
+  electrolyte:
+    transported_species: "O^2-"
+
+  oxygen_electrode:
+    simplified_reaction:
+      "2O^2- -> O2 + 4e-"
+
+  typical_high_temperature_operation:
+    approximate_range:
+      minimum: 700
+      maximum: 800
+      unit: "degC"
+
+  source_id: "SRC-000136"
+
+defect_relationship:
+
+  oxygen_vacancies:
+    symbol: "V_O"
+    can_enable_or_modify_oxide_ion_transport: true
+
+  transport_state_depends_on:
+    - vacancy_concentration
+    - dopant_concentration
+    - temperature
+    - phase
+    - grain_boundaries
+    - atmosphere
+
+rules:
+  oxygen_vacancy_always_improves_conductivity: false
+  fuel_cell_equals_combustion: false

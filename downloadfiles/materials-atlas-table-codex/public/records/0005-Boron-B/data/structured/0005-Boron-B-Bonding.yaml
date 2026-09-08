@@ -1,0 +1,45 @@
+registry_id: "MAT:0005:REG:BONDING"
+record_id: "MAT:0005"
+
+valence_electrons: 3
+
+bonding_classes:
+
+  conventional_two_center:
+    exists: true
+
+  multicentre:
+    exists: true
+
+    examples:
+      - type: "THREE-CENTRE-TWO-ELECTRON"
+        notation: "3c-2e"
+
+    domains:
+      - elemental_clusters
+      - boranes
+      - boron_rich_solids
+
+electron_deficiency:
+
+  relevant: true
+
+  interpretation: >
+    Boron's limited valence-electron count can favor multicentre
+    bonding and cluster architectures rather than requiring each
+    connectivity to be represented as an isolated 2c-2e bond.
+
+geometry_relationship:
+
+  causal_chain:
+    - electron_count
+    - bonding_constraints
+    - multicentre_bonding
+    - polyhedral_clusters
+    - allotrope_or_compound_structure
+    - emergent_material_properties
+
+rules:
+  every_boron_bond_is_3c2e: false
+  multicentre_bonding_is_artistic_geometry: false
+  geometry_is_independent_of_electronic_structure: false

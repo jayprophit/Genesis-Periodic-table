@@ -1,0 +1,60 @@
+registry_id: "MAT:0003:REG:BULK-PROPERTIES"
+record_id: "MAT:0003"
+version: "1.0.0"
+
+reference_state:
+  material: "ELEMENTAL-LITHIUM-METAL"
+  phase: "BCC"
+  pressure: "NEAR-AMBIENT"
+  temperature: "ROOM-TEMPERATURE-REFERENCE"
+  note: >
+    Values are representative references. Final measurement objects
+    must preserve exact conditions and primary provenance.
+
+properties:
+
+  density:
+    value: 535
+    unit: "kg/m3"
+    source_id: "SRC-000040"
+
+  young_modulus:
+    value: 4.9
+    unit: "GPa"
+    source_id: "SRC-000040"
+
+  shear_modulus:
+    value: 4.2
+    unit: "GPa"
+    source_id: "SRC-000040"
+
+  bulk_modulus:
+    value: 11
+    unit: "GPa"
+    source_id: "SRC-000040"
+
+  electrical_resistivity:
+    value: 9.5e-8
+    unit: "ohm*m"
+    source_id: "SRC-000040"
+
+  electrical_conductivity:
+    value: 1.0526316e7
+    unit: "S/m"
+    derived: true
+    equation: "sigma = 1/rho"
+
+  thermal_conductivity:
+    value: 85
+    unit: "W/(m*K)"
+    source_id: "SRC-000040"
+
+  linear_thermal_expansion:
+    value: 46e-6
+    unit: "1/K"
+    source_id: "SRC-000040"
+
+rules:
+  bulk_property_equals_atomic_property: false
+  reference_value_is_universal: false
+  phase_and_temperature_required_for_final_measurement: true

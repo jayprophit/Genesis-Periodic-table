@@ -1,0 +1,70 @@
+record_id: "MAT:0001"
+manifest_id: "MAT:0001:REG:GRAPHS"
+version: "1.0.0"
+
+graphs:
+
+  - graph_id: "MAT:0001:GRAPH:001"
+    filename: "0001-Hydrogen-H-GRAPH-001-Isotope-Lifetime-Map.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-001-Isotope-Lifetime-Map.csv"
+    title: "Hydrogen Isotope Stability and Lifetime"
+    status: "GENERATED"
+    source_ids:
+      - "SRC-000008"
+    rule: "Stable isotopes must not be plotted as infinite measured half-life."
+
+  - graph_id: "MAT:0001:GRAPH:002"
+    filename: "0001-Hydrogen-H-GRAPH-002-Atomic-Energy-Levels.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-002-Atomic-Energy-Levels.csv"
+    title: "Selected Atomic Hydrogen Energy Levels"
+    status: "GENERATED"
+    source_ids:
+      - "SRC-000005"
+
+  - graph_id: "MAT:0001:GRAPH:003"
+    filename: "0001-Hydrogen-H-GRAPH-003-Atomic-Emission-Spectrum.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-003-Atomic-Emission-Spectrum.csv"
+    title: "Atomic Hydrogen Emission Spectrum"
+    status: "DATA-EXTRACTION-REQUIRED"
+    source_ids:
+      - "SRC-000005"
+
+  - graph_id: "MAT:0001:GRAPH:004"
+    filename: "0001-Hydrogen-H-GRAPH-004-Hyperfine-21cm.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-004-Hyperfine-21cm.csv"
+    title: "Ground-State Hyperfine 21-cm Transition"
+    status: "GENERATED"
+    source_ids:
+      - "SRC-000009"
+
+  - graph_id: "MAT:0001:GRAPH:005"
+    filename: "0001-Hydrogen-H-GRAPH-005-H2-Spectroscopic-Constants.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-005-H2-Spectroscopic-Constants.csv"
+    title: "Selected Molecular Hydrogen Spectroscopic Constants"
+    status: "GENERATED"
+    source_ids:
+      - "SRC-000010"
+
+  - graph_id: "MAT:0001:GRAPH:006"
+    filename: "0001-Hydrogen-H-GRAPH-006-Tritium-Decay.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-006-Tritium-Decay.csv"
+    title: "Tritium Fraction Remaining Versus Time"
+    status: "GENERATED"
+    calculation_id: "MAT:0001:CALC:001"
+
+  - graph_id: "MAT:0001:GRAPH:007"
+    filename: "0001-Hydrogen-H-GRAPH-007-H2-Phase-Envelope.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-007-H2-Phase-Envelope.csv"
+    title: "Hydrogen Thermodynamic Phase Envelope"
+    status: "EOS-DATA-EXTRACTION-REQUIRED"
+    source_ids:
+      - "SRC-000012"
+
+  - graph_id: "MAT:0001:GRAPH:008"
+    filename: "0001-Hydrogen-H-GRAPH-008-Storage-Method-Comparison.svg"
+    data_filename: "0001-Hydrogen-H-GRAPH-008-Storage-Method-Comparison.csv"
+    title: "Hydrogen Storage Method Comparison"
+    status: "DATASET-REQUIRED"
+    rule: >
+      Do not compare storage capacities until temperature,
+      pressure, system boundary and gravimetric/volumetric basis are compatible.

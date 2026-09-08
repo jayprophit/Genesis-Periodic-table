@@ -1,0 +1,99 @@
+registry_id: "MAT:0009:REG:LIF-BEF2-FLIBE"
+record_id: "MAT:0009"
+
+LiF:
+
+  id: "MAT:CMP:LiF"
+
+  parents:
+    - "MAT:0003"
+    - "MAT:0009"
+
+  material_class:
+    - ionic_fluoride
+    - crystalline_salt
+    - molten_salt_component
+    - electrochemical_interface_material
+
+  ions:
+    - "Li+"
+    - "F-"
+
+  properties_require_child_record: true
+
+BeF2:
+
+  id: "MAT:CMP:BeF2"
+
+  parents:
+    - "MAT:0004"
+    - "MAT:0009"
+
+  solid_and_glass_structure:
+
+    tetrahedral_coordination:
+      unit: "BeF4"
+
+    network:
+      corner_sharing_tetrahedra: true
+
+    structural_analogy:
+      material: "SiO2"
+      topology_only: true
+
+  vitreous_reference:
+    Be_F_bond_length:
+      value: 1.553
+      uncertainty: 0.005
+      unit: "angstrom"
+
+  source_id: "SRC-000176"
+
+FLiBe:
+
+  material_family: "LiF-BeF2-MOLTEN-SALT"
+
+  resolved_parent_elements:
+    - "MAT:0003"
+    - "MAT:0004"
+    - "MAT:0009"
+
+  widely_studied_reference_composition:
+    notation: "2LiF-BeF2"
+
+  structure:
+
+    Li_species:
+      - "Li+"
+
+    Be_F_species:
+      - "BeF4^2-"
+      - "Be2F7^3-"
+      - "Be3F10^4-"
+      - higher_polymeric_Be_F_units
+
+    structural_state:
+      composition_dependent: true
+      temperature_dependent: true
+      polymeric_network_possible: true
+
+  research_roles:
+    - high_temperature_molten_salt
+    - heat_transfer_research
+    - fission_reactor_material_research
+    - fusion_blanket_material_research
+
+  safety:
+    beryllium_compound_hazard: true
+    fluoride_chemistry_hazard: true
+    high_temperature_hazard: true
+
+rules:
+  FLiBe_equals_simple_ideal_LiF_plus_BeF2_mixture: false
+  structure_requires_composition_and_temperature: true
+  reactor_role_equals_energy_source: false
+  fluorine_is_process_material_not_nuclear_fuel: true
+
+source_ids:
+  - "SRC-000171"
+  - "SRC-000177"

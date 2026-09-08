@@ -1,0 +1,64 @@
+isotope_id: "MAT:0002:ISO:He-4"
+parent_id: "MAT:0002"
+name: "Helium-4"
+notation: "4He"
+
+nucleus:
+  protons: 2
+  neutrons: 2
+  mass_number: 4
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 4.00260325413
+  uncertainty: 0.00000000006
+  unit: "u"
+  source_id: "SRC-000019"
+
+stability:
+  status: "STABLE"
+  half_life: "NOT-APPLICABLE"
+  source_id: "SRC-000008"
+
+quantum_statistics:
+  class: "BOSON"
+  basis: "integer nuclear spin"
+
+nuclear_identity:
+  bare_nucleus_name: "alpha particle"
+  bare_nucleus_state: "4He2+"
+
+cryogenic:
+  normal_liquid_phase: "He-I"
+  superfluid_phase: "He-II"
+
+  normal_boiling_point:
+    value: 4.2221
+    unit: "K"
+    pressure:
+      value: 101325
+      unit: "Pa"
+    source_id: "SRC-000025"
+
+  critical_point:
+    temperature: 5.1953
+    temperature_unit: "K"
+    pressure: 227460
+    pressure_unit: "Pa"
+    source_id: "SRC-000025"
+
+  lower_lambda_point:
+    temperature: 2.1768
+    temperature_unit: "K"
+    pressure: 5041.8
+    pressure_unit: "Pa"
+    source_id: "SRC-000025"
+
+important_relationships:
+  - type: "PRODUCT-OF"
+    process: "D-T FUSION"
+    source_records:
+      - "MAT:0001:ISO:H-2"
+      - "MAT:0001:ISO:H-3"
+
+status: "RESEARCHED"

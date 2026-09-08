@@ -1,0 +1,112 @@
+registry_id: "MAT:0003:REG:ELECTROCHEMISTRY"
+record_id: "MAT:0003"
+version: "1.0.0"
+
+carrier:
+  species: "MAT:0003:ION:Li+1"
+
+battery_architecture:
+  lithium_is_whole_battery: false
+
+  required_system_objects:
+    - negative_electrode
+    - positive_electrode
+    - electrolyte
+    - separator
+    - current_collectors
+    - external_circuit
+    - interfaces
+
+transport:
+
+  ionic:
+    variables:
+      - concentration
+      - activity
+      - chemical_potential
+      - electric_potential
+      - diffusion_coefficient
+      - ionic_conductivity
+      - temperature
+      - pressure
+
+  electronic:
+    location:
+      - electrode
+      - current_collector
+      - external_circuit
+
+host_insertion:
+  general_reaction: "Host + xLi+ + xe- <-> LixHost"
+
+  required_context:
+    - host_material_id
+    - crystal_structure
+    - Li_site
+    - occupancy
+    - state_of_charge
+    - voltage
+    - current
+    - temperature
+    - cycle_number
+    - strain
+    - phase
+
+relationship_families:
+
+  graphite:
+    future_target: "MAT:0006"
+    relationship: "INTERCALATION"
+    target_status: "RESOLVED"
+
+  silicon:
+    future_target: "MAT:0014"
+    relationship: "ALLOYING-LITHIATION"
+    target_status: "RESERVED-PENDING-SILICON"
+
+interphase:
+  enabled: true
+
+  tracked_metrics:
+    - composition
+    - thickness
+    - ionic_conductivity
+    - electronic_conductivity
+    - mechanical_state
+    - formation_cycle
+    - potential_history
+
+deposition:
+  possible_morphologies:
+    - uniform
+    - mossy
+    - porous
+    - filamentary
+    - dendritic
+
+  morphology_is_intrinsic_element_property: false
+
+theoretical_lithium_metal_capacity:
+
+  electron_transfer_per_atom: 1
+
+  standard_atomic_weight_interval:
+    minimum: 6.938
+    maximum: 6.997
+
+  capacity_range:
+    maximum_approx:
+      value: 3863
+      unit: "mAh/g"
+
+    minimum_approx:
+      value: 3830
+      unit: "mAh/g"
+
+  calculation_id: "MAT:0003:CALC:003"
+
+rules:
+  cell_voltage_is_element_property: false
+  battery_specific_energy_is_element_property: false
+  cycle_life_is_element_property: false
+  dendrite_is_intrinsic_property: false

@@ -1,0 +1,88 @@
+registry_id: "MAT:0006:REG:ORGANIC-CHEMISTRY"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+carbon_bond_classes:
+
+  carbon_carbon:
+    - C-C
+    - C=C
+    - C#C
+    - aromatic_delocalized
+    - conjugated
+    - cumulated
+
+  carbon_hydrogen:
+    - C-H
+
+  carbon_oxygen:
+    - C-O
+    - C=O
+    - carboxylate
+    - carbonate
+
+  carbon_nitrogen:
+    - C-N
+    - C=N
+    - C#N
+    - amide
+    - amine
+    - imine
+
+  carbon_sulfur:
+    - C-S
+    - C=S
+
+  carbon_phosphorus:
+    - C-P
+
+  carbon_halogen:
+    - C-F
+    - C-Cl
+    - C-Br
+    - C-I
+
+functional_group_families:
+
+  - alkane
+  - alkene
+  - alkyne
+  - aromatic
+  - alcohol
+  - ether
+  - aldehyde
+  - ketone
+  - carboxylic_acid
+  - ester
+  - amide
+  - amine
+  - nitrile
+  - thiol
+  - phosphate_containing
+  - organometallic
+
+macromolecular_families:
+
+  - polymer
+  - protein
+  - carbohydrate
+  - lipid
+  - nucleic_acid
+  - organic_semiconductor
+
+state_variables:
+
+  - molecular_formula
+  - connectivity
+  - stereochemistry
+  - conformation
+  - charge
+  - protonation
+  - solvent
+  - temperature
+  - pressure
+
+rules:
+  same_formula_means_same_molecule: false
+  elemental_carbon_property_equals_organic_compound_property: false
+  organic_chemistry_registry_is_exhaustive: false

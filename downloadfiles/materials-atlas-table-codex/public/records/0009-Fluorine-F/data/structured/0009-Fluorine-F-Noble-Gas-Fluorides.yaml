@@ -1,0 +1,47 @@
+registry_id: "MAT:0009:REG:NOBLE-GAS-FLUORIDES"
+
+xenon_parent:
+  id: "MAT:0054"
+  status: "RESERVED-PENDING-XENON"
+
+compounds:
+
+  XeF2:
+    geometry: "LINEAR"
+    xenon_formal_oxidation_state: 2
+
+  XeF4:
+    geometry: "SQUARE-PLANAR"
+    xenon_formal_oxidation_state: 4
+
+  XeF6:
+    geometry:
+      description: "DISTORTED / FLUXIONAL"
+      simple_octrahedral_label_sufficient: false
+
+    xenon_formal_oxidation_state: 6
+
+historical_Bartlett_branch:
+
+  year: 1962
+
+  precursor_observation:
+    compound: "O2+[PtF6]-"
+
+  reasoning:
+    description: >
+      Bartlett recognized that the ionization energy of xenon was
+      comparable to that of molecular oxygen and tested PtF6 as a
+      powerful oxidizing/fluorinating reagent.
+
+  xenon_product:
+    historical_label: "Xe+[PtF6]-"
+    modern_status: >
+      Original product is not adequately described as one simple
+      Xe+[PtF6]- salt; later work indicates a mixture of xenon
+      fluoride cation salts.
+
+source_id: "SRC-000185"
+
+rule:
+  noble_gas_inertness_means_absolute_nonreactivity: false

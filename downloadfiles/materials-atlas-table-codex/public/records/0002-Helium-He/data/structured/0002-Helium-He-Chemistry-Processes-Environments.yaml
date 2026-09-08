@@ -1,0 +1,255 @@
+registry_id: "MAT:0002:REG:PROCESSES"
+record_id: "MAT:0002"
+version: "1.0.0"
+
+ordinary_state:
+  bulk_form: "MONATOMIC"
+  neutral_atom: "MAT:0002:ATOM:He"
+
+helium_dimer:
+  id: "MAT:0002:MOL:He2"
+  formula: "He2"
+  class: "EXTREMELY-WEAK-VAN-DER-WAALS-DIMER"
+  ordinary_bulk_form: false
+  bound_ground_state_exists_for_4He2: true
+  note: >
+    Neutral 4He2 possesses an extraordinarily weak bound state.
+    This does not make molecular He2 the ordinary bulk form of helium
+    analogous to H2 for hydrogen.
+
+specialized_molecular_states:
+  - id: "MAT:0002:MOL:He2"
+    class: "VAN-DER-WAALS-DIMER"
+
+  - id: "MAT:0002:ION:He2+1"
+    class: "MOLECULAR-ION"
+
+  - id: "MAT:0002:MOL:He2*"
+    class: "EXCIMER / EXCITED-DIMER-FAMILY"
+
+  - id: "MAT:0002:ION:HeH+1"
+    formula: "HeH"
+    charge: 1
+    name: "helium hydride ion"
+
+chemistry:
+
+  ambient:
+    reactivity: "VERY-LOW"
+    reason: "CLOSED-SHELL-ELECTRONIC-STRUCTURE"
+    absolute_chemical_impossibility: false
+
+  helium_hydride:
+    id: "MAT:0002:ION:HeH+1"
+    formula: "HeH+"
+    physically_observed: true
+    astrophysical_detection: true
+    source_id: "SRC-000031"
+
+  sodium_helium:
+    future_compound_id: "MAT:CMP:Na2He"
+    formula: "Na2He"
+    class: "HIGH-PRESSURE-COMPOUND"
+    experimentally_synthesized: true
+    stability:
+      pressure_above:
+        approximate_value: 113
+        unit: "GPa"
+    source_id: "SRC-000032"
+
+processes:
+
+  - process_id: "MAT:0002:PROC:EXCITATION"
+    name: "Atomic Helium Excitation"
+    input: "MAT:0002:ATOM:He"
+    outputs:
+      - "SINGLET-EXCITED-STATES"
+      - "TRIPLET-EXCITED-STATES"
+      - "METASTABLE-STATES"
+    drivers:
+      - photons
+      - electron_collision
+      - plasma
+
+  - process_id: "MAT:0002:PROC:IONIZATION-1"
+    name: "First Ionisation"
+    reaction: "He -> He+ + e-"
+    threshold_energy:
+      value: 24.587389011
+      uncertainty: 0.000000025
+      unit: "eV"
+    source_id: "SRC-000005"
+
+  - process_id: "MAT:0002:PROC:IONIZATION-2"
+    name: "Second Ionisation"
+    reaction: "He+ -> He2+ + e-"
+    threshold_energy:
+      value: 54.4177655282
+      uncertainty: 0.0000000010
+      unit: "eV"
+    source_id: "SRC-000005"
+
+  - process_id: "MAT:0002:PROC:LIQUEFACTION"
+    name: "Helium Liquefaction"
+    family: "CRYOGENIC"
+    isotope: "4He"
+    input_state: "GAS"
+    output_state: "LIQUID-HE-I"
+    pressure_required: true
+    temperature_required: true
+
+  - process_id: "MAT:0002:PROC:LAMBDA"
+    name: "Helium-4 Lambda Transition"
+    isotope: "4He"
+    input_state: "MAT:0002:PHASE:He-I"
+    output_state: "MAT:0002:PHASE:He-II"
+    phase_transition: true
+    changes_element_identity: false
+    source_id: "SRC-000025"
+
+  - process_id: "MAT:0002:PROC:SOLIDIFICATION"
+    name: "Helium Solidification"
+    family: "PRESSURE-CRYOGENIC"
+    pressure_required: true
+    note: >
+      Helium does not have a useful single atmospheric-pressure
+      melting-point entry. Temperature and pressure must be stored together.
+
+  - process_id: "MAT:0002:PROC:HE3-SUPERFLUID"
+    name: "Helium-3 Superfluid Transition"
+    isotope: "3He"
+    family: "QUANTUM-PHASE"
+    temperature_regime: "MILLIKELVIN"
+    pressure_dependent: true
+    magnetic_field_dependent: true
+
+  - process_id: "MAT:0002:PROC:HE3-NEUTRON-CAPTURE"
+    name: "Helium-3 Neutron Capture"
+    reaction: "3He + n -> 3H + 1H"
+    family: "NUCLEAR"
+    calculation_id: "MAT:0002:CALC:001"
+
+  - process_id: "MAT:0002:PROC:IMPLANTATION"
+    name: "Helium Implantation into Material"
+    family: "MATERIAL-INTERACTION"
+    possible_outputs:
+      - interstitial_helium
+      - trapped_helium
+      - helium_vacancy_complex
+      - helium_cluster
+      - helium_bubble
+
+  - process_id: "MAT:0002:PROC:NA2HE"
+    name: "High-Pressure Sodium-Helium Compound Formation"
+    family: "EXTREME-PRESSURE-CHEMISTRY"
+    product: "MAT:CMP:Na2He"
+    pressure_regime:
+      approximate_lower_stability: 113
+      unit: "GPa"
+    source_id: "SRC-000032"
+
+environments:
+
+  AMBIENT:
+    dominant_state: "MONATOMIC-NEUTRAL-GAS"
+    chemical_reactivity: "VERY-LOW"
+
+  CRYOGENIC:
+    effects:
+      - liquefaction
+      - quantum_fluid_behavior
+      - superfluid_4He
+
+  MILLIKELVIN:
+    effects:
+      - helium3_quantum_fluid
+      - helium3_superfluid_phases
+
+  HIGH_PRESSURE:
+    effects:
+      - solidification
+      - altered_phase_behavior
+      - extreme_pressure_chemistry
+
+  ELECTRIC_FIELD:
+    effects:
+      - Stark_response
+      - ion_acceleration_when_charged
+
+  MAGNETIC_FIELD:
+    effects:
+      - isotope_specific_spin_response
+      - helium3_NMR
+      - helium3_superfluid_phase_effects
+
+  PHOTONIC:
+    effects:
+      - excitation
+      - ionization
+      - spectroscopy
+
+  PLASMA:
+    species:
+      - He
+      - He*
+      - He+1
+      - He+2
+      - electrons
+      - molecular_ions
+      - excimer_states
+
+  MATERIAL_HOST:
+    effects:
+      - implantation
+      - diffusion
+      - trapping
+      - clustering
+      - bubble_formation
+
+  ASTROPHYSICAL:
+    relevant_states:
+      - He
+      - He+
+      - HeH+
+      - plasma_states
+
+context:
+
+  organic:
+    normal_structural_role: "NOT-APPLICABLE"
+    process_environment_role: true
+
+  inorganic:
+    ambient_bonding: "VERY-LOW"
+    ionic_and_extreme_pressure_chemistry: true
+
+  biological:
+    normal_metabolic_element: false
+    primary_effect_class: "PHYSICAL"
+    oxygen_displacement_hazard: true
+
+safety:
+
+  flammable: false
+
+  hazards:
+    - compressed_gas
+    - oxygen_displacement
+    - cryogenic_exposure
+    - pressure_buildup
+    - material_embrittlement_from_extreme_cold
+
+  isotope_specific:
+    stable_3He: "NONRADIOACTIVE"
+    stable_4He: "NONRADIOACTIVE"
+    unstable_isotopes: "NUCLEAR-SAFETY-CONTEXT-REQUIRED"
+
+rules:
+  low_reactivity_means_impossible_chemistry: false
+  ordinary_bulk_helium_is_diatomic: false
+  neutral_helium_dimer_exists: true
+  helium_dimer_equals_hydrogen_molecule_analogue: false
+  phase_transition_changes_element_identity: false
+  implantation_effect_is_intrinsic_mechanical_property: false
+
+status: "RESEARCHED"

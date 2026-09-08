@@ -1,0 +1,58 @@
+registry_id: "MAT:0009:REG:PROCESS-FLUORIDES"
+
+NF3:
+
+  id: "MAT:CMP:NF3"
+
+  parents:
+    - "MAT:0007"
+    - "MAT:0009"
+
+  formula: "NF3"
+
+  geometry:
+    type: "TRIGONAL-PYRAMIDAL"
+
+  formal_oxidation_states:
+    N: 3
+    F: -1
+
+  process_roles:
+    - semiconductor_chamber_cleaning
+    - plasma_fluorine_precursor
+
+  key_rule:
+    "Stable NF3 gas and plasma-generated F-containing species are different chemical states."
+
+  source_id: "SRC-000182"
+
+SiF4:
+
+  id: "MAT:CMP:SiF4"
+
+  parents:
+    - "MAT:0014"
+    - "MAT:0009"
+
+  silicon_status: "RESERVED-PENDING-SILICON"
+
+  formula: "SiF4"
+
+  geometry:
+    type: "TETRAHEDRAL"
+
+  formal_oxidation_states:
+    Si: 4
+    F: -1
+
+  process_relationships:
+    - fluorine_based_silicon_etching
+    - volatile_Si_F_product
+    - semiconductor_processing
+
+  source_id: "SRC-000183"
+
+rules:
+  precursor_equals_plasma_fragment: false
+  SiF4_property_equals_silicon_property: false
+  NF3_property_equals_nitrogen_property: false

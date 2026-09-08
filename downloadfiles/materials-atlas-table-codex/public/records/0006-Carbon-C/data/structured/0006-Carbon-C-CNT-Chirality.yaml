@@ -1,0 +1,69 @@
+registry_id: "MAT:0006:REG:CNT-CHIRALITY"
+material_id: "MAT:0006:MAT:CNT"
+parent_id: "MAT:0006"
+version: "1.0.0"
+
+geometry:
+
+  chiral_vector:
+    notation: "(n,m)"
+
+    vector_form: "Ch = n*a1 + m*a2"
+
+  families:
+
+    armchair:
+      condition: "n = m"
+      example: "(10,10)"
+      nominal_electronic_class: "METALLIC"
+
+    zigzag:
+      condition: "m = 0"
+      example: "(10,0)"
+      electronic_class: "INDEX-DEPENDENT"
+
+    chiral:
+      condition: "n != m AND m != 0"
+      electronic_class: "INDEX-DEPENDENT"
+
+simple_zone_folding_rule:
+
+  nominally_metallic_if:
+    condition: "(n - m) mod 3 = 0"
+
+  semiconducting_if:
+    condition: "(n - m) mod 3 != 0"
+
+limitations:
+
+  - curvature_can_modify_nominal_metallicity
+  - small_gaps_can_appear_in_non_armchair_tubes
+  - diameter_changes_band_gap
+  - defects_change_transport
+  - strain_changes_electronic_structure
+  - junctions_have_local_chirality
+
+electronic_state:
+
+  possible:
+    - METALLIC
+    - SEMICONDUCTING
+    - QUANTUM-DOT-LIKE
+
+  primary_variables:
+    - n
+    - m
+    - diameter
+    - wall_number
+    - strain
+    - defects
+    - doping
+    - environment
+
+source_ids:
+  - "SRC-000090"
+  - "SRC-000094"
+
+rules:
+  CNT_composition_determines_electronic_class_alone: false
+  chirality_is_first_class_variable: true

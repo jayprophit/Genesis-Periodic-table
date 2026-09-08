@@ -1,0 +1,108 @@
+registry_id: "MAT:0002:REG:RELATIONSHIPS"
+record_id: "MAT:0002"
+
+relationships:
+
+  - relationship_id: "MAT:0002:REL:0001"
+    source: "MAT:0002:ISO:He-3"
+    type: "ISOTOPE-OF"
+    target: "MAT:0002"
+
+  - relationship_id: "MAT:0002:REL:0002"
+    source: "MAT:0002:ISO:He-4"
+    type: "ISOTOPE-OF"
+    target: "MAT:0002"
+
+  - relationship_id: "MAT:0002:REL:0003"
+    source: "MAT:0001:ISO:H-3"
+    type: "DECAYS-TO"
+    target: "MAT:0002:ISO:He-3"
+    mechanism: "BETA-MINUS"
+
+  - relationship_id: "MAT:0002:REL:0004"
+    source: "MAT:0001:ISO:H-2"
+    type: "FUSES-WITH"
+    target: "MAT:0001:ISO:H-3"
+    products:
+      - "MAT:0002:ISO:He-4"
+      - "NEUTRON"
+
+  - relationship_id: "MAT:0002:REL:0005"
+    source: "MAT:0002:ISO:He-5"
+    type: "DECAYS-TO"
+    target: "MAT:0002:ISO:He-4"
+    mechanism: "NEUTRON-EMISSION"
+
+  - relationship_id: "MAT:0002:REL:0006"
+    source: "MAT:0002:ISO:He-6"
+    type: "DECAYS-TO"
+    target: "MAT:0003:ISO:Li-6"
+    target_status: "RESOLVED"
+    mechanism: "BETA-MINUS"
+
+  - relationship_id: "MAT:0002:REL:0007"
+    source: "MAT:0002:ISO:He-4"
+    type: "HAS-PHASE"
+    target: "MAT:0002:PHASE:He-I"
+
+  - relationship_id: "MAT:0002:REL:0008"
+    source: "MAT:0002:ISO:He-4"
+    type: "HAS-PHASE"
+    target: "MAT:0002:PHASE:He-II"
+
+  - relationship_id: "MAT:0002:REL:0009"
+    source: "MAT:0002:PHASE:He-I"
+    type: "TRANSFORMS-TO"
+    target: "MAT:0002:PHASE:He-II"
+    boundary: "LAMBDA-LINE"
+
+  - relationship_id: "MAT:0002:REL:0010"
+    source: "MAT:0002:ISO:He-3"
+    type: "HAS-QUANTUM-FLUID-PHASE"
+    target: "MAT:0002:PHASE:He3-SUPERFLUID"
+
+  - relationship_id: "MAT:0002:REL:0011"
+    source: "MAT:0002:ISO:He-3"
+    type: "CAPTURES"
+    target: "NEUTRON"
+    products:
+      - "MAT:0001:ISO:H-3"
+      - "MAT:0001:ISO:H-1"
+    application:
+      - "NEUTRON-DETECTION"
+
+  - relationship_id: "MAT:0002:REL:0012"
+    source: "MAT:0002"
+    type: "FORMS-ION"
+    target: "MAT:0002:ION:He+1"
+
+  - relationship_id: "MAT:0002:REL:0013"
+    source: "MAT:0002"
+    type: "FORMS-ION"
+    target: "MAT:0002:ION:He+2"
+
+  - relationship_id: "MAT:0002:REL:0014"
+    source: "MAT:0002"
+    type: "FORMS-EXCITED-DIMER"
+    target: "MAT:0002:MOL:He2*"
+    ordinary_ground_state_molecule: false
+
+  - relationship_id: "MAT:0002:REL:0015"
+    source: "MAT:0002"
+    type: "FORMS-MOLECULAR-ION"
+    target: "MAT:0002:ION:He2+1"
+
+  - relationship_id: "MAT:0002:REL:0016"
+    source: "MAT:0002"
+    type: "CAN-BE-IMPLANTED-IN"
+    target_scope: "SOLID-MATERIALS"
+    possible_effects:
+      - interstitial_helium
+      - trapping
+      - vacancy_interaction
+      - bubble_formation
+
+  - relationship_id: "MAT:0002:REL:0017"
+    source: "MAT:0002"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0002"

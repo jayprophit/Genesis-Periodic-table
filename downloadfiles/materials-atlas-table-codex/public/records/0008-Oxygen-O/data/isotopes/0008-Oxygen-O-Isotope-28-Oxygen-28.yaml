@@ -1,0 +1,71 @@
+isotope_id: "MAT:0008:ISO:O-28"
+parent_id: "MAT:0008"
+name: "Oxygen-28"
+notation: "28O"
+
+nucleus:
+  protons: 8
+  neutrons: 20
+  mass_number: 28
+
+relative_atomic_mass:
+  value: 28.05591
+  uncertainty: 0.00075
+  estimated_mass_table_value: true
+  unit: "u"
+  source_id: "SRC-000126"
+
+current_experimental_status:
+  status: "OBSERVED-FOUR-NEUTRON-UNBOUND-RESONANCE"
+  first_direct_observation:
+    year: 2023
+    source_id: "SRC-000132"
+
+spin_parity:
+  direct_measurement: "NOT-ESTABLISHED"
+  even_even_ground_state_expectation: "0+"
+  treat_as_measurement: false
+
+decay:
+  net_channel: "24O + 4n"
+
+  favored_sequential_path:
+    - "28O -> 26O + 2n"
+    - "26O -> 24O + 2n"
+
+decay_energy:
+  value: 0.46
+  statistical_uncertainty_plus: 0.05
+  statistical_uncertainty_minus: 0.04
+  systematic_uncertainty: 0.02
+  unit: "MeV"
+
+resonance_width:
+  relation: "UPPER-LIMIT"
+  value: 0.7
+  unit: "MeV"
+  confidence_interval_percent: 68
+
+nuclear_structure:
+  proton_number_magic: 8
+  neutron_number_conventional_magic: 20
+  observed_as_bound_doubly_magic_nucleus: false
+  scientific_importance:
+    - "SHELL-EVOLUTION"
+    - "NEUTRON-DRIP-LINE"
+    - "EXTREME-NEUTRON-RICH-NUCLEI"
+
+historical_NUBASE2020_status:
+  observation_status: "NOT-DIRECTLY-OBSERVED"
+  lifetime_limit:
+    relation: "LESS-THAN"
+    value: 100
+    unit: "ns"
+  superseded_for_observation_status: true
+
+source_ids:
+  - "SRC-000126"
+  - "SRC-000008"
+  - "SRC-000132"
+
+status: "CURRENT-RESEARCH"

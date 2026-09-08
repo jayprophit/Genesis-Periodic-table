@@ -1,0 +1,127 @@
+mat_id: "MAT:0001"
+record_name: "Hydrogen"
+symbol: "H"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 1
+
+legacy:
+  legacy_id: "G0001"
+  migration_status: "IN-PROGRESS"
+
+identity:
+  proton_count: 1
+  neutral_electron_count: 1
+  period: 1
+  group: 1
+  block: "s"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 1.00784
+  maximum: 1.00811
+  source_id: "SRC-000006"
+  source_alias: "SRC-H-002"
+
+electronic_ground_state:
+  configuration: "1s1"
+  term: "2S1/2"
+
+ionization:
+  first:
+    value: 13.598434599702
+    unit: "eV"
+    uncertainty: 0.000000000012
+    evidence_type: "MEASURED"
+    confidence: "A"
+    source_id: "SRC-000005"
+    source_alias: "SRC-H-001"
+
+electron_affinity:
+  recommended_measurement:
+    value: 0.754195
+    uncertainty: 0.000018
+    unit: "eV"
+    evidence_type: "MEASURED"
+    confidence: "A"
+    source_id: "SRC-000007"
+    source_alias: "SRC-H-003"
+
+charge_states:
+  - id: "MAT:0001:ION:H-1"
+    charge: -1
+    name: "hydride anion"
+
+  - id: "MAT:0001:ATOM:H"
+    charge: 0
+    name: "neutral atomic hydrogen"
+
+  - id: "MAT:0001:ION:H+1"
+    charge: 1
+    name: "positive hydrogen ion"
+    isotope_dependent_nucleus: true
+
+isotope_branch:
+  evaluated_mass_numbers:
+    minimum: 1
+    maximum: 7
+
+  stable:
+    - "MAT:0001:ISO:H-1"
+    - "MAT:0001:ISO:H-2"
+
+  radioactive_or_unbound:
+    - "MAT:0001:ISO:H-3"
+    - "MAT:0001:ISO:H-4"
+    - "MAT:0001:ISO:H-5"
+    - "MAT:0001:ISO:H-6"
+    - "MAT:0001:ISO:H-7"
+
+spectral:
+  hyperfine_21cm:
+    id: "MAT:0001:SPEC:HF:001"
+    frequency: 1420405751.768
+    unit: "Hz"
+    mechanism: "GROUND-STATE-HYPERFINE"
+    source_id: "SRC-000009"
+    source_alias: "SRC-H-005"
+
+molecular_states:
+  H2:
+    id: "MAT:0001:MOL:H2"
+    formula: "H2"
+    electronic_ground_state: "X 1Sigma_g+"
+
+    equilibrium_bond_distance:
+      value: 0.74144
+      unit: "angstrom"
+
+    vibrational_constant:
+      value: 4401.21
+      unit: "cm^-1"
+
+    rotational_constant:
+      value: 60.8530
+      unit: "cm^-1"
+
+    spin_isomers:
+      - "MAT:0001:MOL:H2:ORTHO"
+      - "MAT:0001:MOL:H2:PARA"
+
+phase_reference:
+  equilibrium_H2_normal_boiling_point:
+    value: 20.271
+    unit: "K"
+    state: "EQUILIBRIUM-H2"
+    source_id: "SRC-000011"
+    source_alias: "SRC-H-007"
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  isotope_identity: "ESTABLISHED"
+  atomic_spectroscopy: "ESTABLISHED"
+  molecular_H2: "ESTABLISHED"
+  causali_e_interpretation: "AUTHOR-FRAMEWORK"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

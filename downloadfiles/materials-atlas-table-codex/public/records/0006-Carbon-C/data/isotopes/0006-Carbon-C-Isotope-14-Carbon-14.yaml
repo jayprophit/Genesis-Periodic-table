@@ -1,0 +1,49 @@
+isotope_id: "MAT:0006:ISO:C-14"
+parent_id: "MAT:0006"
+name: "Carbon-14"
+notation: "14C"
+
+nucleus:
+  protons: 6
+  neutrons: 8
+  mass_number: 14
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 14.0032419884
+  uncertainty: 0.0000000040
+  unit: "u"
+  source_id: "SRC-000080"
+
+stability:
+  status: "RADIOACTIVE"
+
+  half_life:
+    value: 5700
+    uncertainty: 30
+    unit: "y"
+    source_id: "SRC-000082"
+
+decay:
+  principal_mode: "BETA-MINUS"
+  daughter: "MAT:0007:ISO:N-14"
+  daughter_status: "RESOLVED"
+  calculation_id: "MAT:0006:CALC:002"
+
+radiocarbon:
+  dating_enabled: true
+
+  conventional_age_method:
+    libby_half_life:
+      value: 5568
+      unit: "y"
+      classification: "METHOD-CONVENTION"
+
+applications:
+  - "RADIOCARBON-DATING"
+  - "ENVIRONMENTAL-TRACING"
+  - "CARBON-CYCLE-RESEARCH"
+
+status: "RESEARCHED"
+
+---

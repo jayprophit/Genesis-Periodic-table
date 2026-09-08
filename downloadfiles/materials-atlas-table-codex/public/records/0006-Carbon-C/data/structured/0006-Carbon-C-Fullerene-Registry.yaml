@@ -1,0 +1,45 @@
+registry_id: "MAT:0006:REG:FULLERENES"
+parent_id: "MAT:0006"
+version: "1.0.0"
+
+family_id: "MAT:0006:MOL:FULLERENE"
+
+members:
+
+  C60:
+    id: "MAT:0006:MOL:C60"
+    atoms: 60
+    molecular_class: "CLOSED-CARBON-CAGE"
+
+    topology:
+      idealized_descriptor: "TRUNCATED-ICOSAHEDRON"
+      pentagons: 12
+      hexagons: 20
+
+    discovery:
+      year: 1985
+      contributors:
+        - "Harold Kroto"
+        - "Robert Curl"
+        - "Richard Smalley"
+        - "James R. Heath"
+        - "Sean C. O'Brien"
+
+    source_ids:
+      - "SRC-000089"
+      - "SRC-000096"
+
+  C70:
+    id: "MAT:0006:MOL:C70"
+    atoms: 70
+    molecular_class: "CLOSED-CARBON-CAGE"
+    geometry: "ELONGATED-FULLERENE-CAGE"
+
+    source_ids:
+      - "SRC-000089"
+      - "SRC-000096"
+
+rules:
+  fullerene_equals_bulk_graphite: false
+  ideal_polyhedron_equals_exact_molecular_geometry: false
+  fullerene_family_is_exhausted_by_C60_C70: false

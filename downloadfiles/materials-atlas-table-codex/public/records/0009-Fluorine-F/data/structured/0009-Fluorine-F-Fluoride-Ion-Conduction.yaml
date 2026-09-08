@@ -1,0 +1,72 @@
+registry_id: "MAT:0009:REG:FLUORIDE-ION-CONDUCTION"
+
+mobile_species:
+  id: "MAT:0009:ION:F-1"
+  charge: -1
+
+transport_mechanisms:
+  - vacancy_hopping
+  - interstitial_transport
+  - interstitialcy
+  - defect_assisted_diffusion
+  - liquid_electrolyte_transport
+
+material_families:
+
+  fluorite_related:
+    examples:
+      - CaF2_related
+      - BaF2_related
+      - doped_fluorite_fluorides
+
+  tysonite_related:
+    examples:
+      - LaF3
+      - CeF3
+      - doped_rare_earth_fluorides
+
+  mixed_fluorides:
+    examples:
+      - BaSnF4_related
+      - rare_earth_doped_fluorides
+
+electrochemical_architecture:
+
+  fluoride_ion_battery:
+    status: "ACTIVE-RESEARCH"
+
+    charge_carrier:
+      "F-"
+
+    possible_electrode_mechanisms:
+      - conversion
+      - insertion
+      - fluorination
+      - defluorination
+
+    electrolyte_classes:
+      - solid
+      - liquid
+      - hybrid
+
+principal_challenges:
+  - room_temperature_ionic_conductivity
+  - interfacial_stability
+  - electrode_reversibility
+  - electrolyte_compatibility
+  - parasitic_reactions
+
+state_variables:
+  - crystal_structure
+  - defect_concentration
+  - dopants
+  - temperature
+  - grain_boundaries
+  - interface_state
+
+rules:
+  fluoride_ion_conduction_is_universal_in_fluorides: false
+  high_F_content_equals_high_F_conductivity: false
+  theoretical_energy_density_equals_practical_device_energy_density: false
+
+source_id: "SRC-000172"

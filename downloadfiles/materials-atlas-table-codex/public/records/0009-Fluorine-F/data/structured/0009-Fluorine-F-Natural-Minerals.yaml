@@ -1,0 +1,55 @@
+registry_id: "MAT:0009:REG:NATURAL-MINERALS"
+
+natural_fluorine_state:
+  free_F2_major_reservoir: false
+  principal_form: "FLUORIDE-BOUND"
+
+minerals:
+
+  fluorite:
+
+    formula: "CaF2"
+    mineral_name: "FLUORITE"
+    commercial_name: "FLUORSPAR"
+
+    crystal_system:
+      USGS_description: "ISOMETRIC"
+
+    economic_role:
+      primary_large_scale_fluorine_ore: true
+
+  fluorapatite:
+
+    formula: "Ca5(PO4)3F"
+    crystal_system: "HEXAGONAL"
+
+    contexts:
+      - phosphate_rocks
+      - phosphorites
+      - mineralized_tissues_relationship
+
+  cryolite:
+
+    formula: "Na3AlF6"
+    crystal_system:
+      USGS_description: "MONOCLINIC"
+
+    natural_resource_role:
+      historically_important: true
+      current_primary_F_ore: false
+
+  sellaite:
+    formula: "MgF2"
+
+  villiaumite:
+    formula: "NaF"
+
+  topaz:
+    fluorine_bearing: true
+
+rules:
+  mineral_F_equals_elemental_F2: false
+  biological_fluoride_equals_elemental_fluorine: false
+  mineral_properties_require_material_records: true
+
+source_id: "SRC-000170"

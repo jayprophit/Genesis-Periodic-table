@@ -1,0 +1,78 @@
+registry_id: "MAT:0003:REG:RELATIONSHIPS"
+record_id: "MAT:0003"
+
+relationships:
+
+  - relationship_id: "MAT:0003:REL:0001"
+    source: "MAT:0003:ISO:Li-6"
+    type: "NUCLEAR-REACTION-WITH"
+    target: "NEUTRON"
+    products:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0001:ISO:H-3"
+    calculation_id: "MAT:0003:CALC:001"
+
+  - relationship_id: "MAT:0003:REL:0002"
+    source: "MAT:0003:ISO:Li-7"
+    type: "NUCLEAR-REACTION-WITH"
+    target: "NEUTRON"
+    products:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0001:ISO:H-3"
+      - "NEUTRON"
+    calculation_id: "MAT:0003:CALC:002"
+
+  - relationship_id: "MAT:0003:REL:0010"
+    source: "MAT:0003"
+    type: "FORMS-HYDRIDE-WITH"
+    target: "MAT:0001"
+    product: "MAT:CMP:LiH"
+
+  - relationship_id: "MAT:0003:REL:0011"
+    source: "MAT:0003"
+    type: "FORMS-NITRIDE-WITH"
+    target: "MAT:0007"
+    target_status: "RESOLVED"
+    product: "MAT:CMP:Li3N"
+
+  - relationship_id: "MAT:0003:REL:0012"
+    source: "MAT:0003"
+    type: "FORMS-OXIDE-SYSTEMS-WITH"
+    target: "MAT:0008"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0003:REL:0013"
+    source: "MAT:0003"
+    type: "INTERCALATES-IN"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0003:REL:0014"
+    source: "MAT:0003"
+    type: "ALLOYS-WITH"
+    target: "MAT:0014"
+    target_status: "RESERVED-PENDING-SILICON"
+
+  - relationship_id: "MAT:0003:REL:0015"
+    source: "MAT:0003"
+    type: "ALLOYS-WITH"
+    target: "MAT:0013"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+
+  - relationship_id: "MAT:0003:REL:0016"
+    source: "MAT:0003"
+    type: "ALLOYS-WITH"
+    target: "MAT:0012"
+    target_status: "RESERVED-PENDING-MAGNESIUM"
+
+  - relationship_id: "MAT:0003:REL:0017"
+    source: "MAT:0003"
+    type: "FUSION-BLANKET-RELATIONSHIP-WITH"
+    target: "MAT:0082"
+    target_name: "Lead"
+    target_status: "RESERVED-PENDING-LEAD"
+
+  - relationship_id: "MAT:0003:REL:0090"
+    source: "MAT:0003"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0003"

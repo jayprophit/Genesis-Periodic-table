@@ -1,0 +1,56 @@
+registry_id: "MAT:0007:REG:AMMONIA-ENERGY"
+record_id: "MAT:0007"
+
+material:
+  id: "MAT:CMP:NH3"
+
+classification:
+  nitrogen_feedstock: true
+  hydrogen_carrier: true
+  chemical_energy_carrier: true
+  primary_energy_source: false
+
+hydrogen_content:
+  atoms_H_per_molecule: 3
+
+pathways:
+
+  synthesis:
+    "N2 + 3H2 -> 2NH3"
+
+  cracking:
+    "2NH3 -> N2 + 3H2"
+
+  direct_energy_use:
+    possible_systems:
+      - combustion_research
+      - fuel_cell_pathways
+      - marine_fuel_research
+      - co_firing_research
+
+current_system_context:
+  international_transport_interest: true
+
+  IEA_2026:
+    ammonia_trade_infrastructure_exists: true
+    low_emissions_ammonia_trade_is_developing: true
+    ammonia_cracking_energy_penalty_relevant: true
+    source_id: "SRC-000119"
+
+system_variables:
+  - ammonia_synthesis_energy
+  - hydrogen_source
+  - carbon_intensity
+  - cracking_efficiency
+  - storage_temperature
+  - storage_pressure
+  - toxicity
+  - NOx_control
+  - transport_distance
+  - end_use_efficiency
+
+rules:
+  ammonia_contains_hydrogen_so_it_is_free_energy: false
+  ammonia_is_energy_source_by_elemental_identity: false
+  synthesis_energy_must_be_counted: true
+  fuel_hazard_is_compound_specific: true

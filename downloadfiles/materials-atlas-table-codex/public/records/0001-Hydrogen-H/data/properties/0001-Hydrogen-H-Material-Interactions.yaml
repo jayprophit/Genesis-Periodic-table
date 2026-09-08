@@ -1,0 +1,200 @@
+registry_id: "MAT:0001:REG:MATERIAL-INTERACTIONS"
+parent_id: "MAT:0001"
+version: "1.0.0"
+
+interaction_classes:
+
+  adsorption:
+    description: >
+      Hydrogen species retained at a surface or interface.
+    state_examples:
+      - "H2-ADSORBED"
+      - "H-ADSORBED"
+    controlling_variables:
+      - host_material
+      - surface_structure
+      - temperature
+      - pressure
+      - coverage
+      - defects
+      - catalyst_state
+
+  absorption:
+    description: >
+      Hydrogen enters the bulk of another material.
+    controlling_variables:
+      - host_material
+      - phase
+      - hydrogen_chemical_potential
+      - temperature
+      - pressure
+      - time
+
+  diffusion:
+    description: >
+      Hydrogen species migrate through a material.
+    governing_principles:
+      - "MAT-PHYS-040"
+      - "MAT-PHYS-041"
+      - "MAT-MATSCI-027"
+      - "MAT-MATSCI-028"
+    controlling_variables:
+      - temperature
+      - host_phase
+      - defect_density
+      - trap_density
+      - concentration
+      - stress
+      - isotope
+
+  trapping:
+    description: >
+      Hydrogen associates with defects, interfaces or other
+      energetically preferred sites.
+    candidate_sites:
+      - vacancy
+      - dislocation
+      - grain_boundary
+      - phase_boundary
+      - precipitate
+      - impurity
+    note: >
+      Trap populations and energies are host-material dependent.
+
+  hydride_formation:
+    description: >
+      Hydrogen chemically or structurally participates in a hydride phase.
+    relationship_type: "FORMS-HYDRIDE"
+    controlling_variables:
+      - host_composition
+      - temperature
+      - pressure
+      - hydrogen_activity
+      - process_history
+
+  permeation:
+    description: >
+      Coupled surface entry, diffusion through a material and exit
+      from the opposite surface.
+    controlling_variables:
+      - membrane_material
+      - thickness
+      - temperature
+      - pressure_difference
+      - surface_condition
+
+  embrittlement:
+    description: >
+      Hydrogen-assisted degradation of mechanical performance
+      in susceptible material systems.
+    relationship_type: "HYDROGEN-ASSISTED-DEGRADATION"
+    intrinsic_property_of_hydrogen: false
+
+    required_context:
+      - host_material
+      - composition
+      - microstructure
+      - heat_treatment
+      - hydrogen_state
+      - hydrogen_concentration
+      - hydrogen_pressure
+      - temperature
+      - stress_state
+      - strain_rate
+      - exposure_time
+      - cycle_history
+
+    possible_outputs:
+      - ductility_change
+      - fracture_toughness_change
+      - fatigue_crack_growth_change
+      - crack_initiation
+      - sustained_load_cracking
+
+storage_relationships:
+
+  compressed_gas:
+    storage_class: "PHYSICAL"
+    hydrogen_state: "H2-GAS"
+    primary_variables:
+      - pressure
+      - temperature
+      - vessel_volume
+      - vessel_material
+      - cycle_history
+
+  liquid_hydrogen:
+    storage_class: "PHYSICAL-CRYOGENIC"
+    hydrogen_state: "H2-LIQUID"
+    primary_variables:
+      - temperature
+      - pressure
+      - ortho_para_fraction
+      - heat_leak
+      - boiloff
+      - insulation
+
+  cryo_compressed:
+    storage_class: "PHYSICAL-CRYO-COMPRESSED"
+    primary_variables:
+      - temperature
+      - pressure
+      - density
+      - vessel_design
+
+  metal_hydride:
+    storage_class: "MATERIALS-BASED"
+    mechanism: "HYDRIDE-FORMATION"
+    example_relationship_elements:
+      - Mg
+      - Ti
+
+  interstitial_absorption:
+    storage_class: "MATERIALS-BASED"
+    mechanism: "LATTICE-ABSORPTION"
+    example_relationship_elements:
+      - Pd
+
+  catalytic_relationship:
+    storage_class: "SUPPORTING-PROCESS"
+    mechanism: "SURFACE-CATALYSIS"
+    example_relationship_elements:
+      - Ni
+      - Pt
+      - Pd
+
+  sorbent:
+    storage_class: "MATERIALS-BASED"
+    mechanism: "ADSORPTION"
+    example_host_classes:
+      - porous_carbon
+      - metal_organic_framework
+      - high_surface_area_sorbent
+
+  chemical_hydrogen_storage:
+    storage_class: "MATERIALS-BASED"
+    mechanism: "CHEMICAL-REACTION"
+    note: >
+      Hydrogen release and regeneration must both be represented.
+
+measurement_requirements:
+  storage_capacity:
+    separate:
+      - gravimetric_capacity
+      - volumetric_capacity
+
+  conditions_required:
+    - temperature
+    - pressure
+    - sample_composition
+    - sample_structure
+    - sample_mass
+    - cycle_history
+
+rules:
+  adsorption_equals_absorption: false
+  storage_capacity_without_conditions_complete: false
+  embrittlement_is_universal_for_all_metals: false
+  catalyst_relationship_equals_storage_relationship: false
+
+status: "RESEARCHED"

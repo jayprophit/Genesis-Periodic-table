@@ -1,0 +1,131 @@
+mat_id: "MAT:0002"
+record_name: "Helium"
+symbol: "He"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 2
+
+legacy:
+  legacy_id: "G0002"
+  migration_status: "IN-PROGRESS"
+
+identity:
+  proton_count: 2
+  neutral_electron_count: 2
+  period: 1
+  group: 18
+  block: "s"
+  ordinary_material_form: "MONATOMIC"
+
+atomic_weight:
+  value: 4.002602
+  uncertainty: 0.000002
+  source_id: "SRC-000019"
+
+electronic_ground_state:
+  configuration: "1s2"
+  term: "1S0"
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    process: "He -> He+ + e-"
+    value: 24.587389011
+    uncertainty: 0.000000025
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  second:
+    process: "He+ -> He2+ + e-"
+    value: 54.4177655282
+    uncertainty: 0.0000000010
+    unit: "eV"
+    source_id: "SRC-000005"
+
+atomic_states:
+
+  - id: "MAT:0002:ATOM:He"
+    charge: 0
+
+  - id: "MAT:0002:ION:He+1"
+    charge: 1
+
+  - id: "MAT:0002:ION:He+2"
+    charge: 2
+    note: >
+      For isotope 4He, the bare nucleus is an alpha particle.
+
+isotope_branch:
+  evaluated_mass_numbers:
+    minimum: 3
+    maximum: 10
+
+  stable:
+    - "MAT:0002:ISO:He-3"
+    - "MAT:0002:ISO:He-4"
+
+  unstable:
+    - "MAT:0002:ISO:He-5"
+    - "MAT:0002:ISO:He-6"
+    - "MAT:0002:ISO:He-7"
+    - "MAT:0002:ISO:He-8"
+    - "MAT:0002:ISO:He-9"
+    - "MAT:0002:ISO:He-10"
+
+quantum_statistics:
+
+  helium_3:
+    nuclear_spin: "1/2"
+    statistics: "FERMIONIC"
+
+  helium_4:
+    nuclear_spin: "0"
+    statistics: "BOSONIC"
+
+helium_4_reference_points:
+
+  normal_boiling_point:
+    value: 4.2221
+    unit: "K"
+    pressure:
+      value: 101325
+      unit: "Pa"
+    source_id: "SRC-000025"
+
+  critical_temperature:
+    value: 5.1953
+    unit: "K"
+    source_id: "SRC-000025"
+
+  critical_pressure:
+    value: 227460
+    unit: "Pa"
+    source_id: "SRC-000025"
+
+  lower_lambda_point:
+    value: 2.1768
+    unit: "K"
+    pressure:
+      value: 5041.8
+      unit: "Pa"
+    transition:
+      from: "He-I"
+      to: "He-II"
+    source_id: "SRC-000025"
+
+molecular_ground_state:
+  ordinary_stable_neutral_diatomic: false
+
+plasma:
+  id: "MAT:0002:PLASMA:He"
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  stable_isotopes: "ESTABLISHED"
+  helium4_superfluidity: "ESTABLISHED"
+  helium3_superfluidity: "ESTABLISHED"
+  extreme_high_pressure_states: "ACTIVE-RESEARCH"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

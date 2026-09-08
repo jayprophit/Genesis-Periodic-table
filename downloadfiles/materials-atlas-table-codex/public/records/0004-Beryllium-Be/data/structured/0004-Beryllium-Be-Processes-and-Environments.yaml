@@ -1,0 +1,113 @@
+registry_id: "MAT:0004:REG:PROCESSES"
+record_id: "MAT:0004"
+
+processes:
+
+  - process_id: "MAT:0004:PROC:MELTING"
+    family: "THERMAL"
+    input: "MAT:0004:PHASE:HCP"
+    output: "MAT:0004:PHASE:LIQUID"
+
+  - process_id: "MAT:0004:PROC:OXIDATION"
+    family: "CHEMICAL"
+    input: "Be"
+    product_family:
+      - "BeO"
+
+  - process_id: "MAT:0004:PROC:BEO"
+    family: "CERAMIC"
+    product: "MAT:CMP:BeO"
+
+  - process_id: "MAT:0004:PROC:ALPHA-N"
+    family: "NUCLEAR"
+    reaction: "9Be + 4He -> 12C + n"
+    calculation_id: "MAT:0004:CALC:003"
+
+  - process_id: "MAT:0004:PROC:N2N"
+    family: "NUCLEAR"
+    reaction: "9Be + n -> 8Be + 2n"
+    calculation_id: "MAT:0004:CALC:004"
+
+  - process_id: "MAT:0004:PROC:MACHINING"
+    family: "MANUFACTURING"
+    occupational_exposure_relevant: true
+
+  - process_id: "MAT:0004:PROC:POWDER-METALLURGY"
+    family: "MANUFACTURING"
+    occupational_exposure_relevant: true
+
+  - process_id: "MAT:0004:PROC:SINTERING"
+    family: "MANUFACTURING"
+    occupational_exposure_relevant: true
+
+environments:
+
+  AMBIENT_SOLID:
+    dominant_phase: "MAT:0004:PHASE:HCP"
+
+  HIGH_TEMPERATURE:
+    effects:
+      - thermal_expansion
+      - oxidation
+      - phase_change
+      - property_change
+
+  HIGH_PRESSURE:
+    effects:
+      - phase_transformation
+      - electronic_structure_change
+
+  X_RAY_FIELD:
+    effects:
+      - photon_attenuation
+    required_variables:
+      - photon_energy
+      - thickness
+      - density
+
+  NEUTRON_FIELD:
+    isotope_specific: true
+    effects:
+      - neutron_multiplication
+      - activation
+      - displacement_damage
+      - helium_and_tritium_generation_channels
+
+  ALPHA_FIELD:
+    isotope_specific: true
+    effects:
+      - alpha_neutron_reactions
+
+  FUSION_BLANKET:
+    roles:
+      - neutron_multiplier
+      - heat_transfer_relationship
+    material_may_be:
+      - Be
+      - beryllide
+
+  OCCUPATIONAL_AIRBORNE:
+    hazards:
+      - sensitization
+      - chronic_beryllium_disease
+      - carcinogenic_hazard
+
+safety:
+  airborne_exposure_high_concern: true
+
+  regulatory_example_US_OSHA:
+    TWA:
+      value: 0.2
+      unit: "ug/m3"
+      duration: "8 h"
+
+    STEL:
+      value: 2.0
+      unit: "ug/m3"
+      duration: "15 min"
+
+    source_id: "SRC-000051"
+
+rules:
+  regulation_is_physical_constant: false
+  manufacturing_and_safety_are_separable: false

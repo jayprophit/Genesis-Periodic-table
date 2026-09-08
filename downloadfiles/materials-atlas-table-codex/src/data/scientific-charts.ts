@@ -1,0 +1,147 @@
+// Scientific chart data for Materials Atlas Table Codex
+
+export interface PieSlice {
+  name: string;
+  symbol: string;
+  value: number;
+  color: string;
+  info: string;
+}
+
+export const ABUNDANCE_DATASETS: Record<string, { title: string; subtitle: string; unit: string; data: PieSlice[] }> = {
+  universe: {
+    title: "Cosmic Abundance of Matter",
+    subtitle: "Mass fraction in the observable universe (Baryonic matter)",
+    unit: "% by mass",
+    data: [
+      { name: "Hydrogen", symbol: "H", value: 74.0, color: "#38bdf8", info: "Primordial Big Bang nucleosynthesis gas" },
+      { name: "Helium", symbol: "He", value: 24.0, color: "#fbbf24", info: "Stellar fusion & primordial nucleosynthesis" },
+      { name: "Oxygen", symbol: "O", value: 1.04, color: "#34d399", info: "CNO cycle & helium burning in massive stars" },
+      { name: "Carbon", symbol: "C", value: 0.46, color: "#94a3b8", info: "Triple-alpha process in red giants" },
+      { name: "Neon", symbol: "Ne", value: 0.13, color: "#f472b6", info: "Carbon burning in evolved stars" },
+      { name: "Iron", symbol: "Fe", value: 0.11, color: "#fb7185", info: "Silicon burning & supernova nucleosynthesis endpoint" },
+      { name: "Nitrogen", symbol: "N", value: 0.10, color: "#818cf8", info: "CNO catalytic stellar cycles" },
+      { name: "Silicon", symbol: "Si", value: 0.07, color: "#c084fc", info: "Alpha-process star cores" },
+      { name: "Others", symbol: "Σ", value: 0.09, color: "#64748b", info: "All other heavier synthesized elements" }
+    ]
+  },
+  crust: {
+    title: "Earth's Continental Crust",
+    subtitle: "Mass percentage of elemental rock & mineral composition",
+    unit: "% by mass",
+    data: [
+      { name: "Oxygen", symbol: "O", value: 46.1, color: "#34d399", info: "Silicate frameworks, quartz, alumina oxides" },
+      { name: "Silicon", symbol: "Si", value: 28.2, color: "#c084fc", info: "Silicate minerals (feldspar, quartz, micas)" },
+      { name: "Aluminium", symbol: "Al", value: 8.23, color: "#60a5fa", info: "Aluminosilicates and bauxite" },
+      { name: "Iron", symbol: "Fe", value: 5.63, color: "#fb7185", info: "Hematite, magnetite, basaltic magmas" },
+      { name: "Calcium", symbol: "Ca", value: 4.15, color: "#facc15", info: "Carbonates, plagioclase feldspars" },
+      { name: "Sodium", symbol: "Na", value: 2.36, color: "#f97316", info: "Albite feldspars, evaporites" },
+      { name: "Magnesium", symbol: "Mg", value: 2.33, color: "#a3e635", info: "Dolomite, olivine, pyroxenes" },
+      { name: "Potassium", symbol: "K", value: 2.09, color: "#e879f9", info: "Orthoclase, microcline, clay minerals" },
+      { name: "Titanium", symbol: "Ti", value: 0.56, color: "#38bdf8", info: "Ilmenite and rutile" },
+      { name: "Others", symbol: "Σ", value: 0.35, color: "#94a3b8", info: "All remaining trace elements" }
+    ]
+  },
+  human: {
+    title: "Human Biological Composition",
+    subtitle: "Average elemental mass distribution in a 70 kg human adult",
+    unit: "% by mass",
+    data: [
+      { name: "Oxygen", symbol: "O", value: 65.0, color: "#34d399", info: "Primary constituent of body water (H₂O) & biomolecules" },
+      { name: "Carbon", symbol: "C", value: 18.5, color: "#94a3b8", info: "Organic skeleton: lipids, proteins, DNA, carbohydrates" },
+      { name: "Hydrogen", symbol: "H", value: 10.0, color: "#38bdf8", info: "Water, proton gradients, organic bonds" },
+      { name: "Nitrogen", symbol: "N", value: 3.2, color: "#818cf8", info: "Amino acids, peptide bonds, nucleic acids" },
+      { name: "Calcium", symbol: "Ca", value: 1.4, color: "#facc15", info: "Hydroxyapatite in bone & teeth, cellular signaling" },
+      { name: "Phosphorus", symbol: "P", value: 1.0, color: "#fb923c", info: "ATP energy currency, DNA backbone, bone matrix" },
+      { name: "Potassium", symbol: "K", value: 0.35, color: "#e879f9", info: "Intracellular cation, neuronal membrane potential" },
+      { name: "Sulfur", symbol: "S", value: 0.25, color: "#fde047", info: "Disulfide bridges in cysteine & methionine" },
+      { name: "Sodium & Chlorine", symbol: "NaCl", value: 0.30, color: "#2dd4bf", info: "Extracellular osmotic pressure, electrolyte homeostasis" },
+      { name: "Trace Elements", symbol: "Trace", value: 0.20, color: "#a855f7", info: "Iron (heme), Zinc, Iodine, Magnesium, Copper, Selenium" }
+    ]
+  },
+  atmosphere: {
+    title: "Earth's Dry Atmosphere",
+    subtitle: "Volume percentage of sea-level atmospheric gases",
+    unit: "% by volume",
+    data: [
+      { name: "Nitrogen (N₂)", symbol: "N₂", value: 78.084, color: "#818cf8", info: "Inert molecular buffer preventing catastrophic combustion" },
+      { name: "Oxygen (O₂)", symbol: "O₂", value: 20.946, color: "#34d399", info: "Aerobic cellular respiration & ozone shield generator" },
+      { name: "Argon (Ar)", symbol: "Ar", value: 0.934, color: "#93c5fd", info: "Radiogenic accumulation from Potassium-40 decay" },
+      { name: "Carbon Dioxide (CO₂)", symbol: "CO₂", value: 0.042, color: "#f87171", info: "Primary carbon fixation substrate & greenhouse driver" },
+      { name: "Neon (Ne)", symbol: "Ne", value: 0.0018, color: "#f472b6", info: "Noble inert noble gas" },
+      { name: "Helium (He)", symbol: "He", value: 0.0005, color: "#fbbf24", info: "Light gas escaping to space continuously" },
+      { name: "Methane + Others", symbol: "CH₄+", value: 0.0007, color: "#cbd5e1", info: "Trace greenhouse gases and krypton" }
+    ]
+  }
+};
+
+// Ionization Energy Ladders (eV) across first 10 elements
+export const IONIZATION_LADDERS = [
+  { element: "Hydrogen", symbol: "H", z: 1, I1: 13.598, I2: null, I3: null, I4: null, I5: null },
+  { element: "Helium", symbol: "He", z: 2, I1: 24.587, I2: 54.417, I3: null, I4: null, I5: null },
+  { element: "Lithium", symbol: "Li", z: 3, I1: 5.392, I2: 75.640, I3: 122.454, I4: null, I5: null },
+  { element: "Beryllium", symbol: "Be", z: 4, I1: 9.323, I2: 18.211, I3: 153.896, I4: 217.718, I5: null },
+  { element: "Boron", symbol: "B", z: 5, I1: 8.298, I2: 25.155, I3: 37.930, I4: 259.375, I5: 340.226 },
+  { element: "Carbon", symbol: "C", z: 6, I1: 11.260, I2: 24.383, I3: 47.888, I4: 64.494, I5: 392.087 },
+  { element: "Nitrogen", symbol: "N", z: 7, I1: 14.534, I2: 29.601, I3: 47.449, I4: 77.473, I5: 97.890 },
+  { element: "Oxygen", symbol: "O", z: 8, I1: 13.618, I2: 35.117, I3: 54.936, I4: 77.414, I5: 113.899 },
+  { element: "Fluorine", symbol: "F", z: 9, I1: 17.423, I2: 34.970, I3: 62.708, I4: 87.140, I5: 114.243 },
+  { element: "Neon", symbol: "Ne", z: 10, I1: 21.565, I2: 40.963, I3: 63.450, I4: 97.120, I5: 126.210 }
+];
+
+// Allotropes of Carbon Radar Comparison Data
+export const CARBON_ALLOTROPES_RADAR = [
+  { property: "Hardness (Mohs)", diamond: 10, graphite: 1.5, graphene: 10, cnt: 9.5 },
+  { property: "Thermal Conductivity (W/m·K / 500)", diamond: 4.4, graphite: 0.6, graphene: 10, cnt: 7.0 },
+  { property: "Electrical Conductivity (Log σ)", diamond: 0.1, graphite: 6.2, graphene: 10, cnt: 9.0 },
+  { property: "Bandgap (eV)", diamond: 5.47, graphite: 0.04, graphene: 0.0, cnt: 1.2 },
+  { property: "Tensile Strength (GPa / 13)", diamond: 2.2, graphite: 0.5, graphene: 10, cnt: 8.5 },
+  { property: "Density (g/cm³)", diamond: 3.52, graphite: 2.26, graphene: 2.20, cnt: 1.8 }
+];
+
+// Periodic trends along periods 1-4 (Z=1 to 36)
+export const PERIODIC_TRENDS = [
+  { z: 1, s: "H", r: 53, ie: 13.6, en: 2.20, mp: 14.0, period: 1 },
+  { z: 2, s: "He", r: 31, ie: 24.6, en: 0, mp: 0.95, period: 1 },
+  { z: 3, s: "Li", r: 167, ie: 5.4, en: 0.98, mp: 453.7, period: 2 },
+  { z: 4, s: "Be", r: 112, ie: 9.3, en: 1.57, mp: 1560, period: 2 },
+  { z: 5, s: "B", r: 87, ie: 8.3, en: 2.04, mp: 2349, period: 2 },
+  { z: 6, s: "C", r: 67, ie: 11.3, en: 2.55, mp: 3823, period: 2 },
+  { z: 7, s: "N", r: 56, ie: 14.5, en: 3.04, mp: 63.2, period: 2 },
+  { z: 8, s: "O", r: 48, ie: 13.6, en: 3.44, mp: 54.4, period: 2 },
+  { z: 9, s: "F", r: 42, ie: 17.4, en: 3.98, mp: 53.5, period: 2 },
+  { z: 10, s: "Ne", r: 38, ie: 21.6, en: 0, mp: 24.6, period: 2 },
+  { z: 11, s: "Na", r: 190, ie: 5.1, en: 0.93, mp: 370.9, period: 3 },
+  { z: 12, s: "Mg", r: 145, ie: 7.6, en: 1.31, mp: 923.0, period: 3 },
+  { z: 13, s: "Al", r: 118, ie: 6.0, en: 1.61, mp: 933.5, period: 3 },
+  { z: 14, s: "Si", r: 111, ie: 8.2, en: 1.90, mp: 1687, period: 3 },
+  { z: 15, s: "P", r: 98, ie: 10.5, en: 2.19, mp: 317.3, period: 3 },
+  { z: 16, s: "S", r: 88, ie: 10.4, en: 2.58, mp: 388.4, period: 3 },
+  { z: 17, s: "Cl", r: 79, ie: 13.0, en: 3.16, mp: 171.6, period: 3 },
+  { z: 18, s: "Ar", r: 71, ie: 15.8, en: 0, mp: 83.8, period: 3 },
+  { z: 19, s: "K", r: 243, ie: 4.3, en: 0.82, mp: 336.5, period: 4 },
+  { z: 20, s: "Ca", r: 194, ie: 6.1, en: 1.00, mp: 1115, period: 4 },
+  { z: 26, s: "Fe", r: 156, ie: 7.9, en: 1.83, mp: 1811, period: 4 },
+  { z: 29, s: "Cu", r: 145, ie: 7.7, en: 1.90, mp: 1358, period: 4 },
+  { z: 35, s: "Br", r: 94, ie: 11.8, en: 2.96, mp: 265.8, period: 4 },
+  { z: 36, s: "Kr", r: 88, ie: 14.0, en: 3.00, mp: 115.8, period: 4 }
+];
+
+// Deep isotope half-life scale across MAT 0001 - 0009
+export const ISOTOPE_SCALE = [
+  { isotope: "7H", element: "Hydrogen", halfLifeSec: 6.52e-22, display: "652 ys", type: "Resonance" },
+  { isotope: "5H", element: "Hydrogen", halfLifeSec: 8.6e-23, display: "86 ys", type: "Resonance" },
+  { isotope: "4H", element: "Hydrogen", halfLifeSec: 1.39e-22, display: "139 ys", type: "Resonance" },
+  { isotope: "8He", element: "Helium", halfLifeSec: 0.119, display: "119 ms", type: "Beta decay" },
+  { isotope: "6He", element: "Helium", halfLifeSec: 0.807, display: "807 ms", type: "Halo beta" },
+  { isotope: "11Li", element: "Lithium", halfLifeSec: 0.00875, display: "8.75 ms", type: "2-Neutron Halo" },
+  { isotope: "8B", element: "Boron", halfLifeSec: 0.77, display: "770 ms", type: "Solar neutrino emitter" },
+  { isotope: "13N", element: "Nitrogen", halfLifeSec: 598.2, display: "9.97 min", type: "PET Tracer" },
+  { isotope: "18F", element: "Fluorine", halfLifeSec: 6586, display: "109.8 min", type: "FDG Oncology PET" },
+  { isotope: "3H (Tritium)", element: "Hydrogen", halfLifeSec: 3.88e8, display: "12.32 years", type: "Beta emitter" },
+  { isotope: "14C", element: "Carbon", halfLifeSec: 1.81e11, display: "5,730 years", type: "Radiocarbon Dating" },
+  { isotope: "10Be", element: "Beryllium", halfLifeSec: 4.38e13, display: "1.39M years", type: "Cosmogenic" },
+  { isotope: "1H (Protium)", element: "Hydrogen", halfLifeSec: 1e35, display: "STABLE", type: "Stable" },
+  { isotope: "12C", element: "Carbon", halfLifeSec: 1e35, display: "STABLE", type: "Stable" },
+  { isotope: "16O", element: "Oxygen", halfLifeSec: 1e35, display: "STABLE", type: "Stable" }
+];

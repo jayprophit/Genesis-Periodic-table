@@ -1,0 +1,165 @@
+registry_id: "MAT:0005:REG:MATERIAL-RELATIONSHIPS"
+record_id: "MAT:0005"
+
+materials:
+
+  boron_carbide:
+
+    future_id: "MAT:CMP:B4C"
+    nominal_formula: "B4C"
+    family: "BORON-CARBIDE"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0006"
+
+    target_status:
+      carbon: "RESOLVED"
+
+    functions:
+      - hard_ceramic
+      - wear_material
+      - neutron_absorber
+      - armour_material
+
+    representative_hardness_measurement:
+      value: 47
+      uncertainty: 2
+      unit: "GPa"
+      evidence_status: "UNEVALUATED-MEASUREMENT"
+      source_id: "SRC-000071"
+
+    rule: "Do not assign 47 GPa to all B4C material states."
+
+  boron_nitride:
+
+    future_family: "MAT:CMP:BN"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0007"
+
+    target_status:
+      nitrogen: "RESOLVED"
+
+    allotrope_or_polymorph_families:
+      - "HEXAGONAL-BN"
+      - "CUBIC-BN"
+      - "WURTZITIC-BN"
+      - "NANOSTRUCTURED-BN"
+
+    rule: >
+      h-BN, c-BN and other BN structures are distinct material
+      states with different properties.
+
+    source_id: "SRC-000072"
+
+  boron_oxide:
+
+    future_id: "MAT:CMP:B2O3"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0008"
+
+    target_status:
+      oxygen: "RESOLVED"
+
+    functions:
+      - glass_network_component
+      - borate_precursor
+
+  borosilicate:
+
+    family: "BOROSILICATE-GLASS"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0014"
+      - "MAT:0008"
+
+    future_targets:
+      silicon: "RESERVED-PENDING-SILICON"
+      oxygen: "RESOLVED"
+
+    possible_property_objectives:
+      - low_thermal_expansion
+      - thermal_shock_resistance
+      - chemical_durability
+      - optical_transmission
+
+  boranes:
+
+    family: "BORANES"
+    formula_family: "BxHy"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0001"
+
+    bonding:
+      multicentre: true
+      polyhedral_clusters: true
+
+    safety:
+      compound_specific: true
+
+  magnesium_diboride:
+
+    future_id: "MAT:CMP:MgB2"
+
+    element_relationships:
+      - "MAT:0005"
+      - "MAT:0012"
+
+    target_status:
+      magnesium: "RESERVED-PENDING-MAGNESIUM"
+
+    function:
+      - superconducting_material
+
+    elemental_boron_superconductivity_equivalent: false
+
+  boron_doped_diamond:
+
+    class: "DOPED-HOST-MATERIAL"
+
+    host:
+      element: "MAT:0006"
+      structure: "DIAMOND"
+
+    dopant:
+      element: "MAT:0005"
+      role: "ACCEPTOR / HOLE-DOPANT"
+
+    experimentally_observed:
+      superconducting: true
+      approximate_Tc:
+        value: 4
+        unit: "K"
+
+    source_id: "SRC-000074"
+
+    rule: >
+      Superconductivity belongs to the doped diamond state,
+      not to elemental Boron or undoped diamond independently.
+
+  metal_borides:
+
+    family: "BORIDES"
+
+    representative_future_compounds:
+      - "TiB2"
+      - "ZrB2"
+      - "HfB2"
+
+    possible_property_classes:
+      - refractory
+      - hard
+      - electrically_conducting
+      - chemically_resistant
+
+rules:
+  compound_property_equals_boron_property: false
+  doping_property_equals_dopant_property: false
+  one_formula_implies_one_material_state: false

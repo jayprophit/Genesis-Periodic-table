@@ -1,0 +1,108 @@
+registry_id: "MAT:0007:REG:PROCESSES"
+record_id: "MAT:0007"
+
+processes:
+
+  - process_id: "MAT:0007:PROC:LIQUEFACTION"
+    family: "THERMAL-PHASE"
+    input: "N2(g)"
+    output: "MAT:0007:PHASE:LIQUID-N2"
+
+  - process_id: "MAT:0007:PROC:HABER-BOSCH"
+    family: "CATALYTIC-CHEMICAL"
+    output: "NH3"
+
+  - process_id: "MAT:0007:PROC:BIOLOGICAL-FIXATION"
+    family: "BIOCHEMICAL"
+    catalyst: "NITROGENASE"
+
+  - process_id: "MAT:0007:PROC:LIGHTNING-FIXATION"
+    family: "PLASMA / ATMOSPHERIC"
+
+  - process_id: "MAT:0007:PROC:PLASMA-ACTIVATION"
+    family: "ELECTRONIC / PLASMA"
+
+    states:
+      - N2*
+      - N2+
+      - N
+      - N*
+      - N+
+
+  - process_id: "MAT:0007:PROC:NITRIDING"
+    family: "SURFACE-ENGINEERING"
+
+  - process_id: "MAT:0007:PROC:NITRIFICATION"
+    family: "BIOGEOCHEMICAL"
+
+  - process_id: "MAT:0007:PROC:DENITRIFICATION"
+    family: "BIOGEOCHEMICAL"
+
+  - process_id: "MAT:0007:PROC:ANAMMOX"
+    family: "BIOGEOCHEMICAL"
+
+  - process_id: "MAT:0007:PROC:CG-N"
+    family: "HIGH-PRESSURE-STRUCTURAL"
+    output: "MAT:0007:ALLOTROPE:CG-N"
+
+environments:
+
+  ATMOSPHERE:
+    dominant_elemental_state: "MAT:0007:MOL:N2"
+
+  CRYOGENIC:
+    important_phase: "MAT:0007:PHASE:LIQUID-N2"
+
+  HIGH_TEMPERATURE_AIR:
+    possible_products:
+      - NO
+      - NO2
+      - other_NOx
+
+  PLASMA:
+    possible_states:
+      - N2*
+      - N2+
+      - N
+      - N*
+      - N+
+
+  BIOLOGICAL:
+    processes:
+      - fixation
+      - assimilation
+      - ammonification
+      - nitrification
+      - denitrification
+      - anammox
+
+  HIGH_PRESSURE_HIGH_TEMPERATURE:
+    possible_state:
+      - "MAT:0007:ALLOTROPE:CG-N"
+
+  MANUFACTURING:
+    uses:
+      - inerting
+      - controlled_atmosphere
+      - nitriding
+      - deposition
+      - cryogenic_processing
+
+safety:
+
+  elemental_N2:
+    flammable: false
+    oxygen_displacement_hazard: true
+
+  liquid_N2:
+    cryogenic_burn_hazard: true
+    rapid_expansion_hazard: true
+    pressure_hazard_in_confined_space: true
+    oxygen_displacement_hazard: true
+
+  reactive_nitrogen:
+    compound_specific_hazard_required: true
+
+rules:
+  nitrogen_hazard_is_one_number: false
+  N2_inertness_is_environment_independent: false

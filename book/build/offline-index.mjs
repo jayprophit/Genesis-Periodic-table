@@ -17,6 +17,7 @@ export function buildOfflineIndex(manifest) {
     "./styles/sidebar-settings.css", "./styles/reader.css", "./styles/content.css",
     "./styles/visuals.css", "./styles/responsive.css", "./styles/print.css",
     "./styles/reading-modes.css", "./styles/codex-panels.css", "./styles/periodic-extra.css",
+    "./styles/reader-overrides.css", "./styles/popup-sections.css",
     "./styles/onboarding.css"
   ];
   const dataFiles = [
@@ -30,6 +31,11 @@ export function buildOfflineIndex(manifest) {
     "./manifest.webmanifest", "./scenes/index.json",
     "./vendor/marked.mjs", "./vendor/tex-svg.js", "./vendor/three.module.js", "./vendor/OrbitControls.js",
     "./vendor/chart.min.js",
+    "./reference-visuals/walter russel.webp",
+    "./reference-visuals/angular form walter russel.png",
+    "./reference-visuals/angular form walter russel2.png",
+    "./reference-visuals/angular form walter russel3.png",
+    "./reference-visuals/angular form walter russel4.png",
     ...cssModules, ...dataFiles];
   const all = [...new Set([...app, ...chapters, ...figures, ...scenes])];
   writeJson("offline-index.json", { app, chapters, figures, scenes, all }, 1);

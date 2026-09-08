@@ -1,0 +1,147 @@
+registry_id: "MAT:0007:REG:REACTIVE-NITROGEN"
+record_id: "MAT:0007"
+version: "1.0.0"
+
+species:
+
+  ammonia:
+
+    id: "MAT:CMP:NH3"
+    formula: "NH3"
+
+    elements:
+      - "MAT:0001"
+      - "MAT:0007"
+
+    geometry:
+      molecular: "TRIGONAL-PYRAMIDAL"
+
+    nitrogen_formal_oxidation_state: -3
+
+    roles:
+      - fixed_nitrogen
+      - fertilizer_precursor
+      - chemical_feedstock
+      - hydrogen_carrier
+      - energy_carrier_research
+
+    source_ids:
+      - "SRC-000118"
+      - "SRC-000119"
+
+  ammonium:
+
+    id: "MAT:ION:NH4+"
+    formula: "NH4+"
+
+    geometry:
+      molecular: "TETRAHEDRAL"
+
+    roles:
+      - biological_nitrogen
+      - soil_nitrogen
+      - fertilizer_species
+      - acid_base_chemistry
+
+  nitrite:
+
+    id: "MAT:ION:NO2-"
+    formula: "NO2-"
+
+    geometry:
+      molecular: "BENT"
+
+    nitrogen_formal_oxidation_state: 3
+
+    nitrogen_cycle_role:
+      - nitrification_intermediate
+      - denitrification_intermediate
+      - anammox_substrate
+
+  nitrate:
+
+    id: "MAT:ION:NO3-"
+    formula: "NO3-"
+
+    geometry:
+      molecular: "TRIGONAL-PLANAR"
+
+    nitrogen_formal_oxidation_state: 5
+
+    roles:
+      - plant_nutrient
+      - environmental_nitrogen
+      - fertilizer_species
+      - denitrification_substrate
+
+  nitric_oxide:
+
+    id: "MAT:CMP:NO"
+    formula: "NO"
+
+    geometry:
+      molecular: "LINEAR"
+
+    electronic:
+      radical: true
+      open_shell: true
+
+    nitrogen_formal_oxidation_state: 2
+
+    roles:
+      - atmospheric_chemistry
+      - combustion_NOx
+      - biological_signalling
+
+    gas_standard_formation_enthalpy:
+      value: 90.29
+      unit: "kJ/mol"
+      temperature:
+        value: 298.15
+        unit: "K"
+      source_id: "SRC-000115"
+
+  nitrogen_dioxide:
+
+    id: "MAT:CMP:NO2"
+    formula: "NO2"
+
+    geometry:
+      molecular: "BENT"
+
+    electronic:
+      radical: true
+
+    nitrogen_formal_oxidation_state: 4
+
+    roles:
+      - NOx_air_chemistry
+      - oxidation_chemistry
+      - photochemical_air_pollution
+
+    source_id: "SRC-000116"
+
+  nitrous_oxide:
+
+    id: "MAT:CMP:N2O"
+    formula: "N2O"
+
+    geometry:
+      molecular: "LINEAR"
+
+    nitrogen_average_formal_oxidation_state: 1
+
+    roles:
+      - microbial_nitrogen_cycle
+      - atmospheric_trace_gas
+      - greenhouse_gas
+      - anaesthetic_compound
+
+    source_id: "SRC-000117"
+
+rules:
+  NO_equals_NO2: false
+  NO2_equals_N2O: false
+  nitrite_equals_nitrate: false
+  oxidation_state_equals_element_property: false
+  biological_role_equals_atmospheric_role: false

@@ -1,0 +1,225 @@
+mat_id: "MAT:0007"
+record_name: "Nitrogen"
+symbol: "N"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 7
+
+legacy:
+  legacy_id: "G0007"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 7
+  neutral_electron_count: 7
+  period: 2
+  group: 15
+  block: "p"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 14.00643
+  maximum: 14.00728
+  source_id: "SRC-000101"
+
+electronic_ground_state:
+  configuration: "1s2 2s2 2p3"
+  term: "4S°3/2"
+  open_shell: true
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    value: 14.53413
+    uncertainty: 0.00004
+    unit: "eV"
+
+  second:
+    value: 29.60125
+    uncertainty: 0.00009
+    unit: "eV"
+    evaluated_marker: "BRACKETED-IN-NIST"
+
+  third:
+    value: 47.4453
+    uncertainty: 0.0025
+    unit: "eV"
+    evaluated_marker: "BRACKETED-IN-NIST"
+
+  fourth:
+    value: 77.4735
+    uncertainty: 0.0004
+    unit: "eV"
+
+  fifth:
+    value: 97.8901
+    uncertainty: 0.0004
+    unit: "eV"
+
+  source_id: "SRC-000005"
+
+states:
+  - id: "MAT:0007:ATOM:N"
+    charge: 0
+
+  - id: "MAT:0007:ION:N+1"
+    charge: 1
+
+  - id: "MAT:0007:ION:N+2"
+    charge: 2
+
+  - id: "MAT:0007:ION:N+3"
+    charge: 3
+
+  - id: "MAT:0007:ION:N+4"
+    charge: 4
+
+  - id: "MAT:0007:ION:N+5"
+    charge: 5
+
+  - id: "MAT:0007:ION:N+6"
+    charge: 6
+
+  - id: "MAT:0007:ION:N+7"
+    charge: 7
+
+ordinary_molecular_state:
+
+  id: "MAT:0007:MOL:N2"
+
+  formula: "N2"
+  geometry: "LINEAR"
+
+  ground_electronic_state:
+    term: "X1Sigma_g+"
+
+  spectroscopic_constants:
+
+    omega_e:
+      value: 2358.57
+      unit: "cm-1"
+
+    B_e:
+      value: 1.998241
+      unit: "cm-1"
+
+    r_e:
+      value: 1.097685
+      unit: "angstrom"
+
+  source_id: "SRC-000102"
+
+magnetic_state:
+
+  isolated_atom:
+    open_shell: true
+    paramagnetic: true
+
+  ground_state_N2:
+    closed_shell: true
+    diamagnetic: true
+
+  rule: "Atomic and molecular magnetic states are not interchangeable."
+
+atmosphere:
+
+  dry_air_reference:
+
+    N2_volume_fraction_percent:
+      value: 78.084
+      unit: "percent"
+
+    source_id: "SRC-000103"
+
+phase_reference:
+
+  melting_point:
+    representative_value: 63.2
+    unit: "K"
+
+  normal_boiling_point:
+    value: 77.355
+    unit: "K"
+
+  source_id: "SRC-000104"
+
+cryogenic:
+  liquid_nitrogen_enabled: true
+  environment_enabling_role: true
+
+high_pressure:
+
+  cubic_gauche_nitrogen:
+
+    id: "MAT:0007:ALLOTROPE:CG-N"
+
+    structure:
+      polymeric: true
+      single_bonded_network: true
+
+    synthesis_original_report:
+      pressure:
+        relation: "GREATER-THAN"
+        value: 110
+        unit: "GPa"
+
+      temperature:
+        relation: "GREATER-THAN"
+        value: 2000
+        unit: "K"
+
+    metastable: true
+
+    source_id: "SRC-000105"
+
+isotope_branch:
+
+  NIST_mass_range:
+    minimum: 10
+    maximum: 25
+
+  stable:
+    - "MAT:0007:ISO:N-14"
+    - "MAT:0007:ISO:N-15"
+
+  key_radioisotopes:
+    - "MAT:0007:ISO:N-13"
+    - "MAT:0007:ISO:N-16"
+    - "MAT:0007:ISO:N-17"
+
+chemistry:
+
+  oxidation_state_range:
+    approximate_minimum: -3
+    approximate_maximum: 5
+
+  major_families:
+    - ammonia
+    - ammonium
+    - nitrides
+    - nitrates
+    - nitrites
+    - nitrogen_oxides
+    - amines
+    - amides
+    - nitriles
+
+biology:
+  essential_for_terrestrial_life: true
+  fixed_nitrogen_required_by_most_organisms: true
+
+planetary_cycle:
+  enabled: true
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  N2_ground_state: "ESTABLISHED"
+  stable_isotopes: "ESTABLISHED"
+  atmospheric_reservoir: "ESTABLISHED"
+  cryogenic_phase: "ESTABLISHED"
+  cubic_gauche_nitrogen: "ESTABLISHED-HIGH-PRESSURE"
+  nitrogen_fixation: "ESTABLISHED"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

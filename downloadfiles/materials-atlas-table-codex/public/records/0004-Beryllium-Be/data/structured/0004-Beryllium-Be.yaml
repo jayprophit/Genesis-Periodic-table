@@ -1,0 +1,144 @@
+mat_id: "MAT:0004"
+record_name: "Beryllium"
+symbol: "Be"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 4
+
+legacy:
+  legacy_id: "G0004"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 4
+  neutral_electron_count: 4
+  period: 2
+  group: 2
+  block: "s"
+  material_class: "LIGHT-METAL"
+
+atomic_weight:
+  value: 9.0121831
+  uncertainty: 0.0000005
+  source_id: "SRC-000048"
+
+electronic_ground_state:
+  configuration: "1s2 2s2"
+  term: "1S0"
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    value: 9.322699
+    uncertainty: 0.000007
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  second:
+    value: 18.21115
+    uncertainty: 0.00004
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  third:
+    value: 153.896205
+    uncertainty: 0.000004
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  fourth:
+    value: 217.71858459
+    uncertainty: 0.00000010
+    unit: "eV"
+    source_id: "SRC-000005"
+
+states:
+  - id: "MAT:0004:ATOM:Be"
+    charge: 0
+
+  - id: "MAT:0004:ION:Be+1"
+    charge: 1
+
+  - id: "MAT:0004:ION:Be+2"
+    charge: 2
+    principal_chemical_charge_state: true
+
+  - id: "MAT:0004:ION:Be+3"
+    charge: 3
+
+  - id: "MAT:0004:ION:Be+4"
+    charge: 4
+
+bulk_reference:
+
+  state: "SOLID"
+
+  phase:
+    id: "MAT:0004:PHASE:HCP"
+    structure: "HEXAGONAL-CLOSE-PACKED"
+    space_group: "P63/mmc"
+    space_group_number: 194
+
+    lattice:
+      a:
+        value: 228.58
+        unit: "pm"
+
+      c:
+        value: 358.43
+        unit: "pm"
+
+    source_id: "SRC-000049"
+
+  density:
+    representative_value: 1.85
+    unit: "g/cm3"
+    source_id: "SRC-000050"
+
+  melting_point:
+    representative_value: 1560
+    unit: "K"
+    source_id: "SRC-000050"
+
+  boiling_point:
+    representative_value: 2741
+    unit: "K"
+    source_id: "SRC-000050"
+
+isotope_branch:
+  evaluated_mass_range:
+    minimum: 5
+    maximum: 16
+
+  natural_stable:
+    - "MAT:0004:ISO:Be-9"
+
+chemistry:
+  common_oxidation_state: 2
+  oxide_relationship: "MAT:CMP:BeO"
+  fluoride_relationships: true
+  organometallic_chemistry: true
+
+nuclear:
+  neutron_management: true
+  neutron_multiplier_relationship: true
+  alpha_neutron_relationship: true
+  triple_alpha_intermediate: "MAT:0004:ISO:Be-8"
+
+safety:
+  occupational_hazard: "HIGH-IMPORTANCE"
+  beryllium_sensitization: true
+  chronic_beryllium_disease: true
+  carcinogenic_hazard: true
+  source_id: "SRC-000051"
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  hcp_bulk_phase: "ESTABLISHED"
+  isotope_core: "EVALUATED"
+  beryllium_oxide: "ESTABLISHED"
+  fusion_neutron_multiplier_role: "ESTABLISHED-ENGINEERING-RESEARCH"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

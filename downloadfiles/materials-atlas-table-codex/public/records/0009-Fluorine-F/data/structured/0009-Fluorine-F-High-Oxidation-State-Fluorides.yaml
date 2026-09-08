@@ -1,0 +1,58 @@
+registry_id: "MAT:0009:REG:HIGH-OXIDATION-FLUORIDES"
+
+principle:
+  description: >
+    Strongly electronegative Fluorine ligands can stabilize
+    unusually high positive formal oxidation states of other elements.
+
+examples:
+
+  SF6:
+    parents:
+      - "MAT:0016"
+      - "MAT:0009"
+
+    sulfur_status: "RESERVED-PENDING-SULFUR"
+    geometry: "OCTAHEDRAL"
+
+    formal_oxidation_states:
+      S: 6
+      F: -1
+
+  UF6:
+    parents:
+      - "MAT:0092"
+      - "MAT:0009"
+
+    uranium_status: "RESERVED-PENDING-URANIUM"
+    geometry: "OCTAHEDRAL"
+
+    formal_oxidation_states:
+      U: 6
+      F: -1
+
+    processing_role:
+      molecular_uranium_processing: true
+
+    nuclear_device_role:
+      elemental_fluorine_is_nuclear_energy_source: false
+
+  PtF6:
+    parents:
+      - "MAT:0078"
+      - "MAT:0009"
+
+    platinum_status: "RESERVED-PENDING-PLATINUM"
+    geometry: "OCTAHEDRAL"
+
+    formal_oxidation_states:
+      Pt: 6
+      F: -1
+
+    historical_role:
+      - Bartlett_noble_gas_chemistry
+
+rules:
+  high_oxidation_state_equals_high_stability_in_all_environments: false
+  formal_oxidation_state_equals_literal_atomic_charge: false
+  ligand_stabilization_is_context_specific: true

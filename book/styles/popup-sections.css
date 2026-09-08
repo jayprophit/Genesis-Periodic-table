@@ -1,0 +1,59 @@
+/* MAT Styles: image viewer and collapsible chapter sections */
+.chapter-section {
+  margin: 26px 0;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+}
+.chapter-section > summary {
+  padding: 14px 18px;
+  color: var(--ink);
+}
+.chapter-section > summary h2 {
+  display: inline;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 26px;
+}
+.chapter-section > :not(summary) {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.chapter-section > p:first-of-type,
+.chapter-section > ul:first-of-type,
+.chapter-section > ol:first-of-type {
+  margin-top: 18px;
+}
+.visual-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+}
+.visual-open:hover { background: transparent; }
+.visual-open img { cursor: zoom-in; }
+.visual-dialog { width: min(1200px, 96vw); }
+.dialog-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+.dialog-heading h2 { margin: 0; }
+.visual-stage {
+  min-height: 240px;
+  max-height: 68vh;
+  overflow: auto;
+  margin: 18px 0 10px;
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.visual-stage img {
+  display: inline-block;
+  max-width: none;
+  transform-origin: center center;
+  transition: transform .15s ease;
+}
+.visual-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.visual-controls a { padding: 8px 12px; font-size: 12px; }

@@ -1,0 +1,199 @@
+registry_id: "MAT:0006:REG:ALLOTROPES"
+record_id: "MAT:0006"
+version: "1.0.0"
+
+states:
+
+  diamond:
+
+    id: "MAT:0006:ALLOTROPE:DIAMOND"
+
+    bonding:
+      dominant_local_descriptor: "SP3-LIKE"
+
+    dimensionality: "3D-COVALENT-NETWORK"
+
+    geometry:
+      local_coordination: "TETRAHEDRAL"
+      ideal_angle_deg: 109.471
+
+    electronic:
+      intrinsic_class: "ULTRAWIDE-BANDGAP"
+      band_gap_reference:
+        approximate_value: 5.47
+        unit: "eV"
+        state_conditions_required: true
+
+    thermal:
+      very_high_conductivity_possible: true
+      purity_isotope_defect_dependent: true
+
+    spectral:
+      first_order_raman:
+        approximate_value: 1332
+        unit: "cm-1"
+
+    rules:
+      diamond_property_equals_all_carbon: false
+
+  graphite:
+
+    id: "MAT:0006:ALLOTROPE:GRAPHITE"
+
+    bonding:
+      in_plane: "SP2-LIKE"
+      interlayer: "WEAKER-INTERLAYER-INTERACTION"
+
+    dimensionality: "LAYERED-3D-CRYSTAL"
+
+    anisotropy:
+      enabled: true
+
+      conductivity:
+        relation: "sigma_parallel != sigma_perpendicular"
+
+      thermal:
+        relation: "k_parallel != k_perpendicular"
+
+    electronic:
+      class: "SEMIMETAL / CONDUCTING"
+
+    lithium_intercalation:
+      enabled: true
+      stage_1_compound: "LiC6"
+      source_id: "SRC-000088"
+
+  graphene:
+
+    id: "MAT:0006:ALLOTROPE:GRAPHENE"
+
+    dimensionality: "2D"
+
+    structure:
+      one_atom_thick: true
+      lattice: "HEXAGONAL-HONEYCOMB"
+      bonding: "SP2-LIKE"
+
+    electronic:
+      class: "DIRAC-LIKE-SEMIMETAL"
+      substrate_and_doping_sensitive: true
+
+    state_variables:
+      - layer_number
+      - substrate
+      - strain
+      - defects
+      - doping
+      - temperature
+      - edge_geometry
+
+    discovery_lineage:
+      experimental_isolation_year: 2004
+      source_id: "SRC-000086"
+
+  carbon_nanotube:
+
+    id: "MAT:0006:MAT:CNT"
+
+    dimensionality: "1D"
+
+    conceptual_origin:
+      graphene_rollup_model: true
+
+    chirality:
+      notation: "(n,m)"
+      first_class_variable: true
+
+    electronic:
+      possible_classes:
+        - metallic
+        - semiconducting
+        - quantum_confined
+
+      chirality_dependent: true
+
+    rule: >
+      Tube diameter and chirality are required before assigning
+      an electronic band structure to a nanotube.
+
+    source_id: "SRC-000090"
+
+  fullerene:
+
+    id: "MAT:0006:MOL:FULLERENE"
+
+    dimensionality: "0D"
+
+    families:
+      - C60
+      - C70
+      - higher_fullerenes
+
+    C60:
+      topology: "CLOSED-CAGE"
+      idealized_polyhedral_descriptor: "TRUNCATED-ICOSAHEDRON"
+      atoms: 60
+
+    source_id: "SRC-000089"
+
+  amorphous_carbon:
+
+    id: "MAT:0006:MAT:AMORPHOUS-CARBON"
+
+    dimensionality: "DISORDERED-3D"
+
+    long_range_crystal_order: false
+
+    variables:
+      - sp2_fraction
+      - sp3_fraction
+      - hydrogen_content
+      - density
+      - pore_structure
+      - defects
+      - deposition_method
+
+    subclasses:
+      - diamond_like_carbon
+      - hydrogenated_amorphous_carbon
+      - glassy_carbon
+
+  engineered_carbon:
+
+    classes:
+      - carbon_fibre
+      - activated_carbon
+      - porous_carbon
+      - carbon_black
+      - carbon_composite
+
+    classification: "MATERIAL-MORPHOLOGY / ENGINEERED-FAMILY"
+
+    rule: >
+      These are not automatically fundamental elemental
+      allotropes merely because their principal constituent
+      is Carbon.
+
+dimensionality_map:
+
+  0D:
+    - fullerene
+    - quantum_dot
+
+  1D:
+    - carbon_nanotube
+    - chain_like_states
+
+  2D:
+    - graphene
+
+  3D:
+    - diamond
+    - graphite_crystal
+    - amorphous_network
+
+rules:
+  composition_alone_determines_property: false
+  structure_is_first_class_variable: true
+  dimensionality_is_first_class_variable: true
+  topology_is_first_class_variable: true

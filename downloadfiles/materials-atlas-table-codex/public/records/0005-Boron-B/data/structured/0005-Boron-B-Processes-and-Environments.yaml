@@ -1,0 +1,142 @@
+registry_id: "MAT:0005:REG:PROCESSES"
+record_id: "MAT:0005"
+
+processes:
+
+  - process_id: "MAT:0005:PROC:ALLOTROPE-TRANSFORMATION"
+    family: "STRUCTURAL"
+    drivers:
+      - temperature
+      - pressure
+      - process_history
+
+  - process_id: "MAT:0005:PROC:GAMMA-B28"
+    family: "HIGH-PRESSURE-STRUCTURAL"
+    product: "MAT:0005:ALLOTROPE:GAMMA-B28"
+    source_id: "SRC-000069"
+
+  - process_id: "MAT:0005:PROC:METALLIZATION"
+    family: "HIGH-PRESSURE-ELECTRONIC"
+    pressure_required: true
+
+  - process_id: "MAT:0005:PROC:SUPERCONDUCTING-PRESSURE"
+    family: "HIGH-PRESSURE-QUANTUM"
+
+    observations:
+      - pressure:
+          value: 175
+          unit: "GPa"
+        Tc:
+          approximate_value: 6
+          unit: "K"
+
+      - pressure:
+          value: 250
+          unit: "GPa"
+        Tc:
+          approximate_value: 11.2
+          unit: "K"
+
+    source_id: "SRC-000070"
+
+  - process_id: "MAT:0005:PROC:B10-CAPTURE"
+    family: "NUCLEAR"
+    reaction: "10B + n -> 7Li + 4He"
+    calculation_id: "MAT:0005:CALC:001"
+
+  - process_id: "MAT:0005:PROC:PB11"
+    family: "NUCLEAR-FUSION-RESEARCH"
+    reaction: "1H + 11B -> 3(4He)"
+    calculation_id: "MAT:0005:CALC:003"
+
+  - process_id: "MAT:0005:PROC:B4C"
+    family: "CERAMIC"
+    product: "MAT:CMP:B4C"
+
+  - process_id: "MAT:0005:PROC:BN"
+    family: "CERAMIC / LAYERED-MATERIAL"
+    product_family: "MAT:CMP:BN"
+
+  - process_id: "MAT:0005:PROC:DOPING"
+    family: "SEMICONDUCTOR"
+    role: "ACCEPTOR-DOPANT"
+
+  - process_id: "MAT:0005:PROC:OXIDATION"
+    family: "CHEMICAL-COMBUSTION"
+
+    effects:
+      - boron_oxide_formation
+      - heat_release
+
+    kinetics:
+      condition_dependent: true
+      oxide_layer_relevant: true
+
+    source_id: "SRC-000073"
+
+environments:
+
+  AMBIENT_SOLID:
+    possible_states:
+      - alpha_B12
+      - beta_B106
+      - amorphous
+      - process_dependent_states
+
+  HIGH_PRESSURE:
+    possible_effects:
+      - phase_transformation
+      - gamma_B28
+      - metallization
+      - superconductivity
+
+  NEUTRON_FIELD:
+    isotope_sensitive: true
+    dominant_functional_isotope: "10B"
+
+  HIGH_TEMPERATURE_PLASMA:
+    possible_relationship:
+      - proton_boron_fusion_research
+
+  OXIDIZING:
+    possible_effects:
+      - B2O3_formation
+      - combustion
+
+  SEMICONDUCTOR_HOST:
+    effects:
+      - acceptor_doping
+      - carrier_concentration_change
+
+  CERAMIC_PROCESS:
+    possible_products:
+      - B4C
+      - BN
+      - borides
+      - boron_oxide_materials
+
+  BIOLOGICAL_PLANT:
+    role:
+      plant_micronutrient: true
+
+  BIOLOGICAL_HUMAN:
+    essentiality:
+      status: "NOT-EQUIVALENTLY-ESTABLISHED"
+
+safety:
+
+  universal_boron_hazard_rating: false
+
+  separate_material_states_required:
+    - elemental_boron
+    - boric_acid
+    - borates
+    - boranes
+    - boron_carbide
+    - boron_nitride
+    - metal_borides
+
+rules:
+  pressure_superconductivity_is_ambient_property: false
+  high_combustion_energy_means_easy_ignition: false
+  elemental_boron_safety_equals_borane_safety: false

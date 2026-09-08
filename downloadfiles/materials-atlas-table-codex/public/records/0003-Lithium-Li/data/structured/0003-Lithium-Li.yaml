@@ -1,0 +1,113 @@
+mat_id: "MAT:0003"
+record_name: "Lithium"
+symbol: "Li"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 3
+
+legacy:
+  legacy_id: "G0003"
+  migration_status: "IN-PROGRESS"
+
+identity:
+  proton_count: 3
+  neutral_electron_count: 3
+  period: 2
+  group: 1
+  block: "s"
+  material_class: "ALKALI-METAL"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 6.938
+  maximum: 6.997
+  source_id: "SRC-000035"
+
+electronic_ground_state:
+  configuration: "1s2 2s1"
+  term: "2S1/2"
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    value: 5.391714996
+    uncertainty: 0.000000022
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  second:
+    value: 75.6400970
+    uncertainty: 0.0000012
+    unit: "eV"
+    source_id: "SRC-000005"
+
+  third:
+    value: 122.45435913
+    uncertainty: 0.00000011
+    unit: "eV"
+    source_id: "SRC-000005"
+
+states:
+
+  - id: "MAT:0003:ATOM:Li"
+    charge: 0
+
+  - id: "MAT:0003:ION:Li+1"
+    charge: 1
+    common_chemical_state: true
+
+  - id: "MAT:0003:ION:Li+2"
+    charge: 2
+
+  - id: "MAT:0003:ION:Li+3"
+    charge: 3
+
+bulk_reference:
+
+  state_at_20C: "SOLID"
+
+  phase:
+    id: "MAT:0003:PHASE:BCC"
+    structure: "BODY-CENTRED-CUBIC"
+    space_group: "Im-3m"
+    space_group_number: 229
+    reference_temperature:
+      value: 298
+      unit: "K"
+
+  density:
+    representative_value: 0.534
+    unit: "g/cm3"
+    temperature: "approximately 20 C"
+    status: "REFERENCE-VALUE"
+
+  melting_point:
+    value: 453.61
+    uncertainty: 0.14
+    unit: "K"
+    source_id: "SRC-000036"
+
+isotopes:
+  stable:
+    - "MAT:0003:ISO:Li-6"
+    - "MAT:0003:ISO:Li-7"
+
+  evaluated_mass_range:
+    minimum: 3
+    maximum: 13
+
+electrochemistry:
+  principal_ion: "MAT:0003:ION:Li+1"
+  host_insertion_relationships: true
+  battery_relationships: true
+
+scientific_status:
+  atomic_identity: "ESTABLISHED"
+  bulk_bcc_phase_near_room_temperature: "ESTABLISHED"
+  stable_isotopes: "ESTABLISHED"
+  electrochemical_role: "ESTABLISHED"
+  extreme_pressure_phases: "ACTIVE-RESEARCH"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

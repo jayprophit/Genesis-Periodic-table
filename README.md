@@ -14,6 +14,7 @@
 > - **Contributing / authoring** — `docs/06-governance/` and `templates/`.
 > - **Build and validate locally** — `npm ci`, `npm run validate`, `npm run build:book`, `npm test`.
 > - **Project status** — `CHANGELOG.md` (Pending section is the honest backlog).
+- **Release readiness** — `docs/09-production/01-Release-Readiness-Checklist.md`.
 >
 > Three layers, three authorities:
 >

@@ -1,0 +1,253 @@
+mat_id: "MAT:0008"
+record_name: "Oxygen"
+symbol: "O"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 8
+
+legacy:
+  legacy_id: "G0008"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 8
+  neutral_electron_count: 8
+  period: 2
+  group: 16
+  block: "p"
+
+atomic_weight:
+  type: "INTERVAL"
+  minimum: 15.99903
+  maximum: 15.99977
+  source_id: "SRC-000126"
+
+electronic_ground_state:
+  configuration: "1s2 2s2 2p4"
+  term: "3P2"
+  open_shell: true
+  source_id: "SRC-000005"
+
+ionization:
+
+  first:
+    value: 13.618055
+    uncertainty: 0.000007
+    unit: "eV"
+
+  second:
+    value: 35.12112
+    uncertainty: 0.00006
+    unit: "eV"
+
+  third:
+    value: 54.93554
+    uncertainty: 0.00012
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  fourth:
+    value: 77.41350
+    uncertainty: 0.00025
+    unit: "eV"
+
+  fifth:
+    value: 113.8990
+    uncertainty: 0.0005
+    unit: "eV"
+
+  sixth:
+    value: 138.1189
+    uncertainty: 0.0021
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  seventh:
+    value: 739.32697
+    uncertainty: 0.00015
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  eighth:
+    value: 871.4099138
+    uncertainty: 0.0000012
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  source_id: "SRC-000005"
+
+ordinary_molecular_state:
+
+  id: "MAT:0008:MOL:O2"
+
+  formula: "O2"
+
+  ground_state:
+    term: "X3Sigma_g-"
+    paramagnetic: true
+    unpaired_electrons: 2
+
+  geometry:
+    type: "LINEAR"
+
+  constants:
+
+    omega_e:
+      value: 1580.193
+      unit: "cm-1"
+
+    B_e:
+      value: 1.4376766
+      unit: "cm-1"
+
+    r_e:
+      value: 1.20752
+      unit: "angstrom"
+
+  source_id: "SRC-000127"
+
+electronic_excited_states:
+
+  singlet_oxygen_a1DeltaG:
+
+    id: "MAT:0008:ESTATE:O2-a1DeltaG"
+
+    term: "a1Delta_g"
+
+    term_energy:
+      value: 7918.1
+      unit: "cm-1"
+
+    approximate_excitation_energy:
+      value: 0.982
+      unit: "eV"
+
+    source_id: "SRC-000127"
+
+ozone:
+
+  id: "MAT:0008:MOL:O3"
+
+  geometry:
+    type: "BENT"
+    point_group: "C2v"
+
+    O_O_distance:
+      value: 1.278
+      unit: "angstrom"
+
+    angle:
+      value: 116.8
+      unit: "degree"
+
+  vibrations:
+
+    symmetric_stretch:
+      approximate_value: 1103
+      unit: "cm-1"
+
+    bend:
+      approximate_value: 701
+      unit: "cm-1"
+
+    antisymmetric_stretch:
+      approximate_value: 1042
+      unit: "cm-1"
+
+  source_ids:
+    - "SRC-000130"
+
+atmosphere:
+
+  dry_air_O2_volume_fraction:
+    value: 20.946
+    unit: "percent"
+    source_id: "SRC-000128"
+
+phase_reference:
+
+  melting_point:
+    value: 54.36
+    unit: "K"
+
+  normal_boiling_point:
+    value: 90.188
+    unit: "K"
+
+  source_id: "SRC-000129"
+
+atomic_oxygen_environment:
+
+  low_earth_orbit:
+    relevant: true
+    material_degradation_role: true
+    source_id: "SRC-000131"
+
+isotope_branch:
+
+  NIST_mass_range:
+    minimum: 12
+    maximum: 28
+
+  stable:
+    - "MAT:0008:ISO:O-16"
+    - "MAT:0008:ISO:O-17"
+    - "MAT:0008:ISO:O-18"
+
+  diagnostic_or_tracer:
+    - "MAT:0008:ISO:O-15"
+    - "MAT:0008:ISO:O-17"
+    - "MAT:0008:ISO:O-18"
+
+oxygen_species:
+
+  - "MAT:0008:ATOM:O"
+  - "MAT:0008:MOL:O2"
+  - "MAT:0008:ESTATE:O2-a1DeltaG"
+  - "MAT:0008:MOL:O3"
+  - "O-"
+  - "O2-"
+  - "O2^2-"
+  - "O^2-"
+
+oxide_architecture:
+
+  oxygen_stoichiometry_first_class: true
+  oxygen_vacancies_first_class: true
+
+  defect_symbol:
+    oxygen_vacancy: "V_O"
+
+  material_classes:
+    - simple_oxide
+    - mixed_oxide
+    - perovskite
+    - spinel
+    - ferrite
+    - silicate
+    - aluminate
+    - cuprate
+    - transparent_conducting_oxide
+    - solid_oxide_electrolyte
+
+chemistry:
+
+  principal_roles:
+    - oxidizer
+    - oxide_former
+    - biological_terminal_electron_acceptor
+    - atmospheric_photochemistry
+    - water_component
+
+scientific_status:
+
+  atomic_identity: "ESTABLISHED"
+  O2_triplet_ground_state: "ESTABLISHED"
+  O2_paramagnetism: "ESTABLISHED"
+  singlet_oxygen: "ESTABLISHED"
+  ozone: "ESTABLISHED"
+  oxygen_vacancy_material_effects: "ESTABLISHED"
+  atomic_oxygen_LEO_effects: "ESTABLISHED"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"

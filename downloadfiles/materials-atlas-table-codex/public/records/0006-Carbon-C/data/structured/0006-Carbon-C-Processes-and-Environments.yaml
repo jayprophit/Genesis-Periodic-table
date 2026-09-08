@@ -1,0 +1,155 @@
+registry_id: "MAT:0006:REG:PROCESSES"
+record_id: "MAT:0006"
+
+processes:
+
+  - process_id: "MAT:0006:PROC:GRAPHITE-DIAMOND"
+    family: "PRESSURE-TEMPERATURE-STRUCTURAL"
+    input: "MAT:0006:ALLOTROPE:GRAPHITE"
+    output: "MAT:0006:ALLOTROPE:DIAMOND"
+    required_variables:
+      - pressure
+      - temperature
+      - catalyst_if_used
+      - time
+
+  - process_id: "MAT:0006:PROC:GRAPHENE-EXFOLIATION"
+    family: "MATERIAL-PROCESS"
+    output: "MAT:0006:ALLOTROPE:GRAPHENE"
+
+  - process_id: "MAT:0006:PROC:CNT"
+    family: "NANOMATERIAL-SYNTHESIS"
+    output: "MAT:0006:MAT:CNT"
+    required_variables:
+      - chirality
+      - diameter
+      - wall_number
+      - catalyst
+      - process
+
+  - process_id: "MAT:0006:PROC:FULLERENE"
+    family: "CLUSTER-FORMATION"
+    output: "MAT:0006:MOL:FULLERENE"
+
+  - process_id: "MAT:0006:PROC:PYROLYSIS"
+    family: "THERMOCHEMICAL"
+    outputs: "CONDITION-DEPENDENT-CARBON-MATERIAL"
+
+  - process_id: "MAT:0006:PROC:CARBONISATION"
+    family: "THERMAL-MATERIAL"
+
+  - process_id: "MAT:0006:PROC:GRAPHITISATION"
+    family: "THERMAL-STRUCTURAL"
+
+  - process_id: "MAT:0006:PROC:CVD"
+    family: "CHEMICAL-VAPOUR-DEPOSITION"
+    possible_products:
+      - diamond
+      - graphene
+      - CNT
+      - carbon_coating
+
+  - process_id: "MAT:0006:PROC:COMBUSTION-CO2"
+    family: "CHEMICAL-OXIDATION"
+    reaction: "C(graphite) + O2 -> CO2"
+    calculation_id: "MAT:0006:CALC:004"
+
+  - process_id: "MAT:0006:PROC:INCOMPLETE-COMBUSTION"
+    family: "CHEMICAL-OXIDATION"
+    possible_products:
+      - CO
+      - soot
+      - unreacted_carbon
+      - CO2
+    oxygen_supply_sensitive: true
+
+  - process_id: "MAT:0006:PROC:LI-INTERCALATION"
+    family: "ELECTROCHEMICAL"
+    input:
+      - "MAT:0006:ALLOTROPE:GRAPHITE"
+      - "MAT:0003:ION:Li+1"
+      - electron
+    output_family: "LixC6"
+    stage_1_reference: "LiC6"
+
+  - process_id: "MAT:0006:PROC:PHOTOSYNTHETIC-FIXATION"
+    family: "BIOGEOCHEMICAL"
+    carbon_source_family: "CO2"
+
+  - process_id: "MAT:0006:PROC:RESPIRATION"
+    family: "BIOGEOCHEMICAL"
+
+  - process_id: "MAT:0006:PROC:TRIPLE-ALPHA"
+    family: "NUCLEAR-ASTROPHYSICS"
+    calculation_id: "MAT:0006:CALC:001"
+
+environments:
+
+  AMBIENT_SOLID:
+    possible_states:
+      - graphite
+      - diamond
+      - amorphous_carbon
+      - engineered_carbon
+
+  HIGH_PRESSURE_HIGH_TEMPERATURE:
+    effects:
+      - graphite_diamond_phase_selection
+      - liquid_carbon_at_sufficient_conditions
+      - structural_reorganization
+
+  OXIDIZING:
+    products:
+      - CO2
+      - CO
+    product_ratio_condition_dependent: true
+
+  ELECTROCHEMICAL:
+    effects:
+      - lithium_intercalation
+      - sodium_intercalation
+      - double_layer_charge_storage
+      - surface_redox
+
+  BIOLOGICAL:
+    roles:
+      - biomolecular_skeleton
+      - metabolic_carbon
+      - carbon_fixation
+      - respiration
+
+  PLANETARY:
+    reservoirs:
+      - atmosphere
+      - ocean
+      - biomass
+      - soils
+      - carbonate_minerals
+      - sediments
+      - fossil_carbon
+      - mantle
+
+  NUCLEAR_STELLAR:
+    processes:
+      - triple_alpha
+      - carbon_burning
+
+safety:
+
+  universal_carbon_hazard: false
+
+  separate_states_required:
+    - graphite
+    - diamond
+    - carbon_monoxide
+    - carbon_dioxide
+    - soot
+    - combustible_carbon_dust
+    - nanotubes
+    - graphene_related_powders
+    - activated_carbon
+
+rules:
+  CO_safety_equals_CO2_safety: false
+  carbon_dust_equals_bulk_graphite: false
+  material_state_required_for_hazard: true

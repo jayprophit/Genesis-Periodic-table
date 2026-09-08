@@ -1,0 +1,70 @@
+registry_id: "MAT:0009:REG:ATOMIC-SPECTRUM"
+record_id: "MAT:0009"
+version: "1.0.0"
+
+species:
+
+  F_I:
+
+    ground_state:
+      configuration: "2s2 2p5"
+      term: "2P°3/2"
+
+    selected_persistent_lines:
+
+      - wavelength:
+          value: 95.1870
+          unit: "nm"
+        lower_level_cm1: 0.000
+        upper_level_cm1: 105056.283
+        lower_term: "2P°3/2"
+        upper_term: "2P1/2"
+
+      - wavelength:
+          value: 95.4826
+          unit: "nm"
+        lower_level_cm1: 0.000
+        upper_level_cm1: 104731.048
+        lower_term: "2P°3/2"
+        upper_term: "2P3/2"
+
+      - wavelength:
+          value: 95.5546
+          unit: "nm"
+        lower_level_cm1: 404.141
+        upper_level_cm1: 105056.283
+
+      - wavelength:
+          value: 95.8525
+          unit: "nm"
+        lower_level_cm1: 404.141
+        upper_level_cm1: 104731.048
+
+  F_II:
+
+    selected_persistent_lines:
+
+      - wavelength:
+          value: 48.4602
+          unit: "nm"
+
+      - wavelength:
+          value: 60.5669
+          unit: "nm"
+
+      - wavelength:
+          value: 60.6288
+          unit: "nm"
+
+      - wavelength:
+          value: 60.6804
+          unit: "nm"
+
+source_id: "SRC-000179"
+
+rules:
+  selected_lines_are_not_exhaustive: true
+  wavelength_medium_must_be_preserved: true
+  atomic_spectrum_equals_F2_spectrum: false
+  atomic_spectrum_equals_19F_NMR: false
+  universal_fluorine_frequency: false

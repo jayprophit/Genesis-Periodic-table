@@ -1,0 +1,74 @@
+```yaml
+mat_id: "MAT:0000"
+record_name: "Origin State"
+record_class: "FOUNDATION_REFERENCE"
+
+legacy:
+  legacy_id: "G0000"
+  legacy_name: "Universal Reference / Origin State"
+  migration_status: "IN-PROGRESS"
+
+identity:
+  chemical_element: false
+  atomic_number: "NOT-APPLICABLE"
+  symbol: "NOT-APPLICABLE"
+  atomic_mass: "NOT-APPLICABLE"
+  proton_count: "NOT-APPLICABLE"
+  neutron_count: "NOT-APPLICABLE"
+  electron_count: "NOT-APPLICABLE"
+  isotopes: "NOT-APPLICABLE"
+
+function:
+  - "MAT root reference"
+  - "reference-state registry"
+  - "coordinate origin"
+  - "state comparison"
+  - "process baseline"
+
+scientific_status:
+  coordinate_origin: "MATHEMATICAL-CONVENTION"
+  reference_difference: "ESTABLISHED-MATHEMATICS"
+  laboratory_reference: "EXPERIMENTAL-CONVENTION"
+  thermodynamic_reference: "SCIENTIFIC-CONVENTION"
+  quantum_vacuum: "THEORETICAL-PHYSICAL-REFERENCE"
+  literal_nothingness: "NOT-DEFINED-BY-MAT"
+  causali_e_mapping: "AUTHOR-FRAMEWORK"
+
+reference_channels:
+  - "MAT:0000:REF:ORIGIN"
+  - "MAT:0000:REF:LAB"
+  - "MAT:0000:REF:THERMO"
+  - "MAT:0000:REF:T0"
+  - "MAT:0000:REF:P0"
+  - "MAT:0000:REF:E0"
+  - "MAT:0000:REF:B0"
+  - "MAT:0000:REF:R0"
+  - "MAT:0000:REF:N0"
+  - "MAT:0000:REF:C0"
+  - "MAT:0000:REF:S0"
+  - "MAT:0000:REF:X0"
+  - "MAT:0000:REF:TIME0"
+  - "MAT:0000:REF:VAC"
+  - "MAT:0000:REF:QV"
+
+null_semantics:
+  zero_is_missing: false
+  zero_is_not_applicable: false
+  origin_is_null: false
+
+comparison:
+  scalar_difference: "delta_q = q - q_ref"
+  pairwise_difference: "delta_q_ij = q_i - q_j"
+  normalized_coordinate: "z_q = N_q(q, q_ref, scale_q)"
+  raw_mixed_unit_vector_subtraction_allowed: false
+
+causali_e:
+  A: "intervention/change"
+  B: "reference/current state and retained constraints"
+  C: "candidate/resulting accessible state"
+  classification: "DEVELOPING-AUTHOR-FRAMEWORK"
+
+record_version: "1.0.0"
+schema_version: "1.0.0"
+status: "RESEARCHED"
+```

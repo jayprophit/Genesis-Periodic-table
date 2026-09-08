@@ -1,0 +1,78 @@
+registry_id: "MAT:0006:REG:GRAPHENE-PROPERTIES"
+material_id: "MAT:0006:ALLOTROPE:GRAPHENE"
+parent_id: "MAT:0006"
+version: "1.0.0"
+
+structure:
+  dimensionality: "2D"
+  layers: 1
+  lattice: "HEXAGONAL-HONEYCOMB"
+  local_bonding: "SP2-LIKE"
+
+  carbon_carbon_spacing:
+    approximate_value: 0.142
+    unit: "nm"
+    source_id: "SRC-000093"
+
+electronic:
+  class: "DIRAC-LIKE-SEMIMETAL"
+
+  carrier_state_dependencies:
+    - doping
+    - substrate
+    - strain
+    - defects
+    - edge_geometry
+    - temperature
+
+mechanical_reference:
+  young_modulus:
+    approximate_value: 1.0
+    unit: "TPa"
+
+  intrinsic_strength:
+    approximate_value: 130
+    unit: "GPa"
+
+  universal: false
+  source_id: "SRC-000093"
+
+thermal_reference:
+  reported_high_quality_value:
+    relation: "GREATER-THAN"
+    value: 3000
+    unit: "W/(m*K)"
+
+  universal: false
+  source_id: "SRC-000093"
+
+electronic_transport_reference:
+  mobility:
+    relation: "UP-TO"
+    value: 2.5e5
+    unit: "cm2/(V*s)"
+
+  universal: false
+  source_id: "SRC-000093"
+
+optical_reference:
+  absorption:
+    approximate_value: 2.3
+    unit: "percent"
+
+  state_conditions_required: true
+  source_id: "SRC-000093"
+
+history:
+  experimental_isolation:
+    year: 2004
+    contributors:
+      - "Andre Geim"
+      - "Konstantin Novoselov"
+
+    source_id: "SRC-000095"
+
+rules:
+  ideal_reference_equals_every_sample: false
+  monolayer_equals_few_layer_graphene: false
+  graphene_equals_graphite: false

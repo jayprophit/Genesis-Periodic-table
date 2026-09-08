@@ -1,0 +1,229 @@
+registry_id: "MAT:0004:REG:RELATIONSHIPS"
+record_id: "MAT:0004"
+version: "1.0.0"
+
+relationships:
+
+  # --------------------------------------------
+  # ISOTOPE FAMILY
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0001"
+    source: "MAT:0004:ISO:Be-5"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  - relationship_id: "MAT:0004:REL:0002"
+    source: "MAT:0004:ISO:Be-6"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  - relationship_id: "MAT:0004:REL:0003"
+    source: "MAT:0004:ISO:Be-7"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  - relationship_id: "MAT:0004:REL:0004"
+    source: "MAT:0004:ISO:Be-8"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  - relationship_id: "MAT:0004:REL:0005"
+    source: "MAT:0004:ISO:Be-9"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  - relationship_id: "MAT:0004:REL:0006"
+    source: "MAT:0004:ISO:Be-10"
+    type: "ISOTOPE-OF"
+    target: "MAT:0004"
+
+  # --------------------------------------------
+  # RADIOACTIVE / NUCLEAR
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0010"
+    source: "MAT:0004:ISO:Be-7"
+    type: "DECAYS-TO"
+    target: "MAT:0003:ISO:Li-7"
+    mechanism: "ELECTRON-CAPTURE"
+    target_status: "RESOLVED"
+    source_id: "SRC-000008"
+
+  - relationship_id: "MAT:0004:REL:0011"
+    source: "MAT:0004:ISO:Be-8"
+    type: "DECAYS-TO"
+    target:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+    mechanism: "ALPHA-BREAKUP"
+    calculation_id: "MAT:0004:CALC:002"
+
+  - relationship_id: "MAT:0004:REL:0012"
+    source: "MAT:0004:ISO:Be-10"
+    type: "DECAYS-TO"
+    target: "MAT:0005:ISO:B-10"
+    mechanism: "BETA-MINUS"
+    target_status: "RESOLVED"
+
+  # --------------------------------------------
+  # TRIPLE-ALPHA
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0020"
+    source:
+      - "MAT:0002:ISO:He-4"
+      - "MAT:0002:ISO:He-4"
+    type: "FORMS-TRANSIENT-NUCLEAR-STATE"
+    target: "MAT:0004:ISO:Be-8"
+    mechanism: "NUCLEAR"
+
+  - relationship_id: "MAT:0004:REL:0021"
+    source:
+      - "MAT:0004:ISO:Be-8"
+      - "MAT:0002:ISO:He-4"
+    type: "NUCLEAR-REACTION"
+    target: "MAT:0006:ISO:C-12"
+    target_status: "RESERVED-PENDING-CARBON"
+    coproduct:
+      - "GAMMA"
+
+  # --------------------------------------------
+  # ALPHA-NEUTRON
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0030"
+    source:
+      - "MAT:0004:ISO:Be-9"
+      - "MAT:0002:ISO:He-4"
+    type: "ALPHA-NEUTRON-REACTION"
+    products:
+      - "MAT:0006:ISO:C-12"
+      - "NEUTRON"
+    calculation_id: "MAT:0004:CALC:003"
+
+  - relationship_id: "MAT:0004:REL:0031"
+    source: "MAT:0004:ISO:Be-9"
+    type: "NEUTRON-MULTIPLICATION-REACTION"
+    target: "NEUTRON"
+    products:
+      - "MAT:0004:ISO:Be-8"
+      - "NEUTRON"
+      - "NEUTRON"
+    calculation_id: "MAT:0004:CALC:004"
+
+  # --------------------------------------------
+  # LITHIUM / FUSION
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0040"
+    source: "MAT:0004"
+    type: "FUSION-SYSTEM-COOPERATES-WITH"
+    target: "MAT:0003"
+    mechanism: "NEUTRON-MULTIPLIER / TRITIUM-BREEDER-SYSTEM"
+    target_status: "RESOLVED"
+
+  # --------------------------------------------
+  # FLIBE
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0050"
+    source: "MAT:0004"
+    type: "MOLTEN-SALT-MATERIAL-RELATIONSHIP-WITH"
+    targets:
+      - "MAT:0003"
+      - "MAT:0009"
+    target_status:
+      MAT0003: "RESOLVED"
+      MAT0009: "RESOLVED"
+    example_material_family:
+      - "FLiBe"
+
+  # --------------------------------------------
+  # OXYGEN / BeO
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0060"
+    source: "MAT:0004"
+    type: "FORMS-COMPOUND-WITH"
+    target: "MAT:0008"
+    target_status: "RESOLVED"
+    product: "MAT:CMP:BeO"
+
+  # --------------------------------------------
+  # ALLOY / MATERIAL RELATIONSHIPS
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0070"
+    source: "MAT:0004"
+    type: "ALLOYS-WITH"
+    target: "MAT:0029"
+    target_name: "Copper"
+    target_status: "RESERVED-PENDING-COPPER"
+
+  - relationship_id: "MAT:0004:REL:0071"
+    source: "MAT:0004"
+    type: "MATERIAL-RELATIONSHIP-WITH"
+    target: "MAT:0013"
+    target_name: "Aluminium"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+
+  - relationship_id: "MAT:0004:REL:0072"
+    source: "MAT:0004"
+    type: "PERIODIC-FAMILY-RELATIONSHIP-WITH"
+    target: "MAT:0012"
+    target_name: "Magnesium"
+    target_status: "RESERVED-PENDING-MAGNESIUM"
+
+  - relationship_id: "MAT:0004:REL:0073"
+    source: "MAT:0004"
+    type: "BERYLLIDE-FORMS-WITH"
+    target: "MAT:0022"
+    target_name: "Titanium"
+    target_status: "RESERVED-PENDING-TITANIUM"
+    example:
+      - "TiBe12"
+
+  # --------------------------------------------
+  # PHOTON / X-RAY
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0080"
+    source: "MAT:0004"
+    type: "X-RAY-WINDOW-MATERIAL"
+    target: "X-RAY-INSTRUMENTATION"
+    conditions_required:
+      - photon_energy
+      - thickness
+      - density
+      - surface_state
+
+  # --------------------------------------------
+  # OCCUPATIONAL / BIOLOGICAL
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0090"
+    source: "MAT:0004"
+    type: "OCCUPATIONAL-HAZARD"
+    target: "RESPIRATORY-EXPOSURE"
+    relevant_forms:
+      - dust
+      - fume
+      - mist
+      - airborne_particulate
+
+  # --------------------------------------------
+  # PROJECT
+  # --------------------------------------------
+
+  - relationship_id: "MAT:0004:REL:0999"
+    source: "MAT:0004"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0004"
+
+rules:
+  graph_is_exhaustive: false
+  nuclear_and_chemical_edges_are_distinct: true
+  alloy_property_equals_element_property: false
+  xray_transmission_requires_photon_energy_and_thickness: true
+  occupational_hazard_requires_material_form_and_exposure_route: true

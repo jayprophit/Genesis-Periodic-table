@@ -1,0 +1,136 @@
+registry_id: "MAT:0007:REG:NITROGEN-CYCLE"
+record_id: "MAT:0007"
+
+industrial_fixation:
+
+  process_id: "MAT:0007:PROC:HABER-BOSCH"
+
+  reaction:
+    "N2 + 3H2 <-> 2NH3"
+
+  inputs:
+    - "MAT:0007:MOL:N2"
+    - "MAT:0001:MOL:H2"
+
+  product:
+    future_id: "MAT:CMP:NH3"
+
+  reaction_class:
+    - catalytic
+    - reversible
+    - exothermic
+    - industrial_fixation
+
+  catalyst_family:
+    historical_reference: "IRON-BASED"
+
+  historical_Haber_reference_conditions:
+
+    pressure:
+      minimum: 150
+      maximum: 200
+      unit: "atm"
+
+    temperature:
+      approximate_value: 500
+      unit: "degC"
+
+    caution: >
+      Historical/reference conditions only.
+      Modern industrial plants use process-specific catalysts,
+      pressures, temperatures and reactor architectures.
+
+  people:
+    - Fritz_Haber
+    - Carl_Bosch
+    - Alwin_Mittasch
+    - Robert_Le_Rossignol
+
+  source_ids:
+    - "SRC-000107"
+    - "SRC-000108"
+
+biological_fixation:
+
+  process_id: "MAT:0007:PROC:BIOLOGICAL-FIXATION"
+
+  substrate:
+    - "MAT:0007:MOL:N2"
+
+  principal_product_family:
+    - NH3
+    - NH4+
+
+  catalyst:
+    class: "NITROGENASE"
+
+  canonical_Mo_nitrogenase_components:
+    - Fe_protein
+    - MoFe_protein
+
+  cofactors:
+    - Fe_S_clusters
+    - FeMo_cofactor
+
+  requires:
+    - ATP
+    - reducing_electrons
+    - proton_source
+
+  oxygen_sensitive: true
+
+  simplified_stoichiometric_model:
+    "N2 + 8H+ + 8e- + 16ATP -> 2NH3 + H2 + 16ADP + 16Pi"
+
+  caution: >
+    This is a conventional overall bookkeeping representation,
+    not a complete microscopic catalytic mechanism.
+
+  organism_class:
+    - Bacteria
+    - Archaea
+
+  source_id: "SRC-000109"
+
+cycle:
+
+  fixation:
+    input: "N2"
+    outputs:
+      - NH3
+      - NH4+
+
+  ammonification:
+    input: "ORGANIC-N"
+    output: "NH4+"
+
+  nitrification:
+
+    stage_1:
+      "NH4+ -> NO2-"
+
+    stage_2:
+      "NO2- -> NO3-"
+
+  assimilation:
+    inputs:
+      - NH4+
+      - NO3-
+    output: "BIOMASS-N"
+
+  denitrification:
+
+    simplified_path:
+      "NO3- -> NO2- -> NO -> N2O -> N2"
+
+  anammox:
+    simplified_path:
+      "NH4+ + NO2- -> N2 + H2O"
+
+  network_rule: >
+    The environmental nitrogen cycle is a network of coupled
+    microbial transformations, not a single strictly linear loop.
+
+source_ids:
+  - "SRC-000110"
+  - "SRC-000111"
