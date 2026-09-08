@@ -499,11 +499,11 @@ function initStudio() {
       speechSynthesis.speak(u);
     };
     next();
-  };
+  });
   $("stop-btn")?.addEventListener("click", () => {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
     $("speech-status").textContent = "Stopped.";
-  };
+  });
   $("translate-btn")?.addEventListener("click", async () => {
     const lang = langSel.value;
     if (!lang) { langSel.focus(); return; }
@@ -535,11 +535,11 @@ function initStudio() {
     }
     btn.disabled = false;
     btn.textContent = "Translate prose";
-  };
+  });
   $("clear-translation")?.addEventListener("click", () => {
     document.querySelectorAll(".mt-text").forEach((n) => n.remove());
     $("mt-note").hidden = true;
-  };
+  });
 }
 
 /* ---------- periodic table + cover ---------- */
@@ -559,11 +559,11 @@ function initAtlas() {
     cards.appendChild(a);
   });
   $("record-count").textContent = elements.length;
-  const zs = elements.filter((e) => e.z).map((e) => e.number);
+  const zs = elements.filter((e) => e.z).map((e) => parseInt(e.number, 10));
   if (zs.length) {
-    const lo = zs.reduce((a, b) => (a < b ? a : b)).slice(2);
-    const hi = zs.reduce((a, b) => (a > b ? a : b)).slice(2);
-    $("cover-range").textContent = `${lo}–${hi}`;
+    const lo = Math.min(...zs);
+    const hi = Math.max(...zs);
+    $("cover-range").textContent = `${String(lo).padStart(4, "0")}–${String(hi).padStart(4, "0")}`;
   }
   const origin = identities["0000"];
   if (origin && origin.status) $("cover-origin").textContent = `origin reference · ${origin.status.toLowerCase().replace(/-/g, " ")}`;
@@ -605,7 +605,7 @@ function initAtlas() {
       if (c.published) cell.href = route(c.chapter);
       else cell.setAttribute("aria-disabled", "true");
       cell.innerHTML = `<small>${c.z}</small><strong>${esc(c.symbol)}</strong>`;
-      cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — record pending`;
+      cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — baseline element`;
       cell.dataset.z = c.z;
       cell.addEventListener("click", (e) => { if (!c.published) { e.preventDefault(); showDossier(c.z); } });
       grid.appendChild(cell);
@@ -624,7 +624,7 @@ function initAtlas() {
         if (c.published) cell.href = route(c.chapter);
         else cell.setAttribute("aria-disabled", "true");
         cell.innerHTML = `<small>${c.z}</small><strong>${esc(c.symbol)}</strong>`;
-        cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — record pending`;
+        cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — baseline element`;
         cell.dataset.z = c.z;
         cell.addEventListener("click", (e) => { if (!c.published) { e.preventDefault(); showDossier(c.z); } });
         grid.appendChild(cell);
@@ -642,14 +642,14 @@ function initAtlas() {
     const dossier = $("element-dossier");
     if (!el) { dossier.hidden = true; return; }
     dossier.hidden = false;
+    const status = el.recordStatus === "CURATED" ? "Full MAT Record" : "Baseline Element";
+    const statusClass = el.recordStatus === "CURATED" ? "color:var(--accent)" : "color:var(--muted)";
     const fields = [
       ["Symbol", el.symbol], ["Atomic Weight", el.atomicWeight],
       ["Electronegativity", el.electronegativity], ["Ionization Energy", el.ionizationEnergy ? el.ionizationEnergy + " eV" : null],
-      ["Atomic Radius", el.atomicRadius ? el.atomicRadius + " pm" : null], ["Density", el.density ? el.density + " g/cm³" : null],
-      ["Melting Point", el.meltingPoint ? el.meltingPoint + " K" : null], ["Boiling Point", el.boilingPoint ? el.boilingPoint + " K" : null],
       ["Phase", el.phase], ["Category", el.category], ["Electron Config", el.electronConfiguration],
     ].filter(([k, v]) => v != null && v !== "");
-    dossier.innerHTML = `<h3>${esc(el.name)} (Z=${z})</h3><div class="dossier-grid">${fields.map(([k, v]) => `<div class="dossier-item"><small>${esc(k)}</small><strong>${esc(String(v))}</strong></div>`).join("")}</div>`;
+    dossier.innerHTML = `<h3>${esc(el.name)} (Z=${z})</h3><p style="${statusClass};margin:4px 0 8px;font-size:0.75rem">${status}</p><div class="dossier-grid">${fields.map(([k, v]) => `<div class="dossier-item"><small>${esc(k)}</small><strong>${esc(String(v))}</strong></div>`).join("")}</div>`;
   }
 
   const dlg = $("periodic-dialog");
@@ -1204,7 +1204,7 @@ function initChrome() {
         : `Saved · complete book offline (${ok} resources).`;
       if (failedUrls.length) console.warn("offline failures", failedUrls);
     } catch { st.textContent = "Offline save failed in this browser."; }
-  };
+  });
   if (!navigator.onLine) $("offline-status").textContent = "Offline · showing saved pages.";
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("./sw.js").catch(() => {});
@@ -1264,7 +1264,7 @@ function initCitations() {
     };
     $("cite-apa").click();
     dlg.showModal();
-  };
+  });
   $("cite-copy")?.addEventListener("click", () => { navigator.clipboard.writeText($("cite-output").value).catch(() => {}); $("cite-copy").textContent = "Copied!"; setTimeout(() => $("cite-copy").textContent = "Copy", 1500); });
   $("cite-close")?.addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
@@ -1369,7 +1369,7 @@ function initBookmarks() {
     }
     updateBookmarkBtn();
     renderMyReading();
-  };
+  });
 }
 
 function initHighlights() {
@@ -1380,7 +1380,7 @@ function initHighlights() {
     if (!text || text.length < 2) return;
     await addHighlight(currentId, text, null, "#f0d887");
     renderMyReading();
-  };
+  });
 }
 
 /* ---------- export / import / reset ---------- */
@@ -1393,7 +1393,7 @@ function initDataManagement() {
     a.download = `mat-reader-backup-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(a.href);
-  };
+  });
   $("import-btn")?.addEventListener("click", () => $("import-file")?.click());
   $("import-file")?.addEventListener("change", async (e) => {
     const file = e.target.files[0];
@@ -1407,7 +1407,7 @@ function initDataManagement() {
       alert("Import failed: " + err.message);
     }
     e.target.value = "";
-  };
+  });
   $("clear-cache-btn")?.addEventListener("click", async () => {
     if (!confirm("Clear translation cache? This won't affect bookmarks or notes.")) return;
     await clearTemporaryCache();
@@ -1424,7 +1424,7 @@ function initDataManagement() {
     await deleteAllData();
     alert("All data deleted.");
     renderMyReading();
-  };
+  });
 }
 
 async function renderMyReading() {

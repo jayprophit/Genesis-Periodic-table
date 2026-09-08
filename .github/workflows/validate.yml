@@ -5,7 +5,8 @@ on:
   pull_request:
 
 jobs:
-  validate:
+  scientific-validation:
+    name: Scientific Validation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,7 +16,46 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run validate
+      - run: npm run validate:elements
+
+  book-build:
+    name: Book Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
       - run: npm run build:book
       - run: npm test
       - name: check generated indexes are current
         run: git diff --exit-code -- book/manifest.json book/search-index.json book/visuals-index.json book/elements.json book/identities.json book/periodic.json book/offline-index.json
+
+  studio-build:
+    name: Studio Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:studio
+      - run: npm run build:studio
+
+  publication-model:
+    name: Publication Model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:publication
+      - name: check generated publication files
+        run: git diff --exit-code -- data/publication/generated/

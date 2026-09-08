@@ -21,6 +21,7 @@ console.log("Building MAT publication model...\n");
 // Load canonical sources
 const manifest = loadJSON("book/manifest.json", null);
 const elements118 = loadJSON("book/data/elements-118.json", { elements: [], referenceRecords: [] });
+const baselineCatalog = loadJSON("data/catalog/elements-baseline.json", { elements: [] });
 const chartDatasets = loadJSON("book/data/chart-datasets.json", {});
 const russell = loadJSON("book/data/russell-periodic.json", { octaves: [] });
 const combined = loadJSON("book/data/combined-periodic.json", { overlay: [] });
@@ -47,23 +48,51 @@ writeFileSync(join(outDir, "publication-records.json"), JSON.stringify(records, 
 console.log(`  records: ${records.length} chapters`);
 
 // 2. publication-elements.json — element data from canonical sources
-const elements = elements118.elements || [];
+// Merge baseline catalog (all 118) with curated records
+const baselineElements = baselineCatalog.elements || [];
+const curatedElements = elements118.elements || [];
 const refRecords = elements118.referenceRecords || [];
+
+// Create a map of curated elements by z
+const curatedMap = new Map(curatedElements.map(e => [e.z, e]));
+
+// Merge: baseline provides structure, curated overrides where available
+const mergedElements = baselineElements.map(be => {
+  const ce = curatedMap.get(be.z);
+  return {
+    ...be,
+    // Curated values take precedence
+    ...(ce || {}),
+    recordStatus: be.recordStatus || (ce?.hasFullRecord ? "CURATED" : "BASELINE"),
+  };
+});
+
+// Add any curated elements not in baseline (shouldn't happen but safety)
+for (const ce of curatedElements) {
+  if (!mergedElements.find(e => e.z === ce.z)) {
+    mergedElements.push({ ...ce, recordStatus: "CURATED" });
+  }
+}
+
+// Sort by atomic number
+mergedElements.sort((a, b) => a.z - b.z);
+
 writeFileSync(join(outDir, "publication-elements.json"), JSON.stringify({
-  elements,
+  elements: mergedElements,
   referenceRecords: refRecords,
+  catalog: baselineCatalog.catalog || null,
 }, null, 2));
-console.log(`  elements: ${elements.length} elements, ${refRecords.length} reference records`);
+console.log(`  elements: ${mergedElements.length} elements (${mergedElements.filter(e=>e.recordStatus==="CURATED").length} curated, ${mergedElements.filter(e=>e.recordStatus==="BASELINE").length} baseline)`);
 
 // 3. publication-charts.json — chart datasets with provenance
 const charts = [];
 const abd = chartDatasets.abundanceDatasets || {};
-if (abd.cosmic) {
+if (abd.universe) {
   charts.push({
     id: "cosmic-abundance",
     type: "pie",
     title: "Cosmic Abundance of Elements",
-    dataset: abd.cosmic,
+    dataset: abd.universe,
     provenance: chartDatasets.provenance_note || "Unknown",
   });
 }
@@ -76,12 +105,12 @@ if (abd.crust) {
     provenance: chartDatasets.provenance_note || "Unknown",
   });
 }
-if (abd.humanBody) {
+if (abd.human) {
   charts.push({
     id: "human-body-abundance",
     type: "pie",
     title: "Human Body Abundance",
-    dataset: abd.humanBody,
+    dataset: abd.human,
     provenance: chartDatasets.provenance_note || "Unknown",
   });
 }
@@ -145,7 +174,7 @@ console.log(`  glossary: ${glossary.length} terms`);
 
 // 6. publication-index.json — cross-reference index
 const indexByType = {
-  elements: elements.map((e) => ({ z: e.z, symbol: e.symbol, name: e.name })),
+  elements: mergedElements.map((e) => ({ z: e.z, symbol: e.symbol, name: e.name, matId: e.matId, recordStatus: e.recordStatus })),
   records: records.filter((r) => r.mat).map((r) => ({ mat: r.mat, title: r.title, id: r.id })),
   sections: [...new Set(records.map((r) => r.section))],
 };

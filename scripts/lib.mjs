@@ -9,9 +9,9 @@ export const root = join(import.meta.dirname, "..");
 export const R = (p) => readFileSync(join(root, p), "utf8").replace(/\r\n/g, "\n");
 export const exists = (p) => existsSync(join(root, p));
 
-export const MAT_ID = /^MAT:(0000|00\d\d)(:[A-Za-z0-9+-]+)+$/;
-export const MAT_ID_OR_PARENT = /^MAT:(0000|00\d\d)(:[A-Za-z0-9+-]+)*$/;
-export const MAT_PARENT = /^MAT:(0000|00\d\d)$/;
+export const MAT_ID = /^MAT:(00\d\d|01[01]\d)(:[A-Za-z0-9+-]+)+$/;
+export const MAT_ID_OR_PARENT = /^MAT:(00\d\d|01[01]\d)(:[A-Za-z0-9+-]+)*$/;
+export const MAT_PARENT = /^MAT:(00\d\d|01[01]\d)$/;
 export const SRC_CANON = /^SRC-\d{6}$/;
 export const SRC_ALIAS = /^SRC-[A-Z0-9]+-\d+$/;
 export const RESERVED = "RESERVED-PENDING-RECORD";
