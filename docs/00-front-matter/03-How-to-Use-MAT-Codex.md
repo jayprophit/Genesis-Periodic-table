@@ -1,4 +1,4 @@
-# How to Use MAT
+# How to Use MAT Codex
 
 MAT can be read at several levels.
 

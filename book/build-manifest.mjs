@@ -46,7 +46,7 @@ addSection("Index", docs("05-index"));
 addSection("Governance", docs("06-governance"));
 addSection("Migration", docs("07-migration"));
 addSection("Back matter", docs("08-back-matter"));
-addSection("Records", mdFiles(join(root, "records")));
+addSection("Material Atlas Table", mdFiles(join(root, "records")));
 
 writeFileSync(out, JSON.stringify({ title: "Materials Atlas Table Codex", chapters }, null, 2));
 const n = chapters.reduce((a, c) => a + c.items.length, 0);
@@ -89,7 +89,13 @@ const sdocs = flat.map((c, i) => {
     const raw = readFileSync(join(root, c.id), "utf8");
     for (const m of raw.matchAll(/10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+/g)) dois.add(m[0].replace(/[).,;]+$/, ""));
   } catch {}
-  return { i, title: c.title, section: c.section, text, refs: [...refs], dataset, aks: [...new Set(aks)], dois: [...dois].slice(0, 6) };
+  // Evidence lane from location + topic: records/docs default to core;
+  // author-hypothesis, historical and claims material is labelled, never merged.
+  let lane = "core";
+  const lid = c.id.toLowerCase();
+  if (/causali-e|claims|historical|alternative|unconventional/.test(lid)) lane = "claims";
+  else if (/experiments\/|emerging|prediction|hypothes|proposed|speculative/.test(lid)) lane = "research";
+  return { i, id: c.id, path: c.path, title: c.title, section: c.section, lane, text, refs: [...refs], dataset, aks: [...new Set(aks)], dois: [...dois].slice(0, 6) };
 });
 // related[i] = chapters sharing a MAT:NNNN record reference with i
 const byRec = {};
@@ -177,4 +183,84 @@ console.log(`search index: ${sdocs.length} docs -> book/search-index.json`);
   writeFileSync(join(import.meta.dirname, "visuals-index.json"),
     JSON.stringify({ visuals }, null, 1));
   console.log(`visuals index: ${visuals.length} records -> book/visuals-index.json`);
+}
+
+// ---- elements + identities: periodic navigation and record identity cards.
+// Parsed from each record's main chapter front-matter (record values only);
+// anything absent stays null and is omitted from the cards.
+{
+  const elements = [], identities = {};
+  const recDirs = readdirSync(join(root, "records")).filter((e) =>
+    /^\d{4}-/.test(e) && statSync(join(root, "records", e)).isDirectory()).sort();
+  const count = (dir, sub, test) => {
+    try {
+      let n = 0;
+      const walk = (d) => {
+        for (const en of readdirSync(d)) {
+          const p = join(d, en);
+          if (statSync(p).isDirectory()) walk(p);
+          else if (test(en)) n++;
+        }
+      };
+      walk(join(root, "records", dir, sub));
+      return n;
+    } catch { return 0; }
+  };
+  for (const e of recDirs) {
+    const m = e.match(/^(\d{4})-([A-Za-z-]+?)-([A-Za-z0-9]+)$/);
+    if (!m) continue;
+    const main = join(root, "records", e, `${e}.md`);
+    let fm = {}, src = "";
+    try {
+      src = readFileSync(main, "utf8").replace(/\r\n/g, "\n");
+      // Front-matter = the yaml fence before the first heading, or the
+      // unfenced key block after the title (older records). Later fences
+      // are status/tail blocks and must not override identity fields.
+      const fenceIdx = src.indexOf("```yaml");
+      const headIdx = src.search(/^# /m);
+      let block = "";
+      if (fenceIdx !== -1 && (headIdx === -1 || fenceIdx < headIdx)) {
+        const fence = src.match(/```yaml\n([\s\S]*?)\n```/);
+        block = fence ? fence[1] : "";
+      }
+      if (!block) {
+        const m2 = src.match(/^#[^\n]*\n([\s\S]*?)(?=^# |\Z)/m);
+        block = m2 ? m2[1] : "";
+      }
+      if (block) for (const lm of block.matchAll(/^([a-z_]+):\s*(.+?)\s*$/gm)) {
+        const v = lm[2].replace(/^"|"$/g, "").trim();
+        if (v && !/^null$/i.test(v)) fm[lm[1]] = v;
+      }
+      // Status tail blocks live outside the first fence — first hit wins.
+      for (const k of ["migration_status", "scientific_core", "completeness"]) {
+        if (!fm[k]) {
+          const hm = src.match(new RegExp("^" + k + ':\\s*"?([A-Za-z-]+)"?', "m"));
+          if (hm) fm[k] = hm[1];
+        }
+      }
+    } catch { continue; }
+    const number = m[1];
+    const name = (fm.record_name || m[2].replace(/-/g, " ")).trim();
+    const symbol = (fm.symbol || (number === "0000" ? "OS" : m[3])).trim();
+    const chapter = `records/${e}/${e}.md`;
+    const z = fm.atomic_number ? parseInt(fm.atomic_number, 10) : null;
+    elements.push({ number, name, symbol, z: Number.isFinite(z) ? z : null, chapter });
+    identities[number] = {
+      number, name, symbol,
+      z: Number.isFinite(z) ? z : null,
+      record_class: fm.record_class || null,
+      status: fm.status || fm.completeness || null,
+      migration: fm.migration_status || null,
+      scientific_core: null,
+      weight: fm.standard_atomic_weight || fm.atomic_weight || null,
+      tables: count(e, "tables", (f) => f.endsWith(".md")),
+      graphs: count(e, "graphs", (f) => f.endsWith(".svg")),
+      models: count(e, "models", (f) => f.endsWith(".glb")),
+      calculations: count(e, "calculations", (f) => f.endsWith(".md")),
+      sources: count(e, "sources", (f) => f.endsWith(".md") || f.endsWith(".yaml")),
+    };
+  }
+  writeFileSync(join(import.meta.dirname, "elements.json"), JSON.stringify({ elements }, null, 1));
+  writeFileSync(join(import.meta.dirname, "identities.json"), JSON.stringify({ identities }, null, 1));
+  console.log(`elements: ${elements.length} + identities -> book/elements.json, book/identities.json`);
 }

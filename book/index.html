@@ -1,148 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Materials Atlas Table Codex — MAT (e-book)</title>
-<link rel="stylesheet" href="./styles.css">
-<link rel="icon" href="./icon.svg" type="image/svg+xml">
-<link rel="manifest" href="./manifest.webmanifest">
-<meta name="theme-color" content="#0f141b">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123c3a"><meta name="description" content="A source-led atlas of matter, materials, states and transformations.">
+<title>MAT Codex — Materials Atlas Table</title>
+<link rel="stylesheet" href="./styles.css"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
+<script src="./math-config.js"></script><script defer src="./vendor/tex-svg.js"></script>
 </head>
-<body>
-<div id="progress"></div>
+<body class="light">
+<a class="skip-link" href="#reader">Skip to reading</a><div id="progress" aria-hidden="true"></div>
+<header class="mobile-bar"><button id="toc-toggle" aria-controls="sidebar" aria-expanded="false">☰ Contents & search</button><a href="#cover" aria-label="MAT Codex cover">MAT <span>Codex</span></a></header>
+<button id="scrim" hidden aria-label="Close contents"></button>
 <div id="app">
-  <aside id="sidebar">
-    <div class="brand">
-      <div class="brand-mark">MAT</div>
-      <div>
-        <div class="brand-title">Materials Atlas Table Codex</div>
-        <div class="brand-sub">digital book · preview</div>
-      </div>
-      <button id="toc-toggle" aria-label="Toggle table of contents">☰</button>
+<aside id="sidebar" aria-label="Book navigation">
+  <a class="brand" href="#cover"><span class="brand-mark">M<span>AT</span></span><span><strong>MAT Codex</strong><small>Materials Atlas Table</small></span></a>
+  <div class="search-box"><label class="sr-only" for="search">Search the whole book</label><input id="search" type="search" placeholder="Search matter, properties, sources…" autocomplete="off" aria-controls="results"><button id="adv-toggle" aria-expanded="false" aria-controls="adv">Search filters <span aria-hidden="true">+</span></button>
+    <div id="adv" hidden><label><input id="opt-title" type="checkbox"> Titles only</label><label>Section<select id="opt-section"><option value="">All sections</option></select></label><label>Collection<select id="opt-lane"><option value="">All collections</option><option value="core">MAT Core Data / reference</option><option value="research">Research / Emerging</option><option value="claims">Historical / Alternative / Claims</option></select></label><label>Results<select id="opt-count"><option>8</option><option>15</option><option>30</option></select></label><label>Sort<select id="opt-sort"><option value="relevance">Relevance</option><option value="title">Title</option></select></label><label><input id="opt-related" type="checkbox" checked> Include related chapters</label></div>
+  </div>
+  <div id="search-status" class="sr-only" role="status"></div><div id="results" hidden aria-label="Search results"></div>
+  <nav id="toc" aria-label="Table of contents"></nav>
+  <details id="studio" class="reader-settings"><summary>Listen, translate & reading tools</summary><p id="studio-chapter">Open a chapter to begin.</p>
+    <label>Voice<select id="voice" aria-label="Reading voice"></select></label><label>Speech rate<select id="rate"><option value="0.9">0.9×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><div class="button-row"><button id="speak-btn">Read aloud</button><button id="stop-btn">Stop</button></div>
+    <label>Translate into<select id="lang"><option value="">Choose language…</option><option value="ar">Arabic</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="nl">Dutch</option><option value="fr">French</option><option value="de">German</option><option value="hi">Hindi</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="es">Spanish</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option></select></label>
+    <p class="tool-note">Translate sends this chapter’s prose to MyMemory. Machine translations appear beside the English source. Equations, tables and citations retain their original wording.</p><div class="button-row"><button id="translate-btn">Translate prose</button><button id="clear-translation">Clear translation</button></div><p id="speech-status" role="status" class="tool-note"></p>
+  </details>
+  <footer class="side-foot"><div class="button-row"><button id="theme-btn" aria-label="Switch to dark theme">Dark theme</button><button id="font-dec" aria-label="Decrease text size">A−</button><button id="font-inc" aria-label="Increase text size">A+</button><button id="print-btn">Print / PDF</button></div><div class="foot-links"><a id="btn-3d" href="./3d.html">3D collection ↗</a><a href="../dist/MAT-ebook.html">Complete print edition ↗</a></div><button id="offline-btn">Save book for offline reading</button><p id="offline-status" role="status">Online · opened pages are kept on this device.</p><small id="count"></small></footer>
+</aside>
+<main id="reader" tabindex="-1">
+  <section id="cover" aria-labelledby="cover-title">
+    <div class="edition-line"><span>A living scientific reference</span><span>MAT · CODEX</span></div>
+    <div class="cover-grid"><div><p class="kicker">Matter, in context.</p><h1 id="cover-title">The atlas of<br><em>what things<br>can become.</em></h1><p class="lede">Explore elements, material states and transformations through their properties, conditions and evidence.</p><div class="cover-actions"><button class="primary" id="start-btn">Explore the atlas ↗</button><a id="guide-link" href="#">How to Use MAT Codex →</a></div></div>
+      <div class="cover-diagram" aria-label="Conceptual illustration: a material state connects composition, structure, conditions, processes and evidence. This is not a measured model." role="img"><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div><span class="orbit-word w1">Composition</span><span class="orbit-word w2">Structure</span><span class="orbit-word w3">Conditions</span><span class="orbit-word w4">Process</span><span class="orbit-word w5">Evidence</span><div class="state-core"><small>MAT</small><strong>M<span>i</span></strong><small>Material state</small></div><p>Composition → state → possibility<br><span>Conceptual illustration</span></p></div>
     </div>
-    <input id="search" type="search" placeholder="Search the whole book…" aria-label="Search the whole book" autocomplete="off">
-    <button id="adv-toggle" aria-label="Advanced search options">⚙ Advanced search</button>
-    <div id="adv" hidden>
-      <label><input type="checkbox" id="opt-title"> Titles only</label>
-      <label>Section
-        <select id="opt-section"><option value="">All sections</option></select>
-      </label>
-      <label>Results
-        <select id="opt-count">
-          <option value="8" selected>8</option>
-          <option value="15">15</option>
-          <option value="30">30</option>
-        </select>
-      </label>
-      <label>Sort
-        <select id="opt-sort">
-          <option value="rel" selected>Relevance</option>
-          <option value="title">Title A–Z</option>
-        </select>
-      </label>
-      <label><input type="checkbox" id="opt-related" checked> Include related chapters</label>
-    </div>
-    <div id="results" hidden aria-label="Search results"></div>
-    <div class="toc-sec collapsible shut" id="studio-head"><span class="caret"></span><span>Studio · listen &amp; translate</span></div>
-    <div class="toc-group shut" id="studio">
-      <p class="studio-cur">Chapter: <span id="studio-chapter">none open</span></p>
-      <div class="studio-row">
-        <button class="studio-toggle">▸ Voice</button>
-        <div class="studio-body" hidden>
-          <select id="voice" aria-label="Voice"></select>
-        </div>
-      </div>
-      <div class="studio-row">
-        <button class="studio-toggle">▸ Speech rate</button>
-        <div class="studio-body" hidden>
-          <select id="rate" aria-label="Speech rate">
-            <option value="0.9">0.9×</option>
-            <option value="1" selected>1×</option>
-            <option value="1.25">1.25×</option>
-            <option value="1.5">1.5×</option>
-          </select>
-        </div>
-      </div>
-      <div class="studio-row">
-        <button class="studio-toggle">▸ Language</button>
-        <div class="studio-body" hidden>
-          <select id="lang" aria-label="Translation language">
-            <option value="">Translate to…</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-            <option value="ar">العربية</option>
-            <option value="zh-CN">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ur">اردو</option>
-            <option value="it">Italiano</option>
-            <option value="nl">Nederlands</option>
-            <option value="ru">Русский</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-            <option value="pl">Polski</option>
-            <option value="tr">Türkçe</option>
-            <option value="sw">Kiswahili</option>
-          </select>
-        </div>
-      </div>
-      <div class="studio-actions">
-        <button id="speak-btn" title="Read chapter aloud">▶ Read aloud</button>
-        <button id="stop-btn" title="Stop reading">■ Stop</button>
-        <button id="translate-btn" title="Machine-translate chapter">Translate</button>
-      </div>
-      <p class="studio-note">Audio and translation live here — one home for listening and languages.</p>
-    </div>
-    <nav id="toc" aria-label="Table of contents"></nav>
-    <div class="side-foot">
-      <span id="count"></span>
-      <span class="foot-btns">
-        <a id="btn-3d" href="./3d.html" title="Interactive 3D models">⬢ 3D</a>
-        <button id="theme-btn" title="Toggle light/dark theme">◐</button>
-        <button id="font-dec" title="Smaller text">A−</button>
-        <button id="font-inc" title="Larger text">A+</button>
-        <button id="print-btn" title="Print / save as PDF">⎙ Print</button>
-      </span>
-    </div>
-  </aside>
-  <main id="reader">
-    <section id="cover">
-      <p class="kicker">Materials Atlas Table Codex</p>
-      <h1>Atlas of Matter, Materials, Properties, States, Processes and Transformations</h1>
-      <p class="lede">A structured scientific atlas from atomic identity to engineered material — human-readable and machine-readable, evidence-graded and condition-aware.</p>
-      <button id="start-btn">Start reading →</button>
-      <p class="cover-note">Use the table of contents to browse. ← → keys turn pages. Works offline once loaded.</p>
-    </section>
-    <article id="content" hidden>
-      <p id="crumb"></p>
-      <div id="tools" role="toolbar" aria-label="Reading tools">
-        <select id="jump" aria-label="Jump to section in this chapter">
-          <option value="">Sections…</option>
-        </select>
-        <button id="goto-studio" title="Open Studio (listen & translate)">◉ Studio</button>
-      </div>
-      <p id="mt-note" hidden><em>Machine translation — the English source remains authoritative.</em></p>
-      <div id="page"></div>
-      <div class="pager">
-        <button id="prev">← Previous</button>
-        <button id="next">Next →</button>
-      </div>
-    </article>
-  </main>
+    <div class="cover-meta"><span><strong id="record-count">10</strong> records in this edition</span><span><strong>01—09</strong> chemical elements</span><span><strong>0000</strong> origin reference · pending</span></div>
+    <section class="atlas-directory" aria-labelledby="atlas-title"><div class="section-heading"><div><p class="kicker">Begin with an element</p><h2 id="atlas-title">Material Atlas Table</h2></div><button id="periodic-cover">Open periodic table →</button></div><div id="element-cards" class="element-cards"></div></section>
+    <section class="collection-guide" aria-label="Evidence collections"><div><span class="evidence-label core">MAT Core Data</span><p>Reference properties, conditions, equations and traceable sources. Individual values retain their evidence status.</p></div><div><span class="evidence-label research">Research / Emerging</span><p>Models, predictions and developing results, with their validation limits visible.</p></div><div><span class="evidence-label claims">Historical / Alternative / Claims</span><p>Original ideas and historical accounts, preserved with provenance and separate from measured data.</p></div></section>
+    <p class="cover-note">An evolving reference. Record coverage and scientific certainty are different measures. Author material, contributors and source history remain part of the book.</p>
+  </section>
+  <article id="content" hidden>
+    <div class="chapter-top"><p id="crumb"></p><a id="source-link">Read source ↗</a></div>
+    <div id="tools" class="chapter-tools" aria-label="Reading tools"><label class="sr-only" for="jump">Jump to section</label><select id="jump"><option>On this page</option></select><button id="periodic-btn">Periodic table</button><button id="goto-studio">Listen / translate</button><a id="citations-link" href="#">Sources & evidence ↓</a></div>
+    <div id="identity"></div><p id="page-context" class="page-context"></p><div id="at-glance"></div><p id="mt-note" hidden role="status"></p><div id="page" aria-busy="false"></div>
+    <section id="chapter-summary" class="chapter-summary" aria-label="Chapter review"></section><div id="supplement"></div>
+    <nav class="element-pager" aria-label="Previous and next element"><a id="prev-element"></a><a id="next-element"></a></nav><nav class="pager" aria-label="Previous and next page"><a id="prev"></a><a id="next"></a></nav>
+  </article>
+  <p id="book-status" role="status" class="sr-only"></p><noscript><p>This interactive reader requires JavaScript. The complete print edition and original Markdown files remain available.</p></noscript>
+</main>
 </div>
-<script src="./book.js"></script>
-<script>
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(() => {});
-</script>
-<script>
-if (window.MathJax === undefined) {
-  var s = document.createElement("script");
-  s.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
-  s.async = true;
-  document.head.appendChild(s);
-}
-</script>
-</body>
-</html>
+<dialog id="periodic-dialog" aria-labelledby="periodic-title"><div class="section-heading"><div><p class="kicker">Direct navigation</p><h2 id="periodic-title">Material Atlas Table</h2></div><button id="close-periodic" aria-label="Close periodic table">Close ×</button></div><p>Choose a published record. Muted cells mark elements awaiting a MAT record.</p><div class="periodic-scroll"><div id="periodic-grid"></div></div><p class="tool-note">Atomic number and symbol locate each element. MAT:0000 is a separate reference state.</p><a id="origin-link">Open Origin State (0000) →</a></dialog>
+<script type="module" src="./book.js"></script>
+</body></html>

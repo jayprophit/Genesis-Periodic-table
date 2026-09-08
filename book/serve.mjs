@@ -8,6 +8,8 @@ const mime = {
   ".html": "text/html", ".js": "text/javascript", ".css": "text/css",
   ".json": "application/json", ".md": "text/markdown; charset=utf-8",
   ".yaml": "text/yaml; charset=utf-8", ".yml": "text/yaml; charset=utf-8",
+  ".mjs": "text/javascript", ".webmanifest": "application/manifest+json",
+  ".glb": "model/gltf-binary",
   ".svg": "image/svg+xml", ".png": "image/png", ".csv": "text/csv",
 };
 

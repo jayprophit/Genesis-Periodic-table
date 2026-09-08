@@ -38,8 +38,8 @@
 </div>
 <script type="importmap">
 { "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  "three": "./vendor/three.module.js",
+  "three/addons/": "./vendor/"
 } }
 </script>
 <script type="module">
@@ -81,9 +81,9 @@ const sel = document.getElementById("scene");
 let THREE, OrbitControls;
 try {
   THREE = await import("three");
-  ({ OrbitControls } = await import("three/addons/controls/OrbitControls.js"));
+  ({ OrbitControls } = await import("three/addons/OrbitControls.js"));
 } catch {
-  fallback("The Three.js CDN could not be reached (network needed once). Scene files remain available under book/scenes/.");
+  fallback("The local 3D libraries could not start. Scene files remain available under book/scenes/.");
   throw new Error("no three");
 }
 const renderer = new THREE.WebGLRenderer({ antialias: true });
