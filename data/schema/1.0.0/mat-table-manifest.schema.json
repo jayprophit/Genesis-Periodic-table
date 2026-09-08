@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-table-manifest.schema.json",
+  "title": "MAT table manifest",
+  "type": "object",
+  "properties": {
+    "registry_id": { "type": "string" },
+    "record_id": { "type": "string", "pattern": "^MAT:(0000|00\\d\\d)$" },
+    "tables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "table_id": { "type": "string" },
+          "name": { "type": "string" },
+          "title": { "type": "string" },
+          "file": { "type": "string" },
+          "filename": { "type": "string" },
+          "status": { "type": "string" }
+        },
+        "anyOf": [{ "required": ["file"] }, { "required": ["filename"] }, { "required": ["id"] }, { "required": ["table_id"] }, { "required": ["name"] }],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["tables"],
+  "additionalProperties": true
+}

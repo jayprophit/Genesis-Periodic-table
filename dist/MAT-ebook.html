@@ -20,6 +20,12 @@ dialog{max-width:min(1120px,96vw);width:1120px;border:1px solid var(--line);bord
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 @page{size:A4;margin:18mm 16mm 20mm}
 @media print{html{scroll-behavior:auto}body,body.light{color-scheme:light;--bg:#fff;--panel:#fff;--paper:#fff;--ink:#172923;--muted:#40564a;--accent:#155a49;--line:#bac6bd;--code:#f5f6f3;--soft:#f0f3ee;--research:#6a4818;--claims:#613667;background:white;color:var(--ink);font-size:10pt;--font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}#sidebar,.mobile-bar,#scrim,#progress,.skip-link,.chapter-tools,.pager,.element-pager,.suggestions,#book-status,dialog,#source-link{display:none!important}#app{display:block}#reader{padding:0;max-width:none}#content{max-width:none}#cover:not([hidden]){break-after:page}.cover-grid{margin-top:30px}.cover-diagram{height:280px}#cover h1{font-size:42pt}.cover-actions,.atlas-directory,.collection-guide,.cover-note{display:none}.cover-meta{margin-top:35px}#page>h1,.print-chapter h1{font-size:26pt}#page h2{font-size:18pt;margin-top:25px}#page h3{font-size:14pt}.table-scroll{overflow:visible;border:0}table{font-size:8pt;table-layout:auto}th,td{padding:6px;min-width:0;overflow-wrap:anywhere}thead{display:table-header-group}tr,figure,.key-number{break-inside:avoid}h1,h2,h3,h4,h5,h6{break-after:avoid}p,li{orphans:3;widows:3}pre{white-space:pre-wrap;overflow:visible;font-size:8pt;padding:10px}a{color:inherit;text-decoration:underline}img{max-height:200mm;object-fit:contain}.math,mjx-container{overflow:visible!important}.chapter-summary{padding:14px}.print-chapter{break-before:page}.print-contents{break-before:page}.print-contents li{margin:3px 0;font-size:9pt}.print-contents a{text-decoration:none}.print-source{font-size:8pt;color:var(--muted);overflow-wrap:anywhere}.print-chapter .evidence-label{font-size:8pt}.print-title{font:40pt/1.1 var(--serif);margin:70mm 0 20mm}.print-subtitle{font:18pt var(--serif)}.print-cover{break-after:page}.print-index{columns:2}#supplement details:not(.suggestions)>*{display:block}.chapter-top{font-size:8pt}}
+/* record sub-groups + f-block cells */
+.toc-main{font-weight:700!important;color:var(--ink)!important}
+.atlas-sub{margin-left:10px;border-left:1px solid var(--line);padding-left:10px}
+.atlas-sub>summary{font-size:12px;color:var(--muted);padding:8px 0;cursor:pointer}
+.periodic-cell.f-block{background:var(--panel)}
+#periodic-grid{grid-auto-rows:minmax(50px,auto)}
 
 </style>
 </head>
@@ -13818,10 +13824,16 @@ full_compound_children: PENDING
 <pre><code class="language-text">1.0.0
 </code></pre>
 <h3 id="overall-result" tabindex="-1">Overall Result</h3>
-<pre><code class="language-text">PASS-WITH-REQUIRED-PATCHES
+<pre><code class="language-text">PASS
 </code></pre>
-<p>The scientific architecture is internally coherent.</p>
-<p>The following corrections must be applied before the schema status becomes <code>PASS</code>.</p>
+<p>Validated 2026-09-08 by the executable suite (<code>npm run validate</code>):
+<code>validate:records</code>, <code>validate:relationships</code>, <code>validate:assets</code>,
+<code>validate:links</code> and <code>check-identifiers</code> report zero errors for MAT:0001;
+<code>validate:sources</code> reports zero warnings for Hydrogen files (canonical
+<code>SRC-000005</code>–<code>SRC-000023</code> with <code>SRC-H-*</code> retained as aliases).</p>
+<p>Patch classification (see sections below for the original instructions,
+preserved for audit):</p>
+<div class="table-scroll" role="region" aria-label="Data table; scroll horizontally if needed" tabindex="0"><table><thead><tr><th scope="col">Patch</th><th scope="col">Subject</th><th scope="col">Disposition</th></tr></thead><tbody><tr><td>PATCH-001</td><td>Neutral atomic Hydrogen ID</td><td>APPLIED (ATOM:H; last ION:H0 resolved)</td></tr><tr><td>PATCH-002</td><td>Molecular-ion IDs H2+1/H3+1</td><td>APPLIED (table + registry)</td></tr><tr><td>PATCH-003</td><td>Registry IDs</td><td>APPLIED for the 4 real renames; 5 same-to-same items INVALID/NO-OP</td></tr><tr><td>PATCH-004</td><td>Isotope uncertainty</td><td>APPLIED where evaluated values exist; unevaluated stay honest</td></tr><tr><td>PATCH-005</td><td>Visual manifest count</td><td>APPLIED (summary corrected; enforced by validate:assets)</td></tr><tr><td>PATCH-006</td><td>Forward Helium refs</td><td>APPLIED then RESOLVED (He published)</td></tr><tr><td>PATCH-007</td><td>Forward element refs</td><td>APPLIED; B/C/N/O flipped to RESOLVED, rest stay RESERVED</td></tr><tr><td>PATCH-008</td><td>Source identity</td><td>APPLIED (canonical IDs + aliases)</td></tr><tr><td>PATCH-009</td><td>0000 source IDs</td><td>STILL-REQUIRED, non-blocking (tied to 0000 final pass)</td></tr><tr><td>PATCH-010</td><td>Relationship IDs</td><td>PARTIALLY-APPLIED (legacy kept as aliases by rule; canonical migration pre-API)</td></tr><tr><td>PATCH-011</td><td>H2 identifier semantics</td><td>INFORMATIONAL PASS (no change)</td></tr><tr><td>PATCH-012</td><td>Stable-isotope half-life</td><td>PASS (NOT-APPLICABLE retained, never infinity)</td></tr><tr><td>PATCH-013</td><td>Tritium time notation</td><td>PASS after migration audit</td></tr><tr><td>PATCH-014</td><td>Nuclear vs chemical</td><td>PASS (no change)</td></tr><tr><td>PATCH-015</td><td>Frequency semantics</td><td>PASS (no universal field)</td></tr><tr><td>PATCH-016</td><td>Intrinsic vs host</td><td>PASS (relationship framing)</td></tr><tr><td>PATCH-017</td><td>Evaluated vs new</td><td>PASS (evaluation + measurement kept separate)</td></tr><tr><td>PATCH-018</td><td>Historical overlays</td><td>PASS (HISTORICAL-OR-UNVERIFIED contained)</td></tr></tbody></table></div><p>The scientific architecture is internally coherent.</p>
 <hr>
 <h2 id="patch-001--neutral-atomic-hydrogen" tabindex="-1">PATCH-001 — Neutral Atomic Hydrogen</h2>
 <h3 id="incorrect" tabindex="-1">Incorrect</h3>

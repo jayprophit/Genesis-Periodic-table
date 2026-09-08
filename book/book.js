@@ -12,7 +12,7 @@ const say = (t) => { if (statusEl) statusEl.textContent = t; };
 
 let flat = [], byId = new Map(), legacy = [];
 let searchDocs = [], searchById = new Map(), related = [];
-let visuals = [], elements = [], identities = {};
+let visuals = [], elements = [], identities = {}, periodic = { cells: [] };
 let currentId = "";
 
 /* ---------- data ---------- */
@@ -54,17 +54,37 @@ function buildTOC(manifest) {
   const open = JSON.parse(localStorage.getItem("mat-toc-open") || "{}");
   const persist = () => localStorage.setItem("mat-toc-open", JSON.stringify(open));
 
-  // Material Atlas Table first: one nested folder per record.
+  // Material Atlas Table first: one nested folder per record, with a
+  // second level grouped from actual subdirectories (no empty groups).
+  // The main NNNN chapter always comes first.
   const atlas = document.createElement("div");
   atlas.innerHTML = `<div class="atlas-head"><h2>${esc(ATLAS)}</h2></div>`;
+  const GROUP_OF = [
+    [/\/calculations\//, "Calculations"],
+    [/\/data\//, "Data & Properties"],
+    [/\/(images|diagrams)\//, "Visuals & Diagrams"],
+    [/\/(tables|graphs)\//, "Tables & Graphs"],
+    [/\/models\//, "3D Models"],
+    [/\/experiments\//, "Processes & Experiments"],
+    [/People-and-Intellectual-Lineage/, "People / Lineage"],
+    [/\/relationships\//, "Relationships"],
+    [/\/sources\//, "Sources & Evidence"],
+    [/-(Schema-Validation|Migration-Audit|Visual-Specification)\.md$/, "Validation & Migration"],
+  ];
+  const groupOf = (d) => {
+    const hit = GROUP_OF.find(([re]) => re.test("/" + d.id));
+    return hit ? hit[1] : "Record Companion";
+  };
   const aDocs = flat.filter((d) => d.section === ATLAS);
   let lastRec = "";
-  let recDetails = null, recBox = null;
+  let recDetails = null, recBox = null, groups = null, mainCount = 0;
+  const flushRecord = () => { recDetails = recBox = groups = null; };
   aDocs.forEach((d) => {
     const rec = recordOf(d.id);
     const key = rec ? rec.number : "other";
     if (key !== lastRec) {
       lastRec = key;
+      mainCount = 0;
       recDetails = document.createElement("details");
       recDetails.className = "atlas-record";
       recDetails.open = open["rec-" + key] ?? true;
@@ -73,10 +93,32 @@ function buildTOC(manifest) {
       recDetails.innerHTML = `<summary>${esc(label)}</summary>`;
       recBox = document.createElement("div");
       recDetails.appendChild(recBox);
+      groups = new Map();
       atlas.appendChild(recDetails);
     }
-    recBox.appendChild(chapterLink(d));
+    const isMain = rec && d.id === `${rec.dir}/${key}-${rec.name.replace(/ /g, "-")}-${rec.symbol}.md`;
+    if (isMain && mainCount === 0) {
+      mainCount++;
+      const b = chapterLink(d);
+      b.classList.add("toc-main");
+      recBox.appendChild(b);
+      return;
+    }
+    const g = groupOf(d);
+    if (!groups.has(g)) {
+      const det = document.createElement("details");
+      det.className = "atlas-sub";
+      det.open = open[`rec-${key}-${g}`] ?? false;
+      det.ontoggle = () => { open[`rec-${key}-${g}`] = det.open; persist(); };
+      det.innerHTML = `<summary>${esc(g)}</summary>`;
+      const box = document.createElement("div");
+      det.appendChild(box);
+      groups.set(g, box);
+      recBox.appendChild(det);
+    }
+    groups.get(g).appendChild(chapterLink(d));
   });
+  flushRecord();
   toc.appendChild(atlas);
 
   // Guide, Reference & Book Information: the ten supporting sections as one group.
@@ -502,27 +544,48 @@ function initAtlas() {
     cards.appendChild(a);
   });
   $("record-count").textContent = elements.length;
+  // Cover record range + origin state derive from generated metadata.
+  const zs = elements.filter((e) => e.z).map((e) => e.number);
+  if (zs.length) {
+    const lo = zs.reduce((a, b) => (a < b ? a : b)).slice(2);
+    const hi = zs.reduce((a, b) => (a > b ? a : b)).slice(2);
+    $("cover-range").textContent = `${lo}–${hi}`;
+  }
+  const origin = identities["0000"];
+  if (origin && origin.status) $("cover-origin").textContent = `origin reference · ${origin.status.toLowerCase().replace(/-/g, " ")}`;
   const howto = flat.find((d) => d.id.endsWith("03-How-to-Use-MAT-Codex.md"));
   if (howto) $("guide-link").href = route(howto.id);
   $("start-btn").onclick = () => { const c = elementChapter("0000") || (flat.find((d) => d.section === ATLAS) || {}).id; if (c) location.hash = route(c); };
-  // Periodic grid (true columns for Z 1–18; muted cells await records).
+  // Periodic grid from the canonical navigation dataset: full 118 layout,
+  // only published MAT records link, the rest stay muted. Future records
+  // activate automatically via periodic.json.
   const grid = $("periodic-grid");
   grid.innerHTML = "";
-  const cols = { 1: [1, 18], 2: [1, 2, 13, 14, 15, 16, 17, 18], 3: [1, 2, 13, 14, 15, 16, 17, 18] };
-  const byZ = new Map(elements.filter((e) => e.z).map((e) => [e.z, e]));
-  const symByZ = { 1: "H", 2: "He", 3: "Li", 4: "Be", 5: "B", 6: "C", 7: "N", 8: "O", 9: "F", 10: "Ne", 11: "Na", 12: "Mg", 13: "Al", 14: "Si", 15: "P", 16: "S", 17: "Cl", 18: "Ar" };
-  [1, 2, 3].forEach((row) => cols[row].forEach((col, k) => {
-    const z = row === 1 ? (col === 1 ? 1 : 2) : row === 2 ? [3, 4, 5, 6, 7, 8, 9, 10][k] : [11, 12, 13, 14, 15, 16, 17, 18][k];
-    const e = byZ.get(z);
-    const cell = document.createElement(e ? "a" : "span");
+  const cells = (periodic.cells || []).filter((c) => !c.f);
+  cells.forEach((c) => {
+    const cell = document.createElement(c.published ? "a" : "span");
     cell.className = "periodic-cell";
-    cell.style.gridColumn = String(col);
-    if (e) cell.href = route(e.chapter);
+    cell.style.gridColumn = String(c.group);
+    cell.style.gridRow = String(c.period);
+    if (c.published) cell.href = route(c.chapter);
     else cell.setAttribute("aria-disabled", "true");
-    cell.innerHTML = `<small>${z}</small><strong>${e ? esc(e.symbol) : symByZ[z]}</strong>`;
-    cell.title = e ? `${e.number} · ${e.name}` : `Z ${z} — record pending`;
+    cell.innerHTML = `<small>${c.z}</small><strong>${esc(c.symbol)}</strong>`;
+    cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — record pending`;
     grid.appendChild(cell);
-  }));
+  });
+  ["lanthanide", "actinide"].forEach((series, r) => {
+    (periodic.cells || []).filter((c) => c.f === series).forEach((c) => {
+      const cell = document.createElement(c.published ? "a" : "span");
+      cell.className = "periodic-cell f-block";
+      cell.style.gridColumn = String(3 + c.fOrder);
+      cell.style.gridRow = String(9 + r);
+      if (c.published) cell.href = route(c.chapter);
+      else cell.setAttribute("aria-disabled", "true");
+      cell.innerHTML = `<small>${c.z}</small><strong>${esc(c.symbol)}</strong>`;
+      cell.title = c.published ? `${c.mat} · ${esc(c.name)}` : `${esc(c.name)} (Z ${c.z}) — record pending`;
+      grid.appendChild(cell);
+    });
+  });
   const dlg = $("periodic-dialog");
   const open = () => { if (typeof dlg.showModal === "function") dlg.showModal(); };
   $("periodic-cover").onclick = open;
@@ -584,16 +647,24 @@ function initChrome() {
   applyFs();
   $("font-inc").onclick = () => { fs = Math.min(fs + 1, 21); localStorage.setItem("mat-fs", fs); applyFs(); };
   $("font-dec").onclick = () => { fs = Math.max(fs - 1, 14); localStorage.setItem("mat-fs", fs); applyFs(); };
-  // Offline snapshot.
+  // Offline snapshot: the generated index lists every local resource so a
+  // complete save caches chapters, figures, scenes and libraries — and says so honestly.
   $("offline-btn").onclick = async () => {
     const st = $("offline-status");
     try {
+      const idx = await getJSON("./offline-index.json", null);
+      if (!idx || !idx.all) throw new Error("no index");
       const c = await caches.open("mat-ebook-v2");
-      await c.addAll(["./", "./index.html", "./styles.css", "./book.js", "./reader-core.mjs",
-        "./math-config.js", "./manifest.json", "./search-index.json", "./visuals-index.json",
-        "./elements.json", "./identities.json", "./manifest.webmanifest", "./scenes/index.json",
-        "./vendor/marked.mjs", "./vendor/tex-svg.js", "./vendor/three.module.js", "./vendor/OrbitControls.js"]);
-      st.textContent = "Saved · this book now opens offline.";
+      let ok = 0;
+      const failedUrls = [];
+      for (const u of idx.all) {
+        try { await c.add(u); ok++; }
+        catch { failedUrls.push(u); }
+      }
+      st.textContent = failedUrls.length
+        ? `Partial save: ${ok}/${idx.all.length} cached (${failedUrls.length} failed).`
+        : `Saved · complete book offline (${ok} resources).`;
+      if (failedUrls.length) console.warn("offline failures", failedUrls);
     } catch { st.textContent = "Offline save failed in this browser."; }
   };
   if (!navigator.onLine) $("offline-status").textContent = "Offline · showing saved pages.";
@@ -604,12 +675,13 @@ function initChrome() {
 
 /* ---------- init ---------- */
 (async function init() {
-  const [manifest, sidx, vidx, els, ids] = await Promise.all([
+  const [manifest, sidx, vidx, els, ids, per] = await Promise.all([
     getJSON("./manifest.json", null),
     getJSON("./search-index.json", { docs: [], related: [] }),
     getJSON("./visuals-index.json", { visuals: [] }),
     getJSON("./elements.json", { elements: [] }),
     getJSON("./identities.json", { identities: {} }),
+    getJSON("./periodic.json", { cells: [] }),
   ]);
   if (!manifest) {
     $("book-status").textContent = "Could not load the book manifest. Is the preview server running?";
@@ -621,6 +693,7 @@ function initChrome() {
   visuals = (vidx.visuals || []).map((v) => ({ ...v, items: v.items || [] }));
   elements = els.elements || [];
   identities = ids.identities || {};
+  periodic = per;
   buildTOC(manifest);
   initChrome();
   initSearch();

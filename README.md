@@ -2,6 +2,25 @@
 
 ## A Structured Atlas of Matter, Materials, States and Transformations
 
+> **Start here:** read the book at `book/index.html` (serve the repo root, e.g.
+> `node book/serve.mjs 4173` → `http://localhost:4173/book/`), or open a record
+> directly under `records/NNNN-Name-Symbol/`.
+>
+> - **Read the MAT Codex** — `book/index.html` (offline-capable, printable edition in `dist/`).
+> - **Explore the Material Atlas Table** — records `0000`–`0009` under `records/`.
+> - **Machine-readable data** — canonical YAML under each record's `data/` plus the global registry `data/registries/sources.yaml`.
+> - **Scientific methodology** — `docs/03-methodology/`.
+> - **Schemas** — versioned contracts in `data/schema/1.0.0/`.
+> - **Contributing / authoring** — `docs/06-governance/` and `templates/`.
+> - **Build and validate locally** — `npm ci`, `npm run validate`, `npm run build:book`, `npm test`.
+> - **Project status** — `CHANGELOG.md` (Pending section is the honest backlog).
+>
+> Three layers, three authorities:
+>
+> 1. **Human-readable publication** — Markdown chapters (authoritative prose).
+> 2. **Canonical structured scientific data** — record `data/**/*.yaml` + `data/registries/` (authoritative data).
+> 3. **Generated indexes/reader assets** — `book/*.json`, `book/scenes/`, `dist/` (derived; rebuild with `npm run build:book`, never hand-edit).
+
 The **Materials Atlas Table Codex (MAT)** is a structured scientific knowledge system for describing matter beyond the limits of a conventional periodic table.
 
 A conventional periodic table primarily organises chemical elements by atomic number and periodic chemical behaviour.
@@ -258,3 +277,15 @@ The objective is not static completeness.
 The objective is traceable improvement.
 
 ---
+
+## Repository administration (owner decisions)
+
+These cannot be set from source; documented here so they are not forgotten.
+
+- **Licence:** none selected. An AI must not invent this choice — the repository
+  owner selects and adds the `LICENSE` file.
+- **Suggested GitHub description:** "An extensible scientific atlas of matter, materials, states, transformations, evidence and relationships."
+- **Suggested topics:** `materials-science`, `chemistry`, `physics`,
+  `periodic-table`, `scientific-data`, `knowledge-graph`, `open-data`,
+  `research`, `materials-informatics`.
+- **Suggested homepage:** the hosted reader or `dist/MAT-ebook.html` once Pages is enabled.

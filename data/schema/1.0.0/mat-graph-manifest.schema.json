@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-graph-manifest.schema.json",
+  "title": "MAT graph manifest",
+  "type": "object",
+  "properties": {
+    "registry_id": { "type": "string" },
+    "record_id": { "type": "string", "pattern": "^MAT:(0000|00\\d\\d)$" },
+    "version": { "type": "string" },
+    "graphs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "graph_id": { "type": "string" },
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "filename": { "type": "string" },
+          "data_filename": { "type": "string" },
+          "source_ids": { "type": "array", "items": { "type": "string" } },
+          "status": { "type": "string" }
+        },
+        "anyOf": [{ "required": ["filename"] }, { "required": ["graph_id"] }, { "required": ["id"] }],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["graphs"],
+  "additionalProperties": true
+}

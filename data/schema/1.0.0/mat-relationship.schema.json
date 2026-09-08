@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-relationship.schema.json",
+  "title": "MAT relationship registry",
+  "description": "Knowledge-graph edges. Canonical relationship IDs use MAT:NNNN:REL:NNNN; legacy REL-X-NNNN IDs are tolerated but flagged by validators, never silently rewritten.",
+  "type": "object",
+  "properties": {
+    "registry_id": { "type": "string" },
+    "record_id": { "type": "string", "pattern": "^MAT:(0000|00\\d\\d)$" },
+    "relationship_id": { "type": "string" },
+    "version": { "type": "string" },
+    "relationships": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "relationship_id": { "type": "string" },
+              "relationship_type": { "type": "string" },
+              "source": { "type": ["string", "array"] },
+              "type": { "type": "string" },
+              "target": { "type": ["string", "array"] },
+              "evidence": { "type": "string" },
+              "status": { "type": "string" }
+            },
+            "anyOf": [{ "required": ["target"] }, { "required": ["relationship_type"] }, { "required": ["type"] }],
+            "additionalProperties": true
+          }
+        },
+        { "type": "object" }
+      ]
+    },
+    "materials": { "type": "object" },
+    "compounds": { "type": "object" },
+    "processes": { "type": "object" },
+    "elements": { "type": "array" },
+    "compound": { "type": "object" }
+  },
+  "additionalProperties": true
+}

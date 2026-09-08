@@ -90,6 +90,7 @@ sources:
   - source_id: "SRC-000008"
     source_aliases:
       - "SRC-H-004"
+      - "SRC-000164"
     title: "The NUBASE2020 Evaluation of Nuclear Physics Properties"
     authors:
       - "F. G. Kondev"
@@ -105,6 +106,9 @@ sources:
       - nuclear_spin_parity
       - half_life
       - decay_modes
+      - F14_to_F31_nuclear_semantics
+      - fluorine_half_lives
+      - historical_F30_limit
 
   - source_id: "SRC-000009"
     source_aliases:
@@ -1128,52 +1132,6 @@ sources:
       - allotrope_context
       - biological_context
       - carbon_history
-status: "RESEARCHED"
-migration_status: "CONTENT-MIGRATED"
-
-completion:
-  atomic_core: true
-  isotope_registry: true
-  isotope_child_files: true
-  radiocarbon_architecture: true
-  carbon_12_mass_reference: true
-  carbon_13_NMR: true
-  triple_alpha: true
-  Hoyle_state: true
-  diamond_architecture: true
-  graphite_architecture: true
-  graphene_architecture: true
-  CNT_architecture: true
-  fullerene_architecture: true
-  amorphous_carbon_architecture: true
-  Raman_architecture: true
-  dimensionality_architecture: true
-  LiC6_relationship: true
-  combustion_thermochemistry: true
-  carbon_cycle: true
-  processes_environments: true
-
-remaining:
-  - detailed_diamond_property_file
-  - detailed_graphite_direction_resolved_property_file
-  - graphene_property_registry
-  - CNT_chirality_registry
-  - fullerene_registry
-  - complete_atomic_spectral_table
-  - full_relationship_registry
-  - organic_chemistry_and_functional_group_registry
-  - carbonates_and_carbides_expansion
-  - people_and_intellectual_lineage
-  - experiment_registry
-  - tables
-  - graphs
-  - V01_to_V18_visual_specification
-  - G0006_migration_audit
-  - schema_validation
-
-schema_validation_status: "PENDING"
-visual_specification: "NOT-YET-LOCKED"
-visual_assets: "NOT-GENERATED"
   - source_id: "SRC-000091"
     title: "Conductive diamond: synthesis, properties, and electrochemical applications"
     journal: "Chemical Society Reviews"
@@ -1932,7 +1890,9 @@ visual_assets: "NOT-GENERATED"
       - redox_signalling
       - oxidative_stress
 
-  - source_id: "SRC-000154-PSII"
+  - source_id: "SRC-000155"
+    source_aliases:
+      - "SRC-000154-PSII"
     title: "Structures of the intermediates of Kok's photosynthetic water oxidation clock"
     journal: "Nature"
     year: 2018
@@ -1953,26 +1913,6 @@ visual_assets: "NOT-GENERATED"
       - oxygen_magnetism
       - alpha_beta_gamma_oxygen
       - pressure_induced_oxygen_phases
-  - source_id: "SRC-000164"
-    title: "The NUBASE2020 evaluation of nuclear physics properties"
-    authors:
-      - "F. G. Kondev"
-      - "M. Wang"
-      - "W. J. Huang"
-      - "S. Naimi"
-      - "G. Audi"
-    journal: "Chinese Physics C"
-    year: 2021
-    volume: 45
-    article: "030001"
-    doi: "10.1088/1674-1137/abddae"
-    source_type: "EVALUATED-NUCLEAR-DATABASE"
-    supports:
-      - F14_to_F31_nuclear_semantics
-      - fluorine_half_lives
-      - decay_modes
-      - nuclear_spin_parity
-      - historical_F30_limit
 
   - source_id: "SRC-000165"
     title: "First Observation of the Exotic Isotope 13F Located Four Neutrons Beyond the Proton Drip Line"
@@ -2429,6 +2369,52 @@ visual_assets: "NOT-GENERATED"
       - F18_decay
       - PET_isotope
 
+status: "RESEARCHED"
+migration_status: "CONTENT-MIGRATED"
+
+completion:
+  atomic_core: true
+  isotope_registry: true
+  isotope_child_files: true
+  radiocarbon_architecture: true
+  carbon_12_mass_reference: true
+  carbon_13_NMR: true
+  triple_alpha: true
+  Hoyle_state: true
+  diamond_architecture: true
+  graphite_architecture: true
+  graphene_architecture: true
+  CNT_architecture: true
+  fullerene_architecture: true
+  amorphous_carbon_architecture: true
+  Raman_architecture: true
+  dimensionality_architecture: true
+  LiC6_relationship: true
+  combustion_thermochemistry: true
+  carbon_cycle: true
+  processes_environments: true
+
+remaining:
+  - detailed_diamond_property_file
+  - detailed_graphite_direction_resolved_property_file
+  - graphene_property_registry
+  - CNT_chirality_registry
+  - fullerene_registry
+  - complete_atomic_spectral_table
+  - full_relationship_registry
+  - organic_chemistry_and_functional_group_registry
+  - carbonates_and_carbides_expansion
+  - people_and_intellectual_lineage
+  - experiment_registry
+  - tables
+  - graphs
+  - V01_to_V18_visual_specification
+  - G0006_migration_audit
+  - schema_validation
+
+schema_validation_status: "PENDING"
+visual_specification: "NOT-YET-LOCKED"
+visual_assets: "NOT-GENERATED"
 rules:
   ids_are_global: true
   ids_are_recycled: false

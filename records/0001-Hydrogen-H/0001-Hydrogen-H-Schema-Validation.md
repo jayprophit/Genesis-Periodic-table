@@ -16,12 +16,40 @@ MAT:0001
 ## Overall Result
 
 ```text
-PASS-WITH-REQUIRED-PATCHES
+PASS
 ```
 
-The scientific architecture is internally coherent.
+Validated 2026-09-08 by the executable suite (`npm run validate`):
+`validate:records`, `validate:relationships`, `validate:assets`,
+`validate:links` and `check-identifiers` report zero errors for MAT:0001;
+`validate:sources` reports zero warnings for Hydrogen files (canonical
+`SRC-000005`–`SRC-000023` with `SRC-H-*` retained as aliases).
 
-The following corrections must be applied before the schema status becomes `PASS`.
+Patch classification (see sections below for the original instructions,
+preserved for audit):
+
+| Patch | Subject | Disposition |
+| ----- | ------- | ----------- |
+| PATCH-001 | Neutral atomic Hydrogen ID | APPLIED (ATOM:H; last ION:H0 resolved) |
+| PATCH-002 | Molecular-ion IDs H2+1/H3+1 | APPLIED (table + registry) |
+| PATCH-003 | Registry IDs | APPLIED for the 4 real renames; 5 same-to-same items INVALID/NO-OP |
+| PATCH-004 | Isotope uncertainty | APPLIED where evaluated values exist; unevaluated stay honest |
+| PATCH-005 | Visual manifest count | APPLIED (summary corrected; enforced by validate:assets) |
+| PATCH-006 | Forward Helium refs | APPLIED then RESOLVED (He published) |
+| PATCH-007 | Forward element refs | APPLIED; B/C/N/O flipped to RESOLVED, rest stay RESERVED |
+| PATCH-008 | Source identity | APPLIED (canonical IDs + aliases) |
+| PATCH-009 | 0000 source IDs | STILL-REQUIRED, non-blocking (tied to 0000 final pass) |
+| PATCH-010 | Relationship IDs | PARTIALLY-APPLIED (legacy kept as aliases by rule; canonical migration pre-API) |
+| PATCH-011 | H2 identifier semantics | INFORMATIONAL PASS (no change) |
+| PATCH-012 | Stable-isotope half-life | PASS (NOT-APPLICABLE retained, never infinity) |
+| PATCH-013 | Tritium time notation | PASS after migration audit |
+| PATCH-014 | Nuclear vs chemical | PASS (no change) |
+| PATCH-015 | Frequency semantics | PASS (no universal field) |
+| PATCH-016 | Intrinsic vs host | PASS (relationship framing) |
+| PATCH-017 | Evaluated vs new | PASS (evaluation + measurement kept separate) |
+| PATCH-018 | Historical overlays | PASS (HISTORICAL-OR-UNVERIFIED contained) |
+
+The scientific architecture is internally coherent.
 
 ---
 

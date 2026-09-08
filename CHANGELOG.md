@@ -47,6 +47,12 @@ All significant changes to the Materials Atlas Table Codex are recorded here.
 - Data-quality rules.
 - Genesis-to-MAT migration system.
 - Glossary and symbol registry.
+- Versioned machine-enforced JSON Schemas (`data/schema/1.0.0/`).
+- Executable validation suite (`npm run validate`: records, sources, relationships, assets, links, identifiers, book sync).
+- Canonical source-ID normalization (aliases retained, e.g. `SRC-H-*`, `SRC-000164`).
+- Hydrogen record validated PASS (patches classified in its validation document).
+- Element records 0001–0009 published with visual galleries, 3D scenes and search indexes.
+- Reader regrouped: Material Atlas Table dominant; guide sections under one parent.
 
 ## Changed
 
@@ -67,13 +73,9 @@ All significant changes to the Materials Atlas Table Codex are recorded here.
 
 ## Pending
 
-- Finalize source registries.
-- Build structured constants registry.
+- Register Carbon sources SRC-000084–SRC-000090 (referenced but unregistered; titles absent from record).
 - Complete People and Intellectual Lineage records.
-- Migrate legacy Genesis records.
-- Construct `0000-Origin-State`.
-- Construct first full element record package.
-- Validate record templates against Hydrogen.
-- Generate standardized scientific visual assets.
-- Establish machine-readable JSON/YAML schemas.
-- Create validation scripts and automated schema checks.
+- Migrate remaining legacy Genesis records.
+- 0000 final validation pass (record exists and is RESEARCHED; PATCH-009 tied to it).
+- Publish element records 0010+.
+- Canonical relationship-ID migration (pre-API; legacy REL-* kept as aliases).

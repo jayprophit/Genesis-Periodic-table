@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-source-registry.schema.json",
+  "title": "MAT global source registry",
+  "description": "Canonical source IDs (SRC-NNNNNN) are authoritative; historical aliases live only in source_aliases.",
+  "type": "object",
+  "properties": {
+    "registry": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "registry_id": { "type": "string", "const": "MAT:REG:SOURCES" },
+        "version": { "type": "string" }
+      },
+      "required": ["registry_id"],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^SRC-\\d{6}$" },
+          "source_aliases": { "type": "array", "items": { "type": "string" } },
+          "title": { "type": "string" },
+          "organization": { "type": "string" },
+          "source_type": { "type": "string" }
+        },
+        "required": ["source_id"],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["sources"],
+  "additionalProperties": true
+}

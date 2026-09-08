@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-measurement.schema.json",
+  "title": "MAT measurement object",
+  "description": "Shared shape for a scientific value with conditions, evidence, confidence and provenance. All fields optional; vocabularies enforced when present. $ref target for validators.",
+  "type": "object",
+  "properties": {
+    "value": {},
+    "minimum": {},
+    "maximum": {},
+    "type": { "type": "string" },
+    "unit": { "type": "string" },
+    "uncertainty": {},
+    "conditions": { "type": ["object", "string", "null"] },
+    "evidence_type": { "type": "string", "enum": ["MEASURED", "REPLICATED", "THEORETICAL", "COMPUTATIONAL", "EARLY-EXPERIMENTAL", "HISTORICAL", "HYPOTHESIS", "UNVERIFIED", "ESTABLISHED", "EVALUATED", "DERIVED"] },
+    "confidence": { "type": "string", "enum": ["A", "B", "C", "D", "U"] },
+    "source_id": { "type": "string" },
+    "source_alias": { "type": "string" },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "method": { "type": "string" },
+    "reference_state": { "type": "string" },
+    "null_state": { "type": "string", "enum": ["UNKNOWN", "NOT-MEASURED", "NOT-AVAILABLE", "NOT-APPLICABLE", "NOT-ESTABLISHED", "BELOW-DETECTION-LIMIT"] }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mat-codex.local/schema/1.0.0/mat-record.schema.json",
+  "title": "MAT record header",
+  "description": "Identity and lifecycle fields of a MAT parent record. Permissive by design; guards IDs, classes, versions and status vocabulary.",
+  "type": "object",
+  "properties": {
+    "mat_id": { "type": "string", "pattern": "^MAT:(0000|00\\d\\d)$" },
+    "record_name": { "type": "string", "minLength": 1 },
+    "symbol": { "type": ["string", "null"] },
+    "record_class": { "type": "string", "enum": ["CHEMICAL_ELEMENT", "FOUNDATION_REFERENCE", "ISOTOPE", "ION", "MOLECULE", "COMPOUND", "MATERIAL", "PHASE", "PROCESS", "ENVIRONMENT", "MODEL"] },
+    "parent_id": { "type": "string", "pattern": "^MAT:(0000|00\\d\\d)$" },
+    "atomic_number": { "anyOf": [{ "type": "integer", "minimum": 0, "maximum": 118 }, { "type": "null" }, { "type": "string", "enum": ["UNKNOWN", "NOT-MEASURED", "NOT-AVAILABLE", "NOT-APPLICABLE", "NOT-ESTABLISHED", "BELOW-DETECTION-LIMIT"] }] },
+    "schema_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "record_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "status": { "type": "string" },
+    "migration_status": { "type": "string" },
+    "completeness": { "type": "string" }
+  },
+  "required": ["mat_id", "record_name", "record_class", "status"],
+  "additionalProperties": true
+}

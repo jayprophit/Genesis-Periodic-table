@@ -1,0 +1,24 @@
+{
+  "name": "mat-codex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Materials Atlas Table Codex — validation toolchain and book build.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-mat.mjs",
+    "validate:records": "node scripts/validate-records.mjs",
+    "validate:sources": "node scripts/validate-sources.mjs",
+    "validate:relationships": "node scripts/validate-relationships.mjs",
+    "validate:assets": "node scripts/validate-assets.mjs",
+    "validate:links": "node scripts/check-links.mjs",
+    "validate:ids": "node scripts/check-identifiers.mjs",
+    "validate:booksync": "node scripts/check-book-sync.mjs",
+    "build:book": "node book/build/book.mjs",
+    "test": "node --test scripts/tests/mat.test.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.6.1"
+  }
+}
