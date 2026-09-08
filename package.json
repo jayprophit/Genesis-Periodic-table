@@ -17,13 +17,16 @@
     "build:book": "node book/build/book.mjs",
     "build:publication": "node scripts/build-publication-model.mjs",
     "sync:elements": "node scripts/sync-elements-baseline.mjs",
-    "build:studio": "cd studio && npm run build",
-    "prepare:studio": "npm run build:publication && npm run sync:elements",
+    "build:studio": "npm run prepare:studio && npm --prefix studio run build",
+    "prepare:studio": "npm run sync:elements && npm run build:book && npm run build:publication",
     "test:studio": "cd studio && npm run test",
     "check:studio": "cd studio && npm run build",
-    "test": "node --test scripts/tests/mat.test.mjs",
+    "test": "node --test scripts/tests/*.test.mjs",
     "studio": "npm run prepare:studio && cd studio && npm run dev",
-    "generate:records": "node scripts/generate-element-records.mjs"
+    "generate:records": "node scripts/generate-element-records.mjs",
+    "setup": "npm ci && npm --prefix studio ci",
+    "preview:studio": "npm --prefix studio run preview -- --host 127.0.0.1",
+    "test:e2e": "npm --prefix studio run test:e2e"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

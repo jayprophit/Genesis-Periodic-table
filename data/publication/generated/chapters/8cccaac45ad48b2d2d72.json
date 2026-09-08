@@ -1,0 +1,65 @@
+{
+  "id": "records/0002-Helium-He/calculations/0002-Helium-He-CALC-001-He3-Neutron-Capture-Q.md",
+  "key": "8cccaac45ad48b2d2d72",
+  "mat": "MAT:0002",
+  "title": "CALC-001 — ³He Neutron-Capture Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — ³He Neutron-Capture Q-Value\n\nReaction:\n\n$$\n{}^3He+n\n\\rightarrow\n{}^3H+{}^1H\n$$\n\nUsing atomic masses:\n\n$$\nm({}^3He)=3.0160293201\\ {\\rm u}\n$$\n\n$$\nm_n=1.00866491595\\ {\\rm u}\n$$\n\n$$\nm({}^3H)=3.0160492779\\ {\\rm u}\n$$\n\n$$\nm({}^1H)=1.00782503223\\ {\\rm u}\n$$\n\nThe electron count balances when atomic masses are used.\n\nMass difference:\n\n$$\n\\Delta m\n=\n0.00081992592\\ {\\rm u}\n$$\n\nUsing:\n\n$$\n1\\ {\\rm u}c^2\n=\n931.49410372\\ {\\rm MeV}\n$$\n\ngives:\n\n$$\n\\boxed{\nQ\\approx0.7637562\\ {\\rm MeV}\n}\n$$\n\nThis exothermic capture reaction underlies an important ³He neutron-detection relationship.\n\n```yaml\ncalculation_id: \"MAT:0002:CALC:001\"\nreaction: \"3He + n -> 3H + 1H\"\nmass_difference:\n  value: 0.00081992592\n  unit: \"u\"\nq_value:\n  value: 0.7637562\n  unit: \"MeV\"\nclassification: \"DERIVED\"\nsource_ids:\n  - \"SRC-000019\"\n  - \"SRC-000006\"\n  - \"SRC-000018\"\n```\n",
+  "bodyHash": "19f7c56a17d44ca732792aac2d960c477fde72db8f9fc5047ce948a32b9b3dd8",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000006",
+      "source_aliases": [
+        "SRC-H-002"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Hydrogen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "standard_atomic_weight",
+        "isotope_masses",
+        "representative_isotopic_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 3
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

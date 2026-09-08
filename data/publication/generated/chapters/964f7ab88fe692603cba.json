@@ -1,0 +1,64 @@
+{
+  "id": "records/0009-Fluorine-F/calculations/0009-Fluorine-F-CALC-001-F18-Decay-Q.md",
+  "key": "964f7ab88fe692603cba",
+  "mat": "MAT:0009",
+  "title": "CALC-001 — Fluorine-18 Decay Energetics",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Fluorine-18 Decay Energetics\n\nParent:\n\n$$\n{}^{18}F\n$$\n\nDaughter:\n\n$$\n{}^{18}O\n$$\n\nNeutral atomic masses:\n\n$$\nM({}^{18}F)=18.00093733\\ u\n$$\n\n$$\nM({}^{18}O)=17.99915961286\\ u\n$$\n\nAtomic-mass difference:\n\n$$\nQ_{\\rm EC}\n=\n[M({}^{18}F)-M({}^{18}O)]c^2\n$$\n\n$$\n\\boxed{\nQ_{\\rm EC}\n\\approx1.65593\\ {\\rm MeV}\n}\n$$\n\nFor positron emission:\n\n$$\nQ_{\\beta^+}\n=\n[M({}^{18}F)-M({}^{18}O)-2m_e]c^2\n$$\n\ngiving:\n\n$$\n\\boxed{\nQ_{\\beta^+}\n\\approx0.63394\\ {\\rm MeV}\n}\n$$\n\nThis corresponds to the approximate positron endpoint before nuclear recoil corrections.\n\nDecay branches:\n\n```yaml\nbeta_plus_percent:\n  value: 96.86\n  uncertainty: 0.16\n\nelectron_capture_percent:\n  value: 3.14\n  approximate: true\n```\n\nImportant distinction:\n\n```text\n1.65593 MeV\n=\nTOTAL ATOMIC MASS-DIFFERENCE ENERGY\n\n0.63394 MeV\n=\nPOSITRON-EMISSION AVAILABLE ENERGY AFTER 2m_e c^2\n```\n\nThe positron subsequently annihilates with an electron, typically producing two approximately:\n\n$$\n511\\ {\\rm keV}\n$$\n\nphotons.\n\n```yaml\ncalculation_id: \"MAT:0009:CALC:001\"\nclassification: \"DERIVED-FROM-EVALUATED-MASSES\"\n\nparent: \"MAT:0009:ISO:F-18\"\ndaughter: \"MAT:0008:ISO:O-18\"\n\nq_EC:\n  value: 1.65593\n  unit: \"MeV\"\n\nq_beta_plus:\n  value: 0.63394\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000158\"\n  - \"SRC-000126\"\n  - \"SRC-000167\"\n```\n\nThe ¹⁸F decay branch used above is supported by radionuclide standardization work: roughly **96.86% β⁺ and 3.14% electron capture**; TUNL’s dedicated half-life evaluation recommends **109.732 ± 0.011 min**. ([ScienceDirect][2])\n\nThe F₂ counterexample also becomes stronger numerically: modern work gives \\(D_0(F_2)\\) around **154.92 ± 0.10 kJ/mol**, reinforcing the original conclusion that Fluorine's extraordinary chemical reactivity does not originate from an exceptionally strong F–F bond. ([ACS Publications][3]) HF, by comparison, has \\(r_e=0.916808\\) Å, \\(\\omega_e=4138.32\\ {\\rm cm^{-1}}\\), and \\(B_e=20.9557\\ {\\rm cm^{-1}}\\) in the NIST diatomic compilation. ([NIST WebBook][4])\n",
+  "bodyHash": "9930c8e3fe456734c871a7b9629328a007386f67937c8eca082ceb2b827ea966",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000126",
+      "source_aliases": [
+        "SRC-O-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Oxygen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "oxygen_standard_atomic_weight",
+        "O12_to_O28_masses",
+        "O16_composition",
+        "O17_composition",
+        "O18_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000158",
+      "source_aliases": [
+        "SRC-F-002"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Fluorine",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-ISOTOPE-DATABASE",
+      "supports": [
+        "F14_to_F31_masses",
+        "F19_mass",
+        "F19_isotopic_composition",
+        "fluorine_standard_atomic_weight"
+      ]
+    },
+    {
+      "source_id": "SRC-000167",
+      "title": "Fluorine-18 decay and activity standardization",
+      "source_type": "RADIONUCLIDE-METROLOGY",
+      "supports": [
+        "F18_beta_plus_probability",
+        "F18_electron_capture_probability",
+        "PET_decay_scheme"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 3
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

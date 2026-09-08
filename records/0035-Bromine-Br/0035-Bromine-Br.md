@@ -4,6 +4,7 @@
 mat_id: "MAT:0035"
 record_name: "Bromine"
 symbol: "Br"
+atomic_number: 35
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Br | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 35 | | IUPAC |
-| Standard atomic weight | 79.904 | | IUPAC |
+| Standard atomic weight | [79.901,79.907] | EVALUATED | CIAAW-2024 |
 | Period | 4 | | IUPAC |
 | Group | 17 | | IUPAC |
 | Block | p | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Ar] 3d¹⁰ 4s² 4p⁵**
+Electronic configuration: **[Ar]4s2 3d10 4p5** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 79.904 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 11.814 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 2.96 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Liquid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | [79.901,79.907] | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Ar]4s2 3d10 4p5 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 2.96 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 11.814 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Liquid | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 265.95 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | 331.95 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| density | 3.11 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | +5, +1, -1 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

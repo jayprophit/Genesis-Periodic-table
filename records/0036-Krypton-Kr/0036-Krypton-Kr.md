@@ -4,6 +4,7 @@
 mat_id: "MAT:0036"
 record_name: "Krypton"
 symbol: "Kr"
+atomic_number: 36
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Kr | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 36 | | IUPAC |
-| Standard atomic weight | 83.798 | | IUPAC |
+| Standard atomic weight | 83.798(2) | EVALUATED | CIAAW-2024 |
 | Period | 4 | | IUPAC |
 | Group | 18 | | IUPAC |
 | Block | p | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Ar] 3d¹⁰ 4s² 4p⁶**
+Electronic configuration: **[Ar]4s2 3d10 4p6** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 83.798 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 14 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 3 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Gas | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | 83.798(2) | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Ar]4s2 3d10 4p6 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 3 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 14 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Gas | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 115.79 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | 119.93 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| density | 0.003733 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | 0 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

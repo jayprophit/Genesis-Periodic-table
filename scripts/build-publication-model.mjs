@@ -1,194 +1,67 @@
-#!/usr/bin/env node
-/* MAT Codex: build-publication-model.mjs
- * Generates publication model JSON from canonical MAT data.
- * Run: npm run build:publication
- */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
-import { join } from "node:path";
-
-const root = join(import.meta.dirname, "..");
-const outDir = join(root, "data", "publication", "generated");
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
-
-function loadJSON(rel, fallback) {
-  const p = join(root, rel);
-  if (!existsSync(p)) return fallback;
-  return JSON.parse(readFileSync(p, "utf8"));
+// Canonical publication projection; Studio never reparses YAML.
+import {readFileSync,writeFileSync,mkdirSync,existsSync,cpSync} from 'node:fs';
+import {join,dirname} from 'node:path';
+import {createHash} from 'node:crypto';
+import YAML from 'yaml';
+import {walkFiles,frontMatter} from './lib.mjs';
+const root=join(import.meta.dirname,'..'), out=join(root,'data/publication/generated');
+mkdirSync(out,{recursive:true});
+const read=p=>readFileSync(join(root,p),'utf8').replace(/\r\n/g,'\n');
+const json=p=>JSON.parse(read(p));
+const write=(p,v)=>{mkdirSync(dirname(p),{recursive:true});writeFileSync(p,JSON.stringify(v,null,2)+'\n');};
+const registry=YAML.parse(read('data/registries/sources.yaml')).sources;
+const sourceMap=new Map(registry.map(s=>[s.source_id,s]));
+const catalog=json('data/catalog/elements-baseline.json');
+const elements=json('book/data/elements-118.json').elements;
+const records=[],details={};
+for(const sec of json('book/manifest.json').chapters||[])for(const item of sec.items||[]){
+ if(!existsSync(join(root,item.id)))throw new Error('Missing chapter '+item.id);
+ const body=read(item.id),mat=item.id.match(/^records\/(\d{4})-/);
+ const id=mat?'MAT:'+mat[1]:null, key=createHash('sha256').update(item.id).digest('hex').slice(0,20);
+ const record={id:item.id,key,mat:id,title:item.title,section:sec.section,lane:id==='MAT:0000'?'foundation':id?'science':'reference'};
+ records.push(record);
+ const folder=mat?item.id.split('/').slice(0,2).join('/'):null;
+ const isMain=folder&&item.id===folder+'/'+folder.split('/')[1]+'.md';
+ const files=isMain?walkFiles(folder,f=>f.endsWith('.yaml')):[];
+ const structured=files.map(path=>{const docs=YAML.parseAllDocuments(read(path));const errors=docs.flatMap(d=>d.errors);if(errors.length)throw new Error(path+': '+errors.map(e=>e.message).join('; '));return {path,data:docs.length===1?docs[0].toJSON():docs.map(d=>d.toJSON())}});
+ const sourceIds=[...new Set((id?body+'\n'+files.map(read).join('\n'):'').match(/SRC-\d{6}\b/g)||[])].sort();
+ const missingSources=sourceIds.filter(s=>!sourceMap.has(s));
+ const assets=isMain?walkFiles(folder,f=>/\.(svg|png|jpg|webp|glb)$/i.test(f)):[];
+ details[key]={...record,body,bodyHash:createHash('sha256').update(body).digest('hex'),header:frontMatter(body),
+ structured,assets,sources:sourceIds.map(s=>sourceMap.get(s)||{source_id:s,status:'UNRESOLVED'}),
+ missingSources,counts:{figures:assets.filter(p=>/\/(images|diagrams)\//.test(p)).length,
+ graphs:assets.filter(p=>p.includes('/graphs/')).length,tables:isMain?walkFiles(folder,f=>f.endsWith('.md')).filter(p=>p.includes('/tables/')).length:0,sources:sourceIds.length},
+ reviewStatus:missingSources.length?'BLOCKED':'NEEDS_REVIEW'};
+ write(join(out,'chapters',key+'.json'),details[key]);
 }
-
-console.log("Building MAT publication model...\n");
-
-// Load canonical sources
-const manifest = loadJSON("book/manifest.json", null);
-const elements118 = loadJSON("book/data/elements-118.json", { elements: [], referenceRecords: [] });
-const baselineCatalog = loadJSON("data/catalog/elements-baseline.json", { elements: [] });
-const chartDatasets = loadJSON("book/data/chart-datasets.json", {});
-const russell = loadJSON("book/data/russell-periodic.json", { octaves: [] });
-const combined = loadJSON("book/data/combined-periodic.json", { overlay: [] });
-const metadata = loadJSON("book/data/publication/metadata.json", {});
-
-// 1. publication-records.json — flat list of all chapters with metadata
-const records = [];
-if (manifest) {
-  for (const sec of manifest.chapters || []) {
-    for (const item of sec.items || []) {
-      const matMatch = item.id.match(/records\/(\d{4})/);
-      records.push({
-        id: item.id,
-        mat: matMatch ? `MAT:${matMatch[1]}` : null,
-        title: item.title,
-        section: sec.section,
-        lane: sec.section === "Material Atlas Table" ? "core" :
-              sec.section === "Guide, Reference & Book Information" ? "reference" : "other",
-      });
-    }
-  }
+const missingSources=[...new Set(Object.values(details).flatMap(d=>d.missingSources))].sort();
+// Only a resolvable, explicitly cited curated measurement can override baseline science.
+for(const e of elements){
+ e.baselineProvenance=structuredClone(e.provenance);e.curatedProvenance={};
+ if(e.recordStatus!=='CURATED')continue;
+ const d=Object.values(details).find(d=>d.id===e.chapterPath);
+ const master=d?.structured.find(s=>s.path.endsWith('/'+e.chapterPath.split('/')[1]+'.yaml'))?.data;
+ if(!master||Array.isArray(master))continue;
+ const candidates={atomicWeight:master.atomic_weight,firstIonizationEnergy:master.ionization?.first,electronegativity:master.electronegativity};
+ for(const [key,m]of Object.entries(candidates)){
+  if(!m||!sourceMap.has(m.source_id))continue;
+  let value=m.value;
+  if(key==='atomicWeight'&&typeof m.minimum==='number'&&typeof m.maximum==='number')value='['+m.minimum+', '+m.maximum+']';
+  if(typeof value!=='number'&&typeof value!=='string')continue;
+  const measure={...m,value,source:m.source_id,sourceUrl:sourceMap.get(m.source_id).url||null,evidence:m.evidence_type||'CURATED_SOURCE',recordPath:e.chapterPath};
+  e.curatedProvenance[key]=measure;e.provenance[key]=measure;e[key]=value;
+  if(key==='firstIonizationEnergy')e.ionizationEnergy=value;
+ }
 }
-writeFileSync(join(outDir, "publication-records.json"), JSON.stringify(records, null, 2));
-console.log(`  records: ${records.length} chapters`);
-
-// 2. publication-elements.json — element data from canonical sources
-// Merge baseline catalog (all 118) with curated records
-const baselineElements = baselineCatalog.elements || [];
-const curatedElements = elements118.elements || [];
-const refRecords = elements118.referenceRecords || [];
-
-// Create a map of curated elements by z
-const curatedMap = new Map(curatedElements.map(e => [e.z, e]));
-
-// Merge: baseline provides structure, curated overrides where available
-const mergedElements = baselineElements.map(be => {
-  const ce = curatedMap.get(be.z);
-  return {
-    ...be,
-    // Curated values take precedence
-    ...(ce || {}),
-    recordStatus: be.recordStatus || (ce?.hasFullRecord ? "CURATED" : "BASELINE"),
-  };
-});
-
-// Add any curated elements not in baseline (shouldn't happen but safety)
-for (const ce of curatedElements) {
-  if (!mergedElements.find(e => e.z === ce.z)) {
-    mergedElements.push({ ...ce, recordStatus: "CURATED" });
-  }
-}
-
-// Sort by atomic number
-mergedElements.sort((a, b) => a.z - b.z);
-
-writeFileSync(join(outDir, "publication-elements.json"), JSON.stringify({
-  elements: mergedElements,
-  referenceRecords: refRecords,
-  catalog: baselineCatalog.catalog || null,
-}, null, 2));
-console.log(`  elements: ${mergedElements.length} elements (${mergedElements.filter(e=>e.recordStatus==="CURATED").length} curated, ${mergedElements.filter(e=>e.recordStatus==="BASELINE").length} baseline)`);
-
-// 3. publication-charts.json — chart datasets with provenance
-const charts = [];
-const abd = chartDatasets.abundanceDatasets || {};
-if (abd.universe) {
-  charts.push({
-    id: "cosmic-abundance",
-    type: "pie",
-    title: "Cosmic Abundance of Elements",
-    dataset: abd.universe,
-    provenance: chartDatasets.provenance_note || "Unknown",
-  });
-}
-if (abd.crust) {
-  charts.push({
-    id: "crust-abundance",
-    type: "pie",
-    title: "Earth's Crust Abundance",
-    dataset: abd.crust,
-    provenance: chartDatasets.provenance_note || "Unknown",
-  });
-}
-if (abd.human) {
-  charts.push({
-    id: "human-body-abundance",
-    type: "pie",
-    title: "Human Body Abundance",
-    dataset: abd.human,
-    provenance: chartDatasets.provenance_note || "Unknown",
-  });
-}
-if (chartDatasets.carbonAllotropesRadar) {
-  charts.push({
-    id: "carbon-allotropes",
-    type: "radar",
-    title: "Carbon Allotrope Properties",
-    dataset: chartDatasets.carbonAllotropesRadar,
-    provenance: chartDatasets.provenance_note || "Unknown",
-  });
-}
-writeFileSync(join(outDir, "publication-charts.json"), JSON.stringify({ charts }, null, 2));
-console.log(`  charts: ${charts.length} chart definitions`);
-
-// 4. publication-periodic.json — combined periodic table data
-const periodicCells = [];
-if (manifest) {
-  for (const sec of manifest.chapters || []) {
-    if (sec.section !== "Material Atlas Table") continue;
-    for (const item of sec.items || []) {
-      const matMatch = item.id.match(/records\/(\d{4})/);
-      if (matMatch) {
-        periodicCells.push({ mat: `MAT:${matMatch[1]}`, title: item.title, id: item.id });
-      }
-    }
-  }
-}
-writeFileSync(join(outDir, "publication-periodic.json"), JSON.stringify({
-  standard: { cells: periodicCells },
-  russell: russell,
-  combined: combined,
-}, null, 2));
-console.log(`  periodic: standard + Russell + overlay`);
-
-// 5. publication-glossary.json — scientific terms
-const glossary = [
-  { term: "Electronegativity", definition: "Measure of the tendency of an atom to attract a bonding pair of electrons.", symbol: "χ", unit: "Pauling scale", source: "SRC-000001" },
-  { term: "Ionization Energy", definition: "Energy required to remove an electron from a gaseous atom or ion.", symbol: "IE", unit: "eV", source: "SRC-000001" },
-  { term: "Atomic Radius", definition: "Distance from the center of the nucleus to the boundary of the electron cloud.", symbol: "r", unit: "pm", source: "SRC-000001" },
-  { term: "Half-life", definition: "Time for half of a radioactive substance to decay.", symbol: "t½", unit: "varies", source: "SRC-000001" },
-  { term: "Allotrope", definition: "Different structural forms of the same element in the same physical state.", symbol: null, unit: null, source: null },
-  { term: "Isotope", definition: "Atoms of the same element with different numbers of neutrons.", symbol: null, unit: null, source: null },
-  { term: "Phase", definition: "Distinct state of matter with uniform properties (solid, liquid, gas, plasma).", symbol: null, unit: null, source: null },
-  { term: "Electron Configuration", definition: "Distribution of electrons in atomic orbitals.", symbol: null, unit: null, source: null },
-  { term: "Oxidation State", definition: "Hypothetical charge an atom would have if all bonds were 100% ionic.", symbol: null, unit: null, source: null },
-  { term: "Crystal Structure", definition: "Arrangement of atoms in a crystalline solid.", symbol: null, unit: null, source: null },
-  { term: "Lattice", definition: "Regular repeating arrangement of points in space representing atomic positions.", symbol: null, unit: null, source: null },
-  { term: "Band Gap", definition: "Energy difference between the top of the valence band and the bottom of the conduction band.", symbol: "Eg", unit: "eV", source: null },
-  { term: "Magnetic Moment", definition: "Quantity that determines the magnetic force on a moving electric charge.", symbol: "μ", unit: "μB", source: null },
-  { term: "Specific Heat", definition: "Amount of heat per unit mass required to raise the temperature by one degree.", symbol: "c", unit: "J/(g·K)", source: null },
-  { term: "Thermal Conductivity", definition: "Rate at which heat passes through a material.", symbol: "κ", unit: "W/(m·K)", source: null },
-  { term: "Density", definition: "Mass per unit volume of a substance.", symbol: "ρ", unit: "g/cm³", source: null },
-  { term: "Melting Point", definition: "Temperature at which a solid becomes a liquid.", symbol: "Tm", unit: "K", source: null },
-  { term: "Boiling Point", definition: "Temperature at which a liquid becomes a gas.", symbol: "Tb", unit: "K", source: null },
-  { term: "Enthalpy of Formation", definition: "Change in enthalpy when one mole of a compound is formed from its elements.", symbol: "ΔHf", unit: "kJ/mol", source: null },
-  { term: "Electron Affinity", definition: "Energy change when an electron is added to a neutral atom.", symbol: "EA", unit: "eV", source: null },
-];
-writeFileSync(join(outDir, "publication-glossary.json"), JSON.stringify({ glossary }, null, 2));
-console.log(`  glossary: ${glossary.length} terms`);
-
-// 6. publication-index.json — cross-reference index
-const indexByType = {
-  elements: mergedElements.map((e) => ({ z: e.z, symbol: e.symbol, name: e.name, matId: e.matId, recordStatus: e.recordStatus })),
-  records: records.filter((r) => r.mat).map((r) => ({ mat: r.mat, title: r.title, id: r.id })),
-  sections: [...new Set(records.map((r) => r.section))],
-};
-writeFileSync(join(outDir, "publication-index.json"), JSON.stringify(indexByType, null, 2));
-console.log(`  index: ${indexByType.elements.length} elements, ${indexByType.records.length} MAT records`);
-
-// 7. publication-metadata.json — publication info
-writeFileSync(join(outDir, "publication-metadata.json"), JSON.stringify({
-  ...metadata,
-  generatedAt: new Date().toISOString(),
-  schemaVersion: "1.0.0",
-  publicationVersion: "1.0.0-alpha",
-}, null, 2));
-console.log(`  metadata: publication info`);
-
-console.log(`\nPublication model built: ${outDir}`);
-console.log(`  7 files generated from canonical MAT data.`);
+write(join(out,'publication-records.json'),records);
+write(join(out,'publication-elements.json'),{elements,catalog:catalog.catalog});
+write(join(out,'publication-metadata.json'),{title:'Materials Atlas Table Codex',schemaVersion:'2.0.0',language:'en',edition:'Working draft',missingSources,releaseReady:false,notice:'Curated denotes chapter coverage, not scientific validation or peer review.'});
+write(join(out,'publication-index.json'),{elements:elements.map(e=>({z:e.z,matId:e.matId,name:e.name})),records,sections:[...new Set(records.map(r=>r.section))]});
+write(join(out,'publication-periodic.json'),{standard:{elements},historical:{notice:'Russell and alternative models are research references, not established physical laws.',russell:json('book/data/russell-periodic.json')}});
+write(join(out,'publication-charts.json'),{charts:[],notice:'Legacy unsourced chart datasets excluded from publication projection.'});
+write(join(out,'publication-glossary.json'),{glossary:[],chapter:records.find(r=>/Glossary/.test(r.title))?.id||null});
+const pub=join(root,'studio/public');
+mkdirSync(pub,{recursive:true});
+cpSync(out,join(pub,'data/publication/generated'),{recursive:true});
+for(const name of ['records','docs','assets','book'])cpSync(join(root,name),join(pub,name),{recursive:true});
+console.log('Publication: '+records.length+' chapters, '+elements.length+' selectable elements; unresolved sources: '+missingSources.join(', '));

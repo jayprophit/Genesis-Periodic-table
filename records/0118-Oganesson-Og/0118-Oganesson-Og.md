@@ -4,6 +4,7 @@
 mat_id: "MAT:0118"
 record_name: "Oganesson"
 symbol: "Og"
+atomic_number: 118
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Og | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 118 | | IUPAC |
-| Standard atomic weight | 294 | | IUPAC |
+| Standard atomic weight | NOT_APPLICABLE | NOT_APPLICABLE | CIAAW-2024 |
 | Period | 7 | | IUPAC |
 | Group | 18 | | IUPAC |
 | Block | p | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶**
+Electronic configuration: **[Rn]7s2 7p6 5f14 6d10 (predicted)** (PREDICTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 294 | u | STP | MEASURED | IUPAC |
-| First ionization energy | UNKNOWN | | | MEASURED | NIST ASD |
-| Electronegativity | UNKNOWN | | | MEASURED | Pauling Scale |
-| Phase at STP | Solid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | NOT_APPLICABLE | dimensionless / text | See source | NOT_APPLICABLE | CIAAW-2024 |
+| electronConfiguration | [Rn]7s2 7p6 5f14 6d10 (predicted) | dimensionless / text | See source | PREDICTED | PUBCHEM-PERIODIC |
+| electronegativity | UNAVAILABLE | Pauling | See source | UNAVAILABLE | UNAVAILABLE |
+| firstIonizationEnergy | UNAVAILABLE | eV | See source | UNAVAILABLE | UNAVAILABLE |
+| phase | UNKNOWN | dimensionless / text | See source | UNKNOWN | UNAVAILABLE |
+| meltingPoint | UNAVAILABLE | K | See source | UNAVAILABLE | UNAVAILABLE |
+| boilingPoint | UNAVAILABLE | K | See source | UNAVAILABLE | UNAVAILABLE |
+| density | UNAVAILABLE | g/cm3 | See source | UNAVAILABLE | UNAVAILABLE |
+| oxidationStates | +6, +4, +2, +1, 0, -1 | dimensionless / text | See source | PREDICTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

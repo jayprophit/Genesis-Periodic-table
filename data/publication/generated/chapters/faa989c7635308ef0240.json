@@ -1,0 +1,283 @@
+{
+  "id": "records/0002-Helium-He/0002-Helium-He-Schema-Validation.md",
+  "key": "faa989c7635308ef0240",
+  "mat": "MAT:0002",
+  "title": "Helium Schema Validation",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# Helium Schema Validation\n\n## Overall\n\n```text\nPASS-WITH-FINAL-PATCHES\n```\n\n---\n\n# VALIDATION-001 — Parent ID\n\n```text\nMAT:0002\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-002 — Atomic State\n\n```text\nMAT:0002:ATOM:He\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-003 — Ionic States\n\n```text\nMAT:0002:ION:He+1\nMAT:0002:ION:He+2\nMAT:0002:ION:He2+1\nMAT:0002:ION:HeH+1\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-004 — Molecular State\n\nAdd canonical child:\n\n```text\nMAT:0002:MOL:He2\n```\n\nClassification:\n\n```text\nEXTREMELY-WEAK-VAN-DER-WAALS-DIMER\n```\n\nResult:\n\n```text\nPASS-AFTER-HE2-PATCH\n```\n\n---\n\n# VALIDATION-005 — Isotope IDs\n\n```text\nMAT:0002:ISO:He-3\nMAT:0002:ISO:He-4\nMAT:0002:ISO:He-5\nMAT:0002:ISO:He-6\nMAT:0002:ISO:He-7\nMAT:0002:ISO:He-8\nMAT:0002:ISO:He-9\nMAT:0002:ISO:He-10\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-006 — Stable Half-Life\n\n³He and ⁴He:\n\n```text\nhalf_life: NOT-APPLICABLE\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-007 — Phase IDs\n\nReserve:\n\n```text\nMAT:0002:PHASE:He-I\nMAT:0002:PHASE:He-II\nMAT:0002:PHASE:He3-A\nMAT:0002:PHASE:He3-B\nMAT:0002:PHASE:He3-A1\nMAT:0002:PHASE:SOLID\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-008 — Forward Lithium Reference\n\n```text\nMAT:0003:ISO:Li-6\n```\n\nStatus:\n\n```text\nRESERVED-PENDING-LITHIUM\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-009 — Hydrogen Cross-References\n\n```text\nMAT:0001:ISO:H-1\nMAT:0001:ISO:H-2\nMAT:0001:ISO:H-3\n```\n\nResult:\n\n```text\nRESOLVED\n```\n\n---\n\n# VALIDATION-010 — Source Registry\n\nRequired Helium sources now include:\n\n```text\nSRC-000005\nSRC-000008\nSRC-000019\nSRC-000024\nSRC-000025\nSRC-000026\nSRC-000027\nSRC-000028\nSRC-000029\nSRC-000030\nSRC-000031\nSRC-000032\nSRC-000033\nSRC-000034\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-011 — Frequency Semantics\n\nNo field exists for:\n\n```text\nhelium_frequency\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-012 — Phase Conditions\n\nHe-I/He-II data retain:\n\n```text\ntemperature\npressure\nisotope\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-013 — Isotope Statistics\n\n³He:\n\n```text\nFERMIONIC\n```\n\n⁴He:\n\n```text\nBOSONIC\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-014 — Chemistry Semantics\n\nMAT distinguishes:\n\n```text\nambient inertness\n```\n\nfrom:\n\n```text\nabsolute chemical impossibility\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-015 — Bulk Form Versus Dimer\n\nMAT distinguishes:\n\n```text\nordinary bulk helium:\nMONATOMIC\n```\n\nfrom:\n\n```text\n4He2:\nWEAK BOUND MOLECULAR STATE\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-016 — Magnetism\n\nMAT separates:\n\n```text\nground-state electronic diamagnetism\n3He nuclear spin\nNMR\nfield effects\n```\n\nPermanent engineered magnetization:\n\n```text\nNOT-APPLICABLE\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-017 — Process Separation\n\n```text\nphase transition\nelectronic excitation\nionization\nchemistry\nnuclear reaction\nmaterial implantation\n```\n\nremain separate.\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# VALIDATION-018 — Visual Slots\n\n```text\n18 slots\n17 two-dimensional assets\n2 scientific 3D models\n1 data-extruded model\n20 total planned visual assets\n```\n\nResult:\n\n```text\nPASS\n```\n\n---\n\n# Final Helium Status\n\nAfter the He₂ correction and all files in this batch are added:\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_registry: \"PASS\"\n  relationship_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nHelium can then serve as MAT's second validated reference element.\n\nIt specifically validates schema features that Hydrogen could not:\n\n```text\nCLOSED-SHELL ATOM\nTWO-ELECTRON CORRELATION\nBOSON / FERMION ISOTOPE SPLIT\nMACROSCOPIC QUANTUM PHASES\nPRESSURE-DEPENDENT FREEZING\nWEAK VAN-DER-WAALS DIMER\nEXTREME-PRESSURE NOBLE-GAS CHEMISTRY\n```\n\nI checked the actual pre-migration `G0002` from its Git history rather than reconstructing it from memory. Its middle sections cover Pauli structure, excited states, spectroscopy, the ³He magnetic channel, He-I/He-II, pressure-dependent solidification, ³He superfluidity and extreme-pressure chemistry; the latter sections cover the environment matrix, technology/energy roles, geometry, Hydrogen–Helium relationship dimensions and evidence classification.\n\nThe one substantive correction is the He₂ point above: a bound neutral \\(^{4}\\mathrm{He}_2\\) state is experimentally established, but it is extraordinarily weak and does **not** overturn the statement that ordinary bulk Helium is monatomic. ([Nature][5])\n",
+  "bodyHash": "ae6393196b8df514ae9bfaafd8d29976e93dbbedbd9299f72b60e4294f0f532e",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000005",
+      "source_aliases": [
+        "SRC-H-001"
+      ],
+      "title": "NIST Atomic Spectra Database",
+      "organization": "National Institute of Standards and Technology",
+      "version": "5.12",
+      "doi": "10.18434/T4W30F",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "atomic_ground_configuration",
+        "atomic_ground_level",
+        "ionization_energy",
+        "atomic_spectroscopy"
+      ]
+    },
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000024",
+      "source_aliases": [
+        "SRC-He-001"
+      ],
+      "title": "NIST Chemistry WebBook — Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "helium_identity",
+        "helium_phase_data",
+        "gas_phase_ion_energetics"
+      ]
+    },
+    {
+      "source_id": "SRC-000025",
+      "source_aliases": [
+        "SRC-He-002"
+      ],
+      "title": "Thermophysical Properties of Helium-4 from 0.8 to 1500 K with Pressures to 2000 MPa",
+      "authors": [
+        "V. D. Arp",
+        "R. D. McCarty",
+        "D. G. Friend"
+      ],
+      "organization": "National Institute of Standards and Technology",
+      "report": "NIST Technical Note 1334",
+      "source_type": "EVALUATED-THERMOPHYSICAL-REFERENCE",
+      "supports": [
+        "helium4_normal_boiling_point",
+        "helium4_critical_point",
+        "helium4_lambda_line",
+        "helium4_phase_behavior",
+        "helium4_thermophysical_properties"
+      ]
+    },
+    {
+      "source_id": "SRC-000026",
+      "source_aliases": [
+        "SRC-He-003"
+      ],
+      "title": "Equation of State and Thermophysical Properties of Helium-3",
+      "authors": [
+        "Yonghua Huang",
+        "G. B. Chen",
+        "V. Arp",
+        "Ray Radebaugh"
+      ],
+      "organization": "National Institute of Standards and Technology",
+      "year": 2007,
+      "source_type": "THERMOPHYSICAL-MODEL",
+      "supports": [
+        "helium3_equation_of_state",
+        "helium3_phase_lines",
+        "helium3_thermophysical_properties"
+      ]
+    },
+    {
+      "source_id": "SRC-000027",
+      "source_aliases": [
+        "SRC-He-HIST-001"
+      ],
+      "title": "Heike Kamerlingh Onnes — Facts",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "helium_liquefaction",
+        "low_temperature_history"
+      ]
+    },
+    {
+      "source_id": "SRC-000028",
+      "source_aliases": [
+        "SRC-He-HIST-002"
+      ],
+      "title": "The 1978 Nobel Prize in Physics — Kapitza",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "helium4_superfluidity",
+        "low_temperature_physics"
+      ]
+    },
+    {
+      "source_id": "SRC-000029",
+      "source_aliases": [
+        "SRC-He-HIST-003"
+      ],
+      "title": "The Nobel Prize in Physics 1996",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "helium3_superfluidity",
+        "Lee",
+        "Osheroff",
+        "Richardson"
+      ]
+    },
+    {
+      "source_id": "SRC-000030",
+      "source_aliases": [
+        "SRC-He-004"
+      ],
+      "title": "Thermodynamic Properties of He3-He4 Solutions with Applications to the He3-He4 Dilution Refrigerator",
+      "author": "Ray Radebaugh",
+      "organization": "National Bureau of Standards",
+      "year": 1967,
+      "report": "NBS TN 362",
+      "source_type": "THERMOPHYSICAL-REFERENCE",
+      "supports": [
+        "helium3_helium4_mixtures",
+        "dilution_refrigeration"
+      ]
+    },
+    {
+      "source_id": "SRC-000031",
+      "source_aliases": [
+        "SRC-He-005"
+      ],
+      "title": "Astrophysical detection of the helium hydride ion HeH+",
+      "authors": [
+        "Rolf Güsten",
+        "Helmut Wiesemeyer",
+        "David Neufeld",
+        "Karl M. Menten",
+        "et al."
+      ],
+      "journal": "Nature",
+      "year": 2019,
+      "volume": 568,
+      "pages": "357-359",
+      "doi": "10.1038/s41586-019-1090-x",
+      "source_type": "PRIMARY-ASTROPHYSICAL-OBSERVATION",
+      "supports": [
+        "helium_hydride_ion",
+        "astrophysical_HeH+",
+        "early_universe_chemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000032",
+      "source_aliases": [
+        "SRC-He-006"
+      ],
+      "title": "A stable compound of helium and sodium at high pressure",
+      "authors": [
+        "Xiao Dong",
+        "Artem R. Oganov",
+        "Alexander F. Goncharov",
+        "et al."
+      ],
+      "journal": "Nature Chemistry",
+      "year": 2017,
+      "volume": 9,
+      "pages": "440-445",
+      "doi": "10.1038/nchem.2716",
+      "source_type": "PRIMARY-EXPERIMENT-AND-COMPUTATION",
+      "supports": [
+        "Na2He",
+        "extreme_pressure_helium_chemistry",
+        "pressure_dependent_reactivity"
+      ]
+    },
+    {
+      "source_id": "SRC-000033",
+      "source_aliases": [
+        "SRC-He-007"
+      ],
+      "title": "Ultrafast manipulation of the weakly bound helium dimer",
+      "authors": [
+        "Maksim Kunitski",
+        "Qingze Guan",
+        "Holger Maschkiwitz",
+        "et al."
+      ],
+      "journal": "Nature Physics",
+      "year": 2021,
+      "volume": 17,
+      "pages": "174-178",
+      "doi": "10.1038/s41567-020-01081-3",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "neutral_helium_dimer",
+        "weak_van_der_Waals_binding",
+        "quantum_dimer_dynamics"
+      ]
+    },
+    {
+      "source_id": "SRC-000034",
+      "source_aliases": [
+        "SRC-He-008"
+      ],
+      "title": "Neutron Polarizers Based on Polarized 3He",
+      "organization": "National Institute of Standards and Technology",
+      "year": 1998,
+      "source_type": "EXPERIMENTAL-NEUTRON-INSTRUMENTATION",
+      "supports": [
+        "polarized_3He",
+        "neutron_spin_filtering",
+        "neutron_science_application"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 14
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

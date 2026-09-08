@@ -1,0 +1,41 @@
+{
+  "id": "docs/02-data/02-Field-Dictionary.md",
+  "key": "ef63626725707fb1f410",
+  "mat": null,
+  "title": "MAT Field Dictionary",
+  "section": "Data",
+  "lane": "reference",
+  "body": "# MAT Field Dictionary\n\n## Purpose\n\nThe Field Dictionary defines how individual values are stored and interpreted.\n\nA MAT field is more than:\n\n`property = value`\n\nA scientific property should normally be represented as:\n\n\\[\nD =\n(P,V,U,\\Delta,C,M,S,E,T)\n\\]\n\nwhere:\n\n- \\(P\\) = property;\n- \\(V\\) = value;\n- \\(U\\) = unit;\n- \\(\\Delta\\) = uncertainty;\n- \\(C\\) = conditions;\n- \\(M\\) = measurement/calculation method;\n- \\(S\\) = source;\n- \\(E\\) = evidence status;\n- \\(T\\) = time/context.\n\n---\n\n## Minimum Measurement Object\n\nRecommended structure:\n\n```yaml\nproperty_id:\nproperty_name:\nvalue:\nunit:\nuncertainty:\nuncertainty_type:\ntemperature:\npressure:\nenvironment:\nphysical_state:\nsample_state:\norientation:\nfrequency:\nwavelength:\ntime:\nscale:\nmethod:\nevidence_type:\nconfidence:\nsource_id:\nnotes:\n```\n\nFields not required for a measurement use formal MAT null states.\n\n---\n\n## Canonical Field Rules\n\n### property_id\n\nPermanent machine-readable identifier.\n\nExample:\n\n```text\nthermal.conductivity\n```\n\n### property_name\n\nHuman-readable name.\n\nExample:\n\n```text\nThermal conductivity\n```\n\n### value\n\nNumerical, categorical or structured value.\n\nDo not include units inside numeric values.\n\nIncorrect:\n\n```text\n237 W/mK\n```\n\nPreferred:\n\n```yaml\nvalue: 237\nunit: W/(m*K)\n```\n\n---\n\n## value_type\n\nAllowed conceptual types include:\n\n- integer;\n- floating-point;\n- decimal;\n- scientific notation;\n- boolean;\n- string;\n- enumeration;\n- vector;\n- tensor;\n- interval;\n- distribution;\n- spectrum;\n- time series;\n- function;\n- equation;\n- structured object.\n\n---\n\n## Unit\n\nUnits must be stored separately from the numerical value.\n\nSI is the canonical MAT comparison system.\n\nOriginal source units should also be retained when conversion occurs.\n\n---\n\n## Conditions\n\nProperties whose values depend on conditions should retain those conditions.\n\nExamples:\n\n- temperature;\n- pressure;\n- phase;\n- orientation;\n- frequency;\n- wavelength;\n- applied field;\n- atmosphere;\n- composition;\n- purity;\n- grain size;\n- strain rate;\n- sample geometry.\n\n---\n\n## Range Values\n\nRanges should not be compressed into a single midpoint unless specifically needed for a calculation.\n\nStore:\n\n```yaml\nminimum:\nmaximum:\nunit:\n```\n\nand, if relevant:\n\n```yaml\nrecommended_value:\n```\n\n---\n\n## Direction-Dependent Values\n\nAnisotropic properties must include direction or crystallographic orientation.\n\nExample:\n\n```yaml\nproperty: thermal.conductivity\ndirection: \"[001]\"\n```\n\n---\n\n## Frequency-Dependent Values\n\nStore the frequency axis explicitly.\n\nDo not write:\n\n```text\ndielectric constant = 4.2\n```\n\nwithout frequency when frequency materially affects the value.\n\n---\n\n## Temperature-Dependent Values\n\nWhere a property varies strongly with temperature, store:\n\n- individual data points;\n- a table;\n- an equation;\n- or a referenced curve.\n\n---\n\n## Values Extracted from Graphs\n\nValues digitised from plots must include:\n\n```yaml\nacquisition_method: GRAPH_DIGITIZATION\n```\n\nand must not be presented as if copied from an original numerical table.\n\n---\n\n## Calculated Values\n\nCalculated values must contain:\n\n- equation identifier;\n- input data identifiers;\n- constants used;\n- calculation method;\n- software if applicable;\n- version;\n- result;\n- propagated uncertainty where possible.\n\n---\n\n## Derived Values\n\nExample:\n\n\\[\n\\rho = \\frac{m}{V}\n\\]\n\nA derived density should retain links to the mass and volume measurements from which it was calculated.\n\n---\n\n## Significant Figures\n\nDo not create false precision.\n\nThe number of reported digits should reflect:\n\n- source precision;\n- measurement precision;\n- uncertainty;\n- calculation precision.\n\n---\n\n## Original Value Preservation\n\nIf MAT converts or normalises source data, retain:\n\n```yaml\noriginal_value:\noriginal_unit:\nnormalized_value:\nnormalized_unit:\nconversion_method:\n```\n\nThe original evidence must remain reconstructable.\n\n---\n",
+  "bodyHash": "6a1cc3f001b5f42062cab5cb8846af9a04a05f1663dc3cc975639e1a1ea84673",
+  "header": {
+    "where": "- \\(P\\) = property;",
+    "property_id": "property_name:",
+    "value": 237,
+    "uncertainty": "uncertainty_type:",
+    "temperature": "pressure:",
+    "environment": "physical_state:",
+    "sample_state": "orientation:",
+    "frequency": "wavelength:",
+    "time": "scale:",
+    "method": "evidence_type:",
+    "confidence": "source_id:",
+    "notes": "```",
+    "unit": "```",
+    "minimum": "maximum:",
+    "recommended_value": "```",
+    "property": "thermal.conductivity",
+    "direction": "[001]",
+    "acquisition_method": "GRAPH_DIGITI"
+  },
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

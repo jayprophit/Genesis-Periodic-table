@@ -4,6 +4,7 @@
 mat_id: "MAT:0058"
 record_name: "Cerium"
 symbol: "Ce"
+atomic_number: 58
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Ce | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 58 | | IUPAC |
-| Standard atomic weight | 140.12 | | IUPAC |
+| Standard atomic weight | 140.116(1) | EVALUATED | CIAAW-2024 |
 | Period | 6 | | IUPAC |
 | Group | 3 | | IUPAC |
 | Block | f | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Xe] 4f¹ 5d¹ 6s²**
+Electronic configuration: **[Xe]6s2 4f1 5d1** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 140.12 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 5.539 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 1.12 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Solid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | 140.116(1) | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Xe]6s2 4f1 5d1 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 1.12 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 5.539 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Solid | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 1071 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | 3697 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| density | 6.77 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | +4, +3 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

@@ -1,0 +1,22 @@
+{
+  "id": "docs/02-data/06-Uncertainty-and-Confidence.md",
+  "key": "fa0c88dd6d091e3444b7",
+  "mat": null,
+  "title": "MAT Uncertainty and Confidence",
+  "section": "Data",
+  "lane": "reference",
+  "body": "# MAT Uncertainty and Confidence\n\n## Purpose\n\nUncertainty and confidence describe different things.\n\n### Uncertainty\n\nQuantifies limits or spread associated with a value.\n\n### Confidence\n\nRepresents MAT's assessment of how securely the claim is supported.\n\nThey must not be merged into one field.\n\n---\n\n# 1. Measurement Uncertainty\n\nExample:\n\n\\[\nx = 5.32 \\pm 0.04\\ \\text{mm}\n\\]\n\nStore:\n\n```yaml\nvalue: 5.32\nunit: mm\nuncertainty: 0.04\nuncertainty_type: standard\n```\n\n---\n\n# 2. Uncertainty Types\n\nPossible classifications:\n\n```text\nSTANDARD\nEXPANDED\nSTATISTICAL\nSYSTEMATIC\nCOMBINED\nRANGE\nCONFIDENCE-INTERVAL\nSOURCE-REPORTED\nESTIMATED\nUNKNOWN\n```\n\n---\n\n# 3. Confidence Grades\n\nRecommended MAT confidence classes:\n\n```text\nA — HIGH\nB — MODERATE\nC — LOW\nD — SPECULATIVE\nU — UNASSESSED\n```\n\n---\n\n## A — HIGH\n\nTypically:\n\n- strong source quality;\n- appropriate methodology;\n- compatible independent evidence;\n- no major unresolved contradiction.\n\n---\n\n## B — MODERATE\n\nGenerally supported, but one or more limitations remain.\n\n---\n\n## C — LOW\n\nLimited evidence, poor replication, large uncertainty or important unresolved disagreement.\n\n---\n\n## D — SPECULATIVE\n\nPrimarily theoretical, exploratory or hypothetical where empirical support is currently insufficient.\n\n---\n\n## U — UNASSESSED\n\nMAT has not yet evaluated confidence.\n\n---\n\n# 4. Confidence Is Not Evidence Type\n\nExample:\n\nA computational prediction can have:\n\n```text\nevidence_type: COMPUTATIONAL\nconfidence: A\n```\n\nif a well-established computational method predicts a narrowly defined quantity accurately.\n\nAnother simulation might be:\n\n```text\nevidence_type: COMPUTATIONAL\nconfidence: D\n```\n\nif assumptions dominate the result.\n\nLikewise, one experimental measurement may still have low confidence.\n\n---\n\n# 5. Agreement Between Sources\n\nWhere multiple measurements exist, MAT may calculate:\n\n- mean;\n- median;\n- standard deviation;\n- weighted mean;\n- between-study variance;\n- confidence interval.\n\nThe raw observations must remain available.\n\n---\n\n# 6. Model Uncertainty\n\nComputational values should distinguish:\n\n- numerical error;\n- model-form uncertainty;\n- parameter uncertainty;\n- input-data uncertainty;\n- convergence uncertainty.\n\n---\n\n# 7. Prediction Intervals\n\nPredictions should state ranges where practical.\n\nAvoid presenting:\n\n```text\npredicted value = 123.456789\n```\n\nwhen the model cannot justify that precision.\n\n---\n\n# 8. Disagreement Flag\n\nPossible states:\n\n```text\nCONSISTENT\nMINOR-DISAGREEMENT\nSIGNIFICANT-DISAGREEMENT\nCONTRADICTORY\nINSUFFICIENT-DATA\n```\n\n---\n\n# 9. Uncertainty Propagation\n\nFor derived quantities:\n\n\\[\ny=f(x_1,x_2,\\ldots,x_n)\n\\]\n\nuncertainty should be propagated using an appropriate mathematical method when sufficient input uncertainty information is available.\n\nThe calculation method should be documented.\n\n---\n",
+  "bodyHash": "138b416a0c5f27c683d9b147a763a60b0b3601317318d48a1970ebe64aff396f",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

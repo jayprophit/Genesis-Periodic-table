@@ -1,0 +1,80 @@
+{
+  "id": "records/0005-Boron-B/calculations/0005-Boron-B-CALC-001-B10-Neutron-Capture-Q.md",
+  "key": "7772ee22c91ff0b73d15",
+  "mat": "MAT:0005",
+  "title": "CALC-001 — Boron-10 Neutron Capture Ground-State Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Boron-10 Neutron Capture Ground-State Q-Value\n\nReaction:\n\n$$\n{}^{10}B+n\n\\rightarrow\n{}^7Li+{}^4He\n$$\n\nAtomic masses:\n\n$$\nm({}^{10}B)\n=\n10.01293695\\ {\\rm u}\n$$\n\n$$\nm_n\n=\n1.00866491595\\ {\\rm u}\n$$\n\n$$\nm({}^7Li)\n=\n7.0160034366\\ {\\rm u}\n$$\n\n$$\nm({}^4He)\n=\n4.00260325413\\ {\\rm u}\n$$\n\nThe atomic-electron count balances between reactants and products.\n\nMass difference:\n\n$$\n\\Delta m\n=\nm({}^{10}B)+m_n-m({}^7Li)-m({}^4He)\n$$\n\n$$\n\\Delta m\n\\approx\n0.00299541462\\ {\\rm u}\n$$\n\nUsing:\n\n$$\n1u\\,c^2\n=\n931.49410372\\ {\\rm MeV}\n$$\n\ngives:\n\n$$\n\\boxed{\nQ\n\\approx\n2.7899881\\ {\\rm MeV}\n}\n$$\n\nThis is the total ground-state reaction Q-value.\n\n```yaml\ncalculation_id: \"MAT:0005:CALC:001\"\nclassification: \"DERIVED\"\n\nreaction:\n  reactants:\n    - \"MAT:0005:ISO:B-10\"\n    - \"NEUTRON\"\n\n  products:\n    - \"MAT:0003:ISO:Li-7\"\n    - \"MAT:0002:ISO:He-4\"\n\nq_value:\n  value: 2.7899881\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000063\"\n  - \"SRC-000035\"\n  - \"SRC-000019\"\n  - \"SRC-000018\"\n```\n\n---\n",
+  "bodyHash": "c23f367c1ecafd2a16cede6b604feb2f9f87fb1e8a9c69236805d1cd79ec5a0a",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000035",
+      "source_aliases": [
+        "SRC-Li-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Lithium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "lithium_standard_atomic_weight",
+        "lithium_isotope_masses",
+        "lithium_isotopic_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000063",
+      "source_aliases": [
+        "SRC-B-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Boron",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "boron_standard_atomic_weight",
+        "boron_isotope_masses",
+        "boron_10_composition",
+        "boron_11_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 4
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

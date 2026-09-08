@@ -1,0 +1,2852 @@
+{
+  "id": "records/0006-Carbon-C/0006-Carbon-C.md",
+  "key": "bae767b57f8fe6690b68",
+  "mat": "MAT:0006",
+  "title": "0006 — Carbon — C",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# 0006 — Carbon — C\n\n```yaml\nmat_id: MAT:0006\nrecord_name: Carbon\nsymbol: C\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 6\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0006\nlegacy_name: Carbon\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0005\n0005-Boron-B\n```\n\nCurrent:\n\n```text\nMAT:0006\n0006-Carbon-C\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                       | Value              |\n| ------------------------------ | ------------------ |\n| Element                        | Carbon             |\n| Symbol                         | C                  |\n| Atomic number                  | 6                  |\n| Protons                        | 6                  |\n| Neutral electrons              | 6                  |\n| Period                         | 2                  |\n| Group                          | 14                 |\n| Block                          | p                  |\n| Ground configuration           | 1s²2s²2p²          |\n| Ground level                   | ³P₀                |\n| Standard atomic weight         | [12.0096, 12.0116] |\n| Principal stable isotopes      | ¹²C, ¹³C           |\n| Important natural radionuclide | ¹⁴C                |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000080\n```\n\n---\n\n# 2. First Four-Valence-Electron Reference\n\nCarbon has:\n\n$$\n1s^22s^22p^2\n$$\n\nwith four valence electrons.\n\nThis produces enormous bonding flexibility.\n\nMAT therefore activates a particularly broad bonding state space:\n\n```text\nsingle bonds\ndouble bonds\ntriple bonds\naromatic / delocalized systems\nextended covalent networks\nconjugated systems\ncluster/cage structures\nlayered networks\nlinear chains\n```\n\n---\n\n# 3. First Ionisation\n\n$$\nC\\rightarrow C^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n11.2602880\\pm0.0000011\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0006:ION:C+1\n```\n\n---\n\n# 4. Ionisation Ladder\n\nNIST evaluated ionisation energies include:\n\n$$\nC^+\\rightarrow C^{2+}\n$$\n\n$$\n24.383143\\pm0.000012\\ {\\rm eV}\n$$\n\n$$\nC^{2+}\\rightarrow C^{3+}\n$$\n\n$$\n47.88778\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nC^{3+}\\rightarrow C^{4+}\n$$\n\n$$\n64.49352\\pm0.00019\\ {\\rm eV}\n$$\n\nHigher removal from the 1s shell requires approximately:\n\n$$\n392.09056\\ {\\rm eV}\n$$\n\nand:\n\n$$\n489.99320779\\ {\\rm eV}\n$$\n\nCanonical states:\n\n```text\nMAT:0006:ATOM:C\nMAT:0006:ION:C+1\nMAT:0006:ION:C+2\nMAT:0006:ION:C+3\nMAT:0006:ION:C+4\nMAT:0006:ION:C+5\nMAT:0006:ION:C+6\n```\n\n---\n\n# 5. Standard Atomic Weight\n\nCarbon has a standard atomic-weight interval:\n\n$$\n[12.0096,\\ 12.0116]\n$$\n\nbecause natural isotope ratios can vary.\n\nRepresentative compositions:\n\n$$\n{}^{12}C=0.9893(8)\n$$\n\n$$\n{}^{13}C=0.0107(8)\n$$\n\nThese are representative values, not universal isotope ratios for every Carbon sample.\n\n---\n\n# 6. Carbon-12 — Mass Reference\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-12\n```\n\nFor the unified atomic mass unit / dalton:\n\n$$\n1u\n=\n\\frac1{12}\nm({}^{12}C)\n$$\n\nwhere the reference is a free neutral Carbon-12 atom at rest and in its ground state.\n\nConsequently:\n\n$$\nm_r({}^{12}C)=12\n$$\n\nexactly in unified atomic mass units.\n\nThis makes Carbon-12 a special MAT **measurement-reference node**.\n\nSource:\n\n```text\nSRC-000081\n```\n\n---\n\n# 7. Carbon-13 — Nuclear-Spin Tool\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-13\n```\n\nRelative atomic mass:\n\n$$\n13.00335483507(23)\\ u\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nTherefore ¹³C is NMR active.\n\nImportant uses include:\n\n```text\nmolecular structure determination\nmetabolic tracing\nisotope labeling\nreaction-mechanism studies\nmaterials characterization\n```\n\nBy contrast:\n\n$$\n{}^{12}C:\\ I=0\n$$\n\nin its nuclear ground state.\n\nThus:\n\n$$\n\\boxed{\n\\text{one neutron difference}\n\\rightarrow\n\\text{new measurement capability}\n}\n$$\n\nwithout fundamentally changing ordinary Carbon chemistry.\n\n---\n\n# 8. Carbon-14\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-14\n```\n\nRelative atomic mass:\n\n$$\n14.0032419884(40)\\ u\n$$\n\nDecay:\n\n$$\n{}^{14}C\n\\rightarrow\n{}^{14}N\n+\ne^-\n+\n\\bar\\nu_e\n$$\n\nClassification:\n\n```text\nBETA-MINUS RADIOACTIVE\nCOSMOGENIC\nLONG-LIVED\n```\n\n---\n\n# 9. Carbon-14 Half-Life Convention\n\nMAT must not silently merge different radiocarbon conventions.\n\nAn IAEA reference-material value uses:\n\n$$\nt_{1/2}\n=\n5700\\pm30\\ {\\rm y}\n$$\n\nwhile modern explanatory sources commonly quote approximately:\n\n$$\n5730\\ {\\rm y}\n$$\n\nSeparately, traditional **conventional radiocarbon ages** historically use the Libby half-life:\n\n$$\n5568\\ {\\rm y}\n$$\n\nas a dating convention.\n\nTherefore MAT stores:\n\n```yaml\nphysical_half_life:\n  value: 5700\n  uncertainty: 30\n  unit: y\n  source_id: SRC-000082\n\nradiocarbon_age_convention:\n  libby_half_life:\n    value: 5568\n    unit: y\n    classification: METHOD-CONVENTION\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{physical decay parameter}\n\\neq\n\\text{historical dating convention}\n}\n$$\n\n---\n\n# 10. Radiocarbon Clock\n\nRadioactive decay may be written:\n\n$$\nN(t)=N_0e^{-\\lambda t}\n$$\n\nwith:\n\n$$\n\\lambda=\\frac{\\ln2}{t_{1/2}}\n$$\n\nor equivalently:\n\n$$\nN(t)\n=\nN_0\\,2^{-t/t_{1/2}}\n$$\n\nCarbon-14 therefore provides MAT with a geological, archaeological and environmental time coordinate.\n\n---\n\n# 11. Carbon-11\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-11\n```\n\nCarbon-11 is a short-lived positron-emitting radionuclide with a half-life of roughly 20 minutes.\n\nApplications include:\n\n```text\nPET imaging\nradiotracing\nbiochemical studies\n```\n\nThis creates a strong functional contrast:\n\n```text\n11C → short timescale / high temporal activity / imaging\n\n14C → long timescale / dating / tracing\n```\n\nSame element.\n\nDifferent nuclear tools.\n\n---\n\n# 12. Isotope Architecture\n\nCurrent NIST mass tables list Carbon nuclides from:\n\n$$\n{}^8C\n$$\n\nthrough:\n\n$$\n{}^{23}C\n$$\n\nin the present dataset.\n\nOnly:\n\n```text\n12C\n13C\n```\n\nare stable.\n\nThe remaining mass numbers include combinations of:\n\n```text\nbeta emitters\npositron emitters\nproton-rich states\nneutron-rich states\nunbound resonances\nvery short-lived nuclei\n```\n\nThe full registry will keep those semantics explicit.\n\n---\n\n# 13. Triple-Alpha Closure\n\nBeryllium's nuclear forward reference now closes.\n\nFirst:\n\n$$\n{}^4He+{}^4He\n\\rightleftharpoons\n{}^8Be\n$$\n\nthen:\n\n$$\n{}^8Be+{}^4He\n\\rightarrow\n{}^{12}C^*\n$$\n\nfollowed by electromagnetic de-excitation toward:\n\n$$\n{}^{12}C\n$$\n\nThis gives:\n\n```text\nMAT:0002 Helium\n→ MAT:0004 Beryllium\n→ MAT:0006 Carbon\n```\n\na resolved nuclear pathway.\n\n---\n\n# 14. Hoyle-State Relationship\n\nAn important excited state of Carbon-12 occurs near:\n\n$$\n7.654\\ {\\rm MeV}\n$$\n\nand plays a major role in stellar triple-alpha Carbon production.\n\nCanonical future state:\n\n```text\nMAT:0006:QSTATE:C12-HOYLE\n```\n\nIt is an excited **nuclear state**, not an atomic electron state.\n\n---\n\n# 15. Nuclear Geometry\n\nModels of ¹²C nuclear structure can involve alpha-cluster organization.\n\nMAT must distinguish:\n\n```text\nNUCLEAR CLUSTER GEOMETRY\n```\n\nfrom:\n\n```text\nATOMIC ORBITAL GEOMETRY\nMOLECULAR GEOMETRY\nCRYSTAL GEOMETRY\n```\n\nCarbon will ultimately contain geometric descriptors across all four scales.\n\n---\n\n# 16. Bonding Geometry\n\nA useful chemical bonding model distinguishes:\n\n### sp-like coordination\n\n$$\n\\theta\\approx180^\\circ\n$$\n\nLinear.\n\n### sp²-like coordination\n\n$$\n\\theta\\approx120^\\circ\n$$\n\nTrigonal planar.\n\n### sp³-like coordination\n\n$$\n\\theta\\approx109.47^\\circ\n$$\n\nTetrahedral.\n\nThese are idealized local bonding descriptors.\n\nMAT does not treat hybrid orbitals as rigid classical objects.\n\n---\n\n# 17. Dimensionality\n\nCarbon is the first MAT element to strongly occupy all major structural dimensionalities.\n\n### 0D\n\n```text\nfullerenes\ncarbon quantum dots\nmolecular cages\n```\n\n### 1D\n\n```text\ncarbon nanotubes\nnanoribbons / chains\n```\n\n### 2D\n\n```text\ngraphene\nfew-layer graphene systems\n```\n\n### 3D\n\n```text\ndiamond\ngraphite crystals\namorphous networks\nporous carbon\nengineered composites\n```\n\nImportant classification correction:\n\n```text\ncarbon fibre\nactivated carbon\nporous carbon\n```\n\nare engineered material/morphology families and should not automatically be labeled fundamental crystalline allotropes.\n\n---\n\n# 18. Diamond\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:DIAMOND\n```\n\nPrincipal bonding descriptor:\n\n```text\nsp3-like tetrahedral network\n```\n\nImportant properties include:\n\n```text\nwide band gap\nextreme hardness\nhigh thermal conductivity in suitable high-purity states\nelectrical insulation when sufficiently pure\nbroad optical transmission\n```\n\nA familiar first-order Raman feature lies near:\n\n$$\n1332\\ {\\rm cm^{-1}}\n$$\n\nunder appropriate conditions.\n\n---\n\n# 19. Graphite\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nPrincipal structure:\n\n```text\nstacked sp2-bonded carbon sheets\n```\n\nGraphite introduces strong anisotropy:\n\n$$\n\\sigma_\\parallel\\neq\\sigma_\\perp\n$$\n\nand:\n\n$$\n\\kappa_\\parallel\\neq\\kappa_\\perp\n$$\n\nTherefore:\n\n$$\n\\boxed{\n\\text{property value}\n+\n\\text{measurement direction}\n}\n$$\n\nmust be stored together.\n\n---\n\n# 20. Graphene\n\nCanonical material/allotrope state:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHENE\n```\n\nGraphene is a one-atom-thick honeycomb Carbon sheet.\n\nRelevant characteristics include:\n\n```text\ntwo-dimensional structure\nsp2 bonding\nDirac-like electronic dispersion\nhigh in-plane strength\nhigh in-plane thermal transport\nhigh surface area\nstrong dependence on defects/doping/substrate\n```\n\nGraphene properties must specify:\n\n```text\nlayer number\nstrain\ndefects\ndoping\nsubstrate\ntemperature\nmeasurement method\n```\n\n---\n\n# 21. Carbon Nanotubes\n\nCanonical family:\n\n```text\nMAT:0006:MAT:CNT\n```\n\nA nanotube can be described using a chiral vector:\n\n$$\n(n,m)\n$$\n\nElectronic character can change with chirality.\n\nThus:\n\n$$\n\\boxed{\n\\text{similar composition}\n+\n\\text{different topology}\n\\rightarrow\n\\text{different electronic behaviour}\n}\n$$\n\nThis is one of MAT's strongest topology examples.\n\n---\n\n# 22. Fullerenes\n\nCanonical family:\n\n```text\nMAT:0006:MOL:FULLERENE\n```\n\nExamples include:\n\n```text\nC60\nC70\nhigher fullerene cages\n```\n\nThese are finite molecular cage structures.\n\nThey should not be assigned graphite or graphene bulk properties merely because every atom is Carbon.\n\n---\n\n# 23. Amorphous Carbon\n\nCanonical material family:\n\n```text\nMAT:0006:MAT:AMORPHOUS-CARBON\n```\n\nAmorphous Carbon does not possess the long-range translational order of a crystal.\n\nIts properties depend strongly on:\n\n```text\nsp2/sp3 fraction\nhydrogen content\ndensity\ndefects\nprocessing\ntemperature\ndeposition conditions\n```\n\nSubclasses may later include:\n\n```text\ndiamond-like carbon\nhydrogenated amorphous carbon\nglassy carbon\nsoot-related structures\n```\n\nas separate states.\n\n---\n\n# 24. Electronic-State Spectrum\n\nCarbon is perhaps MAT's clearest proof that atomic identity alone does not determine bulk conductivity.\n\nExamples:\n\n```text\ndiamond\n→ wide-gap insulating/semiconducting state\n\ngraphite\n→ semimetallic / conducting state\n\ngraphene\n→ Dirac-like zero-gap electronic system\n\nCNT\n→ metallic or semiconducting depending on chirality\n\namorphous carbon\n→ strongly process-dependent\n```\n\nTherefore:\n\n$$\nE_C\n=\nF(\n\\text{structure},\n\\text{bonding},\n\\text{defects},\n\\text{dopants},\n\\text{dimension},\nT,\nP\n)\n$$\n\n---\n\n# 25. Frequency Architecture\n\nCarbon has no single inherent frequency.\n\nMechanisms include:\n\n```text\natomic transitions\nmolecular vibrations\nRaman modes\nphonons\nelectronic excitations\nnuclear magnetic resonance\nplasma emission\nacoustic modes\n```\n\nGraphitic Raman features often include the families commonly called:\n\n```text\nD\nG\n2D\n```\n\nbut their exact positions depend on:\n\n```text\nstrain\ndefects\ndoping\ntemperature\nlayer number\nexcitation wavelength\n```\n\nTherefore spectra are state fingerprints, not universal element frequencies.\n\n---\n\n# 26. Spectroscopy as Feedback\n\nCarbon strongly validates a MAT feedback loop:\n\n$$\n\\boxed{\n\\text{process material}\n\\rightarrow\n\\text{measure spectrum}\n\\rightarrow\n\\text{infer structure/state}\n}\n$$\n\nThis can connect:\n\n```text\nRaman\nIR\nXPS\nNMR\noptical spectroscopy\ndiffraction\n```\n\nto process history and material state.\n\n---\n\n# 27. Magnetic Architecture\n\nCarbon again prohibits one magnetic label.\n\nExamples may include:\n\n```text\ndiamond → predominantly diamagnetic bulk response\ngraphite → strongly anisotropic magnetic response\ndefect-rich carbon → possible local magnetic moments\ndoped carbon → altered electronic/spin states\n```\n\nTherefore:\n\n$$\nM_C\n=\nF(\n\\text{allotrope},\n\\text{defects},\n\\text{dopants},\n\\text{orientation},\nT,\nB\n)\n$$\n\n---\n\n# 28. Organic Chemistry Hub\n\nCarbon's ability to form strong C–C and heteroatom bonds creates enormous molecular diversity.\n\nImportant families include:\n\n```text\nhydrocarbons\nalcohols\ncarbonyl compounds\ncarboxylic acids\namines\ncarbohydrates\nlipids\npeptides/proteins\nnucleic-acid components\npolymers\npharmaceuticals\norganic semiconductors\n```\n\nThese belong to compound/molecular records rather than being flattened into the elemental record.\n\n---\n\n# 29. Carbon–Hydrogen Relationship\n\nCanonical relationship:\n\n```text\nMAT:0006\nCHEMICAL-BONDS-WITH\nMAT:0001\n```\n\nC–H bonds are foundational to organic chemistry.\n\nOther H–C mechanisms include:\n\n```text\nH2 adsorption on porous carbon\nhydrocarbon chemistry\nhydrogenated amorphous carbon\npolymer chemistry\nbiological molecules\nplasma-surface interactions\n```\n\nLegacy speculative H–C harmonic/octave ideas remain in a separate historical/hypothesis layer.\n\nMeasured C–H chemistry does **not** prove an octave mechanism.\n\n---\n\n# 30. Carbon–Lithium Relationship\n\nGraphitic Carbon can host Lithium.\n\nA highly lithiated ideal graphite composition is:\n\n$$\nLiC_6\n$$\n\nRelationship:\n\n```text\nMAT:0003 Lithium\n↔\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nMechanism:\n\n```text\nINTERCALATION\n```\n\nThis resolves Lithium's earlier Carbon forward reference once the Carbon record exists.\n\n---\n\n# 31. Carbon–Boron Relationship\n\nImportant families include:\n\n```text\nB4C\nboron-doped diamond\nboron-doped graphitic carbon\nboron-containing carbon networks\n```\n\nTherefore:\n\n```text\nMAT:0005\n↔\nMAT:0006\n```\n\ncontains separate:\n\n```text\nceramic\ndopant\nelectronic\nstructural\nsuperconductivity-related\n```\n\nedges.\n\n---\n\n# 32. Carbon–Oxygen Chemistry\n\nComplete oxidation:\n\n$$\nC+O_2\n\\rightarrow\nCO_2\n$$\n\nOxygen-limited chemistry may produce:\n\n$$\n2C+O_2\n\\rightarrow\n2CO\n$$\n\nThese products have radically different biological and safety profiles.\n\nThus:\n\n```text\nCARBON OXIDATION\n```\n\nmust include product identity and environment.\n\n---\n\n# 33. Transformation, Not Disappearance\n\nCombustion illustrates:\n\n$$\nC_{\\rm solid}\n\\rightarrow\nCO_2\n$$\n\nThe Carbon nuclei remain Carbon.\n\nThe system changes:\n\n```text\nbonding\noxidation state\nphase\nmolecular identity\nlocation\nenergy distribution\n```\n\nsubject to full conservation and mass-energy accounting.\n\nThis is a scientifically useful Causali E transformation example.\n\n---\n\n# 34. Planetary Carbon Cycle\n\nCarbon requires a planetary-scale process layer.\n\nSimplified network:\n\n```text\natmospheric CO2\n↔ photosynthesis\n↔ biomass\n↔ respiration / decomposition\n↔ CO2\n```\n\nplus:\n\n```text\noceanic dissolved carbon\ncarbonate chemistry\nsediments\ncarbonate minerals\nfossil carbon\nsoil carbon\nmantle/geological carbon\nanthropogenic emissions\n```\n\nThe Carbon cycle therefore spans:\n\n```text\nmolecular\nbiological\necosystem\noceanic\natmospheric\ngeological\nplanetary\n```\n\nscales.\n\n---\n\n# 35. Biological Architecture\n\nCarbon is a central structural element of known terrestrial organic life.\n\nThe major biological network includes:\n\n$$\nC-H-O-N-P-S\n$$\n\nCarbon appears in:\n\n```text\ncarbohydrates\nlipids\namino acids\nproteins\nnucleic acids\nmetabolites\nsignalling molecules\nstructural biomolecules\n```\n\nThis does not imply that every Carbon material is biologically compatible.\n\n---\n\n# 36. Material Engineering Hub\n\nImportant future Carbon material relationships include:\n\n```text\nC + Si → SiC\nC + Fe → steels / cast irons\nC + Ti → TiC\nC + W → WC\nC + Ta → TaC\nC + Hf → HfC\nC + B → B4C\n```\n\nThe effect of Carbon can be large even at small concentration.\n\nThis creates a canonical materials-design principle:\n\n$$\n\\boxed{\n\\text{small composition change}\n\\rightarrow\n\\text{large phase/property change}\n}\n$$\n\n---\n\n# 37. Porous Carbon\n\nPorous/activated Carbon demonstrates:\n\n$$\n\\text{composition nearly unchanged}\n+\n\\text{microstructure redesigned}\n\\rightarrow\n\\text{large surface-area change}\n$$\n\nApplications can include:\n\n```text\nadsorption\nfiltration\nelectrodes\nsupercapacitors\ncatalyst supports\ngas storage\nbattery systems\n```\n\nSurface area and pore distribution must be explicit material metrics.\n\n---\n\n# 38. Main Carbon Result\n\nCarbon gives MAT its strongest structure–property demonstration yet:\n\n$$\n\\boxed{\n\\text{element}\n+\n\\text{bonding}\n+\n\\text{geometry}\n+\n\\text{dimension}\n+\n\\text{defects}\n+\n\\text{process}\n=\n\\text{material behaviour}\n}\n$$\n\nChanging no proton count while rearranging Carbon can produce:\n\n```text\ndiamond\ngraphite\ngraphene\nnanotube\nfullerene\namorphous carbon\nporous carbon\ncarbon fibre\n```\n\nwith radically different macroscopic properties.\n\nThis is foundational for future inverse material design.\n\n---\n\n# 39. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  metrology_architecture: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  topology_architecture: \"PASS\"\n  dimensionality_architecture: \"PASS\"\n  nanocarbon_architecture: \"PASS\"\n  organic_architecture: \"PASS\"\n  transport_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  carbon_cycle_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe atomic values above are from NIST ASD: Carbon is `1s²2s²2p²`, \\(^{3}P_0\\), with first ionisation energy **11.2602880 ± 0.0000011 eV** and the higher ionisation ladder shown above. ([NIST][1]) NIST gives ¹²C abundance `0.9893(8)`, ¹³C `0.0107(8)`, and the standard atomic-weight interval `[12.0096,12.0116]`. ([NIST][2])\n\nThe SI Brochure still defines the dalton/unified atomic mass unit as **one twelfth of the mass of a free Carbon-12 atom at rest in its ground state**, so the legacy Carbon-12 measurement-reference idea remains scientifically valid. ([BIPM][3])\n",
+  "bodyHash": "baf1f49bf85a8b250b3d56c2620af1b8e87908075d5db41dae26a1b198ebfed2",
+  "header": {
+    "mat_id": "MAT:0006",
+    "record_name": "Carbon",
+    "symbol": "C",
+    "record_class": "CHEMICAL_ELEMENT",
+    "atomic_number": 6,
+    "parent_id": "MAT:0000",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0006",
+    "legacy_name": "Carbon",
+    "reference_implementation": "- MAT:0001"
+  },
+  "structured": [
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-08-Carbon-8.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-8",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-8",
+          "notation": "8C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 2,
+            "mass_number": 8,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 8.037643,
+            "uncertainty": 0.00002,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "EXTREMELY-SHORT-LIVED",
+            "half_life": {
+              "value": 3.5,
+              "uncertainty": 1.4,
+              "unit": "zs"
+            }
+          },
+          "decay": {
+            "principal_mode": "TWO-PROTON-EMISSION"
+          },
+          "source_id": "SRC-000008",
+          "status": "ACTIVE-RESEARCH"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-09-Carbon-9.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-9",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-9",
+          "notation": "9C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 3,
+            "mass_number": 9,
+            "spin_parity": "3/2-"
+          },
+          "relative_atomic_mass": {
+            "value": 9.0310372,
+            "uncertainty": 0.0000023,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 126.5,
+              "uncertainty": 0.9,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-PLUS",
+            "delayed_proton_branch": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-10-Carbon-10.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-10",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-10",
+          "notation": "10C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 4,
+            "mass_number": 10,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 10.01685331,
+            "uncertainty": 4.2e-7,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 19.3011,
+              "uncertainty": 0.0015,
+              "unit": "s"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-PLUS"
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-11-Carbon-11.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-11",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-11",
+          "notation": "11C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 5,
+            "mass_number": 11,
+            "spin_parity": "3/2-"
+          },
+          "relative_atomic_mass": {
+            "value": 11.0114336,
+            "uncertainty": 0.000001,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 20.3402,
+              "uncertainty": 0.0053,
+              "unit": "min"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-PLUS"
+          },
+          "applications": [
+            "POSITRON-EMISSION-TOMOGRAPHY",
+            "RADIOCHEMICAL-TRACING",
+            "METABOLIC-RESEARCH"
+          ],
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-12-Carbon-12.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-12",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-12",
+          "notation": "12C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 6,
+            "mass_number": 12,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 12,
+            "unit": "u",
+            "exact": true,
+            "source_id": "SRC-000080"
+          },
+          "representative_isotopic_composition": {
+            "value": 0.9893,
+            "uncertainty": 0.0008,
+            "universal_constant": false
+          },
+          "stability": {
+            "status": "STABLE",
+            "half_life": "NOT-APPLICABLE"
+          },
+          "metrology": {
+            "atomic_mass_reference": true,
+            "relation": "1 u = (1/12) mass of free ground-state neutral 12C atom",
+            "source_id": "SRC-000081"
+          },
+          "nuclear_states": {
+            "Hoyle_state": {
+              "id": "MAT:0006:QSTATE:C12-HOYLE",
+              "excitation_energy_approx": {
+                "value": 7.654,
+                "unit": "MeV"
+              },
+              "spin_parity": "0+",
+              "source_id": "SRC-000084"
+            }
+          },
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-13-Carbon-13.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-13",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-13",
+          "notation": "13C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 7,
+            "mass_number": 13,
+            "spin_parity": "1/2-"
+          },
+          "relative_atomic_mass": {
+            "value": 13.00335483507,
+            "uncertainty": 2.3e-10,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "representative_isotopic_composition": {
+            "value": 0.0107,
+            "uncertainty": 0.0008,
+            "universal_constant": false
+          },
+          "stability": {
+            "status": "STABLE",
+            "half_life": "NOT-APPLICABLE"
+          },
+          "nuclear_spin": {
+            "value": "1/2",
+            "NMR_active": true
+          },
+          "applications": [
+            "NMR",
+            "ISOTOPE-TRACING",
+            "METABOLIC-RESEARCH",
+            "REACTION-MECHANISM-STUDIES"
+          ],
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-14-Carbon-14.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-14",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-14",
+          "notation": "14C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 8,
+            "mass_number": 14,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 14.0032419884,
+            "uncertainty": 4e-9,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 5700,
+              "uncertainty": 30,
+              "unit": "y",
+              "source_id": "SRC-000082"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "daughter": "MAT:0007:ISO:N-14",
+            "daughter_status": "RESOLVED",
+            "calculation_id": "MAT:0006:CALC:002"
+          },
+          "radiocarbon": {
+            "dating_enabled": true,
+            "conventional_age_method": {
+              "libby_half_life": {
+                "value": 5568,
+                "unit": "y",
+                "classification": "METHOD-CONVENTION"
+              }
+            }
+          },
+          "applications": [
+            "RADIOCARBON-DATING",
+            "ENVIRONMENTAL-TRACING",
+            "CARBON-CYCLE-RESEARCH"
+          ],
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-15-Carbon-15.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-15",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-15",
+          "notation": "15C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 9,
+            "mass_number": 15,
+            "spin_parity": "1/2+"
+          },
+          "relative_atomic_mass": {
+            "value": 15.01059926,
+            "uncertainty": 8.6e-7,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 2.449,
+              "uncertainty": 0.005,
+              "unit": "s"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS"
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-16-Carbon-16.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-16",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-16",
+          "notation": "16C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 10,
+            "mass_number": 16,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 16.0147013,
+            "uncertainty": 0.0000038,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 750,
+              "uncertainty": 6,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-17-Carbon-17.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-17",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-17",
+          "notation": "17C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 11,
+            "mass_number": 17,
+            "spin_parity": "3/2+"
+          },
+          "relative_atomic_mass": {
+            "value": 17.022577,
+            "uncertainty": 0.000019,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 193,
+              "uncertainty": 6,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-18-Carbon-18.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-18",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-18",
+          "notation": "18C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 12,
+            "mass_number": 18,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 18.026751,
+            "uncertainty": 0.000032,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 92,
+              "uncertainty": 2,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-19-Carbon-19.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-19",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-19",
+          "notation": "19C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 13,
+            "mass_number": 19,
+            "spin_parity": "1/2+"
+          },
+          "relative_atomic_mass": {
+            "value": 19.0348,
+            "uncertainty": 0.00011,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 46.2,
+              "uncertainty": 2.3,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true,
+            "beta_delayed_two_neutron": true
+          },
+          "nuclear_structure": {
+            "neutron_halo_candidate_or_system": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-20-Carbon-20.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-20",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-20",
+          "notation": "20C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 14,
+            "mass_number": 20,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 20.04032,
+            "uncertainty": 0.00026,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 16,
+              "uncertainty": 3,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-21-Carbon-21.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-21",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-21",
+          "notation": "21C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 15,
+            "mass_number": 21,
+            "spin_parity": "1/2+#"
+          },
+          "relative_atomic_mass": {
+            "value": 21.049,
+            "uncertainty": 0.00043,
+            "estimated": true,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "NEUTRON-UNBOUND",
+            "half_life": {
+              "relation": "UPPER-BOUND",
+              "value": 30,
+              "unit": "ns"
+            }
+          },
+          "decay": {
+            "principal_mode": "NEUTRON-EMISSION-OR-UNBOUND-DECAY",
+            "certainty": "LIMITED"
+          },
+          "source_id": "SRC-000008",
+          "status": "ACTIVE-RESEARCH"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-22-Carbon-22.yaml",
+      "data": [
+        {
+          "isotope_id": "MAT:0006:ISO:C-22",
+          "parent_id": "MAT:0006",
+          "name": "Carbon-22",
+          "notation": "22C",
+          "nucleus": {
+            "protons": 6,
+            "neutrons": 16,
+            "mass_number": 22,
+            "spin_parity": "0+"
+          },
+          "relative_atomic_mass": {
+            "value": 22.05753,
+            "uncertainty": 0.00026,
+            "unit": "u",
+            "source_id": "SRC-000080"
+          },
+          "stability": {
+            "status": "RADIOACTIVE",
+            "half_life": {
+              "value": 6.2,
+              "uncertainty": 1.3,
+              "unit": "ms"
+            }
+          },
+          "decay": {
+            "principal_mode": "BETA-MINUS",
+            "beta_delayed_neutron": true,
+            "beta_delayed_two_neutron": true
+          },
+          "nuclear_structure": {
+            "very_neutron_rich": true,
+            "halo_research_system": true
+          },
+          "source_id": "SRC-000008",
+          "status": "RESEARCHED"
+        },
+        null
+      ]
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-23-Carbon-23.yaml",
+      "data": {
+        "isotope_id": "MAT:0006:ISO:C-23",
+        "parent_id": "MAT:0006",
+        "name": "Carbon-23",
+        "notation": "23C",
+        "nucleus": {
+          "protons": 6,
+          "neutrons": 17,
+          "mass_number": 23,
+          "spin_parity": "3/2+#"
+        },
+        "relative_atomic_mass": {
+          "value": 23.0689,
+          "uncertainty": 0.0011,
+          "estimated": true,
+          "unit": "u",
+          "source_id": "SRC-000080"
+        },
+        "stability": {
+          "status": "ESTIMATED-NEUTRON-UNBOUND-STATE",
+          "half_life": "NOT-ESTABLISHED",
+          "experimentally_established_ground_state": false
+        },
+        "decay": {
+          "possible_mode": "NEUTRON-EMISSION",
+          "certainty": "UNRESOLVED"
+        },
+        "source_id": "SRC-000008",
+        "status": "ESTIMATED"
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-Isotope-Reference.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:ISOTOPES",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "NIST_mass_range": {
+          "minimum_mass_number": 8,
+          "maximum_mass_number": 23,
+          "source_id": "SRC-000080"
+        },
+        "key_isotopes": [
+          {
+            "isotope_id": "MAT:0006:ISO:C-11",
+            "mass_number": 11,
+            "relative_atomic_mass": {
+              "value": 11.0114336,
+              "uncertainty": 0.000001,
+              "unit": "u"
+            },
+            "stability": "RADIOACTIVE",
+            "principal_decay": "BETA-PLUS",
+            "half_life_class": "ABOUT-20-MINUTES",
+            "applications": [
+              "PET",
+              "radiotracing"
+            ]
+          },
+          {
+            "isotope_id": "MAT:0006:ISO:C-12",
+            "mass_number": 12,
+            "relative_atomic_mass": {
+              "value": 12,
+              "exact_in_u": true
+            },
+            "representative_isotopic_composition": {
+              "value": 0.9893,
+              "uncertainty": 0.0008
+            },
+            "stability": "STABLE",
+            "half_life": "NOT-APPLICABLE",
+            "spin_parity": "0+",
+            "measurement_reference": true
+          },
+          {
+            "isotope_id": "MAT:0006:ISO:C-13",
+            "mass_number": 13,
+            "relative_atomic_mass": {
+              "value": 13.00335483507,
+              "uncertainty": 2.3e-10,
+              "unit": "u"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.0107,
+              "uncertainty": 0.0008
+            },
+            "stability": "STABLE",
+            "half_life": "NOT-APPLICABLE",
+            "spin_parity": "1/2-",
+            "NMR_active": true
+          },
+          {
+            "isotope_id": "MAT:0006:ISO:C-14",
+            "mass_number": 14,
+            "relative_atomic_mass": {
+              "value": 14.0032419884,
+              "uncertainty": 4e-9,
+              "unit": "u"
+            },
+            "stability": "RADIOACTIVE",
+            "spin_parity": "0+",
+            "principal_decay": "BETA-MINUS",
+            "daughter": "MAT:0007:ISO:N-14",
+            "daughter_status": "RESOLVED",
+            "adopted_reference_half_life": {
+              "value": 5700,
+              "uncertainty": 30,
+              "unit": "y",
+              "source_id": "SRC-000082"
+            },
+            "applications": [
+              "radiocarbon_dating",
+              "tracer_science",
+              "carbon_cycle_research"
+            ]
+          }
+        ],
+        "remaining_isotope_children": {
+          "required_mass_numbers": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "detailed_NUBASE_extraction_status": "NEXT-BATCH"
+        },
+        "rules": {
+          "stable_half_life": "NOT-APPLICABLE",
+          "isotope_abundance_is_universal": false,
+          "radiocarbon_convention_equals_physical_half_life": false,
+          "mass_table_entry_equals_stable_bound_nuclide": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/properties/0006-Carbon-C-Diamond-Properties.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:DIAMOND-PROPERTIES",
+        "material_id": "MAT:0006:ALLOTROPE:DIAMOND",
+        "parent_id": "MAT:0006",
+        "version": "1.0.0",
+        "structure": {
+          "crystal_system": "CUBIC",
+          "space_group": "Fd-3m",
+          "network": "3D-COVALENT",
+          "local_coordination": 4,
+          "local_geometry": "TETRAHEDRAL",
+          "bonding_descriptor": "SP3-LIKE",
+          "carbon_carbon_bond_length_reference": {
+            "approximate_value": 1.54,
+            "unit": "angstrom",
+            "source_id": "SRC-000091"
+          }
+        },
+        "electronic": {
+          "intrinsic_class": "WIDE-BANDGAP-SEMICONDUCTOR / INSULATING",
+          "band_gap": {
+            "value": 5.47,
+            "unit": "eV",
+            "temperature": {
+              "value": 300,
+              "unit": "K"
+            },
+            "source_id": "SRC-000091"
+          },
+          "doping_can_modify_conductivity": true,
+          "boron_doping": {
+            "possible_effects": [
+              "p_type_conduction",
+              "metallic_like_conduction_at_high_doping",
+              "superconducting_state_at_suitable_doping"
+            ],
+            "relationship": {
+              "target": "MAT:0005"
+            }
+          }
+        },
+        "thermal": {
+          "classification": "VERY-HIGH-THERMAL-CONDUCTIVITY-POSSIBLE",
+          "exact_reference_value": {
+            "status": "STATE-RESOLVED-DATASET-REQUIRED"
+          },
+          "dependencies": [
+            "isotope_composition",
+            "impurities",
+            "defects",
+            "temperature",
+            "crystal_quality",
+            "measurement_direction"
+          ]
+        },
+        "mechanical": {
+          "hardness": "EXTREME",
+          "elastic_dataset": "DIRECTION-RESOLVED-DATA-REQUIRED"
+        },
+        "spectroscopy": {
+          "raman_first_order": {
+            "approximate_value": 1332,
+            "unit": "cm-1"
+          },
+          "dependencies": [
+            "temperature",
+            "stress",
+            "isotope_composition",
+            "defects"
+          ]
+        },
+        "rules": {
+          "diamond_property_equals_carbon_property": false,
+          "doped_diamond_equals_intrinsic_diamond": false,
+          "raman_peak_is_universal_constant": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/properties/0006-Carbon-C-Graphene-Properties.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:GRAPHENE-PROPERTIES",
+        "material_id": "MAT:0006:ALLOTROPE:GRAPHENE",
+        "parent_id": "MAT:0006",
+        "version": "1.0.0",
+        "structure": {
+          "dimensionality": "2D",
+          "layers": 1,
+          "lattice": "HEXAGONAL-HONEYCOMB",
+          "local_bonding": "SP2-LIKE",
+          "carbon_carbon_spacing": {
+            "approximate_value": 0.142,
+            "unit": "nm",
+            "source_id": "SRC-000093"
+          }
+        },
+        "electronic": {
+          "class": "DIRAC-LIKE-SEMIMETAL",
+          "carrier_state_dependencies": [
+            "doping",
+            "substrate",
+            "strain",
+            "defects",
+            "edge_geometry",
+            "temperature"
+          ]
+        },
+        "mechanical_reference": {
+          "young_modulus": {
+            "approximate_value": 1,
+            "unit": "TPa"
+          },
+          "intrinsic_strength": {
+            "approximate_value": 130,
+            "unit": "GPa"
+          },
+          "universal": false,
+          "source_id": "SRC-000093"
+        },
+        "thermal_reference": {
+          "reported_high_quality_value": {
+            "relation": "GREATER-THAN",
+            "value": 3000,
+            "unit": "W/(m*K)"
+          },
+          "universal": false,
+          "source_id": "SRC-000093"
+        },
+        "electronic_transport_reference": {
+          "mobility": {
+            "relation": "UP-TO",
+            "value": 250000,
+            "unit": "cm2/(V*s)"
+          },
+          "universal": false,
+          "source_id": "SRC-000093"
+        },
+        "optical_reference": {
+          "absorption": {
+            "approximate_value": 2.3,
+            "unit": "percent"
+          },
+          "state_conditions_required": true,
+          "source_id": "SRC-000093"
+        },
+        "history": {
+          "experimental_isolation": {
+            "year": 2004,
+            "contributors": [
+              "Andre Geim",
+              "Konstantin Novoselov"
+            ],
+            "source_id": "SRC-000095"
+          }
+        },
+        "rules": {
+          "ideal_reference_equals_every_sample": false,
+          "monolayer_equals_few_layer_graphene": false,
+          "graphene_equals_graphite": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/properties/0006-Carbon-C-Graphite-Properties.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:GRAPHITE-PROPERTIES",
+        "material_id": "MAT:0006:ALLOTROPE:GRAPHITE",
+        "parent_id": "MAT:0006",
+        "version": "1.0.0",
+        "structure": {
+          "dominant_family": "HEXAGONAL-GRAPHITIC",
+          "lattice_reference": {
+            "a": {
+              "value": 2.4612,
+              "unit": "angstrom"
+            },
+            "c": {
+              "value": 6.708,
+              "unit": "angstrom"
+            },
+            "interlayer_spacing_d002": {
+              "value": 3.354,
+              "unit": "angstrom"
+            },
+            "source_id": "SRC-000092"
+          }
+        },
+        "bonding": {
+          "in_plane": "STRONG-SP2-LIKE-COVALENT",
+          "interlayer": "WEAKER-INTERLAYER-INTERACTION"
+        },
+        "electronic": {
+          "class": "SEMIMETALLIC / CONDUCTING"
+        },
+        "anisotropy": {
+          "first_class_variable": true,
+          "electrical_resistivity_reference": {
+            "in_plane": {
+              "minimum": 4e-7,
+              "maximum": 7e-7,
+              "unit": "ohm*m"
+            },
+            "c_axis": {
+              "minimum": 0.001,
+              "maximum": 0.005,
+              "unit": "ohm*m"
+            },
+            "classification": "REPRESENTATIVE-RANGE",
+            "universal": false,
+            "source_id": "SRC-000092"
+          },
+          "thermal_conductivity_HOPG_example": {
+            "in_plane": {
+              "value": 1950,
+              "unit": "W/(m*K)"
+            },
+            "cross_plane": {
+              "value": 6.9,
+              "unit": "W/(m*K)"
+            },
+            "classification": "SAMPLE-SPECIFIC-REFERENCE",
+            "universal": false,
+            "source_id": "SRC-000092"
+          }
+        },
+        "lithium_intercalation": {
+          "enabled": true,
+          "stage_1_reference": {
+            "formula": "LiC6"
+          },
+          "relationship": {
+            "target": "MAT:0003"
+          }
+        },
+        "rules": {
+          "direction_required_for_transport_property": true,
+          "HOPG_equals_all_graphite": false,
+          "graphite_property_equals_graphene_property": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/spectra/0006-Carbon-C-Raman-Fingerprints.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:RAMAN",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "diamond": {
+          "principal_first_order_band": {
+            "approximate_position": {
+              "value": 1332,
+              "unit": "cm-1"
+            }
+          },
+          "dependencies": [
+            "stress",
+            "isotope_composition",
+            "temperature",
+            "crystal_quality"
+          ]
+        },
+        "graphitic_carbon": {
+          "D": {
+            "approximate_position": {
+              "value": 1350,
+              "unit": "cm-1"
+            },
+            "classification": "DEFECT-ACTIVATED",
+            "meaning": [
+              "disorder",
+              "edges",
+              "translational_symmetry_breaking"
+            ]
+          },
+          "G": {
+            "approximate_position": {
+              "value": 1580,
+              "unit": "cm-1"
+            },
+            "mode": "E2g",
+            "classification": "FIRST-ORDER-IN-PLANE-OPTICAL"
+          },
+          "two_D": {
+            "approximate_position": {
+              "value": 2700,
+              "unit": "cm-1"
+            },
+            "aliases": [
+              "2D",
+              "G-prime"
+            ],
+            "classification": "SECOND-ORDER"
+          }
+        },
+        "dependencies": [
+          "laser_excitation_energy",
+          "strain",
+          "doping",
+          "defect_density",
+          "layer_number",
+          "stacking",
+          "temperature",
+          "edge_geometry"
+        ],
+        "rules": {
+          "D_peak_is_required_in_perfect_graphene": false,
+          "universal_carbon_raman_frequency": false,
+          "peak_position_is_condition_independent": false
+        },
+        "source_id": "SRC-000087"
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/spectra/0006-Carbon-C-Selected-Atomic-Spectrum.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:ATOMIC-SPECTRUM",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "species": {
+          "C_I": {
+            "ground_state": {
+              "configuration": "1s2 2s2 2p2",
+              "term": "3P0"
+            },
+            "selected_persistent_lines": [
+              {
+                "wavelength": {
+                  "value": 127.72452,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 0,
+                "upper_level_cm1": 78293.5,
+                "lower_term": "3P0",
+                "upper_term": "3D°1"
+              },
+              {
+                "wavelength": {
+                  "value": 127.75497,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 43.4135,
+                "upper_level_cm1": 78318.23,
+                "lower_term": "3P2",
+                "upper_term": "3D°3"
+              },
+              {
+                "wavelength": {
+                  "value": 156.1438,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 43.4135,
+                "upper_level_cm1": 64086.95,
+                "lower_term": "3P2",
+                "upper_term": "3D°3"
+              },
+              {
+                "wavelength": {
+                  "value": 165.7008,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 43.4135,
+                "upper_level_cm1": 60393.15,
+                "lower_term": "3P2",
+                "upper_term": "3P°2"
+              },
+              {
+                "wavelength": {
+                  "value": 193.0906,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 10192.66,
+                "upper_level_cm1": 61981.82,
+                "lower_term": "1D2",
+                "upper_term": "1P°1"
+              },
+              {
+                "wavelength": {
+                  "value": 247.8561,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 21648.02,
+                "upper_level_cm1": 61981.82,
+                "lower_term": "1S0",
+                "upper_term": "1P°1"
+              }
+            ]
+          },
+          "C_II": {
+            "selected_persistent_lines": [
+              68.70526,
+              68.7346,
+              90.41416,
+              103.63367
+            ],
+            "unit": "nm"
+          }
+        },
+        "source_id": "SRC-000098",
+        "rules": {
+          "wavelength_medium_must_be_checked_for_precision_export": true,
+          "atomic_spectrum_equals_raman_spectrum": false,
+          "universal_carbon_frequency": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Allotropes-and-Dimensionality.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:ALLOTROPES",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "states": {
+          "diamond": {
+            "id": "MAT:0006:ALLOTROPE:DIAMOND",
+            "bonding": {
+              "dominant_local_descriptor": "SP3-LIKE"
+            },
+            "dimensionality": "3D-COVALENT-NETWORK",
+            "geometry": {
+              "local_coordination": "TETRAHEDRAL",
+              "ideal_angle_deg": 109.471
+            },
+            "electronic": {
+              "intrinsic_class": "ULTRAWIDE-BANDGAP",
+              "band_gap_reference": {
+                "approximate_value": 5.47,
+                "unit": "eV",
+                "state_conditions_required": true
+              }
+            },
+            "thermal": {
+              "very_high_conductivity_possible": true,
+              "purity_isotope_defect_dependent": true
+            },
+            "spectral": {
+              "first_order_raman": {
+                "approximate_value": 1332,
+                "unit": "cm-1"
+              }
+            },
+            "rules": {
+              "diamond_property_equals_all_carbon": false
+            }
+          },
+          "graphite": {
+            "id": "MAT:0006:ALLOTROPE:GRAPHITE",
+            "bonding": {
+              "in_plane": "SP2-LIKE",
+              "interlayer": "WEAKER-INTERLAYER-INTERACTION"
+            },
+            "dimensionality": "LAYERED-3D-CRYSTAL",
+            "anisotropy": {
+              "enabled": true,
+              "conductivity": {
+                "relation": "sigma_parallel != sigma_perpendicular"
+              },
+              "thermal": {
+                "relation": "k_parallel != k_perpendicular"
+              }
+            },
+            "electronic": {
+              "class": "SEMIMETAL / CONDUCTING"
+            },
+            "lithium_intercalation": {
+              "enabled": true,
+              "stage_1_compound": "LiC6",
+              "source_id": "SRC-000088"
+            }
+          },
+          "graphene": {
+            "id": "MAT:0006:ALLOTROPE:GRAPHENE",
+            "dimensionality": "2D",
+            "structure": {
+              "one_atom_thick": true,
+              "lattice": "HEXAGONAL-HONEYCOMB",
+              "bonding": "SP2-LIKE"
+            },
+            "electronic": {
+              "class": "DIRAC-LIKE-SEMIMETAL",
+              "substrate_and_doping_sensitive": true
+            },
+            "state_variables": [
+              "layer_number",
+              "substrate",
+              "strain",
+              "defects",
+              "doping",
+              "temperature",
+              "edge_geometry"
+            ],
+            "discovery_lineage": {
+              "experimental_isolation_year": 2004,
+              "source_id": "SRC-000086"
+            }
+          },
+          "carbon_nanotube": {
+            "id": "MAT:0006:MAT:CNT",
+            "dimensionality": "1D",
+            "conceptual_origin": {
+              "graphene_rollup_model": true
+            },
+            "chirality": {
+              "notation": "(n,m)",
+              "first_class_variable": true
+            },
+            "electronic": {
+              "possible_classes": [
+                "metallic",
+                "semiconducting",
+                "quantum_confined"
+              ],
+              "chirality_dependent": true
+            },
+            "rule": "Tube diameter and chirality are required before assigning an electronic band structure to a nanotube.\n",
+            "source_id": "SRC-000090"
+          },
+          "fullerene": {
+            "id": "MAT:0006:MOL:FULLERENE",
+            "dimensionality": "0D",
+            "families": [
+              "C60",
+              "C70",
+              "higher_fullerenes"
+            ],
+            "C60": {
+              "topology": "CLOSED-CAGE",
+              "idealized_polyhedral_descriptor": "TRUNCATED-ICOSAHEDRON",
+              "atoms": 60
+            },
+            "source_id": "SRC-000089"
+          },
+          "amorphous_carbon": {
+            "id": "MAT:0006:MAT:AMORPHOUS-CARBON",
+            "dimensionality": "DISORDERED-3D",
+            "long_range_crystal_order": false,
+            "variables": [
+              "sp2_fraction",
+              "sp3_fraction",
+              "hydrogen_content",
+              "density",
+              "pore_structure",
+              "defects",
+              "deposition_method"
+            ],
+            "subclasses": [
+              "diamond_like_carbon",
+              "hydrogenated_amorphous_carbon",
+              "glassy_carbon"
+            ]
+          },
+          "engineered_carbon": {
+            "classes": [
+              "carbon_fibre",
+              "activated_carbon",
+              "porous_carbon",
+              "carbon_black",
+              "carbon_composite"
+            ],
+            "classification": "MATERIAL-MORPHOLOGY / ENGINEERED-FAMILY",
+            "rule": "These are not automatically fundamental elemental allotropes merely because their principal constituent is Carbon.\n"
+          }
+        },
+        "dimensionality_map": {
+          "0D": [
+            "fullerene",
+            "quantum_dot"
+          ],
+          "1D": [
+            "carbon_nanotube",
+            "chain_like_states"
+          ],
+          "2D": [
+            "graphene"
+          ],
+          "3D": [
+            "diamond",
+            "graphite_crystal",
+            "amorphous_network"
+          ]
+        },
+        "rules": {
+          "composition_alone_determines_property": false,
+          "structure_is_first_class_variable": true,
+          "dimensionality_is_first_class_variable": true,
+          "topology_is_first_class_variable": true
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-CNT-Chirality.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:CNT-CHIRALITY",
+        "material_id": "MAT:0006:MAT:CNT",
+        "parent_id": "MAT:0006",
+        "version": "1.0.0",
+        "geometry": {
+          "chiral_vector": {
+            "notation": "(n,m)",
+            "vector_form": "Ch = n*a1 + m*a2"
+          },
+          "families": {
+            "armchair": {
+              "condition": "n = m",
+              "example": "(10,10)",
+              "nominal_electronic_class": "METALLIC"
+            },
+            "zigzag": {
+              "condition": "m = 0",
+              "example": "(10,0)",
+              "electronic_class": "INDEX-DEPENDENT"
+            },
+            "chiral": {
+              "condition": "n != m AND m != 0",
+              "electronic_class": "INDEX-DEPENDENT"
+            }
+          }
+        },
+        "simple_zone_folding_rule": {
+          "nominally_metallic_if": {
+            "condition": "(n - m) mod 3 = 0"
+          },
+          "semiconducting_if": {
+            "condition": "(n - m) mod 3 != 0"
+          }
+        },
+        "limitations": [
+          "curvature_can_modify_nominal_metallicity",
+          "small_gaps_can_appear_in_non_armchair_tubes",
+          "diameter_changes_band_gap",
+          "defects_change_transport",
+          "strain_changes_electronic_structure",
+          "junctions_have_local_chirality"
+        ],
+        "electronic_state": {
+          "possible": [
+            "METALLIC",
+            "SEMICONDUCTING",
+            "QUANTUM-DOT-LIKE"
+          ],
+          "primary_variables": [
+            "n",
+            "m",
+            "diameter",
+            "wall_number",
+            "strain",
+            "defects",
+            "doping",
+            "environment"
+          ]
+        },
+        "source_ids": [
+          "SRC-000090",
+          "SRC-000094"
+        ],
+        "rules": {
+          "CNT_composition_determines_electronic_class_alone": false,
+          "chirality_is_first_class_variable": true
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Fullerene-Registry.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:FULLERENES",
+        "parent_id": "MAT:0006",
+        "version": "1.0.0",
+        "family_id": "MAT:0006:MOL:FULLERENE",
+        "members": {
+          "C60": {
+            "id": "MAT:0006:MOL:C60",
+            "atoms": 60,
+            "molecular_class": "CLOSED-CARBON-CAGE",
+            "topology": {
+              "idealized_descriptor": "TRUNCATED-ICOSAHEDRON",
+              "pentagons": 12,
+              "hexagons": 20
+            },
+            "discovery": {
+              "year": 1985,
+              "contributors": [
+                "Harold Kroto",
+                "Robert Curl",
+                "Richard Smalley",
+                "James R. Heath",
+                "Sean C. O'Brien"
+              ]
+            },
+            "source_ids": [
+              "SRC-000089",
+              "SRC-000096"
+            ]
+          },
+          "C70": {
+            "id": "MAT:0006:MOL:C70",
+            "atoms": 70,
+            "molecular_class": "CLOSED-CARBON-CAGE",
+            "geometry": "ELONGATED-FULLERENE-CAGE",
+            "source_ids": [
+              "SRC-000089",
+              "SRC-000096"
+            ]
+          }
+        },
+        "rules": {
+          "fullerene_equals_bulk_graphite": false,
+          "ideal_polyhedron_equals_exact_molecular_geometry": false,
+          "fullerene_family_is_exhausted_by_C60_C70": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Graph-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:GRAPHS",
+        "record_id": "MAT:0006",
+        "graphs": [
+          {
+            "id": "MAT:0006:GRAPH:001",
+            "name": "Isotope Lifetime Map",
+            "status": "GENERATED"
+          },
+          {
+            "id": "MAT:0006:GRAPH:002",
+            "name": "Atomic Energy Levels",
+            "status": "DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "id": "MAT:0006:GRAPH:003",
+            "name": "Atomic Spectrum",
+            "status": "READY-FOR-DATA-EXTRACTION"
+          },
+          {
+            "id": "MAT:0006:GRAPH:004",
+            "name": "Raman State Fingerprints",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0006:GRAPH:005",
+            "name": "Allotrope Electronic-State Comparison",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0006:GRAPH:006",
+            "name": "Graphite Directional Thermal Transport",
+            "status": "SAMPLE-REFERENCE-READY"
+          },
+          {
+            "id": "MAT:0006:GRAPH:007",
+            "name": "Graphite Directional Resistivity",
+            "status": "REFERENCE-RANGE-READY"
+          },
+          {
+            "id": "MAT:0006:GRAPH:008",
+            "name": "CNT Chirality Map",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0006:GRAPH:009",
+            "name": "Carbon Dimensionality Map",
+            "status": "SCHEMATIC-READY"
+          },
+          {
+            "id": "MAT:0006:GRAPH:010",
+            "name": "Triple-Alpha Energetics",
+            "status": "GENERATED"
+          },
+          {
+            "id": "MAT:0006:GRAPH:011",
+            "name": "Carbon-14 Decay",
+            "status": "GENERATED"
+          },
+          {
+            "id": "MAT:0006:GRAPH:012",
+            "name": "Carbon Material Knowledge Graph",
+            "status": "READY-FOR-GENERATION"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Material-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:MATERIAL-RELATIONSHIPS",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "relationships": {
+          "lithium_graphite": {
+            "source": [
+              "MAT:0003",
+              "MAT:0006:ALLOTROPE:GRAPHITE"
+            ],
+            "mechanism": "INTERCALATION",
+            "stage_1_reference": {
+              "formula": "LiC6",
+              "stoichiometric": true,
+              "source_id": "SRC-000088"
+            },
+            "resolved_previous_forward_reference": true
+          },
+          "boron_carbon": {
+            "source": [
+              "MAT:0005",
+              "MAT:0006"
+            ],
+            "material_families": [
+              "B4C",
+              "boron_doped_diamond",
+              "boron_doped_graphitic_carbon"
+            ],
+            "target_status": "RESOLVED"
+          },
+          "silicon_carbide": {
+            "future_id": "MAT:CMP:SiC",
+            "source": [
+              "MAT:0006",
+              "MAT:0014"
+            ],
+            "target_status": "RESERVED-PENDING-SILICON",
+            "material_classes": [
+              "ceramic",
+              "semiconductor",
+              "wide_bandgap_power_material"
+            ]
+          },
+          "iron_carbon": {
+            "source": [
+              "MAT:0006",
+              "MAT:0026"
+            ],
+            "target_status": "RESERVED-PENDING-IRON",
+            "material_families": [
+              "steels",
+              "cast_irons"
+            ],
+            "variables": [
+              "carbon_fraction",
+              "temperature",
+              "cooling_rate",
+              "phase",
+              "heat_treatment",
+              "microstructure"
+            ]
+          },
+          "transition_metal_carbides": {
+            "representative_future_materials": [
+              "TiC",
+              "WC",
+              "TaC",
+              "HfC"
+            ],
+            "possible_properties": [
+              "hardness",
+              "refractory_behavior",
+              "wear_resistance",
+              "electrical_conduction"
+            ]
+          },
+          "hydrogen_carbon": {
+            "element_target": "MAT:0001",
+            "target_status": "RESOLVED",
+            "mechanisms": [
+              "covalent_C_H_bonding",
+              "H2_physisorption",
+              "hydrogenated_carbon",
+              "hydrocarbon_chemistry",
+              "biological_molecules"
+            ]
+          },
+          "oxygen_carbon": {
+            "target": "MAT:0008",
+            "target_status": "RESOLVED",
+            "products": [
+              "CO",
+              "CO2",
+              "carbonate_systems"
+            ]
+          }
+        },
+        "rules": {
+          "alloy_or_compound_property_equals_carbon_property": false,
+          "graphite_intercalation_equals_elemental_lithium_property": false,
+          "hydrogen_carbon_relationship_has_one_mechanism": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Nuclear-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:NUCLEAR-RELATIONSHIPS",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "relationships": {
+          "triple_alpha_stage_1": {
+            "reactants": [
+              "MAT:0002:ISO:He-4",
+              "MAT:0002:ISO:He-4"
+            ],
+            "intermediate": [
+              "MAT:0004:ISO:Be-8"
+            ],
+            "mechanism": "NUCLEAR-RESONANT-PATHWAY"
+          },
+          "triple_alpha_stage_2": {
+            "reactants": [
+              "MAT:0004:ISO:Be-8",
+              "MAT:0002:ISO:He-4"
+            ],
+            "intermediate": {
+              "id": "MAT:0006:QSTATE:C12-HOYLE",
+              "excitation_energy_approx": {
+                "value": 7.654,
+                "unit": "MeV"
+              },
+              "spin_parity": "0+"
+            },
+            "final_product": [
+              "MAT:0006:ISO:C-12"
+            ]
+          },
+          "net_triple_alpha": {
+            "reaction": "3(4He) -> 12C",
+            "calculation_id": "MAT:0006:CALC:001"
+          },
+          "Be10_decay": {
+            "parent": "MAT:0004:ISO:Be-10",
+            "daughter": "MAT:0005:ISO:B-10",
+            "note": "Earlier Be->B relationship; retained as neighboring network context."
+          },
+          "C14_decay": {
+            "parent": "MAT:0006:ISO:C-14",
+            "daughter": "MAT:0007:ISO:N-14",
+            "daughter_status": "RESOLVED",
+            "calculation_id": "MAT:0006:CALC:002"
+          }
+        },
+        "rules": {
+          "Hoyle_excitation_energy_equals_triple_alpha_q_value": false,
+          "nuclear_cluster_geometry_equals_literal_fixed_alpha_positions": false,
+          "nuclear_relationship_equals_chemical_relationship": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Organic-Chemistry.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:ORGANIC-CHEMISTRY",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "carbon_bond_classes": {
+          "carbon_carbon": [
+            "C-C",
+            "C=C",
+            "C#C",
+            "aromatic_delocalized",
+            "conjugated",
+            "cumulated"
+          ],
+          "carbon_hydrogen": [
+            "C-H"
+          ],
+          "carbon_oxygen": [
+            "C-O",
+            "C=O",
+            "carboxylate",
+            "carbonate"
+          ],
+          "carbon_nitrogen": [
+            "C-N",
+            "C=N",
+            "C#N",
+            "amide",
+            "amine",
+            "imine"
+          ],
+          "carbon_sulfur": [
+            "C-S",
+            "C=S"
+          ],
+          "carbon_phosphorus": [
+            "C-P"
+          ],
+          "carbon_halogen": [
+            "C-F",
+            "C-Cl",
+            "C-Br",
+            "C-I"
+          ]
+        },
+        "functional_group_families": [
+          "alkane",
+          "alkene",
+          "alkyne",
+          "aromatic",
+          "alcohol",
+          "ether",
+          "aldehyde",
+          "ketone",
+          "carboxylic_acid",
+          "ester",
+          "amide",
+          "amine",
+          "nitrile",
+          "thiol",
+          "phosphate_containing",
+          "organometallic"
+        ],
+        "macromolecular_families": [
+          "polymer",
+          "protein",
+          "carbohydrate",
+          "lipid",
+          "nucleic_acid",
+          "organic_semiconductor"
+        ],
+        "state_variables": [
+          "molecular_formula",
+          "connectivity",
+          "stereochemistry",
+          "conformation",
+          "charge",
+          "protonation",
+          "solvent",
+          "temperature",
+          "pressure"
+        ],
+        "rules": {
+          "same_formula_means_same_molecule": false,
+          "elemental_carbon_property_equals_organic_compound_property": false,
+          "organic_chemistry_registry_is_exhaustive": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Processes-and-Environments.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:PROCESSES",
+        "record_id": "MAT:0006",
+        "processes": [
+          {
+            "process_id": "MAT:0006:PROC:GRAPHITE-DIAMOND",
+            "family": "PRESSURE-TEMPERATURE-STRUCTURAL",
+            "input": "MAT:0006:ALLOTROPE:GRAPHITE",
+            "output": "MAT:0006:ALLOTROPE:DIAMOND",
+            "required_variables": [
+              "pressure",
+              "temperature",
+              "catalyst_if_used",
+              "time"
+            ]
+          },
+          {
+            "process_id": "MAT:0006:PROC:GRAPHENE-EXFOLIATION",
+            "family": "MATERIAL-PROCESS",
+            "output": "MAT:0006:ALLOTROPE:GRAPHENE"
+          },
+          {
+            "process_id": "MAT:0006:PROC:CNT",
+            "family": "NANOMATERIAL-SYNTHESIS",
+            "output": "MAT:0006:MAT:CNT",
+            "required_variables": [
+              "chirality",
+              "diameter",
+              "wall_number",
+              "catalyst",
+              "process"
+            ]
+          },
+          {
+            "process_id": "MAT:0006:PROC:FULLERENE",
+            "family": "CLUSTER-FORMATION",
+            "output": "MAT:0006:MOL:FULLERENE"
+          },
+          {
+            "process_id": "MAT:0006:PROC:PYROLYSIS",
+            "family": "THERMOCHEMICAL",
+            "outputs": "CONDITION-DEPENDENT-CARBON-MATERIAL"
+          },
+          {
+            "process_id": "MAT:0006:PROC:CARBONISATION",
+            "family": "THERMAL-MATERIAL"
+          },
+          {
+            "process_id": "MAT:0006:PROC:GRAPHITISATION",
+            "family": "THERMAL-STRUCTURAL"
+          },
+          {
+            "process_id": "MAT:0006:PROC:CVD",
+            "family": "CHEMICAL-VAPOUR-DEPOSITION",
+            "possible_products": [
+              "diamond",
+              "graphene",
+              "CNT",
+              "carbon_coating"
+            ]
+          },
+          {
+            "process_id": "MAT:0006:PROC:COMBUSTION-CO2",
+            "family": "CHEMICAL-OXIDATION",
+            "reaction": "C(graphite) + O2 -> CO2",
+            "calculation_id": "MAT:0006:CALC:004"
+          },
+          {
+            "process_id": "MAT:0006:PROC:INCOMPLETE-COMBUSTION",
+            "family": "CHEMICAL-OXIDATION",
+            "possible_products": [
+              "CO",
+              "soot",
+              "unreacted_carbon",
+              "CO2"
+            ],
+            "oxygen_supply_sensitive": true
+          },
+          {
+            "process_id": "MAT:0006:PROC:LI-INTERCALATION",
+            "family": "ELECTROCHEMICAL",
+            "input": [
+              "MAT:0006:ALLOTROPE:GRAPHITE",
+              "MAT:0003:ION:Li+1",
+              "electron"
+            ],
+            "output_family": "LixC6",
+            "stage_1_reference": "LiC6"
+          },
+          {
+            "process_id": "MAT:0006:PROC:PHOTOSYNTHETIC-FIXATION",
+            "family": "BIOGEOCHEMICAL",
+            "carbon_source_family": "CO2"
+          },
+          {
+            "process_id": "MAT:0006:PROC:RESPIRATION",
+            "family": "BIOGEOCHEMICAL"
+          },
+          {
+            "process_id": "MAT:0006:PROC:TRIPLE-ALPHA",
+            "family": "NUCLEAR-ASTROPHYSICS",
+            "calculation_id": "MAT:0006:CALC:001"
+          }
+        ],
+        "environments": {
+          "AMBIENT_SOLID": {
+            "possible_states": [
+              "graphite",
+              "diamond",
+              "amorphous_carbon",
+              "engineered_carbon"
+            ]
+          },
+          "HIGH_PRESSURE_HIGH_TEMPERATURE": {
+            "effects": [
+              "graphite_diamond_phase_selection",
+              "liquid_carbon_at_sufficient_conditions",
+              "structural_reorganization"
+            ]
+          },
+          "OXIDIZING": {
+            "products": [
+              "CO2",
+              "CO"
+            ],
+            "product_ratio_condition_dependent": true
+          },
+          "ELECTROCHEMICAL": {
+            "effects": [
+              "lithium_intercalation",
+              "sodium_intercalation",
+              "double_layer_charge_storage",
+              "surface_redox"
+            ]
+          },
+          "BIOLOGICAL": {
+            "roles": [
+              "biomolecular_skeleton",
+              "metabolic_carbon",
+              "carbon_fixation",
+              "respiration"
+            ]
+          },
+          "PLANETARY": {
+            "reservoirs": [
+              "atmosphere",
+              "ocean",
+              "biomass",
+              "soils",
+              "carbonate_minerals",
+              "sediments",
+              "fossil_carbon",
+              "mantle"
+            ]
+          },
+          "NUCLEAR_STELLAR": {
+            "processes": [
+              "triple_alpha",
+              "carbon_burning"
+            ]
+          }
+        },
+        "safety": {
+          "universal_carbon_hazard": false,
+          "separate_states_required": [
+            "graphite",
+            "diamond",
+            "carbon_monoxide",
+            "carbon_dioxide",
+            "soot",
+            "combustible_carbon_dust",
+            "nanotubes",
+            "graphene_related_powders",
+            "activated_carbon"
+          ]
+        },
+        "rules": {
+          "CO_safety_equals_CO2_safety": false,
+          "carbon_dust_equals_bulk_graphite": false,
+          "material_state_required_for_hazard": true
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C-Visual-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:VISUALS",
+        "record_id": "MAT:0006",
+        "summary": {
+          "visual_slots": 18,
+          "two_dimensional_assets": 22,
+          "scientific_3d_models": 4,
+          "data_extruded_models": 1,
+          "total_core_visual_assets": 27,
+          "generated_assets_complete": false
+        },
+        "status": {
+          "specification": "LOCKED",
+          "generated": false
+        }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/structured/0006-Carbon-C.yaml",
+      "data": {
+        "mat_id": "MAT:0006",
+        "record_name": "Carbon",
+        "symbol": "C",
+        "record_class": "CHEMICAL_ELEMENT",
+        "atomic_number": 6,
+        "legacy": {
+          "legacy_id": "G0006",
+          "migration_status": "CONTENT-CORE-MIGRATED"
+        },
+        "identity": {
+          "proton_count": 6,
+          "neutral_electron_count": 6,
+          "period": 2,
+          "group": 14,
+          "block": "p"
+        },
+        "atomic_weight": {
+          "type": "INTERVAL",
+          "minimum": 12.0096,
+          "maximum": 12.0116,
+          "source_id": "SRC-000080"
+        },
+        "electronic_ground_state": {
+          "configuration": "1s2 2s2 2p2",
+          "term": "3P0",
+          "source_id": "SRC-000005"
+        },
+        "ionization": {
+          "first": {
+            "value": 11.260288,
+            "uncertainty": 0.0000011,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "second": {
+            "value": 24.383143,
+            "uncertainty": 0.000012,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "third": {
+            "value": 47.88778,
+            "uncertainty": 0.00025,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "fourth": {
+            "value": 64.49352,
+            "uncertainty": 0.00019,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          }
+        },
+        "states": [
+          {
+            "id": "MAT:0006:ATOM:C",
+            "charge": 0
+          },
+          {
+            "id": "MAT:0006:ION:C+1",
+            "charge": 1
+          },
+          {
+            "id": "MAT:0006:ION:C+2",
+            "charge": 2
+          },
+          {
+            "id": "MAT:0006:ION:C+3",
+            "charge": 3
+          },
+          {
+            "id": "MAT:0006:ION:C+4",
+            "charge": 4
+          },
+          {
+            "id": "MAT:0006:ION:C+5",
+            "charge": 5
+          },
+          {
+            "id": "MAT:0006:ION:C+6",
+            "charge": 6
+          }
+        ],
+        "isotope_branch": {
+          "NIST_mass_range": {
+            "minimum": 8,
+            "maximum": 23
+          },
+          "stable": [
+            "MAT:0006:ISO:C-12",
+            "MAT:0006:ISO:C-13"
+          ],
+          "major_radionuclides": [
+            "MAT:0006:ISO:C-11",
+            "MAT:0006:ISO:C-14"
+          ]
+        },
+        "carbon_12": {
+          "isotope_id": "MAT:0006:ISO:C-12",
+          "relative_atomic_mass": {
+            "value": 12,
+            "exact_in_u": true
+          },
+          "representative_isotopic_composition": {
+            "value": 0.9893,
+            "uncertainty": 0.0008
+          },
+          "nuclear_spin": 0,
+          "mass_reference": {
+            "dalton_definition_relationship": true,
+            "source_id": "SRC-000081"
+          }
+        },
+        "carbon_13": {
+          "isotope_id": "MAT:0006:ISO:C-13",
+          "relative_atomic_mass": {
+            "value": 13.00335483507,
+            "uncertainty": 2.3e-10,
+            "unit": "u"
+          },
+          "representative_isotopic_composition": {
+            "value": 0.0107,
+            "uncertainty": 0.0008
+          },
+          "nuclear_spin": "1/2",
+          "NMR_active": true
+        },
+        "carbon_14": {
+          "isotope_id": "MAT:0006:ISO:C-14",
+          "relative_atomic_mass": {
+            "value": 14.0032419884,
+            "uncertainty": 4e-9,
+            "unit": "u"
+          },
+          "stability": "RADIOACTIVE",
+          "principal_decay": {
+            "mode": "BETA-MINUS",
+            "daughter": "MAT:0007:ISO:N-14",
+            "daughter_status": "RESOLVED"
+          },
+          "half_life_reference": {
+            "value": 5700,
+            "uncertainty": 30,
+            "unit": "y",
+            "source_id": "SRC-000082"
+          },
+          "conventional_radiocarbon_age": {
+            "libby_half_life": {
+              "value": 5568,
+              "unit": "y",
+              "classification": "METHOD-CONVENTION"
+            }
+          }
+        },
+        "allotrope_and_material_architecture": {
+          "fundamental_or_major_states": [
+            "MAT:0006:ALLOTROPE:DIAMOND",
+            "MAT:0006:ALLOTROPE:GRAPHITE",
+            "MAT:0006:ALLOTROPE:GRAPHENE"
+          ],
+          "molecular_nanostructures": [
+            "MAT:0006:MOL:FULLERENE"
+          ],
+          "engineered_nanostructures": [
+            "MAT:0006:MAT:CNT"
+          ],
+          "disordered_materials": [
+            "MAT:0006:MAT:AMORPHOUS-CARBON"
+          ],
+          "engineered_materials": [
+            "carbon_fibre",
+            "activated_carbon",
+            "porous_carbon"
+          ]
+        },
+        "bonding_geometry": {
+          "idealized_local_models": {
+            "sp": {
+              "angle_deg": 180,
+              "geometry": "LINEAR"
+            },
+            "sp2": {
+              "angle_deg": 120,
+              "geometry": "TRIGONAL-PLANAR"
+            },
+            "sp3": {
+              "angle_deg": 109.471,
+              "geometry": "TETRAHEDRAL"
+            }
+          },
+          "rule": "Hybridization labels are useful local bonding models and should not be treated as rigid classical orbitals.\n"
+        },
+        "dimensionality": {
+          "zero_D": [
+            "fullerenes",
+            "carbon_quantum_dots"
+          ],
+          "one_D": [
+            "carbon_nanotubes",
+            "chain_like_carbon_states"
+          ],
+          "two_D": [
+            "graphene"
+          ],
+          "three_D": [
+            "diamond",
+            "graphite_crystals",
+            "amorphous_networks",
+            "porous_engineered_materials"
+          ]
+        },
+        "electronic_architecture": {
+          "structure_dependent": true,
+          "examples": {
+            "diamond": "WIDE-GAP",
+            "graphite": "SEMIMETALLIC-CONDUCTING",
+            "graphene": "DIRAC-LIKE",
+            "CNT": "CHIRALITY-DEPENDENT",
+            "amorphous": "PROCESS-DEPENDENT"
+          }
+        },
+        "chemistry": {
+          "catenation": true,
+          "organic_chemistry_hub": true,
+          "multiple_oxidation_states": true
+        },
+        "biology": {
+          "terrestrial_life_framework_element": true
+        },
+        "planetary_cycle": {
+          "enabled": true
+        },
+        "scientific_status": {
+          "atomic_identity": "ESTABLISHED",
+          "stable_isotopes": "ESTABLISHED",
+          "diamond": "ESTABLISHED",
+          "graphite": "ESTABLISHED",
+          "graphene": "ESTABLISHED",
+          "CNT": "ESTABLISHED",
+          "fullerene": "ESTABLISHED",
+          "radiocarbon": "ESTABLISHED",
+          "Hoyle_state": "ESTABLISHED-NUCLEAR-STATE"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/experiments/0006-Carbon-C-Experiments.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:EXPERIMENTS",
+        "record_id": "MAT:0006",
+        "entries": [
+          {
+            "experiment_id": "MAT:0006:EXP:001",
+            "name": "Diamond / Carbon Combustion Identity",
+            "class": "HISTORICAL-EXPERIMENT",
+            "contributors": [
+              "Antoine_Lavoisier",
+              "Smithson_Tennant"
+            ],
+            "result": [
+              "diamond_is_carbon_form"
+            ],
+            "source_id": "SRC-000083"
+          },
+          {
+            "experiment_id": "MAT:0006:EXP:002",
+            "name": "Radiocarbon Dating Method",
+            "class": "ISOTOPE-MEASUREMENT-METHOD",
+            "contributor": [
+              "Willard_F_Libby"
+            ],
+            "year": 1949,
+            "source_id": "SRC-000097"
+          },
+          {
+            "experiment_id": "MAT:0006:EXP:003",
+            "name": "C60 Fullerene Discovery",
+            "class": "CLUSTER-MASS-SPECTROMETRY",
+            "year": 1985,
+            "contributors": [
+              "Harold_Kroto",
+              "Robert_Curl",
+              "Richard_Smalley",
+              "James_R_Heath",
+              "Sean_C_OBrien"
+            ],
+            "source_id": "SRC-000089"
+          },
+          {
+            "experiment_id": "MAT:0006:EXP:004",
+            "name": "Graphitic Carbon Nanotubes",
+            "class": "ELECTRON-MICROSCOPY",
+            "year": 1991,
+            "contributor": [
+              "Sumio_Iijima"
+            ],
+            "source_id": "SRC-000090"
+          },
+          {
+            "experiment_id": "MAT:0006:EXP:005",
+            "name": "Atomically Thin Carbon Films",
+            "class": "2D-MATERIAL-EXPERIMENT",
+            "year": 2004,
+            "contributors": [
+              "Andre_Geim",
+              "Konstantin_Novoselov"
+            ],
+            "source_id": "SRC-000086"
+          },
+          {
+            "experiment_id": "MAT:0006:EXP:006",
+            "name": "Graphene Raman Layer Characterization",
+            "class": "SPECTROSCOPY",
+            "year": 2006,
+            "contributors": [
+              "Andrea_Ferrari",
+              "collaborators"
+            ],
+            "source_id": "SRC-000087"
+          }
+        ],
+        "evaluations": [
+          {
+            "evaluation_id": "MAT:0006:EVAL:001",
+            "name": "Carbon Atomic Spectroscopy",
+            "organization": "NIST",
+            "source_id": "SRC-000098"
+          },
+          {
+            "evaluation_id": "MAT:0006:EVAL:002",
+            "name": "Carbon Isotope Mass Evaluation",
+            "organization": "NIST",
+            "source_id": "SRC-000080"
+          }
+        ],
+        "theory_and_state_lineage": [
+          {
+            "id": "MAT:0006:QSTATE:C12-HOYLE",
+            "class": "NUCLEAR-RESONANCE",
+            "contributor_lineage": [
+              "Fred_Hoyle"
+            ],
+            "source_id": "SRC-000084"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/relationships/0006-Carbon-C-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:RELATIONSHIPS",
+        "record_id": "MAT:0006",
+        "version": "1.0.0",
+        "relationships": [
+          {
+            "relationship_id": "MAT:0006:REL:0010",
+            "source": [
+              "MAT:0002:ISO:He-4",
+              "MAT:0002:ISO:He-4",
+              "MAT:0002:ISO:He-4"
+            ],
+            "type": "TRIPLE-ALPHA-NET",
+            "target": "MAT:0006:ISO:C-12",
+            "calculation_id": "MAT:0006:CALC:001"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0011",
+            "source": [
+              "MAT:0004:ISO:Be-8",
+              "MAT:0002:ISO:He-4"
+            ],
+            "type": "FORMS-NUCLEAR-RESONANCE",
+            "target": "MAT:0006:QSTATE:C12-HOYLE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0020",
+            "source": "MAT:0006:ISO:C-14",
+            "type": "DECAYS-TO",
+            "target": "MAT:0007:ISO:N-14",
+            "target_status": "RESOLVED",
+            "mechanism": "BETA-MINUS"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0030",
+            "source": "MAT:0006",
+            "type": "BONDS-WITH",
+            "target": "MAT:0001",
+            "target_status": "RESOLVED",
+            "relationship_family": [
+              "hydrocarbons",
+              "biological_molecules",
+              "polymers",
+              "hydrogenated_carbon"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0040",
+            "source": "MAT:0006:ALLOTROPE:GRAPHITE",
+            "type": "HOSTS-BY-INTERCALATION",
+            "target": "MAT:0003",
+            "target_status": "RESOLVED",
+            "stage_1_reference": "LiC6"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0050",
+            "source": "MAT:0006",
+            "type": "FORMS-MATERIAL-WITH",
+            "target": "MAT:0005",
+            "target_status": "RESOLVED",
+            "material_family": [
+              "B4C",
+              "boron_doped_diamond",
+              "boron_doped_graphitic_carbon"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0060",
+            "source": "MAT:0006",
+            "type": "OXIDIZES-WITH",
+            "target": "MAT:0008",
+            "target_status": "RESOLVED",
+            "products": [
+              "CO",
+              "CO2"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0070",
+            "source": "MAT:0006",
+            "type": "FORMS-CARBIDE-WITH",
+            "target": "MAT:0014",
+            "target_name": "Silicon",
+            "target_status": "RESERVED-PENDING-SILICON",
+            "product": "SiC"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0071",
+            "source": "MAT:0006",
+            "type": "ALLOYS-AND-PHASES-WITH",
+            "target": "MAT:0026",
+            "target_name": "Iron",
+            "target_status": "RESERVED-PENDING-IRON",
+            "material_family": [
+              "steel",
+              "cast_iron",
+              "iron_carbides"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0072",
+            "source": "MAT:0006",
+            "type": "FORMS-CARBIDE-WITH",
+            "target": "MAT:0022",
+            "target_name": "Titanium",
+            "target_status": "RESERVED-PENDING-TITANIUM",
+            "product": "TiC"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0073",
+            "source": "MAT:0006",
+            "type": "FORMS-CARBIDE-WITH",
+            "target": "MAT:0074",
+            "target_name": "Tungsten",
+            "target_status": "RESERVED-PENDING-TUNGSTEN",
+            "product": "WC"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0074",
+            "source": "MAT:0006",
+            "type": "FORMS-CARBIDE-WITH",
+            "target": "MAT:0073",
+            "target_name": "Tantalum",
+            "target_status": "RESERVED-PENDING-TANTALUM",
+            "product": "TaC"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0075",
+            "source": "MAT:0006",
+            "type": "FORMS-CARBIDE-WITH",
+            "target": "MAT:0072",
+            "target_name": "Hafnium",
+            "target_status": "RESERVED-PENDING-HAFNIUM",
+            "product": "HfC"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0080",
+            "source": "MAT:0006",
+            "type": "BIOLOGICAL-FRAMEWORK-ELEMENT",
+            "target": "TERRESTRIAL-ORGANIC-LIFE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0090",
+            "source": "MAT:0006",
+            "type": "PLANETARY-CYCLE",
+            "target": "CARBON-CYCLE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0100",
+            "source": "MAT:0006",
+            "type": "HAS-ALLOTROPE",
+            "target": "MAT:0006:ALLOTROPE:DIAMOND"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0101",
+            "source": "MAT:0006",
+            "type": "HAS-ALLOTROPE",
+            "target": "MAT:0006:ALLOTROPE:GRAPHITE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0102",
+            "source": "MAT:0006",
+            "type": "HAS-2D-STATE",
+            "target": "MAT:0006:ALLOTROPE:GRAPHENE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0103",
+            "source": "MAT:0006",
+            "type": "HAS-NANOSTRUCTURE",
+            "target": "MAT:0006:MAT:CNT"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0104",
+            "source": "MAT:0006",
+            "type": "HAS-MOLECULAR-CAGE-FAMILY",
+            "target": "MAT:0006:MOL:FULLERENE"
+          },
+          {
+            "relationship_id": "MAT:0006:REL:0999",
+            "source": "MAT:0006",
+            "type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0006"
+          }
+        ],
+        "rules": {
+          "nuclear_and_chemical_edges_are_distinct": true,
+          "carbon_allotropes_are_not_interchangeable": true,
+          "engineered_carbon_equals_fundamental_allotrope": false
+        }
+      }
+    }
+  ],
+  "assets": [
+    "records/0006-Carbon-C/diagrams/bonding/0006-Carbon-C-DIAGRAM-001-sp-sp2-sp3.svg",
+    "records/0006-Carbon-C/diagrams/bonding/0006-Carbon-C-DIAGRAM-002-Topology-Comparison.svg",
+    "records/0006-Carbon-C/diagrams/fields/0006-Carbon-C-DIAGRAM-003-Electronic-State-Comparison.svg",
+    "records/0006-Carbon-C/diagrams/fields/0006-Carbon-C-DIAGRAM-004-Lithium-Graphite-Intercalation.svg",
+    "records/0006-Carbon-C/diagrams/fields/0006-Carbon-C-DIAGRAM-005-Isotope-Spin-and-Magnetism.svg",
+    "records/0006-Carbon-C/diagrams/processes/0006-Carbon-C-DIAGRAM-006-Transformation-Network.svg",
+    "records/0006-Carbon-C/diagrams/relationships/0006-Carbon-C-DIAGRAM-007-Knowledge-Graph.svg",
+    "records/0006-Carbon-C/diagrams/relationships/0006-Carbon-C-DIAGRAM-008-Evidence-Provenance.svg",
+    "records/0006-Carbon-C/graphs/0006-Carbon-C-GRAPH-001-Isotope-Lifetime-Map.svg",
+    "records/0006-Carbon-C/graphs/0006-Carbon-C-GRAPH-010-Triple-Alpha-Energetics.svg",
+    "records/0006-Carbon-C/graphs/0006-Carbon-C-GRAPH-011-Carbon-14-Decay.svg",
+    "records/0006-Carbon-C/images/applications/0006-Carbon-C-FIG-014-Applications.svg",
+    "records/0006-Carbon-C/images/isotope/0006-Carbon-C-FIG-005-Isotope-Map.svg",
+    "records/0006-Carbon-C/images/properties/0006-Carbon-C-FIG-008-Allotrope-Property-Comparison.svg",
+    "records/0006-Carbon-C/images/properties/0006-Carbon-C-FIG-009-Dimensionality-Property-Map.svg",
+    "records/0006-Carbon-C/images/properties/0006-Carbon-C-FIG-010-Thermal-and-Oxidation.svg",
+    "records/0006-Carbon-C/images/properties/0006-Carbon-C-FIG-011-Diamond-vs-Graphite.svg",
+    "records/0006-Carbon-C/images/properties/0006-Carbon-C-FIG-012-Graphene-CNT-Mechanical.svg",
+    "records/0006-Carbon-C/images/scientific/0006-Carbon-C-FIG-002-Atomic-Identity.svg",
+    "records/0006-Carbon-C/images/spectral/0006-Carbon-C-FIG-006-Atomic-Spectrum.svg",
+    "records/0006-Carbon-C/images/spectral/0006-Carbon-C-FIG-007-Raman-Fingerprints.svg",
+    "records/0006-Carbon-C/models/scientific/0006-Carbon-C-MODEL-SCI-001-Diamond-Lattice.glb",
+    "records/0006-Carbon-C/models/scientific/0006-Carbon-C-MODEL-SCI-002-Graphite-Graphene.glb",
+    "records/0006-Carbon-C/models/scientific/0006-Carbon-C-MODEL-SCI-003-C60-Fullerene.glb",
+    "records/0006-Carbon-C/models/scientific/0006-Carbon-C-MODEL-SCI-004-CNT-Chirality.glb"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-000005",
+      "source_aliases": [
+        "SRC-H-001"
+      ],
+      "title": "NIST Atomic Spectra Database",
+      "organization": "National Institute of Standards and Technology",
+      "version": "5.12",
+      "doi": "10.18434/T4W30F",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "atomic_ground_configuration",
+        "atomic_ground_level",
+        "ionization_energy",
+        "atomic_spectroscopy"
+      ]
+    },
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000080",
+      "source_aliases": [
+        "SRC-C-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Carbon",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "carbon_standard_atomic_weight",
+        "carbon_isotope_masses",
+        "carbon_12_abundance",
+        "carbon_13_abundance",
+        "carbon_14_mass"
+      ]
+    },
+    {
+      "source_id": "SRC-000081",
+      "source_aliases": [
+        "SRC-C-002"
+      ],
+      "title": "The International System of Units — SI Brochure",
+      "organization": "Bureau International des Poids et Mesures",
+      "edition": "9th edition",
+      "current_version": "3.02",
+      "source_type": "INTERNATIONAL-METROLOGY-STANDARD",
+      "supports": [
+        "dalton_definition",
+        "unified_atomic_mass_unit",
+        "carbon_12_mass_reference"
+      ]
+    },
+    {
+      "source_id": "SRC-000082",
+      "source_aliases": [
+        "SRC-C-003"
+      ],
+      "title": "IAEA-C-3 Carbon-14 Reference Material",
+      "organization": "International Atomic Energy Agency",
+      "source_type": "RADIONUCLIDE-REFERENCE-MATERIAL",
+      "supports": [
+        "carbon_14_half_life_reference",
+        "radiocarbon_reference_material"
+      ],
+      "half_life": {
+        "value": 5700,
+        "uncertainty": 30,
+        "unit": "y"
+      }
+    },
+    {
+      "source_id": "SRC-000083",
+      "source_aliases": [
+        "SRC-C-004"
+      ],
+      "title": "Carbon — Element Information, Properties and Uses",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "SCIENTIFIC-REFERENCE",
+      "supports": [
+        "carbon_general_chemistry",
+        "allotrope_context",
+        "biological_context",
+        "carbon_history"
+      ]
+    },
+    {
+      "source_id": "SRC-000084",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000086",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000087",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000088",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000089",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000090",
+      "status": "UNRESOLVED"
+    },
+    {
+      "source_id": "SRC-000091",
+      "title": "Conductive diamond: synthesis, properties, and electrochemical applications",
+      "journal": "Chemical Society Reviews",
+      "year": 2019,
+      "doi": "10.1039/C7CS00757D",
+      "source_type": "DIAMOND-MATERIAL-REVIEW",
+      "supports": [
+        "diamond_structure",
+        "diamond_band_gap",
+        "diamond_doping",
+        "diamond_thermal_behavior"
+      ]
+    },
+    {
+      "source_id": "SRC-000092",
+      "title": "Graphite Structure and Direction-Resolved Transport References",
+      "source_type": "GRAPHITE-MATERIAL-REFERENCE",
+      "supports": [
+        "graphite_lattice",
+        "graphite_electrical_anisotropy",
+        "graphite_thermal_anisotropy",
+        "graphite_interlayer_spacing"
+      ]
+    },
+    {
+      "source_id": "SRC-000093",
+      "title": "Graphene MEMS and NEMS",
+      "journal": "Microsystems & Nanoengineering",
+      "year": 2024,
+      "source_type": "GRAPHENE-MATERIAL-REVIEW",
+      "supports": [
+        "graphene_bond_length",
+        "graphene_modulus",
+        "graphene_strength",
+        "graphene_mobility",
+        "graphene_thermal_conductivity",
+        "graphene_optical_absorption"
+      ]
+    },
+    {
+      "source_id": "SRC-000094",
+      "title": "Chirality engineering for carbon nanotube electronics",
+      "journal": "Nature Reviews Electrical Engineering",
+      "year": 2024,
+      "source_type": "CNT-CHIRALITY-REVIEW",
+      "supports": [
+        "CNT_chirality",
+        "metallic_CNT",
+        "semiconducting_CNT",
+        "quantum_CNT",
+        "chirality_engineering"
+      ]
+    },
+    {
+      "source_id": "SRC-000095",
+      "title": "The Nobel Prize in Physics 2010",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "Andre_Geim",
+        "Konstantin_Novoselov",
+        "graphene_experiments"
+      ]
+    },
+    {
+      "source_id": "SRC-000096",
+      "title": "The Nobel Prize in Chemistry 1996",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "Harold_Kroto",
+        "Robert_Curl",
+        "Richard_Smalley",
+        "fullerene_discovery",
+        "Heath_and_OBrien_team_context"
+      ]
+    },
+    {
+      "source_id": "SRC-000097",
+      "title": "Willard F. Libby — Nobel Prize in Chemistry 1960",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "radiocarbon_dating",
+        "Willard_Libby"
+      ]
+    },
+    {
+      "source_id": "SRC-000098",
+      "title": "NIST Handbook of Basic Atomic Spectroscopic Data — Carbon",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 108",
+      "source_type": "EVALUATED-ATOMIC-SPECTROSCOPY",
+      "supports": [
+        "C_I_lines",
+        "C_II_lines",
+        "carbon_energy_levels"
+      ]
+    }
+  ],
+  "missingSources": [
+    "SRC-000084",
+    "SRC-000086",
+    "SRC-000087",
+    "SRC-000088",
+    "SRC-000089",
+    "SRC-000090"
+  ],
+  "counts": {
+    "figures": 18,
+    "graphs": 3,
+    "tables": 10,
+    "sources": 20
+  },
+  "reviewStatus": "BLOCKED"
+}

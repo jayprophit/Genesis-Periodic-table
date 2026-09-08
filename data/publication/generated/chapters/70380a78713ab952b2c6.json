@@ -1,0 +1,50 @@
+{
+  "id": "records/0007-Nitrogen-N/calculations/0007-Nitrogen-N-CALC-003-N17-Beta-Q.md",
+  "key": "70380a78713ab952b2c6",
+  "mat": "MAT:0007",
+  "title": "CALC-003 — Nitrogen-17 Beta-Minus Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-003 — Nitrogen-17 Beta-Minus Q-Value\n\n$$\n{}^{17}N\n\\rightarrow\n{}^{17}O+e^-+\\bar\\nu_e\n$$\n\nUsing atomic masses:\n\n$$\n\\boxed{\nQ_{\\beta^-}\n\\approx\n8.6790\\ {\\rm MeV}\n}\n$$\n\nThe daughter can be populated above its neutron separation threshold.\n\nThis enables:\n\n$$\n{}^{17}O^*\n\\rightarrow\n{}^{16}O+n\n$$\n\nwhich explains the large beta-delayed-neutron branch.\n\nNUBASE2020:\n\n$$\nP_{\\beta n}\n=\n95.1\\pm0.7\\%\n$$\n\n```yaml\ncalculation_id: \"MAT:0007:CALC:003\"\nclassification: \"DERIVED-PLUS-EVALUATED-DECAY\"\n\nparent: \"MAT:0007:ISO:N-17\"\ndaughter: \"MAT:0008:ISO:O-17\"\ndaughter_status: \"RESERVED-PENDING-OXYGEN\"\n\nq_value:\n  value: 8.6790\n  unit: \"MeV\"\n\nbeta_delayed_neutron_probability:\n  value: 95.1\n  uncertainty: 0.7\n  unit: \"percent\"\n  source_id: \"SRC-000008\"\n```\n",
+  "bodyHash": "cddc197ab02eb779a226953c74d50d44bab493a89fb7402fac54d34979c7e160",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

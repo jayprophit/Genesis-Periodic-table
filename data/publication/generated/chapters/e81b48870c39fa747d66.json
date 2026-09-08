@@ -1,0 +1,51 @@
+{
+  "id": "records/0004-Beryllium-Be/calculations/0004-Beryllium-Be-CALC-004-Be9-n2n-Q.md",
+  "key": "e81b48870c39fa747d66",
+  "mat": "MAT:0004",
+  "title": "CALC-004 — ⁹Be Neutron-Multiplication Reaction",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-004 — ⁹Be Neutron-Multiplication Reaction\n\n$$\n{}^9Be+n\n\\rightarrow\n{}^8Be+2n\n$$\n\nUsing evaluated masses:\n\n$$\n\\boxed{\nQ\\approx-1.664536\\ {\\rm MeV}\n}\n$$\n\nThe reaction is endothermic.\n\nThis calculation provides reaction energetics only.\n\nIt does not specify:\n\n```text\nneutron-source design\ndevice geometry\nreaction yield\nblanket geometry\noperating conditions\n```\n\n```yaml\ncalculation_id: \"MAT:0004:CALC:004\"\nclassification: \"DERIVED\"\n\nreaction: \"9Be + n -> 8Be + 2n\"\n\nq_value:\n  value: -1.664536\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000048\"\n  - \"SRC-000018\"\n```\n\n---\n",
+  "bodyHash": "b60da158c56c7210668c0a40c84d2815654744784edb4b4f8ba76af1e43a8435",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000048",
+      "source_aliases": [
+        "SRC-Be-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Beryllium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "beryllium_standard_atomic_weight",
+        "beryllium_isotope_masses",
+        "natural_Be9_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 2
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

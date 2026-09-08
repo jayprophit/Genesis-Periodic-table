@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/03-Table-Standard.md",
+  "key": "ac8c4cf19281d3c6c0e2",
+  "mat": null,
+  "title": "MAT Table Standard",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT Table Standard\n\n## 1. Purpose\n\nTables are primary scientific data containers.\n\nThey should remain usable by both humans and software.\n\n---\n\n# 2. Markdown Versus Structured Data\n\nHuman-readable table:\n\n```text\n.md\n```\n\nMachine-readable equivalent:\n\n```text\n.csv\n.json\n.yaml\n```\n\nshould be maintained where the table contains substantial structured data.\n\n---\n\n# 3. Required Table Metadata\n\n```yaml\ntable_id:\ntitle:\nrecord_id:\ndata_type:\nunits:\nconditions:\nsource_ids:\nevidence:\nversion:\n```\n\n---\n\n# 4. Unit Columns\n\nPreferred:\n\n| Property | Value | Unit |\n|---|---:|---|\n\nrather than embedding units inside every number.\n\n---\n\n# 5. Conditions\n\nIf each row has different conditions, store explicit columns.\n\nExample:\n\n| Temperature | Pressure | Conductivity | Unit |\n|---:|---:|---:|---|\n\n---\n\n# 6. Null States\n\nUse MAT null values:\n\n```text\nUNKNOWN\nNOT-MEASURED\nNOT-AVAILABLE\nNOT-APPLICABLE\nBELOW-DETECTION-LIMIT\n```\n\nDo not leave ambiguous blank cells.\n\n---\n\n# 7. Sorting\n\nCanonical data should use a predictable sort.\n\nExamples:\n\n- isotopes by mass number;\n- spectra by frequency/energy;\n- processes by process ID;\n- citations by source ID.\n\n---\n\n# 8. Table IDs\n\n```text\nMAT:0001:TABLE:001\n```\n\nFilename:\n\n```text\n0001-Hydrogen-H-TABLE-001.csv\n```\n\n---\n\n# 9. Precision\n\nDo not standardize all values to the same number of decimal places if source precision differs.\n\n---\n\n# 10. Source-Level Data\n\nWhen several sources report different values, preserve them as separate rows.\n\nDo not overwrite them with one chosen figure.\n\nAn evaluated value can be added separately.\n\n---\n",
+  "bodyHash": "42babb49e5c78b9acf6956d348e2db5a4445a90456e2b26ed2acea81dff25b20",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

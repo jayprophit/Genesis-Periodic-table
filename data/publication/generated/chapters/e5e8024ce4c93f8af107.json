@@ -1,0 +1,22 @@
+{
+  "id": "docs/06-governance/01-Versioning.md",
+  "key": "e5e8024ce4c93f8af107",
+  "mat": null,
+  "title": "MAT Versioning Standard",
+  "section": "Governance",
+  "lane": "reference",
+  "body": "# MAT Versioning Standard\n\n## Purpose\n\nMAT uses versioning at several levels.\n\n---\n\n# Project Version\n\nRecommended:\n\n```text\nMAJOR.MINOR.PATCH\n```\n\nExample:\n\n```text\n1.4.2\n```\n\n---\n\n# MAJOR\n\nIncrement when architecture changes incompatibly.\n\nExamples:\n\n- identifier system redesign;\n- incompatible schema redesign;\n- major record architecture change.\n\n---\n\n# MINOR\n\nIncrement for backwards-compatible extensions.\n\nExamples:\n\n- new schema fields;\n- new principle classes;\n- new visualization slots.\n\n---\n\n# PATCH\n\nIncrement for:\n\n- corrections;\n- typo fixes;\n- source updates;\n- small data fixes.\n\n---\n\n# Schema Version\n\nSeparate field:\n\n```yaml\nschema_version:\n```\n\nA record may use:\n\n```yaml\nrecord_version: 2.1.0\nschema_version: 1.3.0\n```\n\n---\n\n# Record Version\n\nEach numbered record carries its own version.\n\n---\n\n# Asset Version\n\nAssets may use metadata:\n\n```yaml\nasset_version:\n```\n\nwithout embedding excessive version numbers into filenames unless required.\n\n---\n\n# Scientific Data Version\n\nExternal evaluated datasets should preserve the dataset/release version.\n\n---\n\n# Principle Version\n\nPrinciples may also have versions where definitions or references are refined.\n\n---\n\n# Historical Preservation\n\nPrevious published states should remain available through Git history or formal archival releases.\n\n---\n",
+  "bodyHash": "f0c4786a644da48c83dc1e63d9aa1db8052fc9243e52021a7571bcf56d5aaa46",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

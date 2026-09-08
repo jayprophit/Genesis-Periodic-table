@@ -1,0 +1,22 @@
+{
+  "id": "docs/02-data/00-Data-Architecture.md",
+  "key": "22389f5163701d30a955",
+  "mat": null,
+  "title": "MAT Data Architecture",
+  "section": "Data",
+  "lane": "reference",
+  "body": "# MAT Data Architecture\n\n## Core Architecture\n\nMAT uses a hierarchical and relational architecture.\n\nThe primary hierarchy is:\n\n\\[\n\\text{MAT}\n\\rightarrow\n\\text{Primary Record}\n\\rightarrow\n\\text{Child Record}\n\\rightarrow\n\\text{Measurement}\n\\rightarrow\n\\text{Evidence}\n\\]\n\nRecords also form relationships with other records.\n\n---\n\n## Primary Record\n\nA primary record represents a major MAT identity such as an element or another top-level material class.\n\nEach receives a permanent MAT identifier.\n\nExample:\n\n`0001-Hydrogen-H`\n\n---\n\n## Child Records\n\nA primary record may contain child nodes representing:\n\n- isotopes;\n- nuclear states;\n- ionisation states;\n- electronic states;\n- molecular states;\n- compounds;\n- allotropes;\n- material structures;\n- phases;\n- processes;\n- energy pathways;\n- environmental states;\n- applications.\n\nChild nodes prevent one record from becoming an undifferentiated collection of unrelated values.\n\n---\n\n## Measurements\n\nA measurement object should eventually contain at minimum:\n\n```text\nproperty\nvalue\nunit\nuncertainty\ncondition\ntemperature\npressure\nenvironment\nstate\nmethod\nsource\nevidence-status\ndate\nnotes\n```\n\nNot every field will contain a value.\n\nMissing information must use MAT's explicit null-state vocabulary rather than being silently omitted.\n\n---\n\n## State Representation\n\nA material measurement is meaningful only in context.\n\nConceptually:\n\n\\[\nD =\nD(M,S,E,t,s)\n\\]\n\nwhere:\n\n- \\(M\\) = material identity;\n- \\(S\\) = physical state;\n- \\(E\\) = environment;\n- \\(t\\) = time;\n- \\(s\\) = scale.\n\nProcessing history may also affect the state.\n\nTherefore two samples with identical chemical composition are not automatically considered physically identical MAT states.\n\n---\n\n## Provenance\n\nEach scientifically meaningful claim should be traceable to one or more provenance objects.\n\nA provenance object may reference:\n\n- journal article;\n- standard;\n- database;\n- handbook;\n- patent;\n- thesis;\n- government dataset;\n- institutional dataset;\n- experimental record;\n- calculation;\n- simulation.\n\n---\n\n## Relationship Graph\n\nMAT relationships may eventually be represented as edges:\n\n```text\nSOURCE-RECORD\nRELATIONSHIP\nTARGET-RECORD\nCONDITIONS\nEVIDENCE\nSOURCE\n```\n\nExamples:\n\n```text\nHydrogen\nFORMS-COMPOUND-WITH\nOxygen\n```\n\n```text\nGraphite\nTRANSFORMS-TO\nDiamond\nhigh-pressure-high-temperature\n```\n\n```text\nMaterial-A\nMANUFACTURED-BY\nProcess-X\n```\n\nThis architecture allows MAT to evolve into a scientific knowledge graph.\n\n---\n",
+  "bodyHash": "28acd0c2b9475078f5e380616ad87d8238984c784a54b67fc20bf978aa2e0c0d",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

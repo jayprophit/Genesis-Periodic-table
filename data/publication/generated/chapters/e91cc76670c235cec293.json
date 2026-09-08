@@ -1,0 +1,1792 @@
+{
+  "id": "records/0002-Helium-He/0002-Helium-He.md",
+  "key": "e91cc76670c235cec293",
+  "mat": "MAT:0002",
+  "title": "0002 — Helium — He",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# 0002 — Helium — He\n\n```yaml\nmat_id: MAT:0002\nrecord_name: Helium\nsymbol: He\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 2\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0002\nlegacy_name: Helium\nreference_implementation: MAT:0001\n```\n\n# 0. Record Navigation\n\n## MAT Reference\n\n```text\nMAT:0000\n```\n\n## Previous Primary Record\n\n```text\nMAT:0001\n0001-Hydrogen-H\n```\n\n## Current Record\n\n```text\nMAT:0002\n0002-Helium-He\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                      |       Value | Unit / Status |\n| ----------------------------- | ----------: | ------------- |\n| MAT ID                        |    MAT:0002 | —             |\n| Element                       |      Helium | —             |\n| Symbol                        |          He | —             |\n| Atomic number                 |           2 | dimensionless |\n| Proton count                  |           2 | proton        |\n| Neutral electron count        |           2 | electron      |\n| Period                        |           1 | —             |\n| Group                         |          18 | noble gas     |\n| Block                         |           s | —             |\n| Ground electron configuration |         1s² | —             |\n| Ground electronic level       | \\(^{1}S_0\\) | —             |\n| Standard atomic weight        | 4.002602(2) | —             |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000019\n```\n\n---\n\n# 2. Closed-Shell Ground State\n\nNeutral ground-state helium has:\n\n$$\n1s^2\n$$\n\nwith ground level:\n\n$$\n{}^1S_0\n$$\n\nThe two electrons occupy the 1s orbital with opposite spin projection in the ground-state configuration.\n\nThis produces a closed electronic shell.\n\nHelium is therefore chemically much less reactive under ordinary conditions than Hydrogen.\n\nThis does **not** mean that Helium can never participate in:\n\n* ions;\n* excited states;\n* excimers;\n* molecular ions;\n* plasma states;\n* high-pressure interactions.\n\n---\n\n# 3. First Ionisation\n\nFor neutral helium:\n\n$$\nHe\n\\rightarrow\nHe^+\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I1}\n=\n24.587389011\\ \\mathrm{eV}\n$$\n\nwith uncertainty:\n\n$$\n2.5\\times10^{-8}\\ \\mathrm{eV}\n$$\n\nCanonical ion:\n\n```text\nMAT:0002:ION:He+1\n```\n\n---\n\n# 4. Second Ionisation\n\nFor singly ionized helium:\n\n$$\nHe^+\n\\rightarrow\nHe^{2+}\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I2}\n=\n54.4177655282\\ \\mathrm{eV}\n$$\n\nCanonical fully stripped ion:\n\n```text\nMAT:0002:ION:He+2\n```\n\n---\n\n# 5. Charge-State Family\n\nCanonical primary charge states:\n\n```text\nMAT:0002:ATOM:He\nMAT:0002:ION:He+1\nMAT:0002:ION:He+2\n```\n\nThey correspond conceptually to:\n\n```text\nHe\nHe+\nHe2+\n```\n\nThe fully ionized ⁴He nucleus is also an alpha particle:\n\n$$\n{}^4He^{2+}\n\\equiv\n\\alpha\n$$\n\nwhen nuclear identity is explicitly ⁴He.\n\nThe generic identifier:\n\n```text\nMAT:0002:ION:He+2\n```\n\nmust therefore retain isotope identity when nuclear properties matter.\n\n---\n\n# 6. Neutral Helium Is Monatomic\n\nUnlike Hydrogen under ordinary conditions, neutral elemental Helium is predominantly monatomic.\n\nTherefore the ordinary material manifestation is:\n\n$$\nHe\n$$\n\nrather than a stable neutral:\n\n$$\nHe_2\n$$\n\nground-state molecule analogous to H₂.\n\nHowever specialized species can exist, including:\n\n```text\nHe2+\nexcited helium dimers / excimers\ncluster ions\nhelium plasma\n```\n\nThese are dedicated child states and must not be confused with ordinary ground-state gaseous Helium.\n\n---\n\n# 7. Isotope Family\n\nCurrent MAT evaluated isotope branch:\n\n$$\n{}^3He\n$$\n\nthrough:\n\n$$\n{}^{10}He\n$$\n\nThe proton number remains:\n\n$$\nZ=2\n$$\n\nwhile neutron number changes:\n\n$$\nN=A-2\n$$\n\n---\n\n# 8. Helium-3 — ³He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n3.0160293201(25)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n\\frac12^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.00000134(3)\n$$\n\nThis number is not universal for every terrestrial or extraterrestrial helium source.\n\n³He has half-integer nuclear spin and is a **fermionic isotope**.\n\nThis distinction becomes critically important at ultralow temperatures.\n\n---\n\n# 9. Helium-4 — ⁴He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-4\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n4.00260325413(6)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n0^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.99999866(3)\n$$\n\n⁴He is a **bosonic isotope** because the nucleus has integer spin.\n\nIts low-temperature collective behavior is therefore fundamentally different from ³He.\n\n---\n\n# 10. Stable-Isotope Quantum Statistics\n\nThe contrast:\n\n$$\n{}^3He\n$$\n\nversus:\n\n$$\n{}^4He\n$$\n\nis one of MAT's clearest examples of isotope identity producing emergent macroscopic differences.\n\n### ³He\n\n```text\nnuclear spin: 1/2\nstatistics: fermionic\n```\n\n### ⁴He\n\n```text\nnuclear spin: 0\nstatistics: bosonic\n```\n\nThis difference contributes directly to their very different quantum-fluid behavior.\n\nThe element name alone:\n\n```text\nHelium\n```\n\nis therefore insufficient to specify all cryogenic properties.\n\n---\n\n# 11. Helium-5 — ⁵He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-5\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n5.012057(21)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n602\\pm22\\ \\mathrm{ys}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{ys}=10^{-24}\\ \\mathrm s\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 12. Helium-6 — ⁶He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-6\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n6.018885891(57)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nRADIOACTIVE\n```\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n806.92\\pm0.24\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay class:\n\n```text\nBETA-MINUS\n```\n\nCanonical daughter family:\n\n```text\nMAT:0003:ISO:Li-6\n```\n\nThe ⁶He nucleus is also an important neutron-rich nuclear-structure research system.\n\nDetailed halo-nucleus properties belong to its child nuclear record rather than the parent element summary.\n\n---\n\n# 13. Helium-7 — ⁷He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-7\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 5\n```\n\nRelative atomic mass:\n\n$$\n7.0279907(81)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n2.51\\pm0.07\\ \\mathrm{zs}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{zs}=10^{-21}\\ \\mathrm s\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac32\\right)^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 14. Helium-8 — ⁸He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-8\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 6\n```\n\nRelative atomic mass:\n\n$$\n8.033934390(95)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n119.5\\pm1.5\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nDominant decay family:\n\n```text\nBETA-MINUS\n```\n\nwith evaluated delayed-particle branches also present.\n\nThese branches should be represented explicitly in the dedicated isotope object.\n\n---\n\n# 15. Helium-9 — ⁹He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-9\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 7\n```\n\nRelative atomic mass:\n\n$$\n9.043946(50)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n\\approx\n2.5\\pm2.3\\ \\mathrm{zs}\n$$\n\nAdopted spin/parity:\n\n$$\n\\frac12^{(+)}\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\nLarge relative lifetime uncertainty must remain visible.\n\n---\n\n# 16. Helium-10 — ¹⁰He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-10\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 8\n```\n\nRelative atomic mass:\n\n$$\n10.05279(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n260\\pm40\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal evaluated decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n# 17. Nuclear-State Summary\n\n| Isotope |  p |  n | Stability / Half-Life | Spin-Parity |\n| ------- | -: | -: | --------------------- | ----------- |\n| ³He     |  2 |  1 | STABLE                | 1/2+        |\n| ⁴He     |  2 |  2 | STABLE                | 0+          |\n| ⁵He     |  2 |  3 | 602 ± 22 ys           | 3/2−        |\n| ⁶He     |  2 |  4 | 806.92 ± 0.24 ms      | 0+          |\n| ⁷He     |  2 |  5 | 2.51 ± 0.07 zs        | (3/2)−      |\n| ⁸He     |  2 |  6 | 119.5 ± 1.5 ms        | 0+          |\n| ⁹He     |  2 |  7 | 2.5 ± 2.3 zs          | 1/2(+)      |\n| ¹⁰He    |  2 |  8 | 260 ± 40 ys           | 0+          |\n\nStable isotopes use:\n\n```text\nhalf_life: NOT-APPLICABLE\n```\n\nrather than:\n\n```text\ninfinity\n```\n\n---\n\n# 18. Atomic Excitation\n\nSelected neutral-helium excitation energies include approximately:\n\n| Transition Family | Excitation Energy |\n| ----------------- | ----------------: |\n| 1s² → 1s2p        |        21.2180 eV |\n| 1s² → 1s3p        |        23.0870 eV |\n| 1s² → 1s4p        |        23.7421 eV |\n| 1s² → 1s5p        |        24.0458 eV |\n| 1s² → 1s6p        |        24.2110 eV |\n\nThe excitation series approaches the first ionization threshold.\n\nThese simplified transition labels do not replace full singlet/triplet and fine-structure-resolved spectroscopy.\n\n---\n\n# 19. Singlet and Triplet Electronic Structure\n\nHelium's two-electron system introduces behavior absent from one-electron Hydrogen.\n\nElectronic states may be classified into:\n\n```text\nSINGLET\nTRIPLET\n```\n\nspin families.\n\nThis provides an important MAT progression:\n\n```text\nHydrogen\n→ one-electron benchmark\n\nHelium\n→ interacting two-electron benchmark\n```\n\nElectron-electron interaction means Helium is no longer exactly described by the simplest one-electron Coulomb solution.\n\nApproximation and numerical methods become much more important.\n\n---\n\n# 20. Quantum-Mechanical Importance\n\nHelium is a fundamental test system for:\n\n* electron correlation;\n* variational methods;\n* perturbation theory;\n* quantum electrodynamics;\n* precision spectroscopy;\n* many-body approximations.\n\nThe basic Hamiltonian includes:\n\n```text\nelectron-nucleus attraction\n+\nelectron-nucleus attraction\n+\nelectron-electron repulsion\n```\n\nThe electron-electron term is what prevents simple separation into two completely independent Hydrogen-like electrons.\n\n---\n\n# 21. Ordinary Chemical State\n\nUnder ordinary conditions Helium is a noble gas with very low chemical reactivity.\n\nCanonical ordinary state:\n\n```text\nmonatomic neutral He\n```\n\nHelium therefore differs fundamentally from Hydrogen's ordinary molecular state:\n\n```text\nH2\n```\n\nOrdinary bulk elemental Helium is monatomic.\n\nHowever, neutral \\(^{4}He_2\\) does possess an extraordinarily weak\nvan-der-Waals bound state.\n\nTherefore:\n\n\\[\n\\boxed{\n\\text{He}_2\\text{ exists as a fragile quantum dimer}\n\\neq\n\\text{ordinary bulk Helium is molecular}\n}\n\\]\n\nThis differs fundamentally from Hydrogen, whose ordinary elemental\ngas is predominantly \\(H_2\\).\n\n---\n\n# 22. Excited Molecular and Ionic Helium\n\nSpecialized Helium species can nevertheless include:\n\n```text\nHe2+\nexcited He2*\ncluster ions\nexcited atomic He*\n```\n\nThese states matter in:\n\n* electrical discharges;\n* plasma;\n* spectroscopy;\n* excimer physics;\n* ion chemistry.\n\nThey must remain separate from the ordinary neutral atomic state.\n\n---\n\n# 23. Cryogenic ⁴He Branch\n\nCanonical branch:\n\n```text\nMAT:0002:ISO:He-4\n    ↓\nMAT:0002:PHASE:He4-LIQUID\n```\n\nImportant reference values include:\n\n### Normal boiling point\n\n$$\nT_b\n=\n4.2221\\ \\mathrm K\n$$\n\nat:\n\n$$\nP=101325\\ \\mathrm{Pa}\n$$\n\n### Critical point\n\n$$\nT_c\n=\n5.1953\\ \\mathrm K\n$$\n\n$$\nP_c\n=\n227460\\ \\mathrm{Pa}\n$$\n\n### Lower lambda point\n\n$$\nT_\\lambda\n=\n2.1768\\ \\mathrm K\n$$\n\nThe lambda transition separates:\n\n```text\nHe I\nnormal liquid\n```\n\nfrom:\n\n```text\nHe II\nsuperfluid liquid\n```\n\nunder the specified pressure/state conditions.\n\n---\n\n# 24. He I and He II\n\nFor ⁴He:\n\n```text\nHe I\n```\n\ndenotes the normal liquid phase above the lambda transition within the relevant liquid region.\n\n```text\nHe II\n```\n\ndenotes the superfluid phase below the lambda transition.\n\nThis is an emergent collective quantum state.\n\nIt is not a change in chemical element identity.\n\n$$\n{}^4He\n$$\n\nremains ⁴He on both sides of the phase transition.\n\n---\n\n# 25. Helium-3 Quantum Fluid\n\nLiquid ³He also develops superfluid phases, but at temperatures far below the ordinary ⁴He lambda transition.\n\nThe exact transition depends on:\n\n* pressure;\n* phase;\n* magnetic conditions.\n\nTherefore MAT does **not** assign one universal:\n\n```text\nhelium_superfluid_temperature\n```\n\nproperty.\n\nInstead:\n\n```text\n3He superfluid state\n```\n\nand:\n\n```text\n4He He-II state\n```\n\nare separate phase records.\n\n---\n\n# 26. Solidification\n\nHelium has an unusual phase diagram.\n\nAt low pressure, ordinary cooling does not produce the conventional liquid-solid triple-point sequence found in many substances.\n\nSolid Helium requires elevated pressure.\n\nMAT will therefore store:\n\n```text\nmelting pressure\ntemperature\nisotope\nphase\n```\n\ntogether.\n\nA generic:\n\n```text\nhelium melting point\n```\n\nwithout pressure is scientifically incomplete.\n\n---\n\n# 27. Frequency and Spectral Structure\n\nHelium has many distinct spectral mechanisms.\n\nRelevant categories include:\n\n```text\natomic electronic transitions\nfine structure\nmetastable-state transitions\nisotope shifts\nhyperfine structure in 3He\nplasma emission\nion spectra\nexcimer spectra\nNMR for 3He\ncollective excitations in liquid helium\n```\n\nThere is no universal scalar:\n\n```text\nhelium_frequency\n```\n\n---\n\n# 28. Magnetic-State Distinction\n\nGround-state ⁴He has:\n\n$$\nI=0\n$$\n\nwhile ³He has:\n\n$$\nI=\\frac12\n$$\n\nTherefore magnetic-resonance and nuclear-spin behavior are isotope-dependent.\n\nHelium is **not** represented as a conventional permanent-magnet material.\n\nEngineered magnetization fields such as:\n\n```text\naxial\nradial\nmultipole permanent magnetisation\n```\n\nare:\n\n```text\nNOT-APPLICABLE\n```\n\nto free bulk Helium as a conventional permanent magnetic solid.\n\n---\n\n# 29. Plasma Branch\n\nCanonical family:\n\n```text\nMAT:0002:PLASMA:He\n```\n\nPossible species include:\n\n```text\nHe\nHe*\nHe+\nHe2+\nelectrons\nmolecular/cluster ions\n```\n\nA Helium plasma record requires:\n\n```yaml\nelectron_temperature:\nion_temperature:\nelectron_density:\nion_density:\nneutral_density:\nspecies_distribution:\npressure:\nelectric_field:\nmagnetic_field:\nfrequency:\ntime:\n```\n\n---\n\n# 30. Material Interaction\n\nHelium can interact with materials through:\n\n* implantation;\n* diffusion;\n* trapping;\n* bubble formation;\n* irradiation damage coupling;\n* leak/permeation behavior;\n* cryogenic thermal contact.\n\nThese are host-material relationships.\n\nThey are not intrinsic mechanical properties of elemental Helium.\n\n---\n\n# 31. Nuclear Relationship to Hydrogen\n\nThe Hydrogen record already contains:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nTherefore:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nis the daughter nucleus of tritium beta decay.\n\nLikewise the D-T fusion branch produces:\n\n$$\n{}^4He\n$$\n\nplus a neutron.\n\nThese forward relationships should now be changed from:\n\n```text\nRESERVED-PENDING-RECORD\n```\n\nto:\n\n```text\nRESOLVED\n```\n\nonce the corresponding Helium isotope child files exist.\n\n---\n\n# 32. Applications\n\nMajor Helium application relationships include:\n\n```text\nCRYOGENICS\nSUPERCONDUCTING MAGNET COOLING\nLOW-TEMPERATURE PHYSICS\nLEAK DETECTION\nPRESSURIZATION / PURGING\nINERT ATMOSPHERES\nSEMICONDUCTOR PROCESSING\nSHIELDING GAS\nBALLOONS / LIFT\nMASS SPECTROMETRY\nGAS CHROMATOGRAPHY\nPLASMA / SPECTROSCOPY\nNUCLEAR SCIENCE\nNEUTRON DETECTION WITH 3He\nQUANTUM RESEARCH\n```\n\nEach application should eventually specify the relevant isotope and material state.\n\n---\n\n# 33. Safety\n\nHelium is not ordinarily a flammable gas.\n\nImportant hazards are primarily physical and state-dependent:\n\n```text\nCOMPRESSED-GAS HAZARD\nCRYOGENIC HAZARD\nOXYGEN-DISPLACEMENT / ASPHYXIATION\nPRESSURE BUILDUP\nMATERIAL BRITTLENESS AT CRYOGENIC TEMPERATURE\n```\n\nCryogenic Helium also requires consideration of very high expansion from liquid to gas and appropriate ventilation/pressure-relief design.\n\n³He and ⁴He are stable and nonradioactive.\n\nShort-lived artificial Helium isotopes require isotope-specific nuclear/radiological treatment.\n\n---\n\n# 34. MAT State Cloud\n\nThe Helium parent should eventually resolve to a state network such as:\n\n$$\n\\{\n{}^3He,\n{}^4He,\n{}^5He,\n{}^6He,\n{}^7He,\n{}^8He,\n{}^9He,\n{}^{10}He,\nHe,\nHe^+,\nHe^{2+},\nHe^*,\nHe_2^+,\nHe_2^*,\nHe_{\\rm I},\nHe_{\\rm II},\n{}^3He_{\\rm liquid},\n{}^3He_{\\rm superfluid},\nHe_{\\rm solid},\nHe_{\\rm plasma},\n\\dots\n\\}\n$$\n\nThis demonstrates again:\n\n$$\n\\boxed{\n\\text{element identity}\n\\neq\n\\text{complete state identity}\n}\n$$\n\n---\n\n# 35. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- ASSET-ID: MAT:0002:FIG:V01:001 -->\n<!-- DESCRIPTION: Physical manifestation of liquid/gaseous Helium -->\n\n<!-- MAT-VISUAL: V02 -->\n<!-- ASSET-ID: MAT:0002:FIG:V02:001 -->\n<!-- DESCRIPTION: Conventional Helium atomic identity -->\n\n<!-- MAT-VISUAL: V04 -->\n<!-- ASSET-ID: MAT:0002:FIG:V04:001 -->\n<!-- DESCRIPTION: Two-electron Helium ground-state probability representation -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- ASSET-ID: MAT:0002:FIG:V05:001 -->\n<!-- DESCRIPTION: Helium isotope map 3He through 10He -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- ASSET-ID: MAT:0002:FIG:V06:001 -->\n<!-- DESCRIPTION: Mechanism-resolved Helium spectral fingerprint -->\n\n<!-- MAT-VISUAL: V10 -->\n<!-- ASSET-ID: MAT:0002:FIG:V10:001 -->\n<!-- DESCRIPTION: He-I / He-II / cryogenic phase visualization -->\n```\n\n---\n\n# 36. Governing Principle Families\n\n```yaml\ngoverned_by:\n\n  atomic_structure:\n    - MAT-QM-003\n    - MAT-QM-006\n    - MAT-QM-010\n    - MAT-QM-011\n    - MAT-QM-026\n\n  electron_correlation:\n    - MAT-QM-034\n    - MAT-QM-035\n\n  ionization:\n    - MAT-QM-016\n\n  isotope_nuclear_state:\n    - MAT-NUC-001\n    - MAT-NUC-002\n    - MAT-NUC-003\n    - MAT-NUC-006\n    - MAT-NUC-007\n\n  phase_behavior:\n    - MAT-THERMO-010\n    - MAT-THERMO-012\n    - MAT-THERMO-023\n    - MAT-THERMO-024\n\n  quantum_statistics:\n    - MAT-QM-011\n    - MAT-QM-030\n    - MAT-QM-031\n\n  field_response:\n    - MAT-PHYS-021\n    - MAT-QM-019\n```\n\n---\n\n# 37. Evidence Summary\n\n```yaml\natomic_identity:\n  evidence_type: REPLICATED\n  confidence: A\n\nionization_energies:\n  evidence_type: EVALUATED\n  confidence: A\n\nstable_isotope_masses:\n  evidence_type: EVALUATED\n  confidence: A\n\nshort_lived_isotope_states:\n  evidence_type: EVALUATED-NUCLEAR-DATA\n  confidence: A-B\n\nhelium4_thermophysics:\n  evidence_type: EVALUATED\n  confidence: A\n\nhelium3_quantum_fluid:\n  evidence_type: ESTABLISHED-EXPERIMENTAL-FIELD\n  confidence: A\n\nhigh_pressure_and_extreme_states:\n  evidence_type: MIXED\n  confidence: VARIABLE\n```\n\n---\n\n# 38. Migration Status\n\n```yaml\nlegacy_record: G0002\n\nmigration:\n  identity: CORE-COMPLETE\n  electronic: CORE-COMPLETE\n  ionization: CORE-COMPLETE\n  isotope_branch: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  quantum_fluid: CORE-COMPLETE\n  cryogenic: CORE-COMPLETE\n  spectroscopy: PARTIAL\n  chemistry: CORE-COMPLETE\n  plasma: CORE-COMPLETE\n  material_interactions: CORE-COMPLETE\n  applications: CORE-COMPLETE\n  safety: CORE-COMPLETE\n\nremaining:\n  - full spectral dataset\n  - detailed He3 thermophysical data\n  - detailed He4 thermophysical data\n  - phase diagrams\n  - molecular ion children\n  - excimer children\n  - calculations\n  - experiment registry\n  - relationship registry\n  - people and intellectual lineage\n  - visual manifest\n  - graph manifest\n  - table manifest\n  - legacy G0002 audit\n```\n\n---\n\n# 39. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_registry: \"PASS\"\n  relationship_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n",
+  "bodyHash": "4a01d8bab9d51d2cacf1c06d167be3c8d6200f1e6400e56ee0a4f8a0b075ed26",
+  "header": {
+    "mat_id": "MAT:0002",
+    "record_name": "Helium",
+    "symbol": "He",
+    "record_class": "CHEMICAL_ELEMENT",
+    "atomic_number": 2,
+    "parent_id": "MAT:0000",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0002",
+    "legacy_name": "Helium",
+    "reference_implementation": "MAT:0001"
+  },
+  "structured": [
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-03-Helium-3.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-3",
+        "parent_id": "MAT:0002",
+        "name": "Helium-3",
+        "notation": "3He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 1,
+          "mass_number": 3,
+          "spin_parity": "1/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 3.0160293201,
+          "uncertainty": 2.5e-9,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE",
+          "source_id": "SRC-000008"
+        },
+        "quantum_statistics": {
+          "class": "FERMION",
+          "basis": "half-integer nuclear spin"
+        },
+        "important_relationships": [
+          {
+            "type": "DAUGHTER-OF",
+            "source": "MAT:0001:ISO:H-3",
+            "process": "BETA-MINUS"
+          },
+          {
+            "type": "NEUTRON-CAPTURE-REACTANT",
+            "reaction": "3He + n -> 3H + 1H"
+          }
+        ],
+        "cryogenic": {
+          "quantum_fluid": true,
+          "superfluid_states": true,
+          "transition_temperature": "STATE-AND-PRESSURE-DEPENDENT"
+        },
+        "applications": [
+          "neutron_detection",
+          "cryogenic_refrigeration",
+          "low_temperature_physics",
+          "nuclear_magnetic_resonance"
+        ],
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-04-Helium-4.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-4",
+        "parent_id": "MAT:0002",
+        "name": "Helium-4",
+        "notation": "4He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 2,
+          "mass_number": 4,
+          "spin_parity": "0+"
+        },
+        "relative_atomic_mass": {
+          "value": 4.00260325413,
+          "uncertainty": 6e-11,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE",
+          "source_id": "SRC-000008"
+        },
+        "quantum_statistics": {
+          "class": "BOSON",
+          "basis": "integer nuclear spin"
+        },
+        "nuclear_identity": {
+          "bare_nucleus_name": "alpha particle",
+          "bare_nucleus_state": "4He2+"
+        },
+        "cryogenic": {
+          "normal_liquid_phase": "He-I",
+          "superfluid_phase": "He-II",
+          "normal_boiling_point": {
+            "value": 4.2221,
+            "unit": "K",
+            "pressure": {
+              "value": 101325,
+              "unit": "Pa"
+            },
+            "source_id": "SRC-000025"
+          },
+          "critical_point": {
+            "temperature": 5.1953,
+            "temperature_unit": "K",
+            "pressure": 227460,
+            "pressure_unit": "Pa",
+            "source_id": "SRC-000025"
+          },
+          "lower_lambda_point": {
+            "temperature": 2.1768,
+            "temperature_unit": "K",
+            "pressure": 5041.8,
+            "pressure_unit": "Pa",
+            "source_id": "SRC-000025"
+          }
+        },
+        "important_relationships": [
+          {
+            "type": "PRODUCT-OF",
+            "process": "D-T FUSION",
+            "source_records": [
+              "MAT:0001:ISO:H-2",
+              "MAT:0001:ISO:H-3"
+            ]
+          }
+        ],
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-05-Helium-5.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-5",
+        "parent_id": "MAT:0002",
+        "name": "Helium-5",
+        "notation": "5He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 3,
+          "mass_number": 5,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 5.012057,
+          "uncertainty": 0.000021,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 602,
+            "uncertainty": 22,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION",
+          "daughter": "MAT:0002:ISO:He-4"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-06-Helium-6.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-6",
+        "parent_id": "MAT:0002",
+        "name": "Helium-6",
+        "notation": "6He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 4,
+          "mass_number": 6,
+          "spin_parity": "0+"
+        },
+        "relative_atomic_mass": {
+          "value": 6.018885891,
+          "uncertainty": 5.7e-8,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 806.92,
+            "uncertainty": 0.24,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "daughter": "MAT:0003:ISO:Li-6",
+          "daughter_status": "RESERVED-PENDING-LITHIUM"
+        },
+        "nuclear_structure": {
+          "neutron_rich": true,
+          "halo_nucleus_research": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-07-Helium-7.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-7",
+        "parent_id": "MAT:0002",
+        "name": "Helium-7",
+        "notation": "7He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 5,
+          "mass_number": 7,
+          "spin_parity": "(3/2)-"
+        },
+        "relative_atomic_mass": {
+          "value": 7.0279907,
+          "uncertainty": 0.0000081,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 2.51,
+            "uncertainty": 0.07,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION",
+          "daughter": "MAT:0002:ISO:He-6"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-08-Helium-8.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-8",
+        "parent_id": "MAT:0002",
+        "name": "Helium-8",
+        "notation": "8He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 6,
+          "mass_number": 8,
+          "spin_parity": "0+"
+        },
+        "relative_atomic_mass": {
+          "value": 8.03393439,
+          "uncertainty": 9.5e-8,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 119.5,
+            "uncertainty": 1.5,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "delayed_particle_branches": true
+        },
+        "nuclear_structure": {
+          "neutron_rich": true,
+          "halo_or_skin_research": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-09-Helium-9.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-9",
+        "parent_id": "MAT:0002",
+        "name": "Helium-9",
+        "notation": "9He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 7,
+          "mass_number": 9,
+          "spin_parity": "1/2(+)"
+        },
+        "relative_atomic_mass": {
+          "value": 9.043946,
+          "uncertainty": 0.00005,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 2.5,
+            "uncertainty": 2.3,
+            "unit": "zs"
+          },
+          "uncertainty_flag": "VERY-LARGE"
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotope-10-Helium-10.yaml",
+      "data": {
+        "isotope_id": "MAT:0002:ISO:He-10",
+        "parent_id": "MAT:0002",
+        "name": "Helium-10",
+        "notation": "10He",
+        "nucleus": {
+          "protons": 2,
+          "neutrons": 8,
+          "mass_number": 10,
+          "spin_parity": "0+"
+        },
+        "relative_atomic_mass": {
+          "value": 10.05279,
+          "uncertainty": 0.00011,
+          "unit": "u",
+          "source_id": "SRC-000019"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 260,
+            "uncertainty": 40,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "TWO-NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-Isotopes.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:ISOTOPES",
+        "parent_id": "MAT:0002",
+        "version": "1.0.0",
+        "isotopes": [
+          {
+            "isotope_id": "MAT:0002:ISO:He-3",
+            "name": "Helium-3",
+            "notation": "3He",
+            "proton_number": 2,
+            "neutron_number": 1,
+            "mass_number": 3,
+            "relative_atomic_mass": {
+              "value": 3.0160293201,
+              "uncertainty": 2.5e-9,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.00000134,
+              "uncertainty": 3e-8,
+              "universal_constant": false,
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "1/2+",
+              "source_id": "SRC-000008"
+            },
+            "quantum_statistics": "FERMION"
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-4",
+            "name": "Helium-4",
+            "notation": "4He",
+            "proton_number": 2,
+            "neutron_number": 2,
+            "mass_number": 4,
+            "relative_atomic_mass": {
+              "value": 4.00260325413,
+              "uncertainty": 6e-11,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.99999866,
+              "uncertainty": 3e-8,
+              "universal_constant": false,
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "0+",
+              "source_id": "SRC-000008"
+            },
+            "quantum_statistics": "BOSON"
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-5",
+            "name": "Helium-5",
+            "notation": "5He",
+            "proton_number": 2,
+            "neutron_number": 3,
+            "mass_number": 5,
+            "relative_atomic_mass": {
+              "value": 5.012057,
+              "uncertainty": 0.000021,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 602,
+                "uncertainty": 22,
+                "unit": "ys"
+              },
+              "spin_parity": "3/2-",
+              "decay": {
+                "principal_mode": "NEUTRON-EMISSION",
+                "daughter": "MAT:0002:ISO:He-4"
+              },
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-6",
+            "name": "Helium-6",
+            "notation": "6He",
+            "proton_number": 2,
+            "neutron_number": 4,
+            "mass_number": 6,
+            "relative_atomic_mass": {
+              "value": 6.018885891,
+              "uncertainty": 5.7e-8,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 806.92,
+                "uncertainty": 0.24,
+                "unit": "ms"
+              },
+              "spin_parity": "0+",
+              "decay": {
+                "principal_mode": "BETA-MINUS",
+                "daughter": "MAT:0003:ISO:Li-6",
+                "target_status": "RESERVED-PENDING-LITHIUM"
+              },
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-7",
+            "name": "Helium-7",
+            "notation": "7He",
+            "proton_number": 2,
+            "neutron_number": 5,
+            "mass_number": 7,
+            "relative_atomic_mass": {
+              "value": 7.0279907,
+              "uncertainty": 0.0000081,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 2.51,
+                "uncertainty": 0.07,
+                "unit": "zs"
+              },
+              "spin_parity": "(3/2)-",
+              "decay": {
+                "principal_mode": "NEUTRON-EMISSION",
+                "daughter": "MAT:0002:ISO:He-6"
+              },
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-8",
+            "name": "Helium-8",
+            "notation": "8He",
+            "proton_number": 2,
+            "neutron_number": 6,
+            "mass_number": 8,
+            "relative_atomic_mass": {
+              "value": 8.03393439,
+              "uncertainty": 9.5e-8,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 119.5,
+                "uncertainty": 1.5,
+                "unit": "ms"
+              },
+              "spin_parity": "0+",
+              "decay": {
+                "principal_mode": "BETA-MINUS",
+                "delayed_neutron_branch": true
+              },
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-9",
+            "name": "Helium-9",
+            "notation": "9He",
+            "proton_number": 2,
+            "neutron_number": 7,
+            "mass_number": 9,
+            "relative_atomic_mass": {
+              "value": 9.043946,
+              "uncertainty": 0.00005,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 2.5,
+                "uncertainty": 2.3,
+                "unit": "zs"
+              },
+              "spin_parity": "1/2(+)",
+              "uncertainty_flag": "HIGH",
+              "decay": {
+                "principal_mode": "NEUTRON-EMISSION"
+              },
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0002:ISO:He-10",
+            "name": "Helium-10",
+            "notation": "10He",
+            "proton_number": 2,
+            "neutron_number": 8,
+            "mass_number": 10,
+            "relative_atomic_mass": {
+              "value": 10.05279,
+              "uncertainty": 0.00011,
+              "unit": "u",
+              "source_id": "SRC-000019"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 260,
+                "uncertainty": 40,
+                "unit": "ys"
+              },
+              "spin_parity": "0+",
+              "decay": {
+                "principal_mode": "TWO-NEUTRON-EMISSION"
+              },
+              "source_id": "SRC-000008"
+            }
+          }
+        ],
+        "rules": {
+          "stable_half_life_representation": "NOT-APPLICABLE",
+          "natural_isotopic_composition_is_universal": false,
+          "isotope_mass_equals_standard_atomic_weight": false,
+          "isotope_quantum_statistics_may_affect_bulk_phase_behavior": true
+        }
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/properties/0002-Helium-He-Core-Properties.yaml",
+      "data": {
+        "property_registry_id": "MAT:0002:REG:CORE-PROPERTIES",
+        "record_id": "MAT:0002",
+        "version": "1.0.0",
+        "properties": [
+          {
+            "property_id": "identity.atomic-number",
+            "value": 2,
+            "unit": "1",
+            "evidence_type": "EVALUATED",
+            "confidence": "A"
+          },
+          {
+            "property_id": "identity.standard-atomic-weight",
+            "value": 4.002602,
+            "uncertainty": 0.000002,
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000019"
+          },
+          {
+            "property_id": "electronic.ground-configuration",
+            "value": "1s2",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000005"
+          },
+          {
+            "property_id": "electronic.ground-level",
+            "value": "1S0",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000005"
+          },
+          {
+            "property_id": "electronic.ionization-energy.first",
+            "value": 24.587389011,
+            "uncertainty": 2.5e-8,
+            "unit": "eV",
+            "state": "neutral atomic helium ground state",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000005"
+          },
+          {
+            "property_id": "electronic.ionization-energy.second",
+            "value": 54.4177655282,
+            "uncertainty": 1e-9,
+            "unit": "eV",
+            "state": "He+ ground state",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000005"
+          },
+          {
+            "property_id": "thermal.normal-boiling-point",
+            "value": 4.2221,
+            "unit": "K",
+            "isotope": "4He",
+            "pressure": {
+              "value": 101325,
+              "unit": "Pa"
+            },
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000025"
+          },
+          {
+            "property_id": "thermal.critical-temperature",
+            "value": 5.1953,
+            "unit": "K",
+            "isotope": "4He",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000025"
+          },
+          {
+            "property_id": "pressure.critical",
+            "value": 227460,
+            "unit": "Pa",
+            "isotope": "4He",
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000025"
+          },
+          {
+            "property_id": "phase.lambda-transition.lower",
+            "value": 2.1768,
+            "unit": "K",
+            "isotope": "4He",
+            "pressure": {
+              "value": 5041.8,
+              "unit": "Pa"
+            },
+            "transition": {
+              "from": "He-I",
+              "to": "He-II"
+            },
+            "evidence_type": "EVALUATED",
+            "confidence": "A",
+            "source_id": "SRC-000025"
+          }
+        ],
+        "null_properties": {
+          "ordinary_bulk_neutral_diatomic_form": {
+            "value": false
+          },
+          "neutral_helium_dimer": {
+            "value": true,
+            "class": "EXTREMELY-WEAK-VAN-DER-WAALS-BOUND-STATE"
+          },
+          "conventional_atmospheric_pressure_melting_point": {
+            "value": "NOT-APPLICABLE",
+            "note": "Helium solidification requires pressure; phase behavior must be recorded with pressure rather than as one generic melting point.\n"
+          },
+          "permanent_engineered_magnetization": {
+            "value": "NOT-APPLICABLE"
+          }
+        }
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/structured/0002-Helium-He-Chemistry-Processes-Environments.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:PROCESSES",
+        "record_id": "MAT:0002",
+        "version": "1.0.0",
+        "ordinary_state": {
+          "bulk_form": "MONATOMIC",
+          "neutral_atom": "MAT:0002:ATOM:He"
+        },
+        "helium_dimer": {
+          "id": "MAT:0002:MOL:He2",
+          "formula": "He2",
+          "class": "EXTREMELY-WEAK-VAN-DER-WAALS-DIMER",
+          "ordinary_bulk_form": false,
+          "bound_ground_state_exists_for_4He2": true,
+          "note": "Neutral 4He2 possesses an extraordinarily weak bound state. This does not make molecular He2 the ordinary bulk form of helium analogous to H2 for hydrogen.\n"
+        },
+        "specialized_molecular_states": [
+          {
+            "id": "MAT:0002:MOL:He2",
+            "class": "VAN-DER-WAALS-DIMER"
+          },
+          {
+            "id": "MAT:0002:ION:He2+1",
+            "class": "MOLECULAR-ION"
+          },
+          {
+            "id": "MAT:0002:MOL:He2*",
+            "class": "EXCIMER / EXCITED-DIMER-FAMILY"
+          },
+          {
+            "id": "MAT:0002:ION:HeH+1",
+            "formula": "HeH",
+            "charge": 1,
+            "name": "helium hydride ion"
+          }
+        ],
+        "chemistry": {
+          "ambient": {
+            "reactivity": "VERY-LOW",
+            "reason": "CLOSED-SHELL-ELECTRONIC-STRUCTURE",
+            "absolute_chemical_impossibility": false
+          },
+          "helium_hydride": {
+            "id": "MAT:0002:ION:HeH+1",
+            "formula": "HeH+",
+            "physically_observed": true,
+            "astrophysical_detection": true,
+            "source_id": "SRC-000031"
+          },
+          "sodium_helium": {
+            "future_compound_id": "MAT:CMP:Na2He",
+            "formula": "Na2He",
+            "class": "HIGH-PRESSURE-COMPOUND",
+            "experimentally_synthesized": true,
+            "stability": {
+              "pressure_above": {
+                "approximate_value": 113,
+                "unit": "GPa"
+              }
+            },
+            "source_id": "SRC-000032"
+          }
+        },
+        "processes": [
+          {
+            "process_id": "MAT:0002:PROC:EXCITATION",
+            "name": "Atomic Helium Excitation",
+            "input": "MAT:0002:ATOM:He",
+            "outputs": [
+              "SINGLET-EXCITED-STATES",
+              "TRIPLET-EXCITED-STATES",
+              "METASTABLE-STATES"
+            ],
+            "drivers": [
+              "photons",
+              "electron_collision",
+              "plasma"
+            ]
+          },
+          {
+            "process_id": "MAT:0002:PROC:IONIZATION-1",
+            "name": "First Ionisation",
+            "reaction": "He -> He+ + e-",
+            "threshold_energy": {
+              "value": 24.587389011,
+              "uncertainty": 2.5e-8,
+              "unit": "eV"
+            },
+            "source_id": "SRC-000005"
+          },
+          {
+            "process_id": "MAT:0002:PROC:IONIZATION-2",
+            "name": "Second Ionisation",
+            "reaction": "He+ -> He2+ + e-",
+            "threshold_energy": {
+              "value": 54.4177655282,
+              "uncertainty": 1e-9,
+              "unit": "eV"
+            },
+            "source_id": "SRC-000005"
+          },
+          {
+            "process_id": "MAT:0002:PROC:LIQUEFACTION",
+            "name": "Helium Liquefaction",
+            "family": "CRYOGENIC",
+            "isotope": "4He",
+            "input_state": "GAS",
+            "output_state": "LIQUID-HE-I",
+            "pressure_required": true,
+            "temperature_required": true
+          },
+          {
+            "process_id": "MAT:0002:PROC:LAMBDA",
+            "name": "Helium-4 Lambda Transition",
+            "isotope": "4He",
+            "input_state": "MAT:0002:PHASE:He-I",
+            "output_state": "MAT:0002:PHASE:He-II",
+            "phase_transition": true,
+            "changes_element_identity": false,
+            "source_id": "SRC-000025"
+          },
+          {
+            "process_id": "MAT:0002:PROC:SOLIDIFICATION",
+            "name": "Helium Solidification",
+            "family": "PRESSURE-CRYOGENIC",
+            "pressure_required": true,
+            "note": "Helium does not have a useful single atmospheric-pressure melting-point entry. Temperature and pressure must be stored together.\n"
+          },
+          {
+            "process_id": "MAT:0002:PROC:HE3-SUPERFLUID",
+            "name": "Helium-3 Superfluid Transition",
+            "isotope": "3He",
+            "family": "QUANTUM-PHASE",
+            "temperature_regime": "MILLIKELVIN",
+            "pressure_dependent": true,
+            "magnetic_field_dependent": true
+          },
+          {
+            "process_id": "MAT:0002:PROC:HE3-NEUTRON-CAPTURE",
+            "name": "Helium-3 Neutron Capture",
+            "reaction": "3He + n -> 3H + 1H",
+            "family": "NUCLEAR",
+            "calculation_id": "MAT:0002:CALC:001"
+          },
+          {
+            "process_id": "MAT:0002:PROC:IMPLANTATION",
+            "name": "Helium Implantation into Material",
+            "family": "MATERIAL-INTERACTION",
+            "possible_outputs": [
+              "interstitial_helium",
+              "trapped_helium",
+              "helium_vacancy_complex",
+              "helium_cluster",
+              "helium_bubble"
+            ]
+          },
+          {
+            "process_id": "MAT:0002:PROC:NA2HE",
+            "name": "High-Pressure Sodium-Helium Compound Formation",
+            "family": "EXTREME-PRESSURE-CHEMISTRY",
+            "product": "MAT:CMP:Na2He",
+            "pressure_regime": {
+              "approximate_lower_stability": 113,
+              "unit": "GPa"
+            },
+            "source_id": "SRC-000032"
+          }
+        ],
+        "environments": {
+          "AMBIENT": {
+            "dominant_state": "MONATOMIC-NEUTRAL-GAS",
+            "chemical_reactivity": "VERY-LOW"
+          },
+          "CRYOGENIC": {
+            "effects": [
+              "liquefaction",
+              "quantum_fluid_behavior",
+              "superfluid_4He"
+            ]
+          },
+          "MILLIKELVIN": {
+            "effects": [
+              "helium3_quantum_fluid",
+              "helium3_superfluid_phases"
+            ]
+          },
+          "HIGH_PRESSURE": {
+            "effects": [
+              "solidification",
+              "altered_phase_behavior",
+              "extreme_pressure_chemistry"
+            ]
+          },
+          "ELECTRIC_FIELD": {
+            "effects": [
+              "Stark_response",
+              "ion_acceleration_when_charged"
+            ]
+          },
+          "MAGNETIC_FIELD": {
+            "effects": [
+              "isotope_specific_spin_response",
+              "helium3_NMR",
+              "helium3_superfluid_phase_effects"
+            ]
+          },
+          "PHOTONIC": {
+            "effects": [
+              "excitation",
+              "ionization",
+              "spectroscopy"
+            ]
+          },
+          "PLASMA": {
+            "species": [
+              "He",
+              "He*",
+              "He+1",
+              "He+2",
+              "electrons",
+              "molecular_ions",
+              "excimer_states"
+            ]
+          },
+          "MATERIAL_HOST": {
+            "effects": [
+              "implantation",
+              "diffusion",
+              "trapping",
+              "clustering",
+              "bubble_formation"
+            ]
+          },
+          "ASTROPHYSICAL": {
+            "relevant_states": [
+              "He",
+              "He+",
+              "HeH+",
+              "plasma_states"
+            ]
+          }
+        },
+        "context": {
+          "organic": {
+            "normal_structural_role": "NOT-APPLICABLE",
+            "process_environment_role": true
+          },
+          "inorganic": {
+            "ambient_bonding": "VERY-LOW",
+            "ionic_and_extreme_pressure_chemistry": true
+          },
+          "biological": {
+            "normal_metabolic_element": false,
+            "primary_effect_class": "PHYSICAL",
+            "oxygen_displacement_hazard": true
+          }
+        },
+        "safety": {
+          "flammable": false,
+          "hazards": [
+            "compressed_gas",
+            "oxygen_displacement",
+            "cryogenic_exposure",
+            "pressure_buildup",
+            "material_embrittlement_from_extreme_cold"
+          ],
+          "isotope_specific": {
+            "stable_3He": "NONRADIOACTIVE",
+            "stable_4He": "NONRADIOACTIVE",
+            "unstable_isotopes": "NUCLEAR-SAFETY-CONTEXT-REQUIRED"
+          }
+        },
+        "rules": {
+          "low_reactivity_means_impossible_chemistry": false,
+          "ordinary_bulk_helium_is_diatomic": false,
+          "neutral_helium_dimer_exists": true,
+          "helium_dimer_equals_hydrogen_molecule_analogue": false,
+          "phase_transition_changes_element_identity": false,
+          "implantation_effect_is_intrinsic_mechanical_property": false
+        },
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/structured/0002-Helium-He-Graph-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:GRAPHS",
+        "record_id": "MAT:0002",
+        "version": "1.0.0",
+        "graphs": [
+          {
+            "graph_id": "MAT:0002:GRAPH:001",
+            "filename": "0002-Helium-He-GRAPH-001-Isotope-Lifetime-Map.svg",
+            "data_filename": "0002-Helium-He-GRAPH-001-Isotope-Lifetime-Map.csv",
+            "title": "Helium Isotope Stability and Lifetime",
+            "source_ids": [
+              "SRC-000008"
+            ],
+            "status": "GENERATED",
+            "rule": "Stable isotopes are not plotted as measured infinite lifetimes."
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:002",
+            "filename": "0002-Helium-He-GRAPH-002-Atomic-Energy-Levels.svg",
+            "data_filename": "0002-Helium-He-GRAPH-002-Atomic-Energy-Levels.csv",
+            "title": "Selected Neutral Helium Energy Levels",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:003",
+            "filename": "0002-Helium-He-GRAPH-003-Emission-Spectrum.svg",
+            "data_filename": "0002-Helium-He-GRAPH-003-Emission-Spectrum.csv",
+            "title": "Neutral Helium Emission Spectrum",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:004",
+            "filename": "0002-Helium-He-GRAPH-004-He4-Phase-Map.svg",
+            "data_filename": "0002-Helium-He-GRAPH-004-He4-Phase-Map.csv",
+            "title": "Helium-4 Phase Map",
+            "source_ids": [
+              "SRC-000025"
+            ],
+            "status": "THERMOPHYSICAL-DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:005",
+            "filename": "0002-Helium-He-GRAPH-005-Lambda-Line.svg",
+            "data_filename": "0002-Helium-He-GRAPH-005-Lambda-Line.csv",
+            "title": "Helium-4 Lambda Line",
+            "source_ids": [
+              "SRC-000025"
+            ],
+            "status": "THERMOPHYSICAL-DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:006",
+            "filename": "0002-Helium-He-GRAPH-006-He3-Phase-Map.svg",
+            "data_filename": "0002-Helium-He-GRAPH-006-He3-Phase-Map.csv",
+            "title": "Helium-3 Low-Temperature Phase Map",
+            "source_ids": [
+              "SRC-000026",
+              "SRC-000029"
+            ],
+            "status": "DATASET-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:007",
+            "filename": "0002-Helium-He-GRAPH-007-He3-He4-Comparison.svg",
+            "data_filename": "0002-Helium-He-GRAPH-007-He3-He4-Comparison.csv",
+            "title": "Helium-3 Versus Helium-4 Quantum-Fluid Comparison",
+            "status": "READY-FOR-DESIGN",
+            "rule": "Comparison must separate isotope, statistics, pressure and phase. Do not imply one universal superfluid transition temperature.\n"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:008",
+            "filename": "0002-Helium-He-GRAPH-008-Ionization-Energies.svg",
+            "data_filename": "0002-Helium-He-GRAPH-008-Ionization-Energies.csv",
+            "title": "Helium First and Second Ionization Energies",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0002:GRAPH:009",
+            "filename": "0002-Helium-He-GRAPH-009-He2-Dimer-Potential.svg",
+            "data_filename": "0002-Helium-He-GRAPH-009-He2-Dimer-Potential.csv",
+            "title": "Weakly Bound Helium Dimer",
+            "source_ids": [
+              "SRC-000033"
+            ],
+            "status": "SOURCE-DATA-REQUIRED"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/structured/0002-Helium-He-Quantum-Fluids.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:QUANTUM-FLUIDS",
+        "record_id": "MAT:0002",
+        "version": "1.0.0",
+        "helium_4": {
+          "isotope_id": "MAT:0002:ISO:He-4",
+          "statistics": "BOSONIC",
+          "phases": {
+            "He_I": {
+              "class": "NORMAL-LIQUID",
+              "isotope": "4He",
+              "phase_transition_boundary": "LAMBDA-LINE"
+            },
+            "He_II": {
+              "class": "SUPERFLUID",
+              "isotope": "4He",
+              "collective_quantum_state": true,
+              "phase_transition_boundary": "LAMBDA-LINE"
+            }
+          },
+          "lower_lambda_reference": {
+            "temperature": 2.1768,
+            "unit": "K",
+            "pressure": 5041.8,
+            "pressure_unit": "Pa",
+            "source_id": "SRC-000025"
+          },
+          "important_phenomena": [
+            "superfluid_flow",
+            "quantized_vortices",
+            "second_sound",
+            "collective_excitations",
+            "fountain_effect"
+          ]
+        },
+        "helium_3": {
+          "isotope_id": "MAT:0002:ISO:He-3",
+          "statistics": "FERMIONIC",
+          "normal_fluid": {
+            "equation_of_state_source": "SRC-000026"
+          },
+          "superfluid": {
+            "exists": true,
+            "mechanism_class": "PAIRED-FERMION-CONDENSATE",
+            "discovered": 1972,
+            "principal_phases": [
+              "A",
+              "B",
+              "A1 under appropriate field conditions"
+            ],
+            "transition_conditions": {
+              "temperature": "MILLIKELVIN-RANGE",
+              "pressure_dependent": true,
+              "magnetic_field_dependent": true
+            },
+            "source_id": "SRC-000029"
+          }
+        },
+        "rules": {
+          "helium3_and_helium4_share_one_superfluid_temperature": false,
+          "phase_transition_changes_element_identity": false,
+          "isotope_quantum_statistics_are_interchangeable": false
+        }
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/structured/0002-Helium-He-Visual-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:VISUALS",
+        "record_id": "MAT:0002",
+        "version": "1.0.0",
+        "visuals": {
+          "V01": {
+            "filename": "0002-Helium-He-FIG-001-Natural-Material-State.png",
+            "path": "images/natural/",
+            "status": "SOURCE-IMAGE-REQUIRED"
+          },
+          "V02": {
+            "filename": "0002-Helium-He-FIG-002-Atomic-Identity.svg",
+            "path": "images/scientific/",
+            "status": "GENERATED"
+          },
+          "V03": {
+            "filename": "0002-Helium-He-DIAGRAM-001-Atomic-and-Excimer-States.svg",
+            "path": "diagrams/bonding/",
+            "status": "GENERATED"
+          },
+          "V04": {
+            "files": [
+              "0002-Helium-He-FIG-003-Two-Electron-Probability.svg",
+              "0002-Helium-He-FIG-004-Singlet-Triplet-Energy-Structure.svg"
+            ],
+            "path": "images/quantum/",
+            "status": "GENERATED"
+          },
+          "V05": {
+            "filename": "0002-Helium-He-FIG-005-Isotope-Map.svg",
+            "path": "images/isotope/",
+            "status": "GENERATED"
+          },
+          "V06": {
+            "filename": "0002-Helium-He-FIG-006-Spectral-Fingerprint.svg",
+            "path": "images/spectral/",
+            "status": "GENERATED"
+          },
+          "V07": {
+            "filename": "0002-Helium-He-FIG-007-Physical-Property-Dashboard.svg",
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V08": {
+            "filename": "0002-Helium-He-DIAGRAM-002-Ionization-State.svg",
+            "path": "diagrams/fields/",
+            "status": "GENERATED"
+          },
+          "V09": {
+            "filename": "0002-Helium-He-DIAGRAM-003-Isotope-Spin-Magnetic-State.svg",
+            "path": "diagrams/fields/",
+            "status": "GENERATED"
+          },
+          "V10": {
+            "filename": "0002-Helium-He-FIG-008-Quantum-Fluid-Phase.svg",
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V11": {
+            "filename": "0002-Helium-He-DIAGRAM-004-Implantation-Bubble-Formation.svg",
+            "path": "diagrams/processes/",
+            "status": "GENERATED"
+          },
+          "V12": {
+            "filename": "0002-Helium-He-FIG-009-Phase-Diagram.svg",
+            "path": "images/properties/",
+            "status": "THERMOPHYSICAL-DATASET-REQUIRED"
+          },
+          "V13": {
+            "filename": "0002-Helium-He-DIAGRAM-005-Transformation-Network.svg",
+            "path": "diagrams/processes/",
+            "status": "GENERATED"
+          },
+          "V14": {
+            "filename": "0002-Helium-He-DIAGRAM-006-Knowledge-Graph.svg",
+            "path": "diagrams/relationships/",
+            "status": "GENERATED"
+          },
+          "V15": {
+            "files": [
+              "0002-Helium-He-MODEL-SCI-001-Electron-Density.glb",
+              "0002-Helium-He-MODEL-SCI-002-Isotope-Nuclear-Schematic.glb"
+            ],
+            "path": "models/scientific/",
+            "status": "GENERATED"
+          },
+          "V16": {
+            "filename": "0002-Helium-He-MODEL-DATA-001.glb",
+            "path": "models/data-extruded/",
+            "status": "MASTER-TRANSFORM-PENDING"
+          },
+          "V17": {
+            "filename": "0002-Helium-He-FIG-010-Applications.svg",
+            "path": "images/applications/",
+            "status": "GENERATED"
+          },
+          "V18": {
+            "filename": "0002-Helium-He-DIAGRAM-007-Evidence-Provenance.svg",
+            "path": "diagrams/relationships/",
+            "status": "GENERATED"
+          }
+        },
+        "summary": {
+          "visual_slots": 18,
+          "two_dimensional_assets": 17,
+          "scientific_3d_models": 2,
+          "data_extruded_models": 1,
+          "total_visual_assets": 20,
+          "generated_assets_complete": false
+        }
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/data/structured/0002-Helium-He.yaml",
+      "data": {
+        "mat_id": "MAT:0002",
+        "record_name": "Helium",
+        "symbol": "He",
+        "record_class": "CHEMICAL_ELEMENT",
+        "atomic_number": 2,
+        "legacy": {
+          "legacy_id": "G0002",
+          "migration_status": "IN-PROGRESS"
+        },
+        "identity": {
+          "proton_count": 2,
+          "neutral_electron_count": 2,
+          "period": 1,
+          "group": 18,
+          "block": "s",
+          "ordinary_material_form": "MONATOMIC"
+        },
+        "atomic_weight": {
+          "value": 4.002602,
+          "uncertainty": 0.000002,
+          "source_id": "SRC-000019"
+        },
+        "electronic_ground_state": {
+          "configuration": "1s2",
+          "term": "1S0",
+          "source_id": "SRC-000005"
+        },
+        "ionization": {
+          "first": {
+            "process": "He -> He+ + e-",
+            "value": 24.587389011,
+            "uncertainty": 2.5e-8,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "second": {
+            "process": "He+ -> He2+ + e-",
+            "value": 54.4177655282,
+            "uncertainty": 1e-9,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          }
+        },
+        "atomic_states": [
+          {
+            "id": "MAT:0002:ATOM:He",
+            "charge": 0
+          },
+          {
+            "id": "MAT:0002:ION:He+1",
+            "charge": 1
+          },
+          {
+            "id": "MAT:0002:ION:He+2",
+            "charge": 2,
+            "note": "For isotope 4He, the bare nucleus is an alpha particle.\n"
+          }
+        ],
+        "isotope_branch": {
+          "evaluated_mass_numbers": {
+            "minimum": 3,
+            "maximum": 10
+          },
+          "stable": [
+            "MAT:0002:ISO:He-3",
+            "MAT:0002:ISO:He-4"
+          ],
+          "unstable": [
+            "MAT:0002:ISO:He-5",
+            "MAT:0002:ISO:He-6",
+            "MAT:0002:ISO:He-7",
+            "MAT:0002:ISO:He-8",
+            "MAT:0002:ISO:He-9",
+            "MAT:0002:ISO:He-10"
+          ]
+        },
+        "quantum_statistics": {
+          "helium_3": {
+            "nuclear_spin": "1/2",
+            "statistics": "FERMIONIC"
+          },
+          "helium_4": {
+            "nuclear_spin": "0",
+            "statistics": "BOSONIC"
+          }
+        },
+        "helium_4_reference_points": {
+          "normal_boiling_point": {
+            "value": 4.2221,
+            "unit": "K",
+            "pressure": {
+              "value": 101325,
+              "unit": "Pa"
+            },
+            "source_id": "SRC-000025"
+          },
+          "critical_temperature": {
+            "value": 5.1953,
+            "unit": "K",
+            "source_id": "SRC-000025"
+          },
+          "critical_pressure": {
+            "value": 227460,
+            "unit": "Pa",
+            "source_id": "SRC-000025"
+          },
+          "lower_lambda_point": {
+            "value": 2.1768,
+            "unit": "K",
+            "pressure": {
+              "value": 5041.8,
+              "unit": "Pa"
+            },
+            "transition": {
+              "from": "He-I",
+              "to": "He-II"
+            },
+            "source_id": "SRC-000025"
+          }
+        },
+        "molecular_ground_state": {
+          "ordinary_stable_neutral_diatomic": false
+        },
+        "plasma": {
+          "id": "MAT:0002:PLASMA:He"
+        },
+        "scientific_status": {
+          "atomic_identity": "ESTABLISHED",
+          "stable_isotopes": "ESTABLISHED",
+          "helium4_superfluidity": "ESTABLISHED",
+          "helium3_superfluidity": "ESTABLISHED",
+          "extreme_high_pressure_states": "ACTIVE-RESEARCH"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0002-Helium-He/relationships/0002-Helium-He-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:RELATIONSHIPS",
+        "record_id": "MAT:0002",
+        "relationships": [
+          {
+            "relationship_id": "MAT:0002:REL:0001",
+            "source": "MAT:0002:ISO:He-3",
+            "type": "ISOTOPE-OF",
+            "target": "MAT:0002"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0002",
+            "source": "MAT:0002:ISO:He-4",
+            "type": "ISOTOPE-OF",
+            "target": "MAT:0002"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0003",
+            "source": "MAT:0001:ISO:H-3",
+            "type": "DECAYS-TO",
+            "target": "MAT:0002:ISO:He-3",
+            "mechanism": "BETA-MINUS"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0004",
+            "source": "MAT:0001:ISO:H-2",
+            "type": "FUSES-WITH",
+            "target": "MAT:0001:ISO:H-3",
+            "products": [
+              "MAT:0002:ISO:He-4",
+              "NEUTRON"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0005",
+            "source": "MAT:0002:ISO:He-5",
+            "type": "DECAYS-TO",
+            "target": "MAT:0002:ISO:He-4",
+            "mechanism": "NEUTRON-EMISSION"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0006",
+            "source": "MAT:0002:ISO:He-6",
+            "type": "DECAYS-TO",
+            "target": "MAT:0003:ISO:Li-6",
+            "target_status": "RESOLVED",
+            "mechanism": "BETA-MINUS"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0007",
+            "source": "MAT:0002:ISO:He-4",
+            "type": "HAS-PHASE",
+            "target": "MAT:0002:PHASE:He-I"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0008",
+            "source": "MAT:0002:ISO:He-4",
+            "type": "HAS-PHASE",
+            "target": "MAT:0002:PHASE:He-II"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0009",
+            "source": "MAT:0002:PHASE:He-I",
+            "type": "TRANSFORMS-TO",
+            "target": "MAT:0002:PHASE:He-II",
+            "boundary": "LAMBDA-LINE"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0010",
+            "source": "MAT:0002:ISO:He-3",
+            "type": "HAS-QUANTUM-FLUID-PHASE",
+            "target": "MAT:0002:PHASE:He3-SUPERFLUID"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0011",
+            "source": "MAT:0002:ISO:He-3",
+            "type": "CAPTURES",
+            "target": "NEUTRON",
+            "products": [
+              "MAT:0001:ISO:H-3",
+              "MAT:0001:ISO:H-1"
+            ],
+            "application": [
+              "NEUTRON-DETECTION"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0012",
+            "source": "MAT:0002",
+            "type": "FORMS-ION",
+            "target": "MAT:0002:ION:He+1"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0013",
+            "source": "MAT:0002",
+            "type": "FORMS-ION",
+            "target": "MAT:0002:ION:He+2"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0014",
+            "source": "MAT:0002",
+            "type": "FORMS-EXCITED-DIMER",
+            "target": "MAT:0002:MOL:He2*",
+            "ordinary_ground_state_molecule": false
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0015",
+            "source": "MAT:0002",
+            "type": "FORMS-MOLECULAR-ION",
+            "target": "MAT:0002:ION:He2+1"
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0016",
+            "source": "MAT:0002",
+            "type": "CAN-BE-IMPLANTED-IN",
+            "target_scope": "SOLID-MATERIALS",
+            "possible_effects": [
+              "interstitial_helium",
+              "trapping",
+              "vacancy_interaction",
+              "bubble_formation"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0002:REL:0017",
+            "source": "MAT:0002",
+            "type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0002"
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    "records/0002-Helium-He/diagrams/bonding/0002-Helium-He-DIAGRAM-001-Atomic-and-Excimer-States.svg",
+    "records/0002-Helium-He/diagrams/fields/0002-Helium-He-DIAGRAM-002-Ionization-State.svg",
+    "records/0002-Helium-He/diagrams/fields/0002-Helium-He-DIAGRAM-003-Isotope-Spin-Magnetic-State.svg",
+    "records/0002-Helium-He/diagrams/processes/0002-Helium-He-DIAGRAM-004-Implantation-Bubble-Formation.svg",
+    "records/0002-Helium-He/diagrams/processes/0002-Helium-He-DIAGRAM-005-Transformation-Network.svg",
+    "records/0002-Helium-He/diagrams/relationships/0002-Helium-He-DIAGRAM-006-Knowledge-Graph.svg",
+    "records/0002-Helium-He/diagrams/relationships/0002-Helium-He-DIAGRAM-007-Evidence-Provenance.svg",
+    "records/0002-Helium-He/graphs/0002-Helium-He-GRAPH-001-Excitation-Series.svg",
+    "records/0002-Helium-He/graphs/0002-Helium-He-GRAPH-001-Isotope-Lifetime-Map.svg",
+    "records/0002-Helium-He/graphs/0002-Helium-He-GRAPH-008-Ionization-Energies.svg",
+    "records/0002-Helium-He/images/applications/0002-Helium-He-FIG-010-Applications.svg",
+    "records/0002-Helium-He/images/isotope/0002-Helium-He-FIG-005-Isotope-Map.svg",
+    "records/0002-Helium-He/images/properties/0002-Helium-He-FIG-007-Physical-Property-Dashboard.svg",
+    "records/0002-Helium-He/images/properties/0002-Helium-He-FIG-008-Quantum-Fluid-Phase.svg",
+    "records/0002-Helium-He/images/quantum/0002-Helium-He-FIG-003-Two-Electron-Probability.svg",
+    "records/0002-Helium-He/images/quantum/0002-Helium-He-FIG-004-Singlet-Triplet-Energy-Structure.svg",
+    "records/0002-Helium-He/images/scientific/0002-Helium-He-FIG-002-Atomic-Identity.svg",
+    "records/0002-Helium-He/images/spectral/0002-Helium-He-FIG-006-Spectral-Fingerprint.svg",
+    "records/0002-Helium-He/models/scientific/0002-Helium-He-MODEL-SCI-001-Electron-Density.glb",
+    "records/0002-Helium-He/models/scientific/0002-Helium-He-MODEL-SCI-002-Isotope-Nuclear-Schematic.glb"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-000005",
+      "source_aliases": [
+        "SRC-H-001"
+      ],
+      "title": "NIST Atomic Spectra Database",
+      "organization": "National Institute of Standards and Technology",
+      "version": "5.12",
+      "doi": "10.18434/T4W30F",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "atomic_ground_configuration",
+        "atomic_ground_level",
+        "ionization_energy",
+        "atomic_spectroscopy"
+      ]
+    },
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000025",
+      "source_aliases": [
+        "SRC-He-002"
+      ],
+      "title": "Thermophysical Properties of Helium-4 from 0.8 to 1500 K with Pressures to 2000 MPa",
+      "authors": [
+        "V. D. Arp",
+        "R. D. McCarty",
+        "D. G. Friend"
+      ],
+      "organization": "National Institute of Standards and Technology",
+      "report": "NIST Technical Note 1334",
+      "source_type": "EVALUATED-THERMOPHYSICAL-REFERENCE",
+      "supports": [
+        "helium4_normal_boiling_point",
+        "helium4_critical_point",
+        "helium4_lambda_line",
+        "helium4_phase_behavior",
+        "helium4_thermophysical_properties"
+      ]
+    },
+    {
+      "source_id": "SRC-000026",
+      "source_aliases": [
+        "SRC-He-003"
+      ],
+      "title": "Equation of State and Thermophysical Properties of Helium-3",
+      "authors": [
+        "Yonghua Huang",
+        "G. B. Chen",
+        "V. Arp",
+        "Ray Radebaugh"
+      ],
+      "organization": "National Institute of Standards and Technology",
+      "year": 2007,
+      "source_type": "THERMOPHYSICAL-MODEL",
+      "supports": [
+        "helium3_equation_of_state",
+        "helium3_phase_lines",
+        "helium3_thermophysical_properties"
+      ]
+    },
+    {
+      "source_id": "SRC-000029",
+      "source_aliases": [
+        "SRC-He-HIST-003"
+      ],
+      "title": "The Nobel Prize in Physics 1996",
+      "organization": "Nobel Prize Outreach",
+      "source_type": "INSTITUTIONAL-HISTORY",
+      "supports": [
+        "helium3_superfluidity",
+        "Lee",
+        "Osheroff",
+        "Richardson"
+      ]
+    },
+    {
+      "source_id": "SRC-000031",
+      "source_aliases": [
+        "SRC-He-005"
+      ],
+      "title": "Astrophysical detection of the helium hydride ion HeH+",
+      "authors": [
+        "Rolf Güsten",
+        "Helmut Wiesemeyer",
+        "David Neufeld",
+        "Karl M. Menten",
+        "et al."
+      ],
+      "journal": "Nature",
+      "year": 2019,
+      "volume": 568,
+      "pages": "357-359",
+      "doi": "10.1038/s41586-019-1090-x",
+      "source_type": "PRIMARY-ASTROPHYSICAL-OBSERVATION",
+      "supports": [
+        "helium_hydride_ion",
+        "astrophysical_HeH+",
+        "early_universe_chemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000032",
+      "source_aliases": [
+        "SRC-He-006"
+      ],
+      "title": "A stable compound of helium and sodium at high pressure",
+      "authors": [
+        "Xiao Dong",
+        "Artem R. Oganov",
+        "Alexander F. Goncharov",
+        "et al."
+      ],
+      "journal": "Nature Chemistry",
+      "year": 2017,
+      "volume": 9,
+      "pages": "440-445",
+      "doi": "10.1038/nchem.2716",
+      "source_type": "PRIMARY-EXPERIMENT-AND-COMPUTATION",
+      "supports": [
+        "Na2He",
+        "extreme_pressure_helium_chemistry",
+        "pressure_dependent_reactivity"
+      ]
+    },
+    {
+      "source_id": "SRC-000033",
+      "source_aliases": [
+        "SRC-He-007"
+      ],
+      "title": "Ultrafast manipulation of the weakly bound helium dimer",
+      "authors": [
+        "Maksim Kunitski",
+        "Qingze Guan",
+        "Holger Maschkiwitz",
+        "et al."
+      ],
+      "journal": "Nature Physics",
+      "year": 2021,
+      "volume": 17,
+      "pages": "174-178",
+      "doi": "10.1038/s41567-020-01081-3",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "neutral_helium_dimer",
+        "weak_van_der_Waals_binding",
+        "quantum_dimer_dynamics"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 15,
+    "graphs": 3,
+    "tables": 9,
+    "sources": 9
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

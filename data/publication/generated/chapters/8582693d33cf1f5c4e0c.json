@@ -1,0 +1,3311 @@
+{
+  "id": "records/0009-Fluorine-F/0009-Fluorine-F.md",
+  "key": "8582693d33cf1f5c4e0c",
+  "mat": "MAT:0009",
+  "title": "0009 — Fluorine — F",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# 0009 — Fluorine — F\n\n```yaml\nmat_id: MAT:0009\nrecord_name: Fluorine\nsymbol: F\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 9\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0009\nlegacy_name: Fluorine\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n  - MAT:0006\n  - MAT:0007\n  - MAT:0008\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0008\n0008-Oxygen-O\n```\n\nCurrent:\n\n```text\nMAT:0009\n0009-Fluorine-F\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                           | Value           |\n| ---------------------------------- | --------------- |\n| Element                            | Fluorine        |\n| Symbol                             | F               |\n| Atomic number                      | 9               |\n| Protons                            | 9               |\n| Neutral electrons                  | 9               |\n| Period                             | 2               |\n| Group                              | 17              |\n| Block                              | p               |\n| Ground configuration               | 1s²2s²2p⁵       |\n| Ground level                       | ²P°₃/₂          |\n| Standard atomic weight             | 18.998403163(6) |\n| Stable isotope                     | ¹⁹F             |\n| Ordinary elemental molecular state | F₂              |\n| State near 20 °C                   | gas             |\n| Common compound oxidation state    | −1              |\n\nPrimary sources:\n\n```text\nSRC-000157\nSRC-000158\nSRC-000159\nSRC-000160\nSRC-000161\n```\n\n---\n\n# 2. Second-Period Electronic Progression\n\nThe sequence now reaches:\n\n$$\n\\mathrm{O}:2p^4\n$$\n\n$$\n\\mathrm{F}:2p^5\n$$\n\nFluorine requires one additional electron to reach the closed-shell configuration:\n\n$$\n2p^6\n$$\n\ncorresponding to the Neon-like valence shell.\n\nThus Fluorine becomes MAT's principal second-period example of:\n\n```text\nONE-ELECTRON-BELOW-CLOSED-SHELL\n```\n\n---\n\n# 3. Atomic Ground State\n\nNeutral atomic Fluorine:\n\n$$\n1s^22s^22p^5\n$$\n\nGround level:\n\n$$\n{}^2P^\\circ_{3/2}\n$$\n\nThe neutral atom is therefore open-shell.\n\nCanonical state:\n\n```text\nMAT:0009:ATOM:F\n```\n\n---\n\n# 4. First Ionisation\n\n$$\nF\\rightarrow F^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0009:ION:F+1\n```\n\n---\n\n# 5. Ionisation Ladder\n\nNIST ASD v5.12 gives:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\n$$\nE_{I2}\n=\n34.97081\\pm0.00012\\ {\\rm eV}\n$$\n\n$$\nE_{I3}\n=\n[62.70798]\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I4}\n=\n[87.175]\\pm0.017\\ {\\rm eV}\n$$\n\n$$\nE_{I5}\n=\n[114.249]\\pm0.006\\ {\\rm eV}\n$$\n\n$$\nE_{I6}\n=\n157.16311\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I7}\n=\n185.1868\\pm0.0006\\ {\\rm eV}\n$$\n\n$$\nE_{I8}\n=\n(953.8983)\\pm0.0003\\ {\\rm eV}\n$$\n\n$$\nE_{I9}\n=\n(1103.1175302)\\pm0.0000019\\ {\\rm eV}\n$$\n\nSquare brackets and parentheses are retained as source evaluation qualifiers.\n\nCanonical states:\n\n```text\nMAT:0009:ATOM:F\n\nMAT:0009:ION:F+1\nMAT:0009:ION:F+2\nMAT:0009:ION:F+3\nMAT:0009:ION:F+4\nMAT:0009:ION:F+5\nMAT:0009:ION:F+6\nMAT:0009:ION:F+7\nMAT:0009:ION:F+8\nMAT:0009:ION:F+9\n```\n\n---\n\n# 6. Electron Affinity\n\nSelected NIST WebBook determination:\n\n$$\nEA(F)\n=\n3.401191\\pm0.000026\\ {\\rm eV}\n$$\n\nElectron attachment:\n\n$$\nF+e^-\n\\rightarrow\nF^-\n$$\n\nCanonical ion:\n\n```text\nMAT:0009:ION:F-1\n```\n\nThe resulting electron configuration is Neon-like:\n\n$$\n1s^22s^22p^6\n$$\n\n---\n\n# 7. Electron Affinity Versus Electronegativity\n\nThese are related but different concepts.\n\nElectron affinity concerns a process such as:\n\n$$\nF(g)+e^-\\rightarrow F^-(g)\n$$\n\nwhereas electronegativity describes the tendency of an atom in a bonded environment to attract electron density.\n\nTherefore:\n\n$$\n\\boxed{\nEA\n\\neq\n\\chi\n}\n$$\n\nMAT stores them in separate namespaces.\n\n---\n\n# 8. Electronegativity\n\nPauling electronegativity:\n\n$$\n\\chi_F=3.98\n$$\n\nFluorine is the highest-valued element on the conventional Pauling scale.\n\nThis produces an important MAT electronic coordinate:\n\n```text\nSTRONG-BOND-POLARIZATION\n```\n\nbut does not mean every bond to Fluorine is purely ionic.\n\n---\n\n# 9. Central Fluorine Principle\n\nThe strongest functional effect of Fluorine may occur through changing another material's electronic structure.\n\nGeneral pattern:\n\n$$\nX\n\\rightarrow\nX-F\n$$\n\ncan change:\n\n```text\ncharge distribution\nbond polarity\nformal oxidation state\nsurface energy\nchemical stability\nion transport\nelectronic structure\nmolecular conformation\nreaction pathway\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{small compositional addition}\n\\rightarrow\n\\text{large functional change}\n}\n$$\n\nis a legitimate MAT design relationship.\n\n---\n\n# 10. Natural Isotope Simplicity\n\nNatural Fluorine has one stable isotope:\n\n$$\n{}^{19}F\n$$\n\nRepresentative NIST isotopic composition:\n\n$$\n1\n$$\n\nThus standard terrestrial Fluorine is effectively monoisotopic in the conventional atomic-weight treatment.\n\n---\n\n# 11. Fluorine-19\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-19\n```\n\nRelative atomic mass:\n\n$$\n18.99840316273(92)\\ u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac12^+\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nNatural isotopic composition:\n\n$$\n1\n$$\n\nImportant applications:\n\n```text\n19F NMR\nMRI/MR spectroscopy of fluorinated systems\nmaterials characterization\nreaction tracing\nmolecular imaging research\n```\n\n---\n\n# 12. Fluorine-19 NMR\n\n¹⁹F combines:\n\n```text\nspin = 1/2\nnatural abundance ≈ 100%\nhigh magnetic sensitivity\nwide chemical-shift range\n```\n\nThis makes it an unusually useful magnetic-resonance nucleus.\n\nMAT rule:\n\n```text\nONE STABLE ISOTOPE\n```\n\ndoes not imply:\n\n```text\nLOW SPECTROSCOPIC INFORMATION\n```\n\n---\n\n# 13. Fluorine-18\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-18\n```\n\nRelative atomic mass:\n\n$$\n18.00093733(50)\\ u\n$$\n\nPrincipal decay family:\n\n```text\nBETA-PLUS\n+\nELECTRON-CAPTURE\n```\n\nDaughter:\n\n```text\nMAT:0008:ISO:O-18\n```\n\nImportant use:\n\n```text\nPOSITRON-EMISSION-TOMOGRAPHY\n```\n\nA modern evaluated half-life is approximately:\n\n$$\n109.7\\ {\\rm min}\n$$\n\nExact adopted decay constants and branch fractions belong in the isotope-child file.\n\n---\n\n# 14. Diagnostic Versus Power Isotope\n\n¹⁸F releases nuclear decay energy.\n\nHowever its approximately 110-minute half-life makes it unsuitable for long-duration radioisotope power.\n\nMAT therefore separates:\n\n```text\nDECAY ENERGY          = PRESENT\nMEDICAL UTILITY       = VERY HIGH\nLONG-TERM POWER       = VERY LOW\nLONG-TERM STORAGE     = VERY LOW\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{radioactive}\n\\neq\n\\text{useful radioisotope power source}\n}\n$$\n\n---\n\n# 15. Fluorine Isotope Family\n\nThe current NIST atomic-mass table spans:\n\n$$\n{}^{14}F\n$$\n\nthrough:\n\n$$\n{}^{31}F\n$$\n\nin its listed dataset.\n\nOnly ¹⁹F is stable.\n\nOther entries include:\n\n```text\nproton-unbound states\nbeta-plus emitters\nbeta-minus emitters\nbeta-delayed neutron emitters\nneutron-rich nuclei\nestimated masses\n```\n\nMass-table presence alone does not define bound-state stability.\n\n---\n\n# 16. Atomic Fluorine\n\nAtomic Fluorine:\n\n$$\n2p^5\n$$\n\ncontains one unpaired electron.\n\nTherefore isolated neutral F is:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\nHIGHLY REACTIVE\n```\n\nBut ordinary elemental Fluorine is principally molecular:\n\n$$\nF_2\n$$\n\nThus:\n\n$$\n\\boxed{\nF\n\\neq\nF_2\n}\n$$\n\n---\n\n# 17. Molecular Fluorine\n\nCanonical molecule:\n\n```text\nMAT:0009:MOL:F2\n```\n\nGround electronic state:\n\n$$\nX\\,{}^1\\Sigma_g^+\n$$\n\nGeometry:\n\n```text\nLINEAR\n```\n\nEquilibrium bond distance:\n\n$$\nr_e\\approx1.412\\ {\\rm \\AA}\n$$\n\nRepresentative vibrational constant:\n\n$$\n\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\n$$\n\nRepresentative equilibrium rotational constant:\n\n$$\nB_e\\approx0.8893\\ {\\rm cm^{-1}}\n$$\n\n---\n\n# 18. Atomic Versus Molecular Magnetism\n\nAtomic F:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\n```\n\nGround-state \\(F_2\\):\n\n```text\nCLOSED-SHELL\nSINGLET\nDIAMAGNETIC\n```\n\nTherefore:\n\n$$\n\\boxed{\nM_{F({\\rm atom})}\n\\neq\nM_{F_2({\\rm molecule})}\n}\n$$\n\nAgain, assembly changes magnetic behavior without changing elemental identity.\n\n---\n\n# 19. Frequency Architecture\n\nThere is no universal Fluorine frequency.\n\nSeparate mechanisms include:\n\n```text\nF I atomic electronic transitions\nF II ionic transitions\nF2 molecular vibration\nF2 molecular rotation\nF2 electronic transitions\n19F NMR\nHF vibration\nC-F molecular vibrations\nsolid fluoride phonons\nplasma emission\n```\n\nRequired MAT rule:\n\n```text\nNO UNIVERSAL FLUORINE FREQUENCY\n```\n\n---\n\n# 20. F–F Bond Counterexample\n\nRSC's representative bond-enthalpy table gives approximately:\n\n$$\nD(F-F)\\sim155\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nwhile representative heteroatomic bond enthalpies include:\n\n$$\nH-F\\sim565\\ {\\rm kJ\\,mol^{-1}}\n$$\n\n$$\nC-F\\sim485\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nThese are tabulated bond-enthalpy references, not universal exact dissociation energies for every molecular environment.\n\nThe important result is:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{extreme reactant bond strength}\n}\n$$\n\n---\n\n# 21. Full Reaction-Energy Principle\n\nFluorination cannot be understood by examining only the F–F bond.\n\nA reaction depends on:\n\n$$\n\\Delta E\n\\sim\n\\sum E_{\\rm bonds\\ broken}\n-\n\\sum E_{\\rm bonds\\ formed}\n$$\n\nplus:\n\n```text\nentropy\nphase\nsolvation\nsurface energy\nactivation barriers\nelectronic-state effects\n```\n\nMAT therefore evaluates:\n\n```text\nBEFORE STATE\n+\nPATH\n+\nAFTER STATE\n```\n\nrather than assigning reactivity from one bond.\n\n---\n\n# 22. Physical State\n\nNear ordinary conditions, elemental Fluorine is a very pale yellow reactive gas.\n\nRepresentative RSC phase temperatures:\n\n$$\nT_m=53.48\\ {\\rm K}\n$$\n\n$$\nT_b=85.04\\ {\\rm K}\n$$\n\nState path:\n\n$$\nF_2(g)\n\\rightarrow\nF_2(l)\n\\rightarrow\nF_2(s)\n$$\n\nLow temperature does not automatically mean chemical inertness.\n\n---\n\n# 23. Oxidation-State Architecture\n\nElemental:\n\n$$\nF_2\n$$\n\nhas formal oxidation state:\n\n$$\n0\n$$\n\nIn ordinary compounds Fluorine is assigned:\n\n$$\n\\boxed{-1}\n$$\n\nBecause Fluorine is the most electronegative conventional element, it does not take a positive oxidation state in normal compound formalism.\n\nThis makes Fluorine an unusually clean oxidation-state anchor.\n\n---\n\n# 24. Hydrogen Relationship\n\nResolved parent relationship:\n\n```text\nMAT:0001\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nMAT:CMP:HF\n```\n\nMolecular HF is linear.\n\nImportant relationship classes:\n\n```text\nchemical bonding\nacid-base chemistry\nhydrogen bonding\nmineral chemistry\nsurface processing\nsilica/glass chemistry\nspectroscopy\n```\n\nHF properties remain compound-specific.\n\n---\n\n# 25. HF State Dependence\n\nMAT must separate:\n\n```text\nHF(g)\nanhydrous HF(l)\nconcentrated HF solutions\ndilute aqueous fluoride/HF systems\nfluoride salts\n```\n\nbecause:\n\n$$\n\\boxed{\n\\text{same elemental pair}\n+\n\\text{different environment}\n=\n\\text{different chemistry}\n}\n$$\n\n---\n\n# 26. Silicon / Glass Relationship\n\nFuture parent relationship:\n\n```text\nMAT:0009\n↔\nMAT:0014\n```\n\nTarget status:\n\n```text\nRESERVED-PENDING-SILICON\n```\n\nImportant Si–F products include:\n\n```text\nSiF4\nfluorosilicate species\nsurface-bound Si-F states\n```\n\nThe selective reactivity of HF/fluoride chemistry with silica creates a major:\n\n```text\nCHEMISTRY\n→\nMATERIAL-PROCESSING\n```\n\nrelationship.\n\n---\n\n# 27. Lithium Relationship\n\nResolved:\n\n```text\nMAT:0003\n↔\nMAT:0009\n```\n\nImportant material:\n\n```text\nMAT:CMP:LiF\n```\n\nRelationship classes:\n\n```text\nionic solid\nbattery interphase\nmolten salt\nelectrochemical material\noptical/ceramic material\n```\n\n---\n\n# 28. FLiBe Relationship Closure\n\nEarlier MAT relationships contained:\n\n```text\nLi\n+\nBe\n+\nfuture F\n```\n\nfor FLiBe-type salts.\n\nFluorine now resolves the parent-element triad:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0009 Fluorine\n```\n\nRepresentative components:\n\n$$\nLiF+BeF_2\n$$\n\nThis becomes a resolved three-parent materials relationship.\n\nSpecific salt compositions and thermophysical properties remain separate material records.\n\n---\n\n# 29. Boron Relationship\n\nResolved:\n\n```text\nMAT:0005\n↔\nMAT:0009\n```\n\nImportant species:\n\n```text\nBF3\nBF4-\nboron fluorides\nfluoroborate families\n```\n\nBF₃:\n\n```text\nTRIGONAL-PLANAR\n```\n\napproximately:\n\n$$\n120^\\circ\n$$\n\nIt is a classic Lewis-acid system.\n\n---\n\n# 30. Carbon Relationship\n\nResolved:\n\n```text\nMAT:0006\n↔\nMAT:0009\n```\n\nImportant families include:\n\n```text\nC-F bonds\nfluorocarbons\nfluoropolymers\nfluorinated pharmaceuticals\nsurface fluorination\nfluorinated electrolytes\n```\n\nMajor material example:\n\n$$\n(-CF_2-CF_2-)_n\n$$\n\nor PTFE.\n\n---\n\n# 31. PTFE / Fluoropolymer Architecture\n\nPTFE and related fluoropolymers demonstrate:\n\n```text\nstrong C-F bonding\nlow surface energy\nchemical resistance\nelectrical insulation\ndifferent wetting behavior\n```\n\nThese are polymer/material properties.\n\nThey are not intrinsic bulk properties of elemental Fluorine.\n\n---\n\n# 32. Surface Fluorination\n\nA thin fluorinated surface layer can change:\n\n```text\nwetting\nadhesion\nsurface energy\nchemical compatibility\nelectrical behavior\nbiological interaction\n```\n\nwithout changing most of the object's bulk composition.\n\nCore rule:\n\n$$\n\\boxed{\n\\text{surface chemistry}\n\\neq\n\\text{bulk chemistry}\n}\n$$\n\n---\n\n# 33. Nitrogen Relationship\n\nResolved:\n\n```text\nMAT:0007\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nNF3\n```\n\nApplications can include electronics-manufacturing and plasma-processing chemistry.\n\nThe compound itself is not equivalent to atomic F or F₂.\n\n---\n\n# 34. Oxygen Relationship\n\nResolved:\n\n```text\nMAT:0008\n↔\nMAT:0009\n```\n\nImportant oxygen fluorides include:\n\n```text\nOF2\nO2F2\n```\n\nThese provide a valuable formal-oxidation-state exception.\n\nBecause F is more electronegative than O, Oxygen can receive positive formal oxidation states in Oxygen–Fluorine compounds.\n\nTherefore:\n\n$$\n\\boxed{\nO\\approx-2\n}\n$$\n\nis not universal.\n\n---\n\n# 35. Relative Electronegativity Principle\n\nFormal oxidation assignment depends on the relative electronegativities of bonded atoms.\n\nThus:\n\n```text\nO-H\n```\n\nand:\n\n```text\nO-F\n```\n\ndo not assign the same formal oxidation sign to Oxygen.\n\nMAT therefore avoids element-wide oxidation-state defaults when compound context changes the assignment.\n\n---\n\n# 36. Semiconductor Plasma Processing\n\nFluorine-containing precursor families include:\n\n```text\nCF4\nNF3\nSF6\nother fluorocarbons\n```\n\nPlasma excitation can produce reactive species including:\n\n```text\nF radicals\nmolecular radicals\npositive ions\nnegative ions\nexcited fragments\n```\n\nGeneral transformation:\n\n$$\n\\boxed{\n\\text{stable precursor}\n+\n\\text{plasma energy}\n\\rightarrow\n\\text{reactive processing state}\n}\n$$\n\n---\n\n# 37. Silicon Etching Architecture\n\nRepresentative path:\n\n```text\nSi-containing surface\n+\nactivated F chemistry\n→\nvolatile Si-F products\n→\nmaterial removal\n```\n\nThe complete process depends on:\n\n```text\nprecursor\nplasma power\npressure\nsurface material\ntemperature\nion energy\nradical flux\nmask chemistry\nreactor geometry\n```\n\nMAT stores this as process/environment data rather than as an intrinsic elemental property.\n\n---\n\n# 38. Nuclear-Processing Relationship\n\nFuture relationship:\n\n```text\nMAT:0009\n↔\nMAT:0092 Uranium\n```\n\nImportant compound:\n\n```text\nUF6\n```\n\nIts volatility enables processing of Uranium in molecular form.\n\nCritical distinction:\n\n```text\nFLUORINE\n=\nPROCESS-ENABLING CHEMISTRY\n```\n\nnot:\n\n```text\nFLUORINE\n=\nURANIUM NUCLEAR ENERGY SOURCE\n```\n\nNo operational enrichment or device parameters belong in the Fluorine element record.\n\n---\n\n# 39. High Oxidation-State Stabilisation\n\nStrongly electronegative Fluorine ligands can stabilize high formal oxidation states in other elements.\n\nFuture examples include families associated with:\n\n```text\nSF6\nUF6\nPt fluorides\ntransition-metal fluorides\n```\n\nMAT principle:\n\n$$\n\\boxed{\n\\text{ligand identity}\n\\rightarrow\n\\text{accessible electronic/oxidation state}\n}\n$$\n\n---\n\n# 40. Noble-Gas Chemistry Preview\n\nFuture Xenon relationships include:\n\n```text\nXeF2\nXeF4\nXeF6\n```\n\nThese demonstrate:\n\n$$\n\\boxed{\n\\text{chemical inertness}\n\\neq\n\\text{absolute impossibility of compound formation}\n}\n$$\n\nThe relationship remains:\n\n```text\nRESERVED-PENDING-XENON\n```\n\n---\n\n# 41. Coordination Geometry Generator\n\nFluorine participates in diverse geometries depending on the central atom.\n\nExamples:\n\n```text\nHF   → linear\nBF3  → trigonal planar\nCF4  → tetrahedral\nSF6  → octahedral\nXeF2 → linear\nXeF4 → square planar\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{Fluorine ligand}\n\\neq\n\\text{one universal geometry}\n}\n$$\n\nGeometry emerges from the whole electronic structure.\n\n---\n\n# 42. Fluoride Ion\n\nCanonical object:\n\n```text\nMAT:0009:ION:F-1\n```\n\nElectronic configuration:\n\n$$\n1s^22s^22p^6\n$$\n\nFluoride is not merely the endpoint of electron capture.\n\nIn suitable solids it may be a mobile charge carrier.\n\n---\n\n# 43. Fluoride-Ion Conduction\n\nGeneral transport:\n\n$$\nF^-\n\\rightarrow\nF^-\n$$\n\nbetween lattice sites.\n\nCandidate material families include:\n\n```text\nalkaline-earth fluorides\nrare-earth fluorides\nfluorite-structure materials\nmixed fluorides\nfluoride solid electrolytes\n```\n\nState variables include:\n\n```text\nvacancies\ninterstitials\ndopants\ntemperature\ncrystal phase\ngrain boundaries\ndefect concentration\n```\n\nThis adds another MAT mobile-ion family:\n\n```text\nH+\nLi+\nO2-\nF-\n```\n\n---\n\n# 44. Battery / Electrochemical Branch\n\nFluorine occurs in:\n\n```text\nelectrolyte salts\nsolid electrolytes\ninterphases\nfluorinated solvents/additives\nmetal fluorides\nconversion electrodes\nLiF-rich surface layers\n```\n\nStrong bonding can sometimes improve stability.\n\nBut:\n\n$$\n\\boxed{\n\\text{high stability}\n\\not\\Rightarrow\n\\text{easy reversibility}\n}\n$$\n\nThis creates a materials-design trade-off.\n\n---\n\n# 45. Organic Molecular Design\n\nSubstitution of H or another group by F can change:\n\n```text\ndipole distribution\nmetabolic stability\nconformation\nlipophilicity\nacidity/basicity\nprotein binding\nreaction selectivity\n```\n\nThe effect is molecular-context dependent.\n\nTherefore:\n\n$$\n\\boxed{\n\\text{single-atom substitution}\n\\rightarrow\n\\text{potentially large molecular-function change}\n}\n$$\n\nwithout implying that fluorination always improves a molecule.\n\n---\n\n# 46. Biological State Separation\n\nElemental F₂:\n\n```text\nHIGHLY REACTIVE\nHIGHLY HAZARDOUS\nNO NORMAL BIOLOGICAL ROLE\n```\n\nFluoride ion in minerals/biological systems:\n\n```text\nCONTEXT-DEPENDENT\nDOSE-DEPENDENT\nCHEMICAL-FORM-DEPENDENT\n```\n\nOrganofluorines:\n\n```text\nMOLECULE-SPECIFIC\n```\n\nTherefore there is no scientifically useful scalar:\n\n```text\nBIOLOGICAL VALUE OF FLUORINE\n```\n\n---\n\n# 47. Environmental State Separation\n\nElemental F₂ does not persist as a major free natural reservoir because of its reactivity.\n\nNatural Fluorine occurs largely as fluoride-containing minerals.\n\nImportant examples:\n\n```text\nfluorite\nfluorapatite\ncryolite\nother fluoride minerals\n```\n\nPersistence of synthetic fluorinated compounds must be evaluated compound by compound.\n\nElemental electronegativity does not by itself determine environmental persistence.\n\n---\n\n# 48. Elemental-Fluorine Production Principle\n\nThe stable natural chemical state is generally fluoride, not free F₂.\n\nProducing F₂ therefore requires external energy.\n\nHistorical/industrial electrochemical concept:\n\n$$\nF^-\n\\xrightarrow{\\rm electrical\\ energy}\nF_2\n$$\n\nHenri Moissan isolated elemental Fluorine in 1886 through electrolysis of a fluoride/HF system.\n\nThis is a clean MAT example of:\n\n$$\n\\boxed{\n\\text{external energy}\n\\rightarrow\n\\text{less thermodynamically favoured elemental state}\n}\n$$\n\nDetailed industrial operating instructions belong outside the elemental reference record.\n\n---\n\n# 49. Materials Compatibility\n\nMechanical strength alone does not predict compatibility with Fluorine environments.\n\nRelevant variables include:\n\n```text\nsurface state\npassivation\ntemperature\npressure\nF2 concentration\nHF exposure\nwater content\nmaterial composition\ntime\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{mechanical strength}\n\\neq\n\\text{chemical compatibility}\n}\n$$\n\n---\n\n# 50. Causali E — Electron Capture\n\nInitial state:\n\n$$\nB=F\n$$\n\nIntervention:\n\n$$\nA=e^-\n$$\n\nCandidate state:\n\n$$\nC=F^-\n$$\n\nThis yields a closed-shell anion.\n\n---\n\n# 51. Causali E — Surface Fluorination\n\nInitial material:\n\n$$\nS_0=M\n$$\n\nIntervention:\n\n```text\nfluorination process\n```\n\nCandidate surface:\n\n$$\nC=M-F_{\\rm surface}\n$$\n\nPotential changed outputs:\n\n```text\nsurface energy\nwetting\nchemical resistance\nelectronic structure\nadhesion\n```\n\nBulk composition may remain largely unchanged.\n\n---\n\n# 52. Causali E — Plasma Processing\n\nInitial state:\n\n```text\nstable fluorinated precursor\n+\nsolid surface\n```\n\nEnvironment:\n\n```text\nplasma\nelectric field\nelectron-energy distribution\npressure\n```\n\nCandidate reactive state:\n\n```text\nF radical / ion / excited fragment\n```\n\nCandidate material result:\n\n```text\nsurface reaction\nvolatile product\netching\ndeposition modification\ncleaning\n```\n\n---\n\n# 53. Causali E — Isotope Decay\n\nInitial state:\n\n$$\n{}^{18}F\n$$\n\nTime evolution:\n\n$$\n{}^{18}F\n\\rightarrow\n{}^{18}O\n+\ne^+\n+\n\\nu_e\n$$\n\nThis provides:\n\n```text\nknown parent\nknown daughter\nmeasurable half-life\ndetectable annihilation photons\n```\n\nand therefore a particularly strong measured causal path.\n\n---\n\n# 54. Main Fluorine Result\n\nFluorine introduces a distinct MAT design principle:\n\n$$\n\\boxed{\n\\text{an element can exert its greatest influence by changing}\n\\newline\n\\text{the electronic state of another material}\n}\n$$\n\nIt also reinforces:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{strong elemental bond}\n}\n$$\n\nand:\n\n$$\n\\boxed{\n\\text{bond stability}\n\\neq\n\\text{reversibility}\n}\n$$\n\nThese three rules make Fluorine a major materials-design node.\n\n---\n\n# 55. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  molecular_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  NMR_architecture: \"PASS\"\n  fluoride_material_architecture: \"PASS\"\n  mobile_ion_architecture: \"PASS\"\n  surface_architecture: \"PASS\"\n  polymer_architecture: \"PASS\"\n  process_architecture: \"PASS\"\n  oxidation_state_architecture: \"PASS\"\n  environmental_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe F₂ molecular layer is consistent with the NIST diatomic compilation: the ground state is \\(X\\,^1\\Sigma_g^+\\); the legacy values \\(r_e\\approx1.412\\) Å, \\(\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\\), and \\(B_e\\approx0.8893\\ {\\rm cm^{-1}}\\) are appropriate reference constants. The RSC compilation also supports the useful comparison **F–F ≈155, C–F ≈485 and H–F ≈565 kJ/mol**, plus Pauling electronegativity **3.98**. ([NIST WebBook][2])\n\nRSC gives elemental F₂ melting at **53.48 K** and boiling at **85.04 K**. It also credits Henri Moissan with successful isolation in **1886**, following failed attempts by Davy, Gore and others; this will become important in the later People & Intellectual Lineage file. ([Periodic Table][3])\n",
+  "bodyHash": "2bdfa3aec00eb54fc1d528d63d2145670cdc125e9f40a0e976c4a00931082059",
+  "header": {
+    "mat_id": "MAT:0009",
+    "record_name": "Fluorine",
+    "symbol": "F",
+    "record_class": "CHEMICAL_ELEMENT",
+    "atomic_number": 9,
+    "parent_id": "MAT:0000",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0009",
+    "legacy_name": "Fluorine",
+    "reference_implementation": "- MAT:0001"
+  },
+  "structured": [
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-13-Fluorine-13.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-13",
+        "parent_id": "MAT:0009",
+        "name": "Fluorine-13",
+        "notation": "13F",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 4,
+          "mass_number": 13
+        },
+        "current_experimental_status": {
+          "status": "OBSERVED-PROTON-UNBOUND-RESONANCE",
+          "first_observation_year": 2021
+        },
+        "observed_state": {
+          "probable_spin_parity": "5/2+",
+          "decay_energy": {
+            "value": 7.06,
+            "uncertainty": 0.09,
+            "unit": "MeV",
+            "channel": "3p + 10C"
+          },
+          "resonance_width": {
+            "value": 1.01,
+            "uncertainty": 0.27,
+            "unit": "MeV"
+          }
+        },
+        "atomic_mass_table": {
+          "NIST_standard_table_entry": false
+        },
+        "rules": {
+          "resonance_equals_bound_ground_state": false,
+          "nuclear_state_can_exist_without_standard_atomic_mass_entry": true
+        },
+        "source_id": "SRC-000165",
+        "status": "CURRENT-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-14-Fluorine-14.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-14",
+        "parent_id": "MAT:0009",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 5,
+          "mass_number": 14,
+          "spin_parity": "2-"
+        },
+        "relative_atomic_mass": {
+          "value": 14.034315,
+          "uncertainty": 0.000044,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "PROTON-UNBOUND",
+          "half_life": {
+            "value": 500,
+            "uncertainty": 60,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION",
+          "certainty": "MODE-EXPECTED/EVALUATED-WITH-LIMITED-DATA"
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-15-Fluorine-15.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-15",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 6,
+          "mass_number": 15,
+          "spin_parity": "1/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 15.018043,
+          "uncertainty": 0.000067,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "PROTON-UNBOUND",
+          "half_life": {
+            "value": 1.1,
+            "uncertainty": 0.3,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION",
+          "probability_percent": 100
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-16-Fluorine-16.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-16",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 7,
+          "mass_number": 16,
+          "spin_parity": "0-"
+        },
+        "relative_atomic_mass": {
+          "value": 16.0114657,
+          "uncertainty": 0.0000089,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "PROTON-UNBOUND",
+          "half_life": {
+            "value": 21,
+            "uncertainty": 5,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION",
+          "probability_percent": 100
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-17-Fluorine-17.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-17",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 8,
+          "mass_number": 17,
+          "spin_parity": "5/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 17.00209524,
+          "uncertainty": 2.7e-7,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 64.37,
+            "uncertainty": 0.027,
+            "unit": "s"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-PLUS",
+          "probability_percent": 100
+        },
+        "daughter": {
+          "id": "MAT:0008:ISO:O-17",
+          "status": "RESOLVED"
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-18-Fluorine-18.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-18",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 9,
+          "mass_number": 18,
+          "spin_parity": "1+"
+        },
+        "relative_atomic_mass": {
+          "value": 18.00093733,
+          "uncertainty": 5e-7,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE"
+        },
+        "half_life": {
+          "recommended_value": {
+            "value": 109.732,
+            "uncertainty": 0.011,
+            "unit": "min",
+            "source_id": "SRC-000163"
+          },
+          "NUBASE2020": {
+            "value": 109.734,
+            "uncertainty": 0.008,
+            "unit": "min",
+            "source_id": "SRC-000008"
+          }
+        },
+        "decay": {
+          "daughter": "MAT:0008:ISO:O-18",
+          "daughter_status": "RESOLVED",
+          "beta_plus": {
+            "probability_percent": 96.86,
+            "uncertainty": 0.16
+          },
+          "electron_capture": {
+            "probability_percent": 3.14,
+            "approximate": true
+          },
+          "positron_endpoint": {
+            "approximate_value": 633.5,
+            "unit": "keV"
+          }
+        },
+        "applications": [
+          "PET",
+          "radiopharmaceutical_tracing",
+          "molecular_imaging"
+        ],
+        "calculation_id": "MAT:0009:CALC:001"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-19-Fluorine-19.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-19",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 10,
+          "mass_number": 19,
+          "spin_parity": "1/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 18.99840316273,
+          "uncertainty": 9.2e-10,
+          "unit": "u"
+        },
+        "isotopic_composition": {
+          "value": 1
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE"
+        },
+        "nuclear_spin": {
+          "value": "1/2",
+          "NMR_active": true
+        },
+        "applications": [
+          "19F_NMR",
+          "materials_characterization",
+          "molecular_spectroscopy",
+          "fluorinated_system_tracing"
+        ],
+        "source_id": "SRC-000158"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-20-Fluorine-20.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-20",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 11,
+          "mass_number": 20,
+          "spin_parity": "2+"
+        },
+        "relative_atomic_mass": {
+          "value": 19.999981252,
+          "uncertainty": 3.1e-8,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 11.0062,
+            "uncertainty": 0.008,
+            "unit": "s"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "probability_percent": 100
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-21-Fluorine-21.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-21",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 12,
+          "mass_number": 21,
+          "spin_parity": "5/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 20.9999489,
+          "uncertainty": 0.0000019,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 4.158,
+            "uncertainty": 0.02,
+            "unit": "s"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "probability_percent": 100
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-22-Fluorine-22.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-22",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 13,
+          "mass_number": 22,
+          "spin_parity": "(4+)"
+        },
+        "relative_atomic_mass": {
+          "value": 22.002999,
+          "uncertainty": 0.000013,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 4.23,
+            "uncertainty": 0.04,
+            "unit": "s"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "relation": "LESS-THAN",
+            "value": 11
+          }
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-23-Fluorine-23.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-23",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 14,
+          "mass_number": 23,
+          "spin_parity": "5/2+"
+        },
+        "relative_atomic_mass": {
+          "value": 23.003557,
+          "uncertainty": 0.000054,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 2.23,
+            "uncertainty": 0.14,
+            "unit": "s"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "relation": "LESS-THAN",
+            "value": 14
+          }
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-24-Fluorine-24.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-24",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 15,
+          "mass_number": 24,
+          "spin_parity": "3+"
+        },
+        "relative_atomic_mass": {
+          "value": 24.008115,
+          "uncertainty": 0.000078,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 384,
+            "uncertainty": 16,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "relation": "LESS-THAN",
+            "value": 5.9
+          }
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-25-Fluorine-25.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-25",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 16,
+          "mass_number": 25,
+          "spin_parity": "(5/2+)"
+        },
+        "relative_atomic_mass": {
+          "value": 25.012199,
+          "uncertainty": 0.000081,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 80,
+            "uncertainty": 9,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "value": 23.1,
+            "uncertainty": 4.5
+          },
+          "beta_delayed_two_neutron": {
+            "status": "POSSIBLE"
+          }
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-26-Fluorine-26.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-26",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 17,
+          "mass_number": 26,
+          "spin_parity": "1+"
+        },
+        "relative_atomic_mass": {
+          "value": 26.020038,
+          "uncertainty": 0.000083,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 8.2,
+            "uncertainty": 0.9,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "value": 13.5,
+            "uncertainty": 4
+          }
+        },
+        "isomer": {
+          "excitation_energy": {
+            "value": 643.4,
+            "uncertainty": 0.1,
+            "unit": "keV"
+          },
+          "half_life": {
+            "value": 2.2,
+            "uncertainty": 0.1,
+            "unit": "ms"
+          },
+          "spin_parity": "(4+)"
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-27-Fluorine-27.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-27",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 18,
+          "mass_number": 27,
+          "spin_parity": "5/2+#"
+        },
+        "relative_atomic_mass": {
+          "value": 27.02644,
+          "uncertainty": 0.0002,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 5,
+            "uncertainty": 0.2,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "value": 77,
+            "uncertainty": 21
+          },
+          "beta_delayed_two_neutron": {
+            "status": "POSSIBLE"
+          }
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-28-Fluorine-28.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-28",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 19,
+          "mass_number": 28,
+          "spin_parity": "(4-)"
+        },
+        "relative_atomic_mass": {
+          "value": 28.03534,
+          "uncertainty": 0.00021,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "NEUTRON-UNBOUND",
+          "half_life": {
+            "value": 46,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION",
+          "probability_percent": 100
+        },
+        "scientific_role": [
+          "island_of_inversion_research",
+          "shell_evolution"
+        ],
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-29-Fluorine-29.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-29",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 20,
+          "mass_number": 29,
+          "spin_parity": "(5/2+)"
+        },
+        "relative_atomic_mass": {
+          "value": 29.04254,
+          "uncertainty": 0.00054,
+          "estimated_mass_table_value": true,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "particle_bound": true
+        },
+        "half_life": {
+          "value": 2.5,
+          "uncertainty": 0.3,
+          "unit": "ms"
+        },
+        "decay": {
+          "beta_minus_percent": 100,
+          "beta_delayed_neutron_percent": {
+            "value": 60,
+            "uncertainty": 40
+          }
+        },
+        "nuclear_structure": {
+          "modern_interest": [
+            "island_of_inversion",
+            "halo_candidate"
+          ]
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008",
+          "SRC-000166"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-30-Fluorine-30.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-30",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 21,
+          "mass_number": 30
+        },
+        "relative_atomic_mass": {
+          "value": 30.05165,
+          "uncertainty": 0.00064,
+          "estimated_mass_table_value": true,
+          "unit": "u"
+        },
+        "current_experimental_status": {
+          "status": "OBSERVED-NEUTRON-UNBOUND-RESONANCE",
+          "first_direct_observation_year": 2024
+        },
+        "one_neutron_separation_energy": {
+          "value": -472,
+          "statistical_uncertainty": 58,
+          "systematic_uncertainty": 33,
+          "unit": "keV"
+        },
+        "decay": {
+          "principal_observed_mode": "NEUTRON-DECAY",
+          "daughter_family": [
+            "29F + n"
+          ]
+        },
+        "historical_NUBASE2020": {
+          "status": "PRE-OBSERVATION-LIMIT",
+          "half_life": {
+            "relation": "LESS-THAN",
+            "value": 260,
+            "unit": "ns"
+          },
+          "superseded_for_observation_status": true
+        },
+        "scientific_role": [
+          "shell_evolution",
+          "N20_magicity_breakdown",
+          "island_of_inversion"
+        ],
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008",
+          "SRC-000166"
+        ],
+        "status": "CURRENT-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotope-31-Fluorine-31.yaml",
+      "data": {
+        "isotope_id": "MAT:0009:ISO:F-31",
+        "nucleus": {
+          "protons": 9,
+          "neutrons": 22,
+          "mass_number": 31,
+          "spin_parity": "5/2+#"
+        },
+        "relative_atomic_mass": {
+          "value": 31.05971,
+          "uncertainty": 0.00056,
+          "estimated_mass_table_value": true,
+          "unit": "u"
+        },
+        "experimental_status": {
+          "status": "OBSERVED-NEUTRON-RICH-ISOTOPE"
+        },
+        "NUBASE2020_lifetime": {
+          "estimate": {
+            "value": 2,
+            "unit": "ms",
+            "estimated": true
+          },
+          "lower_bound": {
+            "value": 260,
+            "unit": "ns",
+            "relation": "GREATER-THAN"
+          }
+        },
+        "decay": {
+          "beta_minus": {
+            "status": "EXPECTED / INCOMPLETELY-EVALUATED"
+          },
+          "beta_delayed_neutron": {
+            "status": "POSSIBLE"
+          },
+          "beta_delayed_two_neutron": {
+            "status": "POSSIBLE"
+          }
+        },
+        "nuclear_structure": {
+          "modern_interest": [
+            "two_neutron_halo_candidate",
+            "island_of_inversion",
+            "neutron_dripline_extension"
+          ]
+        },
+        "source_ids": [
+          "SRC-000158",
+          "SRC-000008",
+          "SRC-000166"
+        ],
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-Isotopes.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:ISOTOPES",
+        "parent_id": "MAT:0009",
+        "version": "1.0.0",
+        "NIST_mass_range": {
+          "minimum": 14,
+          "maximum": 31,
+          "source_id": "SRC-000158"
+        },
+        "isotopes": [
+          {
+            "isotope_id": "MAT:0009:ISO:F-14",
+            "mass_number": 14,
+            "relative_atomic_mass": {
+              "value": 14.034315,
+              "uncertainty": 0.000044,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-15",
+            "mass_number": 15,
+            "relative_atomic_mass": {
+              "value": 15.018043,
+              "uncertainty": 0.000067,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-16",
+            "mass_number": 16,
+            "relative_atomic_mass": {
+              "value": 16.0114657,
+              "uncertainty": 0.0000089,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-17",
+            "mass_number": 17,
+            "relative_atomic_mass": {
+              "value": 17.00209524,
+              "uncertainty": 2.7e-7,
+              "unit": "u"
+            },
+            "nuclear_reference": {
+              "half_life": {
+                "value": 64.49,
+                "uncertainty": 0.16,
+                "unit": "s"
+              },
+              "principal_decay": "BETA-PLUS",
+              "spin_parity": "5/2+"
+            }
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-18",
+            "mass_number": 18,
+            "relative_atomic_mass": {
+              "value": 18.00093733,
+              "uncertainty": 5e-7,
+              "unit": "u"
+            },
+            "nuclear_reference": {
+              "half_life": {
+                "approximate_value": 109.7,
+                "unit": "min"
+              },
+              "principal_decay": [
+                "BETA-PLUS",
+                "ELECTRON-CAPTURE"
+              ],
+              "spin_parity": "1+"
+            },
+            "daughter": {
+              "id": "MAT:0008:ISO:O-18",
+              "status": "RESOLVED"
+            },
+            "applications": [
+              "PET",
+              "radiochemistry",
+              "molecular_imaging"
+            ]
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-19",
+            "mass_number": 19,
+            "protons": 9,
+            "neutrons": 10,
+            "relative_atomic_mass": {
+              "value": 18.99840316273,
+              "uncertainty": 9.2e-10,
+              "unit": "u"
+            },
+            "isotopic_composition": {
+              "value": 1
+            },
+            "stability": "STABLE",
+            "half_life": "NOT-APPLICABLE",
+            "spin_parity": "1/2+",
+            "NMR_active": true
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-20",
+            "mass_number": 20,
+            "relative_atomic_mass": {
+              "value": 19.999981252,
+              "uncertainty": 3.1e-8,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-21",
+            "mass_number": 21,
+            "relative_atomic_mass": {
+              "value": 20.9999489,
+              "uncertainty": 0.0000019,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-22",
+            "mass_number": 22,
+            "relative_atomic_mass": {
+              "value": 22.002999,
+              "uncertainty": 0.000013,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-23",
+            "mass_number": 23,
+            "relative_atomic_mass": {
+              "value": 23.003557,
+              "uncertainty": 0.000054,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-24",
+            "mass_number": 24,
+            "relative_atomic_mass": {
+              "value": 24.008115,
+              "uncertainty": 0.000078,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-25",
+            "mass_number": 25,
+            "relative_atomic_mass": {
+              "value": 25.012199,
+              "uncertainty": 0.000081,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-26",
+            "mass_number": 26,
+            "relative_atomic_mass": {
+              "value": 26.020038,
+              "uncertainty": 0.000083,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-27",
+            "mass_number": 27,
+            "relative_atomic_mass": {
+              "value": 27.02644,
+              "uncertainty": 0.0002,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-28",
+            "mass_number": 28,
+            "relative_atomic_mass": {
+              "value": 28.03534,
+              "uncertainty": 0.00021,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-29",
+            "mass_number": 29,
+            "relative_atomic_mass": {
+              "value": 29.04254,
+              "uncertainty": 0.00054,
+              "estimated": true,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-30",
+            "mass_number": 30,
+            "relative_atomic_mass": {
+              "value": 30.05165,
+              "uncertainty": 0.00064,
+              "estimated": true,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          },
+          {
+            "isotope_id": "MAT:0009:ISO:F-31",
+            "mass_number": 31,
+            "relative_atomic_mass": {
+              "value": 31.05971,
+              "uncertainty": 0.00056,
+              "estimated": true,
+              "unit": "u"
+            },
+            "nuclear_details": "NEXT-BATCH"
+          }
+        ],
+        "rules": {
+          "stable_half_life_representation": "NOT-APPLICABLE",
+          "F19_natural_composition": 1,
+          "mass_table_entry_implies_bound_nuclide": false,
+          "estimated_mass_requires_flag": true,
+          "nuclear_semantics_require_evaluated_data": true
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/properties/0009-Fluorine-F-F2-Molecular-Properties.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:F2-PROPERTIES",
+        "molecule_id": "MAT:0009:MOL:F2",
+        "ground_state": {
+          "term": "X1Sigma_g+",
+          "closed_shell": true,
+          "diamagnetic": true
+        },
+        "geometry": {
+          "type": "LINEAR"
+        },
+        "spectroscopy": {
+          "equilibrium_bond_length": {
+            "approximate_value": 1.412,
+            "unit": "angstrom"
+          },
+          "omega_e": {
+            "approximate_value": 916.93,
+            "unit": "cm-1"
+          },
+          "B_e": {
+            "approximate_value": 0.8893,
+            "unit": "cm-1"
+          }
+        },
+        "bond_energetics": {
+          "D0": {
+            "value": 154.92,
+            "uncertainty": 0.1,
+            "unit": "kJ/mol"
+          },
+          "approximate_eV_per_molecule": {
+            "value": 1.606,
+            "unit": "eV"
+          }
+        },
+        "interpretation": {
+          "weak_relative_to_many_F_heteroatomic_bonds": true
+        },
+        "rules": {
+          "F2_bond_energy_equals_fluorine_reactivity": false,
+          "reactivity_requires_complete_energy_landscape": true
+        },
+        "source_ids": [
+          "SRC-000160",
+          "SRC-000168"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/spectra/0009-Fluorine-F-19F-NMR.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:F19-NMR",
+        "isotope_id": "MAT:0009:ISO:F-19",
+        "nuclear_spin": {
+          "value": "1/2"
+        },
+        "natural_isotopic_fraction": {
+          "value": 1
+        },
+        "NMR_active": true,
+        "resonance": {
+          "equation": "nu = (gamma / 2pi) * B0",
+          "frequency": {
+            "status": "FIELD-DEPENDENT"
+          },
+          "chemical_shift": {
+            "reference_required": true,
+            "reference_scale_or_standard_required": true
+          }
+        },
+        "advantages": [
+          "effectively_monoisotopic_natural_fluorine",
+          "spin_one_half",
+          "high_NMR_sensitivity",
+          "broad_chemical_environment_information"
+        ],
+        "applications": [
+          "organic_fluorine",
+          "pharmaceuticals",
+          "fluoropolymers",
+          "fluoride_materials",
+          "molten_salts",
+          "battery_materials",
+          "reaction_monitoring"
+        ],
+        "rules": {
+          "19F_NMR_frequency_is_not_constant_without_B0": true,
+          "chemical_shift_requires_reference_context": true,
+          "one_isotope_does_not_mean_one_NMR_peak": true
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/spectra/0009-Fluorine-F-Selected-Atomic-Spectrum.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:ATOMIC-SPECTRUM",
+        "record_id": "MAT:0009",
+        "version": "1.0.0",
+        "species": {
+          "F_I": {
+            "ground_state": {
+              "configuration": "2s2 2p5",
+              "term": "2P°3/2"
+            },
+            "selected_persistent_lines": [
+              {
+                "wavelength": {
+                  "value": 95.187,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 0,
+                "upper_level_cm1": 105056.283,
+                "lower_term": "2P°3/2",
+                "upper_term": "2P1/2"
+              },
+              {
+                "wavelength": {
+                  "value": 95.4826,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 0,
+                "upper_level_cm1": 104731.048,
+                "lower_term": "2P°3/2",
+                "upper_term": "2P3/2"
+              },
+              {
+                "wavelength": {
+                  "value": 95.5546,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 404.141,
+                "upper_level_cm1": 105056.283
+              },
+              {
+                "wavelength": {
+                  "value": 95.8525,
+                  "unit": "nm"
+                },
+                "lower_level_cm1": 404.141,
+                "upper_level_cm1": 104731.048
+              }
+            ]
+          },
+          "F_II": {
+            "selected_persistent_lines": [
+              {
+                "wavelength": {
+                  "value": 48.4602,
+                  "unit": "nm"
+                }
+              },
+              {
+                "wavelength": {
+                  "value": 60.5669,
+                  "unit": "nm"
+                }
+              },
+              {
+                "wavelength": {
+                  "value": 60.6288,
+                  "unit": "nm"
+                }
+              },
+              {
+                "wavelength": {
+                  "value": 60.6804,
+                  "unit": "nm"
+                }
+              }
+            ]
+          }
+        },
+        "source_id": "SRC-000179",
+        "rules": {
+          "selected_lines_are_not_exhaustive": true,
+          "wavelength_medium_must_be_preserved": true,
+          "atomic_spectrum_equals_F2_spectrum": false,
+          "atomic_spectrum_equals_19F_NMR": false,
+          "universal_fluorine_frequency": false
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Battery-Materials.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:BATTERY-FLUORINE",
+        "roles": {
+          "electrolyte_salts": {
+            "fluorinated_anions_possible": true
+          },
+          "solvents_and_additives": {
+            "fluorinated_molecules_possible": true
+          },
+          "interphases": {
+            "LiF_rich_states": {
+              "possible": true,
+              "material_and_condition_specific": true
+            }
+          },
+          "solid_electrolytes": {
+            "halide_and_fluoride_families": true
+          },
+          "electrode_materials": {
+            "metal_fluorides": {
+              "conversion_reactions": true
+            }
+          },
+          "fluoride_ion_battery": {
+            "charge_carrier": "F-"
+          }
+        },
+        "potential_benefits": [
+          "interphase_stability",
+          "oxidative_stability",
+          "thermal_stability",
+          "altered_surface_chemistry"
+        ],
+        "tradeoffs": [
+          "bond_strength_can_reduce_reversibility",
+          "irreversible_LiF_formation_possible",
+          "compatibility_constraints",
+          "fluorinated_material_environmental_considerations"
+        ],
+        "rule": "Fluorination is a design variable, not an automatically beneficial modification.",
+        "source_ids": [
+          "SRC-000175",
+          "SRC-000172"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Boron-Fluoride-Chemistry.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:BORON-FLUORIDES",
+        "record_id": "MAT:0009",
+        "BF3": {
+          "id": "MAT:CMP:BF3",
+          "parents": [
+            "MAT:0005",
+            "MAT:0009"
+          ],
+          "formula": "BF3",
+          "geometry": {
+            "idealized": "TRIGONAL-PLANAR",
+            "point_group": "D3h",
+            "F_B_F_angle": {
+              "approximate_value": 120,
+              "unit": "degree"
+            }
+          },
+          "formal_oxidation_states": {
+            "B": 3,
+            "F": -1
+          },
+          "electronic_role": {
+            "Lewis_acid": true,
+            "electron_pair_acceptor": true
+          },
+          "source_id": "SRC-000180"
+        },
+        "BF4_minus": {
+          "id": "MAT:ION:BF4-",
+          "formula": "BF4-",
+          "geometry": {
+            "idealized": "TETRAHEDRAL",
+            "point_group": "Td"
+          },
+          "formal_oxidation_states": {
+            "B": 3,
+            "F": -1
+          },
+          "relationship": "BF3 + F- -> BF4-",
+          "contexts": [
+            "salts",
+            "electrolytes",
+            "ionic_liquids",
+            "coordination_chemistry"
+          ]
+        },
+        "rules": {
+          "BF3_geometry_equals_BF4_geometry": false,
+          "Lewis_acidity_is_molecular_context_dependent": true,
+          "BF3_property_equals_elemental_boron_property": false,
+          "BF3_property_equals_elemental_fluorine_property": false
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Environmental-Fluorinated-Compounds.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:ENVIRONMENTAL-FLUORINATED-COMPOUNDS",
+        "core_rule": "FLUORINATED COMPOUND != AUTOMATIC PFAS",
+        "classes": {
+          "inorganic_fluorides": {
+            "examples": [
+              "fluoride_minerals",
+              "LiF",
+              "CaF2"
+            ],
+            "PFAS": false
+          },
+          "simple_molecular_fluorides": {
+            "examples": [
+              "HF",
+              "BF3",
+              "NF3",
+              "SiF4"
+            ],
+            "PFAS": false
+          },
+          "organofluorines": {
+            "description": "Broad class of carbon-containing fluorinated compounds.",
+            "PFAS_status": {
+              "depends_on_structure_definition": true
+            }
+          },
+          "PFAS": {
+            "OECD_2021": {
+              "definition_basis": [
+                "fully_fluorinated_methyl_carbon",
+                "fully_fluorinated_methylene_carbon"
+              ],
+              "simplified_rule": "With stated exceptions, substances containing at least one saturated -CF3 or -CF2- unit with no H/Cl/Br/I attached to that carbon fall within the broad OECD structural definition.\n",
+              "source_id": "SRC-000186"
+            },
+            "EPA_program_specific": {
+              "definition_is_single_universal_US_rule": false,
+              "CCL5": {
+                "uses_specific_structural_patterns": true
+              },
+              "TSCA_OPPT": {
+                "working_definition_can_differ": true
+              },
+              "source_id": "SRC-000187"
+            }
+          },
+          "fluoropolymers": {
+            "examples": [
+              "PTFE",
+              "PFA",
+              "FEP",
+              "PVDF",
+              "ETFE"
+            ],
+            "PFAS_classification": {
+              "definition_dependent": true
+            },
+            "environmental_behavior": {
+              "polymer_specific": true
+            }
+          }
+        },
+        "environmental_properties_require": [
+          "exact_structure",
+          "molecular_weight",
+          "polymer_vs_nonpolymer",
+          "chain_length",
+          "functional_groups",
+          "mobility",
+          "volatility",
+          "degradation_products",
+          "bioavailability",
+          "persistence",
+          "exposure"
+        ],
+        "rules": {
+          "elemental_fluorine_toxicity_equals_PFAS_toxicity": false,
+          "C_F_bond_strength_alone_predicts_environmental_risk": false,
+          "all_organofluorines_are_PFAS": false,
+          "all_PFAS_have_identical_toxicity": false,
+          "regulatory_definition_requires_jurisdiction_and_program": true
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Fluoride-Ion-Conduction.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:FLUORIDE-ION-CONDUCTION",
+        "mobile_species": {
+          "id": "MAT:0009:ION:F-1",
+          "charge": -1
+        },
+        "transport_mechanisms": [
+          "vacancy_hopping",
+          "interstitial_transport",
+          "interstitialcy",
+          "defect_assisted_diffusion",
+          "liquid_electrolyte_transport"
+        ],
+        "material_families": {
+          "fluorite_related": {
+            "examples": [
+              "CaF2_related",
+              "BaF2_related",
+              "doped_fluorite_fluorides"
+            ]
+          },
+          "tysonite_related": {
+            "examples": [
+              "LaF3",
+              "CeF3",
+              "doped_rare_earth_fluorides"
+            ]
+          },
+          "mixed_fluorides": {
+            "examples": [
+              "BaSnF4_related",
+              "rare_earth_doped_fluorides"
+            ]
+          }
+        },
+        "electrochemical_architecture": {
+          "fluoride_ion_battery": {
+            "status": "ACTIVE-RESEARCH",
+            "charge_carrier": "F-",
+            "possible_electrode_mechanisms": [
+              "conversion",
+              "insertion",
+              "fluorination",
+              "defluorination"
+            ],
+            "electrolyte_classes": [
+              "solid",
+              "liquid",
+              "hybrid"
+            ]
+          }
+        },
+        "principal_challenges": [
+          "room_temperature_ionic_conductivity",
+          "interfacial_stability",
+          "electrode_reversibility",
+          "electrolyte_compatibility",
+          "parasitic_reactions"
+        ],
+        "state_variables": [
+          "crystal_structure",
+          "defect_concentration",
+          "dopants",
+          "temperature",
+          "grain_boundaries",
+          "interface_state"
+        ],
+        "rules": {
+          "fluoride_ion_conduction_is_universal_in_fluorides": false,
+          "high_F_content_equals_high_F_conductivity": false,
+          "theoretical_energy_density_equals_practical_device_energy_density": false
+        },
+        "source_id": "SRC-000172"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Fluoropolymers.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:FLUOROPOLYMERS",
+        "PTFE": {
+          "id": "MAT:MAT:PTFE",
+          "repeat_unit": "[-CF2-CF2-]n",
+          "parents": [
+            "MAT:0006",
+            "MAT:0009"
+          ],
+          "material_class": [
+            "fluoropolymer",
+            "semicrystalline_polymer"
+          ],
+          "characteristic_properties": [
+            "high_chemical_resistance",
+            "low_surface_energy",
+            "low_friction",
+            "electrical_insulation",
+            "thermal_resistance"
+          ],
+          "melting_region": {
+            "approximate_value": 327,
+            "unit": "degC"
+          },
+          "processing": {
+            "conventional_melt_processing_difficult": true
+          },
+          "history": {
+            "discovery_year": 1938,
+            "person": "Roy_J_Plunkett"
+          }
+        },
+        "other_fluoropolymer_families": [
+          "PVDF",
+          "PFA",
+          "FEP",
+          "ETFE",
+          "PCTFE",
+          "fluoroelastomers"
+        ],
+        "surface_principle": {
+          "fluorine_content_can_change": [
+            "surface_energy",
+            "wetting",
+            "friction",
+            "adhesion",
+            "chemical_resistance"
+          ],
+          "but": {
+            "property_is_not_monotonic_with_F_content_in_every_polymer": true
+          }
+        },
+        "environment": {
+          "persistence_is_compound_specific": true,
+          "fluoropolymer_recycling_and_F_recovery": {
+            "active_research": true
+          }
+        },
+        "rules": {
+          "PTFE_property_equals_fluorine_property": false,
+          "all_fluoropolymers_equal_PTFE": false,
+          "C_F_bond_strength_alone_determines_all_polymer_behavior": false
+        },
+        "source_ids": [
+          "SRC-000174",
+          "SRC-000178"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Graph-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:GRAPHS",
+        "record_id": "MAT:0009",
+        "graphs": [
+          {
+            "id": "MAT:0009:GRAPH:001",
+            "name": "Fluorine Isotope Lifetime Map",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:002",
+            "name": "Fluorine Ionization Ladder",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:003",
+            "name": "F I / F II Atomic Spectrum",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:004",
+            "name": "F2 / HF Molecular Spectroscopy Comparison",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:005",
+            "name": "F-F versus C-F versus H-F Bond Reference",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:006",
+            "name": "Fluoride Geometry Map",
+            "status": "SCHEMATIC-READY"
+          },
+          {
+            "id": "MAT:0009:GRAPH:007",
+            "name": "Partner Oxidation-State Stabilization",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:008",
+            "name": "Fluoride-Ion Transport Map",
+            "status": "SCHEMATIC-READY"
+          },
+          {
+            "id": "MAT:0009:GRAPH:009",
+            "name": "FLiBe Coordination Network",
+            "status": "DATASET-EXTRACTION-REQUIRED"
+          },
+          {
+            "id": "MAT:0009:GRAPH:010",
+            "name": "Fluorinated Compound Classification",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:011",
+            "name": "F18 PET Decay Architecture",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "id": "MAT:0009:GRAPH:012",
+            "name": "Fluorine Knowledge Graph",
+            "status": "READY-FOR-GENERATION"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-High-Oxidation-State-Fluorides.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:HIGH-OXIDATION-FLUORIDES",
+        "principle": {
+          "description": "Strongly electronegative Fluorine ligands can stabilize unusually high positive formal oxidation states of other elements.\n"
+        },
+        "examples": {
+          "SF6": {
+            "parents": [
+              "MAT:0016",
+              "MAT:0009"
+            ],
+            "sulfur_status": "RESERVED-PENDING-SULFUR",
+            "geometry": "OCTAHEDRAL",
+            "formal_oxidation_states": {
+              "S": 6,
+              "F": -1
+            }
+          },
+          "UF6": {
+            "parents": [
+              "MAT:0092",
+              "MAT:0009"
+            ],
+            "uranium_status": "RESERVED-PENDING-URANIUM",
+            "geometry": "OCTAHEDRAL",
+            "formal_oxidation_states": {
+              "U": 6,
+              "F": -1
+            },
+            "processing_role": {
+              "molecular_uranium_processing": true
+            },
+            "nuclear_device_role": {
+              "elemental_fluorine_is_nuclear_energy_source": false
+            }
+          },
+          "PtF6": {
+            "parents": [
+              "MAT:0078",
+              "MAT:0009"
+            ],
+            "platinum_status": "RESERVED-PENDING-PLATINUM",
+            "geometry": "OCTAHEDRAL",
+            "formal_oxidation_states": {
+              "Pt": 6,
+              "F": -1
+            },
+            "historical_role": [
+              "Bartlett_noble_gas_chemistry"
+            ]
+          }
+        },
+        "rules": {
+          "high_oxidation_state_equals_high_stability_in_all_environments": false,
+          "formal_oxidation_state_equals_literal_atomic_charge": false,
+          "ligand_stabilization_is_context_specific": true
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Hydrogen-Fluoride.yaml",
+      "data": {
+        "compound_id": "MAT:CMP:HF",
+        "parents": [
+          "MAT:0001",
+          "MAT:0009"
+        ],
+        "formula": "HF",
+        "gas_phase_molecule": {
+          "ground_state": {
+            "term": "X1Sigma+"
+          },
+          "geometry": {
+            "type": "LINEAR"
+          },
+          "equilibrium_bond_length": {
+            "value": 0.916808,
+            "unit": "angstrom"
+          },
+          "omega_e": {
+            "value": 4138.32,
+            "unit": "cm-1"
+          },
+          "B_e": {
+            "value": 20.9557,
+            "unit": "cm-1"
+          },
+          "dipole_moment_v0_J1": {
+            "value": 1.82618,
+            "unit": "D"
+          }
+        },
+        "thermochemistry": {
+          "standard_gas_formation_enthalpy": {
+            "value": -273.3,
+            "uncertainty": 0.7,
+            "unit": "kJ/mol",
+            "temperature": {
+              "value": 298.15,
+              "unit": "K"
+            }
+          }
+        },
+        "phase_reference": {
+          "boiling_point": {
+            "value": 292.7,
+            "unit": "K"
+          },
+          "fusion_temperature": {
+            "approximate_value": 190,
+            "unit": "K"
+          }
+        },
+        "state_architecture": [
+          "HF(g)",
+          "HF(l)",
+          "ANHYDROUS-HF",
+          "AQUEOUS-HF",
+          "FLUORIDE/HF-MIXED-SOLUTION",
+          "HYDROGEN-BONDED-HF-CLUSTERS"
+        ],
+        "chemical_functions": [
+          "acid_base_chemistry",
+          "hydrogen_bonding",
+          "silica_processing",
+          "fluoride_chemistry",
+          "spectroscopy"
+        ],
+        "safety": {
+          "classification": "SEVERE-CHEMICAL-HAZARD",
+          "systemic_fluoride_toxicity": true,
+          "corrosive": true,
+          "compound_specific": true
+        },
+        "rules": {
+          "HF_gas_equals_aqueous_HF": false,
+          "HF_property_equals_elemental_F_property": false,
+          "acid_strength_requires_medium_definition": true
+        },
+        "source_id": "SRC-000169"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-LiF-BeF2-FLiBe.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:LIF-BEF2-FLIBE",
+        "record_id": "MAT:0009",
+        "LiF": {
+          "id": "MAT:CMP:LiF",
+          "parents": [
+            "MAT:0003",
+            "MAT:0009"
+          ],
+          "material_class": [
+            "ionic_fluoride",
+            "crystalline_salt",
+            "molten_salt_component",
+            "electrochemical_interface_material"
+          ],
+          "ions": [
+            "Li+",
+            "F-"
+          ],
+          "properties_require_child_record": true
+        },
+        "BeF2": {
+          "id": "MAT:CMP:BeF2",
+          "parents": [
+            "MAT:0004",
+            "MAT:0009"
+          ],
+          "solid_and_glass_structure": {
+            "tetrahedral_coordination": {
+              "unit": "BeF4"
+            },
+            "network": {
+              "corner_sharing_tetrahedra": true
+            },
+            "structural_analogy": {
+              "material": "SiO2",
+              "topology_only": true
+            }
+          },
+          "vitreous_reference": {
+            "Be_F_bond_length": {
+              "value": 1.553,
+              "uncertainty": 0.005,
+              "unit": "angstrom"
+            }
+          },
+          "source_id": "SRC-000176"
+        },
+        "FLiBe": {
+          "material_family": "LiF-BeF2-MOLTEN-SALT",
+          "resolved_parent_elements": [
+            "MAT:0003",
+            "MAT:0004",
+            "MAT:0009"
+          ],
+          "widely_studied_reference_composition": {
+            "notation": "2LiF-BeF2"
+          },
+          "structure": {
+            "Li_species": [
+              "Li+"
+            ],
+            "Be_F_species": [
+              "BeF4^2-",
+              "Be2F7^3-",
+              "Be3F10^4-",
+              "higher_polymeric_Be_F_units"
+            ],
+            "structural_state": {
+              "composition_dependent": true,
+              "temperature_dependent": true,
+              "polymeric_network_possible": true
+            }
+          },
+          "research_roles": [
+            "high_temperature_molten_salt",
+            "heat_transfer_research",
+            "fission_reactor_material_research",
+            "fusion_blanket_material_research"
+          ],
+          "safety": {
+            "beryllium_compound_hazard": true,
+            "fluoride_chemistry_hazard": true,
+            "high_temperature_hazard": true
+          }
+        },
+        "rules": {
+          "FLiBe_equals_simple_ideal_LiF_plus_BeF2_mixture": false,
+          "structure_requires_composition_and_temperature": true,
+          "reactor_role_equals_energy_source": false,
+          "fluorine_is_process_material_not_nuclear_fuel": true
+        },
+        "source_ids": [
+          "SRC-000171",
+          "SRC-000177"
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-NF3-and-SiF4.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:PROCESS-FLUORIDES",
+        "NF3": {
+          "id": "MAT:CMP:NF3",
+          "parents": [
+            "MAT:0007",
+            "MAT:0009"
+          ],
+          "formula": "NF3",
+          "geometry": {
+            "type": "TRIGONAL-PYRAMIDAL"
+          },
+          "formal_oxidation_states": {
+            "N": 3,
+            "F": -1
+          },
+          "process_roles": [
+            "semiconductor_chamber_cleaning",
+            "plasma_fluorine_precursor"
+          ],
+          "key_rule": "Stable NF3 gas and plasma-generated F-containing species are different chemical states.",
+          "source_id": "SRC-000182"
+        },
+        "SiF4": {
+          "id": "MAT:CMP:SiF4",
+          "parents": [
+            "MAT:0014",
+            "MAT:0009"
+          ],
+          "silicon_status": "RESERVED-PENDING-SILICON",
+          "formula": "SiF4",
+          "geometry": {
+            "type": "TETRAHEDRAL"
+          },
+          "formal_oxidation_states": {
+            "Si": 4,
+            "F": -1
+          },
+          "process_relationships": [
+            "fluorine_based_silicon_etching",
+            "volatile_Si_F_product",
+            "semiconductor_processing"
+          ],
+          "source_id": "SRC-000183"
+        },
+        "rules": {
+          "precursor_equals_plasma_fragment": false,
+          "SiF4_property_equals_silicon_property": false,
+          "NF3_property_equals_nitrogen_property": false
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Natural-Minerals.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:NATURAL-MINERALS",
+        "natural_fluorine_state": {
+          "free_F2_major_reservoir": false,
+          "principal_form": "FLUORIDE-BOUND"
+        },
+        "minerals": {
+          "fluorite": {
+            "formula": "CaF2",
+            "mineral_name": "FLUORITE",
+            "commercial_name": "FLUORSPAR",
+            "crystal_system": {
+              "USGS_description": "ISOMETRIC"
+            },
+            "economic_role": {
+              "primary_large_scale_fluorine_ore": true
+            }
+          },
+          "fluorapatite": {
+            "formula": "Ca5(PO4)3F",
+            "crystal_system": "HEXAGONAL",
+            "contexts": [
+              "phosphate_rocks",
+              "phosphorites",
+              "mineralized_tissues_relationship"
+            ]
+          },
+          "cryolite": {
+            "formula": "Na3AlF6",
+            "crystal_system": {
+              "USGS_description": "MONOCLINIC"
+            },
+            "natural_resource_role": {
+              "historically_important": true,
+              "current_primary_F_ore": false
+            }
+          },
+          "sellaite": {
+            "formula": "MgF2"
+          },
+          "villiaumite": {
+            "formula": "NaF"
+          },
+          "topaz": {
+            "fluorine_bearing": true
+          }
+        },
+        "rules": {
+          "mineral_F_equals_elemental_F2": false,
+          "biological_fluoride_equals_elemental_fluorine": false,
+          "mineral_properties_require_material_records": true
+        },
+        "source_id": "SRC-000170"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Noble-Gas-Fluorides.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:NOBLE-GAS-FLUORIDES",
+        "xenon_parent": {
+          "id": "MAT:0054",
+          "status": "RESERVED-PENDING-XENON"
+        },
+        "compounds": {
+          "XeF2": {
+            "geometry": "LINEAR",
+            "xenon_formal_oxidation_state": 2
+          },
+          "XeF4": {
+            "geometry": "SQUARE-PLANAR",
+            "xenon_formal_oxidation_state": 4
+          },
+          "XeF6": {
+            "geometry": {
+              "description": "DISTORTED / FLUXIONAL",
+              "simple_octrahedral_label_sufficient": false
+            },
+            "xenon_formal_oxidation_state": 6
+          }
+        },
+        "historical_Bartlett_branch": {
+          "year": 1962,
+          "precursor_observation": {
+            "compound": "O2+[PtF6]-"
+          },
+          "reasoning": {
+            "description": "Bartlett recognized that the ionization energy of xenon was comparable to that of molecular oxygen and tested PtF6 as a powerful oxidizing/fluorinating reagent.\n"
+          },
+          "xenon_product": {
+            "historical_label": "Xe+[PtF6]-",
+            "modern_status": "Original product is not adequately described as one simple Xe+[PtF6]- salt; later work indicates a mixture of xenon fluoride cation salts.\n"
+          }
+        },
+        "source_id": "SRC-000185",
+        "rule": {
+          "noble_gas_inertness_means_absolute_nonreactivity": false
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Oxygen-Fluorides.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:OXYGEN-FLUORIDES",
+        "parents": [
+          "MAT:0008",
+          "MAT:0009"
+        ],
+        "species": {
+          "OF2": {
+            "id": "MAT:CMP:OF2",
+            "formula": "OF2",
+            "geometry": {
+              "type": "BENT"
+            },
+            "formal_oxidation_states": {
+              "O": 2,
+              "F": -1
+            },
+            "significance": [
+              "oxygen_positive_oxidation_state",
+              "fluorine_electronegativity_exception",
+              "strong_oxidizing_fluorinating_chemistry"
+            ],
+            "source_id": "SRC-000181"
+          },
+          "O2F2": {
+            "id": "MAT:CMP:O2F2",
+            "formula": "O2F2",
+            "connectivity": {
+              "idealized": "F-O-O-F"
+            },
+            "O_O_bond_present": true,
+            "formal_oxidation_states": {
+              "average_O": 1,
+              "F": -1
+            },
+            "classification": [
+              "dioxygen_difluoride",
+              "reactive_oxygen_fluoride"
+            ],
+            "exact_geometry": {
+              "status": "DATA-EXTRACTION-REQUIRED"
+            }
+          }
+        },
+        "rules": {
+          "O_is_always_minus_2": false,
+          "F_in_normal_compounds_positive_oxidation_state": false,
+          "OF2_equals_oxygen_difluoride_not_fluorine_oxide_formalism": true,
+          "oxygen_fluoride_properties_are_compound_specific": true
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Plasma-and-Surface-Processing.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:PLASMA-PROCESSING",
+        "record_id": "MAT:0009",
+        "precursor_families": [
+          "fluorocarbons",
+          "NF3_related",
+          "SF6_related",
+          "other_fluorine_containing_process_gases"
+        ],
+        "plasma_species_can_include": [
+          "F_radicals",
+          "molecular_fragments",
+          "positive_ions",
+          "negative_ions",
+          "electronically_excited_species"
+        ],
+        "target_material_families": [
+          "Si",
+          "SiO2",
+          "dielectric_materials",
+          "semiconductor_films"
+        ],
+        "mechanisms": [
+          "chemical_etching",
+          "ion_assisted_etching",
+          "passivation",
+          "sidewall_film_formation",
+          "chamber_cleaning",
+          "surface_modification"
+        ],
+        "anisotropic_etching": {
+          "requires_balance_between": [
+            "material_removal",
+            "protective_surface_film",
+            "directional_ion_bombardment",
+            "gas_phase_chemistry"
+          ]
+        },
+        "process_variables": [
+          "precursor_identity",
+          "plasma_state",
+          "ion_energy",
+          "radical_density",
+          "pressure",
+          "surface_temperature",
+          "substrate_composition"
+        ],
+        "rules": {
+          "stable_precursor_equals_reactive_plasma_fragment": false,
+          "fluorine_radical_equals_F2": false,
+          "etching_is_not_intrinsic_elemental_property": true
+        },
+        "source_id": "SRC-000173"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F-Visual-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:VISUALS",
+        "record_id": "MAT:0009",
+        "manifest_version": "1.0.0",
+        "visuals": {
+          "V01": {
+            "asset_id": "MAT:0009:FIG:V01:001",
+            "filename": "0009-Fluorine-F-FIG-001-Natural-Material-State.png",
+            "path": "images/natural/",
+            "status": "SOURCE-IMAGE-REQUIRED"
+          },
+          "V02": {
+            "asset_id": "MAT:0009:FIG:V02:001",
+            "filename": "0009-Fluorine-F-FIG-002-Atomic-Identity.svg",
+            "path": "images/scientific/",
+            "status": "GENERATED"
+          },
+          "V03": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:DIAGRAM:V03:001",
+                "filename": "0009-Fluorine-F-DIAGRAM-001-F2-HF-CF.svg"
+              },
+              {
+                "asset_id": "MAT:0009:DIAGRAM:V03:002",
+                "filename": "0009-Fluorine-F-DIAGRAM-002-Fluoride-Geometries.svg"
+              }
+            ],
+            "path": "diagrams/bonding/",
+            "status": "GENERATED"
+          },
+          "V04": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:FIG:V04:001",
+                "filename": "0009-Fluorine-F-FIG-003-Electron-Probability.svg"
+              },
+              {
+                "asset_id": "MAT:0009:FIG:V04:002",
+                "filename": "0009-Fluorine-F-FIG-004-Electron-Capture.svg"
+              }
+            ],
+            "path": "images/quantum/",
+            "status": "GENERATED"
+          },
+          "V05": {
+            "asset_id": "MAT:0009:FIG:V05:001",
+            "filename": "0009-Fluorine-F-FIG-005-Isotope-Map.svg",
+            "path": "images/isotope/",
+            "status": "GENERATED"
+          },
+          "V06": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:FIG:V06:001",
+                "filename": "0009-Fluorine-F-FIG-006-Atomic-Spectrum.svg"
+              },
+              {
+                "asset_id": "MAT:0009:FIG:V06:002",
+                "filename": "0009-Fluorine-F-FIG-007-Molecular-NMR-Spectrum.svg"
+              }
+            ],
+            "path": "images/spectral/",
+            "status": "GENERATED"
+          },
+          "V07": {
+            "asset_id": "MAT:0009:FIG:V07:001",
+            "filename": "0009-Fluorine-F-FIG-008-Physical-State.svg",
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V08": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:DIAGRAM:V08:001",
+                "filename": "0009-Fluorine-F-DIAGRAM-003-Fluoride-Ion-Conduction.svg"
+              },
+              {
+                "asset_id": "MAT:0009:DIAGRAM:V08:002",
+                "filename": "0009-Fluorine-F-DIAGRAM-004-Fluoride-Battery.svg"
+              }
+            ],
+            "path": "diagrams/fields/",
+            "status": "GENERATED"
+          },
+          "V09": {
+            "asset_id": "MAT:0009:DIAGRAM:V09:001",
+            "filename": "0009-Fluorine-F-DIAGRAM-005-Magnetic-NMR-State.svg",
+            "path": "diagrams/fields/",
+            "status": "GENERATED"
+          },
+          "V10": {
+            "asset_id": "MAT:0009:FIG:V10:001",
+            "filename": "0009-Fluorine-F-FIG-009-Thermal-and-Molten-Salt.svg",
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V11": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:FIG:V11:001",
+                "filename": "0009-Fluorine-F-FIG-010-PTFE-Structure.svg"
+              },
+              {
+                "asset_id": "MAT:0009:FIG:V11:002",
+                "filename": "0009-Fluorine-F-FIG-011-BeF2-FLiBe-Network.svg"
+              }
+            ],
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V12": {
+            "asset_id": "MAT:0009:FIG:V12:001",
+            "filename": "0009-Fluorine-F-FIG-012-Compatibility-State-Map.svg",
+            "path": "images/properties/",
+            "status": "GENERATED"
+          },
+          "V13": {
+            "asset_id": "MAT:0009:DIAGRAM:V13:001",
+            "filename": "0009-Fluorine-F-DIAGRAM-006-Transformation-Network.svg",
+            "path": "diagrams/processes/",
+            "status": "GENERATED"
+          },
+          "V14": {
+            "asset_id": "MAT:0009:DIAGRAM:V14:001",
+            "filename": "0009-Fluorine-F-DIAGRAM-007-Knowledge-Graph.svg",
+            "path": "diagrams/relationships/",
+            "status": "GENERATED"
+          },
+          "V15": {
+            "assets": [
+              {
+                "asset_id": "MAT:0009:MODEL:SCI:001",
+                "filename": "0009-Fluorine-F-MODEL-SCI-001-F2-Molecule.glb"
+              }
+            ],
+            "path": "models/scientific/",
+            "status": "GENERATED"
+          },
+          "V16": {
+            "asset_id": "MAT:0009:MODEL:DATA:001",
+            "filename": "0009-Fluorine-F-MODEL-DATA-001.glb",
+            "path": "models/data-extruded/",
+            "status": "TRANSFORM-DEFINITION-REQUIRED"
+          },
+          "V17": {
+            "asset_id": "MAT:0009:FIG:V17:001",
+            "filename": "0009-Fluorine-F-FIG-013-Applications.svg",
+            "path": "images/applications/",
+            "status": "GENERATED"
+          },
+          "V18": {
+            "asset_id": "MAT:0009:DIAGRAM:V18:001",
+            "filename": "0009-Fluorine-F-DIAGRAM-008-Evidence-Provenance.svg",
+            "path": "diagrams/relationships/",
+            "status": "GENERATED"
+          }
+        },
+        "summary": {
+          "visual_slots": 18,
+          "two_dimensional_assets": 19,
+          "scientific_3d_models": 1,
+          "data_extruded_models": 1,
+          "total_visual_assets": 21,
+          "required_graphs": 12,
+          "required_tables": 10,
+          "generated_assets_complete": false
+        }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/structured/0009-Fluorine-F.yaml",
+      "data": {
+        "mat_id": "MAT:0009",
+        "record_name": "Fluorine",
+        "symbol": "F",
+        "record_class": "CHEMICAL_ELEMENT",
+        "atomic_number": 9,
+        "legacy": {
+          "legacy_id": "G0009",
+          "migration_status": "CONTENT-CORE-MIGRATED"
+        },
+        "identity": {
+          "proton_count": 9,
+          "neutral_electron_count": 9,
+          "period": 2,
+          "group": 17,
+          "block": "p"
+        },
+        "atomic_weight": {
+          "value": 18.998403163,
+          "uncertainty": 6e-9,
+          "type": "STANDARD-ATOMIC-WEIGHT",
+          "source_id": "SRC-000158"
+        },
+        "electronic_ground_state": {
+          "configuration": "1s2 2s2 2p5",
+          "term": "2P°3/2",
+          "open_shell": true,
+          "source_id": "SRC-000157"
+        },
+        "electron_affinity": {
+          "selected_value": {
+            "value": 3.401191,
+            "uncertainty": 0.000026,
+            "unit": "eV"
+          },
+          "source_id": "SRC-000159"
+        },
+        "electronegativity": {
+          "scale": "PAULING",
+          "value": 3.98,
+          "source_id": "SRC-000161"
+        },
+        "ionization": {
+          "first": {
+            "value": 17.42282,
+            "uncertainty": 0.00005,
+            "unit": "eV"
+          },
+          "second": {
+            "value": 34.97081,
+            "uncertainty": 0.00012,
+            "unit": "eV"
+          },
+          "third": {
+            "value": 62.70798,
+            "uncertainty": 0.00025,
+            "unit": "eV",
+            "qualifier": "NIST-SQUARE-BRACKET"
+          },
+          "fourth": {
+            "value": 87.175,
+            "uncertainty": 0.017,
+            "unit": "eV",
+            "qualifier": "NIST-SQUARE-BRACKET"
+          },
+          "fifth": {
+            "value": 114.249,
+            "uncertainty": 0.006,
+            "unit": "eV",
+            "qualifier": "NIST-SQUARE-BRACKET"
+          },
+          "sixth": {
+            "value": 157.16311,
+            "uncertainty": 0.00025,
+            "unit": "eV"
+          },
+          "seventh": {
+            "value": 185.1868,
+            "uncertainty": 0.0006,
+            "unit": "eV"
+          },
+          "eighth": {
+            "value": 953.8983,
+            "uncertainty": 0.0003,
+            "unit": "eV",
+            "qualifier": "NIST-PARENTHESIZED"
+          },
+          "ninth": {
+            "value": 1103.1175302,
+            "uncertainty": 0.0000019,
+            "unit": "eV",
+            "qualifier": "NIST-PARENTHESIZED"
+          },
+          "source_id": "SRC-000157"
+        },
+        "atomic_state": {
+          "id": "MAT:0009:ATOM:F",
+          "magnetic": {
+            "open_shell": true,
+            "paramagnetic": true
+          }
+        },
+        "fluoride": {
+          "id": "MAT:0009:ION:F-1",
+          "electron_configuration": "1s2 2s2 2p6",
+          "charge": -1,
+          "mobile_ion_possible": true
+        },
+        "ordinary_molecular_state": {
+          "id": "MAT:0009:MOL:F2",
+          "formula": "F2",
+          "ground_electronic_state": {
+            "term": "X1Sigma_g+",
+            "closed_shell": true
+          },
+          "geometry": {
+            "type": "LINEAR"
+          },
+          "equilibrium_bond_length": {
+            "approximate_value": 1.412,
+            "unit": "angstrom"
+          },
+          "omega_e": {
+            "approximate_value": 916.93,
+            "unit": "cm-1"
+          },
+          "B_e": {
+            "approximate_value": 0.8893,
+            "unit": "cm-1"
+          },
+          "magnetism": {
+            "diamagnetic": true
+          },
+          "source_id": "SRC-000160"
+        },
+        "phase_reference": {
+          "melting_point": {
+            "value": 53.48,
+            "unit": "K"
+          },
+          "normal_boiling_point": {
+            "value": 85.04,
+            "unit": "K"
+          },
+          "ordinary_state": {
+            "state": "GAS",
+            "appearance": "VERY-PALE-YELLOW"
+          },
+          "source_id": "SRC-000161"
+        },
+        "oxidation_state": {
+          "elemental": {
+            "value": 0
+          },
+          "compounds": {
+            "conventional_value": -1
+          }
+        },
+        "bond_reference": {
+          "F_F": {
+            "approximate_enthalpy": 155,
+            "unit": "kJ/mol"
+          },
+          "H_F": {
+            "approximate_enthalpy": 565,
+            "unit": "kJ/mol"
+          },
+          "C_F": {
+            "approximate_enthalpy": 485,
+            "unit": "kJ/mol"
+          },
+          "classification": "REPRESENTATIVE-BOND-ENTHALPIES",
+          "source_id": "SRC-000161"
+        },
+        "isotope_branch": {
+          "NIST_mass_range": {
+            "minimum": 14,
+            "maximum": 31
+          },
+          "stable": [
+            "MAT:0009:ISO:F-19"
+          ],
+          "diagnostic": [
+            "MAT:0009:ISO:F-18"
+          ],
+          "other_key": [
+            "MAT:0009:ISO:F-17",
+            "MAT:0009:ISO:F-20",
+            "MAT:0009:ISO:F-21"
+          ]
+        },
+        "materials_relationships": {
+          "resolved": [
+            "MAT:0001",
+            "MAT:0003",
+            "MAT:0004",
+            "MAT:0005",
+            "MAT:0006",
+            "MAT:0007",
+            "MAT:0008"
+          ],
+          "high_priority": [
+            "HF",
+            "LiF",
+            "BeF2",
+            "FLiBe",
+            "BF3",
+            "BF4_minus",
+            "PTFE",
+            "NF3"
+          ]
+        },
+        "future_relationships": [
+          "MAT:0011",
+          "MAT:0012",
+          "MAT:0013",
+          "MAT:0014",
+          "MAT:0016",
+          "MAT:0018",
+          "MAT:0036",
+          "MAT:0054",
+          "MAT:0078",
+          "MAT:0092"
+        ],
+        "process_architecture": [
+          "fluorination",
+          "electrolysis",
+          "plasma_activation",
+          "semiconductor_etching",
+          "surface_modification",
+          "molten_salt",
+          "isotope_tracing"
+        ],
+        "scientific_status": {
+          "atomic_identity": "ESTABLISHED",
+          "electron_affinity": "ESTABLISHED",
+          "monoisotopic_natural_composition": "ESTABLISHED",
+          "F2_ground_state": "ESTABLISHED",
+          "fluoride_state": "ESTABLISHED",
+          "extreme_electronegativity": "ESTABLISHED"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/experiments/0009-Fluorine-F-Experiments.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:EXPERIMENTS",
+        "record_id": "MAT:0009",
+        "entries": [
+          {
+            "experiment_id": "MAT:0009:EXP:001",
+            "name": "Isolation of Elemental Fluorine",
+            "class": "ELECTROCHEMICAL-ISOLATION",
+            "year": 1886,
+            "contributor": [
+              "Henri_Moissan"
+            ],
+            "source_id": "SRC-000162"
+          },
+          {
+            "experiment_id": "MAT:0009:EXP:002",
+            "name": "PTFE Discovery",
+            "class": "POLYMER-DISCOVERY",
+            "year": 1938,
+            "contributor": [
+              "Roy_J_Plunkett"
+            ],
+            "source_id": "SRC-000184"
+          },
+          {
+            "experiment_id": "MAT:0009:EXP:003",
+            "name": "Dioxygenyl Hexafluoroplatinate",
+            "class": "HIGH-OXIDATION-FLUORIDE-CHEMISTRY",
+            "year": 1962,
+            "contributors": [
+              "Neil_Bartlett",
+              "D_H_Lohmann"
+            ],
+            "source_id": "SRC-000189"
+          },
+          {
+            "experiment_id": "MAT:0009:EXP:004",
+            "name": "Xenon Noble-Gas Chemistry",
+            "class": "NOBLE-GAS-FLUORIDE-CHEMISTRY",
+            "year": 1962,
+            "contributor": [
+              "Neil_Bartlett"
+            ],
+            "source_id": "SRC-000185"
+          },
+          {
+            "experiment_id": "MAT:0009:EXP:005",
+            "name": "First Observation of Fluorine-13",
+            "class": "PROTON-DRIP-LINE-NUCLEAR-EXPERIMENT",
+            "year": 2021,
+            "source_id": "SRC-000165"
+          },
+          {
+            "experiment_id": "MAT:0009:EXP:006",
+            "name": "First Observation of Fluorine-30",
+            "class": "NEUTRON-RICH-NUCLEAR-EXPERIMENT",
+            "year": 2024,
+            "source_id": "SRC-000166"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/relationships/0009-Fluorine-F-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:RELATIONSHIPS",
+        "record_id": "MAT:0009",
+        "version": "1.0.0",
+        "relationships": [
+          {
+            "relationship_id": "MAT:0009:REL:0001",
+            "source": "MAT:0009:ISO:F-18",
+            "type": "DECAYS-TO",
+            "target": "MAT:0008:ISO:O-18",
+            "target_status": "RESOLVED",
+            "mechanism": [
+              "BETA-PLUS",
+              "ELECTRON-CAPTURE"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0002",
+            "source": "MAT:0009:ISO:F-17",
+            "type": "DECAYS-TO",
+            "target": "MAT:0008:ISO:O-17",
+            "target_status": "RESOLVED"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0010",
+            "source": "MAT:0009",
+            "type": "FORMS-HOMONUCLEAR-MOLECULE",
+            "target": "MAT:0009:MOL:F2"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0020",
+            "source": "MAT:0009",
+            "type": "FORMS-COMPOUND-WITH",
+            "target": "MAT:0001",
+            "target_status": "RESOLVED",
+            "products": [
+              "HF"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0030",
+            "source": "MAT:0009",
+            "type": "FORMS-FLUORIDE-WITH",
+            "target": "MAT:0003",
+            "target_status": "RESOLVED",
+            "product": "LiF"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0040",
+            "source": "MAT:0009",
+            "type": "FORMS-FLUORIDE-WITH",
+            "target": "MAT:0004",
+            "target_status": "RESOLVED",
+            "product": "BeF2"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0041",
+            "source": [
+              "MAT:0003",
+              "MAT:0004",
+              "MAT:0009"
+            ],
+            "type": "FORMS-MOLTEN-SALT-FAMILY",
+            "target": "FLiBe",
+            "target_status": "RESOLVED-PARENT-TRIAD"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0050",
+            "source": "MAT:0009",
+            "type": "CHEMICAL-NETWORK-WITH",
+            "target": "MAT:0005",
+            "target_status": "RESOLVED",
+            "products": [
+              "BF3",
+              "BF4_minus"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0060",
+            "source": "MAT:0009",
+            "type": "CHEMICAL-NETWORK-WITH",
+            "target": "MAT:0006",
+            "target_status": "RESOLVED",
+            "families": [
+              "C_F_bonds",
+              "fluorocarbons",
+              "fluoropolymers",
+              "organofluorines",
+              "PFAS_subsets"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0070",
+            "source": "MAT:0009",
+            "type": "FORMS-COMPOUND-WITH",
+            "target": "MAT:0007",
+            "target_status": "RESOLVED",
+            "product": "NF3"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0080",
+            "source": "MAT:0009",
+            "type": "FORMS-OXYGEN-FLUORIDES",
+            "target": "MAT:0008",
+            "target_status": "RESOLVED",
+            "products": [
+              "OF2",
+              "O2F2"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0090",
+            "source": "MAT:0009",
+            "type": "FORMS-FLUORIDE-WITH",
+            "target": "MAT:0014",
+            "target_status": "RESERVED-PENDING-SILICON",
+            "product": "SiF4"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0091",
+            "source": "MAT:0009",
+            "type": "FORMS-HIGH-OXIDATION-FLUORIDE",
+            "target": "MAT:0016",
+            "target_status": "RESERVED-PENDING-SULFUR",
+            "product": "SF6"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0092",
+            "source": "MAT:0009",
+            "type": "FORMS-NOBLE-GAS-FLUORIDES",
+            "target": "MAT:0054",
+            "target_status": "RESERVED-PENDING-XENON",
+            "products": [
+              "XeF2",
+              "XeF4",
+              "XeF6"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0093",
+            "source": "MAT:0009",
+            "type": "STABILIZES-HIGH-OXIDATION-STATE",
+            "target": "MAT:0078",
+            "target_status": "RESERVED-PENDING-PLATINUM",
+            "product": "PtF6"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0094",
+            "source": "MAT:0009",
+            "type": "FORMS-VOLATILE-FLUORIDE",
+            "target": "MAT:0092",
+            "target_status": "RESERVED-PENDING-URANIUM",
+            "product": "UF6"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0100",
+            "source": "MAT:0009",
+            "type": "NATURAL-MINERAL-RESERVOIR",
+            "targets": [
+              "fluorite",
+              "fluorapatite",
+              "cryolite"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0110",
+            "source": "MAT:0009:ION:F-1",
+            "type": "MOBILE-ION-IN",
+            "target": "FLUORIDE-ION-CONDUCTORS"
+          },
+          {
+            "relationship_id": "MAT:0009:REL:0999",
+            "source": "MAT:0009",
+            "type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0009"
+          }
+        ],
+        "rules": {
+          "compound_property_equals_element_property": false,
+          "surface_fluorination_equals_bulk_fluorination": false,
+          "PFAS_equals_all_fluorine_chemistry": false,
+          "chemical_and_nuclear_edges_are_distinct": true
+        }
+      }
+    }
+  ],
+  "assets": [
+    "records/0009-Fluorine-F/diagrams/bonding/0009-Fluorine-F-DIAGRAM-001-F2-HF-CF.svg",
+    "records/0009-Fluorine-F/diagrams/bonding/0009-Fluorine-F-DIAGRAM-002-Fluoride-Geometries.svg",
+    "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-003-Fluoride-Ion-Conduction.svg",
+    "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-004-Fluoride-Battery.svg",
+    "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-005-Magnetic-NMR-State.svg",
+    "records/0009-Fluorine-F/diagrams/processes/0009-Fluorine-F-DIAGRAM-006-Transformation-Network.svg",
+    "records/0009-Fluorine-F/diagrams/relationships/0009-Fluorine-F-DIAGRAM-007-Knowledge-Graph.svg",
+    "records/0009-Fluorine-F/diagrams/relationships/0009-Fluorine-F-DIAGRAM-008-Evidence-Provenance.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-001-Isotope-Lifetime-Map.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-002-Ionization-Ladder.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-004-F2-Molecular-Constants.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-005-Bond-Reference-Bars.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-007-Partner-Oxidation-States.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-010-Compound-Classification-Tree.svg",
+    "records/0009-Fluorine-F/graphs/0009-Fluorine-F-GRAPH-011-F18-Decay.svg",
+    "records/0009-Fluorine-F/images/applications/0009-Fluorine-F-FIG-013-Applications.svg",
+    "records/0009-Fluorine-F/images/isotope/0009-Fluorine-F-FIG-005-Isotope-Map.svg",
+    "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-008-Physical-State.svg",
+    "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-009-Thermal-and-Molten-Salt.svg",
+    "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-010-PTFE-Structure.svg",
+    "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-011-BeF2-FLiBe-Network.svg",
+    "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-012-Compatibility-State-Map.svg",
+    "records/0009-Fluorine-F/images/quantum/0009-Fluorine-F-FIG-003-Electron-Probability.svg",
+    "records/0009-Fluorine-F/images/quantum/0009-Fluorine-F-FIG-004-Electron-Capture.svg",
+    "records/0009-Fluorine-F/images/scientific/0009-Fluorine-F-FIG-002-Atomic-Identity.svg",
+    "records/0009-Fluorine-F/images/spectral/0009-Fluorine-F-FIG-006-Atomic-Spectrum.svg",
+    "records/0009-Fluorine-F/images/spectral/0009-Fluorine-F-FIG-007-Molecular-NMR-Spectrum.svg",
+    "records/0009-Fluorine-F/models/scientific/0009-Fluorine-F-MODEL-SCI-001-F2-Molecule.glb"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000157",
+      "source_aliases": [
+        "SRC-F-001"
+      ],
+      "title": "NIST Atomic Spectra Database — Fluorine Ionization Energies",
+      "organization": "National Institute of Standards and Technology",
+      "database": "ASD v5.12",
+      "source_type": "EVALUATED-ATOMIC-SPECTROSCOPY",
+      "supports": [
+        "fluorine_ground_configuration",
+        "fluorine_ground_level",
+        "F_ionization_ladder"
+      ]
+    },
+    {
+      "source_id": "SRC-000158",
+      "source_aliases": [
+        "SRC-F-002"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Fluorine",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-ISOTOPE-DATABASE",
+      "supports": [
+        "F14_to_F31_masses",
+        "F19_mass",
+        "F19_isotopic_composition",
+        "fluorine_standard_atomic_weight"
+      ]
+    },
+    {
+      "source_id": "SRC-000159",
+      "source_aliases": [
+        "SRC-F-003"
+      ],
+      "title": "NIST Chemistry WebBook — Atomic Fluorine",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "ATOMIC-ION-ENERGETICS",
+      "supports": [
+        "fluorine_electron_affinity",
+        "atomic_fluorine_ionization"
+      ]
+    },
+    {
+      "source_id": "SRC-000160",
+      "source_aliases": [
+        "SRC-F-004"
+      ],
+      "title": "NIST Chemistry WebBook — Fluorine F2",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-SPECTROSCOPY-AND-THERMOCHEMISTRY",
+      "supports": [
+        "F2",
+        "F2_ground_state",
+        "F2_bond_length",
+        "F2_vibrational_constant",
+        "F2_rotational_constant",
+        "fluorine_phase_data"
+      ]
+    },
+    {
+      "source_id": "SRC-000161",
+      "source_aliases": [
+        "SRC-F-005"
+      ],
+      "title": "Fluorine — Element Information, Properties and Uses",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "SCIENTIFIC-REFERENCE",
+      "supports": [
+        "Pauling_electronegativity",
+        "F_F_bond_enthalpy",
+        "H_F_bond_enthalpy",
+        "C_F_bond_enthalpy",
+        "fluorine_melting_point",
+        "fluorine_boiling_point",
+        "oxidation_state",
+        "general_uses"
+      ]
+    },
+    {
+      "source_id": "SRC-000162",
+      "source_aliases": [
+        "SRC-F-HIST-001"
+      ],
+      "title": "The Discovery of Fluorine",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "SCIENTIFIC-HISTORY",
+      "supports": [
+        "Henri_Moissan",
+        "fluorine_isolation_1886",
+        "early_fluorine_isolation_attempts",
+        "electrochemical_isolation"
+      ]
+    },
+    {
+      "source_id": "SRC-000163",
+      "source_aliases": [
+        "SRC-F-NUC-001"
+      ],
+      "title": "Fluorine-18 Ground-State Decay Evaluation",
+      "organization": "Triangle Universities Nuclear Laboratory",
+      "year": 2019,
+      "source_type": "NUCLEAR-DECAY-EVALUATION",
+      "supports": [
+        "F18_half_life",
+        "F18_decay",
+        "PET_isotope"
+      ]
+    },
+    {
+      "source_id": "SRC-000165",
+      "title": "First Observation of the Exotic Isotope 13F Located Four Neutrons Beyond the Proton Drip Line",
+      "authors": [
+        "R. J. Charity",
+        "T. B. Webb",
+        "J. M. Elson",
+        "et al."
+      ],
+      "journal": "Physical Review Letters",
+      "year": 2021,
+      "volume": 126,
+      "article": "132501",
+      "doi": "10.1103/PhysRevLett.126.132501",
+      "source_type": "PRIMARY-NUCLEAR-EXPERIMENT",
+      "supports": [
+        "F13_observation",
+        "F13_resonance",
+        "F13_proton_unbound"
+      ]
+    },
+    {
+      "source_id": "SRC-000166",
+      "title": "Magicity versus Superfluidity around 28O viewed from the Study of 30F",
+      "journal": "Physical Review Letters",
+      "year": 2024,
+      "volume": 133,
+      "article": "082501",
+      "doi": "10.1103/PhysRevLett.133.082501",
+      "source_type": "PRIMARY-NUCLEAR-EXPERIMENT",
+      "supports": [
+        "F30_first_observation",
+        "F30_neutron_unbound",
+        "F30_separation_energy",
+        "F29_halo_context",
+        "F31_halo_context",
+        "N20_shell_evolution"
+      ]
+    },
+    {
+      "source_id": "SRC-000168",
+      "title": "Dissociation of the Fluorine Molecule",
+      "journal": "Journal of Physical Chemistry A",
+      "year": 2013,
+      "source_type": "MOLECULAR-ENERGETICS",
+      "supports": [
+        "F2_D0",
+        "F_F_bond_energy"
+      ],
+      "values": {
+        "D0": {
+          "value": 154.92,
+          "uncertainty": 0.1,
+          "unit": "kJ/mol"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-000169",
+      "title": "NIST Chemistry WebBook — Hydrogen Fluoride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-SPECTROSCOPY-AND-THERMOCHEMISTRY",
+      "supports": [
+        "HF_bond_length",
+        "HF_vibrational_constant",
+        "HF_rotational_constant",
+        "HF_dipole",
+        "HF_formation_enthalpy",
+        "HF_phase_data"
+      ]
+    },
+    {
+      "source_id": "SRC-000170",
+      "title": "Fluorine — Professional Paper 1802-G",
+      "organization": "United States Geological Survey",
+      "source_type": "GEOLOGICAL-REFERENCE",
+      "supports": [
+        "fluorite",
+        "fluorapatite",
+        "cryolite",
+        "sellaite",
+        "villiaumite",
+        "topaz",
+        "natural_fluorine_geochemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000171",
+      "title": "Complex Structure of Molten FLiBe (2LiF-BeF2)",
+      "organization": "Oak Ridge National Laboratory",
+      "journal": "PRX Energy",
+      "year": 2024,
+      "volume": 3,
+      "article": "013001",
+      "source_type": "PRIMARY-MOLTEN-SALT-STRUCTURE",
+      "supports": [
+        "FLiBe",
+        "BeF4_units",
+        "polymeric_Be_F_species",
+        "molten_salt_structure"
+      ]
+    },
+    {
+      "source_id": "SRC-000172",
+      "title": "Fluoride ions as charge carriers in electrochemical energy storage",
+      "journal": "Nature Materials",
+      "year": 2026,
+      "doi": "10.1038/s41563-026-02654-y",
+      "source_type": "CURRENT-FLUORIDE-ION-BATTERY-REVIEW",
+      "supports": [
+        "fluoride_ion_conduction",
+        "fluoride_ion_batteries",
+        "solid_fluoride_electrolytes",
+        "conversion_electrodes",
+        "insertion_electrodes",
+        "interface_challenges"
+      ]
+    },
+    {
+      "source_id": "SRC-000173",
+      "title": "The Role of Fluorine Chemistry in Anisotropic Etching of Dielectric Materials",
+      "organization": "National Institute of Standards and Technology",
+      "year": 2021,
+      "source_type": "SEMICONDUCTOR-PLASMA-PROCESS-REFERENCE",
+      "supports": [
+        "fluorocarbon_plasma",
+        "dielectric_etch",
+        "anisotropic_etching",
+        "plasma_surface_chemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000174",
+      "title": "Fluorinated Polymers — Applications and PTFE",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "POLYMER-MATERIAL-REFERENCE",
+      "supports": [
+        "PTFE",
+        "fluoropolymers",
+        "low_surface_energy",
+        "chemical_resistance",
+        "electrical_insulation"
+      ]
+    },
+    {
+      "source_id": "SRC-000175",
+      "title": "Fluorination in advanced battery design",
+      "journal": "Nature Reviews Materials",
+      "year": 2024,
+      "doi": "10.1038/s41578-023-00623-4",
+      "source_type": "BATTERY-MATERIAL-REVIEW",
+      "supports": [
+        "fluorinated_electrolytes",
+        "fluorinated_interfaces",
+        "LiF_interphase",
+        "fluorinated_battery_components"
+      ]
+    },
+    {
+      "source_id": "SRC-000176",
+      "title": "A neutron diffraction and molecular dynamics investigation of vitreous beryllium fluoride",
+      "journal": "Journal of Non-Crystalline Solids",
+      "year": 1989,
+      "volume": 111,
+      "pages": "139-152",
+      "source_type": "BERYLLIUM-FLUORIDE-STRUCTURE",
+      "supports": [
+        "BeF2_glass",
+        "BeF4_tetrahedra",
+        "BeF2_SiO2_structural_analogy"
+      ]
+    },
+    {
+      "source_id": "SRC-000177",
+      "title": "Probing the local structure of FLiBe melts and solidified salts by in situ high-temperature NMR",
+      "journal": "Physical Chemistry Chemical Physics",
+      "year": 2023,
+      "doi": "10.1039/D3CP01096A",
+      "source_type": "PRIMARY-MOLTEN-SALT-NMR",
+      "supports": [
+        "FLiBe_local_structure",
+        "BeF4",
+        "Be2F7",
+        "Be3F10",
+        "polymeric_Be_F_networks"
+      ]
+    },
+    {
+      "source_id": "SRC-000178",
+      "title": "Recent advances in the degradation of polytetrafluoroethylene at low temperature",
+      "journal": "Chemical Science",
+      "year": 2026,
+      "doi": "10.1039/D6SC03192G",
+      "source_type": "CURRENT-PTFE-REVIEW",
+      "supports": [
+        "PTFE_stability",
+        "PTFE_C_F_bonding",
+        "PTFE_recycling",
+        "fluorine_circularity"
+      ]
+    },
+    {
+      "source_id": "SRC-000179",
+      "title": "NIST Handbook of Basic Atomic Spectroscopic Data — Fluorine Persistent Lines",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-ATOMIC-SPECTROSCOPY",
+      "supports": [
+        "F_I_persistent_lines",
+        "F_II_persistent_lines",
+        "fluorine_atomic_spectrum"
+      ]
+    },
+    {
+      "source_id": "SRC-000180",
+      "title": "NIST Chemistry WebBook — Boron Trifluoride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-AND-THERMOCHEMICAL-DATA",
+      "supports": [
+        "BF3",
+        "BF3_spectroscopy",
+        "BF3_thermochemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000181",
+      "title": "NIST Chemistry WebBook — Oxygen Difluoride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-AND-THERMOCHEMICAL-DATA",
+      "supports": [
+        "OF2",
+        "oxygen_fluorides",
+        "positive_oxygen_oxidation_state"
+      ]
+    },
+    {
+      "source_id": "SRC-000182",
+      "title": "NIST Chemistry WebBook — Nitrogen Trifluoride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-AND-PROCESS-CHEMISTRY",
+      "supports": [
+        "NF3",
+        "NF3_spectroscopy",
+        "NF3_process_relationship"
+      ]
+    },
+    {
+      "source_id": "SRC-000183",
+      "title": "NIST Chemistry WebBook — Silicon Tetrafluoride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "MOLECULAR-AND-THERMOCHEMICAL-DATA",
+      "supports": [
+        "SiF4",
+        "silicon_fluoride",
+        "Si_F_processing_relationship"
+      ]
+    },
+    {
+      "source_id": "SRC-000184",
+      "title": "Roy J. Plunkett",
+      "organization": "Science History Institute",
+      "source_type": "SCIENTIFIC-HISTORY",
+      "supports": [
+        "Roy_Plunkett",
+        "PTFE_discovery",
+        "1938_Teflon_discovery"
+      ]
+    },
+    {
+      "source_id": "SRC-000185",
+      "title": "Bartlett's discovery of noble gas fluorides, a milestone in chemical history",
+      "author": "Karl O. Christe",
+      "journal": "Chemical Communications",
+      "year": 2013,
+      "doi": "10.1039/C3CC41387J",
+      "source_type": "NOBLE-GAS-FLUORIDE-HISTORY-AND-REASSESSMENT",
+      "supports": [
+        "Neil_Bartlett",
+        "xenon_fluoride_chemistry",
+        "PtF6",
+        "historical_product_reassessment"
+      ]
+    },
+    {
+      "source_id": "SRC-000186",
+      "title": "Reconciling Terminology of the Universe of Per- and Polyfluoroalkyl Substances",
+      "organization": "OECD",
+      "year": 2021,
+      "source_type": "CHEMICAL-TERMINOLOGY-REFERENCE",
+      "supports": [
+        "PFAS_definition",
+        "perfluorinated_methyl",
+        "perfluorinated_methylene",
+        "structural_classification"
+      ]
+    },
+    {
+      "source_id": "SRC-000187",
+      "title": "EPA PFAS Structural Definitions and CCL 5",
+      "organization": "U.S. Environmental Protection Agency",
+      "current_context_year": 2026,
+      "source_type": "REGULATORY-DEFINITION-REFERENCE",
+      "supports": [
+        "PFAS_program_specific_definition",
+        "CCL5_PFAS",
+        "EPA_PFAS_structure",
+        "definition_context"
+      ]
+    },
+    {
+      "source_id": "SRC-000189",
+      "title": "Dioxygenyl hexafluoroplatinate(V), O2+[PtF6]-",
+      "authors": [
+        "Neil Bartlett",
+        "D. H. Lohmann"
+      ],
+      "journal": "Journal of the Chemical Society",
+      "year": 1962,
+      "pages": "5253-5261",
+      "doi": "10.1039/JR9620005253",
+      "source_type": "PRIMARY-HIGH-OXIDATION-FLUORIDE-CHEMISTRY",
+      "supports": [
+        "O2_PtF6",
+        "Bartlett_reasoning",
+        "PtF6_oxidizing_chemistry"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 20,
+    "graphs": 7,
+    "tables": 10,
+    "sources": 31
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

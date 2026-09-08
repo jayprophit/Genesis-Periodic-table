@@ -1,0 +1,37 @@
+{
+  "id": "records/0005-Boron-B/calculations/0005-Boron-B-CALC-002-B10-Excited-Branch.md",
+  "key": "49291c6019bad2fd5bfb",
+  "mat": "MAT:0005",
+  "title": "CALC-002 — Dominant Boron-10 Capture Branch",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-002 — Dominant Boron-10 Capture Branch\n\nA dominant thermal-neutron capture branch produces excited Lithium-7:\n\n$$\n{}^{10}B+n\n\\rightarrow\n{}^7Li^*+\\alpha\n$$\n\nfollowed by:\n\n$$\n{}^7Li^*\n\\rightarrow\n{}^7Li+\\gamma\n$$\n\nwith the gamma energy approximately:\n\n$$\nE_\\gamma\n\\approx\n0.478\\ {\\rm MeV}\n$$\n\nThe available kinetic energy before gamma emission is therefore approximately:\n\n$$\nQ_{\\rm kinetic}\n\\approx\n2.790-0.478\n$$\n\n$$\n\\boxed{\nQ_{\\rm kinetic}\n\\approx\n2.312\\ {\\rm MeV}\n}\n$$\n\nwhile the complete final-state energy release remains the full reaction Q-value:\n\n$$\n\\approx2.790\\ {\\rm MeV}\n$$\n\nReference branching fraction near the thermal-neutron standard region:\n\n$$\nf_{\\rm excited}\n\\approx\n0.937\n$$\n\nThe branch fraction is neutron-energy dependent and must retain its reference conditions.\n\n```yaml\ncalculation_id: \"MAT:0005:CALC:002\"\nclassification: \"DERIVED-PLUS-EVALUATED-BRANCH\"\n\nparent_calculation: \"MAT:0005:CALC:001\"\n\ngamma:\n  approximate_energy:\n    value: 0.478\n    unit: \"MeV\"\n\nexcited_branch_fraction:\n  approximate_value: 0.937\n  neutron_regime: \"THERMAL / LOW-ENERGY REFERENCE\"\n  source_id: \"SRC-000067\"\n\nrules:\n  branch_fraction_is_universal: false\n  gamma_energy_equals_total_q_value: false\n```\n\n---\n",
+  "bodyHash": "0f44972be8e809b750773ef0ba9be34a13bc0688f4d235fad30b2735c66b23f2",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000067",
+      "source_aliases": [
+        "SRC-B-005"
+      ],
+      "title": "Neutron Standards and Alpha-Gamma Counting for Boron-10",
+      "organization": "NIST / National Bureau of Standards",
+      "source_type": "NEUTRON-METROLOGY-REFERENCE",
+      "supports": [
+        "B10_capture_branching",
+        "B10_478_keV_gamma",
+        "B10_neutron_standard"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

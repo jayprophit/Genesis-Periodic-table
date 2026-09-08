@@ -1,0 +1,41 @@
+{
+  "id": "records/0006-Carbon-C/calculations/0006-Carbon-C-CALC-003-C14-Decay-Constant.md",
+  "key": "f0be8e6fd272722afa4c",
+  "mat": "MAT:0006",
+  "title": "CALC-003 — Carbon-14 Decay Constant",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-003 — Carbon-14 Decay Constant\n\nUsing the adopted MAT reference:\n\n$$\nt_{1/2}\n=\n5700\\ {\\rm y}\n$$\n\nthe decay constant is:\n\n$$\n\\lambda\n=\n\\frac{\\ln2}{t_{1/2}}\n$$\n\ngiving approximately:\n\n$$\n\\boxed{\n\\lambda\n\\approx\n1.216\\times10^{-4}\\ {\\rm y^{-1}}\n}\n$$\n\nThe activity relationship is:\n\n$$\nA=\\lambda N\n$$\n\nand radioactive population evolves as:\n\n$$\nN(t)=N_0e^{-\\lambda t}\n$$\n\nThe conventional Libby radiocarbon age scale must use its own\nmethod-defined half-life rather than silently replacing the physical\nhalf-life in this calculation.\n\n```yaml\ncalculation_id: \"MAT:0006:CALC:003\"\nclassification: \"DERIVED\"\n\nhalf_life:\n  value: 5700\n  unit: \"y\"\n\ndecay_constant:\n  approximate_value: 1.216e-4\n  unit: \"1/y\"\n\nsource_id: \"SRC-000082\"\n```\n",
+  "bodyHash": "21a0f5ef959bc8720f0db5944b6d6b38cfd422e00bb7f5c3947092ee3bfa2260",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000082",
+      "source_aliases": [
+        "SRC-C-003"
+      ],
+      "title": "IAEA-C-3 Carbon-14 Reference Material",
+      "organization": "International Atomic Energy Agency",
+      "source_type": "RADIONUCLIDE-REFERENCE-MATERIAL",
+      "supports": [
+        "carbon_14_half_life_reference",
+        "radiocarbon_reference_material"
+      ],
+      "half_life": {
+        "value": 5700,
+        "uncertainty": 30,
+        "unit": "y"
+      }
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

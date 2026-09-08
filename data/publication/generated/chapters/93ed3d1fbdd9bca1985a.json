@@ -1,0 +1,51 @@
+{
+  "id": "records/0003-Lithium-Li/calculations/0003-Lithium-Li-CALC-003-Theoretical-Specific-Capacity.md",
+  "key": "93ed3d1fbdd9bca1985a",
+  "mat": "MAT:0003",
+  "title": "CALC-003 — Lithium Metal Theoretical Specific Charge Capacity",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-003 — Lithium Metal Theoretical Specific Charge Capacity\n\nFor:\n\n$$\nLi\\rightarrow Li^++e^-\n$$\n\none mole of Lithium transfers one mole of electrons.\n\n$$\nQ_s\n=\n\\frac{F}{3.6M}\n$$\n\nFor:\n\n$$\nM=6.938\\ g\\,mol^{-1}\n$$\n\n$$\nQ_s\\approx3863\\ mAh\\,g^{-1}\n$$\n\nFor:\n\n$$\nM=6.997\\ g\\,mol^{-1}\n$$\n\n$$\nQ_s\\approx3830\\ mAh\\,g^{-1}\n$$\n\nThus:\n\n$$\n\\boxed{\nQ_s\\approx3830-3863\\ mAh\\,g^{-1}\n}\n$$\n\nacross the MAT standard-atomic-weight interval.\n\n```yaml\ncalculation_id: \"MAT:0003:CALC:003\"\nclassification: \"DERIVED\"\nelectron_transfer_per_atom: 1\n\nspecific_capacity:\n  minimum: 3830\n  maximum: 3863\n  unit: \"mAh/g\"\n\nsource_ids:\n  - \"SRC-000018\"\n  - \"SRC-000035\"\n```\n",
+  "bodyHash": "ee06f0f16483fc3d953230e822a45920f5f3aa2ee73133eb1d49408fe4c8423f",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000035",
+      "source_aliases": [
+        "SRC-Li-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Lithium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "lithium_standard_atomic_weight",
+        "lithium_isotope_masses",
+        "lithium_isotopic_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 2
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

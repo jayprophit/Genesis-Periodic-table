@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/01-Image-Standard.md",
+  "key": "2e6212e6d05267182afa",
+  "mat": null,
+  "title": "MAT Image Standard",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT Image Standard\n\n## 1. Image Categories\n\nPrimary image categories are:\n\n```text\nNATURAL\nSCHEMATIC\nATOMIC\nQUANTUM\nMOLECULAR\nCRYSTAL\nISOTOPE\nSPECTRAL\nPROPERTY\nFIELD\nPROCESS\nAPPLICATION\nHISTORICAL\nREFERENCE\n```\n\n---\n\n# 2. Natural-State Image\n\nThe natural/material image should show a scientifically plausible manifestation.\n\nMetadata should include:\n\n```yaml\nphase:\ntemperature:\npressure:\npurity:\nsample_form:\nenvironment:\n```\n\nwhere known.\n\n---\n\n# 3. False Colour\n\nFalse colour is acceptable when it improves scientific interpretation.\n\nIt must be labelled:\n\n```text\nFALSE-COLOUR\n```\n\nand preferably state what the colour scale represents.\n\n---\n\n# 4. Microscopy\n\nMicroscopy images should state:\n\n- technique;\n- magnification;\n- scale bar;\n- sample;\n- preparation;\n- imaging conditions.\n\nPossible methods include:\n\n```text\nOPTICAL\nSEM\nTEM\nAFM\nSTM\nX-RAY\nNEUTRON\n```\n\n---\n\n# 5. Atomic Images\n\nClaims that an image shows individual atoms should identify the imaging/reconstruction technique.\n\nA rendered atom graphic is:\n\n```text\nSCIENTIFIC-SCHEMATIC\n```\n\nor:\n\n```text\nCOMPUTATIONAL\n```\n\nnot a photograph.\n\n---\n\n# 6. Quantum Probability Images\n\nElectron probability images should identify, where applicable:\n\n- orbital/state;\n- quantum numbers;\n- probability or density convention;\n- isosurface threshold;\n- calculation method.\n\n---\n\n# 7. Molecular Images\n\nSpecify representation:\n\n```text\nBALL-AND-STICK\nSPACE-FILLING\nWIRE\nSURFACE\nELECTRON-DENSITY\nELECTROSTATIC-POTENTIAL\n```\n\n---\n\n# 8. Crystal Images\n\nSpecify:\n\n- crystal system;\n- space group;\n- unit-cell dimensions;\n- orientation;\n- scale;\n- atomic occupancy where relevant.\n\n---\n\n# 9. Isotope Visuals\n\nAvoid representing isotope nuclei as though exact nucleon positions are known classical objects.\n\nUse:\n\n```text\nNUCLEAR-SCHEMATIC\n```\n\nunless a more advanced nuclear-density calculation is being shown.\n\n---\n\n# 10. Field Images\n\nMagnetic and electric field maps should include:\n\n- magnitude;\n- direction;\n- coordinate system;\n- scale;\n- boundary conditions;\n- measurement or simulation status.\n\n---\n\n# 11. Generated Images\n\nComputer-generated scientific images must state whether they are:\n\n```text\nDATA-DRIVEN\nMODEL-DRIVEN\nSCHEMATIC\nCONCEPTUAL\n```\n\n---\n\n# 12. Image Placeholder\n\nIf an image has not yet been generated, preserve the slot:\n\n```markdown\n<!-- MAT-VISUAL: V04 -->\n<!-- STATUS: PLACEHOLDER -->\n<!-- ASSET-ID: MAT:0001:FIG:V04:001 -->\n<!-- DESCRIPTION: Electron probability representation -->\n```\n\nThis enables automated generation later.\n\n---\n\n# 13. Captions\n\nEach caption should answer:\n\n1. What is shown?\n2. Under what conditions?\n3. Is it measured, calculated or conceptual?\n4. What source/data generated it?\n\n---\n\n# 14. Cropping\n\nDo not crop away:\n\n- axes;\n- legends;\n- scale bars;\n- labels;\n- uncertainty;\n- scientifically important boundaries.\n\n---\n\n# 15. Image Manipulation\n\nScientific images must not be altered in a manner that changes the scientific interpretation without disclosure.\n\n---\n\n# 16. Historical Visuals\n\nHistorical models may be shown if explicitly labelled.\n\nExample:\n\n```text\nHISTORICAL ATOMIC MODEL\nNOT MODERN ELECTRON-PROBABILITY DESCRIPTION\n```\n\n---\n\n# 17. Standard Aspect Roles\n\nMAT may use:\n\n```text\n1:1    record tile / property tile\n4:3    scientific diagram\n16:9   overview / process\n3:4    page illustration\n```\n\nScientific clarity takes priority over rigid aspect ratio.\n",
+  "bodyHash": "78e7ebcf72e2e178615539bbb0657ae311eb7e5bcdf331d25e020183c23aa8fa",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

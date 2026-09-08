@@ -1,0 +1,68 @@
+{
+  "id": "records/0008-Oxygen-O/calculations/0008-Oxygen-O-CALC-001-O15-BetaPlus-Q.md",
+  "key": "7cb35f264c6a59a9b36d",
+  "mat": "MAT:0008",
+  "title": "CALC-001 — Oxygen-15 Positron-Decay Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Oxygen-15 Positron-Decay Q-Value\n\nReaction:\n\n$$\n{}^{15}O\n\\rightarrow\n{}^{15}N\n+\ne^+\n+\n\\nu_e\n$$\n\nUsing neutral atomic masses:\n\n$$\nm({}^{15}O)\n=\n15.00306562\\ u\n$$\n\n$$\nm({}^{15}N)\n=\n15.00010889888\\ u\n$$\n\nFor positron decay using neutral atomic masses:\n\n$$\nQ_{\\beta^+}\n=\n\\left[\nM({}^{15}O)\n-\nM({}^{15}N)\n-\n2m_e\n\\right]c^2\n$$\n\ngiving:\n\n$$\n\\boxed{\nQ_{\\beta^+}\n\\approx1.73217\\ {\\rm MeV}\n}\n$$\n\nThis is the total decay-energy window.\n\nIt is not the kinetic energy of each emitted positron.\n\n```yaml\ncalculation_id: \"MAT:0008:CALC:001\"\nclassification: \"DERIVED\"\n\nparent: \"MAT:0008:ISO:O-15\"\ndaughter: \"MAT:0007:ISO:N-15\"\n\nq_value:\n  value: 1.73217\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000126\"\n  - \"SRC-000101\"\n  - \"SRC-000018\"\n",
+  "bodyHash": "b4438e9e824292ed2568f8a670b84a3c1c5fc6622298ffbad5f718d6770b1d27",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000101",
+      "source_aliases": [
+        "SRC-N-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Nitrogen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "nitrogen_standard_atomic_weight",
+        "nitrogen_isotope_masses",
+        "nitrogen_14_composition",
+        "nitrogen_15_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000126",
+      "source_aliases": [
+        "SRC-O-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Oxygen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "oxygen_standard_atomic_weight",
+        "O12_to_O28_masses",
+        "O16_composition",
+        "O17_composition",
+        "O18_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 3
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

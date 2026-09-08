@@ -1,0 +1,22 @@
+{
+  "id": "docs/00-front-matter/01-Project-Context.md",
+  "key": "1e25031ddbe2ba43c456",
+  "mat": null,
+  "title": "MAT Project Context",
+  "section": "Front matter",
+  "lane": "reference",
+  "body": "# MAT Project Context\n\n## Origin\n\nThe Materials Atlas Table Codex developed from an earlier project known as the Genesis Periodic Table.\n\nThe original project began by expanding conventional elemental records with substantially more information than normally appears in a periodic table.\n\nAs the dataset expanded, it became clear that an element could not adequately be represented as one static object.\n\nDifferent isotopes behave differently.\n\nThe same element may form different ions, molecules, allotropes, phases, compounds and materials.\n\nThe properties of a material may also change with temperature, pressure, electromagnetic fields, radiation, scale, defects, geometry, processing history and time.\n\nThe project therefore evolved from an expanded periodic table into a broader materials knowledge architecture.\n\nThis architecture is the Materials Atlas Table Codex.\n\n---\n\n## Why MAT Exists\n\nScientific information about matter is distributed across many disciplines and databases.\n\nAtomic spectroscopy may be stored separately from nuclear data.\n\nCrystal structures may be stored separately from mechanical properties.\n\nChemical reactions may be separated from manufacturing processes.\n\nManufacturing data may be separated from electronic behaviour.\n\nBiological effects may be stored separately again.\n\nMAT attempts to connect these domains through structured records and relationships.\n\nThe aim is not to replace specialist scientific databases.\n\nThe aim is to provide an architecture capable of linking their information.\n\n---\n\n## From Tables to State Space\n\nMAT treats a material as occupying a position within a multidimensional state space.\n\nFor a state \\(M_i\\):\n\n\\[\nM_i =\nF(C,I,Q,S,E,B,T,P,R,t,s,\\Pi)\n\\]\n\nwhere the variables may represent quantities such as:\n\n- composition \\(C\\);\n- isotope state \\(I\\);\n- quantum/electronic state \\(Q\\);\n- structure \\(S\\);\n- electric field \\(E\\);\n- magnetic field \\(B\\);\n- temperature \\(T\\);\n- pressure \\(P\\);\n- radiation/environment \\(R\\);\n- time \\(t\\);\n- scale \\(s\\);\n- processing history \\(\\Pi\\).\n\nThe exact MAT schema contains many individual fields rather than relying on this compressed equation.\n\nThe expression exists only as a conceptual description of the architecture.\n\n---\n\n## Relationship Model\n\nMAT records are connected.\n\nAn element may connect to:\n\n\\[\n\\text{Element}\n\\rightarrow\n\\text{Isotope}\n\\rightarrow\n\\text{Atomic State}\n\\rightarrow\n\\text{Bond}\n\\rightarrow\n\\text{Compound}\n\\rightarrow\n\\text{Material}\n\\rightarrow\n\\text{Process}\n\\rightarrow\n\\text{Application}\n\\]\n\nOther paths are possible.\n\nFor example:\n\n\\[\n\\text{Material}\n+\n\\text{Temperature}\n+\n\\text{Pressure}\n\\rightarrow\n\\text{Phase}\n\\]\n\nor:\n\n\\[\n\\text{Material}\n+\n\\text{Manufacturing Process}\n\\rightarrow\n\\text{Microstructure}\n\\rightarrow\n\\text{Properties}\n\\]\n\nMAT therefore behaves more like a scientific knowledge graph than a conventional flat periodic table.\n\n---\n\n## Long-Term Objective\n\nThe eventual objective is to allow a desired property specification to be expressed as a target:\n\n\\[\nY =\n\\{\\text{required properties}\\}\n\\]\n\nand then search MAT for candidate combinations of:\n\n\\[\n\\{\n\\text{composition},\n\\text{isotope},\n\\text{structure},\n\\text{geometry},\n\\text{process},\n\\text{environment}\n\\}\n\\]\n\nthat could satisfy those requirements.\n\nThis makes MAT not only an atlas of known materials but potentially a foundation for computational materials exploration.\n\n---\n",
+  "bodyHash": "a5a58acee9d4fc14b8645760a20a3c9cc36674b99f0b1c4e06eb7b74c91d56bc",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

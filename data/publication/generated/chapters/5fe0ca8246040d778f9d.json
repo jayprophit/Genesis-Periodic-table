@@ -1,0 +1,22 @@
+{
+  "id": "records/0000-Origin-State/experiments/0000-Validation-Tests.md",
+  "key": "5fe0ca8246040d778f9d",
+  "mat": "MAT:0000",
+  "title": "0000 Validation Tests",
+  "section": "Material Atlas Table",
+  "lane": "foundation",
+  "body": "# 0000 Validation Tests\n\n## TEST-0000-001 — Null Versus Zero\n\n### Requirement\n\nVerify that:\n\n```text\nZERO\nUNKNOWN\nNOT-MEASURED\nNOT-AVAILABLE\nNOT-APPLICABLE\nMAT:0000\n```\n\nremain separate machine-readable values.\n\n### Pass\n\nNo parser or schema maps these categories automatically to the same value.\n\n---\n\n## TEST-0000-002 — Dimensional Compatibility\n\n### Test\n\nAttempt:\n\n$$\n300\\ \\mathrm K\n-\n100000\\ \\mathrm{Pa}\n$$\n\n### Expected\n\n```text\nREJECT\n```\n\nReason:\n\nIncompatible physical dimensions.\n\n---\n\n## TEST-0000-003 — Compatible Unit Conversion\n\nInput:\n\n```text\n1 bar\n100 kPa\n```\n\nAfter unit normalization:\n\n$$\n100000\\ \\mathrm{Pa}\n-\n100000\\ \\mathrm{Pa}\n=\n0\\ \\mathrm{Pa}\n$$\n\n### Expected\n\n```text\nPASS\n```\n\n---\n\n## TEST-0000-004 — T0 Semantics\n\nInput:\n\n```yaml\nreference: MAT:0000:REF:T0\nvalue: 293.15\nunit: K\n```\n\n### Expected\n\nMAT must not replace this automatically with:\n\n```text\n0 K\n```\n\n---\n\n## TEST-0000-005 — B0 Semantics\n\nInput:\n\n```yaml\nreference: MAT:0000:REF:B0\nnominal_external_field: 0\nunit: T\n```\n\n### Expected\n\nSystem description must not claim:\n\n```text\nall magnetic phenomena are absent\n```\n\n---\n\n## TEST-0000-006 — Vacuum Separation\n\nVerify:\n\n```text\nMAT:0000:REF:VAC\n```\n\nand:\n\n```text\nMAT:0000:REF:QV\n```\n\nare separate objects.\n\n### Expected\n\n```text\nPASS\n```\n\n---\n\n## TEST-0000-007 — Quantum-Vacuum Qualification\n\nAny QV entry lacking a specified theory/model should be flagged:\n\n```text\nINCOMPLETE-REFERENCE\n```\n\n---\n\n## TEST-0000-008 — Reference Difference\n\nFor:\n\n```yaml\nT: 350\nT0: 300\nunit: K\n```\n\nexpected:\n\n$$\n\\Delta T=50\\ \\mathrm K\n$$\n\n---\n\n## TEST-0000-009 — No Causal Inference From Difference Alone\n\nInput:\n\n```text\nState A differs from State B.\n```\n\nExpected:\n\n```text\nDIFFERENCE CONFIRMED\nCAUSATION NOT ESTABLISHED\n```\n\n---\n\n## TEST-0000-010 — Legacy Mapping\n\nEvery legacy `G0000-*` reference should either:\n\n1. map to a MAT reference ID; or\n2. be explicitly deprecated.\n\n---\n",
+  "bodyHash": "c442ae64f012c8595273690bf40df4ce74d862f6371c22797b37fb56274d9d0e",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

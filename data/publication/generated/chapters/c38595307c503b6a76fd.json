@@ -1,0 +1,26 @@
+{
+  "id": "records/0005-Boron-B/0005-Boron-B-Schema-Validation.md",
+  "key": "c38595307c503b6a76fd",
+  "mat": "MAT:0005",
+  "title": "Boron Schema Validation",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# Boron Schema Validation\n\n```yaml\nrecord_id: \"MAT:0005\"\nvalidation_version: \"1.0.0\"\noverall: \"PASS\"\n```\n\n## Atomic Identity\n\n```text\nMAT:0005\nMAT:0005:ATOM:B\n```\n\nPASS.\n\n---\n\n## Ionic States\n\n```text\nMAT:0005:ION:B+1\nMAT:0005:ION:B+2\nMAT:0005:ION:B+3\nMAT:0005:ION:B+4\nMAT:0005:ION:B+5\n```\n\nPASS.\n\n---\n\n## Isotope Namespace\n\n```text\nMAT:0005:ISO:B-6\n...\nMAT:0005:ISO:B-21\n```\n\nPASS.\n\n---\n\n## Stable Isotopes\n\n```text\nB-10:\n  half_life: NOT-APPLICABLE\n\nB-11:\n  half_life: NOT-APPLICABLE\n```\n\nPASS.\n\n---\n\n## Bound Semantics\n\nExamples:\n\n```text\nB-16 → lower-bound lifetime\nB-18 → upper-bound lifetime\nB-20 → lower-bound lifetime\nB-21 → lower-bound lifetime\n```\n\nPASS.\n\nBounds remain bounds.\n\n---\n\n## Standard Atomic Weight\n\nStored as:\n\n```text\n[10.806, 10.821]\n```\n\nnot silently collapsed to one fixed atomic weight.\n\nPASS.\n\n---\n\n## Allotrope Namespace\n\nCanonical states include:\n\n```text\nMAT:0005:ALLOTROPE:ALPHA-B12\nMAT:0005:ALLOTROPE:BETA-B106\nMAT:0005:ALLOTROPE:GAMMA-B28\nMAT:0005:ALLOTROPE:T-B52\nMAT:0005:ALLOTROPE:T-B192\nMAT:0005:ALLOTROPE:AMORPHOUS\n```\n\nPASS.\n\n---\n\n## Geometry Semantics\n\nMAT distinguishes:\n\n```text\nIDEALIZED ICOSAHEDRAL DESCRIPTOR\n```\n\nfrom:\n\n```text\nACTUAL QUANTUM-MECHANICAL B12 STRUCTURE\n```\n\nPASS.\n\n---\n\n## Bonding Semantics\n\nMAT supports:\n\n```text\n2c-2e\n3c-2e\nmulticentre\nelectron-deficient\n```\n\nwithout claiming one model universally describes every bond.\n\nPASS.\n\n---\n\n## Nuclear Function\n\nSeparated:\n\n```text\n10B neutron capture\n11B proton-fusion research\n```\n\nPASS.\n\nIsotope roles are not interchangeable.\n\n---\n\n## Chemical / Nuclear Separation\n\nSeparated:\n\n```text\nB-H boranes\n```\n\nfrom:\n\n```text\nH + 11B fusion reaction\n```\n\nPASS.\n\n---\n\n## Element / Compound Separation\n\nSeparated:\n\n```text\nB\nB4C\nBN\nB2O3\nMgB2\nboranes\nmetal borides\nborosilicate glass\n```\n\nPASS.\n\n---\n\n## Dopant / Host Separation\n\nSeparated:\n\n```text\nelemental B\nB-doped Si\nB-doped diamond\n```\n\nPASS.\n\n---\n\n## Pressure-State Semantics\n\nSeparated:\n\n```text\nambient Boron\ngamma-B28\nmetallic high-pressure B\nsuperconducting high-pressure B\n```\n\nPASS.\n\n---\n\n## Frequency Semantics\n\nNo universal:\n\n```text\nboron_frequency\n```\n\nexists.\n\nPASS.\n\n---\n\n## Nuclear Magnetic Resonance\n\nNMR fields require:\n\n```text\nisotope\nmagnetic field\ngyromagnetic ratio\nenvironment\n```\n\nPASS.\n\n---\n\n## Biological Semantics\n\n```text\nplant essentiality: ESTABLISHED\nhuman essentiality: NOT-EQUIVALENTLY-ESTABLISHED\n```\n\nPASS.\n\n---\n\n## Safety Semantics\n\nSeparated:\n\n```text\nelemental Boron\nboric acid\nborates\nboranes\nB4C\nBN\nborides\n```\n\nPASS.\n\n---\n\n## Resolved Cross-References\n\n```text\nMAT:0001 Hydrogen\nMAT:0002 Helium\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0003:ISO:Li-7\nMAT:0002:ISO:He-4\nMAT:0004:ISO:Be-10\n```\n\nRESOLVED.\n\n---\n\n## Legal Forward References\n\n```text\nMAT:0006 Carbon\nMAT:0007 Nitrogen\nMAT:0008 Oxygen\nMAT:0012 Magnesium\nMAT:0013 Aluminium\nMAT:0014 Silicon\nMAT:0022 Titanium\nMAT:0040 Zirconium\nMAT:0072 Hafnium\n```\n\nStatus:\n\n```text\nRESERVED-PENDING-RECORD\n```\n\nPASS.\n\n---\n\n## Visual Architecture\n\n```yaml\nvisual_slots: 18\ntwo_dimensional_assets: 19\nscientific_3d_models: 2\ndata_extruded_models: 1\ntotal_core_visual_assets: 22\n```\n\nPASS.\n\n---\n\n# Final Boron Status\n\nAfter this package is pasted:\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  multicentre_bonding_architecture: \"PASS\"\n  geometry_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  material_relationship_architecture: \"PASS\"\n  pressure_state_architecture: \"PASS\"\n  dopant_host_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\n---\n\n# INDEX PATCH\n\nUpdate:\n\n```text\ndocs/05-index/01-Record-Index.md\n```\n\nto:\n\n```text\n0005 | Boron | B | 5 | CORE-VALIDATED\n```\n\nUpdate:\n\n```text\ndocs/07-migration/01-Legacy-File-Map.md\n```\n\nto:\n\n```text\nG0005 | records/0005-Boron-B/ | MIGRATED-PENDING-ARCHIVE\n```\n\nDo not delete the historical `G0005`.\n\n---\n",
+  "bodyHash": "656a14ac0ce2a6a7f763adacdbef436a9fb19b6e15af0ef110d6beabf61e2271",
+  "header": {
+    "record_id": "MAT:0005",
+    "validation_version": "1.0.0",
+    "overall": "PASS"
+  },
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

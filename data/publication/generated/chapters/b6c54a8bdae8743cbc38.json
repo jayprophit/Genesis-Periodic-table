@@ -1,0 +1,22 @@
+{
+  "id": "docs/03-methodology/02-Calculation-and-Derivation.md",
+  "key": "b6c54a8bdae8743cbc38",
+  "mat": null,
+  "title": "MAT Calculation and Derivation",
+  "section": "Methodology",
+  "lane": "reference",
+  "body": "# MAT Calculation and Derivation\n\n## Purpose\n\nMAT must distinguish between:\n\n- direct measurement;\n- observed value;\n- derived value;\n- calculated estimate;\n- interpolated value;\n- simulated value;\n- theoretical prediction.\n\nThese are not interchangeable.\n\n---\n\n## 1. Direct Measurement\n\nA direct measurement is an observed quantity obtained from a measurement process, instrument, or observation procedure.\n\nIt should retain:\n\n- instrument or method;\n- calibration;\n- uncertainty;\n- sample conditions;\n- source provenance;\n- timestamps or time interval when relevant.\n\n---\n\n## 2. Derived Value\n\nA derived value arises from a mathematical relationship between directly measured quantities.\n\nExamples:\n\n- density from mass and volume;\n- conductivity from resistance, geometry, and area;\n- strain from displacement and original length;\n- activation energy from rate data.\n\nDerived values should always retain references to their underlying inputs.\n\n---\n\n## 3. Calculated Value\n\nA calculated value may arise from:\n\n- theoretical equations;\n- simulation output;\n- numerical approximation;\n- optimisation or fitting.\n\nA calculated result must contain:\n\n- equation ID or model ID;\n- inputs used;\n- constants and assumptions;\n- software or computational method;\n- version information;\n- uncertainty estimate when available.\n\n---\n\n## 4. Interpolation and Extrapolation\n\nInterpolation and extrapolation are not the same as direct measurement.\n\nThey require explicit notes on:\n\n- method used;\n- model assumptions;\n- domain of validity;\n- uncertainty introduced by the estimate.\n\nExample:\n\n```yaml\nvalue_estimate: 175\nunit: K\nmethod: INTERPOLATION\nassumption: linear relation between 150 K and 200 K\nconfidence: MODERATE\n```\n\n---\n\n## 5. Simulation and Model Outputs\n\nSimulation data may be useful but must be classified separately from measured data.\n\nA simulation value should include:\n\n- model type;\n- software and version;\n- input parameters;\n- validation status;\n- uncertainty or sensitivity notes;\n- whether it was compared to experiment.\n\n---\n\n## 6. Theoretical Prediction\n\nA theoretical prediction is not equivalent to an observed value.\n\nIt may be powerful and useful, but it must be labelled as theoretical unless independently validated.\n\n---\n\n## 7. Equation and Model Tracking\n\nEvery equation used in a MAT record should be traceable.\n\nAt minimum store:\n\n- equation label;\n- symbols and definitions;\n- assumptions;\n- units;\n- parameter values;\n- source or derivation.\n\n---\n\n## 8. Calculation Integrity Rules\n\nMAT should not collapse these categories into one field.\n\nA data pipeline must keep at least these distinctions:\n\n```yaml\nvalue_type: MEASURED | DERIVED | CALCULATED | INTERPOLATED | SIMULATED | THEORETICAL\n```\n\nThis prevents false confidence and false precision.\n\n---\n\n## 9. Good Practice\n\nWhen presenting a value, MAT should prefer:\n\n```yaml\nvalue: 2.31\nunit: g/cm^3\nvalue_type: MEASURED\nuncertainty: 0.05\n```\n\nover a vague single number with no provenance or context.\n\n---\n\n## 10. Conclusion\n\nA derived or calculated value may be immensely valuable, but it must remain visibly derivational and context-bound.\n\nMAT keeps the distinction explicit so that scientific conclusions remain auditable and reproducible.\n",
+  "bodyHash": "2a1de2bceb063d54131db1209d800907a4f3c092ae095a1d15447dc80a70fd3a",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

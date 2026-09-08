@@ -4,6 +4,7 @@
 mat_id: "MAT:0091"
 record_name: "Protactinium"
 symbol: "Pa"
+atomic_number: 91
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Pa | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 91 | | IUPAC |
-| Standard atomic weight | 231.04 | | IUPAC |
+| Standard atomic weight | 231.03588(1) | EVALUATED | CIAAW-2024 |
 | Period | 7 | | IUPAC |
 | Group | 3 | | IUPAC |
 | Block | f | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Rn] 5f² 6d¹ 7s²**
+Electronic configuration: **[Rn]7s2 5f2 6d1** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 231.04 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 5.89 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 1.5 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Solid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | 231.03588(1) | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Rn]7s2 5f2 6d1 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 1.5 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 5.89 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Solid | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 1845 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | UNAVAILABLE | K | See source | UNAVAILABLE | UNAVAILABLE |
+| density | 15.37 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | +5, +4 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

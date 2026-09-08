@@ -1,0 +1,22 @@
+{
+  "id": "records/0000-Origin-State/calculations/0000-State-Difference-Definitions.md",
+  "key": "0b33aefda8fde99a40cc",
+  "mat": "MAT:0000",
+  "title": "MAT 0000 State-Difference Definitions",
+  "section": "Material Atlas Table",
+  "lane": "foundation",
+  "body": "# MAT 0000 State-Difference Definitions\n\n## 1. Scalar Difference\n\nFor a property \\(q\\):\n\n$$\n\\Delta q_i^{(r)}\n=\nq_i-q_r\n$$\n\nwhere \\(q_r\\) is the value associated with the selected reference.\n\n---\n\n## 2. Pairwise Difference\n\n$$\n\\Delta q_{ij}\n=\nq_i-q_j\n$$\n\nApplicable only when:\n\n* both values describe the same physical quantity;\n* units are compatible;\n* states are sufficiently defined for the comparison.\n\n---\n\n## 3. Unit Conversion\n\nIf:\n\n$$\nq_i\n$$\n\nand:\n\n$$\nq_j\n$$\n\nuse different compatible units, convert them into one canonical unit before subtraction.\n\n---\n\n## 4. Incompatible Dimensions\n\nThe expression:\n\n$$\nT-P\n$$\n\nhas no ordinary physical interpretation simply because MAT stores both temperature and pressure.\n\nLikewise a raw state vector:\n\n$$\n[T,P,B,\\rho]\n$$\n\nmust not be treated as a Euclidean vector of directly comparable numbers.\n\n---\n\n## 5. Dimensionless Transformation\n\nDefine:\n\n$$\nz_q\n=\nN_q(q)\n$$\n\nwhere \\(N_q\\) is stored explicitly.\n\nA possible reference-scaled transform is:\n\n$$\nz_q\n=\n\\frac{q-q_r}{s_q}\n$$\n\nwith:\n\n$$\ns_q\\neq0\n$$\n\nand \\(s_q\\) having the same physical dimension as \\(q\\).\n\nThen \\(z_q\\) is dimensionless.\n\n---\n\n## 6. Normalized State\n\n$$\n\\mathbf z_i\n=\n[\nz_{i1},\nz_{i2},\n\\dots,\nz_{in}\n]\n$$\n\nOnly then can a generalized difference such as:\n\n$$\n\\Delta\\mathbf z_{ij}\n=\n\\mathbf z_i-\\mathbf z_j\n$$\n\nbe interpreted consistently within that chosen normalization.\n\n---\n\n## 7. Distance\n\nA generic state distance:\n\n$$\nd_{ij}\n=\nd(\\mathbf z_i,\\mathbf z_j)\n$$\n\nrequires a declared metric.\n\nA simple Euclidean metric:\n\n$$\nd_{ij}\n=\n\\sqrt{\n\\sum_k\n(z_{ik}-z_{jk})^2\n}\n$$\n\nmust not automatically be assumed scientifically optimal.\n\nAlternative metrics may weight:\n\n* uncertainty;\n* covariance;\n* scientific relevance;\n* property class;\n* causal importance.\n\n---\n\n## 8. Weighted Metric\n\nExample:\n\n$$\nd_{ij}\n=\n\\sqrt{\n\\sum_k\nw_k\n(z_{ik}-z_{jk})^2\n}\n$$\n\nwhere:\n\n$$\nw_k\\ge0\n$$\n\nThe origin and justification of every \\(w_k\\) must be documented.\n\n---\n\n## 9. Covariance-Aware Comparison\n\nFor correlated variables, a future MAT implementation may use covariance-aware distance measures.\n\nThese must preserve the covariance model and data provenance.\n\n---\n\n## 10. Reference Difference Versus Change\n\nImportant distinction:\n\n$$\nq-q_r\n$$\n\nis a difference from a reference.\n\nIt does not automatically prove that the reference state physically transformed into the measured state.\n\nA causal/process relationship requires additional evidence.\n\n---\n\n## 11. Time Difference\n\n$$\n\\Delta t=t-t_0\n$$\n\nuses:\n\n```text\nMAT:0000:REF:TIME0\n```\n\n---\n\n## 12. Process Difference\n\nA processing transition is represented:\n\n$$\nX_0\n\\xrightarrow{P}\nX_1\n$$\n\nThe causal attribution:\n\n```text\nP CAUSED X1\n```\n\nrequires an appropriate experiment/model rather than being inferred merely because \\(X_1\\) followed \\(X_0\\).\n\n---\n\n## 13. Causali E Mapping\n\nCausali E may define:\n\n$$\nA=\\text{intervention}\n$$\n\n$$\nB=\\text{constraints/reference state}\n$$\n\n$$\nC=\\text{candidate resulting state}\n$$\n\nbut arithmetic expressions such as:\n\n$$\nA+B=C\n$$\n\nmust not be interpreted as ordinary numerical addition unless the variables and operator make that mathematically valid.\n\nPreferred general expression:\n\n$$\nC=F(A,B,S,E,t)\n$$\n\n---\n",
+  "bodyHash": "c4bcb03400d819d9dccac1174667c424f6c34ff6811adc6f743ea4ab6f7c8a1f",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

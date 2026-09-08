@@ -33,7 +33,7 @@ export function buildIdentityIndex() {
       const fenceIdx = src.indexOf("```yaml");
       const headIdx = src.search(/^# /m);
       let block = "";
-      if (fenceIdx !== -1 && (headIdx === -1 || fenceIdx < headIdx)) {
+      if (fenceIdx !== -1 && (headIdx === -1 || fenceIdx < headIdx || src.slice(headIdx, fenceIdx).trim().split('\n').length === 1)) {
         const fence = src.match(/```yaml\n([\s\S]*?)\n```/);
         block = fence ? fence[1] : "";
       }

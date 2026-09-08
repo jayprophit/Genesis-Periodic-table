@@ -1,95 +1,105 @@
-registry_id: "MAT:0035:REG:MASTER"
-record_id: "MAT:0035"
-record_version: "1.0.0"
-created: "2026-09-08"
-updated: "2026-09-08"
+registry_id: MAT:0035:REG:MASTER
+record_id: MAT:0035
+record_version: 1.1.0
+created: 2026-09-08
+updated: 2026-09-08
 status: BASELINE
 record_class: CHEMICAL_ELEMENT
-schema_version: "1.0.0"
-
+schema_version: 1.0.0
 identity:
-  canonical_name: "Bromine"
-  symbol: "Br"
+  canonical_name: Bromine
+  symbol: Br
   atomic_number: 35
-  mat_id: "MAT:0035"
+  mat_id: MAT:0035
   period: 4
   group: 17
-  block: "p"
-  category: "Halogen"
-
+  block: p
+  category: Halogen
 properties:
   atomic_weight:
-    value: 79.904
-    source: "IUPAC"
-    evidence: "MEASURED"
+    value: "[79.901,79.907]"
+    interval:
+      - 79.901
+      - 79.907
+    source: CIAAW-2024
+    evidence: EVALUATED
+    kind: STANDARD_ATOMIC_WEIGHT_INTERVAL
   electron_configuration:
-    value: "[Ar] 3d¹⁰ 4s² 4p⁵"
-    source: "NIST"
-    evidence: "MEASURED"
+    value: "[Ar]4s2 3d10 4p5"
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
   electronegativity:
-    value: 2.96 Pauling
-    source: "Pauling Scale"
-    evidence: "MEASURED"
+    value: 2.96
+    unit: Pauling
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
   first_ionization_energy:
-    value: 11.814 eV
-    source: "NIST ASD"
-    evidence: "MEASURED"
-  phase_at_stp:
-    value: "Liquid"
-    source: "IUPAC"
-    evidence: "MEASURED"
+    value: 11.814
+    unit: eV
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
+  phase:
+    value: Liquid
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
+    conditions: Source standard state; verify temperature and pressure for reuse
   melting_point:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
+    value: 265.95
+    unit: K
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
   boiling_point:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
+    value: 331.95
+    unit: K
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
   density:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
-
+    value: 3.11
+    unit: g/cm3
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
+    conditions: Source reference conditions; consult element page
+  oxidation_states:
+    value: +5, +1, -1
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/35
+    evidence: REPORTED
 nuclear:
   status: PLANNED
-
 quantum:
   status: PLANNED
-
 spectra:
   status: PLANNED
-
 electrical:
   status: PLANNED
-
 magnetic:
   status: PLANNED
-
 thermal:
   status: PLANNED
-
 mechanical:
   status: PLANNED
-
 chemical:
   status: PLANNED
-
 materials:
   status: PLANNED
-
 processes:
   status: PLANNED
-
 environment:
   status: PLANNED
-
 applications:
   status: PLANNED
-
 safety:
   status: PLANNED
-
 completeness:
   identity: CURATED
   nuclear: PLANNED

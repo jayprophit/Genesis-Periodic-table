@@ -1,0 +1,79 @@
+{
+  "id": "records/0003-Lithium-Li/calculations/0003-Lithium-Li-CALC-002-Li7-Neutron-Q.md",
+  "key": "ddc8eed3d02cfd3ea733",
+  "mat": "MAT:0003",
+  "title": "CALC-002 — Lithium-7 Tritium-Producing Reaction",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-002 — Lithium-7 Tritium-Producing Reaction\n\n$$\n{}^7Li+n\n\\rightarrow\n{}^4He+{}^3H+n\n$$\n\nBecause the neutron appears on both sides:\n\n$$\n\\Delta m\n=\nm({}^7Li)\n-\nm({}^4He)\n-\nm({}^3H)\n$$\n\ngiving:\n\n$$\n\\boxed{\nQ=-2.467617\\ MeV\n}\n$$\n\nThe negative value means the reaction is endothermic and requires sufficient incident energy.\n\n```yaml\ncalculation_id: \"MAT:0003:CALC:002\"\nclassification: \"DERIVED\"\nq_value:\n  value: -2.467617\n  unit: \"MeV\"\nsource_ids:\n  - \"SRC-000035\"\n  - \"SRC-000019\"\n  - \"SRC-000006\"\n  - \"SRC-000018\"\n```\n",
+  "bodyHash": "d99b31b2af27749447e2e14c699c9c20dfb10297665e583b7e9b73d38e915ce0",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000006",
+      "source_aliases": [
+        "SRC-H-002"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Hydrogen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "standard_atomic_weight",
+        "isotope_masses",
+        "representative_isotopic_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000035",
+      "source_aliases": [
+        "SRC-Li-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Lithium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "lithium_standard_atomic_weight",
+        "lithium_isotope_masses",
+        "lithium_isotopic_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 4
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

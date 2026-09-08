@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/06-Asset-Generation-Pipeline.md",
+  "key": "f26f3148cfd48e727bd4",
+  "mat": null,
+  "title": "MAT Asset Generation Pipeline",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT Asset Generation Pipeline\n\n## Rule\n\nEvery new MAT record with a graph, table, or visual manifest receives the same\ntreatment: data in, validated visuals out. No hand-drawn numbers. No invented\ncontinuity. Missing data stays visibly `NOT-MEASURED` / `DATA-NOT-AVAILABLE`.\n\n## How it works\n\n1. Record data lands in `records/NNNN-Name/` (`data/`, `calculations/`,\n   `tables/`, manifests under `data/structured/`).\n2. `book/generate-assets.mjs` parses the record files, computes derived\n   quantities (decay constants, wavelengths, Q-values, normalized coordinates),\n   and writes SVG + CSV sidecars using the exact filenames in the manifests.\n   `book/generate-schematics.mjs` renders the visual-spec schematics\n   (identity cards, isotope maps, level diagrams, flows, knowledge graphs)\n   from the same record data.\n3. The script throws on missing inputs rather than guessing. A manifest entry\n   stays `PLANNED` / `DATA-EXTRACTION-REQUIRED` until its inputs exist.\n4. Manifest statuses flip to `GENERATED` only when the file on disk was\n   produced from traceable inputs.\n\n## Internal and external linking\n\n- Inside the e-book (`book/`), relative `.md` links resolve to chapters;\n  `http(s)` links open in a new tab. Record IDs (`MAT:0001`, `SRC-H-004`)\n  are stable anchors across formats.\n- The single-file edition (`node book/export-single.mjs` → `dist/`) keeps\n  the same anchors, so citations survive Print-to-PDF, Calibre EPUB, and\n  Kindle Previewer conversion.\n\n## Adding a new record\n\n1. Copy the `records/0001-Hydrogen-H/` package layout (names per\n   `docs/04-visualization/05-Asset-Naming.md`).\n2. Fill manifests first, data second, generator support third.\n3. Run `node book/generate-assets.mjs`, then `node book/build-manifest.mjs`.\n   Record-specific passes live beside them (`generate-pass3/4/5.mjs`).\n   Interactive 3D scenes come from `node book/build-scenes.mjs`, which parses\n   lattice/molecular record data into `book/scenes/` for the `book/3d.html`\n   viewer (rotate/pan/zoom, layer toggles).\n4. Never fabricate a measurement to fill an empty graph.\n\n## Standing process for every new prompt or data drop\n\n1. Ingest: write/append the spec files exactly; never silently correct sources.\n2. Amend: apply patches, resolve forward references whose targets now exist.\n3. Generate: run `generate-assets.mjs` + `generate-schematics.mjs` (+ record\n   passes like `generate-pass3.mjs`); new failures mean missing inputs, not\n   permission to invent.\n4. Manifests: flip statuses only for files on disk; rebuild\n   `build-manifest.mjs` and `export-single.mjs`.\n5. Verify: load `http://localhost:4173/book/` in a real browser — 0 console\n   errors, chapter tables render, new SVGs return 200.\n",
+  "bodyHash": "b5ca36d2758b444415b48c4dd09c7ad0f708587e299cad7d30e8fbb6c82f06d1",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

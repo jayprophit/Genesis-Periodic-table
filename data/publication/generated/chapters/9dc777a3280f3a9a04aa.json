@@ -1,0 +1,22 @@
+{
+  "id": "docs/01-foundations/02-scientific-framework/00-Scientific-Framework.md",
+  "key": "9dc777a3280f3a9a04aa",
+  "mat": null,
+  "title": "MAT Scientific Framework",
+  "section": "Foundations",
+  "lane": "reference",
+  "body": "# MAT Scientific Framework\n\n## Purpose\n\nThis directory defines scientific principles that may govern MAT properties and transformations.\n\nInstead of repeating entire theories within each material record, MAT records reference reusable principle IDs.\n\n---\n\n# 1. Principle Naming\n\nRecommended prefixes:\n\n```text\nMAT-MATH    Mathematics\nMAT-PHYS    General physics\nMAT-CHEM    Chemistry\nMAT-MATSCI  Materials science\nMAT-QM      Quantum mechanics\nMAT-NUC     Nuclear science\nMAT-THERMO  Thermodynamics\nMAT-SYS     Systems and dynamics\nMAT-INFO    Information\nMAT-CAUSAL  Causal inference\n```\n\n---\n\n# 2. Example Principle Reference\n\n```yaml\nproperty_id: nuclear.half-life\ngoverned_by:\n  - MAT-NUC-004\n  - MAT-MATH-014\n```\n\n---\n\n# 3. Principle Classification\n\nPossible classifications:\n\n```text\nDEFINITION\nLAW\nTHEORY\nMODEL\nAPPROXIMATION\nEMPIRICAL-RELATION\nNUMERICAL-METHOD\nSTATISTICAL-METHOD\nCONSERVATION-LAW\nSYMMETRY-PRINCIPLE\n```\n\n---\n\n# 4. Required Principle Fields\n\n```yaml\nprinciple_id:\nname:\nclassification:\ndomain:\nequation:\nvariables:\ninput_units:\noutput_units:\nassumptions:\nvalidity:\nlimitations:\nrelated_mat_fields:\nreferences:\n```\n\n---\n\n# 5. Equations as Data\n\nEquations should eventually be machine-readable rather than existing only as rendered text.\n\nPossible future forms:\n\n- LaTeX;\n- MathML;\n- symbolic-expression trees;\n- executable functions.\n\n---\n\n# 6. Multiple Models\n\nA property may have more than one applicable model.\n\nExample:\n\nElectrical conduction may use:\n\n- classical Drude-type models;\n- band theory;\n- hopping models;\n- ballistic transport;\n- superconducting models.\n\nMAT should store the model actually relevant to the state.\n\n---\n\n# 7. Model Competition\n\nWhen multiple scientific models exist:\n\n```text\nMODEL-A\nMODEL-B\nMODEL-C\n```\n\nMAT should record:\n\n- applicable conditions;\n- accuracy;\n- assumptions;\n- experimental support;\n- limitations.\n\nDo not force one model into domains where another performs better.\n\n---\n\n# 8. Principle Versioning\n\nEstablished scientific equations can still have different:\n\n- conventions;\n- parameterisations;\n- reference values;\n- computational implementations.\n\nPrinciples may therefore carry versions.\n\n---\n\n# 9. Calculation Pipeline\n\nA future MAT calculation engine may operate:\n\n```text\nMAT PROPERTY REQUEST\n        ↓\nIDENTIFY STATE\n        ↓\nIDENTIFY GOVERNING PRINCIPLES\n        ↓\nCHECK REQUIRED INPUTS\n        ↓\nCHECK DOMAIN OF VALIDITY\n        ↓\nCALCULATE\n        ↓\nPROPAGATE UNCERTAINTY\n        ↓\nCOMPARE WITH MEASUREMENT\n        ↓\nSTORE RESULT\n```\n\n---\n\n# 10. Scientific Domains\n\nThe initial framework includes:\n\n1. Mathematics\n2. Physics\n3. Chemistry\n4. Materials Science\n5. Quantum and Nuclear Science\n6. Thermodynamics\n7. Systems, Causality and Information\n\nAdditional discipline-specific libraries may be added later.\n\n---\n",
+  "bodyHash": "e59d6f42beb5568744494ef49464fbb581f70c394e7e14252e93726813de201e",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

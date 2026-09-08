@@ -1,0 +1,67 @@
+{
+  "id": "records/0006-Carbon-C/calculations/0006-Carbon-C-CALC-001-Triple-Alpha-Q.md",
+  "key": "e88071f5f798befdcbf9",
+  "mat": "MAT:0006",
+  "title": "CALC-001 — Triple-Alpha Net Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Triple-Alpha Net Q-Value\n\nNet reaction:\n\n\\[\n3\\,{}^4He\n\\rightarrow\n{}^{12}C\n\\]\n\nUsing:\n\n\\[\nm({}^4He)=4.00260325413\\ u\n\\]\n\nand:\n\n\\[\nm({}^{12}C)=12\\ u\n\\]\n\nthe mass difference is:\n\n\\[\n\\Delta m\n=\n3m({}^4He)-m({}^{12}C)\n\\]\n\n\\[\n=\n0.00780976239\\ u\n\\]\n\nUsing:\n\n\\[\n1u\\,c^2=931.49410372\\ {\\rm MeV}\n\\]\n\ngives:\n\n\\[\n\\boxed{\nQ\n=\n7.274748\\ {\\rm MeV}\n}\n\\]\n\nThe stellar reaction proceeds through intermediate nuclear states,\nespecially transient 8Be and the resonant 12C Hoyle state.\n\nThe net Q-value must not be confused with the Hoyle-state excitation energy.\n\n```yaml\ncalculation_id: \"MAT:0006:CALC:001\"\nclassification: \"DERIVED\"\n\nreaction:\n  reactants:\n    - \"MAT:0002:ISO:He-4\"\n    - \"MAT:0002:ISO:He-4\"\n    - \"MAT:0002:ISO:He-4\"\n\n  product:\n    - \"MAT:0006:ISO:C-12\"\n\nq_value:\n  value: 7.274748\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000019\"\n  - \"SRC-000080\"\n  - \"SRC-000018\"\n````\n",
+  "bodyHash": "76d618ccf15e8622ec52183fd3549864770bf9ae7d4fa029c7d1d492dea90f2d",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000080",
+      "source_aliases": [
+        "SRC-C-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Carbon",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "carbon_standard_atomic_weight",
+        "carbon_isotope_masses",
+        "carbon_12_abundance",
+        "carbon_13_abundance",
+        "carbon_14_mass"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 3
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

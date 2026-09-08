@@ -1,0 +1,80 @@
+{
+  "id": "records/0005-Boron-B/calculations/0005-Boron-B-CALC-003-pB11-Fusion-Q.md",
+  "key": "15b91240eabf6bdcb458",
+  "mat": "MAT:0005",
+  "title": "CALC-003 — Proton–Boron-11 Reaction Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-003 — Proton–Boron-11 Reaction Q-Value\n\nReaction:\n\n$$\n{}^1H+{}^{11}B\n\\rightarrow\n3\\,{}^4He\n$$\n\nUsing atomic masses:\n\n$$\nm({}^1H)\n=\n1.00782503223\\ {\\rm u}\n$$\n\n$$\nm({}^{11}B)\n=\n11.00930536\\ {\\rm u}\n$$\n\n$$\nm({}^4He)\n=\n4.00260325413\\ {\\rm u}\n$$\n\nElectron accounting balances when neutral atomic masses are used.\n\nMass difference:\n\n$$\n\\Delta m\n=\nm({}^1H)+m({}^{11}B)-3m({}^4He)\n$$\n\ngiving:\n\n$$\n\\boxed{\nQ\n\\approx\n8.682112\\ {\\rm MeV}\n}\n$$\n\nThe principal reaction products are three alpha particles.\n\nScientific interpretation:\n\n```text\nESTABLISHED NUCLEAR REACTION\n```\n\nEngineering interpretation:\n\n```text\nADVANCED FUSION RESEARCH\nNOT COMMERCIALLY MATURE\n```\n\nDOE notes that proton–Boron fusion requires substantially higher ion temperatures than D–T fusion.\n\n```yaml\ncalculation_id: \"MAT:0005:CALC:003\"\nclassification: \"DERIVED\"\n\nreaction:\n  reactants:\n    - \"MAT:0001:ISO:H-1\"\n    - \"MAT:0005:ISO:B-11\"\n\n  products:\n    - \"MAT:0002:ISO:He-4\"\n    - \"MAT:0002:ISO:He-4\"\n    - \"MAT:0002:ISO:He-4\"\n\nq_value:\n  value: 8.682112\n  unit: \"MeV\"\n\nscientific_status:\n  reaction: \"ESTABLISHED\"\n  practical_energy_system: \"RESEARCH\"\n\nsource_ids:\n  - \"SRC-000063\"\n  - \"SRC-000019\"\n  - \"SRC-000014\"\n  - \"SRC-000068\"\n```\n\n---\n",
+  "bodyHash": "338c6bfd906324c09afa899e7a558db391bbce75371e8b6aa448d806c578ceda",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000014",
+      "source_aliases": [
+        "SRC-H-010"
+      ],
+      "title": "Materials-Based Hydrogen Storage",
+      "organization": "United States Department of Energy",
+      "source_type": "GOVERNMENT-TECHNICAL-REFERENCE",
+      "supports": [
+        "hydrides",
+        "chemical_storage",
+        "sorbents"
+      ]
+    },
+    {
+      "source_id": "SRC-000019",
+      "source_aliases": [
+        "SRC-H-015"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Helium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "helium_3_mass",
+        "helium_4_mass",
+        "DT_fusion_calculation"
+      ]
+    },
+    {
+      "source_id": "SRC-000063",
+      "source_aliases": [
+        "SRC-B-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Boron",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "boron_standard_atomic_weight",
+        "boron_isotope_masses",
+        "boron_10_composition",
+        "boron_11_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000068",
+      "source_aliases": [
+        "SRC-B-006"
+      ],
+      "title": "DOE Explains — Deuterium-Tritium Fusion Fuel",
+      "organization": "United States Department of Energy",
+      "source_type": "AUTHORITATIVE-FUSION-REFERENCE",
+      "supports": [
+        "proton_boron_fusion_context",
+        "higher_temperature_requirement",
+        "comparison_with_DT"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 4
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "records/0004-Beryllium-Be/calculations/0004-Beryllium-Be-CALC-001-Specific-Stiffness.md",
+  "key": "11306ee63c927ccbd423",
+  "mat": "MAT:0004",
+  "title": "CALC-001 — Beryllium Specific Young's Modulus",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Beryllium Specific Young's Modulus\n\n$$\nS_E=\\frac{E}{\\rho}\n$$\n\nUsing:\n\n$$\nE=287\\times10^9\\ {\\rm Pa}\n$$\n\n$$\n\\rho=1848\\ {\\rm kg\\,m^{-3}}\n$$\n\ngives:\n\n$$\n\\boxed{\nS_E\n=\n1.5530\\times10^8\\ {\\rm m^2\\,s^{-2}}\n}\n$$\n\n```yaml\ncalculation_id: \"MAT:0004:CALC:001\"\nclassification: \"DERIVED\"\ninputs:\n  young_modulus:\n    value: 287\n    unit: \"GPa\"\n  density:\n    value: 1848\n    unit: \"kg/m3\"\n\nresult:\n  value: 1.5530303e8\n  unit: \"m2/s2\"\n\nsource_ids:\n  - \"SRC-000056\"\n```\n\n---\n",
+  "bodyHash": "7981623d36808793fc63488539ecf52ef3d1e108fd3942134cd5b1171de8c6ea",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000056",
+      "source_aliases": [
+        "SRC-Be-008"
+      ],
+      "title": "Beryllium — Physical Properties",
+      "organization": "WebElements / University of Sheffield",
+      "source_type": "SCIENTIFIC-REFERENCE",
+      "supports": [
+        "density",
+        "young_modulus",
+        "shear_modulus",
+        "bulk_modulus",
+        "poisson_ratio",
+        "electrical_resistivity",
+        "thermal_conductivity",
+        "thermal_expansion",
+        "sound_velocity"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

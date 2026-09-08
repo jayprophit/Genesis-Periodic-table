@@ -668,6 +668,7 @@ function initAtlas() {
     const box = $("russell-table");
     if (!box) return;
     box.innerHTML = "";
+    box.innerHTML = '<p role="note">Historical / alternative model. These octave mappings and frequency claims are unverified and must not be interpreted as measured element properties.</p>';
     const octaves = russellData.octaves || [];
     const freqRanges = russellData.frequency_ranges_hz || {};
     // Spectrum bar
@@ -729,6 +730,7 @@ function initAtlas() {
     const box = $("overlay-table");
     if (!box) return;
     box.innerHTML = "";
+    box.innerHTML = '<p role="note">Exploratory historical overlay. Visual alignment does not establish a physical relationship or validate either model.</p>';
     const overlay = combinedData.overlay || [];
     const elByZ = new Map(elements118.map((e) => [e.z, e]));
     const byStd = new Map();

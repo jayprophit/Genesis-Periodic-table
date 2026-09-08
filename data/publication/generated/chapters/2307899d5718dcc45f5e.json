@@ -1,0 +1,22 @@
+{
+  "id": "docs/03-methodology/01-Data-Acquisition.md",
+  "key": "2307899d5718dcc45f5e",
+  "mat": null,
+  "title": "MAT Data Acquisition",
+  "section": "Methodology",
+  "lane": "reference",
+  "body": "# MAT Data Acquisition\n\n## Purpose\n\nThis document defines how MAT obtains, records, and validates scientific information from multiple sources.\n\nData may originate from:\n\n- experiments;\n- journal articles;\n- standards documents;\n- databases;\n- technical reports;\n- theses and dissertations;\n- patents;\n- historical notes;\n- computational models;\n- legacy Genesis records;\n- direct instrument output.\n\n---\n\n## 1. Source Hierarchy\n\nMAT distinguishes between:\n\n- primary sources;\n- secondary sources;\n- derived sources;\n- model outputs;\n- archival or legacy documentation.\n\nPrimary sources are the strongest evidence when directly relevant and sufficiently documented.\n\nSecondary sources and summaries are useful, but they must be flagged as such.\n\n---\n\n## 2. Acquisition Rules\n\nEach acquisition step must capture:\n\n- source identity;\n- date of capture;\n- source type;\n- extraction method;\n- whether the data was copied, digitised, parsed, or inferred;\n- confidence in extraction;\n- whether the source was directly verified.\n\nIf a value is copied from a graph or table, the method matters.\n\n---\n\n## 3. Extraction Quality\n\nMAT does not treat all data extraction equally.\n\nA value extracted from an original table is different from:\n\n- a value read from a plot;\n- a value inferred from a diagram;\n- a value extracted by AI assistance;\n- a value transcribed from OCR output;\n- a value summarised in a review article.\n\nThe extraction method must be recorded.\n\n---\n\n## 4. Legacy Record Handling\n\nLegacy Genesis materials are important historical sources, but they are not automatically equivalent to current experimental standards.\n\nWhen using legacy records:\n\n- preserve original wording where required;\n- classify historical status explicitly;\n- note when values are uncertain or incomplete;\n- avoid allowing legacy context to overwrite present evidence without a clear migration record.\n\n---\n\n## 5. Data Provenance Minimums\n\nEvery imported dataset or note should carry at least:\n\n```yaml\nsource_id:\nsource_type:\nsource_title:\nauthor_or_team:\npublication_year:\nurl_or_archive:\nextraction_method:\nverification_status:\nnotes:\n```\n\nThis is the minimum information needed to make claims auditable.\n\n---\n\n## 6. Data Quality Triage\n\nBefore a datum enters a final MAT record, it should be checked for:\n\n- completeness;\n- units;\n- conditions;\n- relevance to the state being described;\n- provenance;\n- uncertainty;\n- ambiguity in original wording;\n- possibility of transcription error.\n\n---\n\n## 7. Missing and Ambiguous Data\n\nMissing data is not the same as zero.\n\nWhen the original source is unclear or incomplete, use a formal null state such as:\n\n- `UNKNOWN`;\n- `NOT-MEASURED`;\n- `NOT-AVAILABLE`;\n- `NOT-APPLICABLE`;\n- `NOT-ESTABLISHED`.\n\n---\n\n## 8. Multi-Source Merging\n\nWhen multiple sources disagree, MAT stores and distinguishes the sources rather than erasing the disagreement.\n\nThe data acquisition workflow should preserve:\n\n- source-specific values;\n- context-specific conditions;\n- evidence weights;\n- conflict status;\n- preferred or consensus value if one is later designated.\n\n---\n\n## 9. Data Acquisition Standard\n\nA record may be considered acquired when:\n\n- the source is identified;\n- the relevant measurements or statements are captured;\n- conditions are recorded;\n- provenance is attached;\n- the data is structured for downstream validation and comparison.\n\nThis is the minimum threshold for conversion into a traced MAT entry.\n",
+  "bodyHash": "1c724a187fc972338e796c3bdd411a7b2b0999185dd86873a44fee8ac49e1cd4",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

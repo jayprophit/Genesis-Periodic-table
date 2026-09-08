@@ -1,222 +1,77 @@
-import { useState, useEffect, useCallback } from 'react';
-import { BookTree } from './components/BookTree';
-import { LivePreview } from './components/LivePreview';
-import { Inspector } from './components/Inspector';
-import { StatusBar } from './components/StatusBar';
-import { PeriodicView } from './components/PeriodicView';
-import { loadData, loadElementRecord, MATData, ElementData, RecordData, ElementRecord, VisualManifest, GraphManifest, TableManifest } from './data-loader';
-
-type NavMode = 'tree' | 'periodic';
-type WorkflowMode = 'write' | 'design' | 'data' | 'review' | 'preview' | 'export';
-
-export default function App() {
-  const [data, setData] = useState<MATData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [navMode, setNavMode] = useState<NavMode>('tree');
-  const [workflowMode, setWorkflowMode] = useState<WorkflowMode>('write');
-  const [selectedElement, setSelectedElement] = useState<ElementData | null>(null);
-  const [selectedRecord, setSelectedRecord] = useState<RecordData | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filterStatus, setFilterStatus] = useState<'all' | 'curated' | 'baseline'>('all');
-
-  // Structured record data
-  const [elementRecord, setElementRecord] = useState<{
-    master: ElementRecord | null;
-    visuals: VisualManifest | null;
-    graphs: GraphManifest | null;
-    tables: TableManifest | null;
-  } | null>(null);
-  const [recordLoading, setRecordLoading] = useState(false);
-
-  useEffect(() => {
-    loadData()
-      .then(d => {
-        setData(d);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  // Load structured record when element is selected
-  useEffect(() => {
-    if (!selectedElement) {
-      setElementRecord(null);
-      return;
-    }
-
-    setRecordLoading(true);
-    loadElementRecord(selectedElement)
-      .then(record => {
-        setElementRecord(record);
-        setRecordLoading(false);
-      })
-      .catch(() => {
-        setElementRecord(null);
-        setRecordLoading(false);
-      });
-  }, [selectedElement]);
-
-  const handleSelectElement = useCallback((element: ElementData) => {
-    setSelectedElement(element);
-    if (data) {
-      const record = data.records.find(r => r.mat === element.matId);
-      setSelectedRecord(record || null);
-    }
-  }, [data]);
-
-  const handleSelectRecord = useCallback((record: RecordData) => {
-    setSelectedRecord(record);
-    if (data) {
-      const element = data.elements.find(e => e.matId === record.mat);
-      setSelectedElement(element || null);
-    }
-  }, [data]);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-gray-950 text-gray-100">
-        <div className="text-center">
-          <div className="animate-spin w-8 h-8 border-2 border-amber-400 border-t-transparent rounded-full mx-auto mb-4"></div>
-          <p className="text-sm text-gray-400">Loading MAT publication data...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-gray-950 text-gray-100">
-        <div className="text-center max-w-md">
-          <div className="text-4xl mb-4">⚠️</div>
-          <h2 className="text-lg font-semibold text-red-400 mb-2">MAT Studio could not load publication data.</h2>
-          <p className="text-sm text-gray-400 mb-4">{error}</p>
-          <div className="bg-gray-800 rounded p-4 text-xs text-gray-300 font-mono">
-            Expected: data/publication/generated/*.json<br/>
-            Try: npm run prepare:studio
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-col h-screen bg-gray-950 text-gray-100">
-      {/* Header */}
-      <header className="flex items-center justify-between px-4 py-2 border-b border-gray-800 bg-gray-900">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-amber-400">MAT</span>
-            <span className="text-sm text-gray-400">Studio</span>
-          </div>
-          <div className="h-4 w-px bg-gray-700"></div>
-          <nav className="flex gap-1">
-            {(['write', 'design', 'data', 'review', 'preview', 'export'] as const).map((mode) => (
-              <button
-                key={mode}
-                onClick={() => setWorkflowMode(mode)}
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  workflowMode === mode
-                    ? 'bg-amber-400 text-black font-semibold'
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`}
-              >
-                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-              </button>
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center gap-3">
-          <input
-            type="text"
-            placeholder="Search element… (Ctrl+K)"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-3 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-gray-200 placeholder-gray-500 focus:outline-none focus:border-amber-400 w-48"
-          />
-          <select
-            value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value as typeof filterStatus)}
-            className="px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-gray-300"
-          >
-            <option value="all">All</option>
-            <option value="curated">Curated</option>
-            <option value="baseline">Baseline</option>
-          </select>
-          <div className="text-xs text-gray-500">v0.2.0</div>
-        </div>
-      </header>
-
-      {/* Main workspace */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Left panel: Book Tree or Periodic Table */}
-        <aside className="w-72 border-r border-gray-800 overflow-y-auto bg-gray-900/50">
-          <div className="flex items-center gap-1 p-2 border-b border-gray-800">
-            <button
-              onClick={() => setNavMode('tree')}
-              className={`flex-1 px-2 py-1 text-xs rounded ${navMode === 'tree' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-white'}`}
-            >
-              Tree
-            </button>
-            <button
-              onClick={() => setNavMode('periodic')}
-              className={`flex-1 px-2 py-1 text-xs rounded ${navMode === 'periodic' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-white'}`}
-            >
-              Periodic
-            </button>
-          </div>
-          {navMode === 'tree' ? (
-            <BookTree
-              elements={data?.elements || []}
-              records={data?.records || []}
-              selectedElement={selectedElement}
-              searchQuery={searchQuery}
-              filterStatus={filterStatus}
-              onSelectElement={handleSelectElement}
-              onSelectRecord={handleSelectRecord}
-            />
-          ) : (
-            <PeriodicView
-              elements={data?.elements || []}
-              selectedElement={selectedElement}
-              onSelectElement={handleSelectElement}
-            />
-          )}
-        </aside>
-
-        {/* Center: Live Preview */}
-        <main className="flex-1 overflow-y-auto bg-gray-100">
-          <LivePreview
-            element={selectedElement}
-            record={selectedRecord}
-            workflowMode={workflowMode}
-            allRecords={data?.records || []}
-            elementRecord={elementRecord}
-            recordLoading={recordLoading}
-          />
-        </main>
-
-        {/* Right panel: Inspector */}
-        <aside className="w-80 border-l border-gray-800 overflow-y-auto bg-gray-900/50">
-          <Inspector
-            element={selectedElement}
-            record={selectedRecord}
-            workflowMode={workflowMode}
-            elementRecord={elementRecord}
-          />
-        </aside>
-      </div>
-
-      {/* Status bar */}
-      <StatusBar
-        elementCount={data?.elements.length || 0}
-        curatedCount={data?.elements.filter(e => e.recordStatus === 'CURATED').length || 0}
-        baselineCount={data?.elements.filter(e => e.recordStatus === 'BASELINE').length || 0}
-        selectedElement={selectedElement}
-      />
-    </div>
-  );
+import {useEffect,useMemo,useRef,useState} from 'react';
+import {loadData,loadChapter,filterElements,assetURL,MATData,RecordData,Chapter} from './data-loader';
+import {Project,emptyProject,parseProject,STORAGE_KEY} from './drafts';
+import {messages} from './i18n';
+import {PeriodicView} from './components/PeriodicView';
+import {RadialView} from './components/RadialView';
+import {Markdown} from './components/Markdown';
+import {download,exportHTML,exportEPUB} from './exports';
+import './styles/workspace.css';
+type Mode='write'|'design'|'data'|'review'|'preview'|'export';
+export default function App(){
+ const [data,setData]=useState<MATData|null>(null),[error,setError]=useState(''),[retry,setRetry]=useState(0);
+ const [selected,setSelected]=useState<RecordData|null>(null),[chapter,setChapter]=useState<Chapter|null>(null);
+ const [loading,setLoading]=useState(false),[chapterError,setChapterError]=useState('');
+ const [mode,setMode]=useState<Mode>('write'),[nav,setNav]=useState('tree'),[query,setQuery]=useState(''),[status,setStatus]=useState('all');
+ const [project,setProject]=useState<Project>(emptyProject),[ready,setReady]=useState(false),[notice,setNotice]=useState(''),[saveError,setSaveError]=useState('');
+ const [format,setFormat]=useState('web'),[exporting,setExporting]=useState(false);
+ const search=useRef<HTMLInputElement>(null),fileInput=useRef<HTMLInputElement>(null);
+ useEffect(()=>{try{const raw=localStorage.getItem(STORAGE_KEY);if(raw)setProject(parseProject(raw));}catch{setSaveError('Saved project could not be read. Export your work before leaving this page.');}setReady(true)},[]);
+ useEffect(()=>{if(!ready)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(project));setSaveError('');}catch{setSaveError('Local saving is unavailable. Download a project backup to keep your changes.')}},[project,ready]);
+ useEffect(()=>{let active=true;setError('');setData(null);loadData().then(d=>{if(active){setData(d);setSelected(d.records.find(r=>r.id===d.elements[0].chapterPath)||d.records[0])}}).catch(e=>active&&setError(e.message));return()=>{active=false}},[retry]);
+ useEffect(()=>{if(!selected)return;const controller=new AbortController();setChapter(null);setLoading(true);setChapterError('');loadChapter(selected,controller.signal).then(c=>{if(!controller.signal.aborted){setChapter(c);setLoading(false)}}).catch(e=>{if(!controller.signal.aborted){setChapterError(e.message);setLoading(false)}});return()=>controller.abort()},[selected,retry]);
+ useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();search.current?.focus()}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[]);
+ const element=data?.elements.find(e=>e.matId===selected?.mat)||null;
+ const filtered=useMemo(()=>filterElements(data?.elements||[],query,status),[data,query,status]);
+ const draft=selected?project.drafts[selected.id]:null;
+ const body=draft?.body??chapter?.body??'';
+ const conflict=!!(draft&&chapter&&draft.baseHash!==chapter.bodyHash);
+ const select=(r:RecordData)=>{setSelected(r);setNotice('')};
+ const navigate=(path:string)=>{const r=data?.records.find(r=>r.id===path.split('#')[0]);if(r)select(r);else setNotice('That chapter is not in the publication index.')};
+ const edit=(value:string)=>{if(!chapter)return;setProject(p=>({...p,drafts:{...p.drafts,[chapter.id]:{body:value,baseHash:draft?.baseHash||chapter.bodyHash,updated:new Date().toISOString()}}}))};
+ const backup=()=>download('MAT-project.json',JSON.stringify(project,null,2),'application/json');
+ async function exportBook(){
+  if(!data)return;setExporting(true);setNotice('Preparing the 118-element working edition…');
+  try{const main=data.records.filter(r=>data.elements.some(e=>e.chapterPath===r.id));const chapters:Chapter[]=[];for(const r of main){const c=await loadChapter(r);const d=project.drafts[r.id];if(d&&d.baseHash!==c.bodyHash)throw new Error('Resolve the draft conflict for '+r.title+' before exporting.');chapters.push({...c,body:d?.body??c.body});}exportEPUB(chapters);setNotice('Draft EPUB downloaded. Sources, rights and EPUBCheck review are required before publication.');}catch(e){setNotice(String(e))}finally{setExporting(false)}
+ }
+ if(error)return <main className="loading"><h1>MAT Studio could not load</h1><p role="alert">{error}</p><button onClick={()=>setRetry(n=>n+1)}>Retry</button></main>;
+ if(!data)return <main className="loading" role="status"><h1>MAT Studio</h1><p>Opening the publication catalogue…</p></main>;
+ const t=messages[project.locale];
+ return <div className={'workspace theme-'+project.theme}>
+ <a className="skip" href="#chapter">Skip to chapter</a>
+ <header className="topbar"><div className="brand"><span className="brandmark">M</span><div><strong>MAT <span>STUDIO</span></strong><small>Materials Atlas · Authoring & publishing</small></div></div><div className="top-actions"><span className="edition">WORKING EDITION</span><button onClick={backup}>Download project</button><button onClick={()=>fileInput.current?.click()}>Open project</button><input ref={fileInput} hidden type="file" accept=".json" onChange={async e=>{const f=e.target.files?.[0];if(!f)return;try{const imported=parseProject(await f.text());const clashes=Object.keys(imported.drafts).filter(k=>project.drafts[k]&&project.drafts[k].body!==imported.drafts[k].body);if(clashes.length)throw new Error('Import conflicts with '+clashes.length+' existing drafts. Your current work was preserved.');setProject(p=>({...imported,drafts:{...p.drafts,...imported.drafts}}));setNotice('Project imported.');}catch(err){setNotice(String(err))}e.target.value=''}}/></div></header>
+ <nav className="workflow" aria-label="Authoring workflow">{(['write','design','data','review','preview','export'] as Mode[]).map((m,i)=><button key={m} aria-current={mode===m?'step':undefined} onClick={()=>setMode(m)}><span>{String(i+1).padStart(2,'0')}</span>{t[m]}</button>)}<span className="save-state">{saveError?'SAVE UNAVAILABLE':'LOCAL PROJECT'}</span></nav>
+ {(notice||saveError)&&<div className="notice" role="status">{saveError||notice}</div>}
+ <div className="panels">
+ <aside className="library" aria-label="Book navigation"><div className="panel-title">YOUR PUBLICATION <span>{data.elements.length} elements</span></div>
+ <label className="search-label">Find an element or chapter<input ref={search} value={query} onChange={e=>setQuery(e.target.value)} placeholder="Name, symbol, MAT ID · Ctrl+K"/></label>
+ <div className="nav-switch">{['tree','periodic','models'].map(n=><button key={n} aria-pressed={nav===n} onClick={()=>setNav(n)}>{n==='tree'?'Book tree':n==='periodic'?'Periodic table':'Models'}</button>)}</div>
+ <label className="filter-label">Coverage<select value={status} onChange={e=>setStatus(e.target.value)}><option value="all">All elements</option><option value="CURATED">Curated chapters</option><option value="BASELINE">Baseline chapters</option></select></label>
+ {nav==='periodic'?<PeriodicView elements={filtered} selectedElement={element} onSelectElement={e=>{const r=data.records.find(r=>r.id===e.chapterPath);if(r)select(r)}}/>:
+ nav==='models'?<div className="model-note"><h2>Models & historical context</h2><p>Alternative arrangements can help explore visual patterns. Their geometry is not evidence of a physical mechanism.</p><button onClick={()=>{const r=data.records.find(r=>/Historical-Models/.test(r.id));if(r)select(r)}}>Read the model audit</button><p>Walter Russell, Makeev, Harrington and Poza references are isolated from the scientific catalogue. The angular and subshell layouts also require attribution and a current identity check.</p></div>:
+ <div className="tree"><p className="result-count">{filtered.length} elements · C = curated, B = baseline</p>
+ {filtered.map(e=><details key={e.z} className={element?.z===e.z?'selected':''}><summary><button onClick={()=>{const r=data.records.find(r=>r.id===e.chapterPath);if(r)select(r)}} aria-label={'Open '+e.name}><span className="symbol">{e.symbol}</span><span>{e.name}<small>{e.matId}</small></span><span className={'badge '+e.recordStatus.toLowerCase()}>{e.recordStatus==='CURATED'?'C':'B'}</span></button></summary><div className="chapter-list">{data.records.filter(r=>r.mat===e.matId).map(r=><button key={r.id} onClick={()=>select(r)}>{r.title}</button>)}</div></details>)}
+ <details><summary>Guide, foundation & references</summary><div className="chapter-list">{data.records.filter(r=>(!r.mat||r.mat==='MAT:0000')&&(!query||r.title.toLowerCase().includes(query.toLowerCase()))).map(r=><button key={r.id} onClick={()=>select(r)}>{r.title}</button>)}</div></details>
+ {!filtered.length&&<p>No matching elements. Try another name or clear the filter.</p>}</div>}
+ </aside>
+ <main id="chapter" className="editor-area" tabIndex={-1}>
+ <div className="chapter-toolbar"><div><small>{selected?.mat||'REFERENCE'} / {mode.toUpperCase()}</small><h1>{element?.name||selected?.title||'Select a chapter'}</h1></div><button aria-pressed={!!selected&&project.bookmarks.includes(selected.id)} onClick={()=>selected&&setProject(p=>({...p,bookmarks:p.bookmarks.includes(selected.id)?p.bookmarks.filter(x=>x!==selected.id):[...p.bookmarks,selected.id]}))}>{selected&&project.bookmarks.includes(selected.id)?'Bookmarked':'Bookmark'}</button></div>
+ {loading&&<p role="status">Loading chapter…</p>}{chapterError&&<div role="alert"><p>{chapterError}</p><button onClick={()=>setRetry(n=>n+1)}>Retry chapter</button></div>}
+ {conflict&&<p role="alert" className="warning">The canonical chapter changed since this draft began. Download your project and compare the original below before applying changes. Export is blocked for this draft.</p>}
+ {chapter&&!loading&&<>
+ {nav==='models'&&<RadialView elements={data.elements} onSelect={e=>{const r=data.records.find(r=>r.id===e.chapterPath);if(r)select(r)}}/>}
+ {mode==='design'&&<section className="controls"><h2>Page design</h2><label>Theme<select value={project.theme} onChange={e=>setProject(p=>({...p,theme:e.target.value as Project['theme']}))}><option value="parchment">Parchment</option><option value="paper">Paper</option><option value="night">Night</option></select></label><label>Reading size<input type="range" min="14" max="24" value={project.fontSize} onChange={e=>setProject(p=>({...p,fontSize:+e.target.value}))}/>{project.fontSize} px</label><label>Workflow language<select value={project.locale} onChange={e=>setProject(p=>({...p,locale:e.target.value as Project['locale']}))}><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option></select></label><p>Scientific text remains in its source language. Translation requires separate review.</p></section>}
+ {mode==='write'&&<section className="writing"><div><h2>Chapter manuscript</h2><small>{draft?'Local draft overlay':'Canonical text · edit to create a local draft'}</small></div><label className="sr-only" htmlFor="manuscript">Chapter manuscript</label><textarea id="manuscript" value={body} onChange={e=>edit(e.target.value)} spellCheck/><details><summary>Canonical version for comparison</summary><pre>{chapter.body}</pre></details></section>}
+ {mode==='data'&&<section className="data-section"><h2>Source-backed baseline</h2><p>Baseline values and curated record documents retain separate provenance. Editing the manuscript does not silently change scientific measurements.</p>{element&&<table><caption>{element.name}: baseline reference values</caption><thead><tr><th>Property</th><th>Value</th><th>Evidence</th><th>Source</th></tr></thead><tbody>{Object.entries(element.provenance).map(([key,v])=><tr key={key}><th>{key}</th><td>{v.display??v.value??v.nullReason??'UNAVAILABLE'} {v.unit}</td><td>{v.evidence}</td><td>{v.source?<a href={data.catalog.sources.find(s=>s.id===v.source)?.url}>{v.source}</a>:'UNAVAILABLE'}{v.conditions&&<small>{v.conditions}</small>}</td></tr>)}</tbody></table>}<h2>Curated documents & record scaffolding</h2>{chapter.structured.map(s=><details key={s.path}><summary>{s.path.split('/').pop()}</summary><pre>{JSON.stringify(s.data,null,2)}</pre></details>)}<button onClick={()=>download((element?.matId||'MAT').replace(':','-')+'-data.json',JSON.stringify({baseline:element,documents:chapter.structured},null,2),'application/json')}>Download record data</button></section>}
+ {mode==='review'&&<section className="review"><h2>Evidence & editorial review</h2><p className={chapter.missingSources.length?'warning':''}>{chapter.missingSources.length?'BLOCKED — '+chapter.missingSources.join(', '):'No unresolved registry IDs detected in this chapter. Scientific and editorial review remain required.'}</p><p>Edition-wide unresolved citations: {data.metadata.missingSources.join(', ')||'none detected'}. A working draft is not a publication approval.</p><ul><li>{element?.recordStatus||chapter.lane} coverage</li><li>{(body.match(/PLANNED|UNAVAILABLE|UNKNOWN|REQUIRED/g)||[]).length} explicit gaps or requested assets in the manuscript</li><li>{draft?'Unreviewed local manuscript changes':'Canonical manuscript'}</li><li>{conflict?'Draft conflict requires resolution':'No draft version conflict detected'}</li></ul><h3>Source registry entries</h3>{chapter.sources.map((s,i)=><details key={i}><summary>{String(s.source_id)} · {String(s.title||s.topic||s.status||s.organization||'Registry entry')}</summary><pre>{JSON.stringify(s,null,2)}</pre></details>)}</section>}
+ {mode==='export'&&<section className="export-panel"><h2>Prepare a working edition</h2><p>Exports are labelled drafts. Carbon citations, scientific review, asset rights, and EPUB validation remain release gates.</p><button disabled={conflict} onClick={()=>exportHTML(chapter,body)}>Download chapter HTML</button><button disabled={conflict||exporting} onClick={exportBook}>{exporting?'Building EPUB…':'Download 118-element draft EPUB'}</button><button onClick={backup}>Download editable project</button><button disabled={conflict} onClick={()=>download('MAT-chapter.md',body,'text/markdown')}>Download manuscript</button><p>For PDF: select Preview, choose a page format, then Print / Save as PDF. EPUB uses a reflowable text-and-table edition with explicit figure descriptions; it does not embed interactive media.</p></section>}
+ {mode==='preview'&&<div className="controls"><label>Page format<select value={format} onChange={e=>setFormat(e.target.value)}><option value="web">Web / reflowable</option><option value="paperback">6 × 9 inch paperback preview</option><option value="a4">A4 technical preview</option></select></label><button onClick={()=>window.print()}>Print / Save as PDF</button><button onClick={()=>{if('speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(body.replace(/[#*_]/g,''));u.lang='en';speechSynthesis.speak(u)}else setNotice('Read aloud is unavailable in this browser.')}}>Read aloud</button><button onClick={()=>window.speechSynthesis?.cancel()}>Stop reading</button></div>}
+ {['write','design','preview'].includes(mode)&&<article className={'page format-'+format} style={{fontSize:project.fontSize}} aria-label="Live chapter preview"><div className="page-kicker">MATERIALS ATLAS TABLE CODEX <span>{draft?'LOCAL DRAFT':'WORKING EDITION'}</span></div><Markdown body={body} path={chapter.id} onNavigate={navigate}/><footer>{selected?.mat} · Source-backed baseline and authored content retain separate evidence status.</footer></article>}
+ </>}
+ </main>
+ <aside className="inspector" aria-label="Chapter inspector"><div className="panel-title">INSPECTOR</div><div className="inspector-identity"><span>{element?.symbol||'M'}</span><h2>{element?.name||'Reference chapter'}</h2><p>{element?.matId||selected?.lane}</p><strong>{element?.recordStatus||'REFERENCE'}</strong></div>
+ {chapter&&<><h3>Actual chapter inventory</h3><dl>{Object.entries(chapter.counts).map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><p>Counts represent files and source references; completeness requires review.</p><h3>Evidence state</h3><p className={chapter.missingSources.length?'warning':''}>{chapter.reviewStatus.replace('_',' ')}</p><p>{data.metadata.notice}</p><details><summary>Figure gallery ({chapter.assets.length})</summary>{chapter.assets.filter(p=>/\.(svg|png|jpg|webp)$/.test(p)).map(p=><a key={p} href={assetURL(p)} target="_blank" rel="noreferrer"><img loading="lazy" src={assetURL(p)} alt={p.split('/').pop()}/></a>)}</details><h3>Bookmarks</h3>{project.bookmarks.map(id=><button className="bookmark-link" key={id} onClick={()=>navigate(id)}>{data.records.find(r=>r.id===id)?.title||id}</button>)}<a className="reader-link" href={assetURL('book/index.html')+'#'+encodeURIComponent(chapter.id)} target="_blank" rel="noreferrer">Open public reader ↗</a></>}
+ </aside>
+ </div><footer className="statusbar"><span>{data.elements.filter(e=>e.recordStatus==='CURATED').length} curated · {data.elements.filter(e=>e.recordStatus==='BASELINE').length} baseline · 118 selectable</span><span>{Object.keys(project.drafts).length} local drafts · {data.metadata.missingSources.length} unresolved source IDs</span></footer>
+ </div>
 }

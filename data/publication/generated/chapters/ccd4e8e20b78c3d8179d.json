@@ -1,0 +1,24 @@
+{
+  "id": "docs/02-data/08-Relationships-and-Knowledge-Graph.md",
+  "key": "ccd4e8e20b78c3d8179d",
+  "mat": null,
+  "title": "MAT Relationships and Knowledge Graph",
+  "section": "Data",
+  "lane": "reference",
+  "body": "# MAT Relationships and Knowledge Graph\n\n## Purpose\n\nMAT is not merely a collection of independent documents.\n\nIt is a network of entities connected by scientifically meaningful relationships.\n\nThe general graph model is:\n\n\\[\nG=(V,E)\n\\]\n\nwhere:\n\n- \\(V\\) = MAT entities/nodes;\n- \\(E\\) = relationships/edges.\n\n---\n\n# 1. Node Types\n\nNodes may represent:\n\n- element;\n- isotope;\n- ion;\n- atomic state;\n- nuclear state;\n- molecule;\n- compound;\n- allotrope;\n- crystal;\n- material;\n- phase;\n- property;\n- process;\n- reaction;\n- environment;\n- experiment;\n- calculation;\n- source;\n- person;\n- institution;\n- equation;\n- theory;\n- application.\n\n---\n\n# 2. Relationship Object\n\nEvery relationship should contain:\n\n```yaml\nrelationship_id:\nsource_id:\nrelationship_type:\ntarget_id:\nconditions:\ndirection:\nevidence_type:\nconfidence:\nsource_ids:\nnotes:\n```\n\n---\n\n# 3. Core Relationship Types\n\n## Composition\n\n```text\nCONTAINS\nCONSTITUENT-OF\nCOMPOSED-OF\nHAS-ISOTOPE\nIS-ISOTOPE-OF\n```\n\n---\n\n## Chemistry\n\n```text\nBONDS-WITH\nFORMS-COMPOUND\nREACTS-WITH\nCATALYSES\nOXIDISES-TO\nREDUCES-TO\nDISSOLVES-IN\nADSORBS\nABSORBS\n```\n\n---\n\n## Structure\n\n```text\nHAS-PHASE\nHAS-ALLOTROPE\nCRYSTALLISES-AS\nTRANSFORMS-TO\nHAS-DEFECT\nHAS-INTERFACE\n```\n\n---\n\n## Process\n\n```text\nPRODUCED-BY\nPROCESSED-BY\nANNEALED-BY\nDEPOSITED-BY\nSYNTHESISED-BY\nMACHINED-BY\nTRANSFORMED-BY\n```\n\n---\n\n## Nuclear\n\n```text\nDECAYS-TO\nCAPTURES-NEUTRON\nFUSES-WITH\nFISSION-PRODUCES\nTRANSMUTES-TO\n```\n\n---\n\n## Energy\n\n```text\nGENERATES\nSTORES\nCONDUCTS\nCONVERTS\nABSORBS-ENERGY\nEMITS-ENERGY\n```\n\n---\n\n## Evidence\n\n```text\nSUPPORTED-BY\nCONTRADICTED-BY\nMEASURED-BY\nCALCULATED-BY\nPREDICTED-BY\nREPORTED-IN\n```\n\n---\n\n## People and History\n\n```text\nDISCOVERED-BY\nPROPOSED-BY\nMEASURED-BY-PERSON\nDEVELOPED-BY\nNAMED-AFTER\n```\n\n---\n\n## Application\n\n```text\nUSED-IN\nCANDIDATE-FOR\nUNSUITABLE-FOR\n```\n\n---\n\n# 4. Direction\n\nSome relationships are symmetric.\n\nExample:\n\n```text\nBONDS-WITH\n```\n\nmay be treated as bidirectional in certain graph contexts.\n\nOthers are directional:\n\n```text\nDECAYS-TO\n```\n\nbecause:\n\n```text\nA DECAYS-TO B\n```\n\ndoes not imply:\n\n```text\nB DECAYS-TO A\n```\n\n---\n\n# 5. Conditional Relationships\n\nA relationship may only exist under certain conditions.\n\nExample:\n\n```yaml\nsource: graphite\nrelationship: TRANSFORMS-TO\ntarget: diamond\nconditions:\n  pressure: high\n  temperature: elevated\n```\n\nTherefore the relationship edge itself may contain state information.\n\n---\n\n# 6. Multi-Step Paths\n\nA MAT transformation pathway can be represented:\n\n\\[\nA\n\\xrightarrow{P_1}\nB\n\\xrightarrow{P_2}\nC\n\\xrightarrow{P_3}\nD\n\\]\n\nEach edge must retain process conditions.\n\n---\n\n# 7. Reverse Search\n\nMAT should eventually support queries such as:\n\n```text\nFind materials with:\nhigh thermal conductivity\nlow density\nelectrical insulation\ntemperature stability > target\n```\n\nThe system can traverse:\n\n```text\nTARGET PROPERTY\n↓\nMATERIAL\n↓\nSTRUCTURE\n↓\nCOMPOSITION\n↓\nPROCESS\n```\n\nThis makes the knowledge graph useful for materials design rather than merely reference lookup.\n\n---\n\n# 8. Causali E Relationship\n\nCausali E may operate over MAT graph states conceptually as:\n\n\\[\nC=F(A,B,E)\n\\]\n\nwhere:\n\n- \\(A\\) = intervention/change;\n- \\(B\\) = starting or constrained state;\n- \\(E\\) = environment;\n- \\(C\\) = resulting accessible state.\n\nAll generated candidate pathways must still be tested against established physics, chemistry and evidence.\n\n---\n\n# 9. Forbidden and Unresolved Paths\n\nMAT may record:\n\n```text\nOBSERVED\nPREDICTED\nPOSSIBLE\nCONDITIONALLY-POSSIBLE\nKINETICALLY-INACCESSIBLE\nTHERMODYNAMICALLY-UNFAVOURABLE\nFORBIDDEN\nFAILED\nUNKNOWN\nHYPOTHETICAL\n```\n\nA pathway failing under one condition does not automatically establish impossibility under every physically meaningful condition.\n\nConversely, mathematical generation of a candidate state does not establish that the state is physically possible.\n\n---\n\n# 10. Relationship Evidence\n\nEvery relationship should ultimately be traceable to:\n\n- experimental observation;\n- established theory;\n- computation;\n- historical source;\n- hypothesis.\n\n---\n",
+  "bodyHash": "d38a44772c4598f4d6fdd81b87c9b975c1b837f65124e98bc45e70012d727a65",
+  "header": {
+    "where": "- \\(V\\) = MAT entities/nodes;"
+  },
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

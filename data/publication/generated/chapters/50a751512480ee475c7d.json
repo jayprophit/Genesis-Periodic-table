@@ -1,0 +1,35 @@
+{
+  "id": "records/0007-Nitrogen-N/calculations/0007-Nitrogen-N-CALC-004-Ammonia-Formation-Enthalpy.md",
+  "key": "50a751512480ee475c7d",
+  "mat": "MAT:0007",
+  "title": "CALC-004 — Reference Ammonia Formation Enthalpy",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-004 — Reference Ammonia Formation Enthalpy\n\nReaction:\n\n$$\nN_2(g)+3H_2(g)\n\\rightarrow\n2NH_3(g)\n$$\n\nNIST CODATA review value for gaseous ammonia:\n\n$$\n\\Delta_fH^\\circ_{298.15}(NH_3)\n=\n-45.94\\pm0.35\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nFor two moles:\n\n$$\n\\Delta_rH^\\circ\n=\n2(-45.94)\n$$\n\n$$\n\\boxed{\n\\Delta_rH^\\circ\n\\approx\n-91.88\\ {\\rm kJ}\n}\n$$\n\nfor the reaction as written.\n\nThe reverse decomposition:\n\n$$\n2NH_3\n\\rightarrow\nN_2+3H_2\n$$\n\ntherefore requires approximately:\n\n$$\n\\boxed{\n+91.88\\ {\\rm kJ}\n}\n$$\n\nunder the same standard-state reference convention.\n\nThis does **not** represent the total real-system energy needed to synthesize or crack ammonia.\n\nReal systems additionally depend on:\n\n```text\ntemperature\npressure\ncatalyst\nconversion\nseparation\ncompression\nheat integration\nhydrogen production route\n```\n\n```yaml\ncalculation_id: \"MAT:0007:CALC:004\"\nclassification: \"DERIVED-FROM-EVALUATED-THERMOCHEMISTRY\"\n\nreaction: \"N2(g) + 3H2(g) -> 2NH3(g)\"\n\nstandard_reaction_enthalpy:\n  value: -91.88\n  unit: \"kJ\"\n  stoichiometric_basis: \"2 mol NH3\"\n  temperature:\n    value: 298.15\n    unit: \"K\"\n\nreverse_decomposition:\n  value: 91.88\n  unit: \"kJ\"\n\nsource_id: \"SRC-000118\"\n",
+  "bodyHash": "01973a8b89d98fa22c6bde7a858be9359336c35c6be1a53f955e94b2ba26095a",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000118",
+      "title": "NIST Chemistry WebBook — Ammonia",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 69",
+      "source_type": "EVALUATED-THERMOCHEMISTRY",
+      "supports": [
+        "NH3",
+        "ammonia_standard_enthalpy",
+        "ammonia_phase_data"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

@@ -1,0 +1,561 @@
+{
+  "id": "records/0000-Origin-State/0000-Origin-State.md",
+  "key": "8b36087efabd73f0c25d",
+  "mat": "MAT:0000",
+  "title": "0000 — Origin State",
+  "section": "Material Atlas Table",
+  "lane": "foundation",
+  "body": "# 0000 — Origin State\n\n```yaml\nmat_id: MAT:0000\nrecord_name: Origin State\nsymbol: null\nrecord_class: FOUNDATION_REFERENCE\nchemical_element: false\natomic_number: NOT-APPLICABLE\nparent_id: null\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0000\nlegacy_name: Universal Reference / Origin State\n```\n\n# 0. Record Role\n\n`MAT:0000` is the root reference record of the Materials Atlas Table Codex.\n\nIt is **not a chemical element**.\n\nIt does not represent a newly proposed particle, substance, atom, field or physical material.\n\nIt provides the formal reference architecture against which MAT states can be compared.\n\nConceptually:\n\n$$\n\\boxed{\nMAT:0000\n=\n\\text{reference origin for MAT state comparison}\n}\n$$\n\nThe term **Origin State** refers primarily to an informational and mathematical origin.\n\nIt does not mean literal physical nothingness.\n\n---\n\n# 1. Why 0000 Exists\n\nMost physical measurements are comparisons.\n\nExamples include:\n\n$$\n\\Delta T=T-T_\\mathrm{ref}\n$$\n\n$$\n\\Delta P=P-P_\\mathrm{ref}\n$$\n\n$$\n\\Delta V=V-V_\\mathrm{ref}\n$$\n\n$$\n\\Delta B=B-B_\\mathrm{ref}\n$$\n\nMAT therefore requires explicit reference states.\n\nWithout a defined reference, the statement:\n\n```text\ndifference = 5\n```\n\nis scientifically incomplete.\n\nMAT asks:\n\n```text\n5 WHAT?\nrelative to WHAT?\nunder WHICH CONDITIONS?\nusing WHICH UNIT?\n```\n\n---\n\n# 2. 0000 Is Not Literal Nothing\n\nMAT does not define `0000` as an experimentally demonstrated state of absolute nothingness.\n\nSeveral physically different concepts are sometimes described informally as \"zero\" or \"empty\":\n\n* zero on a coordinate axis;\n* zero applied electric field;\n* zero applied magnetic field;\n* zero gauge potential;\n* vacuum;\n* thermodynamic absolute zero;\n* quantum ground state;\n* quantum vacuum;\n* absence of added reactant;\n* zero mechanical strain;\n* time origin;\n* process-start condition.\n\nThese concepts are not interchangeable.\n\nMAT therefore uses separate reference channels.\n\n---\n\n# 3. Mathematical Origin\n\nFor a dimensionless normalized MAT state vector:\n\n$$\n\\mathbf z\n=\n(z_1,z_2,\\ldots,z_n)\n$$\n\nthe computational reference origin may be represented:\n\n$$\n\\mathbf z_0\n=\n(0,0,\\ldots,0)\n$$\n\nand differences calculated:\n\n$$\n\\Delta\\mathbf z_i\n=\n\\mathbf z_i-\\mathbf z_0\n$$\n\nor between two states:\n\n$$\n\\Delta\\mathbf z_{ij}\n=\n\\mathbf z_i-\\mathbf z_j\n$$\n\nThis representation is valid only after the coordinates have been defined consistently.\n\nA raw vector containing incompatible physical dimensions must **not** be subtracted as though every component had the same unit.\n\nFor example:\n\n```text\ntemperature in K\npressure in Pa\nmagnetic field in T\ndensity in kg/m^3\n```\n\ncannot simply be numerically combined without a defined transformation or normalization.\n\n---\n\n# 4. Typed Physical Difference\n\nFor an individual physical quantity \\(q\\):\n\n$$\n\\Delta q\n=\nq-q_\\mathrm{ref}\n$$\n\nExamples:\n\n$$\n\\Delta T\n=\nT-T_\\mathrm{ref}\n$$\n\n$$\n\\Delta P\n=\nP-P_\\mathrm{ref}\n$$\n\n$$\n\\Delta B\n=\nB-B_\\mathrm{ref}\n$$\n\n$$\n\\Delta E_\\mathrm{field}\n=\nE_\\mathrm{field}-E_{\\mathrm{field,ref}}\n$$\n\nThe reference used must be identified.\n\n---\n\n# 5. Dimensionless Normalized Coordinate\n\nWhen MAT eventually compares unlike properties within a common multidimensional state space, each quantity should first be transformed.\n\nA generic form is:\n\n$$\nz_q\n=\nN_q(q,q_\\mathrm{ref},s_q)\n$$\n\nA simple example is:\n\n$$\nz_q\n=\n\\frac{q-q_\\mathrm{ref}}{s_q}\n$$\n\nwhere \\(s_q\\) is a scientifically defined scale for quantity \\(q\\).\n\nThe transformation \\(N_q\\) must be stored.\n\nThis prevents arbitrary mixing of incompatible units.\n\n---\n\n# 6. Reference-State Channels\n\n`MAT:0000` contains multiple reference channels rather than one claimed universal physical zero.\n\nCanonical channels are:\n\n```text\nMAT:0000:REF:ORIGIN\nMAT:0000:REF:LAB\nMAT:0000:REF:THERMO\nMAT:0000:REF:T0\nMAT:0000:REF:P0\nMAT:0000:REF:E0\nMAT:0000:REF:B0\nMAT:0000:REF:R0\nMAT:0000:REF:N0\nMAT:0000:REF:C0\nMAT:0000:REF:S0\nMAT:0000:REF:X0\nMAT:0000:REF:TIME0\nMAT:0000:REF:VAC\nMAT:0000:REF:QV\n```\n\n---\n\n# 7. ORIGIN — Computational Coordinate Origin\n\n```yaml\nreference_id: MAT:0000:REF:ORIGIN\ntype: COMPUTATIONAL\n```\n\nPurpose:\n\nDefines the zero coordinate used after MAT properties have been transformed into a compatible normalized representation.\n\nIt is not asserted to be a physical material state.\n\n---\n\n# 8. LAB — Laboratory Baseline\n\n```yaml\nreference_id: MAT:0000:REF:LAB\ntype: EXPERIMENTAL_REFERENCE\n```\n\nA laboratory baseline must explicitly define applicable quantities such as:\n\n* temperature;\n* pressure;\n* humidity;\n* atmosphere;\n* electric field;\n* magnetic field;\n* radiation background;\n* vibration;\n* gravity;\n* sample geometry;\n* instrument state.\n\n`LAB` without its associated conditions is incomplete.\n\n---\n\n# 9. THERMO — Thermodynamic / Chemical Reference\n\n```yaml\nreference_id: MAT:0000:REF:THERMO\ntype: THERMODYNAMIC_REFERENCE\n```\n\nThis reference is used for thermodynamic or chemical comparison.\n\nIt must specify:\n\n* temperature;\n* pressure;\n* composition;\n* phase;\n* standard/reference-state convention.\n\nA \"standard state\" is therefore not treated as a physically universal state independent of convention.\n\n---\n\n# 10. T0 — Temperature Reference\n\n```yaml\nreference_id: MAT:0000:REF:T0\ntype: TEMPERATURE_REFERENCE\nquantity: thermodynamic_temperature\ncanonical_unit: K\n```\n\nDefines:\n\n$$\n\\Delta T=T-T_0\n$$\n\n`T0` means a **selected reference temperature**.\n\nIt does not automatically mean:\n\n$$\nT_0=0\\ \\mathrm K\n$$\n\nunless explicitly defined that way.\n\n---\n\n# 11. Absolute Zero\n\nThermodynamic zero is:\n\n$$\nT=0\\ \\mathrm K\n$$\n\nwithin the thermodynamic temperature scale.\n\nMAT does not equate:\n\n```text\n0 K\n```\n\nwith:\n\n```text\nzero energy\n```\n\nor:\n\n```text\nabsence of quantum motion\n```\n\nor:\n\n```text\nliteral nothingness\n```\n\nThese are different concepts.\n\n---\n\n# 12. P0 — Pressure Reference\n\n```yaml\nreference_id: MAT:0000:REF:P0\ntype: PRESSURE_REFERENCE\ncanonical_unit: Pa\n```\n\nDefines:\n\n$$\n\\Delta P=P-P_0\n$$\n\nThe selected pressure must be recorded numerically.\n\n---\n\n# 13. VAC — Laboratory Vacuum Reference\n\n```yaml\nreference_id: MAT:0000:REF:VAC\ntype: VACUUM_REFERENCE\n```\n\nA laboratory vacuum is defined through measurable physical conditions rather than simply:\n\n```text\nvacuum = nothing\n```\n\nStore where relevant:\n\n* pressure;\n* residual gas composition;\n* temperature;\n* chamber geometry;\n* pumping state;\n* outgassing;\n* electromagnetic environment.\n\n`VAC` is separate from `QV`.\n\n---\n\n# 14. E0 — Zero Specified Externally Applied Electric Field\n\n```yaml\nreference_id: MAT:0000:REF:E0\ntype: ELECTRIC_FIELD_REFERENCE\nnominal_external_field: 0\ncanonical_unit: V/m\n```\n\nThis means:\n\n```text\nno specified externally applied electric field\n```\n\nwithin a defined experimental frame.\n\nIt does **not** mean that all microscopic or fluctuating electromagnetic fields everywhere are physically absent.\n\n---\n\n# 15. B0 — Zero Specified Externally Applied Magnetic Field\n\n```yaml\nreference_id: MAT:0000:REF:B0\ntype: MAGNETIC_FIELD_REFERENCE\nnominal_external_flux_density: 0\ncanonical_unit: T\n```\n\nDefines, where appropriate:\n\n$$\n\\Delta B=B-B_0\n$$\n\nThis is an applied-field reference.\n\nIt must not be confused with:\n\n* intrinsic magnetic moments;\n* internal magnetic fields;\n* remanent magnetization;\n* magnetic domains;\n* environmental background fields;\n* quantum-field fluctuations.\n\n---\n\n# 16. R0 — Radiation Reference\n\n```yaml\nreference_id: MAT:0000:REF:R0\ntype: RADIATION_REFERENCE\n```\n\n`R0` means no **specified added radiation source** above the defined reference environment.\n\nIt does not automatically imply absolute zero radiation.\n\nThe background must be specified where scientifically relevant.\n\n---\n\n# 17. N0 — No Added Species Reference\n\n```yaml\nreference_id: MAT:0000:REF:N0\ntype: SPECIES_ADDITION_REFERENCE\n```\n\nThis means:\n\n```text\nno additional specified atomic or nuclear species introduced\n```\n\nrelative to a stated starting composition.\n\nIt does not mean the universe or experimental chamber contains no particles.\n\n---\n\n# 18. C0 — No Added Chemical Reactant\n\n```yaml\nreference_id: MAT:0000:REF:C0\ntype: CHEMICAL_ADDITION_REFERENCE\n```\n\nDefines the starting chemical composition before a selected reagent or reactant is introduced.\n\n---\n\n# 19. S0 — Unstrained Structural Reference\n\n```yaml\nreference_id: MAT:0000:REF:S0\ntype: MECHANICAL_REFERENCE\n```\n\nFor a suitable deformation measure:\n\n$$\n\\epsilon_0=0\n$$\n\nmay define the selected unstrained configuration.\n\nThis reference depends on the chosen stress/strain model and reference geometry.\n\n---\n\n# 20. X0 — Process-Start State\n\n```yaml\nreference_id: MAT:0000:REF:X0\ntype: PROCESS_REFERENCE\n```\n\nRepresents the complete recorded state immediately before a process or intervention.\n\nConceptually:\n\n$$\nX_0\n\\xrightarrow{P}\nX_1\n$$\n\nwhere \\(P\\) is the applied process.\n\n`X0` is particularly important for:\n\n* heat treatment;\n* synthesis;\n* deformation;\n* irradiation;\n* magnetization;\n* chemical reaction;\n* phase transformation;\n* experimental tests.\n\n---\n\n# 21. TIME0 — Time Origin\n\n```yaml\nreference_id: MAT:0000:REF:TIME0\ntype: TEMPORAL_REFERENCE\n```\n\nDefines:\n\n$$\n\\Delta t=t-t_0\n$$\n\nThe choice of \\(t_0\\) depends on the experiment or model.\n\nExamples:\n\n```text\nstart of heating\nstart of irradiation\nsample manufacture\nstart of measurement\nreaction initiation\n```\n\n---\n\n# 22. QV — Quantum-Vacuum Reference\n\n```yaml\nreference_id: MAT:0000:REF:QV\ntype: THEORETICAL_PHYSICAL_REFERENCE\n```\n\nThe quantum-vacuum reference represents a vacuum state defined within a specified quantum-field-theory model.\n\nIt is not defined as classical empty nothingness.\n\nA QV record must identify:\n\n* theory/model;\n* fields included;\n* spacetime/background assumptions;\n* boundary conditions;\n* observer/frame dependence where relevant;\n* renormalization convention where relevant;\n* calculated quantity;\n* evidence.\n\nMAT does not assume that one unqualified `QV` object acts as a universal absolute zero for every physical theory.\n\n---\n\n# 23. Zero Energy\n\nMAT distinguishes several concepts:\n\n```text\nzero potential-energy reference\nzero Hamiltonian eigenvalue\nground-state energy\nzero-point energy\nvacuum-energy reference\nzero measured energy transfer\n```\n\nThey are not interchangeable.\n\nA shift of energy reference:\n\n$$\nE'=E+C\n$$\n\nmay leave many observable energy differences unchanged:\n\n$$\n\\Delta E\n=\nE_2-E_1\n$$\n\nTherefore a recorded numerical energy zero must state its physical and mathematical convention.\n\n---\n\n# 24. Ground State\n\nThe ground state of a particular physical system is its lowest-energy state under the specified Hamiltonian/model.\n\nIt is not automatically:\n\n```text\nMAT:0000\n```\n\nAn atom, molecule, crystal or field can possess its own ground-state object.\n\n---\n\n# 25. Quantum Zero-Point State\n\nQuantum systems can retain nonzero ground-state fluctuations.\n\nTherefore:\n\n```text\nthermodynamic zero\n```\n\nand:\n\n```text\nclassical absence of motion\n```\n\nmust not be treated as universally equivalent.\n\n---\n\n# 26. Origin Versus Cosmological Origin\n\nThe name **Origin State** does not assert that `MAT:0000` is the experimentally established physical state from which the universe originated.\n\nCosmological-origin models belong to:\n\n```text\nCOSMOLOGY\n```\n\nand must carry their own:\n\n* evidence;\n* equations;\n* observations;\n* uncertainties;\n* theoretical status.\n\n`MAT:0000` is primarily the root of the **MAT coordinate and reference system**.\n\n---\n\n# 27. Origin Versus Physical Singularity\n\nMAT does not define:\n\n$$\nMAT:0000\n=\n\\text{physical singularity}\n$$\n\nA mathematical coordinate origin and a gravitational/cosmological singularity are separate concepts.\n\n---\n\n# 28. State Comparison\n\nFor two physically comparable states \\(i\\) and \\(j\\):\n\n$$\n\\Delta q_{ij}\n=\nq_i-q_j\n$$\n\nfor each meaningful quantity \\(q\\).\n\nA MAT comparison object should therefore contain:\n\n```yaml\nsource_state:\ntarget_state:\nproperty:\nsource_value:\ntarget_value:\nunit:\ndifference:\nuncertainty:\nconditions:\n```\n\n---\n\n# 29. Vector State Comparison\n\nWhen several quantities have been normalized:\n\n$$\n\\mathbf z_i\n=\n(z_{i1},z_{i2},\\ldots,z_{in})\n$$\n\nthen:\n\n$$\n\\Delta\\mathbf z_{ij}\n=\n\\mathbf z_i-\\mathbf z_j\n$$\n\nmay be calculated.\n\nA distance metric may later be introduced:\n\n$$\nd(i,j)\n=\nd(\\mathbf z_i,\\mathbf z_j)\n$$\n\nbut MAT currently assumes **no universal material-state distance metric**.\n\nThe metric must be selected for the scientific problem.\n\n---\n\n# 30. Reference Transform\n\nA future MAT comparison engine may use:\n\n$$\n\\mathcal R_q:\nq\n\\rightarrow\n(q-q_\\mathrm{ref})\n$$\n\nfollowed by normalization:\n\n$$\n\\mathcal N_q:\n(q-q_\\mathrm{ref})\n\\rightarrow\nz_q\n$$\n\nand then state construction:\n\n$$\n\\mathbf z\n=\n[\nz_1,z_2,\\ldots,z_n\n]\n$$\n\nEvery transformation must remain reconstructable.\n\n---\n\n# 31. Causali E Mapping\n\n`MAT:0000` also provides a clean reference interface for exploring Causali E.\n\nA developing formal mapping is:\n\n$$\nA=\\text{intervention/change}\n$$\n\n$$\nB=\\text{current/reference state plus retained constraints}\n$$\n\n$$\nC=\\text{resulting or accessible state}\n$$\n\nwhich can be represented more rigorously as:\n\n$$\nC\n=\nF(S_0,A,B,E,t)\n$$\n\nor probabilistically:\n\n$$\nP(C\\mid S_0,A,B,E)\n$$\n\nThis is a MAT/Causali E research interpretation.\n\nIt does not replace established physical equations governing the process.\n\n---\n\n# 32. Branching Accessible States\n\nFrom state \\(S_0\\):\n\n$$\nS_0\n\\rightarrow\n\\{\nS_1,S_2,\\ldots,S_n\n\\}\n$$\n\nmay represent multiple candidate outcomes.\n\nMAT then applies:\n\n```text\nMATHEMATICAL CONSISTENCY\n↓\nCONSERVATION LAWS\n↓\nPHYSICS\n↓\nCHEMISTRY\n↓\nTHERMODYNAMICS\n↓\nKINETICS\n↓\nEVIDENCE\n↓\nSAFETY\n```\n\nbefore treating a candidate pathway as physically credible.\n\n---\n\n# 33. Null-State Separation\n\n`0000` must not become the null value for the database.\n\nThese are different:\n\n```text\nMAT:0000\nUNKNOWN\nNOT-MEASURED\nNOT-AVAILABLE\nNOT-APPLICABLE\nNOT-ESTABLISHED\nZERO\n```\n\nFor example:\n\n```yaml\nhalf_life: NOT-APPLICABLE\n```\n\ndoes not mean:\n\n```yaml\nhalf_life: 0\n```\n\nand does not mean:\n\n```yaml\nhalf_life: MAT:0000\n```\n\n---\n\n# 34. Atomic Identity\n\n```yaml\natomic_number: NOT-APPLICABLE\nproton_count: NOT-APPLICABLE\nneutron_count: NOT-APPLICABLE\nelectron_count: NOT-APPLICABLE\natomic_mass: NOT-APPLICABLE\nelectron_configuration: NOT-APPLICABLE\n```\n\n`MAT:0000` is not a zeroth chemical element.\n\n---\n\n# 35. Nuclear Identity\n\n```yaml\nisotopes: NOT-APPLICABLE\nnuclear_spin: NOT-APPLICABLE\nhalf_life: NOT-APPLICABLE\ndecay_mode: NOT-APPLICABLE\n```\n\n---\n\n# 36. Chemical Identity\n\n```yaml\nchemical_formula: NOT-APPLICABLE\noxidation_state: NOT-APPLICABLE\nbonding: NOT-APPLICABLE\n```\n\n---\n\n# 37. Mechanical / Material Identity\n\n`MAT:0000` has no intrinsic:\n\n* Young's modulus;\n* hardness;\n* density;\n* crystal structure;\n* thermal conductivity;\n* tensile strength.\n\nThose properties belong to physical material records.\n\n---\n\n# 38. Frequency\n\n`MAT:0000` has no universal intrinsic scalar frequency.\n\nReference frequencies may be selected for:\n\n* spectral calculations;\n* Fourier analysis;\n* instrument calibration;\n* transition comparison;\n\nbut they belong to the corresponding reference channel or experiment.\n\n---\n\n# 39. Magnetic Identity\n\n`MAT:0000` is not intrinsically:\n\n```text\ndiamagnetic\nparamagnetic\nferromagnetic\nantiferromagnetic\nferrimagnetic\n```\n\n`B0` is a field-reference convention, not a material magnetic phase.\n\n---\n\n# 40. Electrical Identity\n\nLikewise, `E0` is a reference condition.\n\nIt does not make `MAT:0000` a conductor, insulator, semiconductor or dielectric.\n\n---\n\n# 41. Temperature Identity\n\n`T0` is a selected temperature reference.\n\n`MAT:0000` itself does not possess one intrinsic material temperature.\n\n---\n\n# 42. Pressure Identity\n\n`P0` is a selected pressure reference.\n\n`MAT:0000` itself does not possess one intrinsic physical pressure.\n\n---\n\n# 43. Reference Hierarchy\n\nConceptually:\n\n```text\nMAT:0000\n│\n├── ORIGIN\n│   └── normalized computational origin\n│\n├── LAB\n│   └── laboratory baseline\n│\n├── THERMO\n│   └── thermodynamic / chemical reference\n│\n├── T0\n│   └── temperature reference\n│\n├── P0\n│   └── pressure reference\n│\n├── E0\n│   └── applied electric-field reference\n│\n├── B0\n│   └── applied magnetic-field reference\n│\n├── R0\n│   └── radiation reference\n│\n├── N0\n│   └── species-addition reference\n│\n├── C0\n│   └── chemical-addition reference\n│\n├── S0\n│   └── mechanical reference\n│\n├── X0\n│   └── process-start reference\n│\n├── TIME0\n│   └── temporal origin\n│\n├── VAC\n│   └── laboratory vacuum reference\n│\n└── QV\n    └── model-defined quantum-vacuum reference\n```\n\n---\n\n# 44. Visual System\n\n## V01 — Natural / Material Manifestation\n\n```text\nNOT-APPLICABLE\n```\n\n`MAT:0000` is not a sample of matter.\n\n---\n\n## V02 — Conventional Scientific Representation\n\nPlanned asset:\n\n```text\n0000-Origin-State-DIAGRAM-001-Reference-Origin.svg\n```\n\nShow the MAT coordinate origin and reference channels.\n\n---\n\n## V03 — Bonding / Molecular / Lattice\n\n```text\nNOT-APPLICABLE\n```\n\n---\n\n## V04 — Quantum Representation\n\nPlanned:\n\n```text\n0000-Origin-State-DIAGRAM-002-Quantum-Vacuum-Reference.svg\n```\n\nClassification:\n\n```text\nSCIENTIFIC-SCHEMATIC\n```\n\nIt must explicitly state that a quantum vacuum is not classical empty space.\n\n---\n\n## V05 — Isotope / Nuclear Variants\n\n```text\nNOT-APPLICABLE\n```\n\n---\n\n## V06 — Spectral / Frequency\n\nPlanned:\n\n```text\n0000-Origin-State-DIAGRAM-003-Frequency-Reference-Axes.svg\n```\n\nThis shows frequency as a measurement coordinate rather than assigning an intrinsic frequency to `0000`.\n\n---\n\n## V07 — Physical Reference Dashboard\n\nPlanned:\n\n```text\n0000-Origin-State-FIG-001-Reference-Channels.svg\n```\n\n---\n\n## V08 — Electrical Reference\n\nShow:\n\n$$\nE_\\mathrm{applied}=0\n$$\n\nas a selected external-field reference.\n\n---\n\n## V09 — Magnetic Reference\n\nShow:\n\n$$\nB_\\mathrm{applied}=0\n$$\n\nas a selected external-field reference.\n\n---\n\n## V10 — Thermal Reference\n\nShow:\n\n$$\nT-T_0\n$$\n\nwithout implying \\(T_0=0\\ \\mathrm K\\) unless explicitly selected.\n\n---\n\n## V11 — Mechanical Reference\n\nShow:\n\n$$\n\\epsilon-\\epsilon_0\n$$\n\nwith selected unstrained state.\n\n---\n\n## V12 — Pressure / Environment\n\nShow:\n\n* `P0`;\n* `VAC`;\n* `LAB`;\n* `THERMO`.\n\n---\n\n## V13 — Process\n\nShow:\n\n$$\nX_0\n\\rightarrow\nP\n\\rightarrow\nX_1\n$$\n\n---\n\n## V14 — Relationship Graph\n\nShow `MAT:0000` connected to every reference channel.\n\n---\n\n## V15 — Scientific 3D Model\n\n```text\nNOT-APPLICABLE\n```\n\nThere is no scientifically literal 3D physical object represented by `0000`.\n\n---\n\n## V16 — Data-Extruded 3D Model\n\nOptional conceptual model:\n\n```text\n0000-Origin-State-MODEL-DATA-001.glb\n```\n\nIt must be labelled:\n\n```text\nDATA VISUALIZATION — NOT PHYSICAL ORIGIN GEOMETRY\n```\n\n---\n\n## V17 — Application\n\nPrimary application:\n\n```text\nMAT REFERENCE AND COMPARISON SYSTEM\n```\n\n---\n\n## V18 — Evidence / Provenance\n\nShow distinction between:\n\n```text\nMATHEMATICAL CONVENTION\nPHYSICAL REFERENCE\nMEASUREMENT\nTHEORETICAL MODEL\nHYPOTHESIS\n```\n\n---\n\n# 45. Governing Principles\n\nPrimary MAT principle families:\n\n```yaml\ngoverned_by:\n  - MAT-MATH-002\n  - MAT-MATH-021\n  - MAT-MATH-025\n  - MAT-MATH-034\n  - MAT-MATH-047\n  - MAT-PHYS-022\n  - MAT-PHYS-032\n  - MAT-THERMO-001\n  - MAT-THERMO-005\n  - MAT-QM-003\n  - MAT-QM-005\n  - MAT-SYS-002\n  - MAT-SYS-003\n  - MAT-INFO-011\n  - MAT-CAUSAL-004\n```\n\nNot every principle applies to every reference mode.\n\n---\n\n# 46. Scientific Classification\n\nThe concepts inside `0000` have different statuses.\n\n| Concept                        | Status                                              |\n| ------------------------------ | --------------------------------------------------- |\n| Coordinate origin              | MATHEMATICAL-CONVENTION                             |\n| Difference from reference      | ESTABLISHED-MATHEMATICS                             |\n| Laboratory baseline            | EXPERIMENTAL-CONVENTION                             |\n| Temperature reference          | METROLOGICAL-CONVENTION                             |\n| Pressure reference             | METROLOGICAL-CONVENTION                             |\n| Zero applied E field           | EXPERIMENTAL-REFERENCE                              |\n| Zero applied B field           | EXPERIMENTAL-REFERENCE                              |\n| Quantum vacuum                 | ESTABLISHED-THEORETICAL-FRAMEWORK / MODEL-DEPENDENT |\n| Absolute physical nothingness  | NOT-DEFINED-BY-MAT                                  |\n| Causali E A/B/C interpretation | AUTHOR-FRAMEWORK                                    |\n| Branching causal search        | DEVELOPING-MAT-METHOD                               |\n| Physical retrocausality        | NOT-ESTABLISHED                                     |\n| Branching physical timelines   | SPECULATIVE                                         |\n\n---\n\n# 47. Evidence Rule\n\nThe root record must never use its special position to bypass evidence requirements.\n\n`MAT:0000` is governed by the same distinction between:\n\n```text\nMEASURED\nREPLICATED\nTHEORETICAL\nCOMPUTATIONAL\nHYPOTHESIS\nUNVERIFIED\n```\n\nas every later record.\n\n---\n\n# 48. Relationship to 0001\n\nThe next primary chemical-element record is:\n\n```text\nMAT:0001\n0001-Hydrogen-H\n```\n\n`MAT:0001` does not derive chemically from `MAT:0000`.\n\nRather:\n\n```text\nMAT:0000\n```\n\nprovides the reference framework within which measurements and states of:\n\n```text\nMAT:0001\n```\n\ncan be expressed.\n\n---\n\n# 49. Open Research Questions\n\n1. Which normalization methods should MAT use for cross-property state-space visualization?\n\n2. Should normalization be global, domain-specific or query-specific?\n\n3. Which state-distance metrics are scientifically useful for materials comparison?\n\n4. How should covariance between MAT dimensions be preserved?\n\n5. How should quantum reference states be represented across incompatible physical models?\n\n6. How should laboratory background electromagnetic/radiation conditions be standardized?\n\n7. Which reference channels should be mandatory for different record classes?\n\n8. Can Causali E provide useful predictive state-search capability beyond standard graph, causal and optimization methods?\n\n---\n\n# 50. Core 0000 Rule\n\n$$\n\\boxed{\n\\text{ZERO VALUE}\n\\neq\n\\text{MISSING VALUE}\n\\neq\n\\text{REFERENCE VALUE}\n\\neq\n\\text{PHYSICAL NOTHINGNESS}\n}\n$$\n\nThis distinction is foundational to MAT.\n\n---\n\n# 51. Final Record Definition\n\n```yaml\nmat_id: MAT:0000\ntype: FOUNDATION_REFERENCE\nchemical_element: false\n\nfunction:\n  - root reference for MAT\n  - coordinate comparison\n  - reference-state registry\n  - state-difference definition\n  - experiment/process baseline system\n\ncontains:\n  - computational origin\n  - laboratory reference\n  - thermodynamic reference\n  - temperature reference\n  - pressure reference\n  - electric-field reference\n  - magnetic-field reference\n  - radiation reference\n  - species-addition reference\n  - chemical-addition reference\n  - mechanical reference\n  - process-start reference\n  - temporal reference\n  - laboratory-vacuum reference\n  - quantum-vacuum reference\n\ndoes_not_represent:\n  - chemical element\n  - atom\n  - isotope\n  - physical particle\n  - literal nothingness\n  - universal quantum vacuum\n  - cosmological singularity\n  - universal zero energy\n\nstatus: RESEARCHED\n```\n\n---\n\n# 52. Migration Status\n\nLegacy source:\n\n```text\nG0000 — Universal Reference / Origin State\n```\n\nMigration status:\n\n```text\nIN-PROGRESS\n```\n\nDo not mark:\n\n```text\nVALIDATED\n```\n\nuntil the structured registry, equations, references and internal links have been checked.\n\n---\n\n# 53. Revision History\n\n| Version | Status     | Change                                                                  |\n| ------- | ---------- | ----------------------------------------------------------------------- |\n| 1.0.0   | RESEARCHED | First MAT restructuring of legacy G0000 into dedicated reference record |\n",
+  "bodyHash": "64b6aaa40c11387d2884214d1207d4e6114ed6a132c3deb6108f2efe84772846",
+  "header": {
+    "mat_id": "MAT:0000",
+    "record_name": "Origin State",
+    "record_class": "FOUNDATION_REFERENCE",
+    "chemical_element": false,
+    "atomic_number": "NOT-APPLICABLE",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0000",
+    "legacy_name": "Universal Reference / Origin State"
+  },
+  "structured": [
+    {
+      "path": "records/0000-Origin-State/data/reference-states/0000-Reference-State-Registry.yaml",
+      "data": {
+        "registry_id": "MAT:0000:REF-REGISTRY",
+        "record_id": "MAT:0000",
+        "version": "1.0.0",
+        "reference_states": [
+          {
+            "reference_id": "MAT:0000:REF:ORIGIN",
+            "code": "ORIGIN",
+            "name": "Computational Coordinate Origin",
+            "class": "COMPUTATIONAL",
+            "physical_state": false,
+            "description": "Zero coordinate used only after quantities have been transformed into a compatible representation.\n",
+            "required_fields": [
+              "coordinate_definition",
+              "normalization",
+              "dimensions"
+            ],
+            "legacy_alias": "G0000"
+          },
+          {
+            "reference_id": "MAT:0000:REF:LAB",
+            "code": "LAB",
+            "name": "Laboratory Baseline",
+            "class": "EXPERIMENTAL_REFERENCE",
+            "physical_state": true,
+            "required_fields": [
+              "temperature",
+              "pressure",
+              "atmosphere",
+              "measurement_context"
+            ],
+            "optional_fields": [
+              "humidity",
+              "electric_field",
+              "magnetic_field",
+              "radiation_background",
+              "vibration",
+              "gravity"
+            ],
+            "legacy_alias": "G0000-LAB"
+          },
+          {
+            "reference_id": "MAT:0000:REF:THERMO",
+            "code": "THERMO",
+            "name": "Thermodynamic and Chemical Reference",
+            "class": "THERMODYNAMIC_REFERENCE",
+            "physical_state": true,
+            "required_fields": [
+              "temperature",
+              "pressure",
+              "composition",
+              "phase",
+              "reference_convention"
+            ],
+            "legacy_alias": "G0000-STP",
+            "legacy_alias_status": "DEPRECATED-GENERIC-STP"
+          },
+          {
+            "reference_id": "MAT:0000:REF:T0",
+            "code": "T0",
+            "name": "Selected Temperature Reference",
+            "class": "TEMPERATURE_REFERENCE",
+            "physical_quantity": "thermodynamic_temperature",
+            "canonical_unit": "K",
+            "default_value": "UNDEFINED",
+            "note": "T0 is not automatically equal to 0 K.\n",
+            "legacy_alias": "G0000-T0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:P0",
+            "code": "P0",
+            "name": "Selected Pressure Reference",
+            "class": "PRESSURE_REFERENCE",
+            "physical_quantity": "pressure",
+            "canonical_unit": "Pa",
+            "default_value": "UNDEFINED",
+            "legacy_alias": "G0000-P0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:E0",
+            "code": "E0",
+            "name": "Zero Specified Externally Applied Electric Field",
+            "class": "ELECTRIC_FIELD_REFERENCE",
+            "physical_quantity": "electric_field",
+            "canonical_unit": "V/m",
+            "nominal_external_value": 0,
+            "note": "Does not assert absence of microscopic, internal, background or quantum electromagnetic fields.\n",
+            "legacy_alias": "G0000-E0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:B0",
+            "code": "B0",
+            "name": "Zero Specified Externally Applied Magnetic Flux Density",
+            "class": "MAGNETIC_FIELD_REFERENCE",
+            "physical_quantity": "magnetic_flux_density",
+            "canonical_unit": "T",
+            "nominal_external_value": 0,
+            "note": "Distinct from intrinsic magnetic moments, remanence, domains and environmental background fields.\n",
+            "legacy_alias": "G0000-B0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:R0",
+            "code": "R0",
+            "name": "No Added Radiation Reference",
+            "class": "RADIATION_REFERENCE",
+            "default_value": "NO-SPECIFIED-ADDED-SOURCE",
+            "note": "Background radiation must still be characterized where relevant.\n",
+            "legacy_alias": "G0000-R0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:N0",
+            "code": "N0",
+            "name": "No Added Atomic or Nuclear Species",
+            "class": "SPECIES_ADDITION_REFERENCE",
+            "default_value": "NO-SPECIFIED-ADDED-SPECIES",
+            "note": "Starting composition and environmental species remain explicit.\n",
+            "legacy_alias": "G0000-N0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:C0",
+            "code": "C0",
+            "name": "No Added Chemical Reactant",
+            "class": "CHEMICAL_REFERENCE",
+            "default_value": "NO-SPECIFIED-ADDED-REACTANT",
+            "required_fields": [
+              "starting_composition"
+            ],
+            "legacy_alias": "G0000-C0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:S0",
+            "code": "S0",
+            "name": "Selected Unstrained Structural State",
+            "class": "MECHANICAL_REFERENCE",
+            "default_strain": 0,
+            "required_fields": [
+              "strain_definition",
+              "reference_geometry"
+            ],
+            "legacy_alias": "G0000-S0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:X0",
+            "code": "X0",
+            "name": "Process-Start State",
+            "class": "PROCESS_REFERENCE",
+            "required_fields": [
+              "initial_state_id",
+              "timestamp_or_process_origin",
+              "conditions"
+            ],
+            "legacy_alias": "G0000-X0"
+          },
+          {
+            "reference_id": "MAT:0000:REF:TIME0",
+            "code": "TIME0",
+            "name": "Temporal Origin",
+            "class": "TIME_REFERENCE",
+            "canonical_unit": "s",
+            "default_value": 0,
+            "note": "Defines elapsed time relative to a selected event; it is not a universal cosmic time origin.\n"
+          },
+          {
+            "reference_id": "MAT:0000:REF:VAC",
+            "code": "VAC",
+            "name": "Laboratory Vacuum Reference",
+            "class": "VACUUM_REFERENCE",
+            "physical_state": true,
+            "required_fields": [
+              "pressure",
+              "temperature"
+            ],
+            "optional_fields": [
+              "residual_gas_composition",
+              "chamber_geometry",
+              "electromagnetic_environment",
+              "outgassing"
+            ],
+            "note": "Vacuum is characterized by physical conditions and is not synonymous with literal nothingness.\n"
+          },
+          {
+            "reference_id": "MAT:0000:REF:QV",
+            "code": "QV",
+            "name": "Quantum-Vacuum Reference",
+            "class": "THEORETICAL_PHYSICAL_REFERENCE",
+            "physical_state": "MODEL-DEPENDENT",
+            "required_fields": [
+              "theory",
+              "fields",
+              "background_spacetime",
+              "boundary_conditions",
+              "quantity_being_referenced"
+            ],
+            "optional_fields": [
+              "observer_frame",
+              "renormalization_convention"
+            ],
+            "note": "Model-defined vacuum state. It is not classical empty space and MAT does not define one universal QV state for all theories.\n",
+            "legacy_alias": "G0000-QV"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0000-Origin-State/data/structured/0000-Origin-State.yaml",
+      "data": {
+        "mat_id": "MAT:0000",
+        "record_name": "Origin State",
+        "record_class": "FOUNDATION_REFERENCE",
+        "legacy": {
+          "legacy_id": "G0000",
+          "legacy_name": "Universal Reference / Origin State",
+          "migration_status": "IN-PROGRESS"
+        },
+        "identity": {
+          "chemical_element": false,
+          "atomic_number": "NOT-APPLICABLE",
+          "symbol": "NOT-APPLICABLE",
+          "atomic_mass": "NOT-APPLICABLE",
+          "proton_count": "NOT-APPLICABLE",
+          "neutron_count": "NOT-APPLICABLE",
+          "electron_count": "NOT-APPLICABLE",
+          "isotopes": "NOT-APPLICABLE"
+        },
+        "function": [
+          "MAT root reference",
+          "reference-state registry",
+          "coordinate origin",
+          "state comparison",
+          "process baseline"
+        ],
+        "scientific_status": {
+          "coordinate_origin": "MATHEMATICAL-CONVENTION",
+          "reference_difference": "ESTABLISHED-MATHEMATICS",
+          "laboratory_reference": "EXPERIMENTAL-CONVENTION",
+          "thermodynamic_reference": "SCIENTIFIC-CONVENTION",
+          "quantum_vacuum": "THEORETICAL-PHYSICAL-REFERENCE",
+          "literal_nothingness": "NOT-DEFINED-BY-MAT",
+          "causali_e_mapping": "AUTHOR-FRAMEWORK"
+        },
+        "reference_channels": [
+          "MAT:0000:REF:ORIGIN",
+          "MAT:0000:REF:LAB",
+          "MAT:0000:REF:THERMO",
+          "MAT:0000:REF:T0",
+          "MAT:0000:REF:P0",
+          "MAT:0000:REF:E0",
+          "MAT:0000:REF:B0",
+          "MAT:0000:REF:R0",
+          "MAT:0000:REF:N0",
+          "MAT:0000:REF:C0",
+          "MAT:0000:REF:S0",
+          "MAT:0000:REF:X0",
+          "MAT:0000:REF:TIME0",
+          "MAT:0000:REF:VAC",
+          "MAT:0000:REF:QV"
+        ],
+        "null_semantics": {
+          "zero_is_missing": false,
+          "zero_is_not_applicable": false,
+          "origin_is_null": false
+        },
+        "comparison": {
+          "scalar_difference": "delta_q = q - q_ref",
+          "pairwise_difference": "delta_q_ij = q_i - q_j",
+          "normalized_coordinate": "z_q = N_q(q, q_ref, scale_q)",
+          "raw_mixed_unit_vector_subtraction_allowed": false
+        },
+        "causali_e": {
+          "A": "intervention/change",
+          "B": "reference/current state and retained constraints",
+          "C": "candidate/resulting accessible state",
+          "classification": "DEVELOPING-AUTHOR-FRAMEWORK"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0000-Origin-State/data/structured/0000-Visual-Manifest.yaml",
+      "data": {
+        "record_id": "MAT:0000",
+        "record_name": "Origin State",
+        "manifest_version": "1.0.0",
+        "visuals": {
+          "V01": {
+            "name": "Natural / Material Manifestation",
+            "status": "NOT-APPLICABLE",
+            "reason": "MAT:0000 is not a material specimen."
+          },
+          "V02": {
+            "asset_id": "MAT:0000:DIAGRAM:001",
+            "filename": "0000-Origin-State-DIAGRAM-001-Reference-Origin.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "MAT 0000 Reference Origin",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V03": {
+            "name": "Bonding / Molecular / Lattice",
+            "status": "NOT-APPLICABLE"
+          },
+          "V04": {
+            "asset_id": "MAT:0000:DIAGRAM:002",
+            "filename": "0000-Origin-State-DIAGRAM-002-Quantum-Vacuum-Reference.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Quantum Vacuum Reference Versus Classical Empty Space",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V05": {
+            "name": "Isotope / Nuclear Variants",
+            "status": "NOT-APPLICABLE"
+          },
+          "V06": {
+            "asset_id": "MAT:0000:DIAGRAM:003",
+            "filename": "0000-Origin-State-DIAGRAM-003-Frequency-Reference-Axes.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "MAT Frequency and Resonance Reference Channels",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V07": {
+            "asset_id": "MAT:0000:FIG:001",
+            "filename": "0000-Origin-State-FIG-001-Reference-Channels.svg",
+            "path": "images/reference/",
+            "title": "MAT 0000 Reference Channel Dashboard",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V08": {
+            "asset_id": "MAT:0000:DIAGRAM:004",
+            "filename": "0000-Origin-State-DIAGRAM-004-Electric-Field-Reference.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Electric Field Reference",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V09": {
+            "asset_id": "MAT:0000:DIAGRAM:005",
+            "filename": "0000-Origin-State-DIAGRAM-005-Magnetic-Field-Reference.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Magnetic Field Reference",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V10": {
+            "asset_id": "MAT:0000:DIAGRAM:006",
+            "filename": "0000-Origin-State-DIAGRAM-006-Temperature-Reference.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Temperature Reference",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V11": {
+            "asset_id": "MAT:0000:DIAGRAM:007",
+            "filename": "0000-Origin-State-DIAGRAM-007-Structural-Reference.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Structural and Mechanical Reference",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V12": {
+            "asset_id": "MAT:0000:DIAGRAM:008",
+            "filename": "0000-Origin-State-DIAGRAM-008-Environment-Reference-Map.svg",
+            "path": "diagrams/reference-frames/",
+            "title": "Environment Reference Map",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V13": {
+            "asset_id": "MAT:0000:DIAGRAM:009",
+            "filename": "0000-Origin-State-DIAGRAM-009-Process-State-Transition.svg",
+            "path": "diagrams/state-space/",
+            "title": "Process State Transition",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V14": {
+            "asset_id": "MAT:0000:DIAGRAM:010",
+            "filename": "0000-Origin-State-DIAGRAM-010-Reference-Knowledge-Graph.svg",
+            "path": "diagrams/relationships/",
+            "title": "MAT 0000 Reference Knowledge Graph",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V15": {
+            "name": "Scientific 3D Model",
+            "status": "NOT-APPLICABLE",
+            "reason": "MAT:0000 has no literal physical 3D structure."
+          },
+          "V16": {
+            "asset_id": "MAT:0000:MODEL:DATA:001",
+            "filename": "0000-Origin-State-MODEL-DATA-001-Reference-State.glb",
+            "path": "models/data-extruded/",
+            "title": "MAT Reference-State Data Model",
+            "class": "DATA-EXTRUDED-3D",
+            "scientific_status": "CONCEPTUAL-DATA-VISUALIZATION",
+            "status": "PLANNED"
+          },
+          "V17": {
+            "asset_id": "MAT:0000:DIAGRAM:011",
+            "filename": "0000-Origin-State-DIAGRAM-011-MAT-Comparison-Workflow.svg",
+            "path": "diagrams/state-space/",
+            "title": "MAT Comparison Workflow",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          },
+          "V18": {
+            "asset_id": "MAT:0000:DIAGRAM:012",
+            "filename": "0000-Origin-State-DIAGRAM-012-Evidence-Provenance-Map.svg",
+            "path": "diagrams/relationships/",
+            "title": "Evidence and Provenance Map",
+            "class": "SCIENTIFIC-SCHEMATIC",
+            "status": "GENERATED"
+          }
+        },
+        "summary": {
+          "applicable_slots": 14,
+          "not_applicable_slots": 4,
+          "svg_diagrams": 11,
+          "svg_figures": 1,
+          "glb_models": 1,
+          "mandatory_graphs": 0,
+          "total_planned_assets": 13
+        }
+      }
+    },
+    {
+      "path": "records/0000-Origin-State/relationships/0000-Relationships.yaml",
+      "data": {
+        "record_id": "MAT:0000",
+        "version": "1.0.0",
+        "relationships": [
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:ORIGIN"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:LAB"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:THERMO"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:T0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:P0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:E0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:B0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:R0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:N0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:C0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:S0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:X0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:TIME0"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:VAC"
+          },
+          {
+            "relationship_type": "HAS-REFERENCE-CHANNEL",
+            "target": "MAT:0000:REF:QV"
+          },
+          {
+            "relationship_type": "REFERENCE-FRAME-FOR",
+            "target_scope": "MAT-PRIMARY-RECORDS"
+          },
+          {
+            "relationship_type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0000"
+          },
+          {
+            "relationship_type": "CONCEPTUALLY-LINKED-TO",
+            "target": "CAUSALI-E",
+            "scientific_status": "AUTHOR-FRAMEWORK"
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-001-Reference-Origin.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-002-Quantum-Vacuum-Reference.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-003-Frequency-Reference-Axes.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-004-Electric-Field-Reference.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-005-Magnetic-Field-Reference.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-006-Temperature-Reference.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-007-Structural-Reference.svg",
+    "records/0000-Origin-State/diagrams/reference-frames/0000-Origin-State-DIAGRAM-008-Environment-Reference-Map.svg",
+    "records/0000-Origin-State/diagrams/relationships/0000-Origin-State-DIAGRAM-010-Reference-Knowledge-Graph.svg",
+    "records/0000-Origin-State/diagrams/relationships/0000-Origin-State-DIAGRAM-012-Evidence-Provenance-Map.svg",
+    "records/0000-Origin-State/diagrams/state-space/0000-Origin-State-DIAGRAM-009-Process-State-Transition.svg",
+    "records/0000-Origin-State/diagrams/state-space/0000-Origin-State-DIAGRAM-011-MAT-Comparison-Workflow.svg",
+    "records/0000-Origin-State/images/reference/0000-Origin-State-FIG-001-Reference-Channels.svg"
+  ],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 13,
+    "graphs": 0,
+    "tables": 1,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

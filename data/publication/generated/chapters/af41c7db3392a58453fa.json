@@ -1,0 +1,22 @@
+{
+  "id": "docs/02-data/07-Null-Unknown-NA-and-Not-Measured.md",
+  "key": "af41c7db3392a58453fa",
+  "mat": null,
+  "title": "MAT Null, Unknown, N/A and Missing-Data Standard",
+  "section": "Data",
+  "lane": "reference",
+  "body": "# MAT Null, Unknown, N/A and Missing-Data Standard\n\n## Purpose\n\nBlank fields are ambiguous.\n\nMAT therefore avoids undefined empty values wherever practical.\n\n---\n\n# 1. Canonical Null States\n\nUse the following controlled states.\n\n## UNKNOWN\n\nThe information may exist, but MAT does not currently know it.\n\n```text\nUNKNOWN\n```\n\n---\n\n## NOT-MEASURED\n\nThe quantity is meaningful but has not been measured or no measurement has been identified.\n\n```text\nNOT-MEASURED\n```\n\n---\n\n## NOT-AVAILABLE\n\nThe information is believed to exist but is unavailable to MAT.\n\n```text\nNOT-AVAILABLE\n```\n\n---\n\n## NOT-APPLICABLE\n\nThe field has no meaningful application to this record/state.\n\n```text\nNOT-APPLICABLE\n```\n\n---\n\n## NOT-ESTABLISHED\n\nA proposed phenomenon/value has not been scientifically established.\n\n```text\nNOT-ESTABLISHED\n```\n\n---\n\n## BELOW-DETECTION-LIMIT\n\nThe measurement method did not detect a value above its detection threshold.\n\n```text\nBELOW-DETECTION-LIMIT\n```\n\nThis is not the same as zero.\n\n---\n\n## NOT-DETECTED\n\nNo signal/event was detected under the reported conditions.\n\n```text\nNOT-DETECTED\n```\n\nAgain, this does not prove absolute absence.\n\n---\n\n## ZERO\n\nUse numerical `0` only when zero is an actual quantitative result.\n\nNever use zero as a substitute for missing information.\n\n---\n\n# 2. Examples\n\nIncorrect:\n\n```yaml\nmagnetic_moment: 0\n```\n\nwhen no value was found.\n\nCorrect:\n\n```yaml\nmagnetic_moment: UNKNOWN\n```\n\n---\n\nIncorrect:\n\n```yaml\nhalf_life:\n```\n\nfor a stable isotope.\n\nPreferred:\n\n```yaml\nhalf_life: NOT-APPLICABLE\nstability: STABLE\n```\n\n---\n\n# 3. Stable Versus Infinite Half-Life\n\nDo not casually encode the half-life of a stable isotope as mathematical infinity.\n\nUse:\n\n```text\nSTABLE\n```\n\nwith:\n\n```text\nhalf_life: NOT-APPLICABLE\n```\n\nunless a scientific context explicitly requires a lower bound or lifetime constraint.\n\n---\n\n# 4. Estimated Values\n\nEstimated values are still values.\n\nUse:\n\n```yaml\nvalue:\nvalue_status: ESTIMATED\n```\n\nnot `UNKNOWN`.\n\n---\n\n# 5. Predicted Values\n\nLikewise:\n\n```yaml\nvalue:\nevidence_type: COMPUTATIONAL\n```\n\nor:\n\n```yaml\nvalue:\nevidence_type: THEORETICAL\n```\n\n---\n\n# 6. Missing Source\n\nA value without a known source should be flagged:\n\n```text\nSOURCE-UNKNOWN\n```\n\nrather than silently accepted.\n\n---\n\n# 7. Legacy N/A\n\nExisting Genesis records may contain `N/A`.\n\nDuring migration:\n\n```text\nN/A\n```\n\nmust be interpreted and replaced with the specific MAT state whenever possible.\n\nFor example:\n\n```text\nNOT-APPLICABLE\nNOT-MEASURED\nUNKNOWN\n```\n\nare not interchangeable.\n",
+  "bodyHash": "189707d2aeb77b5da888f8fb7cd1cf0eb93d5d3b2e8738ddd9f031dfd329dbdd",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

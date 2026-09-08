@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/04-3D-Model-Standard.md",
+  "key": "18537200f294e276b68b",
+  "mat": null,
+  "title": "MAT 3D Model Standard",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT 3D Model Standard\n\n## Purpose\n\nMAT supports two fundamentally different 3D model families.\n\nThey must never be confused.\n\n---\n\n# 1. Scientific 3D Models\n\nScientific models attempt to represent known physical structure.\n\nExamples:\n\n- molecule;\n- crystal lattice;\n- unit cell;\n- electron probability isosurface;\n- reconstructed microstructure;\n- measured geometry.\n\nClassification:\n\n```text\nSCIENTIFIC-3D\n```\n\n---\n\n# 2. Data-Extruded 3D Models\n\nA MAT data-extruded model converts selected numerical metrics into visual geometry.\n\nClassification:\n\n```text\nDATA-EXTRUDED-3D\n```\n\nIt does not claim to show literal physical atomic shape.\n\n---\n\n# 3. Scientific Model Metadata\n\n```yaml\nmodel_id:\nrecord_id:\nmodel_type:\nsource_structure:\ncoordinate_system:\nscale:\nunits:\ncalculation_method:\nsource_ids:\nscientific_status:\n```\n\n---\n\n# 4. Atomic / Molecular Models\n\nPossible representation:\n\n- nuclei;\n- bond topology;\n- electron-density surface;\n- molecular surface.\n\nAvoid assigning arbitrary atomic radii without identifying the radius model.\n\nPossible choices include:\n\n- covalent radius;\n- van der Waals radius;\n- calculated radius.\n\n---\n\n# 5. Crystal Models\n\nInclude:\n\n- lattice vectors;\n- atomic coordinates;\n- occupancy;\n- space group;\n- supercell dimensions if used.\n\n---\n\n# 6. Probability Models\n\nProbability-density surfaces should state:\n\n- wavefunction/orbital;\n- calculation;\n- isovalue;\n- phase colouring where used.\n\n---\n\n# 7. Magnetic Field Models\n\n3D magnetic visualization may show:\n\n- vector field;\n- field lines;\n- flux density;\n- magnet geometry;\n- pole structure.\n\nSpecify:\n\n```text\nMEASURED\n```\n\nor:\n\n```text\nSIMULATED\n```\n\n---\n\n# 8. Data-Extruded Geometry\n\nA standard MAT data model may encode normalized metrics such as:\n\n```text\nradius             atomic/material scale\nheight             density\nsegment count      isotope count\nsurface modulation spectral complexity\naxial extrusion    thermal metric\nradial extrusion   electrical metric\norientation        magnetic anisotropy\ntexture            mechanical metric\n```\n\nThis mapping is illustrative until a final MAT visualization transform is formally locked.\n\n---\n\n# 9. Normalisation\n\nDifferent physical quantities have incompatible units and scales.\n\nTherefore data extrusion requires normalized inputs:\n\n\\[\nx'_i=N_i(x_i)\n\\]\n\nEach normalization function must be recorded.\n\nPossible methods:\n\n```text\nMIN-MAX\nLOG-SCALE\nZ-SCORE\nDOMAIN-BOUND\nREFERENCE-RATIO\n```\n\n---\n\n# 10. Missing Values\n\nMissing metrics must never be encoded as zero unless zero is the actual value.\n\nInstead the model may:\n\n- omit a visual channel;\n- use a neutral placeholder;\n- flag incomplete data.\n\n---\n\n# 11. Comparison Mode\n\nThe greatest value of the data-extruded model is consistency.\n\nThe same transform:\n\n\\[\nG=F(\\mathbf x)\n\\]\n\nshould be applied to every comparable record.\n\nThis allows visual differences between materials to correspond to actual data differences.\n\n---\n\n# 12. File Formats\n\nPreferred distribution formats may include:\n\n```text\nGLB\nGLTF\nOBJ\nSTL\nPLY\n```\n\nUse:\n\n```text\nGLB\n```\n\nas a strong general-purpose interactive default when appropriate.\n\nSTL should not be the only master format because it does not retain rich metadata/material information.\n\n---\n\n# 13. 3D Printing\n\nA scientifically useful interactive model and a printable mesh are different outputs.\n\nPrintable versions should be separately identified:\n\n```text\nPRINT-MODEL\n```\n\n---\n\n# 14. Model IDs\n\nScientific:\n\n```text\nMAT:0001:MODEL:SCI:001\n```\n\nData-extruded:\n\n```text\nMAT:0001:MODEL:DATA:001\n```\n\n---\n",
+  "bodyHash": "53a4b17c0fcc094252502c50e913e2d1616bde022214aab99825be0f5b27be69",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "docs/06-governance/02-Change-Control.md",
+  "key": "9467b099067afbc25e70",
+  "mat": null,
+  "title": "MAT Change Control",
+  "section": "Governance",
+  "lane": "reference",
+  "body": "# MAT Change Control\n\n## Purpose\n\nEvery meaningful MAT change should be traceable.\n\n---\n\n# Change Types\n\n```text\nADD\nCORRECT\nEXPAND\nDEPRECATE\nSUPERSEDE\nRESTRUCTURE\nRENAME\nSOURCE-UPDATE\nSCHEMA-UPDATE\nVISUAL-UPDATE\n```\n\n---\n\n# Change Record\n\n```yaml\nchange_id:\ndate:\nauthor:\nchange_type:\naffected_ids:\nprevious_state:\nnew_state:\nreason:\nevidence:\nbreaking_change:\nreviewed:\n```\n\n---\n\n# Breaking Changes\n\nA change is potentially breaking if it alters:\n\n- identifiers;\n- field semantics;\n- folder contracts;\n- API representations;\n- schema interpretation.\n\nBreaking changes require explicit migration notes.\n\n---\n\n# Data Correction\n\nA corrected value should identify:\n\n```text\nOLD VALUE\nNEW VALUE\nWHY\nSOURCE\n```\n\nwhere practical.\n\n---\n\n# Deprecated Fields\n\nDeprecated fields should be marked:\n\n```yaml\nstatus: DEPRECATED\nreplacement:\n```\n\nbefore removal.\n\n---\n",
+  "bodyHash": "2be60fbd88a89bf3a4837926556e3c0f5f390c96078b939071a3bec740e6decd",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

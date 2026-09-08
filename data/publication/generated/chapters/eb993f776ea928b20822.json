@@ -1,0 +1,68 @@
+{
+  "id": "records/0007-Nitrogen-N/calculations/0007-Nitrogen-N-CALC-001-N13-BetaPlus-Q.md",
+  "key": "eb993f776ea928b20822",
+  "mat": "MAT:0007",
+  "title": "CALC-001 — Nitrogen-13 Positron-Decay Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-001 — Nitrogen-13 Positron-Decay Q-Value\n\nReaction:\n\n$$\n{}^{13}N\n\\rightarrow\n{}^{13}C+e^++\\nu_e\n$$\n\nUsing neutral atomic masses:\n\n$$\nm({}^{13}N)=13.00573861\\ u\n$$\n\n$$\nm({}^{13}C)=13.00335483507\\ u\n$$\n\nFor positron decay using atomic masses:\n\n$$\nQ_{\\beta^+}\n=\n[\nM({}^{13}N)\n-\nM({}^{13}C)\n-\n2m_e\n]c^2\n$$\n\ngiving approximately:\n\n$$\n\\boxed{\nQ_{\\beta^+}\n\\approx\n1.19847\\ {\\rm MeV}\n}\n$$\n\n```yaml\ncalculation_id: \"MAT:0007:CALC:001\"\nclassification: \"DERIVED\"\n\nparent: \"MAT:0007:ISO:N-13\"\ndaughter: \"MAT:0006:ISO:C-13\"\n\nq_value:\n  value: 1.19847\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000101\"\n  - \"SRC-000080\"\n  - \"SRC-000018\"\n```\n",
+  "bodyHash": "84b23cae50e7b0697e475c85ea1f46d774c7825e62f368ab9c5a1f773efec8d1",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000080",
+      "source_aliases": [
+        "SRC-C-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Carbon",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "carbon_standard_atomic_weight",
+        "carbon_isotope_masses",
+        "carbon_12_abundance",
+        "carbon_13_abundance",
+        "carbon_14_mass"
+      ]
+    },
+    {
+      "source_id": "SRC-000101",
+      "source_aliases": [
+        "SRC-N-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Nitrogen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "nitrogen_standard_atomic_weight",
+        "nitrogen_isotope_masses",
+        "nitrogen_14_composition",
+        "nitrogen_15_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 3
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

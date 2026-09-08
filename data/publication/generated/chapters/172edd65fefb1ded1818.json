@@ -1,0 +1,26 @@
+{
+  "id": "records/0003-Lithium-Li/0003-Lithium-Li-Schema-Validation.md",
+  "key": "172edd65fefb1ded1818",
+  "mat": "MAT:0003",
+  "title": "Lithium Schema Validation",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# Lithium Schema Validation\n\n```yaml\nrecord_id: \"MAT:0003\"\nvalidation_version: \"1.0.0\"\noverall: \"PASS\"\n```\n\n## Identity\n\n```text\nMAT:0003\n```\n\nPASS.\n\n## Atomic state\n\n```text\nMAT:0003:ATOM:Li\n```\n\nPASS.\n\n## Ionic states\n\n```text\nMAT:0003:ION:Li+1\nMAT:0003:ION:Li+2\nMAT:0003:ION:Li+3\n```\n\nPASS.\n\n## Stable isotopes\n\n```text\nMAT:0003:ISO:Li-6\nMAT:0003:ISO:Li-7\n```\n\nPASS.\n\n## Unbound-state semantics\n\n```text\n3Li → proton unstable / uncertain\n12Li → neutron-unbound resonance\n```\n\nPASS.\n\nNo fabricated half-life is used.\n\n## Phase architecture\n\nReserve:\n\n```text\nMAT:0003:PHASE:BCC\nMAT:0003:PHASE:LIQUID\n```\n\nAdditional high-pressure phases receive separate IDs as they are incorporated.\n\nPASS.\n\n## Atomic versus bulk properties\n\nSeparated:\n\n```text\natomic magnetic state\nbulk metallic magnetic state\natomic electron structure\nbulk conductivity\nbulk mechanical properties\n```\n\nPASS.\n\n## Electrochemical architecture\n\nSeparated:\n\n```text\nLi atom\nLi+\nhost material\nelectrolyte\ninterface\ncell\n```\n\nPASS.\n\n## Battery semantics\n\nNo field defines:\n\n```text\nbattery_voltage_of_lithium\nbattery_energy_density_of_lithium\nbattery_cycle_life_of_lithium\n```\n\nPASS.\n\nThose are system properties.\n\n## Frequency semantics\n\nNo universal:\n\n```text\nlithium_frequency\n```\n\nexists.\n\nPASS.\n\n## Magnetization extension\n\nIntrinsic atomic/bulk magnetic response is distinct from:\n\n```text\nengineered magnetization\npole geometry\nfield topology\nmagnetizing procedure\n```\n\nNo unsupported permanent-magnet state is assigned.\n\nPASS.\n\n## Forward References\n\nCurrent unresolved but legal targets include:\n\n```text\nMAT:0006 Carbon\nMAT:0007 Nitrogen\nMAT:0008 Oxygen\nMAT:0012 Magnesium\nMAT:0013 Aluminium\nMAT:0014 Silicon\nMAT:0082 Lead\n```\n\nStatus:\n\n```text\nRESERVED-PENDING-RECORD\n```\n\nPASS.\n\n## Resolved Earlier References\n\n```text\nMAT:0001\nMAT:0002\nMAT:0002:ISO:He-4\nMAT:0001:ISO:H-3\n```\n\nRESOLVED.\n\n## Visual Structure\n\n```yaml\nvisual_slots: 18\ntwo_dimensional_assets: 18\nscientific_3d_models: 2\ndata_extruded_models: 1\n```\n\nPASS.\n\n## Evidence\n\nSeparated:\n\n```text\nevaluated data\nreference data\nprimary experiment\nderived calculation\nhistorical attribution\nactive research\n```\n\nPASS.\n\n## Legacy Unverified Material\n\nMay only exist as:\n\n```text\nHISTORICAL-OR-UNVERIFIED\n```\n\nPASS.\n\n---\n\n# Final Lithium Status\n\nAfter this package is pasted:\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_architecture: \"PASS\"\n  isotope_semantics: \"PASS\"\n  bulk_material_architecture: \"PASS\"\n  electrochemical_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\n# Index Updates\n\nUpdate:\n\n```text\ndocs/05-index/01-Record-Index.md\n```\n\nto:\n\n```text\n0003 | Lithium | Li | 3 | CORE-VALIDATED\n```\n\nUpdate:\n\n```text\ndocs/07-migration/01-Legacy-File-Map.md\n```\n\nto:\n\n```text\nG0003 | records/0003-Lithium-Li/ | MIGRATED-PENDING-ARCHIVE\n```\n\nDo not delete the historical `G0003` yet.\n\n# Reference-Element Status\n\nMAT now has three reference implementations:\n\n```text\n0001 Hydrogen\n→ molecular / isotope / plasma / spectral architecture\n\n0002 Helium\n→ closed shell / quantum fluid / boson-fermion architecture\n\n0003 Lithium\n→ bulk metal / crystal / electrochemistry / materials architecture\n```\n\nTogether they exercise a much larger fraction of the universal MAT schema than any one element could.\n\nThe Lithium legacy audit is now structurally complete: the old file's battery, Li–C, Li–Si, Li–O, Li–H, Li–N, fusion-blanket, MHD, biological, manufacturing, safety and multilayer-geometry ideas are all represented in the new architecture.\n\n`0003-Lithium-Li` can therefore become **CORE-VALIDATED** without claiming exhaustive completion.\n\nThe next numbered production record is **`0004-Beryllium-Be`**. It will add another new stress test to MAT: a much stiffer lightweight metal, HCP crystallography, toxicity/occupational exposure, neutron multiplication, X-ray transparency, ceramics such as BeO, and very different nuclear/material behavior from Lithium.\n",
+  "bodyHash": "53ff4332f522de14496d653a36d08a3aa1ee45e5d836ecfdb4971f652ff307fa",
+  "header": {
+    "record_id": "MAT:0003",
+    "validation_version": "1.0.0",
+    "overall": "PASS"
+  },
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

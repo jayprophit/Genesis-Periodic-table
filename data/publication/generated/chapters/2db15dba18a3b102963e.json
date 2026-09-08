@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/05-Asset-Naming.md",
+  "key": "2db15dba18a3b102963e",
+  "mat": null,
+  "title": "MAT Asset Naming Standard",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT Asset Naming Standard\n\n## 1. Primary Principle\n\nAll assets belonging to a numbered record begin with that record's canonical filename stem.\n\nExample:\n\n```text\n0001-Hydrogen-H\n```\n\n---\n\n# 2. Image Naming\n\n```text\n0001-Hydrogen-H-FIG-001.png\n0001-Hydrogen-H-FIG-002.svg\n```\n\n---\n\n# 3. Graph Naming\n\n```text\n0001-Hydrogen-H-GRAPH-001.svg\n0001-Hydrogen-H-GRAPH-001.csv\n```\n\nThe same graph number links rendered graph and source data.\n\n---\n\n# 4. Table Naming\n\n```text\n0001-Hydrogen-H-TABLE-001.md\n0001-Hydrogen-H-TABLE-001.csv\n```\n\n---\n\n# 5. Diagram Naming\n\n```text\n0001-Hydrogen-H-DIAGRAM-001.svg\n```\n\n---\n\n# 6. Model Naming\n\n```text\n0001-Hydrogen-H-MODEL-SCI-001.glb\n0001-Hydrogen-H-MODEL-DATA-001.glb\n```\n\n---\n\n# 7. Calculation Naming\n\n```text\n0001-Hydrogen-H-CALC-001.py\n0001-Hydrogen-H-CALC-001.ipynb\n```\n\n---\n\n# 8. Source Data\n\n```text\n0001-Hydrogen-H-DATA-001.csv\n0001-Hydrogen-H-DATA-002.json\n```\n\n---\n\n# 9. Visual Slot Suffixes\n\nOptional descriptive suffixes may be appended.\n\nExample:\n\n```text\n0001-Hydrogen-H-FIG-001-Natural-State.png\n0001-Hydrogen-H-FIG-002-Atomic-Schematic.svg\n0001-Hydrogen-H-FIG-003-Electron-Probability.png\n0001-Hydrogen-H-GRAPH-001-Emission-Spectrum.svg\n```\n\nThe numerical ID remains authoritative.\n\n---\n\n# 10. Character Rules\n\nUse:\n\n```text\nletters\nnumbers\nhyphens\nperiod only for extension\n```\n\nAvoid:\n\n```text\nspaces\nem dashes\nslashes\ncolons\nspecial filename symbols\n```\n\nMachine identifiers inside files may still use colons.\n\n---\n\n# 11. Asset Folder Structure\n\nRecommended numbered-record structure:\n\n```text\nrecords/\n└── 0001-Hydrogen-H/\n    ├── 0001-Hydrogen-H.md\n    │\n    ├── data/\n    │   ├── properties/\n    │   ├── spectra/\n    │   ├── isotopes/\n    │   ├── phases/\n    │   └── structured/\n    │\n    ├── images/\n    │   ├── natural/\n    │   ├── scientific/\n    │   ├── quantum/\n    │   ├── isotope/\n    │   ├── spectral/\n    │   ├── properties/\n    │   └── applications/\n    │\n    ├── diagrams/\n    │   ├── bonding/\n    │   ├── processes/\n    │   ├── relationships/\n    │   └── fields/\n    │\n    ├── graphs/\n    │   └── data/\n    │\n    ├── tables/\n    │\n    ├── models/\n    │   ├── scientific/\n    │   ├── data-extruded/\n    │   └── printable/\n    │\n    ├── calculations/\n    ├── relationships/\n    ├── experiments/\n    └── sources/\n```\n\nUse this same overall structure for `0000` and subsequent primary MAT records.\n\nFolders may remain empty until applicable content exists.\n\n---\n\n# 12. Never Rename Published Asset IDs Casually\n\nIf an asset has already been cited or published, preserve its ID.\n\nA replacement may use:\n\n```text\nrevision\nversion\nsuperseded_by\n```\n\nrather than reusing the identity for unrelated content.\n\nNow create the reusable record templates.\n",
+  "bodyHash": "75872b4e83df90ac40ca53c5f894cac66444021dd3af3a95a7dfc18f9dbddd07",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

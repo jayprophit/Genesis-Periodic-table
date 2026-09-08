@@ -1,0 +1,22 @@
+{
+  "id": "docs/07-migration/00-Genesis-to-MAT-Migration.md",
+  "key": "dfca9522e74abdd4df88",
+  "mat": null,
+  "title": "Genesis to MAT Migration",
+  "section": "Migration",
+  "lane": "reference",
+  "body": "# Genesis to MAT Migration\n\n## Purpose\n\nThe Materials Atlas Table Codex developed from the earlier Genesis Periodic Table project.\n\nThis document defines how legacy Genesis material is migrated without losing historical work.\n\n---\n\n# 1. Migration Principle\n\nMigration is:\n\n```text\nPRESERVE\n↓\nEXTRACT\n↓\nCLASSIFY\n↓\nNORMALIZE\n↓\nRESTRUCTURE\n↓\nVALIDATE\n↓\nSUPERSEDE\n```\n\nnot:\n\n```text\nDELETE\n↓\nREWRITE FROM MEMORY\n```\n\n---\n\n# 2. Legacy Archive\n\nCreate:\n\n```text\narchive/\n└── legacy-genesis/\n```\n\nThe archive should eventually contain preserved copies of legacy Genesis project files once the new MAT versions have been verified.\n\nDo not delete the active legacy records until migration is complete.\n\n---\n\n# 3. Legacy README\n\nThe original theory text from the legacy README should be preserved in:\n\n```text\ndocs/01-foundations/01-Causali-E/01-Causali-E-Original-Text.md\n```\n\nThe wording of this historical copy should not be silently corrected.\n\n---\n\n# 4. Legacy G Prefix\n\nLegacy record examples:\n\n```text\nG0000\nG0001\nG0002\n```\n\nNew primary record names become:\n\n```text\n0000-Origin-State.md\n0001-Hydrogen-H.md\n0002-Helium-He.md\n```\n\nThe `G` prefix is deprecated.\n\n---\n\n# 5. Record Migration\n\nFor each legacy record:\n\n```text\nLEGACY RECORD\n↓\nIDENTITY\n↓\nEXTRACT PROPERTY DATA\n↓\nEXTRACT SOURCES\n↓\nEXTRACT EQUATIONS\n↓\nEXTRACT THEORY\n↓\nEXTRACT RELATIONSHIPS\n↓\nEXTRACT VISUAL REQUIREMENTS\n↓\nMAP TO MAT SCHEMA\n↓\nVALIDATE\n↓\nCREATE NEW RECORD PACKAGE\n```\n\n---\n\n# 6. Do Not Blindly Copy\n\nLegacy values should be checked for:\n\n- units;\n- source;\n- scientific status;\n- precision;\n- conditions;\n- contradictory values.\n\n---\n\n# 7. Legacy N/A\n\nLegacy:\n\n```text\nN/A\n```\n\nmust be mapped where possible to:\n\n```text\nNOT-APPLICABLE\nUNKNOWN\nNOT-MEASURED\nNOT-AVAILABLE\n```\n\n---\n\n# 8. Legacy Evidence\n\nLegacy E0–E6 evidence codes remain preserved for migration history but are mapped to descriptive MAT evidence fields.\n\n---\n\n# 9. Legacy 0000\n\nThe old `G0000` contains both:\n\n- origin/reference concepts;\n- project architecture/schema.\n\nMAT separates these.\n\nProject architecture belongs in:\n\n```text\ndocs/\n```\n\nRecord-specific origin/reference material belongs in:\n\n```text\nrecords/0000-Origin-State/\n```\n\n---\n\n# 10. Scientific Separation\n\nDuring migration distinguish:\n\n```text\nESTABLISHED SCIENCE\n```\n\nfrom:\n\n```text\nAUTHOR THEORY\n```\n\nand:\n\n```text\nSPECULATION\n```\n\nwithout deleting any historically relevant author material.\n\n---\n\n# 11. Migration Status\n\nEach old file may use:\n\n```text\nNOT-STARTED\nIN-PROGRESS\nMIGRATED\nVALIDATED\nARCHIVED\n```\n\n---\n\n# 12. Migration Completion\n\nA legacy file is considered migrated only after:\n\n- data extracted;\n- sources retained;\n- relationships mapped;\n- theories classified;\n- new folder created;\n- new record validated.\n\n---\n",
+  "bodyHash": "577da4b07230351b1cfcff3a6e6c219519173ac9a388932383aec24d17dec75a",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

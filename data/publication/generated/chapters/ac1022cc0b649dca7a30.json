@@ -1,0 +1,2498 @@
+{
+  "id": "records/0005-Boron-B/0005-Boron-B.md",
+  "key": "ac1022cc0b649dca7a30",
+  "mat": "MAT:0005",
+  "title": "0005 — Boron — B",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "\n# 0005 — Boron — B\n\n---\nmat_id: MAT:0005\nrecord_name: Boron\nsymbol: B\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 5\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0005\nlegacy_name: Boron\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n---\n\n# 0. Record Navigation\n\nPrevious primary record:\n\nMAT:0004\n0004-Beryllium-Be\n\nCurrent record:\n\nMAT:0005\n0005-Boron-B\n\n---\n\n# 1. Elemental Identity\n\n| Property | Value |\n|---|---|\n| MAT ID | MAT:0005 |\n| Element | Boron |\n| Symbol | B |\n| Atomic number | 5 |\n| Proton count | 5 |\n| Neutral electron count | 5 |\n| Period | 2 |\n| Group | 13 |\n| Block | p |\n| Ground configuration | 1s²2s²2p¹ |\n| Ground level | ²P°₁/₂ |\n| Standard atomic weight | [10.806, 10.821] |\n| Ordinary state near room conditions | solid |\n| Common classification | metalloid / covalent elemental solid |\n\nPrimary sources:\n\nSRC-000005\nSRC-000063\nSRC-000065\n\n---\n\n# 2. First MAT p-Block Element\n\nBoron is the first MAT element with a ground-state electron occupying a p orbital:\n\n\\[\n1s^22s^22p^1\n\\]\n\nThe transition from Beryllium is:\n\n\\[\n2s^2\n\\rightarrow\n2s^22p^1\n\\]\n\nThis introduces a major new schema branch:\n\n- directional p-orbital participation;\n- electron-deficient bonding;\n- multicentre bonding;\n- cluster structures;\n- allotrope-dependent electronic behavior;\n- complex covalent elemental solids.\n\n---\n\n# 3. Open-Shell Atomic State\n\nThe ground level is:\n\n\\[\n{}^2P^\\circ_{1/2}\n\\]\n\nThe isolated neutral atom therefore has an open-shell electronic state.\n\nThis must remain separate from the magnetic/electronic properties of bulk crystalline Boron.\n\nAtomic state:\n\nMAT:0005:ATOM:B\n\n---\n\n# 4. First Ionisation\n\n\\[\nB\\rightarrow B^+ + e^-\n\\]\n\nNIST ASD:\n\n\\[\nE_{I1}\n=\n8.298019\\pm0.000003\\ {\\rm eV}\n\\]\n\nCanonical ion:\n\nMAT:0005:ION:B+1\n\n---\n\n# 5. Ionisation Ladder\n\nSecond ionisation:\n\n\\[\nB^+\\rightarrow B^{2+}+e^-\n\\]\n\n\\[\nE_{I2}\n=\n25.15483\\pm0.00005\\ {\\rm eV}\n\\]\n\nThird:\n\n\\[\nB^{2+}\\rightarrow B^{3+}+e^-\n\\]\n\n\\[\nE_{I3}\n=\n37.93059\\pm0.00007\\ {\\rm eV}\n\\]\n\nHigher core-electron removal requires much larger energies:\n\n\\[\nE_{I4}\\approx259.374379\\ {\\rm eV}\n\\]\n\n\\[\nE_{I5}\\approx340.2260225\\ {\\rm eV}\n\\]\n\nCanonical states:\n\nMAT:0005:ATOM:B\nMAT:0005:ION:B+1\nMAT:0005:ION:B+2\nMAT:0005:ION:B+3\nMAT:0005:ION:B+4\nMAT:0005:ION:B+5\n\nThe large jump after removal of the valence electrons distinguishes:\n\nVALENCE-ELECTRON IONISATION\n\nfrom:\n\nCORE-ELECTRON IONISATION\n\n---\n\n# 6. Electron Affinity\n\nA precision experimental electron-affinity determination gives:\n\n\\[\nEA\n=\n0.279743\\pm0.000044\\ {\\rm eV}\n\\]\n\nfor atomic Boron.\n\nSource:\n\nSRC-000064\n\nThis is an atomic-state property.\n\nIt must not be confused with electron acceptance in a Boron-containing solid, semiconductor or compound.\n\n---\n\n# 7. Ordinary Material State\n\nRepresentative room-condition properties include approximately:\n\n| Property | Reference |\n|---|---:|\n| Density | 2.34 g cm⁻³ |\n| Melting point | 2350 K |\n| Boiling point | 4273 K |\n\nThese are summary reference values.\n\nBoron is not represented as one universal crystalline state.\n\n---\n\n# 8. Elemental Boron Is an Allotrope Family\n\nImportant elemental forms include:\n\n- α-rhombohedral Boron;\n- β-rhombohedral Boron;\n- γ-B₂₈;\n- tetragonal Boron phases;\n- amorphous Boron.\n\nTherefore:\n\n\\[\nB\n\\rightarrow\n\\{\nB_\\alpha,\nB_\\beta,\nB_\\gamma,\nB_T,\nB_{\\rm amorphous},\n...\n\\}\n\\]\n\nCanonical phase children will use individual `PHASE` or `ALLOTROPE` IDs.\n\nNo one density, band structure, conductivity or hardness is universal across every allotrope.\n\n---\n\n# 9. Electron-Deficient Bonding\n\nBoron has three valence electrons:\n\n\\[\n2s^22p^1\n\\]\n\nYet many Boron structures contain connectivity that cannot be described adequately using only conventional isolated two-centre/two-electron bonds.\n\nBoron therefore activates the MAT multicentre-bonding layer.\n\nImportant class:\n\n\\[\n3c-2e\n\\]\n\nthree-centre/two-electron bonding.\n\nMAT rule:\n\n\\[\n\\boxed{\n\\text{bond}\n\\neq\n\\text{always one electron pair between two atoms}\n}\n\\]\n\n---\n\n# 10. B₁₂ Icosahedral Motif\n\nOne of Boron's most important structural motifs is:\n\n\\[\nB_{12}\n\\]\n\norganized approximately as an icosahedral cluster.\n\nThis is not an artistic geometry imposed on the data.\n\nIt is a structure arising from real Boron bonding physics.\n\nMAT geometric descriptor:\n\n```yaml\ngeometry_family:\n  - ICOSAHEDRAL\n  - POLYHEDRAL\n  - CLUSTER-BASED\n````\n\n---\n\n# 11. Geometry–Electronic Feedback\n\nBoron provides a particularly strong demonstration that:\n\n$$\n\\text{electron count}\n+\n\\text{bonding constraints}\n\\rightarrow\n\\text{cluster geometry}\n$$\n\nand:\n\n$$\n\\text{cluster geometry}\n\\rightarrow\n\\text{electronic/material stability}\n$$\n\nThus geometry is not merely a visualization output.\n\nIt can become part of the causal material-state representation.\n\n---\n\n# 12. Material-State Principle\n\nFor Boron:\n\n$$\nM_B=\nF(\n\\text{allotrope},\n\\text{cluster topology},\n\\text{bonding},\n\\text{isotope},\nT,\nP,\n\\text{defects},\n\\text{dopants},\n\\text{history}\n)\n$$\n\nThe element name alone is insufficient to define its bulk behavior.\n\n---\n\n# 13. Semiconductor-Like Behavior\n\nSeveral elemental Boron states exhibit semiconducting behavior.\n\nHowever MAT does not use:\n\n```text\nboron_is_semiconductor: true\n```\n\nas an unconditional property.\n\nInstead electronic character must specify:\n\n* allotrope;\n* pressure;\n* temperature;\n* defect density;\n* impurity concentration;\n* carrier state.\n\n---\n\n# 14. Boron as Dopant\n\nBoron is widely used as an acceptor/p-type dopant in suitable semiconductor hosts.\n\nImportant future relationships include:\n\nMAT:0014 Silicon\n\nMAT:0006 Carbon\n\nand other semiconductor systems.\n\nThe doped-host properties belong to:\n\nHOST + BORON + CONCENTRATION + PROCESS HISTORY\n\nrather than elemental Boron alone.\n\n---\n\n# 15. Isotope Family\n\nCurrent NIST mass data cover:\n\n$$\n{}^6B\n$$\n\nthrough:\n\n$$\n{}^{21}B\n$$\n\nwithin the present table.\n\nNatural Boron contains two stable isotopes:\n\n$$\n{}^{10}B\n$$\n\nand:\n\n$$\n{}^{11}B\n$$\n\nwith representative NIST isotopic compositions:\n\n$$\n{}^{10}B\n=\n0.199\\pm0.007\n$$\n\n$$\n{}^{11}B\n=\n0.801\\pm0.007\n$$\n\nThese proportions are not universal constants for every natural or enriched Boron sample.\n\n---\n\n# 16. Standard Atomic Weight Interval\n\nBecause Boron isotope ratios vary naturally:\n\n$$\nA_r(B)\n=\n[10.806,\\ 10.821]\n$$\n\nMAT stores the interval itself rather than silently converting it to one fixed decimal.\n\nThis follows the same isotope-sensitive architecture used for Hydrogen and Lithium.\n\n---\n\n# 17. Boron-10\n\nCanonical ID:\n\nMAT:0005:ISO:B-10\n\nNucleus:\n\n* 5 protons;\n* 5 neutrons.\n\nRelative atomic mass:\n\n$$\n10.01293695(41)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n3^+\n$$\n\nRepresentative composition:\n\n$$\n0.199(7)\n$$\n\n¹⁰B is especially important because of its strong neutron-capture behavior.\n\n---\n\n# 18. Boron-11\n\nCanonical ID:\n\nMAT:0005:ISO:B-11\n\nNucleus:\n\n* 5 protons;\n* 6 neutrons.\n\nRelative atomic mass:\n\n$$\n11.00930536(45)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nRepresentative composition:\n\n$$\n0.801(7)\n$$\n\n¹¹B is the more abundant natural isotope and has important nuclear-research relationships including proton–Boron fusion.\n\n---\n\n# 19. Nuclear Spin and Magnetic Resonance\n\nBoth stable isotopes possess nonzero nuclear spin:\n\n$$\n{}^{10}B:\\ I=3\n$$\n\n$$\n{}^{11}B:\\ I=\\frac32\n$$\n\nTherefore both are NMR-active.\n\nMAT must distinguish:\n\n* ¹⁰B NMR;\n* ¹¹B NMR;\n* abundance;\n* gyromagnetic behavior;\n* local chemical environment;\n* field strength;\n* resonance mechanism.\n\nThere is no universal:\n\n```text\nboron_NMR_frequency\n```\n\nwithout field and isotope.\n\n---\n\n# 20. Boron-10 Neutron Capture\n\nA central Boron nuclear relationship is:\n\n$$\n{}^{10}B+n\n\\rightarrow\n{}^7Li+\\alpha\n$$\n\nwith branch-dependent energy release.\n\nThis links:\n\nMAT:0005 Boron\n\nto:\n\nMAT:0003 Lithium\n\nand:\n\nMAT:0002 Helium\n\nthrough one isotope-specific nuclear reaction.\n\nThe detailed capture cross section, product branching and Q-values will be stored in the nuclear-calculation layer.\n\n---\n\n# 21. Boron-11 Proton-Fusion Research\n\nA major research reaction is:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nwhere:\n\n$$\np={}^1H^+\n$$\n\nThis creates a nuclear relationship:\n\nMAT:0001 Hydrogen\n↔\nMAT:0005 Boron\n\nwith Helium-4 products.\n\nThis is an advanced fusion-research pathway.\n\nIt must not be represented as a commercially mature energy process.\n\n---\n\n# 22. Chemical and Nuclear H–B Relationships\n\nHydrogen and Boron have at least two very different relationship families.\n\nChemical:\n\n$$\nB_xH_y\n$$\n\nboranes.\n\nNuclear:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nTherefore:\n\n$$\n\\boxed{\nH-B_{\\rm chemical}\n\\neq\nH-B_{\\rm nuclear}\n}\n$$\n\n---\n\n# 23. Boranes\n\nBoron forms a rich family of Hydrogen-containing compounds:\n\n$$\nB_xH_y\n$$\n\nMany exhibit:\n\n* multicentre bonding;\n* cage structures;\n* cluster geometry;\n* electron-deficient bonding.\n\nBoranes therefore become a major MAT test of molecular topology beyond simple chain/ring chemistry.\n\n---\n\n# 24. Boron Carbide\n\nFuture material/compound family:\n\n$$\nB_4C\n$$\n\nCanonical relationship:\n\nMAT:0005\n↔\nMAT:0006\n\nTarget status:\n\nRESERVED-PENDING-CARBON\n\nImportant emergent properties can include:\n\n* high hardness;\n* low density;\n* wear resistance;\n* neutron absorption;\n* ceramic behavior.\n\nThose belong to B₄C, not elemental Boron.\n\n---\n\n# 25. Boron Nitride\n\nFuture relationship:\n\nMAT:0005\n↔\nMAT:0007\n\nwith BN material families including:\n\n* hexagonal BN;\n* cubic BN;\n* layered/nanoscale forms.\n\nA particularly useful MAT comparison will be:\n\n$$\nB-N\n\\leftrightarrow\nC-C\n$$\n\nbecause lattice topology and electron count can produce analogous but chemically distinct material structures.\n\n---\n\n# 26. Boron Oxide and Glass Networks\n\nImportant future compound:\n\n$$\nB_2O_3\n$$\n\nBoron oxide can participate with silica-rich systems to form borosilicate glasses.\n\nPotential material objectives include:\n\n* thermal-shock resistance;\n* chemical durability;\n* controlled expansion;\n* optical transparency.\n\nThus a future design triangle is:\n\n$$\nB+Si+O\n$$\n\n---\n\n# 27. Borides\n\nBoron forms numerous metal borides.\n\nExamples include future records such as:\n\n$$\nTiB_2\n$$\n\n$$\nZrB_2\n$$\n\n$$\nHfB_2\n$$\n\nand Magnesium diboride:\n\n$$\nMgB_2\n$$\n\nPossible emergent properties include:\n\n* extreme-temperature capability;\n* hardness;\n* electrical conduction;\n* superconductivity;\n* chemical resistance.\n\nAgain:\n\n$$\n\\boxed{\n\\text{compound property}\n\\neq\n\\text{element property}\n}\n$$\n\n---\n\n# 28. Pressure as a State Variable\n\nHistorical G0005 correctly identifies pressure as capable of profoundly changing Boron's electronic and structural state.\n\nHigh-pressure Boron requires dedicated:\n\n```text\nphase\npressure\ntemperature\nstructure\nelectronic_state\n```\n\nobjects.\n\nNo simple:\n\n```text\nboron_high_pressure_property\n```\n\nfield is sufficient.\n\n---\n\n# 29. γ-B₂₈\n\nOne important high-pressure elemental Boron phase is:\n\n$$\n\\gamma-B_{28}\n$$\n\nIts structure contains Boron cluster units including B₁₂ icosahedra and B₂ pairs.\n\nThis is an especially important MAT example of:\n\n$$\n\\text{same elemental composition}\n+\n\\text{different pressure/geometry}\n\\rightarrow\n\\text{different electronic state}\n$$\n\n---\n\n# 30. Pressure-Induced Metallisation and Superconductivity\n\nBoron has been experimentally driven into metallic/superconducting states under extreme pressure.\n\nMAT therefore distinguishes:\n\n```text\nambient elemental Boron\n```\n\nfrom:\n\n```text\nextreme-pressure metallic Boron\n```\n\nand:\n\n```text\nextreme-pressure superconducting Boron\n```\n\nThese are state-dependent properties.\n\nThey are not ordinary ambient properties of elemental Boron.\n\n---\n\n# 31. Chemical-Energy Branch\n\nBoron oxidation can release substantial chemical energy.\n\nHowever legacy G0005 correctly identified that:\n\n$$\n\\boxed{\n\\text{high theoretical energy release}\n\\neq\n\\text{easy practical combustion}\n}\n$$\n\nRelevant engineering constraints include:\n\n* ignition;\n* oxide layers;\n* reaction kinetics;\n* incomplete combustion;\n* condensed products;\n* particle size;\n* temperature;\n* oxidizer;\n* residence time.\n\n---\n\n# 32. Biological Context\n\nBoron has an established essential micronutrient role in plants.\n\nFor human biology, MAT must avoid equating this directly with established essentiality at the same evidential level.\n\nUse:\n\n```yaml\nplant_essentiality: ESTABLISHED\nhuman_essentiality: NOT-EQUIVALENTLY-ESTABLISHED\nbiological_effects: COMPOUND-AND-DOSE-DEPENDENT\n```\n\n---\n\n# 33. Safety Architecture\n\nBoron cannot receive one universal hazard rating.\n\nSeparate:\n\n* elemental Boron;\n* boric acid;\n* borates;\n* boranes;\n* B₄C;\n* BN;\n* borides;\n* enriched ¹⁰B/¹¹B material;\n* process-generated dust/fume.\n\nSafety therefore remains:\n\n$$\nH=\nF(\n\\text{compound},\n\\text{material form},\n\\text{dose},\n\\text{route},\n\\text{process},\nt\n)\n$$\n\n---\n\n# 34. Relationship Geometry\n\nBoron creates several independent geometry layers.\n\nNuclear:\n\nH ↔ B → He\n\nB → Li + He\n\nBe → B through radioactive decay\n\nChemical:\n\nB ↔ H\n\nB ↔ C\n\nB ↔ N\n\nB ↔ O\n\nMaterial:\n\nB ↔ Si\n\nB ↔ Mg\n\nB ↔ transition metals\n\nGeometric:\n\nB₁₂ icosahedra\n\ncages\n\npolyhedra\n\ncluster solids\n\nThe same element can therefore have several unrelated nearest neighbors.\n\n---\n\n# 35. Main MAT Boron Result\n\nBoron introduces one of MAT's strongest causal structure chains yet:\n\n$$\n\\boxed{\n\\text{electron count}\n\\rightarrow\n\\text{electron deficiency}\n\\rightarrow\n\\text{multicentre bonding}\n\\rightarrow\n\\text{polyhedral/icosahedral organization}\n\\rightarrow\n\\text{emergent material behavior}\n}\n$$\n\nIt also demonstrates isotope functional divergence:\n\n$$\n{}^{10}B\n\\rightarrow\n\\text{neutron-capture tool}\n$$\n\n$$\n{}^{11}B\n\\rightarrow\n\\text{proton-fusion research tool}\n$$\n\nwhile both remain chemically Boron.\n\n---\n\n# 36. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  multicentre_bonding_architecture: \"PASS\"\n  geometry_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  material_relationship_architecture: \"PASS\"\n  pressure_state_architecture: \"PASS\"\n  dopant_host_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n",
+  "bodyHash": "04665399f867fe9c12341c30f517ad444e028b19cb0794a8a00dd4e80b551c98",
+  "header": {
+    "mat_id": "MAT:0005",
+    "record_name": "Boron",
+    "symbol": "B",
+    "record_class": "CHEMICAL_ELEMENT",
+    "atomic_number": 5,
+    "parent_id": "MAT:0000",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0005",
+    "legacy_name": "Boron",
+    "reference_implementation": "- MAT:0001"
+  },
+  "structured": [
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-06-Boron-6.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-6",
+        "parent_id": "MAT:0005",
+        "name": "Boron-6",
+        "notation": "6B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 1,
+          "mass_number": 6,
+          "spin_parity": "2-#"
+        },
+        "relative_atomic_mass": {
+          "value": 6.0508,
+          "uncertainty": 0.0022,
+          "estimated": true,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "PROTON-UNBOUND",
+          "half_life": "NOT-ESTABLISHED"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-07-Boron-7.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-7",
+        "parent_id": "MAT:0005",
+        "name": "Boron-7",
+        "notation": "7B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 2,
+          "mass_number": 7,
+          "spin_parity": "(3/2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 7.029712,
+          "uncertainty": 0.000027,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 570,
+            "uncertainty": 14,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-08-Boron-8.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-8",
+        "parent_id": "MAT:0005",
+        "name": "Boron-8",
+        "notation": "8B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 3,
+          "mass_number": 8,
+          "spin_parity": "2+"
+        },
+        "relative_atomic_mass": {
+          "value": 8.0246073,
+          "uncertainty": 0.0000011,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 771.9,
+            "uncertainty": 0.9,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-PLUS",
+          "alpha_producing_daughter_breakup": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-09-Boron-9.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-9",
+        "parent_id": "MAT:0005",
+        "name": "Boron-9",
+        "notation": "9B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 4,
+          "mass_number": 9,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 9.01332965,
+          "uncertainty": 9.7e-7,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 800,
+            "uncertainty": 300,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-10-Boron-10.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-10",
+        "parent_id": "MAT:0005",
+        "name": "Boron-10",
+        "notation": "10B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 5,
+          "mass_number": 10,
+          "spin_parity": "3+"
+        },
+        "relative_atomic_mass": {
+          "value": 10.01293695,
+          "uncertainty": 4.1e-7,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "representative_isotopic_composition": {
+          "value": 0.199,
+          "uncertainty": 0.007,
+          "universal_constant": false
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE"
+        },
+        "nuclear_spin": {
+          "value": 3,
+          "NMR_active": true
+        },
+        "neutron_interaction": {
+          "important_absorber": true,
+          "absorption_cross_section_2200_m_per_s": {
+            "value": 3835,
+            "uncertainty": 9,
+            "unit": "barn",
+            "source_id": "SRC-000066"
+          },
+          "principal_reaction": "10B + n -> 7Li + 4He",
+          "calculation_id": "MAT:0005:CALC:001"
+        },
+        "applications": [
+          "neutron_detection",
+          "neutron_absorption",
+          "shielding",
+          "control_materials",
+          "boron_neutron_capture_research"
+        ],
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-11-Boron-11.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-11",
+        "parent_id": "MAT:0005",
+        "name": "Boron-11",
+        "notation": "11B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 6,
+          "mass_number": 11,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 11.00930536,
+          "uncertainty": 4.5e-7,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "representative_isotopic_composition": {
+          "value": 0.801,
+          "uncertainty": 0.007,
+          "universal_constant": false
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE"
+        },
+        "nuclear_spin": {
+          "value": "3/2",
+          "NMR_active": true
+        },
+        "nuclear_relationships": {
+          "proton_boron_fusion_research": true,
+          "reaction": "1H + 11B -> 3(4He)",
+          "calculation_id": "MAT:0005:CALC:003"
+        },
+        "scientific_status": {
+          "reaction": "ESTABLISHED",
+          "practical_fusion_energy_system": "RESEARCH"
+        },
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-12-Boron-12.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-12",
+        "parent_id": "MAT:0005",
+        "name": "Boron-12",
+        "notation": "12B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 7,
+          "mass_number": 12,
+          "spin_parity": "1+"
+        },
+        "relative_atomic_mass": {
+          "value": 12.0143527,
+          "uncertainty": 0.0000014,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 20.2,
+            "uncertainty": 0.02,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-13-Boron-13.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-13",
+        "parent_id": "MAT:0005",
+        "name": "Boron-13",
+        "notation": "13B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 8,
+          "mass_number": 13,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 13.0177802,
+          "uncertainty": 0.0000012,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 17.16,
+            "uncertainty": 0.18,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "beta_delayed_neutron": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-14-Boron-14.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-14",
+        "parent_id": "MAT:0005",
+        "name": "Boron-14",
+        "notation": "14B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 9,
+          "mass_number": 14,
+          "spin_parity": "2-"
+        },
+        "relative_atomic_mass": {
+          "value": 14.025404,
+          "uncertainty": 0.000023,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 12.36,
+            "uncertainty": 0.29,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "beta_delayed_neutron": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-15-Boron-15.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-15",
+        "parent_id": "MAT:0005",
+        "name": "Boron-15",
+        "notation": "15B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 10,
+          "mass_number": 15,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 15.031088,
+          "uncertainty": 0.000023,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 10.18,
+            "uncertainty": 0.35,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "beta_delayed_neutron": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-16-Boron-16.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-16",
+        "parent_id": "MAT:0005",
+        "name": "Boron-16",
+        "notation": "16B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 11,
+          "mass_number": 16,
+          "spin_parity": "0-#"
+        },
+        "relative_atomic_mass": {
+          "value": 16.039842,
+          "uncertainty": 0.000026,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "NEUTRON-UNBOUND",
+          "half_life": {
+            "relation": "LOWER-BOUND",
+            "value": 4.6,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-17-Boron-17.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-17",
+        "parent_id": "MAT:0005",
+        "name": "Boron-17",
+        "notation": "17B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 12,
+          "mass_number": 17,
+          "spin_parity": "(3/2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 17.04699,
+          "uncertainty": 0.00018,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 5.08,
+            "uncertainty": 0.05,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "delayed_neutron_branches": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-18-Boron-18.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-18",
+        "parent_id": "MAT:0005",
+        "name": "Boron-18",
+        "notation": "18B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 13,
+          "mass_number": 18,
+          "spin_parity": "(2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 18.05566,
+          "uncertainty": 0.00018,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "NEUTRON-UNBOUND",
+          "half_life": {
+            "relation": "UPPER-BOUND",
+            "value": 26,
+            "unit": "ns"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-19-Boron-19.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-19",
+        "parent_id": "MAT:0005",
+        "name": "Boron-19",
+        "notation": "19B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 14,
+          "mass_number": 19,
+          "spin_parity": "(3/2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 19.0631,
+          "uncertainty": 0.00043,
+          "estimated": true,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 2.92,
+            "uncertainty": 0.13,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "delayed_neutron_branches": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-20-Boron-20.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-20",
+        "parent_id": "MAT:0005",
+        "name": "Boron-20",
+        "notation": "20B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 15,
+          "mass_number": 20,
+          "spin_parity": "(1-,2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 20.07207,
+          "uncertainty": 0.00075,
+          "estimated": true,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "relation": "LOWER-BOUND",
+            "value": 912.4,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotope-21-Boron-21.yaml",
+      "data": {
+        "isotope_id": "MAT:0005:ISO:B-21",
+        "parent_id": "MAT:0005",
+        "name": "Boron-21",
+        "notation": "21B",
+        "nucleus": {
+          "protons": 5,
+          "neutrons": 16,
+          "mass_number": 21,
+          "spin_parity": "(3/2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 21.08129,
+          "uncertainty": 0.00097,
+          "estimated": true,
+          "unit": "u",
+          "source_id": "SRC-000063"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "relation": "LOWER-BOUND",
+            "value": 760,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "TWO-NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-Isotopes.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:ISOTOPES",
+        "parent_id": "MAT:0005",
+        "version": "1.0.0",
+        "isotopes": [
+          {
+            "isotope_id": "MAT:0005:ISO:B-6",
+            "mass_number": 6,
+            "protons": 5,
+            "neutrons": 1,
+            "relative_atomic_mass": {
+              "value": 6.0508,
+              "uncertainty": 0.0022,
+              "estimated": true,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "PROTON-UNBOUND",
+              "half_life": "NOT-ESTABLISHED",
+              "spin_parity": "2-#",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-7",
+            "mass_number": 7,
+            "protons": 5,
+            "neutrons": 2,
+            "relative_atomic_mass": {
+              "value": 7.029712,
+              "uncertainty": 0.000027,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 570,
+                "uncertainty": 14,
+                "unit": "ys"
+              },
+              "spin_parity": "(3/2-)",
+              "principal_decay": "PROTON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-8",
+            "mass_number": 8,
+            "protons": 5,
+            "neutrons": 3,
+            "relative_atomic_mass": {
+              "value": 8.0246073,
+              "uncertainty": 0.0000011,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 771.9,
+                "uncertainty": 0.9,
+                "unit": "ms"
+              },
+              "spin_parity": "2+",
+              "principal_decay": "BETA-PLUS",
+              "alpha_producing_daughter_breakup": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-9",
+            "mass_number": 9,
+            "protons": 5,
+            "neutrons": 4,
+            "relative_atomic_mass": {
+              "value": 9.01332965,
+              "uncertainty": 9.7e-7,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "value": 800,
+                "uncertainty": 300,
+                "unit": "zs"
+              },
+              "spin_parity": "3/2-",
+              "principal_decay": "PROTON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-10",
+            "mass_number": 10,
+            "protons": 5,
+            "neutrons": 5,
+            "relative_atomic_mass": {
+              "value": 10.01293695,
+              "uncertainty": 4.1e-7,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.199,
+              "uncertainty": 0.007,
+              "universal_constant": false
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "3+",
+              "neutron_capture_importance": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-11",
+            "mass_number": 11,
+            "protons": 5,
+            "neutrons": 6,
+            "relative_atomic_mass": {
+              "value": 11.00930536,
+              "uncertainty": 4.5e-7,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.801,
+              "uncertainty": 0.007,
+              "universal_constant": false
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "3/2-",
+              "proton_fusion_research": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-12",
+            "mass_number": 12,
+            "protons": 5,
+            "neutrons": 7,
+            "relative_atomic_mass": {
+              "value": 12.0143527,
+              "uncertainty": 0.0000014,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 20.2,
+                "uncertainty": 0.02,
+                "unit": "ms"
+              },
+              "spin_parity": "1+",
+              "principal_decay": "BETA-MINUS",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-13",
+            "mass_number": 13,
+            "protons": 5,
+            "neutrons": 8,
+            "relative_atomic_mass": {
+              "value": 13.0177802,
+              "uncertainty": 0.0000012,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 17.16,
+                "uncertainty": 0.18,
+                "unit": "ms"
+              },
+              "spin_parity": "3/2-",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_neutron": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-14",
+            "mass_number": 14,
+            "protons": 5,
+            "neutrons": 9,
+            "relative_atomic_mass": {
+              "value": 14.025404,
+              "uncertainty": 0.000023,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 12.36,
+                "uncertainty": 0.29,
+                "unit": "ms"
+              },
+              "spin_parity": "2-",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_neutron": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-15",
+            "mass_number": 15,
+            "protons": 5,
+            "neutrons": 10,
+            "relative_atomic_mass": {
+              "value": 15.031088,
+              "uncertainty": 0.000023,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 10.18,
+                "uncertainty": 0.35,
+                "unit": "ms"
+              },
+              "spin_parity": "3/2-",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_neutron": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-16",
+            "mass_number": 16,
+            "protons": 5,
+            "neutrons": 11,
+            "relative_atomic_mass": {
+              "value": 16.039842,
+              "uncertainty": 0.000026,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "NEUTRON-UNBOUND",
+              "half_life": {
+                "lower_bound": 4.6,
+                "unit": "zs"
+              },
+              "spin_parity": "0-#",
+              "principal_decay": "NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-17",
+            "mass_number": 17,
+            "protons": 5,
+            "neutrons": 12,
+            "relative_atomic_mass": {
+              "value": 17.04699,
+              "uncertainty": 0.00018,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 5.08,
+                "uncertainty": 0.05,
+                "unit": "ms"
+              },
+              "spin_parity": "(3/2-)",
+              "principal_decay": "BETA-MINUS",
+              "delayed_neutron_branches": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-18",
+            "mass_number": 18,
+            "protons": 5,
+            "neutrons": 13,
+            "relative_atomic_mass": {
+              "value": 18.05566,
+              "uncertainty": 0.00018,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "NEUTRON-UNBOUND",
+              "half_life": {
+                "upper_bound": 26,
+                "unit": "ns"
+              },
+              "spin_parity": "(2-)",
+              "principal_decay": "NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-19",
+            "mass_number": 19,
+            "protons": 5,
+            "neutrons": 14,
+            "relative_atomic_mass": {
+              "value": 19.0631,
+              "uncertainty": 0.00043,
+              "estimated": true,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "RADIOACTIVE",
+              "half_life": {
+                "value": 2.92,
+                "uncertainty": 0.13,
+                "unit": "ms"
+              },
+              "spin_parity": "(3/2-)",
+              "principal_decay": "BETA-MINUS",
+              "delayed_neutron_branches": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-20",
+            "mass_number": 20,
+            "protons": 5,
+            "neutrons": 15,
+            "relative_atomic_mass": {
+              "value": 20.07207,
+              "uncertainty": 0.00075,
+              "estimated": true,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "lower_bound": 912.4,
+                "unit": "ys"
+              },
+              "spin_parity": "(1-,2-)",
+              "principal_decay": "NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0005:ISO:B-21",
+            "mass_number": 21,
+            "protons": 5,
+            "neutrons": 16,
+            "relative_atomic_mass": {
+              "value": 21.08129,
+              "uncertainty": 0.00097,
+              "estimated": true,
+              "unit": "u",
+              "source_id": "SRC-000063"
+            },
+            "nuclear": {
+              "stability": "EXTREMELY-SHORT-LIVED",
+              "half_life": {
+                "lower_bound": 760,
+                "unit": "ys"
+              },
+              "spin_parity": "(3/2-)",
+              "principal_decay": "TWO-NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          }
+        ],
+        "rules": {
+          "stable_half_life_representation": "NOT-APPLICABLE",
+          "isotope_abundance_is_universal": false,
+          "lower_bound_is_exact_half_life": false,
+          "upper_bound_is_exact_half_life": false,
+          "mass_table_entry_implies_bound_nuclide": false,
+          "isotope_function_is_interchangeable": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Allotropes-and-Geometry.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:ALLOTROPES",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "allotropes": [
+          {
+            "id": "MAT:0005:ALLOTROPE:ALPHA-B12",
+            "name": "alpha-rhombohedral Boron",
+            "short_name": "alpha-B12",
+            "crystal_family": "RHOMBOHEDRAL",
+            "primary_structural_unit": {
+              "type": "B12-ICOSAHEDRON",
+              "count_per_primitive_description": 1
+            },
+            "electronic_class": {
+              "ambient": "SEMICONDUCTING"
+            },
+            "scientific_status": "ESTABLISHED",
+            "source_ids": [
+              "SRC-000075"
+            ]
+          },
+          {
+            "id": "MAT:0005:ALLOTROPE:BETA-B106",
+            "name": "beta-rhombohedral Boron",
+            "short_name": "beta-B106",
+            "crystal_family": "RHOMBOHEDRAL",
+            "structure": {
+              "complexity": "VERY-HIGH",
+              "partially_occupied_sites": true,
+              "intrinsic_disorder": true
+            },
+            "B12_related_units": true,
+            "scientific_status": "ESTABLISHED",
+            "source_ids": [
+              "SRC-000075"
+            ]
+          },
+          {
+            "id": "MAT:0005:ALLOTROPE:GAMMA-B28",
+            "name": "gamma-B28",
+            "short_name": "gamma-B28",
+            "crystal_family": "ORTHORHOMBIC",
+            "space_group": "Pnnm",
+            "atoms_per_cell": 28,
+            "structural_units": [
+              "B12-ICOSAHEDRON",
+              "B2-PAIR"
+            ],
+            "topology": {
+              "approximate_description": "NaCl-type arrangement of B12 and B2 units"
+            },
+            "bonding": {
+              "predominantly_covalent": true,
+              "partial_charge_transfer": true,
+              "charge_transfer_estimate": {
+                "approximate_delta": 0.48,
+                "caution": "MODEL/ANALYSIS-DEPENDENT"
+              }
+            },
+            "pressure_stability_original_report": {
+              "minimum": 19,
+              "maximum": 89,
+              "unit": "GPa"
+            },
+            "scientific_status": "ESTABLISHED",
+            "source_id": "SRC-000069"
+          },
+          {
+            "id": "MAT:0005:ALLOTROPE:T-B52",
+            "name": "tetragonal Boron family",
+            "short_name": "t-B52",
+            "crystal_family": "TETRAGONAL",
+            "scientific_status": "ESTABLISHED-WITH-STRUCTURAL-COMPLEXITY",
+            "source_id": "SRC-000075"
+          },
+          {
+            "id": "MAT:0005:ALLOTROPE:T-B192",
+            "name": "tetragonal Boron",
+            "short_name": "t-B192",
+            "crystal_family": "TETRAGONAL",
+            "scientific_status": "ESTABLISHED-ALLOTROPE-FAMILY",
+            "source_id": "SRC-000075"
+          },
+          {
+            "id": "MAT:0005:ALLOTROPE:AMORPHOUS",
+            "name": "Amorphous Boron",
+            "crystal_family": "NONCRYSTALLINE",
+            "long_range_periodicity": false,
+            "scientific_status": "ESTABLISHED"
+          }
+        ],
+        "geometry_primitives": {
+          "B12_icosahedron": {
+            "geometry": "ICOSAHEDRAL",
+            "atoms": 12,
+            "literal_fixed_regular_icosahedron": false,
+            "rule": "Real B12 clusters are distorted quantum/material structures. A perfect mathematical icosahedron is only an idealized descriptor.\n"
+          },
+          "B2_pair": {
+            "atoms": 2,
+            "important_in": [
+              "gamma-B28"
+            ]
+          }
+        },
+        "rules": {
+          "boron_has_one_universal_crystal_structure": false,
+          "perfect_icosahedron_equals_real_cluster_geometry": false,
+          "phase_properties_are_interchangeable": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Bonding.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:BONDING",
+        "record_id": "MAT:0005",
+        "valence_electrons": 3,
+        "bonding_classes": {
+          "conventional_two_center": {
+            "exists": true
+          },
+          "multicentre": {
+            "exists": true,
+            "examples": [
+              {
+                "type": "THREE-CENTRE-TWO-ELECTRON",
+                "notation": "3c-2e"
+              }
+            ],
+            "domains": [
+              "elemental_clusters",
+              "boranes",
+              "boron_rich_solids"
+            ]
+          }
+        },
+        "electron_deficiency": {
+          "relevant": true,
+          "interpretation": "Boron's limited valence-electron count can favor multicentre bonding and cluster architectures rather than requiring each connectivity to be represented as an isolated 2c-2e bond.\n"
+        },
+        "geometry_relationship": {
+          "causal_chain": [
+            "electron_count",
+            "bonding_constraints",
+            "multicentre_bonding",
+            "polyhedral_clusters",
+            "allotrope_or_compound_structure",
+            "emergent_material_properties"
+          ]
+        },
+        "rules": {
+          "every_boron_bond_is_3c2e": false,
+          "multicentre_bonding_is_artistic_geometry": false,
+          "geometry_is_independent_of_electronic_structure": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Graph-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:GRAPHS",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "graphs": [
+          {
+            "graph_id": "MAT:0005:GRAPH:001",
+            "filename": "0005-Boron-B-GRAPH-001-Isotope-Lifetime-Map.svg",
+            "data_filename": "0005-Boron-B-GRAPH-001-Isotope-Lifetime-Map.csv",
+            "source_id": "SRC-000008",
+            "status": "GENERATED",
+            "rule": "Bounds must be shown as bounds, not point measurements."
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:002",
+            "filename": "0005-Boron-B-GRAPH-002-Atomic-Energy-Levels.svg",
+            "data_filename": "0005-Boron-B-GRAPH-002-Atomic-Energy-Levels.csv",
+            "source_id": "SRC-000079",
+            "status": "DATA-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:003",
+            "filename": "0005-Boron-B-GRAPH-003-UV-Spectrum.svg",
+            "data_filename": "0005-Boron-B-GRAPH-003-UV-Spectrum.csv",
+            "source_id": "SRC-000079",
+            "status": "READY-FOR-DATA-EXTRACTION"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:004",
+            "filename": "0005-Boron-B-GRAPH-004-B10-B11-Nuclear-Functions.svg",
+            "data_filename": "0005-Boron-B-GRAPH-004-B10-B11-Nuclear-Functions.csv",
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:005",
+            "filename": "0005-Boron-B-GRAPH-005-B10-Capture-Branches.svg",
+            "data_filename": "0005-Boron-B-GRAPH-005-B10-Capture-Branches.csv",
+            "calculations": [
+              "MAT:0005:CALC:001",
+              "MAT:0005:CALC:002"
+            ],
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:006",
+            "filename": "0005-Boron-B-GRAPH-006-pB11-Energetics.svg",
+            "data_filename": "0005-Boron-B-GRAPH-006-pB11-Energetics.csv",
+            "calculation_id": "MAT:0005:CALC:003",
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:007",
+            "filename": "0005-Boron-B-GRAPH-007-Pressure-Phase-Map.svg",
+            "data_filename": "0005-Boron-B-GRAPH-007-Pressure-Phase-Map.csv",
+            "source_ids": [
+              "SRC-000069",
+              "SRC-000075"
+            ],
+            "status": "DATASET-EXTRACTION-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:008",
+            "filename": "0005-Boron-B-GRAPH-008-Pressure-Superconductivity.svg",
+            "data_filename": "0005-Boron-B-GRAPH-008-Pressure-Superconductivity.csv",
+            "source_id": "SRC-000070",
+            "status": "READY-FOR-DATA-EXTRACTION"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:009",
+            "filename": "0005-Boron-B-GRAPH-009-Cluster-Geometry-Map.svg",
+            "data_filename": "0005-Boron-B-GRAPH-009-Cluster-Geometry-Map.csv",
+            "status": "SCHEMATIC-READY"
+          },
+          {
+            "graph_id": "MAT:0005:GRAPH:010",
+            "filename": "0005-Boron-B-GRAPH-010-Material-Family-Property-Map.svg",
+            "data_filename": "0005-Boron-B-GRAPH-010-Material-Family-Property-Map.csv",
+            "status": "MULTI-MATERIAL-DATASET-REQUIRED"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Material-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:MATERIAL-RELATIONSHIPS",
+        "record_id": "MAT:0005",
+        "materials": {
+          "boron_carbide": {
+            "future_id": "MAT:CMP:B4C",
+            "nominal_formula": "B4C",
+            "family": "BORON-CARBIDE",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0006"
+            ],
+            "target_status": {
+              "carbon": "RESOLVED"
+            },
+            "functions": [
+              "hard_ceramic",
+              "wear_material",
+              "neutron_absorber",
+              "armour_material"
+            ],
+            "representative_hardness_measurement": {
+              "value": 47,
+              "uncertainty": 2,
+              "unit": "GPa",
+              "evidence_status": "UNEVALUATED-MEASUREMENT",
+              "source_id": "SRC-000071"
+            },
+            "rule": "Do not assign 47 GPa to all B4C material states."
+          },
+          "boron_nitride": {
+            "future_family": "MAT:CMP:BN",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0007"
+            ],
+            "target_status": {
+              "nitrogen": "RESOLVED"
+            },
+            "allotrope_or_polymorph_families": [
+              "HEXAGONAL-BN",
+              "CUBIC-BN",
+              "WURTZITIC-BN",
+              "NANOSTRUCTURED-BN"
+            ],
+            "rule": "h-BN, c-BN and other BN structures are distinct material states with different properties.\n",
+            "source_id": "SRC-000072"
+          },
+          "boron_oxide": {
+            "future_id": "MAT:CMP:B2O3",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0008"
+            ],
+            "target_status": {
+              "oxygen": "RESOLVED"
+            },
+            "functions": [
+              "glass_network_component",
+              "borate_precursor"
+            ]
+          },
+          "borosilicate": {
+            "family": "BOROSILICATE-GLASS",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0014",
+              "MAT:0008"
+            ],
+            "future_targets": {
+              "silicon": "RESERVED-PENDING-SILICON",
+              "oxygen": "RESOLVED"
+            },
+            "possible_property_objectives": [
+              "low_thermal_expansion",
+              "thermal_shock_resistance",
+              "chemical_durability",
+              "optical_transmission"
+            ]
+          },
+          "boranes": {
+            "family": "BORANES",
+            "formula_family": "BxHy",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0001"
+            ],
+            "bonding": {
+              "multicentre": true,
+              "polyhedral_clusters": true
+            },
+            "safety": {
+              "compound_specific": true
+            }
+          },
+          "magnesium_diboride": {
+            "future_id": "MAT:CMP:MgB2",
+            "element_relationships": [
+              "MAT:0005",
+              "MAT:0012"
+            ],
+            "target_status": {
+              "magnesium": "RESERVED-PENDING-MAGNESIUM"
+            },
+            "function": [
+              "superconducting_material"
+            ],
+            "elemental_boron_superconductivity_equivalent": false
+          },
+          "boron_doped_diamond": {
+            "class": "DOPED-HOST-MATERIAL",
+            "host": {
+              "element": "MAT:0006",
+              "structure": "DIAMOND"
+            },
+            "dopant": {
+              "element": "MAT:0005",
+              "role": "ACCEPTOR / HOLE-DOPANT"
+            },
+            "experimentally_observed": {
+              "superconducting": true,
+              "approximate_Tc": {
+                "value": 4,
+                "unit": "K"
+              }
+            },
+            "source_id": "SRC-000074",
+            "rule": "Superconductivity belongs to the doped diamond state, not to elemental Boron or undoped diamond independently.\n"
+          },
+          "metal_borides": {
+            "family": "BORIDES",
+            "representative_future_compounds": [
+              "TiB2",
+              "ZrB2",
+              "HfB2"
+            ],
+            "possible_property_classes": [
+              "refractory",
+              "hard",
+              "electrically_conducting",
+              "chemically_resistant"
+            ]
+          }
+        },
+        "rules": {
+          "compound_property_equals_boron_property": false,
+          "doping_property_equals_dopant_property": false,
+          "one_formula_implies_one_material_state": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Nuclear-Functions.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:NUCLEAR-FUNCTIONS",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "boron_10": {
+          "isotope": "MAT:0005:ISO:B-10",
+          "principal_role": "NEUTRON-ABSORBER",
+          "absorption_cross_section_reference": {
+            "neutron_velocity": {
+              "value": 2200,
+              "unit": "m/s"
+            },
+            "value": {
+              "value": 3835,
+              "uncertainty": 9,
+              "unit": "barn"
+            },
+            "source_id": "SRC-000066"
+          },
+          "capture": {
+            "reaction": "10B + n -> 7Li + 4He",
+            "q_calculation": "MAT:0005:CALC:001",
+            "dominant_excited_branch": {
+              "approximately": 0.937,
+              "daughter": "7Li*",
+              "gamma": {
+                "approximately": 0.478,
+                "unit": "MeV"
+              },
+              "source_id": "SRC-000067"
+            }
+          },
+          "functions": [
+            "neutron_detection",
+            "neutron_absorption",
+            "shielding",
+            "control_material",
+            "neutron_metrology"
+          ]
+        },
+        "boron_11": {
+          "isotope": "MAT:0005:ISO:B-11",
+          "proton_reaction": {
+            "reaction": "1H + 11B -> 3(4He)",
+            "calculation_id": "MAT:0005:CALC:003",
+            "primary_products": {
+              "charged_particles": true,
+              "alpha_particles": 3
+            },
+            "scientific_status": "ESTABLISHED-REACTION",
+            "fusion_system_status": {
+              "classification": "ADVANCED-RESEARCH",
+              "high_temperature_requirement": true,
+              "source_id": "SRC-000068"
+            }
+          }
+        },
+        "rules": {
+          "isotope_functions_are_interchangeable": false,
+          "thermal_capture_cross_section_is_energy_independent": false,
+          "primary_charged_products_mean_zero_neutrons_in_every_real_system": false,
+          "established_reaction_means_commercial_fusion": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Processes-and-Environments.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:PROCESSES",
+        "record_id": "MAT:0005",
+        "processes": [
+          {
+            "process_id": "MAT:0005:PROC:ALLOTROPE-TRANSFORMATION",
+            "family": "STRUCTURAL",
+            "drivers": [
+              "temperature",
+              "pressure",
+              "process_history"
+            ]
+          },
+          {
+            "process_id": "MAT:0005:PROC:GAMMA-B28",
+            "family": "HIGH-PRESSURE-STRUCTURAL",
+            "product": "MAT:0005:ALLOTROPE:GAMMA-B28",
+            "source_id": "SRC-000069"
+          },
+          {
+            "process_id": "MAT:0005:PROC:METALLIZATION",
+            "family": "HIGH-PRESSURE-ELECTRONIC",
+            "pressure_required": true
+          },
+          {
+            "process_id": "MAT:0005:PROC:SUPERCONDUCTING-PRESSURE",
+            "family": "HIGH-PRESSURE-QUANTUM",
+            "observations": [
+              {
+                "pressure": {
+                  "value": 175,
+                  "unit": "GPa"
+                },
+                "Tc": {
+                  "approximate_value": 6,
+                  "unit": "K"
+                }
+              },
+              {
+                "pressure": {
+                  "value": 250,
+                  "unit": "GPa"
+                },
+                "Tc": {
+                  "approximate_value": 11.2,
+                  "unit": "K"
+                }
+              }
+            ],
+            "source_id": "SRC-000070"
+          },
+          {
+            "process_id": "MAT:0005:PROC:B10-CAPTURE",
+            "family": "NUCLEAR",
+            "reaction": "10B + n -> 7Li + 4He",
+            "calculation_id": "MAT:0005:CALC:001"
+          },
+          {
+            "process_id": "MAT:0005:PROC:PB11",
+            "family": "NUCLEAR-FUSION-RESEARCH",
+            "reaction": "1H + 11B -> 3(4He)",
+            "calculation_id": "MAT:0005:CALC:003"
+          },
+          {
+            "process_id": "MAT:0005:PROC:B4C",
+            "family": "CERAMIC",
+            "product": "MAT:CMP:B4C"
+          },
+          {
+            "process_id": "MAT:0005:PROC:BN",
+            "family": "CERAMIC / LAYERED-MATERIAL",
+            "product_family": "MAT:CMP:BN"
+          },
+          {
+            "process_id": "MAT:0005:PROC:DOPING",
+            "family": "SEMICONDUCTOR",
+            "role": "ACCEPTOR-DOPANT"
+          },
+          {
+            "process_id": "MAT:0005:PROC:OXIDATION",
+            "family": "CHEMICAL-COMBUSTION",
+            "effects": [
+              "boron_oxide_formation",
+              "heat_release"
+            ],
+            "kinetics": {
+              "condition_dependent": true,
+              "oxide_layer_relevant": true
+            },
+            "source_id": "SRC-000073"
+          }
+        ],
+        "environments": {
+          "AMBIENT_SOLID": {
+            "possible_states": [
+              "alpha_B12",
+              "beta_B106",
+              "amorphous",
+              "process_dependent_states"
+            ]
+          },
+          "HIGH_PRESSURE": {
+            "possible_effects": [
+              "phase_transformation",
+              "gamma_B28",
+              "metallization",
+              "superconductivity"
+            ]
+          },
+          "NEUTRON_FIELD": {
+            "isotope_sensitive": true,
+            "dominant_functional_isotope": "10B"
+          },
+          "HIGH_TEMPERATURE_PLASMA": {
+            "possible_relationship": [
+              "proton_boron_fusion_research"
+            ]
+          },
+          "OXIDIZING": {
+            "possible_effects": [
+              "B2O3_formation",
+              "combustion"
+            ]
+          },
+          "SEMICONDUCTOR_HOST": {
+            "effects": [
+              "acceptor_doping",
+              "carrier_concentration_change"
+            ]
+          },
+          "CERAMIC_PROCESS": {
+            "possible_products": [
+              "B4C",
+              "BN",
+              "borides",
+              "boron_oxide_materials"
+            ]
+          },
+          "BIOLOGICAL_PLANT": {
+            "role": {
+              "plant_micronutrient": true
+            }
+          },
+          "BIOLOGICAL_HUMAN": {
+            "essentiality": {
+              "status": "NOT-EQUIVALENTLY-ESTABLISHED"
+            }
+          }
+        },
+        "safety": {
+          "universal_boron_hazard_rating": false,
+          "separate_material_states_required": [
+            "elemental_boron",
+            "boric_acid",
+            "borates",
+            "boranes",
+            "boron_carbide",
+            "boron_nitride",
+            "metal_borides"
+          ]
+        },
+        "rules": {
+          "pressure_superconductivity_is_ambient_property": false,
+          "high_combustion_energy_means_easy_ignition": false,
+          "elemental_boron_safety_equals_borane_safety": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Table-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:TABLES",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "tables": [
+          {
+            "id": "MAT:0005:TABLE:001",
+            "file": "0005-Boron-B-TABLE-001-Isotopes.md",
+            "status": "COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:002",
+            "file": "0005-Boron-B-TABLE-002-Atomic-Identity.md",
+            "status": "COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:003",
+            "file": "0005-Boron-B-TABLE-003-Allotropes.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:004",
+            "file": "0005-Boron-B-TABLE-004-Spectral-Transitions.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:005",
+            "file": "0005-Boron-B-TABLE-005-Nuclear-Functions.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:006",
+            "file": "0005-Boron-B-TABLE-006-Material-Families.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:007",
+            "file": "0005-Boron-B-TABLE-007-Bonding-and-Geometry.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0005:TABLE:008",
+            "file": "0005-Boron-B-TABLE-008-Evidence-and-Sources.md",
+            "status": "COMPLETE"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Visual-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:VISUALS",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "visuals": {
+          "V01": {
+            "file": "0005-Boron-B-FIG-001-Material-Manifestation.png",
+            "status": "SOURCE-IMAGE-REQUIRED"
+          },
+          "V02": {
+            "file": "0005-Boron-B-FIG-002-Atomic-Identity.svg",
+            "status": "GENERATED"
+          },
+          "V03": {
+            "files": [
+              "0005-Boron-B-DIAGRAM-001-Multicentre-Bonding.svg",
+              "0005-Boron-B-DIAGRAM-002-B12-Icosahedral-Motif.svg"
+            ],
+            "status": "GENERATED"
+          },
+          "V04": {
+            "files": [
+              "0005-Boron-B-FIG-003-Electron-Probability.svg",
+              "0005-Boron-B-FIG-004-Valence-Bonding-Transition.svg"
+            ],
+            "status": "GENERATED"
+          },
+          "V05": {
+            "file": "0005-Boron-B-FIG-005-Isotope-Map.svg",
+            "status": "GENERATED"
+          },
+          "V06": {
+            "file": "0005-Boron-B-FIG-006-Spectral-Fingerprint.svg",
+            "status": "GENERATED"
+          },
+          "V07": {
+            "file": "0005-Boron-B-FIG-007-State-Dependent-Properties.svg",
+            "status": "GENERATED"
+          },
+          "V08": {
+            "file": "0005-Boron-B-DIAGRAM-003-Electronic-and-Doping-State.svg",
+            "status": "GENERATED"
+          },
+          "V09": {
+            "file": "0005-Boron-B-DIAGRAM-004-Isotope-Spin-and-NMR.svg",
+            "status": "GENERATED"
+          },
+          "V10": {
+            "file": "0005-Boron-B-FIG-008-Thermal-and-Combustion-State.svg",
+            "status": "GENERATED"
+          },
+          "V11": {
+            "file": "0005-Boron-B-FIG-009-Cluster-Structural-Geometry.svg",
+            "status": "GENERATED"
+          },
+          "V12": {
+            "file": "0005-Boron-B-FIG-010-Pressure-Phase-Map.svg",
+            "status": "DATA-EXTRACTION-REQUIRED"
+          },
+          "V13": {
+            "file": "0005-Boron-B-DIAGRAM-005-Transformation-Network.svg",
+            "status": "GENERATED"
+          },
+          "V14": {
+            "file": "0005-Boron-B-DIAGRAM-006-Knowledge-Graph.svg",
+            "status": "GENERATED"
+          },
+          "V15": {
+            "files": [
+              "0005-Boron-B-MODEL-SCI-001-B12-Icosahedral-Cluster.glb",
+              "0005-Boron-B-MODEL-SCI-002-Gamma-B28-Cell.glb"
+            ],
+            "status": "GENERATED"
+          },
+          "V16": {
+            "file": "0005-Boron-B-MODEL-DATA-001.glb",
+            "status": "MASTER-TRANSFORM-PENDING"
+          },
+          "V17": {
+            "file": "0005-Boron-B-FIG-011-Applications.svg",
+            "status": "GENERATED"
+          },
+          "V18": {
+            "file": "0005-Boron-B-DIAGRAM-007-Evidence-Provenance.svg",
+            "status": "GENERATED"
+          }
+        },
+        "summary": {
+          "visual_slots": 18,
+          "two_dimensional_assets": 19,
+          "scientific_3d_models": 2,
+          "data_extruded_models": 1,
+          "total_core_visual_assets": 22,
+          "generated_assets_complete": false
+        }
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/data/structured/0005-Boron-B.yaml",
+      "data": {
+        "mat_id": "MAT:0005",
+        "record_name": "Boron",
+        "symbol": "B",
+        "record_class": "CHEMICAL_ELEMENT",
+        "atomic_number": 5,
+        "legacy": {
+          "legacy_id": "G0005",
+          "migration_status": "CONTENT-CORE-MIGRATED"
+        },
+        "identity": {
+          "proton_count": 5,
+          "neutral_electron_count": 5,
+          "period": 2,
+          "group": 13,
+          "block": "p"
+        },
+        "atomic_weight": {
+          "type": "INTERVAL",
+          "minimum": 10.806,
+          "maximum": 10.821,
+          "source_id": "SRC-000063"
+        },
+        "electronic_ground_state": {
+          "configuration": "1s2 2s2 2p1",
+          "term": "2P°1/2",
+          "open_shell": true,
+          "source_id": "SRC-000005"
+        },
+        "electron_affinity": {
+          "value": 0.279743,
+          "uncertainty": 0.000044,
+          "unit": "eV",
+          "source_id": "SRC-000064"
+        },
+        "ionization": {
+          "first": {
+            "value": 8.298019,
+            "uncertainty": 0.000003,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "second": {
+            "value": 25.15483,
+            "uncertainty": 0.00005,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "third": {
+            "value": 37.93059,
+            "uncertainty": 0.00007,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          }
+        },
+        "atomic_states": [
+          {
+            "id": "MAT:0005:ATOM:B",
+            "charge": 0
+          },
+          {
+            "id": "MAT:0005:ION:B+1",
+            "charge": 1
+          },
+          {
+            "id": "MAT:0005:ION:B+2",
+            "charge": 2
+          },
+          {
+            "id": "MAT:0005:ION:B+3",
+            "charge": 3
+          },
+          {
+            "id": "MAT:0005:ION:B+4",
+            "charge": 4
+          },
+          {
+            "id": "MAT:0005:ION:B+5",
+            "charge": 5
+          }
+        ],
+        "bulk_reference": {
+          "state": "SOLID",
+          "density": {
+            "representative_value": 2.34,
+            "unit": "g/cm3",
+            "source_id": "SRC-000065"
+          },
+          "melting_point": {
+            "representative_value": 2350,
+            "unit": "K",
+            "source_id": "SRC-000065"
+          },
+          "boiling_point": {
+            "representative_value": 4273,
+            "unit": "K",
+            "source_id": "SRC-000065"
+          }
+        },
+        "allotropy": {
+          "multiple_elemental_structures": true,
+          "major_families": [
+            "alpha_rhombohedral",
+            "beta_rhombohedral",
+            "gamma_B28",
+            "tetragonal",
+            "amorphous"
+          ]
+        },
+        "bonding": {
+          "electron_deficient": true,
+          "multicentre_bonding": true,
+          "three_centre_two_electron": true
+        },
+        "geometry": {
+          "B12_icosahedral_motif": true,
+          "polyhedral_clusters": true
+        },
+        "isotope_branch": {
+          "mass_range": {
+            "minimum": 6,
+            "maximum": 21
+          },
+          "stable": [
+            "MAT:0005:ISO:B-10",
+            "MAT:0005:ISO:B-11"
+          ]
+        },
+        "nuclear": {
+          "B10_neutron_capture": true,
+          "B11_proton_fusion_research": true
+        },
+        "chemistry": {
+          "boranes": true,
+          "borides": true,
+          "borates": true,
+          "boron_oxide": true,
+          "boron_carbide": true,
+          "boron_nitride": true
+        },
+        "electronic_materials": {
+          "semiconductor_like_elemental_states": true,
+          "dopant_role": true,
+          "state_dependent": true
+        },
+        "biology": {
+          "plant_essentiality": "ESTABLISHED",
+          "human_essentiality": "NOT-EQUIVALENTLY-ESTABLISHED"
+        },
+        "scientific_status": {
+          "atomic_identity": "ESTABLISHED",
+          "stable_isotopes": "ESTABLISHED",
+          "B12_cluster_motif": "ESTABLISHED",
+          "allotropy": "ESTABLISHED",
+          "gamma_B28": "ESTABLISHED",
+          "proton_boron_fusion": "ACTIVE-RESEARCH"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0005-Boron-B/relationships/0005-Boron-B-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:RELATIONSHIPS",
+        "record_id": "MAT:0005",
+        "version": "1.0.0",
+        "relationships": [
+          {
+            "relationship_id": "MAT:0005:REL:0001",
+            "source": "MAT:0005:ISO:B-10",
+            "type": "ISOTOPE-OF",
+            "target": "MAT:0005"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0002",
+            "source": "MAT:0005:ISO:B-11",
+            "type": "ISOTOPE-OF",
+            "target": "MAT:0005"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0010",
+            "source": [
+              "MAT:0005:ISO:B-10",
+              "NEUTRON"
+            ],
+            "type": "NEUTRON-CAPTURE",
+            "products": [
+              "MAT:0003:ISO:Li-7",
+              "MAT:0002:ISO:He-4"
+            ],
+            "calculation_id": "MAT:0005:CALC:001",
+            "source_id": "SRC-000066"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0011",
+            "source": [
+              "MAT:0005:ISO:B-10",
+              "NEUTRON"
+            ],
+            "type": "NEUTRON-CAPTURE-EXCITED-BRANCH",
+            "intermediate": "Li-7*",
+            "products": [
+              "MAT:0003:ISO:Li-7",
+              "MAT:0002:ISO:He-4",
+              "GAMMA"
+            ],
+            "gamma_energy_approx": {
+              "value": 0.478,
+              "unit": "MeV"
+            },
+            "calculation_id": "MAT:0005:CALC:002"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0020",
+            "source": [
+              "MAT:0001:ISO:H-1",
+              "MAT:0005:ISO:B-11"
+            ],
+            "type": "NUCLEAR-FUSION-REACTION",
+            "products": [
+              "MAT:0002:ISO:He-4",
+              "MAT:0002:ISO:He-4",
+              "MAT:0002:ISO:He-4"
+            ],
+            "calculation_id": "MAT:0005:CALC:003",
+            "scientific_status": "ESTABLISHED-REACTION",
+            "engineering_status": "ADVANCED-RESEARCH"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0030",
+            "source": "MAT:0004:ISO:Be-10",
+            "type": "DECAYS-TO",
+            "target": "MAT:0005:ISO:B-10",
+            "mechanism": "BETA-MINUS",
+            "target_status": "RESOLVED"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0040",
+            "source": "MAT:0005",
+            "type": "FORMS-MATERIAL-WITH",
+            "target": "MAT:0006",
+            "target_status": "RESOLVED",
+            "material_family": [
+              "B4C",
+              "BORON-DOPED-CARBON",
+              "BORON-DOPED-DIAMOND"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0041",
+            "source": "MAT:0005",
+            "type": "FORMS-COMPOUND-WITH",
+            "target": "MAT:0007",
+            "target_status": "RESOLVED",
+            "material_family": [
+              "h-BN",
+              "c-BN",
+              "w-BN"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0042",
+            "source": "MAT:0005",
+            "type": "FORMS-OXIDE-WITH",
+            "target": "MAT:0008",
+            "target_status": "RESOLVED",
+            "product": "MAT:CMP:B2O3"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0043",
+            "source": "MAT:0005",
+            "type": "GLASS-NETWORK-RELATIONSHIP",
+            "targets": [
+              "MAT:0014",
+              "MAT:0008"
+            ],
+            "target_status": {
+              "silicon": "RESERVED-PENDING-SILICON",
+              "oxygen": "RESOLVED"
+            },
+            "material_family": "BOROSILICATE"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0050",
+            "source": "MAT:0005",
+            "type": "FORMS-BORANES-WITH",
+            "target": "MAT:0001",
+            "target_status": "RESOLVED",
+            "formula_family": "BxHy",
+            "bonding": {
+              "multicentre": true,
+              "cluster_geometry": true
+            }
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0060",
+            "source": "MAT:0005",
+            "type": "FORMS-COMPOUND-WITH",
+            "target": "MAT:0012",
+            "target_name": "Magnesium",
+            "target_status": "RESERVED-PENDING-MAGNESIUM",
+            "product": "MAT:CMP:MgB2",
+            "function": [
+              "SUPERCONDUCTING-MATERIAL"
+            ]
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0070",
+            "source": "MAT:0005",
+            "type": "DOPANT-IN",
+            "target": "MAT:0014",
+            "target_name": "Silicon",
+            "target_status": "RESERVED-PENDING-SILICON",
+            "role": "ACCEPTOR / P-TYPE"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0080",
+            "source": "MAT:0005",
+            "type": "FORMS-BORIDE-WITH",
+            "target": "MAT:0022",
+            "target_name": "Titanium",
+            "target_status": "RESERVED-PENDING-TITANIUM",
+            "example": "TiB2"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0081",
+            "source": "MAT:0005",
+            "type": "FORMS-BORIDE-WITH",
+            "target": "MAT:0040",
+            "target_name": "Zirconium",
+            "target_status": "RESERVED-PENDING-ZIRCONIUM",
+            "example": "ZrB2"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0082",
+            "source": "MAT:0005",
+            "type": "FORMS-BORIDE-WITH",
+            "target": "MAT:0072",
+            "target_name": "Hafnium",
+            "target_status": "RESERVED-PENDING-HAFNIUM",
+            "example": "HfB2"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0090",
+            "source": "MAT:0005",
+            "type": "PERIODIC-FAMILY-RELATIONSHIP-WITH",
+            "target": "MAT:0013",
+            "target_name": "Aluminium",
+            "target_status": "RESERVED-PENDING-ALUMINIUM"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0100",
+            "source": "MAT:0005",
+            "type": "BIOLOGICAL-ESSENTIALITY",
+            "target": "PLANTS",
+            "status": "ESTABLISHED-MICRONUTRIENT"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0110",
+            "source": "MAT:0005",
+            "type": "HAS-STRUCTURAL-MOTIF",
+            "target": "B12-ICOSAHEDRON"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0111",
+            "source": "MAT:0005",
+            "type": "HAS-ALLOTROPE",
+            "target": "MAT:0005:ALLOTROPE:GAMMA-B28"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0112",
+            "source": "MAT:0005",
+            "type": "HAS-ALLOTROPE",
+            "target": "MAT:0005:ALLOTROPE:ALPHA-B12"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0113",
+            "source": "MAT:0005",
+            "type": "HAS-ALLOTROPE",
+            "target": "MAT:0005:ALLOTROPE:BETA-B106"
+          },
+          {
+            "relationship_id": "MAT:0005:REL:0999",
+            "source": "MAT:0005",
+            "type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0005"
+          }
+        ],
+        "rules": {
+          "chemical_and_nuclear_edges_are_distinct": true,
+          "isotope_functions_are_distinct": true,
+          "doped_host_property_equals_boron_property": false,
+          "compound_property_equals_element_property": false,
+          "graph_is_exhaustive": false
+        }
+      }
+    }
+  ],
+  "assets": [
+    "records/0005-Boron-B/diagrams/bonding/0005-Boron-B-DIAGRAM-001-Multicentre-Bonding.svg",
+    "records/0005-Boron-B/diagrams/bonding/0005-Boron-B-DIAGRAM-002-B12-Icosahedral-Motif.svg",
+    "records/0005-Boron-B/diagrams/fields/0005-Boron-B-DIAGRAM-003-Electronic-and-Doping-State.svg",
+    "records/0005-Boron-B/diagrams/fields/0005-Boron-B-DIAGRAM-004-Isotope-Spin-and-NMR.svg",
+    "records/0005-Boron-B/diagrams/processes/0005-Boron-B-DIAGRAM-005-Transformation-Network.svg",
+    "records/0005-Boron-B/diagrams/relationships/0005-Boron-B-DIAGRAM-006-Knowledge-Graph.svg",
+    "records/0005-Boron-B/diagrams/relationships/0005-Boron-B-DIAGRAM-007-Evidence-Provenance.svg",
+    "records/0005-Boron-B/graphs/0005-Boron-B-GRAPH-001-Isotope-Lifetime-Map.svg",
+    "records/0005-Boron-B/graphs/0005-Boron-B-GRAPH-004-B10-B11-Nuclear-Functions.svg",
+    "records/0005-Boron-B/graphs/0005-Boron-B-GRAPH-005-B10-Capture-Branches.svg",
+    "records/0005-Boron-B/graphs/0005-Boron-B-GRAPH-006-pB11-Energetics.svg",
+    "records/0005-Boron-B/images/applications/0005-Boron-B-FIG-011-Applications.svg",
+    "records/0005-Boron-B/images/isotope/0005-Boron-B-FIG-005-Isotope-Map.svg",
+    "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-007-State-Dependent-Properties.svg",
+    "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-008-Thermal-and-Combustion-State.svg",
+    "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-009-Cluster-Structural-Geometry.svg",
+    "records/0005-Boron-B/images/quantum/0005-Boron-B-FIG-003-Electron-Probability.svg",
+    "records/0005-Boron-B/images/quantum/0005-Boron-B-FIG-004-Valence-Bonding-Transition.svg",
+    "records/0005-Boron-B/images/scientific/0005-Boron-B-FIG-002-Atomic-Identity.svg",
+    "records/0005-Boron-B/images/spectral/0005-Boron-B-FIG-006-Spectral-Fingerprint.svg",
+    "records/0005-Boron-B/models/scientific/0005-Boron-B-MODEL-SCI-001-B12-Icosahedral-Cluster.glb",
+    "records/0005-Boron-B/models/scientific/0005-Boron-B-MODEL-SCI-002-Gamma-B28-Cell.glb"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-000005",
+      "source_aliases": [
+        "SRC-H-001"
+      ],
+      "title": "NIST Atomic Spectra Database",
+      "organization": "National Institute of Standards and Technology",
+      "version": "5.12",
+      "doi": "10.18434/T4W30F",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "atomic_ground_configuration",
+        "atomic_ground_level",
+        "ionization_energy",
+        "atomic_spectroscopy"
+      ]
+    },
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000063",
+      "source_aliases": [
+        "SRC-B-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Boron",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "boron_standard_atomic_weight",
+        "boron_isotope_masses",
+        "boron_10_composition",
+        "boron_11_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000064",
+      "source_aliases": [
+        "SRC-B-002"
+      ],
+      "title": "NIST Chemistry WebBook — Boron",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-AND-PRIMARY-COMPILED-DATA",
+      "supports": [
+        "boron_electron_affinity",
+        "boron_gas_phase_ion_energetics"
+      ]
+    },
+    {
+      "source_id": "SRC-000065",
+      "source_aliases": [
+        "SRC-B-003"
+      ],
+      "title": "Boron — Element Information, Properties and Uses",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "SCIENTIFIC-REFERENCE",
+      "supports": [
+        "boron_density",
+        "boron_melting_point",
+        "boron_boiling_point",
+        "boron_state",
+        "plant_biology",
+        "boron_general_chemistry"
+      ]
+    },
+    {
+      "source_id": "SRC-000066",
+      "source_aliases": [
+        "SRC-B-004"
+      ],
+      "title": "Neutron Scattering Lengths and Cross Sections",
+      "organization": "NIST Center for Neutron Research",
+      "source_type": "NEUTRON-DATA-REFERENCE",
+      "supports": [
+        "B10_absorption_cross_section",
+        "B11_absorption_cross_section",
+        "isotope_specific_neutron_behavior"
+      ]
+    },
+    {
+      "source_id": "SRC-000067",
+      "source_aliases": [
+        "SRC-B-005"
+      ],
+      "title": "Neutron Standards and Alpha-Gamma Counting for Boron-10",
+      "organization": "NIST / National Bureau of Standards",
+      "source_type": "NEUTRON-METROLOGY-REFERENCE",
+      "supports": [
+        "B10_capture_branching",
+        "B10_478_keV_gamma",
+        "B10_neutron_standard"
+      ]
+    },
+    {
+      "source_id": "SRC-000068",
+      "source_aliases": [
+        "SRC-B-006"
+      ],
+      "title": "DOE Explains — Deuterium-Tritium Fusion Fuel",
+      "organization": "United States Department of Energy",
+      "source_type": "AUTHORITATIVE-FUSION-REFERENCE",
+      "supports": [
+        "proton_boron_fusion_context",
+        "higher_temperature_requirement",
+        "comparison_with_DT"
+      ]
+    },
+    {
+      "source_id": "SRC-000069",
+      "source_aliases": [
+        "SRC-B-007"
+      ],
+      "title": "Ionic high-pressure form of elemental boron",
+      "authors": [
+        "Artem R. Oganov",
+        "Jiuhua Chen",
+        "Carlo Gatti",
+        "et al."
+      ],
+      "journal": "Nature",
+      "year": 2009,
+      "volume": 457,
+      "pages": "863-867",
+      "doi": "10.1038/nature07736",
+      "source_type": "PRIMARY-HIGH-PRESSURE-RESEARCH",
+      "supports": [
+        "gamma_B28",
+        "B12_icosahedra",
+        "B2_pairs",
+        "partial_charge_transfer",
+        "high_pressure_phase"
+      ]
+    },
+    {
+      "source_id": "SRC-000070",
+      "source_aliases": [
+        "SRC-B-008"
+      ],
+      "title": "Superconductivity in Boron",
+      "authors": [
+        "M. I. Eremets",
+        "V. V. Struzhkin",
+        "H.-k. Mao",
+        "R. J. Hemley"
+      ],
+      "journal": "Science",
+      "year": 2001,
+      "source_type": "PRIMARY-HIGH-PRESSURE-EXPERIMENT",
+      "supports": [
+        "boron_metallization",
+        "high_pressure_superconductivity",
+        "Tc_pressure_relation"
+      ]
+    },
+    {
+      "source_id": "SRC-000071",
+      "source_aliases": [
+        "SRC-B-009"
+      ],
+      "title": "NIST Structural Ceramics Database — Boron Carbide",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 30",
+      "source_type": "CERAMIC-MATERIAL-DATA",
+      "supports": [
+        "B4C_hardness",
+        "B4C_structure",
+        "B4C_thermal_conductivity"
+      ],
+      "caution": "Selected hardness entry is unevaluated."
+    },
+    {
+      "source_id": "SRC-000072",
+      "source_aliases": [
+        "SRC-B-010"
+      ],
+      "title": "NIST Structural Ceramics Database — Boron Nitride",
+      "organization": "National Institute of Standards and Technology",
+      "database": "SRD 30",
+      "source_type": "CERAMIC-MATERIAL-DATA",
+      "supports": [
+        "cubic_BN",
+        "BN_elastic_properties",
+        "BN_material_family"
+      ]
+    },
+    {
+      "source_id": "SRC-000073",
+      "source_aliases": [
+        "SRC-B-011"
+      ],
+      "title": "On the Mechanism of Boron Ignition",
+      "organization": "NASA Technical Reports Server",
+      "authors": [
+        "D. G. Keil",
+        "E. L. Dreizin",
+        "W. Felder",
+        "E. P. Vicenzi"
+      ],
+      "year": 1997,
+      "source_type": "PRIMARY-COMBUSTION-EXPERIMENT",
+      "supports": [
+        "boron_ignition",
+        "staged_combustion",
+        "oxide_behavior",
+        "combustion_condition_dependence"
+      ]
+    },
+    {
+      "source_id": "SRC-000074",
+      "source_aliases": [
+        "SRC-B-012"
+      ],
+      "title": "Superconductivity in diamond",
+      "authors": [
+        "E. A. Ekimov",
+        "V. A. Sidorov",
+        "E. D. Bauer",
+        "et al."
+      ],
+      "journal": "Nature",
+      "year": 2004,
+      "volume": 428,
+      "pages": "542-545",
+      "doi": "10.1038/nature02449",
+      "source_type": "PRIMARY-MATERIAL-EXPERIMENT",
+      "supports": [
+        "boron_doped_diamond",
+        "acceptor_doping",
+        "type_II_superconductivity",
+        "emergent_host_dopant_state"
+      ]
+    },
+    {
+      "source_id": "SRC-000075",
+      "source_aliases": [
+        "SRC-B-013"
+      ],
+      "title": "Equilibrium p-T Phase Diagram of Boron",
+      "journal": "Scientific Reports",
+      "year": 2013,
+      "source_type": "EXPERIMENTAL-THERMODYNAMIC-REFERENCE",
+      "supports": [
+        "alpha_B12",
+        "beta_B106",
+        "gamma_B28",
+        "tetragonal_boron",
+        "boron_phase_diagram"
+      ]
+    },
+    {
+      "source_id": "SRC-000079",
+      "source_aliases": [
+        "SRC-B-SPEC-001"
+      ],
+      "title": "NIST Atomic Spectra Database / Handbook — Boron Persistent Lines",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SPECTROSCOPY",
+      "supports": [
+        "B_I_persistent_lines",
+        "B_II_persistent_lines",
+        "Boron_energy_levels",
+        "Boron_spectral_visuals"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 16,
+    "graphs": 4,
+    "tables": 8,
+    "sources": 16
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

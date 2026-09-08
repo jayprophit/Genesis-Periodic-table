@@ -1,0 +1,1546 @@
+{
+  "id": "records/0003-Lithium-Li/0003-Lithium-Li.md",
+  "key": "e4df92f3ceddab346553",
+  "mat": "MAT:0003",
+  "title": "0003 — Lithium — Li",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# 0003 — Lithium — Li\n\n```yaml\nmat_id: MAT:0003\nrecord_name: Lithium\nsymbol: Li\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 3\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0003\nlegacy_name: Lithium\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n```\n\n# 0. Record Navigation\n\nPrevious primary record:\n\n```text\nMAT:0002\n0002-Helium-He\n```\n\nCurrent record:\n\n```text\nMAT:0003\n0003-Lithium-Li\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property               |           Value | Unit / Status |\n| ---------------------- | --------------: | ------------- |\n| MAT ID                 |        MAT:0003 | —             |\n| Element                |         Lithium | —             |\n| Symbol                 |              Li | —             |\n| Atomic number          |               3 | dimensionless |\n| Proton count           |               3 | proton        |\n| Neutral electron count |               3 | electron      |\n| Period                 |               2 | —             |\n| Group                  |               1 | alkali metal  |\n| Block                  |               s | —             |\n| Ground configuration   |          1s²2s¹ | —             |\n| Ground level           | \\(^{2}S_{1/2}\\) | —             |\n| Standard atomic weight |  [6.938, 6.997] | interval      |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000035\n```\n\n---\n\n# 2. First Alkali-Metal Record\n\nLithium is the first MAT record whose ordinary elemental manifestation is a conventional metallic solid.\n\nThis activates record branches including:\n\n```text\nMETALLIC BONDING\nCRYSTAL STRUCTURE\nELECTRICAL CONDUCTIVITY\nTHERMAL CONDUCTIVITY\nELASTICITY\nPLASTIC DEFORMATION\nSURFACE OXIDATION\nCORROSION\nELECTROCHEMISTRY\nALLOYING\nBATTERY MATERIAL RELATIONSHIPS\n```\n\nThis distinguishes Lithium fundamentally from:\n\n```text\nHydrogen → ordinary molecular gas\nHelium   → ordinary monatomic noble gas\nLithium  → metallic solid\n```\n\n---\n\n# 3. Valence Structure\n\nGround-state neutral Lithium:\n\n$$\n1s^22s^1\n$$\n\nThe outer:\n\n$$\n2s^1\n$$\n\nelectron is comparatively weakly bound relative to the closed \\(1s^2\\) core.\n\nThis strongly influences Lithium's:\n\n* low first ionization energy;\n* alkali-metal chemistry;\n* metallic bonding;\n* common \\(+1\\) oxidation state;\n* electrochemical behavior.\n\n---\n\n# 4. First Ionisation\n\n$$\nLi\n\\rightarrow\nLi^+\n+\ne^-\n$$\n\nNIST evaluated value:\n\n$$\nE_{I1}\n=\n5.391714996\\ \\mathrm{eV}\n$$\n\nwith uncertainty:\n\n$$\n2.2\\times10^{-8}\\ \\mathrm{eV}\n$$\n\nCanonical ion:\n\n```text\nMAT:0003:ION:Li+1\n```\n\n---\n\n# 5. Higher Ionisation\n\nSecond ionisation:\n\n$$\nLi^+\n\\rightarrow\nLi^{2+}\n+\ne^-\n$$\n\n$$\nE_{I2}\n\\approx\n75.6400970\\ \\mathrm{eV}\n$$\n\nThird ionisation:\n\n$$\nLi^{2+}\n\\rightarrow\nLi^{3+}\n+\ne^-\n$$\n\n$$\nE_{I3}\n\\approx\n122.45435913\\ \\mathrm{eV}\n$$\n\nThe large jump after removing the valence electron reflects removal from the closed \\(1s^2\\) core.\n\nCanonical states:\n\n```text\nMAT:0003:ATOM:Li\nMAT:0003:ION:Li+1\nMAT:0003:ION:Li+2\nMAT:0003:ION:Li+3\n```\n\n---\n\n# 6. Ordinary Material State\n\nAt ordinary room conditions Lithium is:\n\n```text\nSOLID\nMETALLIC\nSOFT\nSILVERY\nHIGHLY REACTIVE\n```\n\nThe free metal is not normally found uncombined in nature because of its chemical reactivity.\n\n---\n\n# 7. Room-Temperature Crystal Structure\n\nAt approximately room temperature, metallic Lithium adopts a body-centred cubic structure.\n\nCanonical phase:\n\n```text\nMAT:0003:PHASE:BCC\n```\n\nReference crystallographic form:\n\n```text\nstructure: BCC\nspace_group: Im-3m\nspace_group_number: 229\n```\n\nRepresentative lattice parameter near room temperature:\n\n$$\na\\approx3.51\\ \\text{\\AA}\n$$\n\nThis value must retain measurement temperature and source.\n\nLithium also has additional low-temperature and high-pressure structural phases.\n\nTherefore:\n\n```text\nLi crystal structure = BCC\n```\n\nis valid only with the appropriate state conditions.\n\n---\n\n# 8. Density and Bulk Material Identity\n\nRepresentative room-temperature density:\n\n$$\n\\rho\\approx0.534\\text{–}0.535\\ \\mathrm{g\\,cm^{-3}}\n$$\n\nLithium is exceptionally low-density for a metal.\n\nThe exact property object must retain:\n\n```text\ntemperature\nsample purity\nphase\npressure\n```\n\n---\n\n# 9. Melting Point\n\nA recent NIST critical evaluation recommends:\n\n$$\nT_m\n=\n453.61\\pm0.14\\ \\mathrm K\n$$\n\nfor Lithium.\n\nThis should replace unsourced rounded values when MAT requires a canonical recommended value.\n\nEquivalent Celsius value is approximately:\n\n$$\n180.46^\\circ\\mathrm C\n$$\n\n---\n\n# 10. Boiling Region\n\nA commonly reported normal boiling temperature is approximately:\n\n$$\n1615\\ \\mathrm K\n$$\n\nbut MAT will store the exact recommended NIST boiling-point result from the alkali-metal evaluation in the detailed thermal table rather than using a rounded secondary value as the final canonical property.\n\n---\n\n# 11. Metallic Bonding\n\nLithium metal is described by delocalized electronic bonding rather than discrete Li-Li covalent molecules.\n\nConceptually:\n\n```text\nLi nuclei / ionic cores\n+\ndelocalized valence electrons\n↓\nmetallic solid\n```\n\nBulk metallic properties emerge from the collective electronic and lattice state.\n\nTherefore:\n\n```text\nisolated Li atom\n```\n\nand:\n\n```text\nbulk metallic Lithium\n```\n\nmust remain separate MAT states.\n\n---\n\n# 12. Electrical Branch\n\nMetallic Lithium is electrically conducting.\n\nConductivity depends on:\n\n* temperature;\n* purity;\n* crystal defects;\n* phase;\n* pressure;\n* strain;\n* sample history.\n\nA representative room-temperature resistivity is on the order of:\n\n$$\n10^{-7}\\ \\Omega\\,\\mathrm m\n$$\n\nThe final value must be stored with its specific source and temperature rather than as a condition-free constant.\n\n---\n\n# 13. Thermal Branch\n\nLithium metal is also a substantial thermal conductor.\n\nThermal transport depends on:\n\n```text\ntemperature\nelectronic contribution\nphonon contribution\npurity\ndefects\nphase\n```\n\nThis activates MAT's coupled:\n\n```text\nelectronic transport\n+\nthermal transport\n+\ncrystal structure\n```\n\nbranches.\n\n---\n\n# 14. Mechanical Branch\n\nLithium metal is soft and relatively low-modulus.\n\nRelevant future properties include:\n\n```text\nYoung modulus\nbulk modulus\nshear modulus\nyield behavior\nhardness\ncreep\nductility\nfracture\ntemperature dependence\n```\n\nThese must be measured on specified material states.\n\nThey are not atomic properties.\n\n---\n\n# 15. Chemical Reactivity\n\nLithium is a highly reactive alkali metal.\n\nImportant reaction families include:\n\n```text\noxygen\nwater\nnitrogen\nhydrogen\nhalogens\ncarbon-containing compounds\nelectrolytes\nhost materials\n```\n\nCommon oxidation state:\n\n$$\n+1\n$$\n\nbecause loss of the \\(2s\\) valence electron produces a closed-shell Li⁺ ion.\n\n---\n\n# 16. Lithium and Water\n\nA simplified reaction is:\n\n$$\n2Li+2H_2O\n\\rightarrow\n2LiOH+H_2\n$$\n\nThis is an exothermic chemical reaction.\n\nThe resulting Hydrogen link creates a direct relationship:\n\n```text\nMAT:0003\nCHEMICALLY-GENERATES\nMAT:0001:MOL:H2\n```\n\nunder appropriate reaction conditions.\n\n---\n\n# 17. Lithium and Oxygen\n\nLithium reacts with oxygen-containing environments.\n\nPossible products depend on conditions and chemistry.\n\nA common oxide relationship is:\n\n$$\nLi_2O\n$$\n\nbut Lithium chemistry must not be reduced to one oxide state.\n\nRelevant compound families include:\n\n```text\noxide\nperoxide-related chemistry\nhydroxide\ncarbonate\nnitride\nhydride\nhalides\norganolithium compounds\nbattery salts\n```\n\n---\n\n# 18. Lithium Nitride\n\nLithium has a notable direct relationship with Nitrogen:\n\n$$\n6Li+N_2\n\\rightarrow\n2Li_3N\n$$\n\nThis makes Lithium unusual among alkali metals in its strong direct nitride-forming behavior.\n\nCanonical future compound:\n\n```text\nMAT:CMP:Li3N\n```\n\n---\n\n# 19. Lithium Hydride\n\nLithium combines with Hydrogen to form Lithium hydride:\n\n$$\n2Li+H_2\n\\rightarrow\n2LiH\n$$\n\nFuture compound node:\n\n```text\nMAT:CMP:LiH\n```\n\nRelationship:\n\n```text\nMAT:0003\nFORMS-HYDRIDE-WITH\nMAT:0001\n```\n\nThis joins Hydrogen's hydride branch directly to the Lithium record.\n\n---\n\n# 20. Electrochemical Importance\n\nLithium has an exceptionally important electrochemical role because Lithium ions can be transferred reversibly between host materials in suitable electrochemical systems.\n\nThe core battery abstraction is not:\n\n```text\nLithium = battery\n```\n\nbut:\n\n```text\nLi-containing active material\n+\nelectrolyte\n+\nseparator\n+\ncounter-electrode\n+\ncurrent collectors\n+\ncontrolled redox reactions\n=\nelectrochemical cell\n```\n\nLithium's element record therefore stores relationships to battery systems rather than assigning complete battery properties to the element itself.\n\n---\n\n# 21. Li⁺ Transport\n\nA major electrochemical state is:\n\n$$\nLi^+\n$$\n\nTransport may occur through:\n\n```text\nliquid electrolyte\nsolid electrolyte\ncrystal host\npolymer host\ninterphase\nelectrode structure\n```\n\nPossible transport laws include diffusion and migration under electrochemical potential gradients.\n\nA simple diffusion approximation may use:\n\n$$\n\\mathbf J\n=\n-D\\nabla C\n$$\n\nbut real electrochemical transport requires electrochemical-potential and field effects.\n\n---\n\n# 22. Intercalation / Host Relationship\n\nIn many rechargeable battery materials, Lithium ions occupy or leave sites in a host structure.\n\nGeneric representation:\n\n$$\nHost+xLi^++xe^-\n\\rightleftharpoons\nLi_xHost\n$$\n\nThis must be stored as a:\n\n```text\nHOST-MATERIAL RELATIONSHIP\n```\n\nnot as a standalone intrinsic property of Lithium.\n\nImportant variables include:\n\n```text\nhost composition\ncrystal structure\nLi occupancy\nstate of charge\ntemperature\ncurrent\ncycle history\nparticle size\ndefects\nelectrolyte\n```\n\n---\n\n# 23. Isotope Family\n\nCurrent evaluated Lithium mass branch extends from:\n\n$$\n{}^3Li\n$$\n\nthrough:\n\n$$\n{}^{13}Li\n$$\n\nbut these states do not all have the same scientific status.\n\nCritical distinction:\n\n```text\n6Li, 7Li\n→ stable isotopes\n\n8Li, 9Li, 11Li\n→ radioactive nuclides\n\n4Li, 5Li, 10Li, 13Li\n→ extremely short-lived/unbound states\n\n3Li\n→ proton-unstable evaluated/uncertain state\n\n12Li\n→ neutron-unbound resonance without adopted half-life in NUBASE2020\n```\n\n---\n\n# 24. Lithium-6 — ⁶Li\n\nCanonical ID:\n\n```text\nMAT:0003:ISO:Li-6\n```\n\nComposition:\n\n```text\nprotons: 3\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n6.0151228874(16)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n1^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.0759(4)\n$$\n\nThis abundance is not universal for every Lithium material because isotopic fractionation and intentional isotope processing can alter it.\n\n---\n\n# 25. Lithium-7 — ⁷Li\n\nCanonical ID:\n\n```text\nMAT:0003:ISO:Li-7\n```\n\nComposition:\n\n```text\nprotons: 3\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n7.0160034366(45)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.9241(4)\n$$\n\n---\n\n# 26. Unstable and Unbound Lithium States\n\n## ³Li\n\n```text\nMAT:0003:ISO:Li-3\n```\n\nNUBASE2020 class:\n\n```text\nPROTON-UNSTABLE\nIDENTIFICATION-UNCERTAIN\n```\n\nEstimated relative atomic mass:\n\n$$\n3.0308(21\\#)\\ \\mathrm u\n$$\n\nDo not assign a fabricated half-life.\n\n---\n\n## ⁴Li\n\n```text\nMAT:0003:ISO:Li-4\n```\n\n$$\nt_{1/2}\n=\n91\\pm9\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n2^-\n$$\n\nPrincipal decay:\n\n```text\nPROTON EMISSION\n```\n\n---\n\n## ⁵Li\n\n```text\nMAT:0003:ISO:Li-5\n```\n\n$$\nt_{1/2}\n=\n370\\pm30\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nPrincipal decay:\n\n```text\nPROTON EMISSION\n```\n\n---\n\n## ⁸Li\n\n```text\nMAT:0003:ISO:Li-8\n```\n\n$$\nt_{1/2}\n=\n838.7\\pm0.3\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n2^+\n$$\n\nPrincipal decay family:\n\n```text\nBETA-MINUS\n```\n\nwith strong alpha-producing decay pathways through daughter-state breakup.\n\n---\n\n## ⁹Li\n\n```text\nMAT:0003:ISO:Li-9\n```\n\n$$\nt_{1/2}\n=\n178.2\\pm0.4\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nDecay:\n\n```text\nBETA-MINUS\n```\n\nwith substantial beta-delayed neutron emission.\n\n---\n\n## ¹⁰Li\n\n```text\nMAT:0003:ISO:Li-10\n```\n\n$$\nt_{1/2}\n=\n2.0\\pm0.5\\ \\mathrm{zs}\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\nAdopted spin/parity remains uncertain:\n\n```text\n(1-,2-)\n```\n\n---\n\n## ¹¹Li\n\n```text\nMAT:0003:ISO:Li-11\n```\n\n$$\nt_{1/2}\n=\n8.75\\pm0.06\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nDecay family:\n\n```text\nBETA-MINUS\nBETA-DELAYED-NEUTRON\nMULTI-PARTICLE BRANCHES\n```\n\n¹¹Li is also a major neutron-halo research nucleus.\n\n---\n\n## ¹²Li\n\n```text\nMAT:0003:ISO:Li-12\n```\n\nNUBASE2020 describes this as a neutron-unbound state/resonance.\n\nNo adopted half-life is given in the evaluation table.\n\nTherefore MAT stores:\n\n```yaml\nstability: \"NEUTRON-UNBOUND-RESONANCE\"\nhalf_life: \"NOT-ESTABLISHED\"\n```\n\nrather than inferring one.\n\n---\n\n## ¹³Li\n\n```text\nMAT:0003:ISO:Li-13\n```\n\n$$\nt_{1/2}\n=\n3.3\\pm1.2\\ \\mathrm{zs}\n$$\n\nSpin/parity:\n\n```text\n3/2-#\n```\n\nPrincipal decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\n---\n\n# 27. Isotope Architecture Lesson\n\nLithium adds another important MAT principle:\n\n$$\n\\boxed{\n\\text{mass-table entry}\n\\neq\n\\text{ordinary bound isotope}\n}\n$$\n\nThe database must distinguish:\n\n```text\nstable nuclide\nradioactive nuclide\nunbound resonance\nestimated state\nuncertain identification\n```\n\nrather than placing every mass number in the same semantic category.\n\n---\n\n# 28. Initial Material-State Cloud\n\n$$\n\\{\n{}^6Li,\n{}^7Li,\nLi,\nLi^+,\nLi^{2+},\nLi^{3+},\nLi_{\\rm metal},\nLi_{\\rm liquid},\nLi_{\\rm BCC},\nLi_{\\rm pressure\\ phase},\nLiH,\nLi_2O,\nLiOH,\nLi_3N,\nLi^+_{\\rm electrolyte},\nLi_{\\rm host},\nLi_{\\rm alloy},\n\\dots\n\\}\n$$\n\nLithium therefore becomes MAT's first strong demonstration of:\n\n```text\nATOM\n→ METAL\n→ ION\n→ COMPOUND\n→ HOST MATERIAL\n→ ELECTROCHEMICAL SYSTEM\n```\n\nall belonging to one elemental family while remaining separate data objects.\n\n---\n\n# 29. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- DESCRIPTION: Metallic Lithium physical specimen under controlled environment -->\n\n<!-- MAT-VISUAL: V03 -->\n<!-- DESCRIPTION: BCC metallic lattice and bonding -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- DESCRIPTION: Lithium isotope map 3Li through 13Li -->\n\n<!-- MAT-VISUAL: V07 -->\n<!-- DESCRIPTION: Bulk metallic physical properties -->\n\n<!-- MAT-VISUAL: V08 -->\n<!-- DESCRIPTION: Li / Li+ electrochemical charge-state map -->\n\n<!-- MAT-VISUAL: V11 -->\n<!-- DESCRIPTION: Mechanical crystal/material behavior -->\n\n<!-- MAT-VISUAL: V13 -->\n<!-- DESCRIPTION: Lithium reaction/electrochemical transformation network -->\n\n<!-- MAT-VISUAL: V17 -->\n<!-- DESCRIPTION: Batteries, alloys, ceramics, nuclear and industrial applications -->\n```\n\n---\n\n# 30. Current Record Status\n\n```yaml\nstatus: RESEARCHED\nmigration_status: IN-PROGRESS\nschema_validation_status: PENDING\nscientific_core: RESEARCHED\nvisual_specification: NOT-YET-LOCKED\nvisual_assets: NOT-GENERATED\n```\n\nThe NUBASE2020 evaluation gives ⁴Li `91 ± 9 ys`, ⁵Li `370 ± 30 ys`, stable ⁶Li/⁷Li, ⁸Li `838.7 ± 0.3 ms`, ⁹Li `178.2 ± 0.4 ms`, ¹⁰Li `2.0 ± 0.5 zs`, ¹¹Li `8.75 ± 0.06 ms`, and ¹³Li `3.3 ± 1.2 zs`; it does not provide an adopted half-life for ¹²Li.\n\n---\n\n# 31. Bulk Physical Property Layer\n\nLithium is MAT's first ordinary elemental metal with a complete conventional bulk-property branch.\n\nRepresentative reference values for solid Lithium include approximately:\n\n| Property                 | Representative Value | Unit      |\n| ------------------------ | -------------------: | --------- |\n| Density                  |                  535 | kg m⁻³    |\n| Young's modulus          |                  4.9 | GPa       |\n| Shear modulus            |                  4.2 | GPa       |\n| Bulk modulus             |                   11 | GPa       |\n| Electrical resistivity   | \\(9.5\\times10^{-8}\\) | Ω m       |\n| Thermal conductivity     |                   85 | W m⁻¹ K⁻¹ |\n| Linear thermal expansion |  \\(46\\times10^{-6}\\) | K⁻¹       |\n\nThese are reference material values rather than condition-free universal constants.\n\nEach final property object must retain:\n\n```text\ntemperature\npressure\nphase\nsample purity\nmicrostructure\nmeasurement method\nuncertainty\nsource\n```\n\n---\n\n# 32. Electrical Transport\n\nBulk metallic Lithium supports electronic conduction.\n\nA simple conductivity relation is:\n\n$$\n\\sigma=\\frac{1}{\\rho_e}\n$$\n\nwhere:\n\n* \\(\\sigma\\) = electrical conductivity;\n* \\(\\rho_e\\) = electrical resistivity.\n\nUsing the representative resistivity:\n\n$$\n\\rho_e\n\\approx\n9.5\\times10^{-8}\\ \\Omega\\,m\n$$\n\ngives an approximate conductivity:\n\n$$\n\\sigma\n\\approx\n1.05\\times10^7\\ S\\,m^{-1}\n$$\n\nfor the corresponding reference state.\n\nThis is a **derived reference value**.\n\nIt must not be copied to:\n\n```text\nLi+\nelectrolyte\nmolten salt\noxide\nbattery electrode\n```\n\nbecause those are different transport systems.\n\n---\n\n# 33. Thermal Transport\n\nRepresentative thermal conductivity:\n\n$$\nk\n\\approx\n85\\ W\\,m^{-1}K^{-1}\n$$\n\nfor metallic Lithium under the associated reference conditions.\n\nBoth electronic carriers and lattice excitations can contribute to thermal transport.\n\nMAT therefore links:\n\n```text\nelectrical state\ncrystal phase\ntemperature\ndefects\nthermal transport\n```\n\nrather than storing thermal conductivity as an isolated number.\n\n---\n\n# 34. Mechanical State\n\nRepresentative elastic values include:\n\n$$\nE\\approx4.9\\ GPa\n$$\n\n$$\nG\\approx4.2\\ GPa\n$$\n\n$$\nK\\approx11\\ GPa\n$$\n\nfor reference bulk Lithium.\n\nLithium is mechanically soft relative to many engineering metals.\n\nHowever:\n\n```text\nSOFT METAL\n```\n\ndoes not imply:\n\n```text\nZERO STRUCTURAL COMPLEXITY\n```\n\nbecause mechanical response changes with:\n\n* temperature;\n* strain rate;\n* crystal orientation;\n* purity;\n* phase;\n* pressure;\n* grain structure;\n* cycling history.\n\n---\n\n# 35. Atomic Versus Bulk Magnetism\n\nAn isolated neutral Lithium atom has the configuration:\n\n$$\n1s^22s^1\n$$\n\nand therefore contains one unpaired valence electron.\n\nAtomic-state magnetic description:\n\n```text\nPARAMAGNETIC ATOMIC STATE\n```\n\nBulk metallic Lithium must be treated separately as a collective electronic material.\n\nMAT rule:\n\n$$\n\\boxed{\nM_{\\rm atom}\n\\neq\nM_{\\rm bulk}\n}\n$$\n\nNo engineered permanent-magnet pole geometry is assigned to ordinary Lithium metal unless an actual engineered composite/material state justifies it.\n\n---\n\n# 36. Electrochemical State Space\n\nLithium's main electrochemical carrier is:\n\n$$\nLi^+\n$$\n\nbut the complete electrochemical state is:\n\n$$\nS_{\\rm electrochem}\n=\nF(\n\\text{host},\nx_{Li},\nT,\nP,\nV,\nI,\n\\mu_{Li},\nD_{Li},\n\\sigma_{\\rm ion},\n\\text{electrolyte},\nt,\n\\text{history}\n)\n$$\n\nwhere:\n\n* \\(x_{Li}\\) = Lithium occupancy or stoichiometric fraction;\n* \\(V\\) = electrochemical potential difference;\n* \\(I\\) = current;\n* \\(D_{Li}\\) = Lithium diffusion coefficient;\n* \\(\\sigma_{\\rm ion}\\) = ionic conductivity.\n\n---\n\n# 37. Lithium-Ion Cell Architecture\n\nMAT explicitly separates:\n\n```text\nLITHIUM ELEMENT\n```\n\nfrom:\n\n```text\nLITHIUM-ION BATTERY\n```\n\nA general rechargeable Li-ion architecture includes:\n\n```text\nnegative electrode / host\nelectrolyte\nseparator\npositive electrode / host\ncurrent collectors\nLi+ transport\nelectron transport through external circuit\n```\n\nDuring operation, Li⁺ migrates between host materials while electrons travel through the external circuit.\n\nBattery performance belongs to the **whole cell system**.\n\n---\n\n# 38. Host Insertion\n\nGeneric relationship:\n\n$$\nHost+xLi^++xe^-\n\\rightleftharpoons\nLi_xHost\n$$\n\nA host record must specify:\n\n```text\ncomposition\ncrystal structure\nsite geometry\nLi occupancy\nvoltage\ndiffusion pathway\nphase transition\ncycle history\nmechanical strain\ntemperature\n```\n\nThis directly preserves the legacy insight:\n\n$$\n\\boxed{\n\\text{geometry enables electrochemistry}\n}\n$$\n\n---\n\n# 39. Carbon Relationship\n\nCanonical future edge:\n\n```text\nMAT:0003\nINTERCALATES-IN\nMAT:0006\n```\n\nfor suitable graphitic carbon structures.\n\nThe relevant material object is not generic elemental Carbon alone.\n\nIt is a particular:\n\n```text\nGRAPHITE / CARBON HOST STRUCTURE\n```\n\nwith defined stacking, defects, particle structure and electrochemical environment.\n\n---\n\n# 40. Silicon Relationship\n\nCanonical future edge:\n\n```text\nMAT:0003\nALLOYS-WITH / LITHIATES\nMAT:0014\n```\n\nSilicon can accommodate large Lithium contents.\n\nHowever lithiation may produce substantial structural and volume change.\n\nTherefore MAT records simultaneously:\n\n```text\ncapacity\nLi content\nvolume change\nstress\nfracture\ncycle retention\nparticle geometry\n```\n\nThis becomes an important multi-objective materials-design example.\n\n---\n\n# 41. Oxygen Relationship\n\nLithium has strong relationships with Oxygen through compounds including:\n\n```text\nLi2O\nLiOH\nLi2O2-related systems\nLi2CO3\ntransition-metal oxides containing Li\n```\n\nThese relationships span:\n\n```text\nordinary inorganic chemistry\nsurface films\nceramics\nelectrochemistry\nbattery cathodes\nfusion materials\n```\n\nNo single `Li-O` property can represent all of these systems.\n\n---\n\n# 42. Nitrogen Relationship\n\nDirect nitride formation:\n\n$$\n6Li+N_2\n\\rightarrow\n2Li_3N\n$$\n\nFuture child:\n\n```text\nMAT:CMP:Li3N\n```\n\nLithium nitride also belongs to the solid-state ionics branch because Lithium-ion transport can occur through suitable Li-containing solids.\n\n---\n\n# 43. Hydrogen Relationship\n\nChemical:\n\n$$\n2Li+H_2\n\\rightarrow\n2LiH\n$$\n\nFuture child:\n\n```text\nMAT:CMP:LiH\n```\n\nThe Li–H relationship also includes isotope-specific nuclear technology involving Lithium and Tritium production.\n\nTherefore:\n\n```text\nLi-H CHEMICAL EDGE\n```\n\nand:\n\n```text\nLi-H NUCLEAR EDGE\n```\n\nremain separate.\n\n---\n\n# 44. Alloying Layer\n\nLithium forms alloys and intermetallic/material systems with many elements.\n\nImportant engineering relationship classes include:\n\n```text\nLi-Al\nLi-Mg\nLi-Si\nLi-Pb\n```\n\nApplications and functions differ substantially.\n\nExamples:\n\n### Aluminium-Lithium\n\nPotential roles:\n\n```text\nlow-density structural alloys\naerospace materials\n```\n\n### Magnesium-Lithium\n\nPotential roles:\n\n```text\nvery-low-density metallic alloys\nstructural research\n```\n\n### Lead-Lithium\n\nPotential roles:\n\n```text\nfusion breeding blanket systems\nliquid-metal breeder concepts\n```\n\nThe properties belong to the alloy/material record, not elemental Lithium.\n\n---\n\n# 45. Lithium-6 Neutron Reaction\n\nA central nuclear relationship is:\n\n$$\n{}^6Li+n\n\\rightarrow\n{}^4He+{}^3H\n$$\n\nDerived Q-value:\n\n$$\nQ\n\\approx\n4.7835\\ MeV\n$$\n\nThis reaction links the first three MAT element families directly:\n\n```text\nMAT:0003:ISO:Li-6\n+\nNEUTRON\n↓\nMAT:0002:ISO:He-4\n+\nMAT:0001:ISO:H-3\n```\n\nThis is a nuclear transformation.\n\nIt is not ordinary Lithium chemistry.\n\n---\n\n# 46. Lithium-7 Tritium-Breeding Branch\n\nAn important high-energy-neutron channel is:\n\n$$\n{}^7Li+n\n\\rightarrow\n{}^4He+{}^3H+n\n$$\n\nwith:\n\n$$\nQ\n\\approx\n-2.4676\\ MeV\n$$\n\nThe negative Q-value means the reaction requires sufficient incident energy.\n\nThe ⁶Li and ⁷Li branches therefore have substantially different neutron-energy dependence.\n\n---\n\n# 47. Fusion Fuel-Cycle Role\n\nLithium is not itself the primary D-T plasma fuel.\n\nInstead it can act as a **fuel-cycle enabling material**.\n\nConceptual sequence:\n\n```text\nLithium breeder\n↓ neutron interaction\nTritium\n↓ fuel processing\nD + T plasma\n↓ fusion\nHe-4 + neutron\n```\n\nCurrent fusion blanket concepts may use:\n\n```text\nlithium-containing ceramics\nlead-lithium\nother lithium-bearing breeder materials\nneutron multipliers\ncoolants\nstructural materials\n```\n\nThe blanket is therefore a system, not an elemental Lithium property.\n\n---\n\n# 48. Liquid Lithium and MHD Context\n\nMolten Lithium is electrically conducting.\n\nWhere electrically conducting liquid metal moves through magnetic fields:\n\n$$\n\\mathbf J\n$$\n\nand:\n\n$$\n\\mathbf B\n$$\n\nmay couple through electromagnetic forces.\n\nThis can make magnetohydrodynamic effects relevant in certain fusion/liquid-metal systems.\n\nMAT stores this only when:\n\n```text\nstate = LIQUID\nconductivity = specified\nvelocity = specified\nfield = specified\ngeometry = specified\n```\n\nOrdinary solid Lithium is not automatically an MHD system.\n\n---\n\n# 49. Manufacturing and Process Matrix\n\nImportant Lithium process families include:\n\n## Electrochemical\n\n```text\nLi plating\nLi stripping\nLi+ insertion\nLi+ extraction\nbattery cycling\nelectrolysis\n```\n\n## Thermal\n\n```text\nmelting\nsolidification\nalloying\nannealing\nheat treatment\n```\n\n## Chemical\n\n```text\noxidation\nhydride formation\nnitride formation\nsalt formation\norganolithium synthesis\n```\n\n## Ceramic\n\n```text\nLi oxide processing\nLi phosphate processing\nLi silicate processing\nsolid electrolyte processing\n```\n\n## Nuclear\n\n```text\nneutron irradiation\ntritium breeding\nisotope-specific reactions\n```\n\n## Vacuum / Thin Film\n\n```text\nevaporation\ndeposition\ncontrolled Li surfaces\n```\n\n## Plasma\n\n```text\nplasma-facing Li states\nLi-containing plasma\nsurface conditioning\n```\n\n---\n\n# 50. Surface and Interphase Layer\n\nLithium electrochemistry introduces a major new MAT object class:\n\n```text\nINTERPHASE\n```\n\nIn many electrochemical systems the Lithium-containing interface evolves chemically during use.\n\nRelevant data can include:\n\n```text\ncomposition\nthickness\nionic conductivity\nelectronic conductivity\nmechanical integrity\nformation cycle\ntemperature\nelectrolyte\npotential history\n```\n\nThe solid-electrolyte interphase, where applicable, is therefore not merely \"surface contamination.\"\n\nIt can be a functional material layer.\n\n---\n\n# 51. Dendrite and Morphology Branch\n\nIn Lithium-metal electrochemical systems, deposition can become spatially nonuniform.\n\nPossible morphologies include:\n\n```text\nsmooth deposit\nmossy lithium\nporous lithium\nfilamentary growth\ndendritic structures\n```\n\nThese depend on:\n\n```text\ncurrent density\nelectrolyte\ninterface\npressure\ntemperature\nsurface state\ntime\ncycle history\n```\n\nThe word:\n\n```text\ndendrite\n```\n\nmust therefore describe a morphology/process result rather than an intrinsic property of the element.\n\n---\n\n# 52. Battery Safety Separation\n\nMAT distinguishes:\n\n```text\nELEMENTAL LITHIUM METAL HAZARD\n```\n\nfrom:\n\n```text\nLITHIUM-ION CELL HAZARD\n```\n\nElemental Lithium metal is strongly water-reactive and can generate:\n\n$$\nH_2\n$$\n\nand caustic Lithium hydroxide during reaction with water.\n\nBattery-system hazards may instead involve:\n\n```text\ninternal short circuit\nseparator failure\nelectrolyte decomposition\ngas generation\nthermal runaway\nmechanical abuse\novercharge\ncell chemistry\n```\n\nA conventional Li-ion battery may contain no bulk metallic-Lithium electrode during normal operation.\n\n---\n\n# 53. Biological / Medical Context\n\nLithium is not a primary structural biological element.\n\nHowever:\n\n$$\nLi^+\n$$\n\nis biologically active.\n\nCertain Lithium salts are established medicines.\n\nMAT therefore distinguishes:\n\n```text\nelemental Li metal\nLi+ in biological fluid\nlithium carbonate medicine\nother lithium salts\n```\n\nThese are different chemical and biological objects.\n\nCurrent pharmaceutical labeling treats Lithium/Lithium carbonate as a mood-stabilizing medicine for bipolar I disorder and also carries a specific toxicity warning.\n\nMedical dose, serum concentration and clinical treatment data belong to dedicated medical/pharmaceutical records rather than the elemental property table.\n\n---\n\n# 54. Safety Layer\n\n## Elemental Metal\n\nHazard classes include:\n\n```text\nWATER-REACTIVE\nAIR / MOISTURE REACTIVE\nFLAMMABLE\nCORROSIVE REACTION PRODUCTS\n```\n\nA key reaction is:\n\n$$\n2Li+2H_2O\n\\rightarrow\n2LiOH+H_2\n$$\n\nThe generated Hydrogen introduces an additional fire/explosion pathway.\n\n---\n\n## Molten Lithium\n\nMolten Lithium requires separate high-temperature materials and containment considerations.\n\nDo not infer safe handling from room-temperature solid properties.\n\n---\n\n## Lithium Salts\n\nSafety varies by compound.\n\nFor example:\n\n```text\nLiCl\nLi2CO3\nLiOH\nLiPF6-containing systems\n```\n\nhave different hazards.\n\n---\n\n## Battery Systems\n\nBattery hazards belong to the full cell architecture and operating state.\n\n---\n\n# 55. Energy Roles\n\nLithium now has at least four distinct energy relationships.\n\n### Electrochemical\n\n$$\n\\text{chemical free energy}\n\\leftrightarrow\n\\text{electrical energy}\n$$\n\n### Nuclear Fuel-Cycle Support\n\n$$\nn+Li\n\\rightarrow\nT+He\n$$\n\n### Thermal / Liquid-Metal Systems\n\nLithium may serve as a working or functional material in specialized high-temperature engineering contexts.\n\n### Lightweight Materials Enabler\n\nLithium-containing alloys may reduce structural mass in suitable applications.\n\nThese four roles must remain separately searchable.\n\n---\n\n# 56. Theoretical Lithium-Metal Specific Capacity\n\nFor the reaction:\n\n$$\nLi\n\\rightarrow\nLi^+\n+\ne^-\n$$\n\none mole of Lithium transfers one mole of electrons.\n\nUsing Faraday's constant:\n\n$$\nF\n=\n96485.33212\\ C\\,mol^{-1}\n$$\n\nthe theoretical specific charge capacity is:\n\n$$\nQ_s\n=\n\\frac{F}{3.6M}\n$$\n\nin:\n\n$$\nmAh\\,g^{-1}\n$$\n\nwhere \\(M\\) is molar mass in g mol⁻¹.\n\nBecause MAT uses the standard atomic-weight interval:\n\n$$\nM\\in[6.938,\\ 6.997]\n$$\n\nthe theoretical capacity lies approximately between:\n\n$$\n3830\n$$\n\nand:\n\n$$\n3863\\ mAh\\,g^{-1}\n$$\n\nfor compositions spanning that interval.\n\nThe commonly cited value near:\n\n$$\n3860\\ mAh\\,g^{-1}\n$$\n\ntherefore implicitly assumes a particular effective molar mass.\n\nThis is another example of isotope composition affecting a derived engineering metric.\n\n---\n\n# 57. Causali E Lithium Examples\n\n## Electrochemical Transfer\n\nInitial state:\n\n$$\nS_0=Li_xHost_A\n$$\n\nIntervention:\n\n$$\nA=\n\\text{electrochemical potential/current}\n$$\n\nPossible result:\n\n$$\nC=\nLi_yHost_B\n$$\n\nsubject to electrochemistry, kinetics and material constraints.\n\n---\n\n## Melting\n\n$$\nS_0=Li_{\\rm BCC}\n$$\n\n$$\nA=T\\uparrow\n$$\n\nWhen the appropriate phase boundary is crossed:\n\n$$\nC=Li_{\\rm liquid}\n$$\n\n---\n\n## Nuclear Transformation\n\n$$\nS_0={}^6Li\n$$\n\n$$\nA=n\n$$\n\nunder an allowed nuclear interaction:\n\n$$\nC={}^3H+{}^4He\n$$\n\n---\n\n## Oxidation\n\n$$\nS_0=Li_{\\rm metal}\n$$\n\n$$\nA=\\text{oxidizing environment}\n$$\n\nPossible result family:\n\n```text\noxide\nhydroxide\ncarbonate-containing surface\nother reaction products\n```\n\ndepending on environment.\n\n---\n\n# 58. Multidimensional Relationship Geometry\n\nLithium reinforces the legacy insight that one element can have several unrelated \"nearest neighbors.\"\n\nNuclear:\n\n```text\nLi ↔ H\nLi ↔ He\n```\n\nElectronic periodicity:\n\n```text\nLi ↔ Na ↔ K ↔ Rb ↔ Cs ↔ Fr\n```\n\nBattery/material:\n\n```text\nLi ↔ C\nLi ↔ Si\nLi ↔ O\nLi ↔ P\nLi ↔ Fe\nLi ↔ Ni\nLi ↔ Mn\nLi ↔ Co\n```\n\nFusion materials:\n\n```text\nLi ↔ Pb\nLi ↔ Be\n```\n\nA single linear or Euclidean relationship cannot preserve all of these equally.\n\n---\n\n# 59. Updated Migration State\n\n```yaml\nlegacy_record: \"G0003\"\n\nmigration:\n  atomic_identity: COMPLETE\n  isotopes: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  bulk_metal: CORE-COMPLETE\n  crystal_structure: CORE-COMPLETE\n  electrical_transport: CORE-COMPLETE\n  thermal_transport: CORE-COMPLETE\n  mechanical: CORE-COMPLETE\n  magnetism: CORE-COMPLETE\n  electrochemistry: CORE-COMPLETE\n  battery_architecture: CORE-COMPLETE\n  host_relationships: CORE-COMPLETE\n  chemistry: CORE-COMPLETE\n  alloys: CORE-COMPLETE\n  fusion_breeding: CORE-COMPLETE\n  process_environment: CORE-COMPLETE\n  biological_context: CORE-COMPLETE\n  safety: CORE-COMPLETE\n\nremaining:\n  - isotope_child_files\n  - detailed_spectral_dataset\n  - detailed_phase_dataset\n  - detailed_high_pressure_dataset\n  - experiment_registry\n  - graph_manifest\n  - table_manifest\n  - people_and_intellectual_lineage\n  - visual_specification\n  - migration_audit\n  - schema_validation\n```\n\n# 60. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_architecture: \"PASS\"\n  isotope_semantics: \"PASS\"\n  bulk_material_architecture: \"PASS\"\n  electrochemical_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe bulk reference values above are consistent with current-accessible WebElements data: about `535 kg/m³`, `4.9 GPa` Young's modulus, `9.5×10⁻⁸ Ω·m` resistivity and `85 W·m⁻¹·K⁻¹` thermal conductivity. ([WebElements][1]) DOE also describes Li-ion batteries in terms of lithium ions moving between electrodes while electrons move through the external circuit, so keeping the **ion, host and whole-cell objects separate** is the right architecture. ([The Department of Energy's Energy.gov][2])\n\n## Individual Lithium isotope child records\n",
+  "bodyHash": "a3d1dd56ea754fe5cb905475032c80edd17fc24a8dd422d93947b236d64df988",
+  "header": {
+    "mat_id": "MAT:0003",
+    "record_name": "Lithium",
+    "symbol": "Li",
+    "record_class": "CHEMICAL_ELEMENT",
+    "atomic_number": 3,
+    "parent_id": "MAT:0000",
+    "schema_version": "1.0.0",
+    "record_version": "1.0.0",
+    "status": "RESEARCHED",
+    "legacy_id": "G0003",
+    "legacy_name": "Lithium",
+    "reference_implementation": "- MAT:0001"
+  },
+  "structured": [
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-03-Lithium-3.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-3",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-3",
+        "notation": "3Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 0,
+          "mass_number": 3,
+          "spin_parity": "3/2-#"
+        },
+        "relative_atomic_mass": {
+          "value": 3.0308,
+          "uncertainty": 0.0021,
+          "estimated": true,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "PROTON-UNSTABLE",
+          "half_life": "NOT-ESTABLISHED",
+          "identification_status": "UNCERTAIN"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-04-Lithium-4.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-4",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-4",
+        "notation": "4Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 1,
+          "mass_number": 4,
+          "spin_parity": "2-"
+        },
+        "relative_atomic_mass": {
+          "value": 4.02719,
+          "uncertainty": 0.00023,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 91,
+            "uncertainty": 9,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-05-Lithium-5.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-5",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-5",
+        "notation": "5Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 2,
+          "mass_number": 5,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 5.012538,
+          "uncertainty": 0.000054,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 370,
+            "uncertainty": 30,
+            "unit": "ys"
+          }
+        },
+        "decay": {
+          "principal_mode": "PROTON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-06-Lithium-6.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-6",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-6",
+        "notation": "6Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 3,
+          "mass_number": 6,
+          "spin_parity": "1+"
+        },
+        "relative_atomic_mass": {
+          "value": 6.0151228874,
+          "uncertainty": 1.6e-9,
+          "unit": "u",
+          "source_id": "SRC-000035"
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE"
+        },
+        "representative_isotopic_composition": {
+          "value": 0.0759,
+          "uncertainty": 0.0004,
+          "universal_constant": false
+        },
+        "nuclear_relationships": [
+          {
+            "reaction": "6Li + n -> 4He + 3H",
+            "calculation_id": "MAT:0003:CALC:001",
+            "fusion_fuel_cycle_role": "TRITIUM-BREEDING"
+          }
+        ],
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-07-Lithium-7.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-7",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-7",
+        "notation": "7Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 4,
+          "mass_number": 7,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 7.0160034366,
+          "uncertainty": 4.5e-9,
+          "unit": "u",
+          "source_id": "SRC-000035"
+        },
+        "stability": {
+          "status": "STABLE",
+          "half_life": "NOT-APPLICABLE"
+        },
+        "representative_isotopic_composition": {
+          "value": 0.9241,
+          "uncertainty": 0.0004,
+          "universal_constant": false
+        },
+        "nuclear_relationships": [
+          {
+            "reaction": "7Li + n -> 4He + 3H + n",
+            "calculation_id": "MAT:0003:CALC:002",
+            "threshold_dependent": true
+          }
+        ],
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-08-Lithium-8.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-8",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-8",
+        "notation": "8Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 5,
+          "mass_number": 8,
+          "spin_parity": "2+"
+        },
+        "relative_atomic_mass": {
+          "value": 8.022486246,
+          "uncertainty": 5e-8,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 838.7,
+            "uncertainty": 0.3,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "delayed_alpha_related_branch": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-09-Lithium-9.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-9",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-9",
+        "notation": "9Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 6,
+          "mass_number": 9,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 9.02679019,
+          "uncertainty": 2e-7,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 178.2,
+            "uncertainty": 0.4,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "beta_delayed_neutron": true
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-10-Lithium-10.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-10",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-10",
+        "notation": "10Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 7,
+          "mass_number": 10,
+          "spin_parity": "(1-,2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 10.035483,
+          "uncertainty": 0.000014,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "NEUTRON-UNBOUND",
+          "half_life": {
+            "value": 2,
+            "uncertainty": 0.5,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-11-Lithium-11.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-11",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-11",
+        "notation": "11Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 8,
+          "mass_number": 11,
+          "spin_parity": "3/2-"
+        },
+        "relative_atomic_mass": {
+          "value": 11.04372358,
+          "uncertainty": 6.6e-7,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "RADIOACTIVE",
+          "half_life": {
+            "value": 8.75,
+            "uncertainty": 0.06,
+            "unit": "ms"
+          }
+        },
+        "decay": {
+          "principal_mode": "BETA-MINUS",
+          "delayed_neutron_branches": true
+        },
+        "nuclear_structure": {
+          "neutron_halo": true,
+          "note": "Halo behavior is a nuclear-structure property and must not be represented as ordinary atomic electron geometry.\n"
+        },
+        "source_id": "SRC-000008",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-12-Lithium-12.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-12",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-12",
+        "notation": "12Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 9,
+          "mass_number": 12,
+          "spin_parity": "(1-,2-)"
+        },
+        "relative_atomic_mass": {
+          "value": 12.052517,
+          "uncertainty": 0.000016,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "NEUTRON-UNBOUND-RESONANCE",
+          "half_life": "NOT-ESTABLISHED"
+        },
+        "decay": {
+          "principal_mode": "NEUTRON-UNBOUND"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotope-13-Lithium-13.yaml",
+      "data": {
+        "isotope_id": "MAT:0003:ISO:Li-13",
+        "parent_id": "MAT:0003",
+        "name": "Lithium-13",
+        "notation": "13Li",
+        "nucleus": {
+          "protons": 3,
+          "neutrons": 10,
+          "mass_number": 13,
+          "spin_parity": "3/2-#"
+        },
+        "relative_atomic_mass": {
+          "value": 13.06263,
+          "uncertainty": 0.00038,
+          "unit": "u"
+        },
+        "stability": {
+          "status": "EXTREMELY-SHORT-LIVED",
+          "half_life": {
+            "value": 3.3,
+            "uncertainty": 1.2,
+            "unit": "zs"
+          }
+        },
+        "decay": {
+          "principal_mode": "TWO-NEUTRON-EMISSION"
+        },
+        "source_id": "SRC-000008",
+        "status": "ACTIVE-RESEARCH"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/isotopes/0003-Lithium-Li-Isotopes.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:ISOTOPES",
+        "parent_id": "MAT:0003",
+        "version": "1.0.0",
+        "isotopes": [
+          {
+            "isotope_id": "MAT:0003:ISO:Li-3",
+            "mass_number": 3,
+            "protons": 3,
+            "neutrons": 0,
+            "relative_atomic_mass": {
+              "value": 3.0308,
+              "uncertainty": 0.0021,
+              "estimated": true,
+              "unit": "u",
+              "source_id": "SRC-000035"
+            },
+            "nuclear": {
+              "stability": "PROTON-UNSTABLE",
+              "half_life": "NOT-ESTABLISHED",
+              "spin_parity": "3/2-#",
+              "identification_status": "UNCERTAIN",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-4",
+            "mass_number": 4,
+            "protons": 3,
+            "neutrons": 1,
+            "relative_atomic_mass": {
+              "value": 4.02719,
+              "uncertainty": 0.00023,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 91,
+                "uncertainty": 9,
+                "unit": "ys"
+              },
+              "spin_parity": "2-",
+              "decay": "PROTON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-5",
+            "mass_number": 5,
+            "protons": 3,
+            "neutrons": 2,
+            "relative_atomic_mass": {
+              "value": 5.012538,
+              "uncertainty": 0.000054,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 370,
+                "uncertainty": 30,
+                "unit": "ys"
+              },
+              "spin_parity": "3/2-",
+              "decay": "PROTON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-6",
+            "mass_number": 6,
+            "protons": 3,
+            "neutrons": 3,
+            "relative_atomic_mass": {
+              "value": 6.0151228874,
+              "uncertainty": 1.6e-9,
+              "unit": "u",
+              "source_id": "SRC-000035"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.0759,
+              "uncertainty": 0.0004,
+              "universal_constant": false
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "1+",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-7",
+            "mass_number": 7,
+            "protons": 3,
+            "neutrons": 4,
+            "relative_atomic_mass": {
+              "value": 7.0160034366,
+              "uncertainty": 4.5e-9,
+              "unit": "u",
+              "source_id": "SRC-000035"
+            },
+            "representative_isotopic_composition": {
+              "value": 0.9241,
+              "uncertainty": 0.0004,
+              "universal_constant": false
+            },
+            "nuclear": {
+              "stability": "STABLE",
+              "half_life": "NOT-APPLICABLE",
+              "spin_parity": "3/2-",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-8",
+            "mass_number": 8,
+            "protons": 3,
+            "neutrons": 5,
+            "relative_atomic_mass": {
+              "value": 8.022486246,
+              "uncertainty": 5e-8,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 838.7,
+                "uncertainty": 0.3,
+                "unit": "ms"
+              },
+              "spin_parity": "2+",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_alpha": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-9",
+            "mass_number": 9,
+            "protons": 3,
+            "neutrons": 6,
+            "relative_atomic_mass": {
+              "value": 9.02679019,
+              "uncertainty": 2e-7,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 178.2,
+                "uncertainty": 0.4,
+                "unit": "ms"
+              },
+              "spin_parity": "3/2-",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_neutron": true,
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-10",
+            "mass_number": 10,
+            "protons": 3,
+            "neutrons": 7,
+            "relative_atomic_mass": {
+              "value": 10.035483,
+              "uncertainty": 0.000014,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 2,
+                "uncertainty": 0.5,
+                "unit": "zs"
+              },
+              "spin_parity": "(1-,2-)",
+              "principal_decay": "NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-11",
+            "mass_number": 11,
+            "protons": 3,
+            "neutrons": 8,
+            "relative_atomic_mass": {
+              "value": 11.04372358,
+              "uncertainty": 6.6e-7,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 8.75,
+                "uncertainty": 0.06,
+                "unit": "ms"
+              },
+              "spin_parity": "3/2-",
+              "principal_decay": "BETA-MINUS",
+              "beta_delayed_neutron": true,
+              "source_id": "SRC-000008"
+            },
+            "nuclear_structure": {
+              "neutron_halo": true
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-12",
+            "mass_number": 12,
+            "protons": 3,
+            "neutrons": 9,
+            "relative_atomic_mass": {
+              "value": 12.052517,
+              "uncertainty": 0.000016,
+              "unit": "u"
+            },
+            "nuclear": {
+              "stability": "NEUTRON-UNBOUND-RESONANCE",
+              "half_life": "NOT-ESTABLISHED",
+              "spin_parity": "(1-,2-)",
+              "decay": "NEUTRON-UNBOUND",
+              "source_id": "SRC-000008"
+            }
+          },
+          {
+            "isotope_id": "MAT:0003:ISO:Li-13",
+            "mass_number": 13,
+            "protons": 3,
+            "neutrons": 10,
+            "relative_atomic_mass": {
+              "value": 13.06263,
+              "uncertainty": 0.00038,
+              "unit": "u"
+            },
+            "nuclear": {
+              "half_life": {
+                "value": 3.3,
+                "uncertainty": 1.2,
+                "unit": "zs"
+              },
+              "spin_parity": "3/2-#",
+              "principal_decay": "TWO-NEUTRON-EMISSION",
+              "source_id": "SRC-000008"
+            }
+          }
+        ],
+        "rules": {
+          "mass_table_entry_implies_bound_nuclide": false,
+          "stable_half_life_representation": "NOT-APPLICABLE",
+          "unidentified_state_gets_numeric_half_life": false,
+          "isotopic_composition_is_universal": false
+        }
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/properties/0003-Lithium-Li-Bulk-Properties.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:BULK-PROPERTIES",
+        "record_id": "MAT:0003",
+        "version": "1.0.0",
+        "reference_state": {
+          "material": "ELEMENTAL-LITHIUM-METAL",
+          "phase": "BCC",
+          "pressure": "NEAR-AMBIENT",
+          "temperature": "ROOM-TEMPERATURE-REFERENCE",
+          "note": "Values are representative references. Final measurement objects must preserve exact conditions and primary provenance.\n"
+        },
+        "properties": {
+          "density": {
+            "value": 535,
+            "unit": "kg/m3",
+            "source_id": "SRC-000040"
+          },
+          "young_modulus": {
+            "value": 4.9,
+            "unit": "GPa",
+            "source_id": "SRC-000040"
+          },
+          "shear_modulus": {
+            "value": 4.2,
+            "unit": "GPa",
+            "source_id": "SRC-000040"
+          },
+          "bulk_modulus": {
+            "value": 11,
+            "unit": "GPa",
+            "source_id": "SRC-000040"
+          },
+          "electrical_resistivity": {
+            "value": 9.5e-8,
+            "unit": "ohm*m",
+            "source_id": "SRC-000040"
+          },
+          "electrical_conductivity": {
+            "value": 10526316,
+            "unit": "S/m",
+            "derived": true,
+            "equation": "sigma = 1/rho"
+          },
+          "thermal_conductivity": {
+            "value": 85,
+            "unit": "W/(m*K)",
+            "source_id": "SRC-000040"
+          },
+          "linear_thermal_expansion": {
+            "value": 0.000046,
+            "unit": "1/K",
+            "source_id": "SRC-000040"
+          }
+        },
+        "rules": {
+          "bulk_property_equals_atomic_property": false,
+          "reference_value_is_universal": false,
+          "phase_and_temperature_required_for_final_measurement": true
+        }
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li-Electrochemistry.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:ELECTROCHEMISTRY",
+        "record_id": "MAT:0003",
+        "version": "1.0.0",
+        "carrier": {
+          "species": "MAT:0003:ION:Li+1"
+        },
+        "battery_architecture": {
+          "lithium_is_whole_battery": false,
+          "required_system_objects": [
+            "negative_electrode",
+            "positive_electrode",
+            "electrolyte",
+            "separator",
+            "current_collectors",
+            "external_circuit",
+            "interfaces"
+          ]
+        },
+        "transport": {
+          "ionic": {
+            "variables": [
+              "concentration",
+              "activity",
+              "chemical_potential",
+              "electric_potential",
+              "diffusion_coefficient",
+              "ionic_conductivity",
+              "temperature",
+              "pressure"
+            ]
+          },
+          "electronic": {
+            "location": [
+              "electrode",
+              "current_collector",
+              "external_circuit"
+            ]
+          }
+        },
+        "host_insertion": {
+          "general_reaction": "Host + xLi+ + xe- <-> LixHost",
+          "required_context": [
+            "host_material_id",
+            "crystal_structure",
+            "Li_site",
+            "occupancy",
+            "state_of_charge",
+            "voltage",
+            "current",
+            "temperature",
+            "cycle_number",
+            "strain",
+            "phase"
+          ]
+        },
+        "relationship_families": {
+          "graphite": {
+            "future_target": "MAT:0006",
+            "relationship": "INTERCALATION",
+            "target_status": "RESOLVED"
+          },
+          "silicon": {
+            "future_target": "MAT:0014",
+            "relationship": "ALLOYING-LITHIATION",
+            "target_status": "RESERVED-PENDING-SILICON"
+          }
+        },
+        "interphase": {
+          "enabled": true,
+          "tracked_metrics": [
+            "composition",
+            "thickness",
+            "ionic_conductivity",
+            "electronic_conductivity",
+            "mechanical_state",
+            "formation_cycle",
+            "potential_history"
+          ]
+        },
+        "deposition": {
+          "possible_morphologies": [
+            "uniform",
+            "mossy",
+            "porous",
+            "filamentary",
+            "dendritic"
+          ],
+          "morphology_is_intrinsic_element_property": false
+        },
+        "theoretical_lithium_metal_capacity": {
+          "electron_transfer_per_atom": 1,
+          "standard_atomic_weight_interval": {
+            "minimum": 6.938,
+            "maximum": 6.997
+          },
+          "capacity_range": {
+            "maximum_approx": {
+              "value": 3863,
+              "unit": "mAh/g"
+            },
+            "minimum_approx": {
+              "value": 3830,
+              "unit": "mAh/g"
+            }
+          },
+          "calculation_id": "MAT:0003:CALC:003"
+        },
+        "rules": {
+          "cell_voltage_is_element_property": false,
+          "battery_specific_energy_is_element_property": false,
+          "cycle_life_is_element_property": false,
+          "dendrite_is_intrinsic_property": false
+        }
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li-Graph-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:GRAPHS",
+        "record_id": "MAT:0003",
+        "version": "1.0.0",
+        "graphs": [
+          {
+            "graph_id": "MAT:0003:GRAPH:001",
+            "filename": "0003-Lithium-Li-GRAPH-001-Isotope-Lifetime-Map.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-001-Isotope-Lifetime-Map.csv",
+            "source_ids": [
+              "SRC-000008"
+            ],
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:002",
+            "filename": "0003-Lithium-Li-GRAPH-002-Atomic-Energy-Levels.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-002-Atomic-Energy-Levels.csv",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "READY-FOR-DATA-EXTRACTION"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:003",
+            "filename": "0003-Lithium-Li-GRAPH-003-Resonance-Doublet.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-003-Resonance-Doublet.csv",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:004",
+            "filename": "0003-Lithium-Li-GRAPH-004-Ionization-Energies.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-004-Ionization-Energies.csv",
+            "source_ids": [
+              "SRC-000005"
+            ],
+            "status": "GENERATED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:005",
+            "filename": "0003-Lithium-Li-GRAPH-005-Phase-Pressure-Map.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-005-Phase-Pressure-Map.csv",
+            "source_ids": [
+              "SRC-000039"
+            ],
+            "status": "DATASET-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:006",
+            "filename": "0003-Lithium-Li-GRAPH-006-Li6-Li7-Nuclear-Comparison.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-006-Li6-Li7-Nuclear-Comparison.csv",
+            "status": "READY-FOR-GENERATION"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:007",
+            "filename": "0003-Lithium-Li-GRAPH-007-Bulk-Transport-vs-Temperature.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-007-Bulk-Transport-vs-Temperature.csv",
+            "status": "PRIMARY-DATASET-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:008",
+            "filename": "0003-Lithium-Li-GRAPH-008-Host-Lithiation-Concept.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-008-Host-Lithiation-Concept.csv",
+            "status": "SYSTEM-SPECIFIC-DATA-REQUIRED"
+          },
+          {
+            "graph_id": "MAT:0003:GRAPH:009",
+            "filename": "0003-Lithium-Li-GRAPH-009-Theoretical-Capacity-vs-Isotopic-Mass.svg",
+            "data_filename": "0003-Lithium-Li-GRAPH-009-Theoretical-Capacity-vs-Isotopic-Mass.csv",
+            "calculation_id": "MAT:0003:CALC:003",
+            "status": "GENERATED"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li-Processes-and-Environments.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:PROCESSES",
+        "record_id": "MAT:0003",
+        "processes": [
+          {
+            "process_id": "MAT:0003:PROC:MELTING",
+            "input": "MAT:0003:PHASE:BCC",
+            "output": "MAT:0003:PHASE:LIQUID",
+            "family": "THERMAL"
+          },
+          {
+            "process_id": "MAT:0003:PROC:OXIDATION",
+            "input": "Li metal",
+            "family": "CHEMICAL",
+            "products": "CONDITION-DEPENDENT"
+          },
+          {
+            "process_id": "MAT:0003:PROC:WATER",
+            "reaction": "2Li + 2H2O -> 2LiOH + H2",
+            "family": "CHEMICAL",
+            "safety_relevant": true
+          },
+          {
+            "process_id": "MAT:0003:PROC:HYDRIDE",
+            "reaction": "2Li + H2 -> 2LiH",
+            "family": "CHEMICAL"
+          },
+          {
+            "process_id": "MAT:0003:PROC:NITRIDE",
+            "reaction": "6Li + N2 -> 2Li3N",
+            "family": "CHEMICAL"
+          },
+          {
+            "process_id": "MAT:0003:PROC:INTERCALATION",
+            "family": "ELECTROCHEMICAL",
+            "carrier": "MAT:0003:ION:Li+1"
+          },
+          {
+            "process_id": "MAT:0003:PROC:PLATING",
+            "family": "ELECTROCHEMICAL",
+            "output": "Li metal deposit"
+          },
+          {
+            "process_id": "MAT:0003:PROC:LI6-NEUTRON",
+            "family": "NUCLEAR",
+            "reaction": "6Li + n -> 4He + 3H",
+            "calculation_id": "MAT:0003:CALC:001"
+          },
+          {
+            "process_id": "MAT:0003:PROC:LI7-NEUTRON",
+            "family": "NUCLEAR",
+            "reaction": "7Li + n -> 4He + 3H + n",
+            "calculation_id": "MAT:0003:CALC:002"
+          }
+        ],
+        "environments": {
+          "AMBIENT_DRY_INERT": {
+            "preferred_for_elemental_metal_preservation": true
+          },
+          "AIR_MOISTURE": {
+            "effects": [
+              "surface_reaction",
+              "oxidation",
+              "chemical_degradation"
+            ]
+          },
+          "WATER": {
+            "effects": [
+              "lithium_hydroxide_formation",
+              "hydrogen_generation",
+              "heat_release"
+            ],
+            "hazard": "HIGH"
+          },
+          "HIGH_TEMPERATURE": {
+            "effects": [
+              "melting",
+              "increased_reactivity",
+              "liquid_metal_state"
+            ]
+          },
+          "HIGH_PRESSURE": {
+            "effects": [
+              "crystal_phase_transitions",
+              "electronic_structure_changes",
+              "possible_superconducting_states"
+            ]
+          },
+          "ELECTROCHEMICAL": {
+            "effects": [
+              "Li_ion_transport",
+              "insertion",
+              "extraction",
+              "plating",
+              "stripping",
+              "interphase_growth"
+            ]
+          },
+          "NEUTRON_FIELD": {
+            "isotope_specific": true,
+            "effects": [
+              "Li6_tritium_breeding",
+              "Li7_threshold_reactions"
+            ]
+          },
+          "MAGNETIC_FIELD_LIQUID_METAL": {
+            "possible_effect": [
+              "MHD_coupling"
+            ],
+            "conditions_required": true
+          },
+          "BIOLOGICAL": {
+            "relevant_species": "Li+",
+            "elemental_metal_state": "NOT-APPLICABLE-AS-NORMAL-BIOLOGICAL-STATE"
+          }
+        }
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li-Table-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:TABLES",
+        "record_id": "MAT:0003",
+        "tables": [
+          {
+            "id": "MAT:0003:TABLE:001",
+            "file": "0003-Lithium-Li-TABLE-001-Isotopes.md",
+            "status": "COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:002",
+            "file": "0003-Lithium-Li-TABLE-002-Atomic-Identity.md",
+            "status": "COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:003",
+            "file": "0003-Lithium-Li-TABLE-003-Bulk-Metal-Properties.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:004",
+            "file": "0003-Lithium-Li-TABLE-004-Spectral-Transitions.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:005",
+            "file": "0003-Lithium-Li-TABLE-005-Electrochemical-Metrics.md",
+            "status": "ARCHITECTURE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:006",
+            "file": "0003-Lithium-Li-TABLE-006-Key-Relationships.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:007",
+            "file": "0003-Lithium-Li-TABLE-007-Nuclear-Reactions.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:008",
+            "file": "0003-Lithium-Li-TABLE-008-Process-Matrix.md",
+            "status": "CORE-COMPLETE"
+          },
+          {
+            "id": "MAT:0003:TABLE:009",
+            "file": "0003-Lithium-Li-TABLE-009-Evidence-and-Sources.md",
+            "status": "COMPLETE"
+          }
+        ]
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li-Visual-Manifest.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:VISUALS",
+        "record_id": "MAT:0003",
+        "visuals": {
+          "V01": {
+            "file": "0003-Lithium-Li-FIG-001-Metallic-Lithium.png",
+            "status": "SOURCE-IMAGE-REQUIRED"
+          },
+          "V02": {
+            "file": "0003-Lithium-Li-FIG-002-Atomic-Identity.svg",
+            "status": "GENERATED"
+          },
+          "V03": {
+            "file": "0003-Lithium-Li-DIAGRAM-001-BCC-Metallic-Bonding.svg",
+            "status": "GENERATED"
+          },
+          "V04": {
+            "files": [
+              "0003-Lithium-Li-FIG-003-Core-Valence-Probability.svg",
+              "0003-Lithium-Li-FIG-004-Energy-Level-Structure.svg"
+            ],
+            "status": "GENERATED"
+          },
+          "V05": {
+            "file": "0003-Lithium-Li-FIG-005-Isotope-Map.svg",
+            "status": "GENERATED"
+          },
+          "V06": {
+            "file": "0003-Lithium-Li-FIG-006-Spectral-Fingerprint.svg",
+            "status": "GENERATED"
+          },
+          "V07": {
+            "file": "0003-Lithium-Li-FIG-007-Bulk-Property-Dashboard.svg",
+            "status": "GENERATED"
+          },
+          "V08": {
+            "file": "0003-Lithium-Li-DIAGRAM-002-Electronic-and-Ionic-Transport.svg",
+            "status": "GENERATED"
+          },
+          "V09": {
+            "file": "0003-Lithium-Li-DIAGRAM-003-Atomic-vs-Bulk-Magnetic-State.svg",
+            "status": "GENERATED"
+          },
+          "V10": {
+            "file": "0003-Lithium-Li-FIG-008-Thermal-State.svg",
+            "status": "GENERATED"
+          },
+          "V11": {
+            "file": "0003-Lithium-Li-FIG-009-Mechanical-Crystal-State.svg",
+            "status": "GENERATED"
+          },
+          "V12": {
+            "file": "0003-Lithium-Li-FIG-010-Pressure-Phase-Map.svg",
+            "status": "DATASET-REQUIRED"
+          },
+          "V13": {
+            "file": "0003-Lithium-Li-DIAGRAM-004-Transformation-Network.svg",
+            "status": "GENERATED"
+          },
+          "V14": {
+            "file": "0003-Lithium-Li-DIAGRAM-005-Knowledge-Graph.svg",
+            "status": "GENERATED"
+          },
+          "V15": {
+            "files": [
+              "0003-Lithium-Li-MODEL-SCI-001-BCC-Lattice.glb",
+              "0003-Lithium-Li-MODEL-SCI-002-Atomic-Probability.glb"
+            ],
+            "status": "GENERATED"
+          },
+          "V16": {
+            "file": "0003-Lithium-Li-MODEL-DATA-001.glb",
+            "status": "MASTER-TRANSFORM-PENDING"
+          },
+          "V17": {
+            "file": "0003-Lithium-Li-FIG-011-Applications.svg",
+            "status": "GENERATED"
+          },
+          "V18": {
+            "file": "0003-Lithium-Li-DIAGRAM-006-Evidence-Provenance.svg",
+            "status": "GENERATED"
+          }
+        },
+        "summary": {
+          "visual_slots": 18,
+          "two_dimensional_assets": 18,
+          "scientific_3d_models": 2,
+          "data_extruded_models": 1,
+          "total_core_assets": 21,
+          "generated_assets_complete": false
+        }
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/data/structured/0003-Lithium-Li.yaml",
+      "data": {
+        "mat_id": "MAT:0003",
+        "record_name": "Lithium",
+        "symbol": "Li",
+        "record_class": "CHEMICAL_ELEMENT",
+        "atomic_number": 3,
+        "legacy": {
+          "legacy_id": "G0003",
+          "migration_status": "IN-PROGRESS"
+        },
+        "identity": {
+          "proton_count": 3,
+          "neutral_electron_count": 3,
+          "period": 2,
+          "group": 1,
+          "block": "s",
+          "material_class": "ALKALI-METAL"
+        },
+        "atomic_weight": {
+          "type": "INTERVAL",
+          "minimum": 6.938,
+          "maximum": 6.997,
+          "source_id": "SRC-000035"
+        },
+        "electronic_ground_state": {
+          "configuration": "1s2 2s1",
+          "term": "2S1/2",
+          "source_id": "SRC-000005"
+        },
+        "ionization": {
+          "first": {
+            "value": 5.391714996,
+            "uncertainty": 2.2e-8,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "second": {
+            "value": 75.640097,
+            "uncertainty": 0.0000012,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          },
+          "third": {
+            "value": 122.45435913,
+            "uncertainty": 1.1e-7,
+            "unit": "eV",
+            "source_id": "SRC-000005"
+          }
+        },
+        "states": [
+          {
+            "id": "MAT:0003:ATOM:Li",
+            "charge": 0
+          },
+          {
+            "id": "MAT:0003:ION:Li+1",
+            "charge": 1,
+            "common_chemical_state": true
+          },
+          {
+            "id": "MAT:0003:ION:Li+2",
+            "charge": 2
+          },
+          {
+            "id": "MAT:0003:ION:Li+3",
+            "charge": 3
+          }
+        ],
+        "bulk_reference": {
+          "state_at_20C": "SOLID",
+          "phase": {
+            "id": "MAT:0003:PHASE:BCC",
+            "structure": "BODY-CENTRED-CUBIC",
+            "space_group": "Im-3m",
+            "space_group_number": 229,
+            "reference_temperature": {
+              "value": 298,
+              "unit": "K"
+            }
+          },
+          "density": {
+            "representative_value": 0.534,
+            "unit": "g/cm3",
+            "temperature": "approximately 20 C",
+            "status": "REFERENCE-VALUE"
+          },
+          "melting_point": {
+            "value": 453.61,
+            "uncertainty": 0.14,
+            "unit": "K",
+            "source_id": "SRC-000036"
+          }
+        },
+        "isotopes": {
+          "stable": [
+            "MAT:0003:ISO:Li-6",
+            "MAT:0003:ISO:Li-7"
+          ],
+          "evaluated_mass_range": {
+            "minimum": 3,
+            "maximum": 13
+          }
+        },
+        "electrochemistry": {
+          "principal_ion": "MAT:0003:ION:Li+1",
+          "host_insertion_relationships": true,
+          "battery_relationships": true
+        },
+        "scientific_status": {
+          "atomic_identity": "ESTABLISHED",
+          "bulk_bcc_phase_near_room_temperature": "ESTABLISHED",
+          "stable_isotopes": "ESTABLISHED",
+          "electrochemical_role": "ESTABLISHED",
+          "extreme_pressure_phases": "ACTIVE-RESEARCH"
+        },
+        "record_version": "1.0.0",
+        "schema_version": "1.0.0",
+        "status": "RESEARCHED"
+      }
+    },
+    {
+      "path": "records/0003-Lithium-Li/relationships/0003-Lithium-Li-Relationships.yaml",
+      "data": {
+        "registry_id": "MAT:0003:REG:RELATIONSHIPS",
+        "record_id": "MAT:0003",
+        "relationships": [
+          {
+            "relationship_id": "MAT:0003:REL:0001",
+            "source": "MAT:0003:ISO:Li-6",
+            "type": "NUCLEAR-REACTION-WITH",
+            "target": "NEUTRON",
+            "products": [
+              "MAT:0002:ISO:He-4",
+              "MAT:0001:ISO:H-3"
+            ],
+            "calculation_id": "MAT:0003:CALC:001"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0002",
+            "source": "MAT:0003:ISO:Li-7",
+            "type": "NUCLEAR-REACTION-WITH",
+            "target": "NEUTRON",
+            "products": [
+              "MAT:0002:ISO:He-4",
+              "MAT:0001:ISO:H-3",
+              "NEUTRON"
+            ],
+            "calculation_id": "MAT:0003:CALC:002"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0010",
+            "source": "MAT:0003",
+            "type": "FORMS-HYDRIDE-WITH",
+            "target": "MAT:0001",
+            "product": "MAT:CMP:LiH"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0011",
+            "source": "MAT:0003",
+            "type": "FORMS-NITRIDE-WITH",
+            "target": "MAT:0007",
+            "target_status": "RESOLVED",
+            "product": "MAT:CMP:Li3N"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0012",
+            "source": "MAT:0003",
+            "type": "FORMS-OXIDE-SYSTEMS-WITH",
+            "target": "MAT:0008",
+            "target_status": "RESOLVED"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0013",
+            "source": "MAT:0003",
+            "type": "INTERCALATES-IN",
+            "target": "MAT:0006",
+            "target_status": "RESOLVED"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0014",
+            "source": "MAT:0003",
+            "type": "ALLOYS-WITH",
+            "target": "MAT:0014",
+            "target_status": "RESERVED-PENDING-SILICON"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0015",
+            "source": "MAT:0003",
+            "type": "ALLOYS-WITH",
+            "target": "MAT:0013",
+            "target_status": "RESERVED-PENDING-ALUMINIUM"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0016",
+            "source": "MAT:0003",
+            "type": "ALLOYS-WITH",
+            "target": "MAT:0012",
+            "target_status": "RESERVED-PENDING-MAGNESIUM"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0017",
+            "source": "MAT:0003",
+            "type": "FUSION-BLANKET-RELATIONSHIP-WITH",
+            "target": "MAT:0082",
+            "target_name": "Lead",
+            "target_status": "RESERVED-PENDING-LEAD"
+          },
+          {
+            "relationship_id": "MAT:0003:REL:0090",
+            "source": "MAT:0003",
+            "type": "LEGACY-SUCCESSOR-OF",
+            "target": "G0003"
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    "records/0003-Lithium-Li/diagrams/bonding/0003-Lithium-Li-DIAGRAM-001-BCC-Metallic-Bonding.svg",
+    "records/0003-Lithium-Li/diagrams/fields/0003-Lithium-Li-DIAGRAM-002-Electronic-and-Ionic-Transport.svg",
+    "records/0003-Lithium-Li/diagrams/fields/0003-Lithium-Li-DIAGRAM-003-Atomic-vs-Bulk-Magnetic-State.svg",
+    "records/0003-Lithium-Li/diagrams/processes/0003-Lithium-Li-DIAGRAM-004-Transformation-Network.svg",
+    "records/0003-Lithium-Li/diagrams/processes/0003-Lithium-Li-DIAGRAM-005-Battery-System.svg",
+    "records/0003-Lithium-Li/diagrams/relationships/0003-Lithium-Li-DIAGRAM-005-Knowledge-Graph.svg",
+    "records/0003-Lithium-Li/diagrams/relationships/0003-Lithium-Li-DIAGRAM-006-Evidence-Provenance.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-001-Ionization-Steps.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-001-Isotope-Lifetime-Map.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-003-Resonance-Doublet.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-003-Specific-Capacity-Range.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-004-Ionization-Energies.svg",
+    "records/0003-Lithium-Li/graphs/0003-Lithium-Li-GRAPH-009-Theoretical-Capacity-vs-Isotopic-Mass.svg",
+    "records/0003-Lithium-Li/images/applications/0003-Lithium-Li-FIG-011-Applications.svg",
+    "records/0003-Lithium-Li/images/isotope/0003-Lithium-Li-FIG-005-Isotope-Map.svg",
+    "records/0003-Lithium-Li/images/properties/0003-Lithium-Li-FIG-007-Bulk-Property-Dashboard.svg",
+    "records/0003-Lithium-Li/images/properties/0003-Lithium-Li-FIG-007-Bulk-Reference.svg",
+    "records/0003-Lithium-Li/images/properties/0003-Lithium-Li-FIG-008-Thermal-State.svg",
+    "records/0003-Lithium-Li/images/properties/0003-Lithium-Li-FIG-009-Mechanical-Crystal-State.svg",
+    "records/0003-Lithium-Li/images/quantum/0003-Lithium-Li-FIG-003-Core-Valence-Probability.svg",
+    "records/0003-Lithium-Li/images/quantum/0003-Lithium-Li-FIG-004-Energy-Level-Structure.svg",
+    "records/0003-Lithium-Li/images/scientific/0003-Lithium-Li-FIG-002-Atomic-Identity.svg",
+    "records/0003-Lithium-Li/images/spectral/0003-Lithium-Li-FIG-006-Spectral-Fingerprint.svg",
+    "records/0003-Lithium-Li/models/scientific/0003-Lithium-Li-MODEL-SCI-001-BCC-Lattice.glb",
+    "records/0003-Lithium-Li/models/scientific/0003-Lithium-Li-MODEL-SCI-002-Atomic-Probability.glb",
+    "records/0003-Lithium-Li/models/scientific/0003-Lithium-Li-MODEL-SCI-003-Li11-Halo-Schematic.glb"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-000005",
+      "source_aliases": [
+        "SRC-H-001"
+      ],
+      "title": "NIST Atomic Spectra Database",
+      "organization": "National Institute of Standards and Technology",
+      "version": "5.12",
+      "doi": "10.18434/T4W30F",
+      "source_type": "EVALUATED-DATABASE",
+      "supports": [
+        "atomic_ground_configuration",
+        "atomic_ground_level",
+        "ionization_energy",
+        "atomic_spectroscopy"
+      ]
+    },
+    {
+      "source_id": "SRC-000008",
+      "source_aliases": [
+        "SRC-H-004",
+        "SRC-000164"
+      ],
+      "title": "The NUBASE2020 Evaluation of Nuclear Physics Properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATA",
+      "supports": [
+        "isotope_stability",
+        "nuclear_spin_parity",
+        "half_life",
+        "decay_modes",
+        "F14_to_F31_nuclear_semantics",
+        "fluorine_half_lives",
+        "historical_F30_limit"
+      ]
+    },
+    {
+      "source_id": "SRC-000035",
+      "source_aliases": [
+        "SRC-Li-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Lithium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SCIENTIFIC-DATABASE",
+      "supports": [
+        "lithium_standard_atomic_weight",
+        "lithium_isotope_masses",
+        "lithium_isotopic_composition"
+      ]
+    },
+    {
+      "source_id": "SRC-000036",
+      "source_aliases": [
+        "SRC-Li-002"
+      ],
+      "title": "Melting Points and Boiling Points for the Alkali Metals",
+      "authors": [
+        "Nikhila Narayana",
+        "Donald R. Burgess Jr."
+      ],
+      "organization": "National Institute of Standards and Technology",
+      "year": 2024,
+      "report": "NIST TN 2273",
+      "doi": "10.6028/NIST.TN.2273",
+      "source_type": "CRITICALLY-EVALUATED-THERMOPHYSICAL-REFERENCE",
+      "supports": [
+        "lithium_melting_point",
+        "lithium_boiling_point",
+        "lithium_vapor_pressure"
+      ]
+    },
+    {
+      "source_id": "SRC-000039",
+      "source_aliases": [
+        "SRC-Li-005"
+      ],
+      "title": "Data-driven prediction of complex crystal structures of dense lithium",
+      "journal": "Nature Communications",
+      "year": 2023,
+      "source_type": "PRIMARY-RESEARCH",
+      "supports": [
+        "lithium_high_pressure_phases",
+        "lithium_structural_transitions",
+        "pressure_dependent_electronic_behavior"
+      ]
+    },
+    {
+      "source_id": "SRC-000040",
+      "source_aliases": [
+        "SRC-Li-006"
+      ],
+      "title": "Lithium — Physical Properties",
+      "organization": "WebElements / University of Sheffield",
+      "source_type": "SCIENTIFIC-REFERENCE",
+      "supports": [
+        "density",
+        "elastic_moduli",
+        "electrical_resistivity",
+        "thermal_conductivity",
+        "thermal_expansion"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 17,
+    "graphs": 6,
+    "tables": 9,
+    "sources": 6
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

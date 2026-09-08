@@ -4,6 +4,7 @@
 mat_id: "MAT:0066"
 record_name: "Dysprosium"
 symbol: "Dy"
+atomic_number: 66
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Dy | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 66 | | IUPAC |
-| Standard atomic weight | 162.5 | | IUPAC |
+| Standard atomic weight | 162.500(1) | EVALUATED | CIAAW-2024 |
 | Period | 6 | | IUPAC |
 | Group | 3 | | IUPAC |
 | Block | f | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Xe] 4f¹⁰ 6s²**
+Electronic configuration: **[Xe]6s2 4f10** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 162.5 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 6.184 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 1.22 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Solid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | 162.500(1) | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Xe]6s2 4f10 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 1.22 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 5.939 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Solid | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 1685 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | 2840 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| density | 8.55 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | +3 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

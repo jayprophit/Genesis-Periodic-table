@@ -4,6 +4,7 @@
 mat_id: "MAT:0028"
 record_name: "Nickel"
 symbol: "Ni"
+atomic_number: 28
 record_class: CHEMICAL_ELEMENT
 parent_id: "MAT:0000"
 schema_version: "1.0.0"
@@ -40,7 +41,7 @@ None yet.
 | Symbol | Ni | | IUPAC |
 | Record class | CHEMICAL_ELEMENT | | MAT |
 | Atomic number | 28 | | IUPAC |
-| Standard atomic weight | 58.693 | | IUPAC |
+| Standard atomic weight | 58.6934(4) | EVALUATED | CIAAW-2024 |
 | Period | 4 | | IUPAC |
 | Group | 10 | | IUPAC |
 | Block | d | | IUPAC |
@@ -94,7 +95,7 @@ Bond network, coordination, lattice, space group.
 <!-- MAT-VISUAL: V04 -->
 ```
 
-Electronic configuration: **[Ar] 3d⁸ 4s²**
+Electronic configuration: **[Ar]4s2 3d8** (REPORTED; PUBCHEM-PERIODIC).
 
 ---
 
@@ -122,11 +123,18 @@ Electronic, vibrational, rotational, Raman, hyperfine, nuclear, magnetic resonan
 # 9. Physical Properties
 
 | Property | Value | Unit | Conditions | Evidence | Source |
-|---|---:|---|---|---|---|
-| Atomic weight | 58.693 | u | STP | MEASURED | IUPAC |
-| First ionization energy | 7.64 eV | | | MEASURED | NIST ASD |
-| Electronegativity | 1.91 Pauling | | | MEASURED | Pauling Scale |
-| Phase at STP | Solid | | | MEASURED | IUPAC |
+|---|---|---|---|---|---|
+| atomicWeight | 58.6934(4) | dimensionless / text | See source | EVALUATED | CIAAW-2024 |
+| electronConfiguration | [Ar]4s2 3d8 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+| electronegativity | 1.91 | Pauling | See source | REPORTED | PUBCHEM-PERIODIC |
+| firstIonizationEnergy | 7.64 | eV | See source | REPORTED | PUBCHEM-PERIODIC |
+| phase | Solid | dimensionless / text | Source standard state; verify temperature and pressure for reuse | REPORTED | PUBCHEM-PERIODIC |
+| meltingPoint | 1728 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| boilingPoint | 3186 | K | See source | REPORTED | PUBCHEM-PERIODIC |
+| density | 8.912 | g/cm3 | Source reference conditions; consult element page | REPORTED | PUBCHEM-PERIODIC |
+| oxidationStates | +3, +2 | dimensionless / text | See source | REPORTED | PUBCHEM-PERIODIC |
+
+Abundances remain UNAVAILABLE pending source-specific curation. Standard atomic weight is dimensionless; isotope mass numbers are not substituted for it. For helium, a melting point needs pressure-specific qualification.
 
 ---
 
@@ -323,9 +331,9 @@ unresolved_conflicts: []
 
 # 33. Sources
 
-```text
-sources/
-```
+- [PubChem periodic table download](https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON), retained 2026-09-08 as PUBCHEM-PERIODIC.
+- [CIAAW standard atomic weights](https://www.ciaaw.org/atomic-weights.htm), retained 2026-09-08 as CIAAW-2024.
+- Catalogue snapshot hashes and property-level evidence are recorded in data/catalog/sources and data/catalog/elements-baseline.json.
 
 ---
 
@@ -376,4 +384,6 @@ visuals: PLANNED
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0.0 | 2026-09-08 | Baseline record generated from IUPAC 2021 + NIST ASD |
+| 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
+
+| 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |

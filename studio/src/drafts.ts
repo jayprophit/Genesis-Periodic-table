@@ -1,0 +1,6 @@
+export interface Draft {body:string;baseHash:string;updated:string}
+export interface Project {version:1;drafts:Record<string,Draft>;theme:'paper'|'parchment'|'night';fontSize:number;bookmarks:string[];locale:'en'|'fr'|'es'}
+export const emptyProject=():Project=>({version:1,drafts:{},theme:'parchment',fontSize:17,bookmarks:[],locale:'en'});
+export function parseProject(text:string):Project {if(text.length>15_000_000)throw new Error('Project exceeds 15 MB limit.');const p=JSON.parse(text);if(p.version!==1||!p.drafts||typeof p.drafts!=='object'||Array.isArray(p.drafts))throw new Error('Unsupported MAT project format.');for(const [id,d] of Object.entries(p.drafts)){const v=d as Draft;if(!id.endsWith('.md')||!v||typeof v.body!=='string'||v.body.length>2_000_000||typeof v.baseHash!=='string'||typeof v.updated!=='string')throw new Error('Invalid chapter draft.');}if(!['paper','parchment','night'].includes(p.theme)||!Number.isFinite(p.fontSize)||p.fontSize<14||p.fontSize>24||!Array.isArray(p.bookmarks)||!p.bookmarks.every((x:unknown)=>typeof x==='string')||!['en','fr','es'].includes(p.locale))throw new Error('Invalid project preferences.');return p}
+export const STORAGE_KEY='mat-studio-project-v1';
+

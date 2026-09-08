@@ -1,0 +1,50 @@
+{
+  "id": "records/0008-Oxygen-O/0008-Oxygen-O-Migration-Audit.md",
+  "key": "8811a32847412fee0ce7",
+  "mat": "MAT:0008",
+  "title": "G0008 → MAT:0008 Migration Audit",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# G0008 → MAT:0008 Migration Audit\n\n## Result\n\n```text\nCONTENT-MIGRATED\n```\n\n### AUDIT-001 — Atomic Oxygen\n\n```text\nPRESERVED + STATE-TYPED\n```\n\nAtomic O is not flattened into O₂.\n\n### AUDIT-002 — Triplet O₂\n\n```text\nPRESERVED + MOLECULAR-ELECTRONIC-STATE\n```\n\nParamagnetism is connected to molecular-orbital occupancy.\n\n### AUDIT-003 — Singlet Oxygen\n\n```text\nPRESERVED + ELECTRONIC-STATE-ID\n```\n\nSame molecular formula does not imply same reactivity.\n\n### AUDIT-004 — Ozone\n\n```text\nPRESERVED + MOLECULAR-CHILD\n```\n\nO₃ geometry and vibration are separate from O₂.\n\n### AUDIT-005 — Ozone Cycle\n\n```text\nPRESERVED + CHAPMAN-LINEAGE\n```\n\nCorrection:\n\n```text\nCHAPMAN MECHANISM\n!=\nCOMPLETE MODERN OZONE CHEMISTRY\n```\n\n### AUDIT-006 — Frequency\n\nLegacy frequency branch:\n\n```text\nPRESERVED\n```\n\nbut no:\n\n```text\noxygen_frequency\n```\n\nscalar is permitted.\n\n### AUDIT-007 — Aurora / Airglow\n\nAtomic visible-line concept:\n\n```text\nPRESERVED + TRANSITION-RESOLVED\n```\n\n557.7 and 630.0 nm are typed as metastable atomic transitions.\n\n### AUDIT-008 — Liquid Oxygen\n\n```text\nPRESERVED + PHASE/SAFETY FORMALIZED\n```\n\nCorrection:\n\n```text\nOXIDIZER != FUEL\n```\n\n### AUDIT-009 — Solid Oxygen Magnetism\n\n```text\nPRESERVED + EXPANDED\n```\n\nMAT distinguishes:\n\n```text\nalpha\nbeta\ngamma\ndelta\nepsilon\nzeta\n```\n\nand their differing magnetic/electronic behavior.\n\n### AUDIT-010 — High-Pressure Oxygen\n\n```text\nPRESERVED + EXPANDED\n```\n\nAdds:\n\n```text\nO8 clusters\nmetallicity\nsuperconductivity\n```\n\nwith conditions.\n\n### AUDIT-011 — Isotopes\n\n```text\nPRESERVED + FULL CHILD ARCHITECTURE\n```\n\n### AUDIT-012 — 27O / 28O\n\nOlder unobserved/limit status:\n\n```text\nSUPERSEDED\n```\n\nCurrent:\n\n```text\nOBSERVED NEUTRON-UNBOUND RESONANCES\n```\n\nSource:\n\n```text\nSRC-000132\n```\n\n### AUDIT-013 — Water\n\n```text\nPRESERVED-AS-EMERGENT-COMPOUND\n```\n\nWater properties are not copied to elemental H or O.\n\n### AUDIT-014 — Oxidation / Combustion\n\n```text\nPRESERVED + ELECTRON-TRANSFER/BOND-REARRANGEMENT MODEL\n```\n\n### AUDIT-015 — Oxides\n\n```text\nPRESERVED + FAMILY-REGISTRY\n```\n\n### AUDIT-016 — Peroxide / Superoxide\n\n```text\nPRESERVED + ELECTRON-COUNT-SEPARATED\n```\n\n### AUDIT-017 — Oxygen Vacancies\n\nLegacy vacancy concept:\n\n```text\nPRESERVED-AS-FIRST-CLASS-STATE-VARIABLE\n```\n\n### AUDIT-018 — Semiconductor / Conductive Oxides\n\n```text\nPRESERVED\n```\n\nCorrection:\n\n```text\nOXIDE != AUTOMATIC INSULATOR\n```\n\n### AUDIT-019 — Superconducting Oxides\n\n```text\nPRESERVED-AS-MATERIAL-RELATIONSHIP\n```\n\nOxygen stoichiometry is explicitly state-resolved.\n\n### AUDIT-020 — Solid-Oxide Electrochemistry\n\n```text\nPRESERVED + TRANSPORT-SPECIES-TYPED\n```\n\n### AUDIT-021 — Battery Oxygen Redox\n\n```text\nPRESERVED + MODERN-EVIDENCE-EXPANDED\n```\n\nIncludes trapped molecular O₂ in specific Li-rich cathodes.\n\n### AUDIT-022 — Corrosion\n\n```text\nPRESERVED + ENVIRONMENT-DEPENDENT\n```\n\nCorrection:\n\n```text\nOXIDATION != ALL CORROSION\n```\n\n### AUDIT-023 — Respiration\n\n```text\nPRESERVED + BIOCHEMICAL-PROCESS-SEPARATION\n```\n\n### AUDIT-024 — Photosynthesis\n\n```text\nPRESERVED + WATER-OXIDATION-MECHANISM\n```\n\nThe O₂ product is connected to water oxidation at PSII.\n\n### AUDIT-025 — Reactive Oxygen Species\n\n```text\nPRESERVED + BIOLOGICAL-STATE-SEPARATION\n```\n\nCorrection:\n\n```text\nROS != ONLY DAMAGE\n```\n\n### AUDIT-026 — Space Atomic Oxygen\n\n```text\nPRESERVED + ENVIRONMENT-FIRST\n```\n\nLow-Earth-orbit atomic O is a specific degradation environment.\n\n### AUDIT-027 — Geometry\n\nLegacy geometry concepts:\n\n```text\nlinear O2\nbent O3\noxide lattices\ndefect structures\nsolid-Oxygen clusters\n```\n\nare:\n\n```text\nPRESERVED + EXPANDED\n```\n\n### AUDIT-028 — Legacy Locked Status\n\nAny old:\n\n```text\nPRODUCTION ELEMENT — LOCKED\n```\n\nis historical only.\n\nMAT validation is independent.\n",
+  "bodyHash": "22b1707ed22cb0b998f83339cabffb17a41b53932d59eaa210674385656debdd",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000132",
+      "source_aliases": [
+        "SRC-O-NUC-001"
+      ],
+      "title": "First observation of 28O",
+      "authors": [
+        "Y. Kondo",
+        "N. L. Achouri",
+        "H. Al Falou",
+        "et al."
+      ],
+      "journal": "Nature",
+      "year": 2023,
+      "volume": 620,
+      "pages": "965-970",
+      "doi": "10.1038/s41586-023-06352-6",
+      "source_type": "PRIMARY-NUCLEAR-EXPERIMENT",
+      "supports": [
+        "O27_direct_observation",
+        "O28_direct_observation",
+        "O27_three_neutron_unbound",
+        "O28_four_neutron_unbound",
+        "O26_decay_energy",
+        "oxygen_neutron_dripline"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

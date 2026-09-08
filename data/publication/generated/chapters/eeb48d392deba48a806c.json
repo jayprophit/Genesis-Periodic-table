@@ -1,0 +1,22 @@
+{
+  "id": "docs/04-visualization/02-Graph-Standard.md",
+  "key": "eeb48d392deba48a806c",
+  "mat": null,
+  "title": "MAT Graph Standard",
+  "section": "Visualization",
+  "lane": "reference",
+  "body": "# MAT Graph Standard\n\n## 1. Purpose\n\nGraphs must expose scientific information rather than merely make records visually attractive.\n\n---\n\n# 2. Required Graph Components\n\nEvery graph should normally contain:\n\n- graph ID;\n- title;\n- x-axis name;\n- x-axis unit;\n- y-axis name;\n- y-axis unit;\n- legend where required;\n- conditions;\n- source;\n- evidence status.\n\n---\n\n# 3. Raw Data Separation\n\nGraph source data should be stored separately.\n\nExample:\n\n```text\ngraphs/\n├── 0001-Hydrogen-H-GRAPH-001.svg\n└── data/\n    └── 0001-Hydrogen-H-GRAPH-001.csv\n```\n\nThe rendered plot should be reproducible from its data.\n\n---\n\n# 4. Measured Versus Fitted\n\nMeasured data points and fitted/model curves must be distinguishable.\n\nMetadata:\n\n```yaml\nmeasured_data:\nfit:\nfit_equation:\nfit_parameters:\nfit_uncertainty:\n```\n\n---\n\n# 5. Interpolation\n\nInterpolation must not be confused with measurement.\n\n---\n\n# 6. Extrapolation\n\nExtrapolated regions should be explicitly identified.\n\n---\n\n# 7. Error Bars\n\nWhere source uncertainty exists, include it when scientifically useful.\n\nError bars must state what they represent:\n\n```text\nSTANDARD-DEVIATION\nSTANDARD-ERROR\nCONFIDENCE-INTERVAL\nMEASUREMENT-UNCERTAINTY\nRANGE\n```\n\n---\n\n# 8. Logarithmic Axes\n\nLog scales must be visibly labelled.\n\nDo not use a logarithmic scale merely to dramatize differences.\n\n---\n\n# 9. Frequency Graphs\n\nSpectral plots must identify the independent axis correctly.\n\nPossible axes:\n\n```text\nHz\nTHz\ncm^-1\neV\nnm\num\n```\n\nConversions may be provided but the original measurement convention should remain available.\n\n---\n\n# 10. Temperature Graphs\n\nState temperature scale:\n\n```text\nK\n°C\n```\n\nMAT canonical comparison uses K where appropriate.\n\n---\n\n# 11. Phase Diagrams\n\nPhase diagrams must identify:\n\n- variables;\n- phase labels;\n- pressure/composition axes;\n- data/model status;\n- metastable states where known.\n\n---\n\n# 12. Property Comparison Charts\n\nWhen comparing materials, ensure values refer to compatible:\n\n- conditions;\n- units;\n- phases;\n- orientations;\n- purity.\n\nOtherwise the comparison must state the differences.\n\n---\n\n# 13. No Invented Continuity\n\nDo not draw a smooth continuous curve through sparse measurements unless the interpolation/model is explicitly identified.\n\n---\n\n# 14. Graph IDs\n\nFormat:\n\n```text\nMAT:0001:GRAPH:001\n```\n\nFilename:\n\n```text\n0001-Hydrogen-H-GRAPH-001.svg\n```\n\n---\n\n# 15. Calculation Link\n\nIf a graph is computed:\n\n```yaml\ncalculation_id:\nscript:\nsoftware:\nversion:\n```\n\nshould be retained.\n\n---\n",
+  "bodyHash": "72a07e282336aa62392bf9f37d9d312c9a4823e7040197c182c346461cf10ddc",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

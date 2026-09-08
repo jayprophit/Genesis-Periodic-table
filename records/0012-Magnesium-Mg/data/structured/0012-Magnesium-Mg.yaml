@@ -1,95 +1,105 @@
-registry_id: "MAT:0012:REG:MASTER"
-record_id: "MAT:0012"
-record_version: "1.0.0"
-created: "2026-09-08"
-updated: "2026-09-08"
+registry_id: MAT:0012:REG:MASTER
+record_id: MAT:0012
+record_version: 1.1.0
+created: 2026-09-08
+updated: 2026-09-08
 status: BASELINE
 record_class: CHEMICAL_ELEMENT
-schema_version: "1.0.0"
-
+schema_version: 1.0.0
 identity:
-  canonical_name: "Magnesium"
-  symbol: "Mg"
+  canonical_name: Magnesium
+  symbol: Mg
   atomic_number: 12
-  mat_id: "MAT:0012"
+  mat_id: MAT:0012
   period: 3
   group: 2
-  block: "s"
-  category: "Alkaline Earth Metal"
-
+  block: s
+  category: Alkaline Earth Metal
 properties:
   atomic_weight:
-    value: 24.305
-    source: "IUPAC"
-    evidence: "MEASURED"
+    value: "[24.304,24.307]"
+    interval:
+      - 24.304
+      - 24.307
+    source: CIAAW-2024
+    evidence: EVALUATED
+    kind: STANDARD_ATOMIC_WEIGHT_INTERVAL
   electron_configuration:
-    value: "[Ne] 3s²"
-    source: "NIST"
-    evidence: "MEASURED"
+    value: "[Ne]3s2"
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
   electronegativity:
-    value: 1.31 Pauling
-    source: "Pauling Scale"
-    evidence: "MEASURED"
+    value: 1.31
+    unit: Pauling
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
   first_ionization_energy:
-    value: 7.646 eV
-    source: "NIST ASD"
-    evidence: "MEASURED"
-  phase_at_stp:
-    value: "Solid"
-    source: "IUPAC"
-    evidence: "MEASURED"
+    value: 7.646
+    unit: eV
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
+  phase:
+    value: Solid
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
+    conditions: Source standard state; verify temperature and pressure for reuse
   melting_point:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
+    value: 923
+    unit: K
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
   boiling_point:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
+    value: 1363
+    unit: K
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
   density:
-    value: null
-    null_reason: "BASELINE_DATA_NOT_YET_CURATED"
-    source: null
-
+    value: 1.74
+    unit: g/cm3
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
+    conditions: Source reference conditions; consult element page
+  oxidation_states:
+    value: "+2"
+    unit: null
+    source: PUBCHEM-PERIODIC
+    sourceUrl: https://pubchem.ncbi.nlm.nih.gov/element/12
+    evidence: REPORTED
 nuclear:
   status: PLANNED
-
 quantum:
   status: PLANNED
-
 spectra:
   status: PLANNED
-
 electrical:
   status: PLANNED
-
 magnetic:
   status: PLANNED
-
 thermal:
   status: PLANNED
-
 mechanical:
   status: PLANNED
-
 chemical:
   status: PLANNED
-
 materials:
   status: PLANNED
-
 processes:
   status: PLANNED
-
 environment:
   status: PLANNED
-
 applications:
   status: PLANNED
-
 safety:
   status: PLANNED
-
 completeness:
   identity: CURATED
   nuclear: PLANNED

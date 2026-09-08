@@ -1,0 +1,52 @@
+{
+  "id": "records/0007-Nitrogen-N/calculations/0007-Nitrogen-N-CALC-002-N16-Beta-Q.md",
+  "key": "5b97d4c337119443f775",
+  "mat": "MAT:0007",
+  "title": "CALC-002 — Nitrogen-16 Beta-Minus Total Q-Value",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# CALC-002 — Nitrogen-16 Beta-Minus Total Q-Value\n\nReaction:\n\n$$\n{}^{16}N\n\\rightarrow\n{}^{16}O+e^-+\\bar\\nu_e\n$$\n\nUsing neutral atomic masses:\n\n$$\nm({}^{16}N)=16.0061019\\ u\n$$\n\n$$\nm({}^{16}O)=15.99491461957\\ u\n$$\n\ngives:\n\n$$\n\\boxed{\nQ_{\\beta^-}\n\\approx\n10.4209\\ {\\rm MeV}\n}\n$$\n\nThis is the total decay-energy window.\n\nIt is **not** the energy of every beta particle or every gamma photon.\n\nThe important 6.12863 MeV gamma belongs to a particular daughter-state de-excitation branch.\n\n```yaml\ncalculation_id: \"MAT:0007:CALC:002\"\nclassification: \"DERIVED\"\n\nparent: \"MAT:0007:ISO:N-16\"\ndaughter: \"MAT:0008:ISO:O-16\"\ndaughter_status: \"RESERVED-PENDING-OXYGEN\"\n\nq_value:\n  value: 10.4209\n  unit: \"MeV\"\n\nsource_ids:\n  - \"SRC-000101\"\n  - \"SRC-000018\"\n```\n",
+  "bodyHash": "879c387b6aeaccda0129e0b0bb8db2441231a1632e3496a0e4bbaab0374544fa",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000018",
+      "source_aliases": [
+        "SRC-H-014"
+      ],
+      "title": "CODATA Recommended Values of the Fundamental Physical Constants: 2022",
+      "organization": "CODATA / NIST",
+      "source_type": "EVALUATED-CONSTANTS",
+      "supports": [
+        "speed_of_light",
+        "atomic_mass_energy_equivalent",
+        "fundamental_constants"
+      ]
+    },
+    {
+      "source_id": "SRC-000101",
+      "source_aliases": [
+        "SRC-N-001"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Nitrogen",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-SCIENTIFIC-DATABASE",
+      "supports": [
+        "nitrogen_standard_atomic_weight",
+        "nitrogen_isotope_masses",
+        "nitrogen_14_composition",
+        "nitrogen_15_composition"
+      ]
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 2
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}
