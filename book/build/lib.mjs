@@ -25,6 +25,7 @@ export function mdFiles(dir) {
 }
 export function stripMd(t) {
   return t
+    .replace(/<!--[\s\S]*?-->/g, " ")
     .replace(/```[\s\S]*?```/g, " ")
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")

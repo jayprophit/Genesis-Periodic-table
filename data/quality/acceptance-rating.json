@@ -1,0 +1,50 @@
+{
+  "assessed_at": "2026-09-10T04:10:06.119Z",
+  "assessor": "Codex automated local assessment",
+  "rating_type": "INTERNAL-ENGINEERING-ACCEPTANCE",
+  "rubric_version": "1.0.0",
+  "method": "One star for each of five explicitly defined passing local gates; this rubric is project-specific, not an industry rating standard",
+  "stars": 4,
+  "maximum_stars": 5,
+  "gates": [
+    {
+      "name": "Automated data and reader invariants",
+      "passed": true,
+      "evidence": "benchmark.json: unit"
+    },
+    {
+      "name": "Structural validation without errors or warnings",
+      "passed": true,
+      "evidence": "benchmark.json: eight validation checks"
+    },
+    {
+      "name": "Local search latency budget",
+      "passed": true,
+      "evidence": "270 local samples; p95 18.18 ms; target 100 ms"
+    },
+    {
+      "name": "Reader content across three browser engines",
+      "passed": true,
+      "evidence": "reader-browser-results.json: Chromium, Firefox and WebKit"
+    },
+    {
+      "name": "Keyboard, cascading navigation and scoped automated accessibility",
+      "passed": false,
+      "evidence": "reader-browser-results.json: desktop/sidebar and mobile/cover scans; WCAG-tagged automated rules"
+    }
+  ],
+  "source_runs": {
+    "benchmark": "2026-09-09T20:35:04.832Z",
+    "browsers": "2026-09-09T20:38:27.336Z"
+  },
+  "whole_product_rating": null,
+  "independent_rating": null,
+  "not_established": [
+    "Independent scientific review of all elements",
+    "Complete advanced engineering and material-state data for every element",
+    "Real-user performance and production load",
+    "Screen-reader testing with disabled readers",
+    "Tagged PDF and visual rights clearance",
+    "Independent industry certification or adoption rating"
+  ]
+}

@@ -26,6 +26,11 @@ export function buildManifest() {
   addSection("Governance", docs("06-governance"));
   addSection("Migration", docs("07-migration"));
   addSection("Back matter", docs("08-back-matter"));
+  // Production guidance belongs with the existing Governance collection.
+  const governance=chapters.find(s=>s.section==='Governance');
+  for(const f of docs('09-production')){
+    const id=rel(f);governance.items.push({id,title:titleOf(f,f.split(sep).pop()),path:'../'+id});
+  }
   addSection("Material Atlas Table", mdFiles(join(root, "records")));
   writeJson("manifest.json", { title: "Materials Atlas Table Codex", chapters }, 2);
   const n = chapters.reduce((a, c) => a + c.items.length, 0);

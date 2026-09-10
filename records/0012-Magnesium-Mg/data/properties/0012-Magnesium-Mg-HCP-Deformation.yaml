@@ -1,0 +1,64 @@
+registry_id: MAT:0012:REG:HCP-DEFORMATION
+record_id: MAT:0012
+ambient_structure:
+  phase: MAT:0012:PHASE:HCP-MG
+  space_group: P63/mmc
+  lattice:
+    a:
+      approximate_value: 0.3209
+      unit: nm
+    c:
+      approximate_value: 0.5211
+      unit: nm
+    c_over_a:
+      approximate_value: 1.624
+deformation:
+  room_temperature:
+    dominant_easy_slip:
+      type: BASAL-<a>
+      plane: "{0001}"
+      direction: <11-20>
+    twinning:
+      important: true
+      common_extension_twin:
+        plane: "{10-12}"
+    non_basal_slip:
+      relative_activation: HARDER-THAN-BASAL
+      classes:
+        - prismatic_a
+        - pyramidal_c_plus_a
+  elevated_temperature:
+    non_basal_activity:
+      increases: true
+anisotropy_controls:
+  - crystallographic_texture
+  - grain_orientation
+  - grain_size
+  - loading_direction
+  - tension_vs_compression
+  - temperature
+  - alloying
+  - precipitates
+  - rare_earth_content
+  - strain_rate
+  - prior_processing
+important_effects:
+  - yield_asymmetry
+  - tension_compression_asymmetry
+  - directional_ductility
+  - texture_evolution
+  - twinning_detwinning
+rules:
+  HCP_equals_brittle: false
+  magnesium_is_mechanically_isotropic: false
+  one_CRSS_value_is_universal: false
+  alloy_response_equals_pure_Mg_response: false
+source_id: SRC-000256
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 954
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

@@ -1065,3 +1065,7 @@ visuals:
   specification: "LOCKED"
   generated: false
 ```
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0005-Boron-B-Nuclear-Evaluation.md) provides 23 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

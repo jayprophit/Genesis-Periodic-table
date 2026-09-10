@@ -5,8 +5,8 @@
   "title": "0005 — Boron — B",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "\n# 0005 — Boron — B\n\n---\nmat_id: MAT:0005\nrecord_name: Boron\nsymbol: B\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 5\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0005\nlegacy_name: Boron\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n---\n\n# 0. Record Navigation\n\nPrevious primary record:\n\nMAT:0004\n0004-Beryllium-Be\n\nCurrent record:\n\nMAT:0005\n0005-Boron-B\n\n---\n\n# 1. Elemental Identity\n\n| Property | Value |\n|---|---|\n| MAT ID | MAT:0005 |\n| Element | Boron |\n| Symbol | B |\n| Atomic number | 5 |\n| Proton count | 5 |\n| Neutral electron count | 5 |\n| Period | 2 |\n| Group | 13 |\n| Block | p |\n| Ground configuration | 1s²2s²2p¹ |\n| Ground level | ²P°₁/₂ |\n| Standard atomic weight | [10.806, 10.821] |\n| Ordinary state near room conditions | solid |\n| Common classification | metalloid / covalent elemental solid |\n\nPrimary sources:\n\nSRC-000005\nSRC-000063\nSRC-000065\n\n---\n\n# 2. First MAT p-Block Element\n\nBoron is the first MAT element with a ground-state electron occupying a p orbital:\n\n\\[\n1s^22s^22p^1\n\\]\n\nThe transition from Beryllium is:\n\n\\[\n2s^2\n\\rightarrow\n2s^22p^1\n\\]\n\nThis introduces a major new schema branch:\n\n- directional p-orbital participation;\n- electron-deficient bonding;\n- multicentre bonding;\n- cluster structures;\n- allotrope-dependent electronic behavior;\n- complex covalent elemental solids.\n\n---\n\n# 3. Open-Shell Atomic State\n\nThe ground level is:\n\n\\[\n{}^2P^\\circ_{1/2}\n\\]\n\nThe isolated neutral atom therefore has an open-shell electronic state.\n\nThis must remain separate from the magnetic/electronic properties of bulk crystalline Boron.\n\nAtomic state:\n\nMAT:0005:ATOM:B\n\n---\n\n# 4. First Ionisation\n\n\\[\nB\\rightarrow B^+ + e^-\n\\]\n\nNIST ASD:\n\n\\[\nE_{I1}\n=\n8.298019\\pm0.000003\\ {\\rm eV}\n\\]\n\nCanonical ion:\n\nMAT:0005:ION:B+1\n\n---\n\n# 5. Ionisation Ladder\n\nSecond ionisation:\n\n\\[\nB^+\\rightarrow B^{2+}+e^-\n\\]\n\n\\[\nE_{I2}\n=\n25.15483\\pm0.00005\\ {\\rm eV}\n\\]\n\nThird:\n\n\\[\nB^{2+}\\rightarrow B^{3+}+e^-\n\\]\n\n\\[\nE_{I3}\n=\n37.93059\\pm0.00007\\ {\\rm eV}\n\\]\n\nHigher core-electron removal requires much larger energies:\n\n\\[\nE_{I4}\\approx259.374379\\ {\\rm eV}\n\\]\n\n\\[\nE_{I5}\\approx340.2260225\\ {\\rm eV}\n\\]\n\nCanonical states:\n\nMAT:0005:ATOM:B\nMAT:0005:ION:B+1\nMAT:0005:ION:B+2\nMAT:0005:ION:B+3\nMAT:0005:ION:B+4\nMAT:0005:ION:B+5\n\nThe large jump after removal of the valence electrons distinguishes:\n\nVALENCE-ELECTRON IONISATION\n\nfrom:\n\nCORE-ELECTRON IONISATION\n\n---\n\n# 6. Electron Affinity\n\nA precision experimental electron-affinity determination gives:\n\n\\[\nEA\n=\n0.279743\\pm0.000044\\ {\\rm eV}\n\\]\n\nfor atomic Boron.\n\nSource:\n\nSRC-000064\n\nThis is an atomic-state property.\n\nIt must not be confused with electron acceptance in a Boron-containing solid, semiconductor or compound.\n\n---\n\n# 7. Ordinary Material State\n\nRepresentative room-condition properties include approximately:\n\n| Property | Reference |\n|---|---:|\n| Density | 2.34 g cm⁻³ |\n| Melting point | 2350 K |\n| Boiling point | 4273 K |\n\nThese are summary reference values.\n\nBoron is not represented as one universal crystalline state.\n\n---\n\n# 8. Elemental Boron Is an Allotrope Family\n\nImportant elemental forms include:\n\n- α-rhombohedral Boron;\n- β-rhombohedral Boron;\n- γ-B₂₈;\n- tetragonal Boron phases;\n- amorphous Boron.\n\nTherefore:\n\n\\[\nB\n\\rightarrow\n\\{\nB_\\alpha,\nB_\\beta,\nB_\\gamma,\nB_T,\nB_{\\rm amorphous},\n...\n\\}\n\\]\n\nCanonical phase children will use individual `PHASE` or `ALLOTROPE` IDs.\n\nNo one density, band structure, conductivity or hardness is universal across every allotrope.\n\n---\n\n# 9. Electron-Deficient Bonding\n\nBoron has three valence electrons:\n\n\\[\n2s^22p^1\n\\]\n\nYet many Boron structures contain connectivity that cannot be described adequately using only conventional isolated two-centre/two-electron bonds.\n\nBoron therefore activates the MAT multicentre-bonding layer.\n\nImportant class:\n\n\\[\n3c-2e\n\\]\n\nthree-centre/two-electron bonding.\n\nMAT rule:\n\n\\[\n\\boxed{\n\\text{bond}\n\\neq\n\\text{always one electron pair between two atoms}\n}\n\\]\n\n---\n\n# 10. B₁₂ Icosahedral Motif\n\nOne of Boron's most important structural motifs is:\n\n\\[\nB_{12}\n\\]\n\norganized approximately as an icosahedral cluster.\n\nThis is not an artistic geometry imposed on the data.\n\nIt is a structure arising from real Boron bonding physics.\n\nMAT geometric descriptor:\n\n```yaml\ngeometry_family:\n  - ICOSAHEDRAL\n  - POLYHEDRAL\n  - CLUSTER-BASED\n````\n\n---\n\n# 11. Geometry–Electronic Feedback\n\nBoron provides a particularly strong demonstration that:\n\n$$\n\\text{electron count}\n+\n\\text{bonding constraints}\n\\rightarrow\n\\text{cluster geometry}\n$$\n\nand:\n\n$$\n\\text{cluster geometry}\n\\rightarrow\n\\text{electronic/material stability}\n$$\n\nThus geometry is not merely a visualization output.\n\nIt can become part of the causal material-state representation.\n\n---\n\n# 12. Material-State Principle\n\nFor Boron:\n\n$$\nM_B=\nF(\n\\text{allotrope},\n\\text{cluster topology},\n\\text{bonding},\n\\text{isotope},\nT,\nP,\n\\text{defects},\n\\text{dopants},\n\\text{history}\n)\n$$\n\nThe element name alone is insufficient to define its bulk behavior.\n\n---\n\n# 13. Semiconductor-Like Behavior\n\nSeveral elemental Boron states exhibit semiconducting behavior.\n\nHowever MAT does not use:\n\n```text\nboron_is_semiconductor: true\n```\n\nas an unconditional property.\n\nInstead electronic character must specify:\n\n* allotrope;\n* pressure;\n* temperature;\n* defect density;\n* impurity concentration;\n* carrier state.\n\n---\n\n# 14. Boron as Dopant\n\nBoron is widely used as an acceptor/p-type dopant in suitable semiconductor hosts.\n\nImportant future relationships include:\n\nMAT:0014 Silicon\n\nMAT:0006 Carbon\n\nand other semiconductor systems.\n\nThe doped-host properties belong to:\n\nHOST + BORON + CONCENTRATION + PROCESS HISTORY\n\nrather than elemental Boron alone.\n\n---\n\n# 15. Isotope Family\n\nCurrent NIST mass data cover:\n\n$$\n{}^6B\n$$\n\nthrough:\n\n$$\n{}^{21}B\n$$\n\nwithin the present table.\n\nNatural Boron contains two stable isotopes:\n\n$$\n{}^{10}B\n$$\n\nand:\n\n$$\n{}^{11}B\n$$\n\nwith representative NIST isotopic compositions:\n\n$$\n{}^{10}B\n=\n0.199\\pm0.007\n$$\n\n$$\n{}^{11}B\n=\n0.801\\pm0.007\n$$\n\nThese proportions are not universal constants for every natural or enriched Boron sample.\n\n---\n\n# 16. Standard Atomic Weight Interval\n\nBecause Boron isotope ratios vary naturally:\n\n$$\nA_r(B)\n=\n[10.806,\\ 10.821]\n$$\n\nMAT stores the interval itself rather than silently converting it to one fixed decimal.\n\nThis follows the same isotope-sensitive architecture used for Hydrogen and Lithium.\n\n---\n\n# 17. Boron-10\n\nCanonical ID:\n\nMAT:0005:ISO:B-10\n\nNucleus:\n\n* 5 protons;\n* 5 neutrons.\n\nRelative atomic mass:\n\n$$\n10.01293695(41)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n3^+\n$$\n\nRepresentative composition:\n\n$$\n0.199(7)\n$$\n\n¹⁰B is especially important because of its strong neutron-capture behavior.\n\n---\n\n# 18. Boron-11\n\nCanonical ID:\n\nMAT:0005:ISO:B-11\n\nNucleus:\n\n* 5 protons;\n* 6 neutrons.\n\nRelative atomic mass:\n\n$$\n11.00930536(45)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nRepresentative composition:\n\n$$\n0.801(7)\n$$\n\n¹¹B is the more abundant natural isotope and has important nuclear-research relationships including proton–Boron fusion.\n\n---\n\n# 19. Nuclear Spin and Magnetic Resonance\n\nBoth stable isotopes possess nonzero nuclear spin:\n\n$$\n{}^{10}B:\\ I=3\n$$\n\n$$\n{}^{11}B:\\ I=\\frac32\n$$\n\nTherefore both are NMR-active.\n\nMAT must distinguish:\n\n* ¹⁰B NMR;\n* ¹¹B NMR;\n* abundance;\n* gyromagnetic behavior;\n* local chemical environment;\n* field strength;\n* resonance mechanism.\n\nThere is no universal:\n\n```text\nboron_NMR_frequency\n```\n\nwithout field and isotope.\n\n---\n\n# 20. Boron-10 Neutron Capture\n\nA central Boron nuclear relationship is:\n\n$$\n{}^{10}B+n\n\\rightarrow\n{}^7Li+\\alpha\n$$\n\nwith branch-dependent energy release.\n\nThis links:\n\nMAT:0005 Boron\n\nto:\n\nMAT:0003 Lithium\n\nand:\n\nMAT:0002 Helium\n\nthrough one isotope-specific nuclear reaction.\n\nThe detailed capture cross section, product branching and Q-values will be stored in the nuclear-calculation layer.\n\n---\n\n# 21. Boron-11 Proton-Fusion Research\n\nA major research reaction is:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nwhere:\n\n$$\np={}^1H^+\n$$\n\nThis creates a nuclear relationship:\n\nMAT:0001 Hydrogen\n↔\nMAT:0005 Boron\n\nwith Helium-4 products.\n\nThis is an advanced fusion-research pathway.\n\nIt must not be represented as a commercially mature energy process.\n\n---\n\n# 22. Chemical and Nuclear H–B Relationships\n\nHydrogen and Boron have at least two very different relationship families.\n\nChemical:\n\n$$\nB_xH_y\n$$\n\nboranes.\n\nNuclear:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nTherefore:\n\n$$\n\\boxed{\nH-B_{\\rm chemical}\n\\neq\nH-B_{\\rm nuclear}\n}\n$$\n\n---\n\n# 23. Boranes\n\nBoron forms a rich family of Hydrogen-containing compounds:\n\n$$\nB_xH_y\n$$\n\nMany exhibit:\n\n* multicentre bonding;\n* cage structures;\n* cluster geometry;\n* electron-deficient bonding.\n\nBoranes therefore become a major MAT test of molecular topology beyond simple chain/ring chemistry.\n\n---\n\n# 24. Boron Carbide\n\nFuture material/compound family:\n\n$$\nB_4C\n$$\n\nCanonical relationship:\n\nMAT:0005\n↔\nMAT:0006\n\nTarget status:\n\nRESERVED-PENDING-CARBON\n\nImportant emergent properties can include:\n\n* high hardness;\n* low density;\n* wear resistance;\n* neutron absorption;\n* ceramic behavior.\n\nThose belong to B₄C, not elemental Boron.\n\n---\n\n# 25. Boron Nitride\n\nFuture relationship:\n\nMAT:0005\n↔\nMAT:0007\n\nwith BN material families including:\n\n* hexagonal BN;\n* cubic BN;\n* layered/nanoscale forms.\n\nA particularly useful MAT comparison will be:\n\n$$\nB-N\n\\leftrightarrow\nC-C\n$$\n\nbecause lattice topology and electron count can produce analogous but chemically distinct material structures.\n\n---\n\n# 26. Boron Oxide and Glass Networks\n\nImportant future compound:\n\n$$\nB_2O_3\n$$\n\nBoron oxide can participate with silica-rich systems to form borosilicate glasses.\n\nPotential material objectives include:\n\n* thermal-shock resistance;\n* chemical durability;\n* controlled expansion;\n* optical transparency.\n\nThus a future design triangle is:\n\n$$\nB+Si+O\n$$\n\n---\n\n# 27. Borides\n\nBoron forms numerous metal borides.\n\nExamples include future records such as:\n\n$$\nTiB_2\n$$\n\n$$\nZrB_2\n$$\n\n$$\nHfB_2\n$$\n\nand Magnesium diboride:\n\n$$\nMgB_2\n$$\n\nPossible emergent properties include:\n\n* extreme-temperature capability;\n* hardness;\n* electrical conduction;\n* superconductivity;\n* chemical resistance.\n\nAgain:\n\n$$\n\\boxed{\n\\text{compound property}\n\\neq\n\\text{element property}\n}\n$$\n\n---\n\n# 28. Pressure as a State Variable\n\nHistorical G0005 correctly identifies pressure as capable of profoundly changing Boron's electronic and structural state.\n\nHigh-pressure Boron requires dedicated:\n\n```text\nphase\npressure\ntemperature\nstructure\nelectronic_state\n```\n\nobjects.\n\nNo simple:\n\n```text\nboron_high_pressure_property\n```\n\nfield is sufficient.\n\n---\n\n# 29. γ-B₂₈\n\nOne important high-pressure elemental Boron phase is:\n\n$$\n\\gamma-B_{28}\n$$\n\nIts structure contains Boron cluster units including B₁₂ icosahedra and B₂ pairs.\n\nThis is an especially important MAT example of:\n\n$$\n\\text{same elemental composition}\n+\n\\text{different pressure/geometry}\n\\rightarrow\n\\text{different electronic state}\n$$\n\n---\n\n# 30. Pressure-Induced Metallisation and Superconductivity\n\nBoron has been experimentally driven into metallic/superconducting states under extreme pressure.\n\nMAT therefore distinguishes:\n\n```text\nambient elemental Boron\n```\n\nfrom:\n\n```text\nextreme-pressure metallic Boron\n```\n\nand:\n\n```text\nextreme-pressure superconducting Boron\n```\n\nThese are state-dependent properties.\n\nThey are not ordinary ambient properties of elemental Boron.\n\n---\n\n# 31. Chemical-Energy Branch\n\nBoron oxidation can release substantial chemical energy.\n\nHowever legacy G0005 correctly identified that:\n\n$$\n\\boxed{\n\\text{high theoretical energy release}\n\\neq\n\\text{easy practical combustion}\n}\n$$\n\nRelevant engineering constraints include:\n\n* ignition;\n* oxide layers;\n* reaction kinetics;\n* incomplete combustion;\n* condensed products;\n* particle size;\n* temperature;\n* oxidizer;\n* residence time.\n\n---\n\n# 32. Biological Context\n\nBoron has an established essential micronutrient role in plants.\n\nFor human biology, MAT must avoid equating this directly with established essentiality at the same evidential level.\n\nUse:\n\n```yaml\nplant_essentiality: ESTABLISHED\nhuman_essentiality: NOT-EQUIVALENTLY-ESTABLISHED\nbiological_effects: COMPOUND-AND-DOSE-DEPENDENT\n```\n\n---\n\n# 33. Safety Architecture\n\nBoron cannot receive one universal hazard rating.\n\nSeparate:\n\n* elemental Boron;\n* boric acid;\n* borates;\n* boranes;\n* B₄C;\n* BN;\n* borides;\n* enriched ¹⁰B/¹¹B material;\n* process-generated dust/fume.\n\nSafety therefore remains:\n\n$$\nH=\nF(\n\\text{compound},\n\\text{material form},\n\\text{dose},\n\\text{route},\n\\text{process},\nt\n)\n$$\n\n---\n\n# 34. Relationship Geometry\n\nBoron creates several independent geometry layers.\n\nNuclear:\n\nH ↔ B → He\n\nB → Li + He\n\nBe → B through radioactive decay\n\nChemical:\n\nB ↔ H\n\nB ↔ C\n\nB ↔ N\n\nB ↔ O\n\nMaterial:\n\nB ↔ Si\n\nB ↔ Mg\n\nB ↔ transition metals\n\nGeometric:\n\nB₁₂ icosahedra\n\ncages\n\npolyhedra\n\ncluster solids\n\nThe same element can therefore have several unrelated nearest neighbors.\n\n---\n\n# 35. Main MAT Boron Result\n\nBoron introduces one of MAT's strongest causal structure chains yet:\n\n$$\n\\boxed{\n\\text{electron count}\n\\rightarrow\n\\text{electron deficiency}\n\\rightarrow\n\\text{multicentre bonding}\n\\rightarrow\n\\text{polyhedral/icosahedral organization}\n\\rightarrow\n\\text{emergent material behavior}\n}\n$$\n\nIt also demonstrates isotope functional divergence:\n\n$$\n{}^{10}B\n\\rightarrow\n\\text{neutron-capture tool}\n$$\n\n$$\n{}^{11}B\n\\rightarrow\n\\text{proton-fusion research tool}\n$$\n\nwhile both remain chemically Boron.\n\n---\n\n# 36. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  multicentre_bonding_architecture: \"PASS\"\n  geometry_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  material_relationship_architecture: \"PASS\"\n  pressure_state_architecture: \"PASS\"\n  dopant_host_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n",
-  "bodyHash": "04665399f867fe9c12341c30f517ad444e028b19cb0794a8a00dd4e80b551c98",
+  "body": "\n# 0005 — Boron — B\n\n---\nmat_id: MAT:0005\nrecord_name: Boron\nsymbol: B\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 5\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0005\nlegacy_name: Boron\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n---\n\n# 0. Record Navigation\n\nPrevious primary record:\n\nMAT:0004\n0004-Beryllium-Be\n\nCurrent record:\n\nMAT:0005\n0005-Boron-B\n\n---\n\n# 1. Elemental Identity\n\n| Property | Value |\n|---|---|\n| MAT ID | MAT:0005 |\n| Element | Boron |\n| Symbol | B |\n| Atomic number | 5 |\n| Proton count | 5 |\n| Neutral electron count | 5 |\n| Period | 2 |\n| Group | 13 |\n| Block | p |\n| Ground configuration | 1s²2s²2p¹ |\n| Ground level | ²P°₁/₂ |\n| Standard atomic weight | [10.806, 10.821] |\n| Ordinary state near room conditions | solid |\n| Common classification | metalloid / covalent elemental solid |\n\nPrimary sources:\n\nSRC-000005\nSRC-000063\nSRC-000065\n\n---\n\n# 2. First MAT p-Block Element\n\nBoron is the first MAT element with a ground-state electron occupying a p orbital:\n\n\\[\n1s^22s^22p^1\n\\]\n\nThe transition from Beryllium is:\n\n\\[\n2s^2\n\\rightarrow\n2s^22p^1\n\\]\n\nThis introduces a major new schema branch:\n\n- directional p-orbital participation;\n- electron-deficient bonding;\n- multicentre bonding;\n- cluster structures;\n- allotrope-dependent electronic behavior;\n- complex covalent elemental solids.\n\n---\n\n# 3. Open-Shell Atomic State\n\nThe ground level is:\n\n\\[\n{}^2P^\\circ_{1/2}\n\\]\n\nThe isolated neutral atom therefore has an open-shell electronic state.\n\nThis must remain separate from the magnetic/electronic properties of bulk crystalline Boron.\n\nAtomic state:\n\nMAT:0005:ATOM:B\n\n---\n\n# 4. First Ionisation\n\n\\[\nB\\rightarrow B^+ + e^-\n\\]\n\nNIST ASD:\n\n\\[\nE_{I1}\n=\n8.298019\\pm0.000003\\ {\\rm eV}\n\\]\n\nCanonical ion:\n\nMAT:0005:ION:B+1\n\n---\n\n# 5. Ionisation Ladder\n\nSecond ionisation:\n\n\\[\nB^+\\rightarrow B^{2+}+e^-\n\\]\n\n\\[\nE_{I2}\n=\n25.15483\\pm0.00005\\ {\\rm eV}\n\\]\n\nThird:\n\n\\[\nB^{2+}\\rightarrow B^{3+}+e^-\n\\]\n\n\\[\nE_{I3}\n=\n37.93059\\pm0.00007\\ {\\rm eV}\n\\]\n\nHigher core-electron removal requires much larger energies:\n\n\\[\nE_{I4}\\approx259.374379\\ {\\rm eV}\n\\]\n\n\\[\nE_{I5}\\approx340.2260225\\ {\\rm eV}\n\\]\n\nCanonical states:\n\nMAT:0005:ATOM:B\nMAT:0005:ION:B+1\nMAT:0005:ION:B+2\nMAT:0005:ION:B+3\nMAT:0005:ION:B+4\nMAT:0005:ION:B+5\n\nThe large jump after removal of the valence electrons distinguishes:\n\nVALENCE-ELECTRON IONISATION\n\nfrom:\n\nCORE-ELECTRON IONISATION\n\n---\n\n# 6. Electron Affinity\n\nA precision experimental electron-affinity determination gives:\n\n\\[\nEA\n=\n0.279743\\pm0.000044\\ {\\rm eV}\n\\]\n\nfor atomic Boron.\n\nSource:\n\nSRC-000064\n\nThis is an atomic-state property.\n\nIt must not be confused with electron acceptance in a Boron-containing solid, semiconductor or compound.\n\n---\n\n# 7. Ordinary Material State\n\nRepresentative room-condition properties include approximately:\n\n| Property | Reference |\n|---|---:|\n| Density | 2.34 g cm⁻³ |\n| Melting point | 2350 K |\n| Boiling point | 4273 K |\n\nThese are summary reference values.\n\nBoron is not represented as one universal crystalline state.\n\n---\n\n# 8. Elemental Boron Is an Allotrope Family\n\nImportant elemental forms include:\n\n- α-rhombohedral Boron;\n- β-rhombohedral Boron;\n- γ-B₂₈;\n- tetragonal Boron phases;\n- amorphous Boron.\n\nTherefore:\n\n\\[\nB\n\\rightarrow\n\\{\nB_\\alpha,\nB_\\beta,\nB_\\gamma,\nB_T,\nB_{\\rm amorphous},\n...\n\\}\n\\]\n\nCanonical phase children will use individual `PHASE` or `ALLOTROPE` IDs.\n\nNo one density, band structure, conductivity or hardness is universal across every allotrope.\n\n---\n\n# 9. Electron-Deficient Bonding\n\nBoron has three valence electrons:\n\n\\[\n2s^22p^1\n\\]\n\nYet many Boron structures contain connectivity that cannot be described adequately using only conventional isolated two-centre/two-electron bonds.\n\nBoron therefore activates the MAT multicentre-bonding layer.\n\nImportant class:\n\n\\[\n3c-2e\n\\]\n\nthree-centre/two-electron bonding.\n\nMAT rule:\n\n\\[\n\\boxed{\n\\text{bond}\n\\neq\n\\text{always one electron pair between two atoms}\n}\n\\]\n\n---\n\n# 10. B₁₂ Icosahedral Motif\n\nOne of Boron's most important structural motifs is:\n\n\\[\nB_{12}\n\\]\n\norganized approximately as an icosahedral cluster.\n\nThis is not an artistic geometry imposed on the data.\n\nIt is a structure arising from real Boron bonding physics.\n\nMAT geometric descriptor:\n\n```yaml\ngeometry_family:\n  - ICOSAHEDRAL\n  - POLYHEDRAL\n  - CLUSTER-BASED\n````\n\n---\n\n# 11. Geometry–Electronic Feedback\n\nBoron provides a particularly strong demonstration that:\n\n$$\n\\text{electron count}\n+\n\\text{bonding constraints}\n\\rightarrow\n\\text{cluster geometry}\n$$\n\nand:\n\n$$\n\\text{cluster geometry}\n\\rightarrow\n\\text{electronic/material stability}\n$$\n\nThus geometry is not merely a visualization output.\n\nIt can become part of the causal material-state representation.\n\n---\n\n# 12. Material-State Principle\n\nFor Boron:\n\n$$\nM_B=\nF(\n\\text{allotrope},\n\\text{cluster topology},\n\\text{bonding},\n\\text{isotope},\nT,\nP,\n\\text{defects},\n\\text{dopants},\n\\text{history}\n)\n$$\n\nThe element name alone is insufficient to define its bulk behavior.\n\n---\n\n# 13. Semiconductor-Like Behavior\n\nSeveral elemental Boron states exhibit semiconducting behavior.\n\nHowever MAT does not use:\n\n```text\nboron_is_semiconductor: true\n```\n\nas an unconditional property.\n\nInstead electronic character must specify:\n\n* allotrope;\n* pressure;\n* temperature;\n* defect density;\n* impurity concentration;\n* carrier state.\n\n---\n\n# 14. Boron as Dopant\n\nBoron is widely used as an acceptor/p-type dopant in suitable semiconductor hosts.\n\nImportant future relationships include:\n\nMAT:0014 Silicon\n\nMAT:0006 Carbon\n\nand other semiconductor systems.\n\nThe doped-host properties belong to:\n\nHOST + BORON + CONCENTRATION + PROCESS HISTORY\n\nrather than elemental Boron alone.\n\n---\n\n# 15. Isotope Family\n\nCurrent NIST mass data cover:\n\n$$\n{}^6B\n$$\n\nthrough:\n\n$$\n{}^{21}B\n$$\n\nwithin the present table.\n\nNatural Boron contains two stable isotopes:\n\n$$\n{}^{10}B\n$$\n\nand:\n\n$$\n{}^{11}B\n$$\n\nwith representative NIST isotopic compositions:\n\n$$\n{}^{10}B\n=\n0.199\\pm0.007\n$$\n\n$$\n{}^{11}B\n=\n0.801\\pm0.007\n$$\n\nThese proportions are not universal constants for every natural or enriched Boron sample.\n\n---\n\n# 16. Standard Atomic Weight Interval\n\nBecause Boron isotope ratios vary naturally:\n\n$$\nA_r(B)\n=\n[10.806,\\ 10.821]\n$$\n\nMAT stores the interval itself rather than silently converting it to one fixed decimal.\n\nThis follows the same isotope-sensitive architecture used for Hydrogen and Lithium.\n\n---\n\n# 17. Boron-10\n\nCanonical ID:\n\nMAT:0005:ISO:B-10\n\nNucleus:\n\n* 5 protons;\n* 5 neutrons.\n\nRelative atomic mass:\n\n$$\n10.01293695(41)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n3^+\n$$\n\nRepresentative composition:\n\n$$\n0.199(7)\n$$\n\n¹⁰B is especially important because of its strong neutron-capture behavior.\n\n---\n\n# 18. Boron-11\n\nCanonical ID:\n\nMAT:0005:ISO:B-11\n\nNucleus:\n\n* 5 protons;\n* 6 neutrons.\n\nRelative atomic mass:\n\n$$\n11.00930536(45)\\ {\\rm u}\n$$\n\nStatus:\n\nSTABLE\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nRepresentative composition:\n\n$$\n0.801(7)\n$$\n\n¹¹B is the more abundant natural isotope and has important nuclear-research relationships including proton–Boron fusion.\n\n---\n\n# 19. Nuclear Spin and Magnetic Resonance\n\nBoth stable isotopes possess nonzero nuclear spin:\n\n$$\n{}^{10}B:\\ I=3\n$$\n\n$$\n{}^{11}B:\\ I=\\frac32\n$$\n\nTherefore both are NMR-active.\n\nMAT must distinguish:\n\n* ¹⁰B NMR;\n* ¹¹B NMR;\n* abundance;\n* gyromagnetic behavior;\n* local chemical environment;\n* field strength;\n* resonance mechanism.\n\nThere is no universal:\n\n```text\nboron_NMR_frequency\n```\n\nwithout field and isotope.\n\n---\n\n# 20. Boron-10 Neutron Capture\n\nA central Boron nuclear relationship is:\n\n$$\n{}^{10}B+n\n\\rightarrow\n{}^7Li+\\alpha\n$$\n\nwith branch-dependent energy release.\n\nThis links:\n\nMAT:0005 Boron\n\nto:\n\nMAT:0003 Lithium\n\nand:\n\nMAT:0002 Helium\n\nthrough one isotope-specific nuclear reaction.\n\nThe detailed capture cross section, product branching and Q-values will be stored in the nuclear-calculation layer.\n\n---\n\n# 21. Boron-11 Proton-Fusion Research\n\nA major research reaction is:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nwhere:\n\n$$\np={}^1H^+\n$$\n\nThis creates a nuclear relationship:\n\nMAT:0001 Hydrogen\n↔\nMAT:0005 Boron\n\nwith Helium-4 products.\n\nThis is an advanced fusion-research pathway.\n\nIt must not be represented as a commercially mature energy process.\n\n---\n\n# 22. Chemical and Nuclear H–B Relationships\n\nHydrogen and Boron have at least two very different relationship families.\n\nChemical:\n\n$$\nB_xH_y\n$$\n\nboranes.\n\nNuclear:\n\n$$\np+{}^{11}B\n\\rightarrow\n3\\alpha\n$$\n\nTherefore:\n\n$$\n\\boxed{\nH-B_{\\rm chemical}\n\\neq\nH-B_{\\rm nuclear}\n}\n$$\n\n---\n\n# 23. Boranes\n\nBoron forms a rich family of Hydrogen-containing compounds:\n\n$$\nB_xH_y\n$$\n\nMany exhibit:\n\n* multicentre bonding;\n* cage structures;\n* cluster geometry;\n* electron-deficient bonding.\n\nBoranes therefore become a major MAT test of molecular topology beyond simple chain/ring chemistry.\n\n---\n\n# 24. Boron Carbide\n\nFuture material/compound family:\n\n$$\nB_4C\n$$\n\nCanonical relationship:\n\nMAT:0005\n↔\nMAT:0006\n\nTarget status:\n\nRESERVED-PENDING-CARBON\n\nImportant emergent properties can include:\n\n* high hardness;\n* low density;\n* wear resistance;\n* neutron absorption;\n* ceramic behavior.\n\nThose belong to B₄C, not elemental Boron.\n\n---\n\n# 25. Boron Nitride\n\nFuture relationship:\n\nMAT:0005\n↔\nMAT:0007\n\nwith BN material families including:\n\n* hexagonal BN;\n* cubic BN;\n* layered/nanoscale forms.\n\nA particularly useful MAT comparison will be:\n\n$$\nB-N\n\\leftrightarrow\nC-C\n$$\n\nbecause lattice topology and electron count can produce analogous but chemically distinct material structures.\n\n---\n\n# 26. Boron Oxide and Glass Networks\n\nImportant future compound:\n\n$$\nB_2O_3\n$$\n\nBoron oxide can participate with silica-rich systems to form borosilicate glasses.\n\nPotential material objectives include:\n\n* thermal-shock resistance;\n* chemical durability;\n* controlled expansion;\n* optical transparency.\n\nThus a future design triangle is:\n\n$$\nB+Si+O\n$$\n\n---\n\n# 27. Borides\n\nBoron forms numerous metal borides.\n\nExamples include future records such as:\n\n$$\nTiB_2\n$$\n\n$$\nZrB_2\n$$\n\n$$\nHfB_2\n$$\n\nand Magnesium diboride:\n\n$$\nMgB_2\n$$\n\nPossible emergent properties include:\n\n* extreme-temperature capability;\n* hardness;\n* electrical conduction;\n* superconductivity;\n* chemical resistance.\n\nAgain:\n\n$$\n\\boxed{\n\\text{compound property}\n\\neq\n\\text{element property}\n}\n$$\n\n---\n\n# 28. Pressure as a State Variable\n\nHistorical G0005 correctly identifies pressure as capable of profoundly changing Boron's electronic and structural state.\n\nHigh-pressure Boron requires dedicated:\n\n```text\nphase\npressure\ntemperature\nstructure\nelectronic_state\n```\n\nobjects.\n\nNo simple:\n\n```text\nboron_high_pressure_property\n```\n\nfield is sufficient.\n\n---\n\n# 29. γ-B₂₈\n\nOne important high-pressure elemental Boron phase is:\n\n$$\n\\gamma-B_{28}\n$$\n\nIts structure contains Boron cluster units including B₁₂ icosahedra and B₂ pairs.\n\nThis is an especially important MAT example of:\n\n$$\n\\text{same elemental composition}\n+\n\\text{different pressure/geometry}\n\\rightarrow\n\\text{different electronic state}\n$$\n\n---\n\n# 30. Pressure-Induced Metallisation and Superconductivity\n\nBoron has been experimentally driven into metallic/superconducting states under extreme pressure.\n\nMAT therefore distinguishes:\n\n```text\nambient elemental Boron\n```\n\nfrom:\n\n```text\nextreme-pressure metallic Boron\n```\n\nand:\n\n```text\nextreme-pressure superconducting Boron\n```\n\nThese are state-dependent properties.\n\nThey are not ordinary ambient properties of elemental Boron.\n\n---\n\n# 31. Chemical-Energy Branch\n\nBoron oxidation can release substantial chemical energy.\n\nHowever legacy G0005 correctly identified that:\n\n$$\n\\boxed{\n\\text{high theoretical energy release}\n\\neq\n\\text{easy practical combustion}\n}\n$$\n\nRelevant engineering constraints include:\n\n* ignition;\n* oxide layers;\n* reaction kinetics;\n* incomplete combustion;\n* condensed products;\n* particle size;\n* temperature;\n* oxidizer;\n* residence time.\n\n---\n\n# 32. Biological Context\n\nBoron has an established essential micronutrient role in plants.\n\nFor human biology, MAT must avoid equating this directly with established essentiality at the same evidential level.\n\nUse:\n\n```yaml\nplant_essentiality: ESTABLISHED\nhuman_essentiality: NOT-EQUIVALENTLY-ESTABLISHED\nbiological_effects: COMPOUND-AND-DOSE-DEPENDENT\n```\n\n---\n\n# 33. Safety Architecture\n\nBoron cannot receive one universal hazard rating.\n\nSeparate:\n\n* elemental Boron;\n* boric acid;\n* borates;\n* boranes;\n* B₄C;\n* BN;\n* borides;\n* enriched ¹⁰B/¹¹B material;\n* process-generated dust/fume.\n\nSafety therefore remains:\n\n$$\nH=\nF(\n\\text{compound},\n\\text{material form},\n\\text{dose},\n\\text{route},\n\\text{process},\nt\n)\n$$\n\n---\n\n# 34. Relationship Geometry\n\nBoron creates several independent geometry layers.\n\nNuclear:\n\nH ↔ B → He\n\nB → Li + He\n\nBe → B through radioactive decay\n\nChemical:\n\nB ↔ H\n\nB ↔ C\n\nB ↔ N\n\nB ↔ O\n\nMaterial:\n\nB ↔ Si\n\nB ↔ Mg\n\nB ↔ transition metals\n\nGeometric:\n\nB₁₂ icosahedra\n\ncages\n\npolyhedra\n\ncluster solids\n\nThe same element can therefore have several unrelated nearest neighbors.\n\n---\n\n# 35. Main MAT Boron Result\n\nBoron introduces one of MAT's strongest causal structure chains yet:\n\n$$\n\\boxed{\n\\text{electron count}\n\\rightarrow\n\\text{electron deficiency}\n\\rightarrow\n\\text{multicentre bonding}\n\\rightarrow\n\\text{polyhedral/icosahedral organization}\n\\rightarrow\n\\text{emergent material behavior}\n}\n$$\n\nIt also demonstrates isotope functional divergence:\n\n$$\n{}^{10}B\n\\rightarrow\n\\text{neutron-capture tool}\n$$\n\n$$\n{}^{11}B\n\\rightarrow\n\\text{proton-fusion research tool}\n$$\n\nwhile both remain chemically Boron.\n\n---\n\n# 36. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  multicentre_bonding_architecture: \"PASS\"\n  geometry_architecture: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  material_relationship_architecture: \"PASS\"\n  pressure_state_architecture: \"PASS\"\n  dopant_host_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0005-Boron-B-Nuclear-Evaluation.md) provides 23 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "913abcfe6ccc7bf5a642b99d8bf3b4a66869a4510f61fe2d1fa8f8f29c44dc9c",
   "header": {
     "mat_id": "MAT:0005",
     "record_name": "Boron",
@@ -988,6 +988,1488 @@
       }
     },
     {
+      "path": "records/0005-Boron-B/data/isotopes/0005-Boron-B-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0005:REG:NUBASE2020",
+        "record_id": "MAT:0005",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 6,
+            "Z": 5,
+            "N": 1,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "6B",
+            "mass_excess": {
+              "value": 47320,
+              "unit": "keV",
+              "raw": "47320#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "2000#",
+              "uncertainty": 2000
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "p-unst",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "PARTICLE-UNSTABLE"
+            },
+            "spin_parity_raw": "2-#",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "2p ?",
+            "source_line": 44,
+            "raw_line": "006 0050   6B      47320#      2000#                                  p-unst            2-#                            2p ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-6",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:6:0"
+          },
+          {
+            "A": 7,
+            "Z": 5,
+            "N": 2,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "7B",
+            "mass_excess": {
+              "value": 27677,
+              "unit": "keV",
+              "raw": "27677",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "25",
+              "uncertainty": 25
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 570,
+              "unit": "ys",
+              "raw": "570",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "14",
+              "uncertainty": 14,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(3/2-)",
+            "ensdf_update_year_raw": "14",
+            "discovery_year_raw": "1967",
+            "decay_and_abundance_raw": "p=100",
+            "source_line": 51,
+            "raw_line": "007 0050   7B      27677         25                                   570     ys 14     (3/2-)        14          1967 p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0012160476851928864,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.000029867837881930542
+              },
+              "mean_lifetime": {
+                "value": 822.3361733067092,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 20.19773057244549
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-7",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:7:0"
+          },
+          {
+            "A": 8,
+            "Z": 5,
+            "N": 3,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "8B",
+            "mass_excess": {
+              "value": 22921.6,
+              "unit": "keV",
+              "raw": "22921.6",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.0",
+              "uncertainty": 1
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 771.9,
+              "unit": "ms",
+              "raw": "771.9",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2+",
+            "ensdf_update_year_raw": "05",
+            "discovery_year_raw": "1950",
+            "decay_and_abundance_raw": "B+=100;B+A=100",
+            "source_line": 58,
+            "raw_line": "008 0050   8B      22921.6        1.0                                 771.9   ms 0.9    2+            05          1950 B+=100;B+A=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0008979753602279379,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.000001046998088100977
+              },
+              "mean_lifetime": {
+                "value": 1113.616302062191,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 1.2984255368000672
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-8",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:8:0"
+          },
+          {
+            "A": 8,
+            "Z": 5,
+            "N": 3,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "8B",
+            "mass_excess": {
+              "value": 33546,
+              "unit": "keV",
+              "raw": "33546",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "8",
+              "uncertainty": 8
+            },
+            "excitation_energy": {
+              "value": 10624,
+              "unit": "keV",
+              "raw": "10624",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "8",
+              "uncertainty": 8
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=2",
+            "ensdf_update_year_raw": "05",
+            "discovery_year_raw": "1975",
+            "decay_and_abundance_raw": "",
+            "source_line": 59,
+            "raw_line": "008 0058   8B   i  33546          8       10624          8       RQ                     0+      T=2   05          1975 ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-8i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:8:8"
+          },
+          {
+            "A": 9,
+            "Z": 5,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "9B",
+            "mass_excess": {
+              "value": 12416.5,
+              "unit": "keV",
+              "raw": "12416.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 800,
+              "unit": "zs",
+              "raw": "800",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "300",
+              "uncertainty": 300,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1940",
+            "decay_and_abundance_raw": "p=100",
+            "source_line": 65,
+            "raw_line": "009 0050   9B      12416.5        0.9                                 800     zs 300    3/2-          06          1940 p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0008664339756999317,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.0003249127408874744
+              },
+              "mean_lifetime": {
+                "value": 1154.1560327111708,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 432.80851226668904
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-9",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:9:0"
+          },
+          {
+            "A": 9,
+            "Z": 5,
+            "N": 4,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "9B",
+            "mass_excess": {
+              "value": 27071,
+              "unit": "keV",
+              "raw": "27071.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.3",
+              "uncertainty": 2.3
+            },
+            "excitation_energy": {
+              "value": 14654.5,
+              "unit": "keV",
+              "raw": "14654.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.5",
+              "uncertainty": 2.5
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "3/2-    T=3/2",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 66,
+            "raw_line": "009 0058   9B   i  27071.0        2.3     14654.5        2.5     RQ                     3/2-    T=3/2 06               ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-9i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:9:8"
+          },
+          {
+            "A": 10,
+            "Z": 5,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "10B",
+            "mass_excess": {
+              "value": 12050.611,
+              "unit": "keV",
+              "raw": "12050.611",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.015",
+              "uncertainty": 0.015
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "3+*",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "1920",
+            "decay_and_abundance_raw": "IS=19.65 44",
+            "source_line": 74,
+            "raw_line": "010 0050   10B     12050.611      0.015                               stbl              3+*           07          1920 IS=19.65 44",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-10",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:10:0"
+          },
+          {
+            "A": 10,
+            "Z": 5,
+            "N": 5,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "10B",
+            "mass_excess": {
+              "value": 13790.66,
+              "unit": "keV",
+              "raw": "13790.66",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.04",
+              "uncertainty": 0.04
+            },
+            "excitation_energy": {
+              "value": 1740.05,
+              "unit": "keV",
+              "raw": "1740.05",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.04",
+              "uncertainty": 0.04
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=1",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 75,
+            "raw_line": "010 0058   10B  i  13790.66       0.04     1740.05       0.04                           0+      T=1   07               IT=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-10i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:10:8"
+          },
+          {
+            "A": 11,
+            "Z": 5,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "11B",
+            "mass_excess": {
+              "value": 8667.708,
+              "unit": "keV",
+              "raw": "8667.708",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.012",
+              "uncertainty": 0.012
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "3/2-*",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1920",
+            "decay_and_abundance_raw": "IS=80.35 44",
+            "source_line": 81,
+            "raw_line": "011 0050   11B      8667.708      0.012                               stbl              3/2-*         12          1920 IS=80.35 44",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-11",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:11:0"
+          },
+          {
+            "A": 11,
+            "Z": 5,
+            "N": 6,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "11B",
+            "mass_excess": {
+              "value": 21228,
+              "unit": "keV",
+              "raw": "21228",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "9",
+              "uncertainty": 9
+            },
+            "excitation_energy": {
+              "value": 12560,
+              "unit": "keV",
+              "raw": "12560",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "9",
+              "uncertainty": 9
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "T=3/2",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1/2+,(3/2+)",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1963",
+            "decay_and_abundance_raw": "",
+            "source_line": 82,
+            "raw_line": "011 0058   11B  i  21228          9       12560          9       RQ              T=3/2  1/2+,(3/2+)   12          1963 ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-11i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:11:8"
+          },
+          {
+            "A": 11,
+            "Z": 5,
+            "N": 6,
+            "state_index": 9,
+            "state_label": "j",
+            "source_label": "11B",
+            "mass_excess": {
+              "value": 42230,
+              "unit": "keV",
+              "raw": "42230",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "80",
+              "uncertainty": 80
+            },
+            "excitation_energy": {
+              "value": 33570,
+              "unit": "keV",
+              "raw": "33570",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "80",
+              "uncertainty": 80
+            },
+            "excitation_origin": "2p",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "3/2-    T=5/2",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 83,
+            "raw_line": "011 0059   11B  j  42230         80       33570         80       2p                     3/2-    T=5/2                  ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-11j",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:11:9"
+          },
+          {
+            "A": 12,
+            "Z": 5,
+            "N": 7,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "12B",
+            "mass_excess": {
+              "value": 13369.4,
+              "unit": "keV",
+              "raw": "13369.4",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.3",
+              "uncertainty": 1.3
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 20.2,
+              "unit": "ms",
+              "raw": "20.20",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.02",
+              "uncertainty": 0.02,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1+*",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1935",
+            "decay_and_abundance_raw": "B-=100;B-A=0.60 2",
+            "source_line": 92,
+            "raw_line": "012 0050   12B     13369.4        1.3                                  20.20  ms 0.02   1+*           17          1935 B-=100;B-A=0.60 2",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.03431421685940323,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.000033974472138023
+              },
+              "mean_lifetime": {
+                "value": 29.142439825957062,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.02885390081777927
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-12",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:12:0"
+          },
+          {
+            "A": 12,
+            "Z": 5,
+            "N": 7,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "12B",
+            "mass_excess": {
+              "value": 26088,
+              "unit": "keV",
+              "raw": "26088",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "19",
+              "uncertainty": 19
+            },
+            "excitation_energy": {
+              "value": 12719,
+              "unit": "keV",
+              "raw": "12719",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "19",
+              "uncertainty": 19
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=2",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 93,
+            "raw_line": "012 0058   12B  i  26088         19       12719         19       RQ                     0+      T=2   17               ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-12i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:12:8"
+          },
+          {
+            "A": 13,
+            "Z": 5,
+            "N": 8,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "13B",
+            "mass_excess": {
+              "value": 16561.9,
+              "unit": "keV",
+              "raw": "16561.9",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.0",
+              "uncertainty": 1
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 17.16,
+              "unit": "ms",
+              "raw": "17.16",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.18",
+              "uncertainty": 0.18,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "00",
+            "discovery_year_raw": "1956",
+            "decay_and_abundance_raw": "B-=100;B-n=0.266 36",
+            "source_line": 103,
+            "raw_line": "013 0050   13B     16561.9        1.0                                  17.16  ms 0.18   3/2-          00          1956 B-=100;B-n=0.266 36",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.04039319234032315,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00042370481475863443
+              },
+              "mean_lifetime": {
+                "value": 24.756646901654612,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.25968510736001343
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-13",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:13:0"
+          },
+          {
+            "A": 14,
+            "Z": 5,
+            "N": 9,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "14B",
+            "mass_excess": {
+              "value": 23664,
+              "unit": "keV",
+              "raw": "23664",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "21",
+              "uncertainty": 21
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 12.36,
+              "unit": "ms",
+              "raw": "12.36",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.29",
+              "uncertainty": 0.29,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2-",
+            "ensdf_update_year_raw": "01",
+            "discovery_year_raw": "1966",
+            "decay_and_abundance_raw": "B-=100;B-n=6.04 23;B-2n ?",
+            "source_line": 112,
+            "raw_line": "014 0050   14B     23664         21                                    12.36  ms 0.29   2-            01          1966 B-=100;B-n=6.04 23;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.05607986897734185,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.001315789806102681
+              },
+              "mean_lifetime": {
+                "value": 17.831710705387586,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.4183815618577994
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-14",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:14:0"
+          },
+          {
+            "A": 14,
+            "Z": 5,
+            "N": 9,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "14B",
+            "mass_excess": {
+              "value": 40728,
+              "unit": "keV",
+              "raw": "40728",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "20",
+              "uncertainty": 20
+            },
+            "excitation_energy": {
+              "value": 17065,
+              "unit": "keV",
+              "raw": "17065",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "29",
+              "uncertainty": 29
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 4.15,
+              "unit": "zs",
+              "raw": "4.15",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.9",
+              "uncertainty": 1.9,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+      T=3",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "2001",
+            "decay_and_abundance_raw": "IT ?",
+            "source_line": 113,
+            "raw_line": "014 0058   14B  i  40728         20       17065         29       RQ     4.15  zs 1.9    0+      T=3               2001 IT ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.16702341700239645,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.07646855236254295
+              },
+              "mean_lifetime": {
+                "value": 5.987184419689199,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 2.7411205776890304
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-14i",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:14:8"
+          },
+          {
+            "A": 15,
+            "Z": 5,
+            "N": 10,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "15B",
+            "mass_excess": {
+              "value": 28957,
+              "unit": "keV",
+              "raw": "28957",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "21",
+              "uncertainty": 21
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 10.18,
+              "unit": "ms",
+              "raw": "10.18",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.35",
+              "uncertainty": 0.35,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "02",
+            "discovery_year_raw": "1966",
+            "decay_and_abundance_raw": "B-=100;B-n=98.7 10;B-2n<1.5",
+            "source_line": 121,
+            "raw_line": "015 0050   15B     28957         21                                    10.18  ms 0.35   3/2-          02          1966 B-=100;B-n=98.7 10;B-2n<1.5",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0680891140039239,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0023409813262645737
+              },
+              "mean_lifetime": {
+                "value": 14.686635516249648,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.5049432643111372
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-15",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:15:0"
+          },
+          {
+            "A": 16,
+            "Z": 5,
+            "N": 11,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "16B",
+            "mass_excess": {
+              "value": 37112,
+              "unit": "keV",
+              "raw": "37112",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "25",
+              "uncertainty": 25
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 4.6,
+              "unit": "zs",
+              "raw": ">4.6",
+              "null_reason": null,
+              "relation": ">",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0-#",
+            "ensdf_update_year_raw": "16",
+            "discovery_year_raw": "2000",
+            "decay_and_abundance_raw": "n ?",
+            "source_line": 130,
+            "raw_line": "016 0050   16B     37112         25                                    >4.6   zs        0-#           16          2000 n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.15068416968694465,
+                "unit": "1/zs",
+                "relation": "<",
+                "uncertainty": null
+              },
+              "mean_lifetime": {
+                "value": 6.636397188089231,
+                "unit": "zs",
+                "relation": ">",
+                "uncertainty": null
+              },
+              "uncertainty_method": "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-16",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:16:0"
+          },
+          {
+            "A": 17,
+            "Z": 5,
+            "N": 12,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "17B",
+            "mass_excess": {
+              "value": 43720,
+              "unit": "keV",
+              "raw": "43720",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "200",
+              "uncertainty": 200
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 5.08,
+              "unit": "ms",
+              "raw": "5.08",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.05",
+              "uncertainty": 0.05,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(3/2-)",
+            "ensdf_update_year_raw": "99",
+            "discovery_year_raw": "1973",
+            "decay_and_abundance_raw": "B-=100;B-n=63 1;B-2n=12 2;B-3n=3.5 7;B-4n=0.4 3",
+            "source_line": 141,
+            "raw_line": "017 0050   17B     43720        200                                     5.08  ms 0.05   (3/2-)        99          1973 B-=100;B-n=63 1;B-2n=12 2;B-3n=3.5 7;B-4n=0.4 3                                                ",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.13644629538581599,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0013429753482855904
+              },
+              "mean_lifetime": {
+                "value": 7.3288908077159345,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.07213475204444818
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-17",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:17:0"
+          },
+          {
+            "A": 18,
+            "Z": 5,
+            "N": 13,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "18B",
+            "mass_excess": {
+              "value": 51790,
+              "unit": "keV",
+              "raw": "51790",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "200",
+              "uncertainty": 200
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "<26 ns",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "(2-)",
+            "ensdf_update_year_raw": "16",
+            "discovery_year_raw": "2010",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 150,
+            "raw_line": "018 0050   18B     51790        200                                              <26 ns (2-)          16          2010 n=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0005:ISO:B-18",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:18:0"
+          },
+          {
+            "A": 19,
+            "Z": 5,
+            "N": 14,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "19B",
+            "mass_excess": {
+              "value": 59770,
+              "unit": "keV",
+              "raw": "59770",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "530",
+              "uncertainty": 530
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.92,
+              "unit": "ms",
+              "raw": "2.92",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.13",
+              "uncertainty": 0.13,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(3/2-)",
+            "ensdf_update_year_raw": "18",
+            "discovery_year_raw": "1984",
+            "decay_and_abundance_raw": "B-=100;B-n=71 9;B-2n=17 5;B-3n<9.1",
+            "source_line": 160,
+            "raw_line": "019 0050   19B     59770        530                                     2.92  ms 0.13   (3/2-)        18          1984 B-=100;B-n=71 9;B-2n=17 5;B-3n<9.1",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.2373791714246388,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.010568250782603783
+              },
+              "mean_lifetime": {
+                "value": 4.2126695193957735,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.18755035531556524
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-19",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:19:0"
+          },
+          {
+            "A": 20,
+            "Z": 5,
+            "N": 15,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "20B",
+            "mass_excess": {
+              "value": 69400,
+              "unit": "keV",
+              "raw": "69400",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "550",
+              "uncertainty": 550
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 912.4,
+              "unit": "ys",
+              "raw": ">912.4",
+              "null_reason": null,
+              "relation": ">",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(1-,2-)",
+            "ensdf_update_year_raw": "19",
+            "discovery_year_raw": "2018",
+            "decay_and_abundance_raw": "n=100;B-n ?;B-2n ?",
+            "source_line": 170,
+            "raw_line": "020 0050   20B     69400        550                                  >912.4   ys        (1-,2-)       19          2018 n=100;B-n ?;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0007596966029810887,
+                "unit": "1/ys",
+                "relation": "<",
+                "uncertainty": null
+              },
+              "mean_lifetime": {
+                "value": 1316.3149553070903,
+                "unit": "ys",
+                "relation": ">",
+                "uncertainty": null
+              },
+              "uncertainty_method": "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-20",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:20:0"
+          },
+          {
+            "A": 21,
+            "Z": 5,
+            "N": 16,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "21B",
+            "mass_excess": {
+              "value": 78380,
+              "unit": "keV",
+              "raw": "78380",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "560",
+              "uncertainty": 560
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 760,
+              "unit": "ys",
+              "raw": ">760",
+              "null_reason": null,
+              "relation": ">",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(3/2-)",
+            "ensdf_update_year_raw": "19",
+            "discovery_year_raw": "2018",
+            "decay_and_abundance_raw": "2n=100",
+            "source_line": 182,
+            "raw_line": "021 0050   21B     78380        560                                  >760     ys        (3/2-)        19          2018 2n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0009120357638946648,
+                "unit": "1/ys",
+                "relation": "<",
+                "uncertainty": null
+              },
+              "mean_lifetime": {
+                "value": 1096.4482310756123,
+                "unit": "ys",
+                "relation": ">",
+                "uncertainty": null
+              },
+              "uncertainty_method": "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0005:ISO:B-21",
+            "evaluation_entry_id": "MAT:0005:NUBASE2020:21:0"
+          }
+        ]
+      }
+    },
+    {
       "path": "records/0005-Boron-B/data/structured/0005-Boron-B-Allotropes-and-Geometry.yaml",
       "data": {
         "registry_id": "MAT:0005:REG:ALLOTROPES",
@@ -1262,7 +2744,8 @@
               "evidence_status": "UNEVALUATED-MEASUREMENT",
               "source_id": "SRC-000071"
             },
-            "rule": "Do not assign 47 GPa to all B4C material states."
+            "rule": "Do not assign 47 GPa to all B4C material states.",
+            "relationship_id": "MAT:0005:REL:1000"
           },
           "boron_nitride": {
             "future_family": "MAT:CMP:BN",
@@ -1280,7 +2763,8 @@
               "NANOSTRUCTURED-BN"
             ],
             "rule": "h-BN, c-BN and other BN structures are distinct material states with different properties.\n",
-            "source_id": "SRC-000072"
+            "source_id": "SRC-000072",
+            "relationship_id": "MAT:0005:REL:1001"
           },
           "boron_oxide": {
             "future_id": "MAT:CMP:B2O3",
@@ -1294,7 +2778,8 @@
             "functions": [
               "glass_network_component",
               "borate_precursor"
-            ]
+            ],
+            "relationship_id": "MAT:0005:REL:1002"
           },
           "borosilicate": {
             "family": "BOROSILICATE-GLASS",
@@ -1312,7 +2797,8 @@
               "thermal_shock_resistance",
               "chemical_durability",
               "optical_transmission"
-            ]
+            ],
+            "relationship_id": "MAT:0005:REL:1003"
           },
           "boranes": {
             "family": "BORANES",
@@ -1327,7 +2813,8 @@
             },
             "safety": {
               "compound_specific": true
-            }
+            },
+            "relationship_id": "MAT:0005:REL:1004"
           },
           "magnesium_diboride": {
             "future_id": "MAT:CMP:MgB2",
@@ -1341,7 +2828,8 @@
             "function": [
               "superconducting_material"
             ],
-            "elemental_boron_superconductivity_equivalent": false
+            "elemental_boron_superconductivity_equivalent": false,
+            "relationship_id": "MAT:0005:REL:1005"
           },
           "boron_doped_diamond": {
             "class": "DOPED-HOST-MATERIAL",
@@ -1361,7 +2849,8 @@
               }
             },
             "source_id": "SRC-000074",
-            "rule": "Superconductivity belongs to the doped diamond state, not to elemental Boron or undoped diamond independently.\n"
+            "rule": "Superconductivity belongs to the doped diamond state, not to elemental Boron or undoped diamond independently.\n",
+            "relationship_id": "MAT:0005:REL:1006"
           },
           "metal_borides": {
             "family": "BORIDES",
@@ -1375,7 +2864,8 @@
               "hard",
               "electrically_conducting",
               "chemically_resistant"
-            ]
+            ],
+            "relationship_id": "MAT:0005:REL:1007"
           }
         },
         "rules": {
@@ -1685,49 +3175,135 @@
           },
           "V02": {
             "file": "0005-Boron-B-FIG-002-Atomic-Identity.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Boron atomic identity (MAT:0005). B · Z = 5. 1s2 2s2 2p1 · 2P°1/2. [10.806, 10.821]. weight interval. I1 = 8.298019 eV. SRC-000005. EA = 0.279743 eV. SRC-000064. p-block first. open shell atom. Z=5 → 5 e−. ATOM:B neutral. First p-orbital element in MAT.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/scientific/0005-Boron-B-FIG-002-Atomic-Identity.svg",
+              "sha256": "50e9a143b95de8f74980bcc9286a96e625ca0eaf336c7726482da5ca038068b3",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V03": {
             "files": [
               "0005-Boron-B-DIAGRAM-001-Multicentre-Bonding.svg",
               "0005-Boron-B-DIAGRAM-002-B12-Icosahedral-Motif.svg"
             ],
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Boron bonding: 2c-2e vs 3c-2e. 2c-2e bonds. conventional, exists. 3c-2e bonds. multicentre, exists. electron-deficient. 3 valence e−. not every bond. is 3c-2e. Bonding class per bond, not per element. / B12 icosahedral motif. 12 atoms. icosahedral descriptor. α-B12. rhombohedral. γ-B28. B12 + B2 pairs. distorted real. not perfect math. REAL CLUSTERS ≠ PERFECT ICOSAHEDRA.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0005-Boron-B/diagrams/bonding/0005-Boron-B-DIAGRAM-001-Multicentre-Bonding.svg",
+                  "sha256": "26d25659ac25b2551220d61fcb501f19a2f65901c105b857c77491c84b46fd4e"
+                },
+                {
+                  "source": "records/0005-Boron-B/diagrams/bonding/0005-Boron-B-DIAGRAM-002-B12-Icosahedral-Motif.svg",
+                  "sha256": "d8697643fc16be1978906405bcb03b97b4d625f29a672d7f1e167c83b59a705c"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V04": {
             "files": [
               "0005-Boron-B-FIG-003-Electron-Probability.svg",
               "0005-Boron-B-FIG-004-Valence-Bonding-Transition.svg"
             ],
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B electron structure. 1s2 core. tightly bound. 2s2. filled subshell. 2p1 valence. open shell. I1–I3 valence. 8.30 / 25.15 / 37.93. Core jump at I4/I5. / Atom → cluster/solid electronic state. B atom 2s2 2p1. multicentre bonding. cluster / solid state. No classical orbital paths.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0005-Boron-B/images/quantum/0005-Boron-B-FIG-003-Electron-Probability.svg",
+                  "sha256": "fc5cd48ffcc3d111237496c8334fa694c16ab21716cf94e8dc449daea743a9f1"
+                },
+                {
+                  "source": "records/0005-Boron-B/images/quantum/0005-Boron-B-FIG-004-Valence-Bonding-Transition.svg",
+                  "sha256": "03e48377bb03a2a31ab856501a6edcd629d336f0aeedd0d1e0d7cb856b5ed599"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V05": {
             "file": "0005-Boron-B-FIG-005-Isotope-Map.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B isotopes 6B–21B (bounds stay bounds). 6B · 1n. p-unbound. 7B · 2n. 570 ys. 8B · 3n. 771.9 ms β+. 9B · 4n. 800 zs. 10B · 5n. STABLE n-capture. 11B · 6n. STABLE p-fusion. 12B · 7n. 20.20 ms. 13B · 8n. 17.16 ms. 14B · 9n. 12.36 ms. 15B · 10n. 10.18 ms. 16B · 11n. >4.6 zs. 17B · 12n. 5.08 ms. 18B · 13n. <26 ns. 19B · 14n. 2.92 ms. 20B · 15n. >912.4 ys. 21B · 16n. >760 ys. 10B capture · 11B fusion — functions diverge.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/isotope/0005-Boron-B-FIG-005-Isotope-Map.svg",
+              "sha256": "064b007881b493802340ed9ca10f4859a4e49ab8b27e3c15f36ec0fadbbe9681",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V06": {
             "file": "0005-Boron-B-FIG-006-Spectral-Fingerprint.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B spectral fingerprint. 182.5894 nm. B I persistent. 208.8889 nm. B I persistent. 249.6769 nm. B I ground-pair. 249.7722 nm. strong persistent. B II 136–162. ion lines. 10B/11B NMR. I=3 / I=3/2. NO SINGLE BORON FREQUENCY. SRC-000079.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/spectral/0005-Boron-B-FIG-006-Spectral-Fingerprint.svg",
+              "sha256": "473cc042032e7a97cc4ed288569b1be98f66047980ab25a7ab23ce376b0a7c21",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V07": {
             "file": "0005-Boron-B-FIG-007-State-Dependent-Properties.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B properties by allotrope. α-B12. semiconducting. β-B106. disordered network. γ-B28 19–89GPa. B12+B2, Pnnm. amorphous B. process-dependent. no universal. band gap / hardness. State-resolved values only.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-007-State-Dependent-Properties.svg",
+              "sha256": "bc76c151bbd3b8904f74f86d9fb8389b32b48bea0bc602b8a1a6559c24b26b45",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V08": {
             "file": "0005-Boron-B-DIAGRAM-003-Electronic-and-Doping-State.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B electronic / doping states. elemental B. allotrope-dependent. B in Si. acceptor p-type. B in diamond. Tc≈4K emergent. metallic B. extreme pressure. host + concentration + process → carrier.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/diagrams/fields/0005-Boron-B-DIAGRAM-003-Electronic-and-Doping-State.svg",
+              "sha256": "dcd194b423f57847f0d758ea7c33746a40a6c1f4fa6b47900f837a78a023e398",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V09": {
             "file": "0005-Boron-B-DIAGRAM-004-Isotope-Spin-and-NMR.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B spin / NMR. 10B I = 3. NMR active. 11B I = 3/2. NMR active. ν = γB/2π. field explicit. no field-free. NMR frequency. Isotope + field required.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/diagrams/fields/0005-Boron-B-DIAGRAM-004-Isotope-Spin-and-NMR.svg",
+              "sha256": "24f2b344fba8c64e63a470e34722b93a862391d69fdf05bf0c6dc52e2fcb69fc",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V10": {
             "file": "0005-Boron-B-FIG-008-Thermal-and-Combustion-State.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B thermal / combustion. solid → melt. high-T regime. B2O3 formation. oxidation path. oxide-limited. ignition staged. high ΔH ≠ easy. practical burn. NASA staged-combustion findings.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-008-Thermal-and-Combustion-State.svg",
+              "sha256": "6e45ad0199c3d2a09b9277bba5057db7781f3276c824989bb561f53ba937c5f5",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V11": {
             "file": "0005-Boron-B-FIG-009-Cluster-Structural-Geometry.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B cluster geometry. B12 icosahedra. core motif. rhombohedral link. α/β networks. γ-B28 B12+B2. NaCl-type packing. closo/nido/arachno. Wade classes. Geometry is causal, not decor.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/properties/0005-Boron-B-FIG-009-Cluster-Structural-Geometry.svg",
+              "sha256": "49674268407aacaa60adc26a20aa6a463c5d3ba064b134eb679d05e9ed00bf07",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V12": {
             "file": "0005-Boron-B-FIG-010-Pressure-Phase-Map.svg",
@@ -1735,18 +3311,47 @@
           },
           "V13": {
             "file": "0005-Boron-B-DIAGRAM-005-Transformation-Network.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B transformation network. B → γ-B28 (pressure). B + H → boranes. B + C → B4C · B + N → BN. B + O → B2O3 / glass. 10B+n → Li+He · p+11B → 3α (nuclear, separate). Chemical, material, nuclear classes distinct.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/diagrams/processes/0005-Boron-B-DIAGRAM-005-Transformation-Network.svg",
+              "sha256": "a22d7a9e97ac1403998b6e85dc1b441b5c7a18aca5ea3d278f66381c0e793600",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V14": {
             "file": "0005-Boron-B-DIAGRAM-006-Knowledge-Graph.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "MAT:0005 knowledge graph. MAT:0005 Boron. — ISOTOPE-OF —. — NEUTRON-CAPTURE —. — NEUTRON-CAPTURE-EXCITED-BRANCH —. — NUCLEAR-FUSION-REACTION —. — DECAYS-TO —. — FORMS-MATERIAL-WITH —. — FORMS-COMPOUND-WITH —. — FORMS-OXIDE-WITH —. — GLASS-NETWORK-RELATIONSHIP —. — FORMS-BORANES-WITH —. — DOPANT-IN —. — FORMS-BORIDE-WITH —. — PERIODIC-FAMILY-RELATIONSHIP-WITH —. — BIOLOGICAL-ESSENTIALITY —. — HAS-STRUCTURAL-MOTIF —. — HAS-ALLOTROPE —. — LEGACY-SUCCESSOR-OF —. H–He–Li–Be–B–C connected before C exists.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/diagrams/relationships/0005-Boron-B-DIAGRAM-006-Knowledge-Graph.svg",
+              "sha256": "02dbd69fe2c52c45f8a6c4a79be0d51cb97dad328e53a7810ec46773f83b729f",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V15": {
             "files": [
               "0005-Boron-B-MODEL-SCI-001-B12-Icosahedral-Cluster.glb",
               "0005-Boron-B-MODEL-SCI-002-Gamma-B28-Cell.glb"
             ],
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B12 Icosahedral Cluster: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result. Gamma B28 Cell: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result.",
+            "description_provenance": {
+              "method": "Editorial description from retained filename and inspected glTF scene structure",
+              "review_status": "STRUCTURE-INSPECTED-SCIENTIFIC-GEOMETRY-UNVERIFIED",
+              "sources": [
+                {
+                  "path": "records/0005-Boron-B/models/scientific/0005-Boron-B-MODEL-SCI-001-B12-Icosahedral-Cluster.glb",
+                  "sha256": "e70291084b2a37fa8fa00fc01f825dcf219ac60524780488c06d3c1d76f6fd7a"
+                },
+                {
+                  "path": "records/0005-Boron-B/models/scientific/0005-Boron-B-MODEL-SCI-002-Gamma-B28-Cell.glb",
+                  "sha256": "a082d966120c28b0da42c58224cf638940ddd9f6f7314165a910d13ad3ffb2f3"
+                }
+              ]
+            }
           },
           "V16": {
             "file": "0005-Boron-B-MODEL-DATA-001.glb",
@@ -1754,11 +3359,25 @@
           },
           "V17": {
             "file": "0005-Boron-B-FIG-011-Applications.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B applications (isotope-labeled). 10B detection. neutron absorbers. B4C ceramics. hard + absorbing. BN materials. h/c/w forms. borosilicate. low-expansion glass. doping. Si + diamond. MgB2. superconductor cmpd. Nuclear uses need isotope.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/images/applications/0005-Boron-B-FIG-011-Applications.svg",
+              "sha256": "bdab648dfcc7e5130521b3204c8908586302e256d242f1ff4f14fbe17139a826",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V18": {
             "file": "0005-Boron-B-DIAGRAM-007-Evidence-Provenance.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "B evidence provenance. NIST ASD → atomic/spectra. NIST + NUBASE → isotopes. neutron data → 10B capture. Oganov → γ-B28. Eremets → pressure SC. ceramics/NASA → materials. Overlays outside core.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0005-Boron-B/diagrams/relationships/0005-Boron-B-DIAGRAM-007-Evidence-Provenance.svg",
+              "sha256": "99f91568730ba503f534456a100fba74f02d578895586185c22c92851a7a3001",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           }
         },
         "summary": {
@@ -2240,7 +3859,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000063",

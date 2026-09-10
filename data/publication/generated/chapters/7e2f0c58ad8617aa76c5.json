@@ -5,8 +5,8 @@
   "title": "0004 — Beryllium — Be",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "# 0004 — Beryllium — Be\n\n```yaml\nmat_id: MAT:0004\nrecord_name: Beryllium\nsymbol: Be\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 4\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0004\nlegacy_name: Beryllium\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n```\n\n# 0. Record Navigation\n\nPrevious primary record:\n\n```text\nMAT:0003\n0003-Lithium-Li\n```\n\nCurrent record:\n\n```text\nMAT:0004\n0004-Beryllium-Be\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                           |        Value | Unit / Status         |\n| ---------------------------------- | -----------: | --------------------- |\n| MAT ID                             |     MAT:0004 | —                     |\n| Element                            |    Beryllium | —                     |\n| Symbol                             |           Be | —                     |\n| Atomic number                      |            4 | dimensionless         |\n| Proton count                       |            4 | proton                |\n| Neutral electron count             |            4 | electron              |\n| Period                             |            2 | —                     |\n| Group                              |            2 | alkaline-earth family |\n| Block                              |            s | —                     |\n| Ground electron configuration      |       1s²2s² | —                     |\n| Ground level                       |  \\(^{1}S_0\\) | —                     |\n| Standard atomic weight             | 9.0121831(5) | —                     |\n| Naturally occurring stable isotope |          ⁹Be | —                     |\n| Common oxidation state             |           +2 | —                     |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000048\n```\n\n---\n\n# 2. Filled Subshell Is Not Filled Shell\n\nNeutral Beryllium has:\n\n$$\n1s^22s^2\n$$\n\nThis creates a useful MAT distinction.\n\nThe outer:\n\n$$\n2s\n$$\n\nsubshell is filled.\n\nHowever the complete principal shell:\n\n$$\nn=2\n$$\n\nis not filled because the \\(2p\\) states remain unoccupied and accessible.\n\nTherefore:\n\n$$\n\\boxed{\n\\text{filled subshell}\n\\neq\n\\text{closed principal shell}\n}\n$$\n\nThis explains why Beryllium is not chemically inert like Helium despite both having singlet \\(S\\)-state ground configurations.\n\n---\n\n# 3. First Ionisation\n\n$$\nBe\n\\rightarrow\nBe^+\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I1}\n=\n9.322699\\pm0.000007\\ \\mathrm{eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0004:ION:Be+1\n```\n\n---\n\n# 4. Second Ionisation\n\n$$\nBe^+\n\\rightarrow\nBe^{2+}\n+\ne^-\n$$\n\nNIST evaluated value:\n\n$$\nE_{I2}\n=\n18.21115\\pm0.00004\\ \\mathrm{eV}\n$$\n\nCanonical chemical ion:\n\n```text\nMAT:0004:ION:Be+2\n```\n\nThe \\(+2\\) state dominates conventional Beryllium chemistry.\n\n---\n\n# 5. Higher Ionisation\n\nFurther ionization removes electrons from the \\(1s^2\\) core.\n\nNIST gives approximately:\n\n$$\nE_{I3}\n=\n153.896205\\ \\mathrm{eV}\n$$\n\nand:\n\n$$\nE_{I4}\n=\n217.71858459\\ \\mathrm{eV}\n$$\n\nCanonical states:\n\n```text\nMAT:0004:ION:Be+3\nMAT:0004:ION:Be+4\n```\n\nThese highly ionized states belong primarily to plasma, atomic and high-energy environments rather than ordinary chemistry.\n\n---\n\n# 6. Ordinary Material State\n\nAt ordinary conditions elemental Beryllium is a metallic solid.\n\nRepresentative properties:\n\n```text\nstate: SOLID\nmaterial_class: LIGHT-METAL\nappearance: SILVERY-WHITE\ndensity: approximately 1.85 g/cm3\n```\n\nThe engineering state differs strongly from Lithium.\n\nLithium combines:\n\n```text\nvery low density\n+\nlow stiffness\n```\n\nwhile Beryllium combines:\n\n```text\nlow density\n+\nvery high stiffness\n```\n\nThis activates the MAT **specific-property** branch.\n\n---\n\n# 7. Crystal Structure\n\nOrdinary metallic Beryllium adopts a:\n\n```text\nHEXAGONAL-CLOSE-PACKED\n```\n\nstructure.\n\nCanonical phase:\n\n```text\nMAT:0004:PHASE:HCP\n```\n\nCrystallographic reference:\n\n```yaml\nstructure: HCP\nspace_group: P63/mmc\nspace_group_number: 194\n\ncell:\n  a: 228.58\n  c: 358.43\n  unit: pm\n```\n\nEquivalent approximate values:\n\n$$\na=2.2858\\ \\text{\\AA}\n$$\n\n$$\nc=3.5843\\ \\text{\\AA}\n$$\n\nThis is MAT's first validated HCP elemental-metal reference state.\n\n---\n\n# 8. Structural Anisotropy\n\nHCP geometry means mechanical response may depend on crystallographic direction.\n\nRelevant variables include:\n\n```text\ngrain orientation\ntexture\nbasal planes\nslip systems\ngrain size\nimpurities\ntemperature\nstrain rate\n```\n\nTherefore one scalar:\n\n```text\nberyllium strength\n```\n\ncannot fully describe the material.\n\nThe structural state must include microstructure.\n\n---\n\n# 9. Specific Stiffness\n\nHistorical `G0004` identified Beryllium as an important:\n\n```text\nstiffness / mass\n```\n\nmaterial.\n\nMAT formalizes this as:\n\n$$\nS_{\\rm specific}\n=\n\\frac{E}{\\rho}\n$$\n\nwhere:\n\n* \\(E\\) = specified elastic modulus;\n* \\(\\rho\\) = density.\n\nThis allows Beryllium to be compared with:\n\n```text\nAl\nMg\nTi\nC composites\nother lightweight structural systems\n```\n\nwithout inventing a subjective \"structural score.\"\n\n---\n\n# 10. Thermal State\n\nRepresentative phase points include approximately:\n\n$$\nT_m\n\\approx1560\\ \\mathrm K\n$$\n\nand:\n\n$$\nT_b\n\\approx2741\\ \\mathrm K\n$$\n\nfor conventional reference conditions.\n\nDetailed thermophysical objects must preserve:\n\n```text\npressure\nsample state\npurity\nmeasurement source\nuncertainty\n```\n\n---\n\n# 11. Thermal Conductivity\n\nBeryllium has relatively high thermal conductivity for a lightweight structural metal.\n\nThis creates an engineering combination:\n\n$$\n\\boxed{\n\\text{low density}\n+\n\\text{high stiffness}\n+\n\\text{useful thermal conductivity}\n}\n$$\n\nThe exact conductivity value will be stored in the detailed property table with specified temperature and material condition.\n\n---\n\n# 12. Ground-State Magnetism\n\nFor the isolated atomic ground state:\n\n$$\n{}^1S_0\n$$\n\nthere is:\n\n$$\nS=0\n$$\n\n$$\nL=0\n$$\n\n$$\nJ=0\n$$\n\nso there is no permanent ground-state electronic magnetic moment.\n\nBulk metallic Beryllium is a different collective state and must be represented separately.\n\nNo conventional permanent engineered magnetisation is assigned automatically.\n\n---\n\n# 13. Frequency and Spectroscopy\n\nMAT again prohibits:\n\n```text\nberyllium_frequency\n```\n\nas a universal scalar.\n\nBeryllium has separate frequency mechanisms including:\n\n```text\natomic electronic transitions\nfine structure\nisotope shifts\nplasma spectra\nsolid-state phonons\nacoustic modes\nNMR where nuclear spin permits\n```\n\nA historically important strong neutral-Be ultraviolet line occurs near:\n\n$$\n234.861\\ \\mathrm{nm}\n$$\n\nbut this is **one atomic transition**, not \"the frequency of Beryllium.\"\n\n---\n\n# 14. X-Ray Interaction\n\nBeryllium's low atomic number and useful mechanical properties make thin Beryllium material relatively transparent to X-rays compared with many structural metals.\n\nThis creates a distinctive application relationship:\n\n$$\n\\boxed{\n\\text{mechanically useful window}\n+\n\\text{low X-ray attenuation}\n}\n$$\n\nRelevant applications include:\n\n```text\nX-ray tube windows\ndetector windows\nsynchrotron/instrumentation windows\nX-ray optical systems\n```\n\nThis is **X-ray transmission**, not ordinary visible-light transparency.\n\n---\n\n# 15. Isotope Family\n\nCurrent mass tables contain Beryllium states from:\n\n$$\n{}^5Be\n$$\n\nthrough:\n\n$$\n{}^{16}Be\n$$\n\nThe stable natural element is overwhelmingly:\n\n$$\n{}^9Be\n$$\n\nwith isotopic composition:\n\n$$\n1\n$$\n\nin the NIST standard table.\n\nThe isotope branch contains several very different physical classes:\n\n```text\nproton-unbound\nextremely short-lived\nradioactive\nstable\nlong-lived cosmogenic\nneutron-rich\nmulti-neutron emitters\n```\n\n---\n\n# 16. Beryllium-5 — ⁵Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-5\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n5.0399(22\\#)\\ \\mathrm u\n$$\n\nNUBASE2020 classification:\n\n```text\nPROTON-UNSTABLE\n```\n\nNo adopted numerical half-life is assigned.\n\nMAT therefore stores:\n\n```yaml\nstability: \"PROTON-UNSTABLE\"\nhalf_life: \"NOT-ESTABLISHED\"\n```\n\nrather than fabricating a lifetime.\n\n---\n\n# 17. Beryllium-6 — ⁶Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-6\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n6.0197264(58)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n5.0\\pm0.3\\ \\mathrm{zs}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nTWO-PROTON EMISSION\n```\n\n---\n\n# 18. Beryllium-7 — ⁷Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-7\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n7.016928717(76)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n53.22\\pm0.06\\ \\mathrm d\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nDecay:\n\n```text\nELECTRON-CAPTURE\n```\n\nDaughter:\n\n```text\nMAT:0003:ISO:Li-7\n```\n\nwhich is already a resolved MAT record.\n\n---\n\n# 19. Beryllium-8 — ⁸Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-8\n```\n\nRelative atomic mass:\n\n$$\n8.005305102(37)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n81.9\\pm3.7\\ \\mathrm{as}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nDecay:\n\n$$\n{}^8Be\n\\rightarrow\n{}^4He+{}^4He\n$$\n\nCanonical daughters:\n\n```text\nMAT:0002:ISO:He-4\nMAT:0002:ISO:He-4\n```\n\n⁸Be is therefore an important MAT example of:\n\n```text\nPHYSICALLY-REALIZED\n+\nEXTREMELY-TRANSIENT\n```\n\nIt is neither stable nor \"impossible.\"\n\n---\n\n# 20. Helium → Beryllium → Carbon Bridge\n\nThe transient ⁸Be state is central to the stellar triple-alpha pathway.\n\nFirst:\n\n$$\n{}^4He+{}^4He\n\\rightleftharpoons\n{}^8Be\n$$\n\nfollowed by:\n\n$$\n{}^8Be+{}^4He\n\\rightarrow\n{}^{12}C+\\gamma\n$$\n\nThis creates a future nuclear knowledge-graph path:\n\n```text\nMAT:0002 Helium\n↓\nMAT:0004 Beryllium\n↓\nMAT:0006 Carbon\n```\n\nThis is a nuclear relationship, not ordinary chemical periodicity.\n\n---\n\n# 21. Beryllium-9 — ⁹Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-9\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 5\n```\n\nRelative atomic mass:\n\n$$\n9.012183065(82)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nNatural isotopic composition in the standard NIST table:\n\n$$\n1\n$$\n\n⁹Be is the principal nucleus relevant to ordinary Beryllium engineering.\n\n---\n\n# 22. Alpha–Beryllium Neutron Relationship\n\nAn important nuclear reaction is:\n\n$$\n{}^9Be+{}^4He\n\\rightarrow\n{}^{12}C+n\n$$\n\nThis produces a direct typed relationship:\n\n```text\nHelium-4\n+\nBeryllium-9\n↓\nCarbon-12\n+\nneutron\n```\n\nHistorically this reaction class has been important in neutron-source science.\n\nIt must remain separate from Beryllium's chemical behavior.\n\n---\n\n# 23. Beryllium-10 — ¹⁰Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-10\n```\n\nRelative atomic mass:\n\n$$\n10.013534695(86)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n1.387\\pm0.012\\ \\mathrm{My}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nFuture daughter:\n\n```text\nMAT:0005:ISO:B-10\n```\n\nStatus:\n\n```text\nRESERVED-PENDING-BORON\n```\n\n---\n\n# 24. Cosmogenic Clock\n\n¹⁰Be demonstrates an important MAT principle.\n\nIts long half-life makes it poorly suited to high-specific-power radioactive energy applications.\n\nHowever the same property makes it useful as a:\n\n```text\nCOSMOGENIC TRACER\nENVIRONMENTAL CLOCK\nGEOLOGICAL / EXPOSURE-DATING NUCLIDE\n```\n\nThus:\n\n$$\n\\boxed{\n\\text{poor for one function}\n\\neq\n\\text{poor universally}\n}\n$$\n\nFunction must always be explicit.\n\n---\n\n# 25. Beryllium-11 — ¹¹Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-11\n```\n\nRelative atomic mass:\n\n$$\n11.02166108(26)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n13.76\\pm0.07\\ \\mathrm s\n$$\n\nSpin/parity:\n\n$$\n\\frac12^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith evaluated minor delayed-particle branches.\n\n¹¹Be is also an important neutron-rich nuclear-structure system.\n\n---\n\n# 26. Beryllium-12 — ¹²Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-12\n```\n\nRelative atomic mass:\n\n$$\n12.0269221(20)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\n21.46\\pm0.05\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith a beta-delayed-neutron branch.\n\n---\n\n# 27. Beryllium-13 — ¹³Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-13\n```\n\nRelative atomic mass:\n\n$$\n13.036135(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n1.0\\pm0.7\\ \\mathrm{zs}\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac12^-\\right)\n$$\n\nClassification:\n\n```text\nEXTREMELY-SHORT-LIVED / NEUTRON-UNBOUND\n```\n\n---\n\n# 28. Beryllium-14 — ¹⁴Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-14\n```\n\nRelative atomic mass:\n\n$$\n14.04289(14)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\n4.53\\pm0.27\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith large beta-delayed-neutron branching.\n\n---\n\n# 29. Beryllium-15 — ¹⁵Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-15\n```\n\nRelative atomic mass:\n\n$$\n15.05342(43\\#)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n790\\pm270\\ \\mathrm{ys}\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac52^+\\right)\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 30. Beryllium-16 — ¹⁶Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-16\n```\n\nRelative atomic mass:\n\n$$\n16.06167(18)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n650\\pm130\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal evaluated decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\n---\n\n# 31. Nuclear-State Lesson\n\nThe Beryllium branch now contains:\n\n```text\n5Be   proton-unstable\n6Be   two-proton emitter\n7Be   electron-capture radionuclide\n8Be   alpha-decaying transient bridge\n9Be   stable engineering nucleus\n10Be  long-lived cosmogenic radionuclide\n11Be  neutron-rich beta emitter\n12Be  short-lived beta emitter\n13Be  neutron-unbound\n14Be  neutron-rich beta emitter\n15Be  neutron emitter\n16Be  two-neutron emitter\n```\n\nThis makes Beryllium one of the clearest early demonstrations that:\n\n$$\n\\boxed{\n\\text{same element}\n\\neq\n\\text{same nuclear function}\n}\n$$\n\n---\n\n# 32. Nuclear Neutron-Management Role\n\n⁹Be can participate in neutron-producing and neutron-multiplying reactions.\n\nRelevant application classes include:\n\n```text\nneutron sources\nneutron reflectors\nneutron management\nfusion neutron multipliers\nnuclear instrumentation\n```\n\nThe element is therefore better represented as:\n\n```text\nNUCLEAR-REACTION / NEUTRON-MANAGEMENT MATERIAL\n```\n\nthan as a conventional nuclear fuel.\n\n---\n\n# 33. Lithium–Beryllium Fusion Relationship\n\nMAT now has:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\n```\n\nwith complementary fusion-material roles.\n\nConceptually:\n\n```text\nLithium-containing breeder\n→ captures neutrons\n→ generates Tritium\n\nBeryllium / beryllide multiplier\n→ increases available neutron population\n```\n\nThis produces a systems-level edge:\n\n```text\nMAT:0003\nFUSION-SYSTEM-COOPERATES-WITH\nMAT:0004\n```\n\nThe relationship belongs to the blanket system, not to either element alone.\n\n---\n\n# 34. FLiBe Relationship\n\nAn important multi-element material family is based on:\n\n$$\nLiF+BeF_2\n$$\n\nproducing FLiBe-type molten salts.\n\nFuture relationship cluster:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0009 Fluorine\n↓\nFLiBe material system\n```\n\nRelevant domains include:\n\n```text\nmolten-salt systems\nhigh-temperature heat transfer\nfusion research\nnuclear technology\ntritium-management research\n```\n\nThe actual properties belong to the defined molten-salt composition rather than to elemental Beryllium.\n\n---\n\n# 35. Beryllium Oxide — BeO\n\nFuture compound:\n\n```text\nMAT:CMP:BeO\n```\n\nBeO demonstrates an important emergent-material combination:\n\n```text\nELECTRICAL INSULATION\n+\nHIGH THERMAL CONDUCTIVITY\n+\nREFRACTORY CERAMIC BEHAVIOR\n```\n\nThis property combination does not exist in elemental Beryllium in the same form.\n\nIt is therefore a strong MAT inverse-design example.\n\n---\n\n# 36. Copper Relationship\n\nFuture edge:\n\n```text\nMAT:0004\nALLOYS-WITH\nMAT:0029\n```\n\nBeryllium-copper alloys can provide combinations involving:\n\n```text\nstrength\nspring behavior\nelectrical conductivity\nthermal conductivity\nfatigue resistance\nnon-sparking tooling\n```\n\nThese are alloy properties.\n\nThey must never be copied into elemental Beryllium's intrinsic-property table.\n\n---\n\n# 37. Aluminium Relationship\n\nFuture edge:\n\n```text\nMAT:0004\nMATERIAL-RELATIONSHIP-WITH\nMAT:0013\n```\n\nBe–Al systems are relevant to lightweight structural engineering.\n\nThe design trade space may include:\n\n```text\ndensity\nspecific stiffness\nstrength\nmanufacturability\nthermal expansion\nthermal conductivity\ncost\ntoxicity\n```\n\n---\n\n# 38. Chemical Character\n\nThe common oxidation state is:\n\n$$\n+2\n$$\n\nHowever Beryllium chemistry is not merely a scaled version of heavier Group-2 chemistry.\n\nBecause Be²⁺ is small and has high charge density, Beryllium bonding can have substantial covalent character.\n\nMAT therefore distinguishes:\n\n```text\nPERIODIC GROUP RELATIONSHIP\n```\n\nfrom:\n\n```text\nCHEMICAL SIMILARITY DISTANCE\n```\n\nBeryllium may be periodic-table-near Magnesium while still being chemically distinctive.\n\n---\n\n# 39. Biological Context\n\nNo established essential biological role is assigned to Beryllium.\n\nInstead the biological/occupational relationship is primarily:\n\n```text\nTOXICITY\nIMMUNE SENSITIZATION\nRESPIRATORY DISEASE\nCARCINOGENIC HAZARD\n```\n\nThis is a major distinction from:\n\n```text\nBIOLOGICALLY ESSENTIAL ELEMENT\n```\n\n---\n\n# 40. Occupational Exposure\n\nAirborne Beryllium dust, fume and mist are serious occupational hazards.\n\nDocumented health outcomes include:\n\n```text\nberyllium sensitization\nchronic beryllium disease\nacute beryllium disease at sufficiently high exposure\nlung-cancer risk\n```\n\nMachining and powder processing must therefore be linked directly to occupational-exposure controls.\n\nSafety is not a detachable footnote to manufacturing.\n\n---\n\n# 41. Manufacturing\n\nImportant manufacturing/process classes include:\n\n```text\npowder metallurgy\nhot pressing\nsintering\nmachining\ncontrolled-atmosphere processing\nalloying\nceramic processing\nthin foil / window fabrication\nnuclear component manufacture\n```\n\nFor Beryllium:\n\n$$\n\\boxed{\n\\text{manufacturing feasibility}\n+\n\\text{worker exposure control}\n}\n$$\n\nmust be evaluated together.\n\n---\n\n# 42. Combustion / Oxidation\n\nBeryllium can oxidize and form BeO.\n\nA simplified relationship is:\n\n$$\nBe+O\n\\rightarrow\nBeO\n$$\n\nunder suitable reaction conditions.\n\nThe existence of reaction energy does **not** imply that Beryllium is an attractive practical fuel.\n\nMAT keeps separate:\n\n```text\ncombustion/reaction energy\n```\n\nand:\n\n```text\npractical fuel utility\n```\n\n---\n\n# 43. Causali E — Transient Nuclear State\n\nInitial components:\n\n$$\nS_0=\n{}^4He+{}^4He\n$$\n\nInteraction:\n\n$$\nA=\n\\text{allowed nuclear collision state}\n$$\n\nCandidate:\n\n$$\nC=\n{}^8Be\n$$\n\nbut:\n\n$$\nC(t)\n\\rightarrow\n{}^4He+{}^4He\n$$\n\non an attosecond timescale.\n\nThis demonstrates:\n\n```text\nVALID CANDIDATE STATE\n≠\nLONG-LIVED STATE\n```\n\n---\n\n# 44. Causali E — Emergent Ceramic\n\nStarting states:\n\n$$\nA=Be\n$$\n\n$$\nB=O\n$$\n\nCandidate compound:\n\n$$\nC=BeO\n$$\n\nThe resulting material can exhibit a property combination not represented by either elemental parent alone.\n\nThis is a strong example of:\n\n$$\n\\boxed{\n\\text{composition + structure}\n\\rightarrow\n\\text{emergent material properties}\n}\n$$\n\n---\n\n# 45. Relationship Geometry\n\nBeryllium has several distinct relationship directions.\n\n### Nuclear\n\n```text\nHe ↔ Be ↔ C\n```\n\n### Fusion Engineering\n\n```text\nLi ↔ Be\n```\n\n### Molten-Salt Technology\n\n```text\nLi ↔ Be ↔ F\n```\n\n### Structural Materials\n\n```text\nBe ↔ Al\nBe ↔ Ti\nBe ↔ composite systems\n```\n\n### Conductive Alloys\n\n```text\nBe ↔ Cu\n```\n\n### Ceramics\n\n```text\nBe ↔ O\n```\n\n### Periodicity\n\n```text\nBe ↔ Mg ↔ Ca ↔ Sr ↔ Ba ↔ Ra\n```\n\nA single nearest-neighbour distance cannot represent all of these.\n\n---\n\n# 46. MAT Geometry Result\n\n`MAT:0004` reinforces the need for:\n\n$$\n\\boxed{\n\\text{multiple coupled relationship layers}\n}\n$$\n\nor:\n\n$$\n\\boxed{\n\\text{higher-dimensional graph projected into visual space}\n}\n$$\n\nThe same element can simultaneously occupy:\n\n```text\nnuclear geometry\nchemical geometry\nperiodic geometry\nmaterials geometry\napplication geometry\nsafety geometry\n```\n\n---\n\n# 47. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- DESCRIPTION: Metallic Beryllium material manifestation -->\n\n<!-- MAT-VISUAL: V03 -->\n<!-- DESCRIPTION: HCP Beryllium lattice -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- DESCRIPTION: 5Be through 16Be isotope map -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- DESCRIPTION: Mechanism-separated Beryllium spectrum -->\n\n<!-- MAT-VISUAL: V07 -->\n<!-- DESCRIPTION: Density / stiffness / thermal dashboard -->\n\n<!-- MAT-VISUAL: V11 -->\n<!-- DESCRIPTION: HCP mechanics and specific stiffness -->\n\n<!-- MAT-VISUAL: V12 -->\n<!-- DESCRIPTION: Temperature-pressure phase structure -->\n\n<!-- MAT-VISUAL: V14 -->\n<!-- DESCRIPTION: He-Be-C, Li-Be, Be-Cu, Be-O relationship graph -->\n\n<!-- MAT-VISUAL: V17 -->\n<!-- DESCRIPTION: X-ray, aerospace, nuclear, ceramic and alloy applications -->\n\n<!-- MAT-VISUAL: V18 -->\n<!-- DESCRIPTION: Evidence plus occupational-safety provenance -->\n```\n\n---\n\n# 48. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\nmigration_status: \"CONTENT-CORE-MIGRATED\"\nschema_validation_status: \"PENDING\"\nvisual_specification: \"NOT-YET-LOCKED\"\nvisual_assets: \"NOT-GENERATED\"\n```\n\nNIST currently gives neutral Be as `1s²2s²`, \\(^{1}S_0\\), with first ionization energy `9.322699 ± 0.000007 eV`; its standard atomic-weight table gives `9.0121831(5)` and ⁹Be abundance `1`. ([NIST][1]) Beryllium's ordinary metal structure is HCP, `P6₃/mmc`, with approximately `a = 228.58 pm`, `c = 358.43 pm`. ([WebElements][2])\n\nThe isotope semantics above follow NUBASE2020 rather than treating every mass-table entry as a normal isotope: for example, ⁵Be is proton-unstable, ⁷Be is `53.22 ± 0.06 d`, ⁸Be is only `81.9 ± 3.7 as`, ⁹Be is stable, and ¹⁰Be is `1.387 ± 0.012 My`. ([Nuclear Data Section][3])\n\n---\n\n# 49. Bulk Material Property Layer\n\nBeryllium activates a much stronger structural-material branch than Lithium.\n\nRepresentative bulk reference values include:\n\n| Property                 |  Representative Value | Unit      |\n| ------------------------ | --------------------: | --------- |\n| Density                  |                  1848 | kg m⁻³    |\n| Young's modulus          |                   287 | GPa       |\n| Shear modulus            |                   132 | GPa       |\n| Bulk modulus             |                   130 | GPa       |\n| Poisson ratio            |                 0.032 | —         |\n| Electrical resistivity   |  \\(3.8\\times10^{-8}\\) | Ω m       |\n| Thermal conductivity     |                   190 | W m⁻¹ K⁻¹ |\n| Linear thermal expansion | \\(11.3\\times10^{-6}\\) | K⁻¹       |\n| Sound velocity           |                ~13000 | m s⁻¹     |\n\nThese are reference values.\n\nFinal measurement objects must retain:\n\n```text\ntemperature\npressure\ncrystallographic direction\ntexture\npurity\ngrain structure\nmanufacturing route\nmeasurement method\nuncertainty\nsource\n```\n\n---\n\n# 50. Elastic Anisotropy\n\nBeryllium is HCP.\n\nTherefore:\n\n$$\nE=E(\\mathbf n)\n$$\n\nwhere:\n\n$$\n\\mathbf n\n$$\n\nrepresents crystallographic/loading direction.\n\nReported Young's modulus values vary with orientation.\n\nMAT therefore distinguishes:\n\n```text\nPOLYCRYSTALLINE REFERENCE MODULUS\n```\n\nfrom:\n\n```text\nDIRECTION-RESOLVED SINGLE-CRYSTAL MODULUS\n```\n\nA single value such as:\n\n$$\n287\\ {\\rm GPa}\n$$\n\nmust not erase anisotropy.\n\n---\n\n# 51. Specific Stiffness\n\nDefine:\n\n$$\nS_E=\\frac{E}{\\rho}\n$$\n\nUsing:\n\n$$\nE=287\\times10^9\\ {\\rm Pa}\n$$\n\nand:\n\n$$\n\\rho=1848\\ {\\rm kg\\,m^{-3}}\n$$\n\ngives:\n\n$$\n\\boxed{\nS_E\n\\approx\n1.553\\times10^8\\ {\\rm m^2\\,s^{-2}}\n}\n$$\n\nThis is a derived **specific Young's modulus**.\n\nIt is not a universal structural ranking.\n\nReal component performance also depends on:\n\n```text\nstrength\nfracture toughness\nfatigue\ngeometry\nanisotropy\njoining\ntemperature\ntoxicity\nmanufacturing\ncost\n```\n\n---\n\n# 52. Electrical Transport\n\nUsing the representative resistivity:\n\n$$\n\\rho_e\n=\n3.8\\times10^{-8}\\ \\Omega m\n$$\n\nthe corresponding conductivity is:\n\n$$\n\\sigma\n=\n\\frac{1}{\\rho_e}\n$$\n\ngiving:\n\n$$\n\\boxed{\n\\sigma\n\\approx\n2.63\\times10^7\\ S\\,m^{-1}\n}\n$$\n\nClassification:\n\n```text\nDERIVED REFERENCE VALUE\n```\n\nThis applies to the specified metallic state.\n\nIt does not apply automatically to:\n\n```text\nBeO\nBeF2\nBe-Cu alloy\nplasma Be\nBe2+\n```\n\n---\n\n# 53. Thermal Transport\n\nRepresentative metallic-Beryllium thermal conductivity:\n\n$$\nk\\approx190\\ W\\,m^{-1}K^{-1}\n$$\n\nThe engineering combination is therefore:\n\n$$\n\\boxed{\n\\text{low density}\n+\n\\text{high stiffness}\n+\n\\text{high thermal conductivity}\n}\n$$\n\nBut the final MAT property remains:\n\n$$\nk=k(T,P,S,\\mu,\\text{history})\n$$\n\nwhere \\(S\\) represents material state and \\(\\mu\\) microstructure.\n\n---\n\n# 54. Acoustic Relationship\n\nRepresentative longitudinal/material sound velocity is of order:\n\n$$\nv_s\\approx1.3\\times10^4\\ {\\rm m\\,s^{-1}}\n$$\n\nAcoustic response belongs to the bulk elastic medium.\n\nIt is **not** a single intrinsic atomic \"Beryllium vibration frequency.\"\n\nFrequency still requires:\n\n```text\nmode\nwavelength\ngeometry\nboundary conditions\ncrystal direction\ntemperature\n```\n\n---\n\n# 55. Beryllium Oxide Material Branch\n\nCanonical future child:\n\n```text\nMAT:CMP:BeO\n```\n\nBeO is a ceramic, not a metallic Beryllium state.\n\nNIST structural-ceramics data show that BeO can combine:\n\n```text\nelectrical insulation\nhigh thermal conductivity\nhigh elastic modulus\nceramic/refractory behaviour\n```\n\nFor one typical polycrystalline reference:\n\n```text\ndensity ≈ 3.01 g/cm3\nelastic modulus ≈ 378 GPa\nthermal conductivity ≈ 240 W/(m*K) near room temperature\n```\n\nThese values are material/process dependent.\n\nFor a measured single crystal, NIST reports approximately:\n\n$$\nk(300\\,K)\\approx370\\ W\\,m^{-1}K^{-1}\n$$\n\nwith substantially larger conductivity at lower temperatures.\n\nThus:\n\n$$\n\\boxed{\nk_{\\rm BeO}\n\\neq\n\\text{one universal BeO constant}\n}\n$$\n\n---\n\n# 56. BeO Inverse-Design Example\n\nSuppose the target is:\n\n```text\nelectrical insulation\n+\nhigh thermal conduction\n+\nceramic stability\n```\n\nElemental Be alone does not satisfy that property vector.\n\nBut:\n\n$$\nBe+O\n\\rightarrow\nBeO\n$$\n\ncreates a candidate material.\n\nIn MAT inverse-search form:\n\n$$\nY^*\n=\n\\{\n\\sigma_{\\rm electrical}\\downarrow,\nk_{\\rm thermal}\\uparrow,\nT_{\\rm service}\\uparrow\n\\}\n$$\n\nmay return:\n\n```text\nBeO-containing ceramic systems\n```\n\nsubject to the severe toxicity/manufacturing constraints associated with Beryllium.\n\n---\n\n# 57. X-Ray Window Relationship\n\nBeryllium's low atomic number reduces X-ray attenuation relative to many structural metals.\n\nThin Be foil can therefore combine:\n\n```text\nmechanical support\n+\nvacuum boundary capability\n+\nrelatively low X-ray attenuation\n```\n\nThis relationship depends on:\n\n$$\nI=I_0e^{-\\mu(E)\\rho x}\n$$\n\nwhere:\n\n* \\(E\\) = photon energy;\n* \\(\\mu\\) = energy-dependent mass attenuation coefficient;\n* \\(\\rho\\) = material density;\n* \\(x\\) = thickness.\n\nTherefore:\n\n```text\nX-RAY TRANSPARENT\n```\n\nmust always mean:\n\n```text\nRELATIVELY TRANSMISSIVE\nAT SPECIFIED PHOTON ENERGY AND THICKNESS\n```\n\nnot perfectly transparent.\n\n---\n\n# 58. ⁸Be Decay Energy\n\nFor:\n\n$$\n{}^8Be\n\\rightarrow\n{}^4He+{}^4He\n$$\n\nusing atomic masses:\n\n$$\nm({}^8Be)=8.005305102\\ u\n$$\n\n$$\nm({}^4He)=4.00260325413\\ u\n$$\n\ngives:\n\n$$\n\\Delta m\n=\nm({}^8Be)-2m({}^4He)\n$$\n\nand:\n\n$$\n\\boxed{\nQ\\approx0.09184\\ {\\rm MeV}\n}\n$$\n\nThe positive value is consistent with ⁸Be being unbound relative to two alpha particles.\n\n---\n\n# 59. ⁹Be Alpha-Neutron Reaction\n\nReaction:\n\n$$\n{}^9Be+{}^4He\n\\rightarrow\n{}^{12}C+n\n$$\n\nUsing atomic masses:\n\n$$\nm({}^9Be)=9.012183065\\ u\n$$\n\n$$\nm({}^4He)=4.00260325413\\ u\n$$\n\n$$\nm({}^{12}C)=12\\ u\n$$\n\n$$\nm_n=1.00866491595\\ u\n$$\n\ngives:\n\n$$\n\\boxed{\nQ\\approx+5.70205\\ {\\rm MeV}\n}\n$$\n\nThis reaction is historically important in neutron physics.\n\n---\n\n# 60. ⁹Be Neutron-Multiplication Relationship\n\nA representative neutron-multiplication channel is:\n\n$$\n{}^9Be+n\n\\rightarrow\n{}^8Be+2n\n$$\n\nUsing evaluated masses gives:\n\n$$\n\\boxed{\nQ\\approx-1.66454\\ {\\rm MeV}\n}\n$$\n\nThe negative Q-value means sufficient incident kinetic energy is required.\n\nMAT stores:\n\n```text\nreaction energetics\n```\n\nseparately from:\n\n```text\ndevice geometry\nneutron spectrum\nblanket design\nreaction rate\nengineering performance\n```\n\n---\n\n# 61. Current Fusion-System Role\n\nCurrent fusion blanket research still includes Beryllium and Beryllium-based materials as:\n\n```text\nNEUTRON MULTIPLIERS\n```\n\nalongside Lithium-containing breeder materials.\n\nA systems representation is:\n\n```text\nfusion neutron field\n↓\nberyllium / beryllide multiplier zone\n↓ increased neutron availability\nlithium-containing breeder zone\n↓\ntritium production\n```\n\nThis is a cooperative material system.\n\nIt is not accurately represented as:\n\n```text\nBeryllium produces fusion fuel by itself\n```\n\n---\n\n# 62. Beryllides\n\nFusion research also includes intermetallic Beryllium-rich materials such as:\n\n```text\nTiBe12\nCrBe12\n```\n\nThese can have performance differences relative to pure Be, including:\n\n```text\nmechanical strength\nswelling behaviour\nmanufacturability\nirradiation response\n```\n\nTherefore:\n\n```text\nPURE Be\n```\n\nand:\n\n```text\nBERYLLIDE\n```\n\nmust remain different material records.\n\n---\n\n# 63. Occupational Safety as Process State\n\nFor Beryllium the exposure pathway is critical.\n\nHigh-concern states include:\n\n```text\nairborne dust\nmachining particles\nfume\nmist\ncontaminated surfaces\npowders\n```\n\nThe hazard cannot be represented only by bulk composition.\n\nMAT safety state:\n\n$$\nH=\nF(\n\\text{chemical form},\n\\text{particle size},\nC_{\\rm air},\nt,\n\\text{exposure route},\n\\text{work process},\n\\text{controls}\n)\n$$\n\n---\n\n# 64. Regulatory Exposure Fields\n\nJurisdiction-specific exposure limits may be stored as regulatory objects.\n\nFor example, the current OSHA United States standard includes:\n\n```text\n8-hour TWA PEL: 0.2 microgram/m3\n15-minute STEL: 2.0 microgram/m3\n```\n\nThese are:\n\n```text\nREGULATORY LIMITS\n```\n\nnot physical constants.\n\nEvery such field requires:\n\n```text\njurisdiction\nregulator\nrule\neffective/current status\naccess date\n```\n\n---\n\n# 65. Manufacturing-Safety Coupling\n\nFor Beryllium:\n\n```text\nmachining\ngrinding\npowder metallurgy\nsintering\nfinishing\nrecycling\n```\n\nmust connect to:\n\n```text\ndust generation\nair monitoring\ncontainment\nventilation\nPPE/respiratory protection where required\ndecontamination\nwaste control\n```\n\nMAT therefore uses:\n\n$$\n\\boxed{\n\\text{PROCESS}\n\\leftrightarrow\n\\text{EXPOSURE}\n\\leftrightarrow\n\\text{CONTROL}\n}\n$$\n\n---\n\n# 66. Updated Record State\n\n```yaml\nstatus: \"RESEARCHED\"\nmigration_status: \"CONTENT-MIGRATED\"\nmaterial_performance: \"CORE-COMPLETE\"\nnuclear_calculations: \"CORE-COMPLETE\"\nsafety_architecture: \"CORE-COMPLETE\"\nisotope_children: \"COMPLETE\"\nschema_validation_status: \"PENDING\"\nvisual_specification: \"NOT-YET-LOCKED\"\nvisual_assets: \"NOT-GENERATED\"\n```\n",
-  "bodyHash": "ba068a300b691b31cbbecd416ec828bd058ac881dd97b18fad816d3d0b85d4d6",
+  "body": "# 0004 — Beryllium — Be\n\n```yaml\nmat_id: MAT:0004\nrecord_name: Beryllium\nsymbol: Be\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 4\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0004\nlegacy_name: Beryllium\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n```\n\n# 0. Record Navigation\n\nPrevious primary record:\n\n```text\nMAT:0003\n0003-Lithium-Li\n```\n\nCurrent record:\n\n```text\nMAT:0004\n0004-Beryllium-Be\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                           |        Value | Unit / Status         |\n| ---------------------------------- | -----------: | --------------------- |\n| MAT ID                             |     MAT:0004 | —                     |\n| Element                            |    Beryllium | —                     |\n| Symbol                             |           Be | —                     |\n| Atomic number                      |            4 | dimensionless         |\n| Proton count                       |            4 | proton                |\n| Neutral electron count             |            4 | electron              |\n| Period                             |            2 | —                     |\n| Group                              |            2 | alkaline-earth family |\n| Block                              |            s | —                     |\n| Ground electron configuration      |       1s²2s² | —                     |\n| Ground level                       |  \\(^{1}S_0\\) | —                     |\n| Standard atomic weight             | 9.0121831(5) | —                     |\n| Naturally occurring stable isotope |          ⁹Be | —                     |\n| Common oxidation state             |           +2 | —                     |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000048\n```\n\n---\n\n# 2. Filled Subshell Is Not Filled Shell\n\nNeutral Beryllium has:\n\n$$\n1s^22s^2\n$$\n\nThis creates a useful MAT distinction.\n\nThe outer:\n\n$$\n2s\n$$\n\nsubshell is filled.\n\nHowever the complete principal shell:\n\n$$\nn=2\n$$\n\nis not filled because the \\(2p\\) states remain unoccupied and accessible.\n\nTherefore:\n\n$$\n\\boxed{\n\\text{filled subshell}\n\\neq\n\\text{closed principal shell}\n}\n$$\n\nThis explains why Beryllium is not chemically inert like Helium despite both having singlet \\(S\\)-state ground configurations.\n\n---\n\n# 3. First Ionisation\n\n$$\nBe\n\\rightarrow\nBe^+\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I1}\n=\n9.322699\\pm0.000007\\ \\mathrm{eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0004:ION:Be+1\n```\n\n---\n\n# 4. Second Ionisation\n\n$$\nBe^+\n\\rightarrow\nBe^{2+}\n+\ne^-\n$$\n\nNIST evaluated value:\n\n$$\nE_{I2}\n=\n18.21115\\pm0.00004\\ \\mathrm{eV}\n$$\n\nCanonical chemical ion:\n\n```text\nMAT:0004:ION:Be+2\n```\n\nThe \\(+2\\) state dominates conventional Beryllium chemistry.\n\n---\n\n# 5. Higher Ionisation\n\nFurther ionization removes electrons from the \\(1s^2\\) core.\n\nNIST gives approximately:\n\n$$\nE_{I3}\n=\n153.896205\\ \\mathrm{eV}\n$$\n\nand:\n\n$$\nE_{I4}\n=\n217.71858459\\ \\mathrm{eV}\n$$\n\nCanonical states:\n\n```text\nMAT:0004:ION:Be+3\nMAT:0004:ION:Be+4\n```\n\nThese highly ionized states belong primarily to plasma, atomic and high-energy environments rather than ordinary chemistry.\n\n---\n\n# 6. Ordinary Material State\n\nAt ordinary conditions elemental Beryllium is a metallic solid.\n\nRepresentative properties:\n\n```text\nstate: SOLID\nmaterial_class: LIGHT-METAL\nappearance: SILVERY-WHITE\ndensity: approximately 1.85 g/cm3\n```\n\nThe engineering state differs strongly from Lithium.\n\nLithium combines:\n\n```text\nvery low density\n+\nlow stiffness\n```\n\nwhile Beryllium combines:\n\n```text\nlow density\n+\nvery high stiffness\n```\n\nThis activates the MAT **specific-property** branch.\n\n---\n\n# 7. Crystal Structure\n\nOrdinary metallic Beryllium adopts a:\n\n```text\nHEXAGONAL-CLOSE-PACKED\n```\n\nstructure.\n\nCanonical phase:\n\n```text\nMAT:0004:PHASE:HCP\n```\n\nCrystallographic reference:\n\n```yaml\nstructure: HCP\nspace_group: P63/mmc\nspace_group_number: 194\n\ncell:\n  a: 228.58\n  c: 358.43\n  unit: pm\n```\n\nEquivalent approximate values:\n\n$$\na=2.2858\\ \\text{\\AA}\n$$\n\n$$\nc=3.5843\\ \\text{\\AA}\n$$\n\nThis is MAT's first validated HCP elemental-metal reference state.\n\n---\n\n# 8. Structural Anisotropy\n\nHCP geometry means mechanical response may depend on crystallographic direction.\n\nRelevant variables include:\n\n```text\ngrain orientation\ntexture\nbasal planes\nslip systems\ngrain size\nimpurities\ntemperature\nstrain rate\n```\n\nTherefore one scalar:\n\n```text\nberyllium strength\n```\n\ncannot fully describe the material.\n\nThe structural state must include microstructure.\n\n---\n\n# 9. Specific Stiffness\n\nHistorical `G0004` identified Beryllium as an important:\n\n```text\nstiffness / mass\n```\n\nmaterial.\n\nMAT formalizes this as:\n\n$$\nS_{\\rm specific}\n=\n\\frac{E}{\\rho}\n$$\n\nwhere:\n\n* \\(E\\) = specified elastic modulus;\n* \\(\\rho\\) = density.\n\nThis allows Beryllium to be compared with:\n\n```text\nAl\nMg\nTi\nC composites\nother lightweight structural systems\n```\n\nwithout inventing a subjective \"structural score.\"\n\n---\n\n# 10. Thermal State\n\nRepresentative phase points include approximately:\n\n$$\nT_m\n\\approx1560\\ \\mathrm K\n$$\n\nand:\n\n$$\nT_b\n\\approx2741\\ \\mathrm K\n$$\n\nfor conventional reference conditions.\n\nDetailed thermophysical objects must preserve:\n\n```text\npressure\nsample state\npurity\nmeasurement source\nuncertainty\n```\n\n---\n\n# 11. Thermal Conductivity\n\nBeryllium has relatively high thermal conductivity for a lightweight structural metal.\n\nThis creates an engineering combination:\n\n$$\n\\boxed{\n\\text{low density}\n+\n\\text{high stiffness}\n+\n\\text{useful thermal conductivity}\n}\n$$\n\nThe exact conductivity value will be stored in the detailed property table with specified temperature and material condition.\n\n---\n\n# 12. Ground-State Magnetism\n\nFor the isolated atomic ground state:\n\n$$\n{}^1S_0\n$$\n\nthere is:\n\n$$\nS=0\n$$\n\n$$\nL=0\n$$\n\n$$\nJ=0\n$$\n\nso there is no permanent ground-state electronic magnetic moment.\n\nBulk metallic Beryllium is a different collective state and must be represented separately.\n\nNo conventional permanent engineered magnetisation is assigned automatically.\n\n---\n\n# 13. Frequency and Spectroscopy\n\nMAT again prohibits:\n\n```text\nberyllium_frequency\n```\n\nas a universal scalar.\n\nBeryllium has separate frequency mechanisms including:\n\n```text\natomic electronic transitions\nfine structure\nisotope shifts\nplasma spectra\nsolid-state phonons\nacoustic modes\nNMR where nuclear spin permits\n```\n\nA historically important strong neutral-Be ultraviolet line occurs near:\n\n$$\n234.861\\ \\mathrm{nm}\n$$\n\nbut this is **one atomic transition**, not \"the frequency of Beryllium.\"\n\n---\n\n# 14. X-Ray Interaction\n\nBeryllium's low atomic number and useful mechanical properties make thin Beryllium material relatively transparent to X-rays compared with many structural metals.\n\nThis creates a distinctive application relationship:\n\n$$\n\\boxed{\n\\text{mechanically useful window}\n+\n\\text{low X-ray attenuation}\n}\n$$\n\nRelevant applications include:\n\n```text\nX-ray tube windows\ndetector windows\nsynchrotron/instrumentation windows\nX-ray optical systems\n```\n\nThis is **X-ray transmission**, not ordinary visible-light transparency.\n\n---\n\n# 15. Isotope Family\n\nCurrent mass tables contain Beryllium states from:\n\n$$\n{}^5Be\n$$\n\nthrough:\n\n$$\n{}^{16}Be\n$$\n\nThe stable natural element is overwhelmingly:\n\n$$\n{}^9Be\n$$\n\nwith isotopic composition:\n\n$$\n1\n$$\n\nin the NIST standard table.\n\nThe isotope branch contains several very different physical classes:\n\n```text\nproton-unbound\nextremely short-lived\nradioactive\nstable\nlong-lived cosmogenic\nneutron-rich\nmulti-neutron emitters\n```\n\n---\n\n# 16. Beryllium-5 — ⁵Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-5\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n5.0399(22\\#)\\ \\mathrm u\n$$\n\nNUBASE2020 classification:\n\n```text\nPROTON-UNSTABLE\n```\n\nNo adopted numerical half-life is assigned.\n\nMAT therefore stores:\n\n```yaml\nstability: \"PROTON-UNSTABLE\"\nhalf_life: \"NOT-ESTABLISHED\"\n```\n\nrather than fabricating a lifetime.\n\n---\n\n# 17. Beryllium-6 — ⁶Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-6\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n6.0197264(58)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n5.0\\pm0.3\\ \\mathrm{zs}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nTWO-PROTON EMISSION\n```\n\n---\n\n# 18. Beryllium-7 — ⁷Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-7\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n7.016928717(76)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n53.22\\pm0.06\\ \\mathrm d\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nDecay:\n\n```text\nELECTRON-CAPTURE\n```\n\nDaughter:\n\n```text\nMAT:0003:ISO:Li-7\n```\n\nwhich is already a resolved MAT record.\n\n---\n\n# 19. Beryllium-8 — ⁸Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-8\n```\n\nRelative atomic mass:\n\n$$\n8.005305102(37)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n81.9\\pm3.7\\ \\mathrm{as}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nDecay:\n\n$$\n{}^8Be\n\\rightarrow\n{}^4He+{}^4He\n$$\n\nCanonical daughters:\n\n```text\nMAT:0002:ISO:He-4\nMAT:0002:ISO:He-4\n```\n\n⁸Be is therefore an important MAT example of:\n\n```text\nPHYSICALLY-REALIZED\n+\nEXTREMELY-TRANSIENT\n```\n\nIt is neither stable nor \"impossible.\"\n\n---\n\n# 20. Helium → Beryllium → Carbon Bridge\n\nThe transient ⁸Be state is central to the stellar triple-alpha pathway.\n\nFirst:\n\n$$\n{}^4He+{}^4He\n\\rightleftharpoons\n{}^8Be\n$$\n\nfollowed by:\n\n$$\n{}^8Be+{}^4He\n\\rightarrow\n{}^{12}C+\\gamma\n$$\n\nThis creates a future nuclear knowledge-graph path:\n\n```text\nMAT:0002 Helium\n↓\nMAT:0004 Beryllium\n↓\nMAT:0006 Carbon\n```\n\nThis is a nuclear relationship, not ordinary chemical periodicity.\n\n---\n\n# 21. Beryllium-9 — ⁹Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-9\n```\n\nComposition:\n\n```text\nprotons: 4\nneutrons: 5\n```\n\nRelative atomic mass:\n\n$$\n9.012183065(82)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nNatural isotopic composition in the standard NIST table:\n\n$$\n1\n$$\n\n⁹Be is the principal nucleus relevant to ordinary Beryllium engineering.\n\n---\n\n# 22. Alpha–Beryllium Neutron Relationship\n\nAn important nuclear reaction is:\n\n$$\n{}^9Be+{}^4He\n\\rightarrow\n{}^{12}C+n\n$$\n\nThis produces a direct typed relationship:\n\n```text\nHelium-4\n+\nBeryllium-9\n↓\nCarbon-12\n+\nneutron\n```\n\nHistorically this reaction class has been important in neutron-source science.\n\nIt must remain separate from Beryllium's chemical behavior.\n\n---\n\n# 23. Beryllium-10 — ¹⁰Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-10\n```\n\nRelative atomic mass:\n\n$$\n10.013534695(86)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n1.387\\pm0.012\\ \\mathrm{My}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nFuture daughter:\n\n```text\nMAT:0005:ISO:B-10\n```\n\nStatus:\n\n```text\nRESERVED-PENDING-BORON\n```\n\n---\n\n# 24. Cosmogenic Clock\n\n¹⁰Be demonstrates an important MAT principle.\n\nIts long half-life makes it poorly suited to high-specific-power radioactive energy applications.\n\nHowever the same property makes it useful as a:\n\n```text\nCOSMOGENIC TRACER\nENVIRONMENTAL CLOCK\nGEOLOGICAL / EXPOSURE-DATING NUCLIDE\n```\n\nThus:\n\n$$\n\\boxed{\n\\text{poor for one function}\n\\neq\n\\text{poor universally}\n}\n$$\n\nFunction must always be explicit.\n\n---\n\n# 25. Beryllium-11 — ¹¹Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-11\n```\n\nRelative atomic mass:\n\n$$\n11.02166108(26)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n13.76\\pm0.07\\ \\mathrm s\n$$\n\nSpin/parity:\n\n$$\n\\frac12^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith evaluated minor delayed-particle branches.\n\n¹¹Be is also an important neutron-rich nuclear-structure system.\n\n---\n\n# 26. Beryllium-12 — ¹²Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-12\n```\n\nRelative atomic mass:\n\n$$\n12.0269221(20)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\n21.46\\pm0.05\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith a beta-delayed-neutron branch.\n\n---\n\n# 27. Beryllium-13 — ¹³Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-13\n```\n\nRelative atomic mass:\n\n$$\n13.036135(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n1.0\\pm0.7\\ \\mathrm{zs}\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac12^-\\right)\n$$\n\nClassification:\n\n```text\nEXTREMELY-SHORT-LIVED / NEUTRON-UNBOUND\n```\n\n---\n\n# 28. Beryllium-14 — ¹⁴Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-14\n```\n\nRelative atomic mass:\n\n$$\n14.04289(14)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\n4.53\\pm0.27\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay:\n\n```text\nBETA-MINUS\n```\n\nwith large beta-delayed-neutron branching.\n\n---\n\n# 29. Beryllium-15 — ¹⁵Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-15\n```\n\nRelative atomic mass:\n\n$$\n15.05342(43\\#)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n790\\pm270\\ \\mathrm{ys}\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac52^+\\right)\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 30. Beryllium-16 — ¹⁶Be\n\nCanonical ID:\n\n```text\nMAT:0004:ISO:Be-16\n```\n\nRelative atomic mass:\n\n$$\n16.06167(18)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\n650\\pm130\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal evaluated decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\n---\n\n# 31. Nuclear-State Lesson\n\nThe Beryllium branch now contains:\n\n```text\n5Be   proton-unstable\n6Be   two-proton emitter\n7Be   electron-capture radionuclide\n8Be   alpha-decaying transient bridge\n9Be   stable engineering nucleus\n10Be  long-lived cosmogenic radionuclide\n11Be  neutron-rich beta emitter\n12Be  short-lived beta emitter\n13Be  neutron-unbound\n14Be  neutron-rich beta emitter\n15Be  neutron emitter\n16Be  two-neutron emitter\n```\n\nThis makes Beryllium one of the clearest early demonstrations that:\n\n$$\n\\boxed{\n\\text{same element}\n\\neq\n\\text{same nuclear function}\n}\n$$\n\n---\n\n# 32. Nuclear Neutron-Management Role\n\n⁹Be can participate in neutron-producing and neutron-multiplying reactions.\n\nRelevant application classes include:\n\n```text\nneutron sources\nneutron reflectors\nneutron management\nfusion neutron multipliers\nnuclear instrumentation\n```\n\nThe element is therefore better represented as:\n\n```text\nNUCLEAR-REACTION / NEUTRON-MANAGEMENT MATERIAL\n```\n\nthan as a conventional nuclear fuel.\n\n---\n\n# 33. Lithium–Beryllium Fusion Relationship\n\nMAT now has:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\n```\n\nwith complementary fusion-material roles.\n\nConceptually:\n\n```text\nLithium-containing breeder\n→ captures neutrons\n→ generates Tritium\n\nBeryllium / beryllide multiplier\n→ increases available neutron population\n```\n\nThis produces a systems-level edge:\n\n```text\nMAT:0003\nFUSION-SYSTEM-COOPERATES-WITH\nMAT:0004\n```\n\nThe relationship belongs to the blanket system, not to either element alone.\n\n---\n\n# 34. FLiBe Relationship\n\nAn important multi-element material family is based on:\n\n$$\nLiF+BeF_2\n$$\n\nproducing FLiBe-type molten salts.\n\nFuture relationship cluster:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0009 Fluorine\n↓\nFLiBe material system\n```\n\nRelevant domains include:\n\n```text\nmolten-salt systems\nhigh-temperature heat transfer\nfusion research\nnuclear technology\ntritium-management research\n```\n\nThe actual properties belong to the defined molten-salt composition rather than to elemental Beryllium.\n\n---\n\n# 35. Beryllium Oxide — BeO\n\nFuture compound:\n\n```text\nMAT:CMP:BeO\n```\n\nBeO demonstrates an important emergent-material combination:\n\n```text\nELECTRICAL INSULATION\n+\nHIGH THERMAL CONDUCTIVITY\n+\nREFRACTORY CERAMIC BEHAVIOR\n```\n\nThis property combination does not exist in elemental Beryllium in the same form.\n\nIt is therefore a strong MAT inverse-design example.\n\n---\n\n# 36. Copper Relationship\n\nFuture edge:\n\n```text\nMAT:0004\nALLOYS-WITH\nMAT:0029\n```\n\nBeryllium-copper alloys can provide combinations involving:\n\n```text\nstrength\nspring behavior\nelectrical conductivity\nthermal conductivity\nfatigue resistance\nnon-sparking tooling\n```\n\nThese are alloy properties.\n\nThey must never be copied into elemental Beryllium's intrinsic-property table.\n\n---\n\n# 37. Aluminium Relationship\n\nFuture edge:\n\n```text\nMAT:0004\nMATERIAL-RELATIONSHIP-WITH\nMAT:0013\n```\n\nBe–Al systems are relevant to lightweight structural engineering.\n\nThe design trade space may include:\n\n```text\ndensity\nspecific stiffness\nstrength\nmanufacturability\nthermal expansion\nthermal conductivity\ncost\ntoxicity\n```\n\n---\n\n# 38. Chemical Character\n\nThe common oxidation state is:\n\n$$\n+2\n$$\n\nHowever Beryllium chemistry is not merely a scaled version of heavier Group-2 chemistry.\n\nBecause Be²⁺ is small and has high charge density, Beryllium bonding can have substantial covalent character.\n\nMAT therefore distinguishes:\n\n```text\nPERIODIC GROUP RELATIONSHIP\n```\n\nfrom:\n\n```text\nCHEMICAL SIMILARITY DISTANCE\n```\n\nBeryllium may be periodic-table-near Magnesium while still being chemically distinctive.\n\n---\n\n# 39. Biological Context\n\nNo established essential biological role is assigned to Beryllium.\n\nInstead the biological/occupational relationship is primarily:\n\n```text\nTOXICITY\nIMMUNE SENSITIZATION\nRESPIRATORY DISEASE\nCARCINOGENIC HAZARD\n```\n\nThis is a major distinction from:\n\n```text\nBIOLOGICALLY ESSENTIAL ELEMENT\n```\n\n---\n\n# 40. Occupational Exposure\n\nAirborne Beryllium dust, fume and mist are serious occupational hazards.\n\nDocumented health outcomes include:\n\n```text\nberyllium sensitization\nchronic beryllium disease\nacute beryllium disease at sufficiently high exposure\nlung-cancer risk\n```\n\nMachining and powder processing must therefore be linked directly to occupational-exposure controls.\n\nSafety is not a detachable footnote to manufacturing.\n\n---\n\n# 41. Manufacturing\n\nImportant manufacturing/process classes include:\n\n```text\npowder metallurgy\nhot pressing\nsintering\nmachining\ncontrolled-atmosphere processing\nalloying\nceramic processing\nthin foil / window fabrication\nnuclear component manufacture\n```\n\nFor Beryllium:\n\n$$\n\\boxed{\n\\text{manufacturing feasibility}\n+\n\\text{worker exposure control}\n}\n$$\n\nmust be evaluated together.\n\n---\n\n# 42. Combustion / Oxidation\n\nBeryllium can oxidize and form BeO.\n\nA simplified relationship is:\n\n$$\nBe+O\n\\rightarrow\nBeO\n$$\n\nunder suitable reaction conditions.\n\nThe existence of reaction energy does **not** imply that Beryllium is an attractive practical fuel.\n\nMAT keeps separate:\n\n```text\ncombustion/reaction energy\n```\n\nand:\n\n```text\npractical fuel utility\n```\n\n---\n\n# 43. Causali E — Transient Nuclear State\n\nInitial components:\n\n$$\nS_0=\n{}^4He+{}^4He\n$$\n\nInteraction:\n\n$$\nA=\n\\text{allowed nuclear collision state}\n$$\n\nCandidate:\n\n$$\nC=\n{}^8Be\n$$\n\nbut:\n\n$$\nC(t)\n\\rightarrow\n{}^4He+{}^4He\n$$\n\non an attosecond timescale.\n\nThis demonstrates:\n\n```text\nVALID CANDIDATE STATE\n≠\nLONG-LIVED STATE\n```\n\n---\n\n# 44. Causali E — Emergent Ceramic\n\nStarting states:\n\n$$\nA=Be\n$$\n\n$$\nB=O\n$$\n\nCandidate compound:\n\n$$\nC=BeO\n$$\n\nThe resulting material can exhibit a property combination not represented by either elemental parent alone.\n\nThis is a strong example of:\n\n$$\n\\boxed{\n\\text{composition + structure}\n\\rightarrow\n\\text{emergent material properties}\n}\n$$\n\n---\n\n# 45. Relationship Geometry\n\nBeryllium has several distinct relationship directions.\n\n### Nuclear\n\n```text\nHe ↔ Be ↔ C\n```\n\n### Fusion Engineering\n\n```text\nLi ↔ Be\n```\n\n### Molten-Salt Technology\n\n```text\nLi ↔ Be ↔ F\n```\n\n### Structural Materials\n\n```text\nBe ↔ Al\nBe ↔ Ti\nBe ↔ composite systems\n```\n\n### Conductive Alloys\n\n```text\nBe ↔ Cu\n```\n\n### Ceramics\n\n```text\nBe ↔ O\n```\n\n### Periodicity\n\n```text\nBe ↔ Mg ↔ Ca ↔ Sr ↔ Ba ↔ Ra\n```\n\nA single nearest-neighbour distance cannot represent all of these.\n\n---\n\n# 46. MAT Geometry Result\n\n`MAT:0004` reinforces the need for:\n\n$$\n\\boxed{\n\\text{multiple coupled relationship layers}\n}\n$$\n\nor:\n\n$$\n\\boxed{\n\\text{higher-dimensional graph projected into visual space}\n}\n$$\n\nThe same element can simultaneously occupy:\n\n```text\nnuclear geometry\nchemical geometry\nperiodic geometry\nmaterials geometry\napplication geometry\nsafety geometry\n```\n\n---\n\n# 47. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- DESCRIPTION: Metallic Beryllium material manifestation -->\n\n<!-- MAT-VISUAL: V03 -->\n<!-- DESCRIPTION: HCP Beryllium lattice -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- DESCRIPTION: 5Be through 16Be isotope map -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- DESCRIPTION: Mechanism-separated Beryllium spectrum -->\n\n<!-- MAT-VISUAL: V07 -->\n<!-- DESCRIPTION: Density / stiffness / thermal dashboard -->\n\n<!-- MAT-VISUAL: V11 -->\n<!-- DESCRIPTION: HCP mechanics and specific stiffness -->\n\n<!-- MAT-VISUAL: V12 -->\n<!-- DESCRIPTION: Temperature-pressure phase structure -->\n\n<!-- MAT-VISUAL: V14 -->\n<!-- DESCRIPTION: He-Be-C, Li-Be, Be-Cu, Be-O relationship graph -->\n\n<!-- MAT-VISUAL: V17 -->\n<!-- DESCRIPTION: X-ray, aerospace, nuclear, ceramic and alloy applications -->\n\n<!-- MAT-VISUAL: V18 -->\n<!-- DESCRIPTION: Evidence plus occupational-safety provenance -->\n```\n\n---\n\n# 48. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\nmigration_status: \"CONTENT-CORE-MIGRATED\"\nschema_validation_status: \"PENDING\"\nvisual_specification: \"NOT-YET-LOCKED\"\nvisual_assets: \"NOT-GENERATED\"\n```\n\nNIST currently gives neutral Be as `1s²2s²`, \\(^{1}S_0\\), with first ionization energy `9.322699 ± 0.000007 eV`; its standard atomic-weight table gives `9.0121831(5)` and ⁹Be abundance `1`. ([NIST][1]) Beryllium's ordinary metal structure is HCP, `P6₃/mmc`, with approximately `a = 228.58 pm`, `c = 358.43 pm`. ([WebElements][2])\n\nThe isotope semantics above follow NUBASE2020 rather than treating every mass-table entry as a normal isotope: for example, ⁵Be is proton-unstable, ⁷Be is `53.22 ± 0.06 d`, ⁸Be is only `81.9 ± 3.7 as`, ⁹Be is stable, and ¹⁰Be is `1.387 ± 0.012 My`. ([Nuclear Data Section][3])\n\n---\n\n# 49. Bulk Material Property Layer\n\nBeryllium activates a much stronger structural-material branch than Lithium.\n\nRepresentative bulk reference values include:\n\n| Property                 |  Representative Value | Unit      |\n| ------------------------ | --------------------: | --------- |\n| Density                  |                  1848 | kg m⁻³    |\n| Young's modulus          |                   287 | GPa       |\n| Shear modulus            |                   132 | GPa       |\n| Bulk modulus             |                   130 | GPa       |\n| Poisson ratio            |                 0.032 | —         |\n| Electrical resistivity   |  \\(3.8\\times10^{-8}\\) | Ω m       |\n| Thermal conductivity     |                   190 | W m⁻¹ K⁻¹ |\n| Linear thermal expansion | \\(11.3\\times10^{-6}\\) | K⁻¹       |\n| Sound velocity           |                ~13000 | m s⁻¹     |\n\nThese are reference values.\n\nFinal measurement objects must retain:\n\n```text\ntemperature\npressure\ncrystallographic direction\ntexture\npurity\ngrain structure\nmanufacturing route\nmeasurement method\nuncertainty\nsource\n```\n\n---\n\n# 50. Elastic Anisotropy\n\nBeryllium is HCP.\n\nTherefore:\n\n$$\nE=E(\\mathbf n)\n$$\n\nwhere:\n\n$$\n\\mathbf n\n$$\n\nrepresents crystallographic/loading direction.\n\nReported Young's modulus values vary with orientation.\n\nMAT therefore distinguishes:\n\n```text\nPOLYCRYSTALLINE REFERENCE MODULUS\n```\n\nfrom:\n\n```text\nDIRECTION-RESOLVED SINGLE-CRYSTAL MODULUS\n```\n\nA single value such as:\n\n$$\n287\\ {\\rm GPa}\n$$\n\nmust not erase anisotropy.\n\n---\n\n# 51. Specific Stiffness\n\nDefine:\n\n$$\nS_E=\\frac{E}{\\rho}\n$$\n\nUsing:\n\n$$\nE=287\\times10^9\\ {\\rm Pa}\n$$\n\nand:\n\n$$\n\\rho=1848\\ {\\rm kg\\,m^{-3}}\n$$\n\ngives:\n\n$$\n\\boxed{\nS_E\n\\approx\n1.553\\times10^8\\ {\\rm m^2\\,s^{-2}}\n}\n$$\n\nThis is a derived **specific Young's modulus**.\n\nIt is not a universal structural ranking.\n\nReal component performance also depends on:\n\n```text\nstrength\nfracture toughness\nfatigue\ngeometry\nanisotropy\njoining\ntemperature\ntoxicity\nmanufacturing\ncost\n```\n\n---\n\n# 52. Electrical Transport\n\nUsing the representative resistivity:\n\n$$\n\\rho_e\n=\n3.8\\times10^{-8}\\ \\Omega m\n$$\n\nthe corresponding conductivity is:\n\n$$\n\\sigma\n=\n\\frac{1}{\\rho_e}\n$$\n\ngiving:\n\n$$\n\\boxed{\n\\sigma\n\\approx\n2.63\\times10^7\\ S\\,m^{-1}\n}\n$$\n\nClassification:\n\n```text\nDERIVED REFERENCE VALUE\n```\n\nThis applies to the specified metallic state.\n\nIt does not apply automatically to:\n\n```text\nBeO\nBeF2\nBe-Cu alloy\nplasma Be\nBe2+\n```\n\n---\n\n# 53. Thermal Transport\n\nRepresentative metallic-Beryllium thermal conductivity:\n\n$$\nk\\approx190\\ W\\,m^{-1}K^{-1}\n$$\n\nThe engineering combination is therefore:\n\n$$\n\\boxed{\n\\text{low density}\n+\n\\text{high stiffness}\n+\n\\text{high thermal conductivity}\n}\n$$\n\nBut the final MAT property remains:\n\n$$\nk=k(T,P,S,\\mu,\\text{history})\n$$\n\nwhere \\(S\\) represents material state and \\(\\mu\\) microstructure.\n\n---\n\n# 54. Acoustic Relationship\n\nRepresentative longitudinal/material sound velocity is of order:\n\n$$\nv_s\\approx1.3\\times10^4\\ {\\rm m\\,s^{-1}}\n$$\n\nAcoustic response belongs to the bulk elastic medium.\n\nIt is **not** a single intrinsic atomic \"Beryllium vibration frequency.\"\n\nFrequency still requires:\n\n```text\nmode\nwavelength\ngeometry\nboundary conditions\ncrystal direction\ntemperature\n```\n\n---\n\n# 55. Beryllium Oxide Material Branch\n\nCanonical future child:\n\n```text\nMAT:CMP:BeO\n```\n\nBeO is a ceramic, not a metallic Beryllium state.\n\nNIST structural-ceramics data show that BeO can combine:\n\n```text\nelectrical insulation\nhigh thermal conductivity\nhigh elastic modulus\nceramic/refractory behaviour\n```\n\nFor one typical polycrystalline reference:\n\n```text\ndensity ≈ 3.01 g/cm3\nelastic modulus ≈ 378 GPa\nthermal conductivity ≈ 240 W/(m*K) near room temperature\n```\n\nThese values are material/process dependent.\n\nFor a measured single crystal, NIST reports approximately:\n\n$$\nk(300\\,K)\\approx370\\ W\\,m^{-1}K^{-1}\n$$\n\nwith substantially larger conductivity at lower temperatures.\n\nThus:\n\n$$\n\\boxed{\nk_{\\rm BeO}\n\\neq\n\\text{one universal BeO constant}\n}\n$$\n\n---\n\n# 56. BeO Inverse-Design Example\n\nSuppose the target is:\n\n```text\nelectrical insulation\n+\nhigh thermal conduction\n+\nceramic stability\n```\n\nElemental Be alone does not satisfy that property vector.\n\nBut:\n\n$$\nBe+O\n\\rightarrow\nBeO\n$$\n\ncreates a candidate material.\n\nIn MAT inverse-search form:\n\n$$\nY^*\n=\n\\{\n\\sigma_{\\rm electrical}\\downarrow,\nk_{\\rm thermal}\\uparrow,\nT_{\\rm service}\\uparrow\n\\}\n$$\n\nmay return:\n\n```text\nBeO-containing ceramic systems\n```\n\nsubject to the severe toxicity/manufacturing constraints associated with Beryllium.\n\n---\n\n# 57. X-Ray Window Relationship\n\nBeryllium's low atomic number reduces X-ray attenuation relative to many structural metals.\n\nThin Be foil can therefore combine:\n\n```text\nmechanical support\n+\nvacuum boundary capability\n+\nrelatively low X-ray attenuation\n```\n\nThis relationship depends on:\n\n$$\nI=I_0e^{-\\mu(E)\\rho x}\n$$\n\nwhere:\n\n* \\(E\\) = photon energy;\n* \\(\\mu\\) = energy-dependent mass attenuation coefficient;\n* \\(\\rho\\) = material density;\n* \\(x\\) = thickness.\n\nTherefore:\n\n```text\nX-RAY TRANSPARENT\n```\n\nmust always mean:\n\n```text\nRELATIVELY TRANSMISSIVE\nAT SPECIFIED PHOTON ENERGY AND THICKNESS\n```\n\nnot perfectly transparent.\n\n---\n\n# 58. ⁸Be Decay Energy\n\nFor:\n\n$$\n{}^8Be\n\\rightarrow\n{}^4He+{}^4He\n$$\n\nusing atomic masses:\n\n$$\nm({}^8Be)=8.005305102\\ u\n$$\n\n$$\nm({}^4He)=4.00260325413\\ u\n$$\n\ngives:\n\n$$\n\\Delta m\n=\nm({}^8Be)-2m({}^4He)\n$$\n\nand:\n\n$$\n\\boxed{\nQ\\approx0.09184\\ {\\rm MeV}\n}\n$$\n\nThe positive value is consistent with ⁸Be being unbound relative to two alpha particles.\n\n---\n\n# 59. ⁹Be Alpha-Neutron Reaction\n\nReaction:\n\n$$\n{}^9Be+{}^4He\n\\rightarrow\n{}^{12}C+n\n$$\n\nUsing atomic masses:\n\n$$\nm({}^9Be)=9.012183065\\ u\n$$\n\n$$\nm({}^4He)=4.00260325413\\ u\n$$\n\n$$\nm({}^{12}C)=12\\ u\n$$\n\n$$\nm_n=1.00866491595\\ u\n$$\n\ngives:\n\n$$\n\\boxed{\nQ\\approx+5.70205\\ {\\rm MeV}\n}\n$$\n\nThis reaction is historically important in neutron physics.\n\n---\n\n# 60. ⁹Be Neutron-Multiplication Relationship\n\nA representative neutron-multiplication channel is:\n\n$$\n{}^9Be+n\n\\rightarrow\n{}^8Be+2n\n$$\n\nUsing evaluated masses gives:\n\n$$\n\\boxed{\nQ\\approx-1.66454\\ {\\rm MeV}\n}\n$$\n\nThe negative Q-value means sufficient incident kinetic energy is required.\n\nMAT stores:\n\n```text\nreaction energetics\n```\n\nseparately from:\n\n```text\ndevice geometry\nneutron spectrum\nblanket design\nreaction rate\nengineering performance\n```\n\n---\n\n# 61. Current Fusion-System Role\n\nCurrent fusion blanket research still includes Beryllium and Beryllium-based materials as:\n\n```text\nNEUTRON MULTIPLIERS\n```\n\nalongside Lithium-containing breeder materials.\n\nA systems representation is:\n\n```text\nfusion neutron field\n↓\nberyllium / beryllide multiplier zone\n↓ increased neutron availability\nlithium-containing breeder zone\n↓\ntritium production\n```\n\nThis is a cooperative material system.\n\nIt is not accurately represented as:\n\n```text\nBeryllium produces fusion fuel by itself\n```\n\n---\n\n# 62. Beryllides\n\nFusion research also includes intermetallic Beryllium-rich materials such as:\n\n```text\nTiBe12\nCrBe12\n```\n\nThese can have performance differences relative to pure Be, including:\n\n```text\nmechanical strength\nswelling behaviour\nmanufacturability\nirradiation response\n```\n\nTherefore:\n\n```text\nPURE Be\n```\n\nand:\n\n```text\nBERYLLIDE\n```\n\nmust remain different material records.\n\n---\n\n# 63. Occupational Safety as Process State\n\nFor Beryllium the exposure pathway is critical.\n\nHigh-concern states include:\n\n```text\nairborne dust\nmachining particles\nfume\nmist\ncontaminated surfaces\npowders\n```\n\nThe hazard cannot be represented only by bulk composition.\n\nMAT safety state:\n\n$$\nH=\nF(\n\\text{chemical form},\n\\text{particle size},\nC_{\\rm air},\nt,\n\\text{exposure route},\n\\text{work process},\n\\text{controls}\n)\n$$\n\n---\n\n# 64. Regulatory Exposure Fields\n\nJurisdiction-specific exposure limits may be stored as regulatory objects.\n\nFor example, the current OSHA United States standard includes:\n\n```text\n8-hour TWA PEL: 0.2 microgram/m3\n15-minute STEL: 2.0 microgram/m3\n```\n\nThese are:\n\n```text\nREGULATORY LIMITS\n```\n\nnot physical constants.\n\nEvery such field requires:\n\n```text\njurisdiction\nregulator\nrule\neffective/current status\naccess date\n```\n\n---\n\n# 65. Manufacturing-Safety Coupling\n\nFor Beryllium:\n\n```text\nmachining\ngrinding\npowder metallurgy\nsintering\nfinishing\nrecycling\n```\n\nmust connect to:\n\n```text\ndust generation\nair monitoring\ncontainment\nventilation\nPPE/respiratory protection where required\ndecontamination\nwaste control\n```\n\nMAT therefore uses:\n\n$$\n\\boxed{\n\\text{PROCESS}\n\\leftrightarrow\n\\text{EXPOSURE}\n\\leftrightarrow\n\\text{CONTROL}\n}\n$$\n\n---\n\n# 66. Updated Record State\n\n```yaml\nstatus: \"RESEARCHED\"\nmigration_status: \"CONTENT-MIGRATED\"\nmaterial_performance: \"CORE-COMPLETE\"\nnuclear_calculations: \"CORE-COMPLETE\"\nsafety_architecture: \"CORE-COMPLETE\"\nisotope_children: \"COMPLETE\"\nschema_validation_status: \"PENDING\"\nvisual_specification: \"NOT-YET-LOCKED\"\nvisual_assets: \"NOT-GENERATED\"\n```\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0004-Beryllium-Be-Nuclear-Evaluation.md) provides 21 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "6b6861a0208cf79697171629548a6ccd8c3f7483cdb7511b50e6bc02bfa4b5b5",
   "header": {
     "mat_id": "MAT:0004",
     "record_name": "Beryllium",
@@ -735,6 +735,1376 @@
       }
     },
     {
+      "path": "records/0004-Beryllium-Be/data/isotopes/0004-Beryllium-Be-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0004:REG:NUBASE2020",
+        "record_id": "MAT:0004",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 5,
+            "Z": 4,
+            "N": 1,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "5Be",
+            "mass_excess": {
+              "value": 37140,
+              "unit": "keV",
+              "raw": "37140#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "2000#",
+              "uncertainty": 2000
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "p-unst",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "PARTICLE-UNSTABLE"
+            },
+            "spin_parity_raw": "1/2+#",
+            "ensdf_update_year_raw": "18",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "p ?",
+            "source_line": 38,
+            "raw_line": "005 0040   5Be     37140#      2000#                                  p-unst            1/2+#         18               p ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-5",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:5:0"
+          },
+          {
+            "A": 6,
+            "Z": 4,
+            "N": 2,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "6Be",
+            "mass_excess": {
+              "value": 18375,
+              "unit": "keV",
+              "raw": "18375",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "5",
+              "uncertainty": 5
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 5,
+              "unit": "zs",
+              "raw": "5.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.3",
+              "uncertainty": 0.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "02",
+            "discovery_year_raw": "1958",
+            "decay_and_abundance_raw": "2p=100",
+            "source_line": 43,
+            "raw_line": "006 0040   6Be     18375          5                                     5.0   zs 0.3    0+            02          1958 2p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.13862943611198905,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.008317766166719342
+              },
+              "mean_lifetime": {
+                "value": 7.213475204444817,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 0.43280851226668904
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-6",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:6:0"
+          },
+          {
+            "A": 7,
+            "Z": 4,
+            "N": 3,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "7Be",
+            "mass_excess": {
+              "value": 15769,
+              "unit": "keV",
+              "raw": "15769.00",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.07",
+              "uncertainty": 0.07
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 53.22,
+              "unit": "d",
+              "raw": "53.22",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.06",
+              "uncertainty": 0.06,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "03",
+            "discovery_year_raw": "1938",
+            "decay_and_abundance_raw": "EC=100",
+            "source_line": 49,
+            "raw_line": "007 0040   7Be     15769.00       0.07                                 53.22   d 0.06   3/2-          03          1938 EC=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.013024186030814455,
+                "unit": "1/d",
+                "relation": "=",
+                "uncertainty": 0.000014683411534176386
+              },
+              "mean_lifetime": {
+                "value": 76.78023007611063,
+                "unit": "d",
+                "relation": "=",
+                "uncertainty": 0.0865617024533378
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-7",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:7:0"
+          },
+          {
+            "A": 7,
+            "Z": 4,
+            "N": 3,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "7Be",
+            "mass_excess": {
+              "value": 26750,
+              "unit": "keV",
+              "raw": "26750",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "30",
+              "uncertainty": 30
+            },
+            "excitation_energy": {
+              "value": 10980,
+              "unit": "keV",
+              "raw": "10980",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "30",
+              "uncertainty": 30
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "3/2-    T=3/2",
+            "ensdf_update_year_raw": "03",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "p ?;3He ?;A ?",
+            "source_line": 50,
+            "raw_line": "007 0048   7Be  i  26750         30       10980         30       RQ                     3/2-    T=3/2 03               p ?;3He ?;A ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-7i",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:7:8"
+          },
+          {
+            "A": 8,
+            "Z": 4,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "8Be",
+            "mass_excess": {
+              "value": 4941.67,
+              "unit": "keV",
+              "raw": "4941.67",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.04",
+              "uncertainty": 0.04
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 81.9,
+              "unit": "as",
+              "raw": "81.9",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3.7",
+              "uncertainty": 3.7,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "05",
+            "discovery_year_raw": "1932",
+            "decay_and_abundance_raw": "A=100",
+            "source_line": 55,
+            "raw_line": "008 0040   8Be      4941.67       0.04                                 81.9   as 3.7    0+            05          1932 A=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.00846333553797247,
+                "unit": "1/as",
+                "relation": "=",
+                "uncertainty": 0.0003823484919474742
+              },
+              "mean_lifetime": {
+                "value": 118.15672384880611,
+                "unit": "as",
+                "relation": "=",
+                "uncertainty": 5.337971651289165
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-8",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:8:0"
+          },
+          {
+            "A": 8,
+            "Z": 4,
+            "N": 4,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "8Be",
+            "mass_excess": {
+              "value": 21568,
+              "unit": "keV",
+              "raw": "21568",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_energy": {
+              "value": 16626,
+              "unit": "keV",
+              "raw": "16626",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "2+  frg T=1",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "2004",
+            "decay_and_abundance_raw": "A~100",
+            "source_line": 56,
+            "raw_line": "008 0048   8Be  i  21568          3       16626          3                              2+  frg T=1               2004 A~100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-8i",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:8:8"
+          },
+          {
+            "A": 8,
+            "Z": 4,
+            "N": 4,
+            "state_index": 9,
+            "state_label": "j",
+            "source_label": "8Be",
+            "mass_excess": {
+              "value": 32436,
+              "unit": "keV",
+              "raw": "32436.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.0",
+              "uncertainty": 2
+            },
+            "excitation_energy": {
+              "value": 27494.3,
+              "unit": "keV",
+              "raw": "27494.3",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.0",
+              "uncertainty": 2
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=2",
+            "ensdf_update_year_raw": "05",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "n=39.4;d=27.0;3H=11.7;A=7.9;p=6.9;3He=6.6;IT=0.60",
+            "source_line": 57,
+            "raw_line": "008 0049   8Be  j  32436.0        2.0     27494.3        2.0     RQ                     0+      T=2   05               n=39.4;d=27.0;3H=11.7;A=7.9;p=6.9;3He=6.6;IT=0.60",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-8j",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:8:9"
+          },
+          {
+            "A": 9,
+            "Z": 4,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "9Be",
+            "mass_excess": {
+              "value": 11348.45,
+              "unit": "keV",
+              "raw": "11348.45",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.08",
+              "uncertainty": 0.08
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "3/2-*",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1921",
+            "decay_and_abundance_raw": "IS=100",
+            "source_line": 63,
+            "raw_line": "009 0040   9Be     11348.45       0.08                                stbl              3/2-*         06          1921 IS=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-9",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:9:0"
+          },
+          {
+            "A": 9,
+            "Z": 4,
+            "N": 5,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "9Be",
+            "mass_excess": {
+              "value": 25738.8,
+              "unit": "keV",
+              "raw": "25738.8",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.7",
+              "uncertainty": 1.7
+            },
+            "excitation_energy": {
+              "value": 14390.3,
+              "unit": "keV",
+              "raw": "14390.3",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.7",
+              "uncertainty": 1.7
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 1.25,
+              "unit": "as",
+              "raw": "1.25",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.10",
+              "uncertainty": 0.1,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-    T=3/2",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1976",
+            "decay_and_abundance_raw": "",
+            "source_line": 64,
+            "raw_line": "009 0048   9Be  i  25738.8        1.7     14390.3        1.7     RQ     1.25  as 0.10   3/2-    T=3/2 06          1976 ",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.5545177444479562,
+                "unit": "1/as",
+                "relation": "=",
+                "uncertainty": 0.0443614195558365
+              },
+              "mean_lifetime": {
+                "value": 1.8033688011112043,
+                "unit": "as",
+                "relation": "=",
+                "uncertainty": 0.14426950408889636
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-9i",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:9:8"
+          },
+          {
+            "A": 10,
+            "Z": 4,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "10Be",
+            "mass_excess": {
+              "value": 12607.49,
+              "unit": "keV",
+              "raw": "12607.49",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.08",
+              "uncertainty": 0.08
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 1.387,
+              "unit": "My",
+              "raw": "1.387",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.012",
+              "uncertainty": 0.012,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "1935",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 72,
+            "raw_line": "010 0040   10Be    12607.49       0.08                                  1.387 My 0.012  0+            07          1935 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.4997456240518712,
+                "unit": "1/My",
+                "relation": "=",
+                "uncertainty": 0.004323682399871993
+              },
+              "mean_lifetime": {
+                "value": 2.0010180217129925,
+                "unit": "My",
+                "relation": "=",
+                "uncertainty": 0.01731234049066756
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-10",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:10:0"
+          },
+          {
+            "A": 10,
+            "Z": 4,
+            "N": 6,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "10Be",
+            "mass_excess": {
+              "value": 33787,
+              "unit": "keV",
+              "raw": "33787",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "21",
+              "uncertainty": 21
+            },
+            "excitation_energy": {
+              "value": 21179,
+              "unit": "keV",
+              "raw": "21179",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "21",
+              "uncertainty": 21
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "(2-)    T=2",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "n ?;p ?;3H ?",
+            "source_line": 73,
+            "raw_line": "010 0048   10Be i  33787         21       21179         21       RQ                     (2-)    T=2   07               n ?;p ?;3H ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-10i",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:10:8"
+          },
+          {
+            "A": 11,
+            "Z": 4,
+            "N": 7,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "11Be",
+            "mass_excess": {
+              "value": 20177.17,
+              "unit": "keV",
+              "raw": "20177.17",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.24",
+              "uncertainty": 0.24
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 13.76,
+              "unit": "s",
+              "raw": "13.76",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.07",
+              "uncertainty": 0.07,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+*",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1958",
+            "decay_and_abundance_raw": "B-=100;B-A=3.3 1;B-p=0.0013 3;B-n ?",
+            "source_line": 79,
+            "raw_line": "011 0040   11Be    20177.17       0.24                                 13.76   s 0.07   1/2+*         12          1958 B-=100;B-A=3.3 1;B-p=0.0013 3;B-n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.05037406835464719,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0002562634291297459
+              },
+              "mean_lifetime": {
+                "value": 19.851483762632135,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.10098865286222745
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-11",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:11:0"
+          },
+          {
+            "A": 11,
+            "Z": 4,
+            "N": 7,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "11Be",
+            "mass_excess": {
+              "value": 41336,
+              "unit": "keV",
+              "raw": "41336",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "20",
+              "uncertainty": 20
+            },
+            "excitation_energy": {
+              "value": 21158,
+              "unit": "keV",
+              "raw": "21158",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "20",
+              "uncertainty": 20
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 0.93,
+              "unit": "zs",
+              "raw": "0.93",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.13",
+              "uncertainty": 0.13,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-    T=5/2",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "1997",
+            "decay_and_abundance_raw": "IT ?",
+            "source_line": 80,
+            "raw_line": "011 0048   11Be i  41336         20       21158         20       RQ     0.93  zs 0.13   3/2-    T=5/2             1997 IT ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.7453195489891884,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.10418445308451021
+              },
+              "mean_lifetime": {
+                "value": 1.3417063880267361,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 0.18755035531556524
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-11i",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:11:8"
+          },
+          {
+            "A": 12,
+            "Z": 4,
+            "N": 8,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "12Be",
+            "mass_excess": {
+              "value": 25077.8,
+              "unit": "keV",
+              "raw": "25077.8",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.9",
+              "uncertainty": 1.9
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 21.46,
+              "unit": "ms",
+              "raw": "21.46",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.05",
+              "uncertainty": 0.05,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1966",
+            "decay_and_abundance_raw": "B-=100;B-n=0.50 3",
+            "source_line": 90,
+            "raw_line": "012 0040   12Be    25077.8        1.9                                  21.46  ms 0.05   0+            17          1966 B-=100;B-n=0.50 3",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.03229949583224349,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00007525511610494754
+              },
+              "mean_lifetime": {
+                "value": 30.960235577477157,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.07213475204444818
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-12",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:12:0"
+          },
+          {
+            "A": 12,
+            "Z": 4,
+            "N": 8,
+            "state_index": 1,
+            "state_label": "m",
+            "source_label": "12Be",
+            "mass_excess": {
+              "value": 27328.8,
+              "unit": "keV",
+              "raw": "27328.8",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.1",
+              "uncertainty": 2.1
+            },
+            "excitation_energy": {
+              "value": 2251,
+              "unit": "keV",
+              "raw": "2251",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1",
+              "uncertainty": 1
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 233,
+              "unit": "ns",
+              "raw": "233",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "7",
+              "uncertainty": 7,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "2007",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 91,
+            "raw_line": "012 0041   12Be m  27328.8        2.1      2251          1            233     ns 7      0+            17          2007 IT=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.002974880603261568,
+                "unit": "1/ns",
+                "relation": "=",
+                "uncertainty": 0.00008937409537695697
+              },
+              "mean_lifetime": {
+                "value": 336.14794452712846,
+                "unit": "ns",
+                "relation": "=",
+                "uncertainty": 10.098865286222745
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-12m",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:12:1"
+          },
+          {
+            "A": 13,
+            "Z": 4,
+            "N": 9,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "13Be",
+            "mass_excess": {
+              "value": 33659,
+              "unit": "keV",
+              "raw": "33659",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "10",
+              "uncertainty": 10
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 1,
+              "unit": "zs",
+              "raw": "1.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.7",
+              "uncertainty": 0.7,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(1/2-)",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "1983",
+            "decay_and_abundance_raw": "n ?",
+            "source_line": 101,
+            "raw_line": "013 0040   13Be    33659         10                                     1.0   zs 0.7    (1/2-)                    1983 n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.6931471805599453,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.48520302639196167
+              },
+              "mean_lifetime": {
+                "value": 1.4426950408889634,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 1.0098865286222745
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-13",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:13:0"
+          },
+          {
+            "A": 13,
+            "Z": 4,
+            "N": 9,
+            "state_index": 3,
+            "state_label": "p",
+            "source_label": "13Be",
+            "mass_excess": {
+              "value": 35160,
+              "unit": "keV",
+              "raw": "35160",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "50",
+              "uncertainty": 50
+            },
+            "excitation_energy": {
+              "value": 1500,
+              "unit": "keV",
+              "raw": "1500",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "50",
+              "uncertainty": 50
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "(5/2+)",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "1992",
+            "decay_and_abundance_raw": "",
+            "source_line": 102,
+            "raw_line": "013 0043   13Be p  35160         50        1500         50       RQ                     (5/2+)                    1992 ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-13p",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:13:3"
+          },
+          {
+            "A": 14,
+            "Z": 4,
+            "N": 10,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "14Be",
+            "mass_excess": {
+              "value": 39950,
+              "unit": "keV",
+              "raw": "39950",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "130",
+              "uncertainty": 130
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 4.53,
+              "unit": "ms",
+              "raw": "4.53",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.27",
+              "uncertainty": 0.27,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "01",
+            "discovery_year_raw": "1973",
+            "decay_and_abundance_raw": "B-=100;B-n=86 6;B-2n=5 2;B-t=0.02 1;B-A<0.004",
+            "source_line": 110,
+            "raw_line": "014 0040   14Be    39950        130                                     4.53  ms 0.27   0+            01          1973 B-=100;B-n=86 6;B-2n=5 2;B-t=0.02 1;B-A<0.004",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.15301262264016452,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.009119957640804508
+              },
+              "mean_lifetime": {
+                "value": 6.535408535227004,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.3895276610400202
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-14",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:14:0"
+          },
+          {
+            "A": 14,
+            "Z": 4,
+            "N": 10,
+            "state_index": 3,
+            "state_label": "p",
+            "source_label": "14Be",
+            "mass_excess": {
+              "value": 41470,
+              "unit": "keV",
+              "raw": "41470",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "60",
+              "uncertainty": 60
+            },
+            "excitation_energy": {
+              "value": 1520,
+              "unit": "keV",
+              "raw": "1520",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "150",
+              "uncertainty": 150
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "(2+)",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "1995",
+            "decay_and_abundance_raw": "",
+            "source_line": 111,
+            "raw_line": "014 0043   14Be p  41470         60        1520        150       RQ                     (2+)                      1995 ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-14p",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:14:3"
+          },
+          {
+            "A": 15,
+            "Z": 4,
+            "N": 11,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "15Be",
+            "mass_excess": {
+              "value": 49830,
+              "unit": "keV",
+              "raw": "49830",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "170",
+              "uncertainty": 170
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 790,
+              "unit": "ys",
+              "raw": "790",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "270",
+              "uncertainty": 270,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(5/2+)",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "2013",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 120,
+            "raw_line": "015 0040   15Be    49830        170                                   790     ys 270    (5/2+)        15          2013 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0008774014943796776,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.00029987139681330753
+              },
+              "mean_lifetime": {
+                "value": 1139.729082302281,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 389.5276610400201
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-15",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:15:0"
+          },
+          {
+            "A": 16,
+            "Z": 4,
+            "N": 12,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "16Be",
+            "mass_excess": {
+              "value": 57450,
+              "unit": "keV",
+              "raw": "57450",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "170",
+              "uncertainty": 170
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 650,
+              "unit": "ys",
+              "raw": "650",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "130",
+              "uncertainty": 130,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "2012",
+            "decay_and_abundance_raw": "2n=100",
+            "source_line": 129,
+            "raw_line": "016 0040   16Be    57450        170                                   650     ys 130    0+            15          2012 2n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0010663802777845313,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.00021327605555690628
+              },
+              "mean_lifetime": {
+                "value": 937.7517765778263,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 187.55035531556524
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0004:ISO:Be-16",
+            "evaluation_entry_id": "MAT:0004:NUBASE2020:16:0"
+          }
+        ]
+      }
+    },
+    {
       "path": "records/0004-Beryllium-Be/data/properties/0004-Beryllium-Be-Bulk-Properties.yaml",
       "data": {
         "registry_id": "MAT:0004:REG:BULK-PROPERTIES",
@@ -1091,46 +2461,124 @@
           },
           "V02": {
             "file": "0004-Beryllium-Be-FIG-002-Atomic-Identity.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Beryllium atomic identity (MAT:0004). Be · Z = 4. 1s2 2s2 · 1S0. 9.0121831(5). standard atomic weight. I1 = 9.322699 eV. SRC-000005. I2 = 18.21115 eV. Be+ → Be2+. +2 chemistry. principal charge state. filled 2s ≠ closed. n=2 shell open. Filled subshell is not a closed shell.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/scientific/0004-Beryllium-Be-FIG-002-Atomic-Identity.svg",
+              "sha256": "00355333ab5c94776aadc6bdf5f797bcdfa99b80509b96ab0ed860493b0caa2c",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V03": {
             "file": "0004-Beryllium-Be-DIAGRAM-001-HCP-Lattice.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be HCP lattice (P63/mmc #194). a = 228.58 pm. 2.2858 Å. c = 358.43 pm. 3.5843 Å. HCP stacking. anisotropic response. MAT:0004:PHASE:HCP. canonical phase. CRYSTAL STRUCTURE, not molecular Be–Be bonds. SRC-000049.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/bonding/0004-Beryllium-Be-DIAGRAM-001-HCP-Lattice.svg",
+              "sha256": "273d02a938543cfc0a2f2a336bc3be3cc27b8da633d3ea64449b352ea6f77a1a",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V04": {
             "files": [
               "0004-Beryllium-Be-FIG-003-Electron-Probability.svg",
               "0004-Beryllium-Be-FIG-004-Energy-Level-Structure.svg"
             ],
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be electron structure. 1s2 core. tightly bound. 2s2 valence. filled subshell. 2p accessible. shell NOT closed. SINGLET ground. 1S0, J=0. Why Be is not inert like He. / Be ionization ladder (eV). I1 9.322699. valence removal. I2 18.21115. second valence. I3 153.896205. core removal jump. I4 217.71858459. bare nucleus. NIST ASD via SRC-000005.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0004-Beryllium-Be/images/quantum/0004-Beryllium-Be-FIG-003-Electron-Probability.svg",
+                  "sha256": "be2cc0c211ed17104a13584041256dd654eadb3b9dbec04ad29d071f2b20b766"
+                },
+                {
+                  "source": "records/0004-Beryllium-Be/images/quantum/0004-Beryllium-Be-FIG-004-Energy-Level-Structure.svg",
+                  "sha256": "0b60e82284b9580010536ac53394c423827be660bb18bd053f6864cfe8f3e1af"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V05": {
             "file": "0004-Beryllium-Be-FIG-005-Isotope-Map.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be isotopes 5Be–16Be. 5Be · 1n. p-unbound. 6Be · 2n. 5.0 zs 2p. 7Be · 3n. 53.22 d EC. 8Be · 4n. 81.9 as αα. 9Be · 5n. STABLE. 10Be · 6n. 1.387 My β−. 11Be · 7n. 13.76 s. 12Be · 8n. 21.46 ms. 13Be · 9n. ~1 zs. 14Be · 10n. 4.53 ms. 15Be · 11n. 790 ys. 16Be · 12n. 650 ys 2n. 8Be = triple-alpha bridge · 9Be = engineering · 10Be = clock.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/isotope/0004-Beryllium-Be-FIG-005-Isotope-Map.svg",
+              "sha256": "17ef54a3af3592d5d0aa625b7192d148a9bfd25440f266344383f4a128218576",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V06": {
             "file": "0004-Beryllium-Be-FIG-006-Spectral-Fingerprint.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be spectral fingerprint — NO universal frequency. Be I 234.8610 nm. 2s2 1S0 → 2s2p 1P°1. Be I 166.1478 nm. persistent UV line. Be II 313.04219. ionized-Be line. E ≈ 5.2790 eV. 234.86 nm photon. isotope shifts. state-dependent. phonons · NMR. solid / 9Be spin. One transition ≠ the frequency of Be. SRC-000005.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/spectral/0004-Beryllium-Be-FIG-006-Spectral-Fingerprint.svg",
+              "sha256": "d562ea95003e10c73989d810e4e4eeb7cef35b81bd0e9a5121ed44751a3c1fcc",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V07": {
             "file": "0004-Beryllium-Be-FIG-007-Bulk-Property-Dashboard.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be bulk reference (HCP, near ambient). ρ = 1848 kg/m3. light metal. E = 287 GPa. anisotropic!. k ≈ 190 W/mK. high for mass. ρe 3.8e-8 Ωm. conductor. Tm ≈ 1560 K. reference. Tb ≈ 2741 K. reference. Direction + state required. SRC-000056.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/properties/0004-Beryllium-Be-FIG-007-Bulk-Property-Dashboard.svg",
+              "sha256": "6786d66052593c822b2a810b0662a06ed86fa7fab2795f36599edd450857b698",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V08": {
             "file": "0004-Beryllium-Be-DIAGRAM-002-Charge-and-Electronic-State.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be charge states + metal conduction. Be (1s2 2s2). Be+ (I1 9.322699 eV). Be2+ (I2 18.21115 eV, chemistry). Be3+/Be4+ (plasma only). metal: delocalized conduction. Bulk conductivity ≠ ion property.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/fields/0004-Beryllium-Be-DIAGRAM-002-Charge-and-Electronic-State.svg",
+              "sha256": "5e17af41fd4daca3e451b92a9190a07dc5149359da65f1fc34c113e40d0fa347",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V09": {
             "file": "0004-Beryllium-Be-DIAGRAM-003-Magnetic-and-Spin-State.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be magnetism, separated. ground 1S0 J=0. no e- moment. 9Be I = 3/2. NMR active. 10Be I = 0. no spin. magnetization. NOT-APPLICABLE. Electronic vs nuclear vs bulk.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/fields/0004-Beryllium-Be-DIAGRAM-003-Magnetic-and-Spin-State.svg",
+              "sha256": "4c68ad06a998200ea4830c2424562d250fe6b3b2fb49ffa05bce367f3f1375fc",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V10": {
             "file": "0004-Beryllium-Be-FIG-008-Thermal-State.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be thermal states. HCP solid. ambient reference. expansion 11.3e-6. per K reference. Tm ≈ 1560 K. melting region. liquid Be. high-T state. vapor regime. Tb ≈ 2741 K. SRC-000056.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/properties/0004-Beryllium-Be-FIG-008-Thermal-State.svg",
+              "sha256": "ea6ff6320b0920e8fb154d0b0d846fe6ce80826d343a93c35acc95466720544a",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V11": {
             "file": "0004-Beryllium-Be-FIG-009-Specific-Stiffness.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Specific stiffness E/ρ. E = 287 GPa. polycrystalline ref. ρ = 1848 kg/m3. light metal. E/ρ ≈ 1.553e8. m2/s2 (CALC-001). HCP anisotropy. one E insufficient. Derived metric, not a ranking. MAT:0004:CALC:001.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/properties/0004-Beryllium-Be-FIG-009-Specific-Stiffness.svg",
+              "sha256": "2695505eeaa23c4027c7237ca443b62ab86f1d29481850a143d26e7453632b9f",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V12": {
             "file": "0004-Beryllium-Be-FIG-010-Pressure-Phase-Map.svg",
@@ -1138,18 +2586,47 @@
           },
           "V13": {
             "file": "0004-Beryllium-Be-DIAGRAM-004-Transformation-Network.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be transformation network. Be metal → BeO (oxidation). Be → alloys: Cu / Al / beryllides. machining → particulate → exposure control. heating → liquid. 9Be+α → 12C+n (nuclear, separate). LiF+BeF2 → FLiBe (system). Chemical, manufacturing, nuclear edges distinct.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/processes/0004-Beryllium-Be-DIAGRAM-004-Transformation-Network.svg",
+              "sha256": "25fb0bdadf442fe7d3f48a55b06d30856da100c57fdfeab84fe0113965ac4ad6",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V14": {
             "file": "0004-Beryllium-Be-DIAGRAM-005-Knowledge-Graph.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "MAT:0004 knowledge graph. MAT:0004 Beryllium. — ISOTOPE-OF —. — DECAYS-TO —. — FORMS-TRANSIENT-NUCLEAR-STATE —. — NUCLEAR-REACTION —. — ALPHA-NEUTRON-REACTION —. — NEUTRON-MULTIPLICATION-REACTION —. — FUSION-SYSTEM-COOPERATES-WITH —. — MOLTEN-SALT-MATERIAL-RELATIONSHIP-WITH —. — FORMS-COMPOUND-WITH —. — ALLOYS-WITH —. — MATERIAL-RELATIONSHIP-WITH —. — PERIODIC-FAMILY-RELATIONSHIP-WITH —. — BERYLLIDE-FORMS-WITH —. — X-RAY-WINDOW-MATERIAL —. — OCCUPATIONAL-HAZARD —. — LEGACY-SUCCESSOR-OF —. Full edges: Be relationships registry.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/relationships/0004-Beryllium-Be-DIAGRAM-005-Knowledge-Graph.svg",
+              "sha256": "98a2b58cf6870bfd72266ae22b89d0014b9b26af39e1925e57208df7e46ee695",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V15": {
             "files": [
               "0004-Beryllium-Be-MODEL-SCI-001-HCP-Lattice.glb",
               "0004-Beryllium-Be-MODEL-SCI-002-Atomic-Probability.glb"
             ],
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "HCP Lattice: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result. Atomic Probability: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result.",
+            "description_provenance": {
+              "method": "Editorial description from retained filename and inspected glTF scene structure",
+              "review_status": "STRUCTURE-INSPECTED-SCIENTIFIC-GEOMETRY-UNVERIFIED",
+              "sources": [
+                {
+                  "path": "records/0004-Beryllium-Be/models/scientific/0004-Beryllium-Be-MODEL-SCI-001-HCP-Lattice.glb",
+                  "sha256": "e2b38ae982606b1273148d1a20df7c4321b88b021e57bbe2b89ee555f280951e"
+                },
+                {
+                  "path": "records/0004-Beryllium-Be/models/scientific/0004-Beryllium-Be-MODEL-SCI-002-Atomic-Probability.glb",
+                  "sha256": "80cc9ab890bafc0fe6e732bd6e5286ab7d9aed68c46940a81cc14e962c75c95c"
+                }
+              ]
+            }
           },
           "V16": {
             "file": "0004-Beryllium-Be-MODEL-DATA-001.glb",
@@ -1157,11 +2634,25 @@
           },
           "V17": {
             "file": "0004-Beryllium-Be-FIG-011-Applications.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be applications (safety-marked). images/applications/0004-Beryllium-Be-FIG-011-Applications.svg. state-specific. Manufacturing uses need exposure control.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/images/applications/0004-Beryllium-Be-FIG-011-Applications.svg",
+              "sha256": "7d2636c3d1b137b4aecec759111b297e47cb50cfc661ee245b47530069b9fe25",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V18": {
             "file": "0004-Beryllium-Be-DIAGRAM-006-Evidence-Provenance-Safety.svg",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Be evidence + safety overlay. NIST ASD → atomic/spectral. NIST + NUBASE → nuclear. crystallography → HCP bulk. NIST BeO → ceramic data. IAEA/fusion → multiplier role. OSHA → exposure → CONTROL. PROCESS → FORM → EXPOSURE → CONTROL.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0004-Beryllium-Be/diagrams/relationships/0004-Beryllium-Be-DIAGRAM-006-Evidence-Provenance-Safety.svg",
+              "sha256": "a3fa380e73281d53cb09ca684f28fad96275bc7ca2a05e81601a4b2463585e8d",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           }
         },
         "summary": {
@@ -1622,7 +3113,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000048",

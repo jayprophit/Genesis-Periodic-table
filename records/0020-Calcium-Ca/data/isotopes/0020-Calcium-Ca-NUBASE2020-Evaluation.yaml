@@ -1,0 +1,2103 @@
+registry_id: MAT:0020:REG:NUBASE2020
+record_id: MAT:0020
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 33
+    Z: 20
+    N: 13
+    state_index: 0
+    state_label: ground
+    source_label: 33Ca
+    mass_excess:
+      value: 31030
+      unit: keV
+      raw: 31030#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: p ?
+    source_line: 351
+    raw_line: 033 0200   33Ca    31030#       400#                                                    5/2+#                          p ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-33
+    evaluation_entry_id: MAT:0020:NUBASE2020:33:0
+  - A: 34
+    Z: 20
+    N: 14
+    state_index: 0
+    state_label: ground
+    source_label: 34Ca
+    mass_excess:
+      value: 14890
+      unit: keV
+      raw: 14890#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: <35ns
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: 2p ?
+    source_line: 366
+    raw_line: 034 0200   34Ca    14890#       300#                                             <35ns  0+            12               2p ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-34
+    evaluation_entry_id: MAT:0020:NUBASE2020:34:0
+  - A: 35
+    Z: 20
+    N: 15
+    state_index: 0
+    state_label: ground
+    source_label: 35Ca
+    mass_excess:
+      value: 5190
+      unit: keV
+      raw: 5190#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 25.7
+      unit: ms
+      raw: "25.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+#
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1985"
+    decay_and_abundance_raw: B+=100;B+p=95.8 14;B+2p=4.2 3
+    source_line: 380
+    raw_line: 035 0200   35Ca     5190#       200#                                   25.7   ms 0.2    1/2+#         11          1985
+      B+=100;B+p=95.8 14;B+2p=4.2 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.026970707414783864
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0002098887736559056
+      mean_lifetime:
+        value: 37.077262550846356
+        unit: ms
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-35
+    evaluation_entry_id: MAT:0020:NUBASE2020:35:0
+  - A: 36
+    Z: 20
+    N: 16
+    state_index: 0
+    state_label: ground
+    source_label: 36Ca
+    mass_excess:
+      value: -6450
+      unit: keV
+      raw: "-6450"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 100.9
+      unit: ms
+      raw: "100.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1977"
+    decay_and_abundance_raw: B+=100;B+p=51.2 10
+    source_line: 395
+    raw_line: 036 0200   36Ca    -6450         40                                   100.9   ms 1.3    0+            12          1977
+      B+=100;B+p=51.2 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006869645000594105
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00008850880575592009
+      mean_lifetime:
+        value: 145.56792962569642
+        unit: ms
+        relation: =
+        uncertainty: 1.8755035531556525
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-36
+    evaluation_entry_id: MAT:0020:NUBASE2020:36:0
+  - A: 37
+    Z: 20
+    N: 17
+    state_index: 0
+    state_label: ground
+    source_label: 37Ca
+    mass_excess:
+      value: -13136.1
+      unit: keV
+      raw: "-13136.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.6"
+      uncertainty: 0.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 181
+      unit: ms
+      raw: "181.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.9"
+      uncertainty: 0.9
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1964"
+    decay_and_abundance_raw: B+=100;B+p=76.8 7
+    source_line: 409
+    raw_line: 037 0200   37Ca   -13136.1        0.6                                 181.0   ms 0.9    3/2+*         12          1964
+      B+=100;B+p=76.8 7
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.003829542434032847
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000019041923705135705
+      mean_lifetime:
+        value: 261.1278024009024
+        unit: ms
+        relation: =
+        uncertainty: 1.2984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-37
+    evaluation_entry_id: MAT:0020:NUBASE2020:37:0
+  - A: 38
+    Z: 20
+    N: 18
+    state_index: 0
+    state_label: ground
+    source_label: 38Ca
+    mass_excess:
+      value: -22058.5
+      unit: keV
+      raw: "-22058.50"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.19"
+      uncertainty: 0.19
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 443.7
+      unit: ms
+      raw: "443.70"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.25"
+      uncertainty: 0.25
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1966"
+    decay_and_abundance_raw: B+=100
+    source_line: 427
+    raw_line: 038 0200   38Ca   -22058.50       0.19                                443.70  ms 0.25   0+            17          1966 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015621978376379204
+        unit: 1/ms
+        relation: =
+        uncertainty: 8.802106364874467e-7
+      mean_lifetime:
+        value: 640.123789642433
+        unit: ms
+        relation: =
+        uncertainty: 0.36067376022224085
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-38
+    evaluation_entry_id: MAT:0020:NUBASE2020:38:0
+  - A: 39
+    Z: 20
+    N: 19
+    state_index: 0
+    state_label: ground
+    source_label: 39Ca
+    mass_excess:
+      value: -27282.7
+      unit: keV
+      raw: "-27282.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.6"
+      uncertainty: 0.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 860.3
+      unit: ms
+      raw: "860.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "18"
+    discovery_year_raw: "1943"
+    decay_and_abundance_raw: B+=100
+    source_line: 442
+    raw_line: 039 0200   39Ca   -27282.7        0.6                                 860.3   ms 0.8    3/2+*         18          1943 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0008057040341275663
+        unit: 1/ms
+        relation: =
+        uncertainty: 7.492307652005731e-7
+      mean_lifetime:
+        value: 1241.1505436767752
+        unit: ms
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-39
+    evaluation_entry_id: MAT:0020:NUBASE2020:39:0
+  - A: 39
+    Z: 20
+    N: 19
+    state_index: 8
+    state_label: i
+    source_label: 39Ca
+    mass_excess:
+      value: -20917
+      unit: keV
+      raw: -20917#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 9#
+      uncertainty: 9
+    excitation_energy:
+      value: 6366
+      unit: keV
+      raw: 6366#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 9#
+      uncertainty: 9
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 3/2+    T=3/2
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 443
+    raw_line: "039 0208   39Ca i -20917#         9#       6366#         9#                             3/2+    T=3/2                  "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-39i
+    evaluation_entry_id: MAT:0020:NUBASE2020:39:8
+  - A: 40
+    Z: 20
+    N: 20
+    state_index: 0
+    state_label: ground
+    source_label: 40Ca
+    mass_excess:
+      value: -34846.402
+      unit: keV
+      raw: "-34846.402"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.020"
+      uncertainty: 0.02
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ">9.9Zy"
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1922"
+    decay_and_abundance_raw: IS=96.941 156;2B+ ?
+    source_line: 458
+    raw_line: 040 0200   40Ca   -34846.402      0.020                               stbl       >9.9Zy 0+            17          1922
+      IS=96.941 156;2B+ ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-40
+    evaluation_entry_id: MAT:0020:NUBASE2020:40:0
+  - A: 40
+    Z: 20
+    N: 20
+    state_index: 8
+    state_label: i
+    source_label: 40Ca
+    mass_excess:
+      value: -27188.22
+      unit: keV
+      raw: "-27188.22"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: 7658.18
+      unit: keV
+      raw: "7658.18"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 4-      T=1
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: IT=100
+    source_line: 459
+    raw_line: 040 0208   40Ca i -27188.22       0.05     7658.18       0.05                           4-      T=1   17               IT=100
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-40i
+    evaluation_entry_id: MAT:0020:NUBASE2020:40:8
+  - A: 40
+    Z: 20
+    N: 20
+    state_index: 9
+    state_label: j
+    source_label: 40Ca
+    mass_excess:
+      value: -22858.4
+      unit: keV
+      raw: "-22858.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+    excitation_energy:
+      value: 11988
+      unit: keV
+      raw: "11988"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1"
+      uncertainty: 1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+      T=2
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: IT=100
+    source_line: 460
+    raw_line: 040 0209   40Ca j -22858.4        1.0     11988          1                              0+      T=2   17               IT=100
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-40j
+    evaluation_entry_id: MAT:0020:NUBASE2020:40:9
+  - A: 41
+    Z: 20
+    N: 21
+    state_index: 0
+    state_label: ground
+    source_label: 41Ca
+    mass_excess:
+      value: -35137.91
+      unit: keV
+      raw: "-35137.91"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.14"
+      uncertainty: 0.14
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 99.4
+      unit: ky
+      raw: "99.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-*
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: EC=100
+    source_line: 474
+    raw_line: 041 0200   41Ca   -35137.91       0.14                                 99.4   ky 1.5    7/2-*         16          1939 EC=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006973311675653373
+        unit: 1/ky
+        relation: =
+        uncertainty: 0.00010523106150382353
+      mean_lifetime:
+        value: 143.40388706436298
+        unit: ky
+        relation: =
+        uncertainty: 2.1640425613334453
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-41
+    evaluation_entry_id: MAT:0020:NUBASE2020:41:0
+  - A: 41
+    Z: 20
+    N: 21
+    state_index: 8
+    state_label: i
+    source_label: 41Ca
+    mass_excess:
+      value: -29320.8
+      unit: keV
+      raw: "-29320.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_energy:
+      value: 5817.1
+      unit: keV
+      raw: "5817.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 28
+      unit: fs
+      raw: <28
+      null_reason: null
+      relation: <
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+    T=3/2
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: IT=100
+    source_line: 475
+    raw_line: 041 0208   41Ca i -29320.8        0.5      5817.1        0.5          <28     fs        3/2+    T=3/2 16               IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.024755256448569473
+        unit: 1/fs
+        relation: ">"
+        uncertainty: null
+      mean_lifetime:
+        value: 40.39546114489098
+        unit: fs
+        relation: <
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-41i
+    evaluation_entry_id: MAT:0020:NUBASE2020:41:8
+  - A: 42
+    Z: 20
+    N: 22
+    state_index: 0
+    state_label: ground
+    source_label: 42Ca
+    mass_excess:
+      value: -38547.29
+      unit: keV
+      raw: "-38547.29"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.15"
+      uncertainty: 0.15
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: IS=0.647 23
+    source_line: 490
+    raw_line: 042 0200   42Ca   -38547.29       0.15                                stbl              0+            16          1934
+      IS=0.647 23
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-42
+    evaluation_entry_id: MAT:0020:NUBASE2020:42:0
+  - A: 42
+    Z: 20
+    N: 22
+    state_index: 8
+    state_label: i
+    source_label: 42Ca
+    mass_excess:
+      value: -28797
+      unit: keV
+      raw: "-28797"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+    excitation_energy:
+      value: 9750
+      unit: keV
+      raw: "9750"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: (2-)    T=2
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 491
+    raw_line: "042 0208   42Ca i -28797         10        9750         10                              (2-)    T=2   16               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-42i
+    evaluation_entry_id: MAT:0020:NUBASE2020:42:8
+  - A: 43
+    Z: 20
+    N: 23
+    state_index: 0
+    state_label: ground
+    source_label: 43Ca
+    mass_excess:
+      value: -38408.87
+      unit: keV
+      raw: "-38408.87"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.23"
+      uncertainty: 0.23
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 7/2-*
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: IS=0.135 10
+    source_line: 507
+    raw_line: 043 0200   43Ca   -38408.87       0.23                                stbl              7/2-*         15          1934
+      IS=0.135 10
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-43
+    evaluation_entry_id: MAT:0020:NUBASE2020:43:0
+  - A: 43
+    Z: 20
+    N: 23
+    state_index: 8
+    state_label: i
+    source_label: 43Ca
+    mass_excess:
+      value: -30414
+      unit: keV
+      raw: "-30414"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+    excitation_energy:
+      value: 7995
+      unit: keV
+      raw: "7995"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+    excitation_origin: RQ
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: (3/2)+  T=5/2
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 508
+    raw_line: "043 0208   43Ca i -30414         14        7995         14       RQ                     (3/2)+  T=5/2 15               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-43i
+    evaluation_entry_id: MAT:0020:NUBASE2020:43:8
+  - A: 44
+    Z: 20
+    N: 24
+    state_index: 0
+    state_label: ground
+    source_label: 44Ca
+    mass_excess:
+      value: -41468.7
+      unit: keV
+      raw: "-41468.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1922"
+    decay_and_abundance_raw: IS=2.086 110
+    source_line: 528
+    raw_line: 044 0200   44Ca   -41468.7        0.3                                 stbl              0+            11          1922
+      IS=2.086 110
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-44
+    evaluation_entry_id: MAT:0020:NUBASE2020:44:0
+  - A: 44
+    Z: 20
+    N: 24
+    state_index: 8
+    state_label: i
+    source_label: 44Ca
+    mass_excess:
+      value: -29619
+      unit: keV
+      raw: "-29619"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+    excitation_energy:
+      value: 11850
+      unit: keV
+      raw: "11850"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 2-      T=3
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 529
+    raw_line: "044 0208   44Ca i -29619         10       11850         10                              2-      T=3   11               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-44i
+    evaluation_entry_id: MAT:0020:NUBASE2020:44:8
+  - A: 45
+    Z: 20
+    N: 25
+    state_index: 0
+    state_label: ground
+    source_label: 45Ca
+    mass_excess:
+      value: -40812.2
+      unit: keV
+      raw: "-40812.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 162.61
+      unit: d
+      raw: "162.61"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1940"
+    decay_and_abundance_raw: B-=100
+    source_line: 550
+    raw_line: 045 0200   45Ca   -40812.2        0.4                                 162.61   d 0.09   7/2-*         08          1940 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004262635634708476
+        unit: 1/d
+        relation: =
+        uncertainty: 0.0000023592473225740284
+      mean_lifetime:
+        value: 234.59664059895437
+        unit: d
+        relation: =
+        uncertainty: 0.12984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-45
+    evaluation_entry_id: MAT:0020:NUBASE2020:45:0
+  - A: 46
+    Z: 20
+    N: 26
+    state_index: 0
+    state_label: ground
+    source_label: 46Ca
+    mass_excess:
+      value: -43139.6
+      unit: keV
+      raw: "-43139.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.2"
+      uncertainty: 2.2
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "00"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: IS=0.004 3;2B- ?
+    source_line: 569
+    raw_line: 046 0200   46Ca   -43139.6        2.2                                 stbl              0+            00          1938
+      IS=0.004 3;2B- ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0020:ISO:Ca-46
+    evaluation_entry_id: MAT:0020:NUBASE2020:46:0
+  - A: 47
+    Z: 20
+    N: 27
+    state_index: 0
+    state_label: ground
+    source_label: 47Ca
+    mass_excess:
+      value: -42344.7
+      unit: keV
+      raw: "-42344.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.2"
+      uncertainty: 2.2
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.536
+      unit: d
+      raw: "4.536"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.003"
+      uncertainty: 0.003
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-*
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1951"
+    decay_and_abundance_raw: B-=100
+    source_line: 590
+    raw_line: 047 0200   47Ca   -42344.7        2.2                                   4.536  d 0.003  7/2-*         07          1951 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1528102249911696
+        unit: 1/d
+        relation: =
+        uncertainty: 0.00010106496361849844
+      mean_lifetime:
+        value: 6.544064705472338
+        unit: d
+        relation: =
+        uncertainty: 0.00432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-47
+    evaluation_entry_id: MAT:0020:NUBASE2020:47:0
+  - A: 48
+    Z: 20
+    N: 28
+    state_index: 0
+    state_label: ground
+    source_label: 48Ca
+    mass_excess:
+      value: -44224.868
+      unit: keV
+      raw: "-44224.868"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.018"
+      uncertainty: 0.018
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 56
+      unit: Ey
+      raw: "56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: IS=0.187 21;2B-=?;B- ?
+    source_line: 608
+    raw_line: 048 0200   48Ca   -44224.868      0.018                                56     Ey 10     0+            06          1938
+      IS=0.187 21;2B-=?;B- ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012377628224284737
+        unit: 1/Ey
+        relation: =
+        uncertainty: 0.00221029075433656
+      mean_lifetime:
+        value: 80.79092228978196
+        unit: Ey
+        relation: =
+        uncertainty: 14.426950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-48
+    evaluation_entry_id: MAT:0020:NUBASE2020:48:0
+  - A: 49
+    Z: 20
+    N: 29
+    state_index: 0
+    state_label: ground
+    source_label: 49Ca
+    mass_excess:
+      value: -41300
+      unit: keV
+      raw: "-41300.00"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.18"
+      uncertainty: 0.18
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8.718
+      unit: m
+      raw: "8.718"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.006"
+      uncertainty: 0.006
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1950"
+    decay_and_abundance_raw: B-=100
+    source_line: 626
+    raw_line: 049 0200   49Ca   -41300.00       0.18                                  8.718  m 0.006  3/2-*         08          1950 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0795075912548687
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0000547196085718298
+      mean_lifetime:
+        value: 12.577415366469983
+        unit: m
+        relation: =
+        uncertainty: 0.00865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-49
+    evaluation_entry_id: MAT:0020:NUBASE2020:49:0
+  - A: 50
+    Z: 20
+    N: 30
+    state_index: 0
+    state_label: ground
+    source_label: 50Ca
+    mass_excess:
+      value: -39589.2
+      unit: keV
+      raw: "-39589.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.6"
+      uncertainty: 1.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 13.45
+      unit: s
+      raw: "13.45"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1964"
+    decay_and_abundance_raw: B-=100
+    source_line: 642
+    raw_line: 050 0200   50Ca   -39589.2        1.6                                  13.45   s 0.05   0+            19          1964 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.051535106361334224
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00019158032104585215
+      mean_lifetime:
+        value: 19.404248299956556
+        unit: s
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-50
+    evaluation_entry_id: MAT:0020:NUBASE2020:50:0
+  - A: 51
+    Z: 20
+    N: 31
+    state_index: 0
+    state_label: ground
+    source_label: 51Ca
+    mass_excess:
+      value: -36332.3
+      unit: keV
+      raw: "-36332.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10
+      unit: s
+      raw: "10.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-*
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1980"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 661
+    raw_line: 051 0200   51Ca   -36332.3        0.5                                  10.0    s 0.8    3/2-*         16          1980
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06931471805599453
+        unit: 1/s
+        relation: =
+        uncertainty: 0.005545177444479563
+      mean_lifetime:
+        value: 14.426950408889635
+        unit: s
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-51
+    evaluation_entry_id: MAT:0020:NUBASE2020:51:0
+  - A: 52
+    Z: 20
+    N: 32
+    state_index: 0
+    state_label: ground
+    source_label: 52Ca
+    mass_excess:
+      value: -34266.3
+      unit: keV
+      raw: "-34266.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.6
+      unit: s
+      raw: "4.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1985"
+    decay_and_abundance_raw: B-=100;B-n<2
+    source_line: 676
+    raw_line: 052 0200   52Ca   -34266.3        0.7                                   4.6    s 0.3    0+            15          1985
+      B-=100;B-n<2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.15068416968694465
+        unit: 1/s
+        relation: =
+        uncertainty: 0.009827228457844216
+      mean_lifetime:
+        value: 6.636397188089231
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-52
+    evaluation_entry_id: MAT:0020:NUBASE2020:52:0
+  - A: 53
+    Z: 20
+    N: 33
+    state_index: 0
+    state_label: ground
+    source_label: 53Ca
+    mass_excess:
+      value: -29390
+      unit: keV
+      raw: "-29390"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 461
+      unit: ms
+      raw: "461"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1983"
+    decay_and_abundance_raw: B-=100;B-n=40 10
+    source_line: 696
+    raw_line: 053 0200   53Ca   -29390         40                                   461     ms 90     1/2-#         14          1983
+      B-=100;B-n=40 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015035730597829616
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00029353920906825717
+      mean_lifetime:
+        value: 665.0824138498122
+        unit: ms
+        relation: =
+        uncertainty: 129.84255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-53
+    evaluation_entry_id: MAT:0020:NUBASE2020:53:0
+  - A: 54
+    Z: 20
+    N: 34
+    state_index: 0
+    state_label: ground
+    source_label: 54Ca
+    mass_excess:
+      value: -25160
+      unit: keV
+      raw: "-25160"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 90
+      unit: ms
+      raw: "90"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 713
+    raw_line: 054 0200   54Ca   -25160         50                                    90     ms 6      0+            14          1997
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007701635339554948
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0005134423559703298
+      mean_lifetime:
+        value: 129.84255368000672
+        unit: ms
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-54
+    evaluation_entry_id: MAT:0020:NUBASE2020:54:0
+  - A: 55
+    Z: 20
+    N: 35
+    state_index: 0
+    state_label: ground
+    source_label: 55Ca
+    mass_excess:
+      value: -18650
+      unit: keV
+      raw: "-18650"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "160"
+      uncertainty: 160
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 22
+      unit: ms
+      raw: "22"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2-#
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 732
+    raw_line: 055 0200   55Ca   -18650        160                                    22     ms 2      5/2-#         09          1997
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03150669002545206
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.002864244547768369
+      mean_lifetime:
+        value: 31.739290899557197
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-55
+    evaluation_entry_id: MAT:0020:NUBASE2020:55:0
+  - A: 56
+    Z: 20
+    N: 36
+    state_index: 0
+    state_label: ground
+    source_label: 56Ca
+    mass_excess:
+      value: -13510
+      unit: keV
+      raw: "-13510"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "250"
+      uncertainty: 250
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11
+      unit: ms
+      raw: "11"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 747
+    raw_line: 056 0200   56Ca   -13510        250                                    11     ms 2      0+            11          1997
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06301338005090412
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.011456978191073476
+      mean_lifetime:
+        value: 15.869645449778599
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-56
+    evaluation_entry_id: MAT:0020:NUBASE2020:56:0
+  - A: 57
+    Z: 20
+    N: 37
+    state_index: 0
+    state_label: ground
+    source_label: 57Ca
+    mass_excess:
+      value: -6560
+      unit: keV
+      raw: -6560#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8
+      unit: ms
+      raw: 8#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">620ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2-#
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 769
+    raw_line: 057 0200   57Ca    -6560#       400#                                    8#    ms >620ns 5/2-#         10          2009
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.08664339756999316
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 11.541560327111707
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-57
+    evaluation_entry_id: MAT:0020:NUBASE2020:57:0
+  - A: 58
+    Z: 20
+    N: 38
+    state_index: 0
+    state_label: ground
+    source_label: 58Ca
+    mass_excess:
+      value: -1530
+      unit: keV
+      raw: -1530#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4
+      unit: ms
+      raw: 4#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">620ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 785
+    raw_line: 058 0200   58Ca    -1530#       500#                                    4#    ms >620ns 0+            10          2009
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.17328679513998632
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 5.7707801635558535
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-58
+    evaluation_entry_id: MAT:0020:NUBASE2020:58:0
+  - A: 59
+    Z: 20
+    N: 39
+    state_index: 0
+    state_label: ground
+    source_label: 59Ca
+    mass_excess:
+      value: 5810
+      unit: keV
+      raw: 5810#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 600#
+      uncertainty: 600
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5
+      unit: ms
+      raw: 5#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">400ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2018"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 808
+    raw_line: 059 0200   59Ca     5810#       600#                                    5#    ms >400ns 5/2-#                     2018
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.13862943611198905
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 7.213475204444817
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-59
+    evaluation_entry_id: MAT:0020:NUBASE2020:59:0
+  - A: 60
+    Z: 20
+    N: 40
+    state_index: 0
+    state_label: ground
+    source_label: 60Ca
+    mass_excess:
+      value: 11000
+      unit: keV
+      raw: 11000#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 700#
+      uncertainty: 700
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2
+      unit: ms
+      raw: 2#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">400ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2018"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 825
+    raw_line: 060 0200   60Ca    11000#       700#                                    2#    ms >400ns 0+                        2018
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34657359027997264
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 2.8853900817779268
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-60
+    evaluation_entry_id: MAT:0020:NUBASE2020:60:0
+  - A: 61
+    Z: 20
+    N: 41
+    state_index: 0
+    state_label: ground
+    source_label: 61Ca
+    mass_excess:
+      value: 19010
+      unit: keV
+      raw: 19010#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 800#
+      uncertainty: 800
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1
+      unit: ms
+      raw: 1#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 849
+    raw_line: 061
+      0200   61Ca    19010#       800#                                    1#    ms        1/2-#                          B- ?;B-n
+      ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.6931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 1.4426950408889634
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0020:ISO:Ca-61
+    evaluation_entry_id: MAT:0020:NUBASE2020:61:0

@@ -6,12 +6,12 @@
 <title>MAT Codex — Materials Atlas Table</title>
 <meta property="og:title" content="MAT Codex — Materials Atlas Table"><meta property="og:description" content="A source-led atlas of matter, materials, states and transformations. Explore elements, material states and transformations through their properties, conditions and evidence."><meta property="og:type" content="website"><meta property="og:site_name" content="MAT Codex"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MAT Codex — Materials Atlas Table"><meta name="twitter:description" content="A source-led atlas of matter, materials, states and transformations.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Materials Atlas Table Codex","description":"A source-led atlas of matter, materials, states and transformations.","author":{"@type":"Person","name":"Jay Powe"},"publisher":{"@type":"Organization","name":"MAT Codex"},"inLanguage":"en","genre":"Science","about":[{"@type":"Thing","name":"Materials Science"},{"@type":"Thing","name":"Chemistry"},{"@type":"Thing","name":"Physics"}]}</script>
-<link id="styles-link" rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/reader-overrides.css?v=4"><link rel="stylesheet" href="./styles/popup-sections.css"><link rel="stylesheet" href="./styles/periodic-extra.css"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
+<link id="styles-link" rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/reader-overrides.css"><link rel="stylesheet" href="./styles/popup-sections.css"><link rel="stylesheet" href="./styles/periodic-extra.css"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
 <script src="./math-config.js"></script><script defer src="./vendor/tex-svg.js"></script><script defer src="./vendor/chart.min.js"></script>
 </head>
 <body class="light">
 <a class="skip-link" href="#reader">Skip to reading</a><div id="progress" aria-hidden="true"></div>
-<header class="mobile-bar" role="banner"><button id="toc-toggle" aria-controls="sidebar" aria-expanded="false">☰ Contents & search</button><a href="#cover" aria-label="MAT Codex cover">MAT <span>Codex</span></a></header>
+<header class="mobile-bar" role="banner"><button id="toc-toggle" aria-controls="sidebar" aria-expanded="true" aria-label="Hide contents and search"><span class="burger-icon" aria-hidden="true"><i></i><i></i><i></i></span><span id="toc-toggle-label">Hide contents</span></button><a href="#cover" aria-label="MAT Codex cover">MAT <span>Codex</span></a></header>
 <button id="scrim" hidden aria-label="Close contents"></button>
 <div id="app">
 <aside id="sidebar" aria-label="Book navigation" role="complementary">
@@ -20,9 +20,7 @@
     <div id="adv" hidden><label><input id="opt-title" type="checkbox"> Titles only</label><label>Section<select id="opt-section"><option value="">All sections</option></select></label><label>Collection<select id="opt-lane"><option value="">All collections</option><option value="core">MAT Core Data / reference</option><option value="research">Research / Emerging</option><option value="claims">Historical / Alternative / Claims</option></select></label><label>Results<select id="opt-count"><option>8</option><option>15</option><option>30</option></select></label><label>Sort<select id="opt-sort"><option value="relevance">Relevance</option><option value="title">Title</option></select></label><label><input id="opt-related" type="checkbox" checked> Include related chapters</label></div>
   </div>
   <div id="search-status" class="sr-only" role="status"></div><div id="results" hidden aria-label="Search results"></div>
-  <nav id="toc" aria-label="Table of contents"></nav>
-  <footer id="side-foot" class="side-foot">
-    <details id="studio" class="reader-settings"><summary>Listen, translate & reading tools</summary><p id="studio-chapter">Open a chapter to begin.</p>
+  <details id="studio" class="reader-settings"><summary>Listen, translate & reading tools</summary><p id="studio-chapter">Open a chapter to begin.</p>
       <label>Voice<select id="voice" aria-label="Reading voice"></select></label><label>Speech rate<select id="rate"><option value="0.9">0.9×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><div class="button-row"><button id="speak-btn">Read aloud</button><button id="stop-btn">Stop</button></div>
       <label>Translate into<select id="lang"><option value="">Choose language…</option><option value="ar">Arabic</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="nl">Dutch</option><option value="fr">French</option><option value="de">German</option><option value="hi">Hindi</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="es">Spanish</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option></select></label>
       <p class="tool-note">Translate sends this chapter’s prose to MyMemory. Machine translations appear beside the English source. Equations, tables and citations retain their original wording.</p><div class="button-row"><button id="translate-btn">Translate prose</button><button id="clear-translation">Clear translation</button></div><p id="speech-status" role="status" class="tool-note"></p>
@@ -39,6 +37,8 @@
         <div class="button-row"><button id="clear-cache-btn" class="warn-btn" title="Clear translation cache">Clear Cache</button><button id="clear-prefs-btn" class="warn-btn" title="Reset reading preferences">Reset Preferences</button><button id="delete-all-btn" class="danger-btn" title="Delete ALL saved data">Delete All Data</button></div>
       </div>
     </details>
+  <nav id="toc" aria-label="Table of contents"></nav>
+  <footer id="side-foot" class="side-foot">
     <div class="button-row"><button id="theme-btn" aria-label="Switch to dark theme">Dark theme</button><button id="font-dec" aria-label="Decrease text size">A−</button><button id="font-inc" aria-label="Increase text size">A+</button><button id="print-btn">Print / PDF</button></div><div class="foot-links"><a id="btn-3d" href="./3d.html">3D collection ↗</a><a href="../dist/MAT-ebook.html">Complete print edition ↗</a></div><button id="offline-btn">Save book for offline reading</button><p id="offline-status" role="status">Online · opened pages are kept on this device.</p><small id="count"></small></footer>
 </aside>
 <main id="reader" tabindex="-1">
@@ -71,7 +71,7 @@
     <div id="codex-overview" class="codex-overview" hidden><h3>Chapter Overview</h3><div id="codex-map" class="codex-map"></div><div id="info-boxes" class="info-box"></div></div>
     <div id="media-placeholders"></div>
     <div id="evidence-panel" class="evidence-panel" hidden><h4>Evidence & Sources</h4><div id="evidence-sources"></div></div>
-    <div id="discovery-panel" class="discovery-panel" hidden><h4>Supplementary Resources</h4><div id="discovery-links" class="Discovery-links"></div></div>
+    <div id="discovery-panel" class="discovery-panel" hidden><h4>Supplementary Resources</h4><div id="discovery-links" class="discovery-links"></div></div>
     <div class="pub-preview-bar" aria-label="Publication previews"><span style="font-size:11px;color:var(--muted)">Preview as:</span><button id="preview-web">Web/PWA</button><button id="preview-epub">Reflowable EPUB</button><button id="preview-6x9">6×9 Paperback</button><button id="preview-a4">A4 Technical PDF</button></div>
     <div class="read-selection-controls" id="read-sel-controls" hidden><button id="read-sel-btn">🔊 Read selection</button><span id="read-sel-status" role="status"></span></div>
     <nav class="element-pager" aria-label="Previous and next element"><a id="prev-element"></a><a id="next-element"></a></nav><nav class="pager" aria-label="Previous and next page"><a id="prev"></a><a id="next"></a></nav>
@@ -104,5 +104,5 @@
     <a id="visual-download" download>Download</a><a id="visual-new" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
   </div>
 </dialog>
-<script type="module" src="./book.js?v=2"></script>
+<script type="module" src="./book.js"></script>
 </body></html>

@@ -1,0 +1,97 @@
+registry_id: MAT:0011:REG:CORE-COMPOUNDS
+record_id: MAT:0011
+families:
+  sodium_chloride:
+    id: MAT:CMP:NaCl
+    parents:
+      - MAT:0011
+      - MAT:0017
+    chlorine_status: RESERVED-PENDING-CHLORINE
+    mineral_name: HALITE
+    crystal_structure:
+      common_name: ROCK-SALT
+      coordination:
+        Na: 6
+        Cl: 6
+    class:
+      - ionic_solid
+      - evaporite_mineral
+      - dissolved_electrolyte
+  sodium_fluoride:
+    id: MAT:CMP:NaF
+    parents:
+      - MAT:0011
+      - MAT:0009
+    fluorine_status: RESOLVED
+    class:
+      - ionic_fluoride
+  sodium_hydroxide:
+    id: MAT:CMP:NaOH
+    parents:
+      - MAT:0011
+      - MAT:0008
+      - MAT:0001
+    class:
+      - strong_base
+      - ionic_material
+  sodium_oxide:
+    id: MAT:CMP:Na2O
+    oxygen_species:
+      formal: O2-
+  sodium_peroxide:
+    id: MAT:CMP:Na2O2
+    oxygen_species:
+      formal: O2^2-
+  sodium_superoxide:
+    id: MAT:CMP:NaO2
+    oxygen_species:
+      formal: O2^-
+  sodium_carbonate:
+    id: MAT:CMP:Na2CO3
+    parents:
+      - MAT:0011
+      - MAT:0006
+      - MAT:0008
+  sodium_bicarbonate:
+    id: MAT:CMP:NaHCO3
+    parents:
+      - MAT:0011
+      - MAT:0001
+      - MAT:0006
+      - MAT:0008
+  sodium_hydride:
+    id: MAT:CMP:NaH
+    class:
+      - saline_hydride
+      - ionic_hydride
+  sodium_borohydride:
+    id: MAT:CMP:NaBH4
+    class:
+      - complex_hydride
+      - borohydride
+      - reducing_agent
+      - hydrogen_carrier_research
+  sodium_alanate:
+    id: MAT:CMP:NaAlH4
+    class:
+      - complex_hydride
+      - alanate
+      - reversible_hydrogen_storage_research
+    DOE_system_modeling:
+      historical_research_program: true
+rules:
+  sharing_Na_plus_means_same_material_property: false
+  oxygen_stoichiometry_is_first_class: true
+  hydride_class_must_be_explicit: true
+  hydrogen_storage_material_equals_practical_storage_system: false
+source_ids:
+  - SRC-000228
+  - SRC-000229
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1229
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

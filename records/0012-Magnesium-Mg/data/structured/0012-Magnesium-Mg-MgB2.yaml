@@ -1,0 +1,72 @@
+material_id: MAT:CMP:MgB2
+parents:
+  - MAT:0012
+  - MAT:0005
+classification:
+  - INTERMETALLIC-BORIDE
+  - PHONON-MEDIATED-SUPERCONDUCTOR
+  - MULTIBAND-SUPERCONDUCTOR
+structure:
+  prototype: AlB2
+  space_group: P6/mmm
+  arrangement:
+    boron:
+      structure: HONEYCOMB-LAYERS
+    magnesium:
+      structure: LAYERS-BETWEEN-BORON-SHEETS
+electronic_bands:
+  sigma:
+    character: B s/px/py
+    dimensionality: QUASI-2D
+  pi:
+    character: B pz
+    dimensionality: MORE-3D
+superconductivity:
+  Tc:
+    representative_value:
+      approximately: 39
+      unit: K
+  gaps:
+    sigma_gap:
+      representative_range:
+        approximately: 6-7
+        unit: meV
+    pi_gap:
+      representative_range:
+        approximately: 1.7-2.2
+        unit: meV
+    common_transition_temperature: true
+  electron_phonon_coupling:
+    established: true
+    important_mode: BORON E2g BOND-STRETCHING
+isotope_effect:
+  boron:
+    established: true
+    historical_shift:
+      approximate_delta_Tc: 1
+      unit: K
+    partial_isotope_exponent:
+      approximate_value: 0.26
+      uncertainty: 0.03
+  magnesium:
+    isotope_effect:
+      comparatively_small: true
+core_principle:
+  equation: ISOTOPE MASS -> PHONON SPECTRUM -> ELECTRON-PHONON COUPLING -> Tc
+rules:
+  one_superconducting_gap_is_sufficient: false
+  MgB2_property_equals_Mg_property: false
+  MgB2_property_equals_B_property: false
+  isotope_substitution_changes_elemental_identity: false
+source_ids:
+  - SRC-000248
+  - SRC-000249
+  - SRC-000264
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1385
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

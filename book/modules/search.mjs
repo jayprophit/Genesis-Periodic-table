@@ -14,7 +14,7 @@ export function initSearch({ $, searchDocs, related, flat, route }) {
   };
   async function run() {
     const q = input.value.trim();
-    if (q.length < 2) { box.hidden = true; return; }
+    if (!q.length) { box.hidden = true; live.textContent=''; return; }
     if (q.length >= 2) addSearchHistory(q).catch(() => {});
     const hits = searchDocuments(searchDocs, q, {
       titleOnly: $("opt-title").checked,
@@ -50,4 +50,5 @@ export function initSearch({ $, searchDocs, related, flat, route }) {
     box.hidden = false;
     live.textContent = `${hits.length} matches`;
   }
+  for(const id of ['opt-title','opt-section','opt-lane','opt-sort','opt-count','opt-related']) $(id).addEventListener('change',run);
 }

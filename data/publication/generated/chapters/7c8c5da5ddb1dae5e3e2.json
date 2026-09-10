@@ -1,0 +1,43 @@
+{
+  "id": "records/0010-Neon-Ne/0010-Neon-Ne-Optical-Reference.md",
+  "key": "7c8c5da5ddb1dae5e3e2",
+  "mat": "MAT:0010",
+  "title": "Neon — Optical Wavelength Reference",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "# Neon — Optical Wavelength Reference\n\n**MAT Core Data · selected primary-reference check.**\n\n[Parent Neon record](0010-Neon-Ne.md) · [Structured wavelength correction](data/spectra/0010-Neon-Ne-HeNe-633nm-Correction.yaml) · [Selected optical lines](data/spectra/0010-Neon-Ne-Selected-Optical-Lines.yaml)\n\n## Air and vacuum are different measurement contexts\n\nNIST lists the Ne I atomic line at 6328.1646 angstrom in its air-wavelength table: 632.81646 nm after exact unit conversion. The table does not provide an uncertainty for that entry. [NIST strong-line table](https://physics.nist.gov/PhysRefData/Handbook/Tables/neontable2.htm), SRC-000300.\n\nThe CIPM gives a conventional vacuum wavelength of 632.9908 nm, with relative standard uncertainty 1.5 × 10⁻⁶, for an unstabilised He–Ne laser operating solely on the specified 633 nm transition. The recommendation is not a calibration result for a particular instrument. [CIPM Recommendation 2 (2007)](https://www.bipm.org/en/committees/ci/cipm/96-2007/resolution-2), SRC-000301.\n\n## Selected Ne I lines\n\n| Air wavelength / nm | Source wavelength / angstrom |\n|---:|---:|\n| 540.05618 | 5400.5618 |\n| 585.24879 | 5852.4879 |\n| 602.99969 | 6029.9969 |\n| 607.43377 | 6074.3377 |\n| 614.30626 | 6143.0626 |\n| 632.81646 | 6328.1646 |\n| 640.2248 | 6402.248 |\n| 650.65281 | 6506.5281 |\n| 692.94673 | 6929.4673 |\n| 703.24131 | 7032.4131 |\n\n## Review boundary\n\nThe missing correction was identified in Generate Folder Structure, message 6c99f77c-dcaa-445b-bb7f-50af016ea817. This recovery checks the selected wavelengths, units and laser-reference uncertainty. Excited-state assignments, absolute radiative lifetimes and the wider Neon research package still require their own sources and review. Values in this table must not be interpreted as a universal Neon frequency.\n",
+  "bodyHash": "699959a4a478a6990dd0c91260f92dc25e523a6013ceff61e5e6a9da574279fe",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000300",
+      "title": "Strong Lines of Neon (Ne)",
+      "url": "https://physics.nist.gov/PhysRefData/Handbook/Tables/neontable2.htm",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "PRIMARY-REFERENCE",
+      "retrieved": "2026-09-09",
+      "verification_status": "SELECTED-CLAIMS-CHECKED-AGAINST-PRIMARY-PAGE",
+      "scope": "Selected Ne I wavelengths and the air/vacuum column heading only"
+    },
+    {
+      "source_id": "SRC-000301",
+      "title": "CIPM Recommendation 2 (2007): On the value and uncertainty of unstabilised He-Ne lasers",
+      "url": "https://www.bipm.org/en/committees/ci/cipm/96-2007/resolution-2",
+      "organization": "Bureau International des Poids et Mesures",
+      "source_type": "PRIMARY-REFERENCE",
+      "retrieved": "2026-09-09",
+      "verification_status": "SELECTED-CLAIMS-CHECKED-AGAINST-PRIMARY-PAGE",
+      "scope": "633 nm unstabilised single-transition He-Ne laser vacuum reference and relative standard uncertainty"
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 2
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

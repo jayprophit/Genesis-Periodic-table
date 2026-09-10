@@ -5,8 +5,8 @@
   "title": "0009 — Fluorine — F",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "# 0009 — Fluorine — F\n\n```yaml\nmat_id: MAT:0009\nrecord_name: Fluorine\nsymbol: F\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 9\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0009\nlegacy_name: Fluorine\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n  - MAT:0006\n  - MAT:0007\n  - MAT:0008\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0008\n0008-Oxygen-O\n```\n\nCurrent:\n\n```text\nMAT:0009\n0009-Fluorine-F\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                           | Value           |\n| ---------------------------------- | --------------- |\n| Element                            | Fluorine        |\n| Symbol                             | F               |\n| Atomic number                      | 9               |\n| Protons                            | 9               |\n| Neutral electrons                  | 9               |\n| Period                             | 2               |\n| Group                              | 17              |\n| Block                              | p               |\n| Ground configuration               | 1s²2s²2p⁵       |\n| Ground level                       | ²P°₃/₂          |\n| Standard atomic weight             | 18.998403163(6) |\n| Stable isotope                     | ¹⁹F             |\n| Ordinary elemental molecular state | F₂              |\n| State near 20 °C                   | gas             |\n| Common compound oxidation state    | −1              |\n\nPrimary sources:\n\n```text\nSRC-000157\nSRC-000158\nSRC-000159\nSRC-000160\nSRC-000161\n```\n\n---\n\n# 2. Second-Period Electronic Progression\n\nThe sequence now reaches:\n\n$$\n\\mathrm{O}:2p^4\n$$\n\n$$\n\\mathrm{F}:2p^5\n$$\n\nFluorine requires one additional electron to reach the closed-shell configuration:\n\n$$\n2p^6\n$$\n\ncorresponding to the Neon-like valence shell.\n\nThus Fluorine becomes MAT's principal second-period example of:\n\n```text\nONE-ELECTRON-BELOW-CLOSED-SHELL\n```\n\n---\n\n# 3. Atomic Ground State\n\nNeutral atomic Fluorine:\n\n$$\n1s^22s^22p^5\n$$\n\nGround level:\n\n$$\n{}^2P^\\circ_{3/2}\n$$\n\nThe neutral atom is therefore open-shell.\n\nCanonical state:\n\n```text\nMAT:0009:ATOM:F\n```\n\n---\n\n# 4. First Ionisation\n\n$$\nF\\rightarrow F^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0009:ION:F+1\n```\n\n---\n\n# 5. Ionisation Ladder\n\nNIST ASD v5.12 gives:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\n$$\nE_{I2}\n=\n34.97081\\pm0.00012\\ {\\rm eV}\n$$\n\n$$\nE_{I3}\n=\n[62.70798]\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I4}\n=\n[87.175]\\pm0.017\\ {\\rm eV}\n$$\n\n$$\nE_{I5}\n=\n[114.249]\\pm0.006\\ {\\rm eV}\n$$\n\n$$\nE_{I6}\n=\n157.16311\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I7}\n=\n185.1868\\pm0.0006\\ {\\rm eV}\n$$\n\n$$\nE_{I8}\n=\n(953.8983)\\pm0.0003\\ {\\rm eV}\n$$\n\n$$\nE_{I9}\n=\n(1103.1175302)\\pm0.0000019\\ {\\rm eV}\n$$\n\nSquare brackets and parentheses are retained as source evaluation qualifiers.\n\nCanonical states:\n\n```text\nMAT:0009:ATOM:F\n\nMAT:0009:ION:F+1\nMAT:0009:ION:F+2\nMAT:0009:ION:F+3\nMAT:0009:ION:F+4\nMAT:0009:ION:F+5\nMAT:0009:ION:F+6\nMAT:0009:ION:F+7\nMAT:0009:ION:F+8\nMAT:0009:ION:F+9\n```\n\n---\n\n# 6. Electron Affinity\n\nSelected NIST WebBook determination:\n\n$$\nEA(F)\n=\n3.401191\\pm0.000026\\ {\\rm eV}\n$$\n\nElectron attachment:\n\n$$\nF+e^-\n\\rightarrow\nF^-\n$$\n\nCanonical ion:\n\n```text\nMAT:0009:ION:F-1\n```\n\nThe resulting electron configuration is Neon-like:\n\n$$\n1s^22s^22p^6\n$$\n\n---\n\n# 7. Electron Affinity Versus Electronegativity\n\nThese are related but different concepts.\n\nElectron affinity concerns a process such as:\n\n$$\nF(g)+e^-\\rightarrow F^-(g)\n$$\n\nwhereas electronegativity describes the tendency of an atom in a bonded environment to attract electron density.\n\nTherefore:\n\n$$\n\\boxed{\nEA\n\\neq\n\\chi\n}\n$$\n\nMAT stores them in separate namespaces.\n\n---\n\n# 8. Electronegativity\n\nPauling electronegativity:\n\n$$\n\\chi_F=3.98\n$$\n\nFluorine is the highest-valued element on the conventional Pauling scale.\n\nThis produces an important MAT electronic coordinate:\n\n```text\nSTRONG-BOND-POLARIZATION\n```\n\nbut does not mean every bond to Fluorine is purely ionic.\n\n---\n\n# 9. Central Fluorine Principle\n\nThe strongest functional effect of Fluorine may occur through changing another material's electronic structure.\n\nGeneral pattern:\n\n$$\nX\n\\rightarrow\nX-F\n$$\n\ncan change:\n\n```text\ncharge distribution\nbond polarity\nformal oxidation state\nsurface energy\nchemical stability\nion transport\nelectronic structure\nmolecular conformation\nreaction pathway\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{small compositional addition}\n\\rightarrow\n\\text{large functional change}\n}\n$$\n\nis a legitimate MAT design relationship.\n\n---\n\n# 10. Natural Isotope Simplicity\n\nNatural Fluorine has one stable isotope:\n\n$$\n{}^{19}F\n$$\n\nRepresentative NIST isotopic composition:\n\n$$\n1\n$$\n\nThus standard terrestrial Fluorine is effectively monoisotopic in the conventional atomic-weight treatment.\n\n---\n\n# 11. Fluorine-19\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-19\n```\n\nRelative atomic mass:\n\n$$\n18.99840316273(92)\\ u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac12^+\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nNatural isotopic composition:\n\n$$\n1\n$$\n\nImportant applications:\n\n```text\n19F NMR\nMRI/MR spectroscopy of fluorinated systems\nmaterials characterization\nreaction tracing\nmolecular imaging research\n```\n\n---\n\n# 12. Fluorine-19 NMR\n\n¹⁹F combines:\n\n```text\nspin = 1/2\nnatural abundance ≈ 100%\nhigh magnetic sensitivity\nwide chemical-shift range\n```\n\nThis makes it an unusually useful magnetic-resonance nucleus.\n\nMAT rule:\n\n```text\nONE STABLE ISOTOPE\n```\n\ndoes not imply:\n\n```text\nLOW SPECTROSCOPIC INFORMATION\n```\n\n---\n\n# 13. Fluorine-18\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-18\n```\n\nRelative atomic mass:\n\n$$\n18.00093733(50)\\ u\n$$\n\nPrincipal decay family:\n\n```text\nBETA-PLUS\n+\nELECTRON-CAPTURE\n```\n\nDaughter:\n\n```text\nMAT:0008:ISO:O-18\n```\n\nImportant use:\n\n```text\nPOSITRON-EMISSION-TOMOGRAPHY\n```\n\nA modern evaluated half-life is approximately:\n\n$$\n109.7\\ {\\rm min}\n$$\n\nExact adopted decay constants and branch fractions belong in the isotope-child file.\n\n---\n\n# 14. Diagnostic Versus Power Isotope\n\n¹⁸F releases nuclear decay energy.\n\nHowever its approximately 110-minute half-life makes it unsuitable for long-duration radioisotope power.\n\nMAT therefore separates:\n\n```text\nDECAY ENERGY          = PRESENT\nMEDICAL UTILITY       = VERY HIGH\nLONG-TERM POWER       = VERY LOW\nLONG-TERM STORAGE     = VERY LOW\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{radioactive}\n\\neq\n\\text{useful radioisotope power source}\n}\n$$\n\n---\n\n# 15. Fluorine Isotope Family\n\nThe current NIST atomic-mass table spans:\n\n$$\n{}^{14}F\n$$\n\nthrough:\n\n$$\n{}^{31}F\n$$\n\nin its listed dataset.\n\nOnly ¹⁹F is stable.\n\nOther entries include:\n\n```text\nproton-unbound states\nbeta-plus emitters\nbeta-minus emitters\nbeta-delayed neutron emitters\nneutron-rich nuclei\nestimated masses\n```\n\nMass-table presence alone does not define bound-state stability.\n\n---\n\n# 16. Atomic Fluorine\n\nAtomic Fluorine:\n\n$$\n2p^5\n$$\n\ncontains one unpaired electron.\n\nTherefore isolated neutral F is:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\nHIGHLY REACTIVE\n```\n\nBut ordinary elemental Fluorine is principally molecular:\n\n$$\nF_2\n$$\n\nThus:\n\n$$\n\\boxed{\nF\n\\neq\nF_2\n}\n$$\n\n---\n\n# 17. Molecular Fluorine\n\nCanonical molecule:\n\n```text\nMAT:0009:MOL:F2\n```\n\nGround electronic state:\n\n$$\nX\\,{}^1\\Sigma_g^+\n$$\n\nGeometry:\n\n```text\nLINEAR\n```\n\nEquilibrium bond distance:\n\n$$\nr_e\\approx1.412\\ {\\rm \\AA}\n$$\n\nRepresentative vibrational constant:\n\n$$\n\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\n$$\n\nRepresentative equilibrium rotational constant:\n\n$$\nB_e\\approx0.8893\\ {\\rm cm^{-1}}\n$$\n\n---\n\n# 18. Atomic Versus Molecular Magnetism\n\nAtomic F:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\n```\n\nGround-state \\(F_2\\):\n\n```text\nCLOSED-SHELL\nSINGLET\nDIAMAGNETIC\n```\n\nTherefore:\n\n$$\n\\boxed{\nM_{F({\\rm atom})}\n\\neq\nM_{F_2({\\rm molecule})}\n}\n$$\n\nAgain, assembly changes magnetic behavior without changing elemental identity.\n\n---\n\n# 19. Frequency Architecture\n\nThere is no universal Fluorine frequency.\n\nSeparate mechanisms include:\n\n```text\nF I atomic electronic transitions\nF II ionic transitions\nF2 molecular vibration\nF2 molecular rotation\nF2 electronic transitions\n19F NMR\nHF vibration\nC-F molecular vibrations\nsolid fluoride phonons\nplasma emission\n```\n\nRequired MAT rule:\n\n```text\nNO UNIVERSAL FLUORINE FREQUENCY\n```\n\n---\n\n# 20. F–F Bond Counterexample\n\nRSC's representative bond-enthalpy table gives approximately:\n\n$$\nD(F-F)\\sim155\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nwhile representative heteroatomic bond enthalpies include:\n\n$$\nH-F\\sim565\\ {\\rm kJ\\,mol^{-1}}\n$$\n\n$$\nC-F\\sim485\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nThese are tabulated bond-enthalpy references, not universal exact dissociation energies for every molecular environment.\n\nThe important result is:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{extreme reactant bond strength}\n}\n$$\n\n---\n\n# 21. Full Reaction-Energy Principle\n\nFluorination cannot be understood by examining only the F–F bond.\n\nA reaction depends on:\n\n$$\n\\Delta E\n\\sim\n\\sum E_{\\rm bonds\\ broken}\n-\n\\sum E_{\\rm bonds\\ formed}\n$$\n\nplus:\n\n```text\nentropy\nphase\nsolvation\nsurface energy\nactivation barriers\nelectronic-state effects\n```\n\nMAT therefore evaluates:\n\n```text\nBEFORE STATE\n+\nPATH\n+\nAFTER STATE\n```\n\nrather than assigning reactivity from one bond.\n\n---\n\n# 22. Physical State\n\nNear ordinary conditions, elemental Fluorine is a very pale yellow reactive gas.\n\nRepresentative RSC phase temperatures:\n\n$$\nT_m=53.48\\ {\\rm K}\n$$\n\n$$\nT_b=85.04\\ {\\rm K}\n$$\n\nState path:\n\n$$\nF_2(g)\n\\rightarrow\nF_2(l)\n\\rightarrow\nF_2(s)\n$$\n\nLow temperature does not automatically mean chemical inertness.\n\n---\n\n# 23. Oxidation-State Architecture\n\nElemental:\n\n$$\nF_2\n$$\n\nhas formal oxidation state:\n\n$$\n0\n$$\n\nIn ordinary compounds Fluorine is assigned:\n\n$$\n\\boxed{-1}\n$$\n\nBecause Fluorine is the most electronegative conventional element, it does not take a positive oxidation state in normal compound formalism.\n\nThis makes Fluorine an unusually clean oxidation-state anchor.\n\n---\n\n# 24. Hydrogen Relationship\n\nResolved parent relationship:\n\n```text\nMAT:0001\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nMAT:CMP:HF\n```\n\nMolecular HF is linear.\n\nImportant relationship classes:\n\n```text\nchemical bonding\nacid-base chemistry\nhydrogen bonding\nmineral chemistry\nsurface processing\nsilica/glass chemistry\nspectroscopy\n```\n\nHF properties remain compound-specific.\n\n---\n\n# 25. HF State Dependence\n\nMAT must separate:\n\n```text\nHF(g)\nanhydrous HF(l)\nconcentrated HF solutions\ndilute aqueous fluoride/HF systems\nfluoride salts\n```\n\nbecause:\n\n$$\n\\boxed{\n\\text{same elemental pair}\n+\n\\text{different environment}\n=\n\\text{different chemistry}\n}\n$$\n\n---\n\n# 26. Silicon / Glass Relationship\n\nFuture parent relationship:\n\n```text\nMAT:0009\n↔\nMAT:0014\n```\n\nTarget status:\n\n```text\nRESERVED-PENDING-SILICON\n```\n\nImportant Si–F products include:\n\n```text\nSiF4\nfluorosilicate species\nsurface-bound Si-F states\n```\n\nThe selective reactivity of HF/fluoride chemistry with silica creates a major:\n\n```text\nCHEMISTRY\n→\nMATERIAL-PROCESSING\n```\n\nrelationship.\n\n---\n\n# 27. Lithium Relationship\n\nResolved:\n\n```text\nMAT:0003\n↔\nMAT:0009\n```\n\nImportant material:\n\n```text\nMAT:CMP:LiF\n```\n\nRelationship classes:\n\n```text\nionic solid\nbattery interphase\nmolten salt\nelectrochemical material\noptical/ceramic material\n```\n\n---\n\n# 28. FLiBe Relationship Closure\n\nEarlier MAT relationships contained:\n\n```text\nLi\n+\nBe\n+\nfuture F\n```\n\nfor FLiBe-type salts.\n\nFluorine now resolves the parent-element triad:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0009 Fluorine\n```\n\nRepresentative components:\n\n$$\nLiF+BeF_2\n$$\n\nThis becomes a resolved three-parent materials relationship.\n\nSpecific salt compositions and thermophysical properties remain separate material records.\n\n---\n\n# 29. Boron Relationship\n\nResolved:\n\n```text\nMAT:0005\n↔\nMAT:0009\n```\n\nImportant species:\n\n```text\nBF3\nBF4-\nboron fluorides\nfluoroborate families\n```\n\nBF₃:\n\n```text\nTRIGONAL-PLANAR\n```\n\napproximately:\n\n$$\n120^\\circ\n$$\n\nIt is a classic Lewis-acid system.\n\n---\n\n# 30. Carbon Relationship\n\nResolved:\n\n```text\nMAT:0006\n↔\nMAT:0009\n```\n\nImportant families include:\n\n```text\nC-F bonds\nfluorocarbons\nfluoropolymers\nfluorinated pharmaceuticals\nsurface fluorination\nfluorinated electrolytes\n```\n\nMajor material example:\n\n$$\n(-CF_2-CF_2-)_n\n$$\n\nor PTFE.\n\n---\n\n# 31. PTFE / Fluoropolymer Architecture\n\nPTFE and related fluoropolymers demonstrate:\n\n```text\nstrong C-F bonding\nlow surface energy\nchemical resistance\nelectrical insulation\ndifferent wetting behavior\n```\n\nThese are polymer/material properties.\n\nThey are not intrinsic bulk properties of elemental Fluorine.\n\n---\n\n# 32. Surface Fluorination\n\nA thin fluorinated surface layer can change:\n\n```text\nwetting\nadhesion\nsurface energy\nchemical compatibility\nelectrical behavior\nbiological interaction\n```\n\nwithout changing most of the object's bulk composition.\n\nCore rule:\n\n$$\n\\boxed{\n\\text{surface chemistry}\n\\neq\n\\text{bulk chemistry}\n}\n$$\n\n---\n\n# 33. Nitrogen Relationship\n\nResolved:\n\n```text\nMAT:0007\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nNF3\n```\n\nApplications can include electronics-manufacturing and plasma-processing chemistry.\n\nThe compound itself is not equivalent to atomic F or F₂.\n\n---\n\n# 34. Oxygen Relationship\n\nResolved:\n\n```text\nMAT:0008\n↔\nMAT:0009\n```\n\nImportant oxygen fluorides include:\n\n```text\nOF2\nO2F2\n```\n\nThese provide a valuable formal-oxidation-state exception.\n\nBecause F is more electronegative than O, Oxygen can receive positive formal oxidation states in Oxygen–Fluorine compounds.\n\nTherefore:\n\n$$\n\\boxed{\nO\\approx-2\n}\n$$\n\nis not universal.\n\n---\n\n# 35. Relative Electronegativity Principle\n\nFormal oxidation assignment depends on the relative electronegativities of bonded atoms.\n\nThus:\n\n```text\nO-H\n```\n\nand:\n\n```text\nO-F\n```\n\ndo not assign the same formal oxidation sign to Oxygen.\n\nMAT therefore avoids element-wide oxidation-state defaults when compound context changes the assignment.\n\n---\n\n# 36. Semiconductor Plasma Processing\n\nFluorine-containing precursor families include:\n\n```text\nCF4\nNF3\nSF6\nother fluorocarbons\n```\n\nPlasma excitation can produce reactive species including:\n\n```text\nF radicals\nmolecular radicals\npositive ions\nnegative ions\nexcited fragments\n```\n\nGeneral transformation:\n\n$$\n\\boxed{\n\\text{stable precursor}\n+\n\\text{plasma energy}\n\\rightarrow\n\\text{reactive processing state}\n}\n$$\n\n---\n\n# 37. Silicon Etching Architecture\n\nRepresentative path:\n\n```text\nSi-containing surface\n+\nactivated F chemistry\n→\nvolatile Si-F products\n→\nmaterial removal\n```\n\nThe complete process depends on:\n\n```text\nprecursor\nplasma power\npressure\nsurface material\ntemperature\nion energy\nradical flux\nmask chemistry\nreactor geometry\n```\n\nMAT stores this as process/environment data rather than as an intrinsic elemental property.\n\n---\n\n# 38. Nuclear-Processing Relationship\n\nFuture relationship:\n\n```text\nMAT:0009\n↔\nMAT:0092 Uranium\n```\n\nImportant compound:\n\n```text\nUF6\n```\n\nIts volatility enables processing of Uranium in molecular form.\n\nCritical distinction:\n\n```text\nFLUORINE\n=\nPROCESS-ENABLING CHEMISTRY\n```\n\nnot:\n\n```text\nFLUORINE\n=\nURANIUM NUCLEAR ENERGY SOURCE\n```\n\nNo operational enrichment or device parameters belong in the Fluorine element record.\n\n---\n\n# 39. High Oxidation-State Stabilisation\n\nStrongly electronegative Fluorine ligands can stabilize high formal oxidation states in other elements.\n\nFuture examples include families associated with:\n\n```text\nSF6\nUF6\nPt fluorides\ntransition-metal fluorides\n```\n\nMAT principle:\n\n$$\n\\boxed{\n\\text{ligand identity}\n\\rightarrow\n\\text{accessible electronic/oxidation state}\n}\n$$\n\n---\n\n# 40. Noble-Gas Chemistry Preview\n\nFuture Xenon relationships include:\n\n```text\nXeF2\nXeF4\nXeF6\n```\n\nThese demonstrate:\n\n$$\n\\boxed{\n\\text{chemical inertness}\n\\neq\n\\text{absolute impossibility of compound formation}\n}\n$$\n\nThe relationship remains:\n\n```text\nRESERVED-PENDING-XENON\n```\n\n---\n\n# 41. Coordination Geometry Generator\n\nFluorine participates in diverse geometries depending on the central atom.\n\nExamples:\n\n```text\nHF   → linear\nBF3  → trigonal planar\nCF4  → tetrahedral\nSF6  → octahedral\nXeF2 → linear\nXeF4 → square planar\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{Fluorine ligand}\n\\neq\n\\text{one universal geometry}\n}\n$$\n\nGeometry emerges from the whole electronic structure.\n\n---\n\n# 42. Fluoride Ion\n\nCanonical object:\n\n```text\nMAT:0009:ION:F-1\n```\n\nElectronic configuration:\n\n$$\n1s^22s^22p^6\n$$\n\nFluoride is not merely the endpoint of electron capture.\n\nIn suitable solids it may be a mobile charge carrier.\n\n---\n\n# 43. Fluoride-Ion Conduction\n\nGeneral transport:\n\n$$\nF^-\n\\rightarrow\nF^-\n$$\n\nbetween lattice sites.\n\nCandidate material families include:\n\n```text\nalkaline-earth fluorides\nrare-earth fluorides\nfluorite-structure materials\nmixed fluorides\nfluoride solid electrolytes\n```\n\nState variables include:\n\n```text\nvacancies\ninterstitials\ndopants\ntemperature\ncrystal phase\ngrain boundaries\ndefect concentration\n```\n\nThis adds another MAT mobile-ion family:\n\n```text\nH+\nLi+\nO2-\nF-\n```\n\n---\n\n# 44. Battery / Electrochemical Branch\n\nFluorine occurs in:\n\n```text\nelectrolyte salts\nsolid electrolytes\ninterphases\nfluorinated solvents/additives\nmetal fluorides\nconversion electrodes\nLiF-rich surface layers\n```\n\nStrong bonding can sometimes improve stability.\n\nBut:\n\n$$\n\\boxed{\n\\text{high stability}\n\\not\\Rightarrow\n\\text{easy reversibility}\n}\n$$\n\nThis creates a materials-design trade-off.\n\n---\n\n# 45. Organic Molecular Design\n\nSubstitution of H or another group by F can change:\n\n```text\ndipole distribution\nmetabolic stability\nconformation\nlipophilicity\nacidity/basicity\nprotein binding\nreaction selectivity\n```\n\nThe effect is molecular-context dependent.\n\nTherefore:\n\n$$\n\\boxed{\n\\text{single-atom substitution}\n\\rightarrow\n\\text{potentially large molecular-function change}\n}\n$$\n\nwithout implying that fluorination always improves a molecule.\n\n---\n\n# 46. Biological State Separation\n\nElemental F₂:\n\n```text\nHIGHLY REACTIVE\nHIGHLY HAZARDOUS\nNO NORMAL BIOLOGICAL ROLE\n```\n\nFluoride ion in minerals/biological systems:\n\n```text\nCONTEXT-DEPENDENT\nDOSE-DEPENDENT\nCHEMICAL-FORM-DEPENDENT\n```\n\nOrganofluorines:\n\n```text\nMOLECULE-SPECIFIC\n```\n\nTherefore there is no scientifically useful scalar:\n\n```text\nBIOLOGICAL VALUE OF FLUORINE\n```\n\n---\n\n# 47. Environmental State Separation\n\nElemental F₂ does not persist as a major free natural reservoir because of its reactivity.\n\nNatural Fluorine occurs largely as fluoride-containing minerals.\n\nImportant examples:\n\n```text\nfluorite\nfluorapatite\ncryolite\nother fluoride minerals\n```\n\nPersistence of synthetic fluorinated compounds must be evaluated compound by compound.\n\nElemental electronegativity does not by itself determine environmental persistence.\n\n---\n\n# 48. Elemental-Fluorine Production Principle\n\nThe stable natural chemical state is generally fluoride, not free F₂.\n\nProducing F₂ therefore requires external energy.\n\nHistorical/industrial electrochemical concept:\n\n$$\nF^-\n\\xrightarrow{\\rm electrical\\ energy}\nF_2\n$$\n\nHenri Moissan isolated elemental Fluorine in 1886 through electrolysis of a fluoride/HF system.\n\nThis is a clean MAT example of:\n\n$$\n\\boxed{\n\\text{external energy}\n\\rightarrow\n\\text{less thermodynamically favoured elemental state}\n}\n$$\n\nDetailed industrial operating instructions belong outside the elemental reference record.\n\n---\n\n# 49. Materials Compatibility\n\nMechanical strength alone does not predict compatibility with Fluorine environments.\n\nRelevant variables include:\n\n```text\nsurface state\npassivation\ntemperature\npressure\nF2 concentration\nHF exposure\nwater content\nmaterial composition\ntime\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{mechanical strength}\n\\neq\n\\text{chemical compatibility}\n}\n$$\n\n---\n\n# 50. Causali E — Electron Capture\n\nInitial state:\n\n$$\nB=F\n$$\n\nIntervention:\n\n$$\nA=e^-\n$$\n\nCandidate state:\n\n$$\nC=F^-\n$$\n\nThis yields a closed-shell anion.\n\n---\n\n# 51. Causali E — Surface Fluorination\n\nInitial material:\n\n$$\nS_0=M\n$$\n\nIntervention:\n\n```text\nfluorination process\n```\n\nCandidate surface:\n\n$$\nC=M-F_{\\rm surface}\n$$\n\nPotential changed outputs:\n\n```text\nsurface energy\nwetting\nchemical resistance\nelectronic structure\nadhesion\n```\n\nBulk composition may remain largely unchanged.\n\n---\n\n# 52. Causali E — Plasma Processing\n\nInitial state:\n\n```text\nstable fluorinated precursor\n+\nsolid surface\n```\n\nEnvironment:\n\n```text\nplasma\nelectric field\nelectron-energy distribution\npressure\n```\n\nCandidate reactive state:\n\n```text\nF radical / ion / excited fragment\n```\n\nCandidate material result:\n\n```text\nsurface reaction\nvolatile product\netching\ndeposition modification\ncleaning\n```\n\n---\n\n# 53. Causali E — Isotope Decay\n\nInitial state:\n\n$$\n{}^{18}F\n$$\n\nTime evolution:\n\n$$\n{}^{18}F\n\\rightarrow\n{}^{18}O\n+\ne^+\n+\n\\nu_e\n$$\n\nThis provides:\n\n```text\nknown parent\nknown daughter\nmeasurable half-life\ndetectable annihilation photons\n```\n\nand therefore a particularly strong measured causal path.\n\n---\n\n# 54. Main Fluorine Result\n\nFluorine introduces a distinct MAT design principle:\n\n$$\n\\boxed{\n\\text{an element can exert its greatest influence by changing}\n\\newline\n\\text{the electronic state of another material}\n}\n$$\n\nIt also reinforces:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{strong elemental bond}\n}\n$$\n\nand:\n\n$$\n\\boxed{\n\\text{bond stability}\n\\neq\n\\text{reversibility}\n}\n$$\n\nThese three rules make Fluorine a major materials-design node.\n\n---\n\n# 55. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  molecular_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  NMR_architecture: \"PASS\"\n  fluoride_material_architecture: \"PASS\"\n  mobile_ion_architecture: \"PASS\"\n  surface_architecture: \"PASS\"\n  polymer_architecture: \"PASS\"\n  process_architecture: \"PASS\"\n  oxidation_state_architecture: \"PASS\"\n  environmental_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe F₂ molecular layer is consistent with the NIST diatomic compilation: the ground state is \\(X\\,^1\\Sigma_g^+\\); the legacy values \\(r_e\\approx1.412\\) Å, \\(\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\\), and \\(B_e\\approx0.8893\\ {\\rm cm^{-1}}\\) are appropriate reference constants. The RSC compilation also supports the useful comparison **F–F ≈155, C–F ≈485 and H–F ≈565 kJ/mol**, plus Pauling electronegativity **3.98**. ([NIST WebBook][2])\n\nRSC gives elemental F₂ melting at **53.48 K** and boiling at **85.04 K**. It also credits Henri Moissan with successful isolation in **1886**, following failed attempts by Davy, Gore and others; this will become important in the later People & Intellectual Lineage file. ([Periodic Table][3])\n",
-  "bodyHash": "2bdfa3aec00eb54fc1d528d63d2145670cdc125e9f40a0e976c4a00931082059",
+  "body": "# 0009 — Fluorine — F\n\n```yaml\nmat_id: MAT:0009\nrecord_name: Fluorine\nsymbol: F\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 9\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0009\nlegacy_name: Fluorine\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n  - MAT:0006\n  - MAT:0007\n  - MAT:0008\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0008\n0008-Oxygen-O\n```\n\nCurrent:\n\n```text\nMAT:0009\n0009-Fluorine-F\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                           | Value           |\n| ---------------------------------- | --------------- |\n| Element                            | Fluorine        |\n| Symbol                             | F               |\n| Atomic number                      | 9               |\n| Protons                            | 9               |\n| Neutral electrons                  | 9               |\n| Period                             | 2               |\n| Group                              | 17              |\n| Block                              | p               |\n| Ground configuration               | 1s²2s²2p⁵       |\n| Ground level                       | ²P°₃/₂          |\n| Standard atomic weight             | 18.998403163(6) |\n| Stable isotope                     | ¹⁹F             |\n| Ordinary elemental molecular state | F₂              |\n| State near 20 °C                   | gas             |\n| Common compound oxidation state    | −1              |\n\nPrimary sources:\n\n```text\nSRC-000157\nSRC-000158\nSRC-000159\nSRC-000160\nSRC-000161\n```\n\n---\n\n# 2. Second-Period Electronic Progression\n\nThe sequence now reaches:\n\n$$\n\\mathrm{O}:2p^4\n$$\n\n$$\n\\mathrm{F}:2p^5\n$$\n\nFluorine requires one additional electron to reach the closed-shell configuration:\n\n$$\n2p^6\n$$\n\ncorresponding to the Neon-like valence shell.\n\nThus Fluorine becomes MAT's principal second-period example of:\n\n```text\nONE-ELECTRON-BELOW-CLOSED-SHELL\n```\n\n---\n\n# 3. Atomic Ground State\n\nNeutral atomic Fluorine:\n\n$$\n1s^22s^22p^5\n$$\n\nGround level:\n\n$$\n{}^2P^\\circ_{3/2}\n$$\n\nThe neutral atom is therefore open-shell.\n\nCanonical state:\n\n```text\nMAT:0009:ATOM:F\n```\n\n---\n\n# 4. First Ionisation\n\n$$\nF\\rightarrow F^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0009:ION:F+1\n```\n\n---\n\n# 5. Ionisation Ladder\n\nNIST ASD v5.12 gives:\n\n$$\nE_{I1}\n=\n17.42282\\pm0.00005\\ {\\rm eV}\n$$\n\n$$\nE_{I2}\n=\n34.97081\\pm0.00012\\ {\\rm eV}\n$$\n\n$$\nE_{I3}\n=\n[62.70798]\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I4}\n=\n[87.175]\\pm0.017\\ {\\rm eV}\n$$\n\n$$\nE_{I5}\n=\n[114.249]\\pm0.006\\ {\\rm eV}\n$$\n\n$$\nE_{I6}\n=\n157.16311\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nE_{I7}\n=\n185.1868\\pm0.0006\\ {\\rm eV}\n$$\n\n$$\nE_{I8}\n=\n(953.8983)\\pm0.0003\\ {\\rm eV}\n$$\n\n$$\nE_{I9}\n=\n(1103.1175302)\\pm0.0000019\\ {\\rm eV}\n$$\n\nSquare brackets and parentheses are retained as source evaluation qualifiers.\n\nCanonical states:\n\n```text\nMAT:0009:ATOM:F\n\nMAT:0009:ION:F+1\nMAT:0009:ION:F+2\nMAT:0009:ION:F+3\nMAT:0009:ION:F+4\nMAT:0009:ION:F+5\nMAT:0009:ION:F+6\nMAT:0009:ION:F+7\nMAT:0009:ION:F+8\nMAT:0009:ION:F+9\n```\n\n---\n\n# 6. Electron Affinity\n\nSelected NIST WebBook determination:\n\n$$\nEA(F)\n=\n3.401191\\pm0.000026\\ {\\rm eV}\n$$\n\nElectron attachment:\n\n$$\nF+e^-\n\\rightarrow\nF^-\n$$\n\nCanonical ion:\n\n```text\nMAT:0009:ION:F-1\n```\n\nThe resulting electron configuration is Neon-like:\n\n$$\n1s^22s^22p^6\n$$\n\n---\n\n# 7. Electron Affinity Versus Electronegativity\n\nThese are related but different concepts.\n\nElectron affinity concerns a process such as:\n\n$$\nF(g)+e^-\\rightarrow F^-(g)\n$$\n\nwhereas electronegativity describes the tendency of an atom in a bonded environment to attract electron density.\n\nTherefore:\n\n$$\n\\boxed{\nEA\n\\neq\n\\chi\n}\n$$\n\nMAT stores them in separate namespaces.\n\n---\n\n# 8. Electronegativity\n\nPauling electronegativity:\n\n$$\n\\chi_F=3.98\n$$\n\nFluorine is the highest-valued element on the conventional Pauling scale.\n\nThis produces an important MAT electronic coordinate:\n\n```text\nSTRONG-BOND-POLARIZATION\n```\n\nbut does not mean every bond to Fluorine is purely ionic.\n\n---\n\n# 9. Central Fluorine Principle\n\nThe strongest functional effect of Fluorine may occur through changing another material's electronic structure.\n\nGeneral pattern:\n\n$$\nX\n\\rightarrow\nX-F\n$$\n\ncan change:\n\n```text\ncharge distribution\nbond polarity\nformal oxidation state\nsurface energy\nchemical stability\nion transport\nelectronic structure\nmolecular conformation\nreaction pathway\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{small compositional addition}\n\\rightarrow\n\\text{large functional change}\n}\n$$\n\nis a legitimate MAT design relationship.\n\n---\n\n# 10. Natural Isotope Simplicity\n\nNatural Fluorine has one stable isotope:\n\n$$\n{}^{19}F\n$$\n\nRepresentative NIST isotopic composition:\n\n$$\n1\n$$\n\nThus standard terrestrial Fluorine is effectively monoisotopic in the conventional atomic-weight treatment.\n\n---\n\n# 11. Fluorine-19\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-19\n```\n\nRelative atomic mass:\n\n$$\n18.99840316273(92)\\ u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nSpin/parity:\n\n$$\n\\frac12^+\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nNatural isotopic composition:\n\n$$\n1\n$$\n\nImportant applications:\n\n```text\n19F NMR\nMRI/MR spectroscopy of fluorinated systems\nmaterials characterization\nreaction tracing\nmolecular imaging research\n```\n\n---\n\n# 12. Fluorine-19 NMR\n\n¹⁹F combines:\n\n```text\nspin = 1/2\nnatural abundance ≈ 100%\nhigh magnetic sensitivity\nwide chemical-shift range\n```\n\nThis makes it an unusually useful magnetic-resonance nucleus.\n\nMAT rule:\n\n```text\nONE STABLE ISOTOPE\n```\n\ndoes not imply:\n\n```text\nLOW SPECTROSCOPIC INFORMATION\n```\n\n---\n\n# 13. Fluorine-18\n\nCanonical ID:\n\n```text\nMAT:0009:ISO:F-18\n```\n\nRelative atomic mass:\n\n$$\n18.00093733(50)\\ u\n$$\n\nPrincipal decay family:\n\n```text\nBETA-PLUS\n+\nELECTRON-CAPTURE\n```\n\nDaughter:\n\n```text\nMAT:0008:ISO:O-18\n```\n\nImportant use:\n\n```text\nPOSITRON-EMISSION-TOMOGRAPHY\n```\n\nA modern evaluated half-life is approximately:\n\n$$\n109.7\\ {\\rm min}\n$$\n\nExact adopted decay constants and branch fractions belong in the isotope-child file.\n\n---\n\n# 14. Diagnostic Versus Power Isotope\n\n¹⁸F releases nuclear decay energy.\n\nHowever its approximately 110-minute half-life makes it unsuitable for long-duration radioisotope power.\n\nMAT therefore separates:\n\n```text\nDECAY ENERGY          = PRESENT\nMEDICAL UTILITY       = VERY HIGH\nLONG-TERM POWER       = VERY LOW\nLONG-TERM STORAGE     = VERY LOW\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{radioactive}\n\\neq\n\\text{useful radioisotope power source}\n}\n$$\n\n---\n\n# 15. Fluorine Isotope Family\n\nThe current NIST atomic-mass table spans:\n\n$$\n{}^{14}F\n$$\n\nthrough:\n\n$$\n{}^{31}F\n$$\n\nin its listed dataset.\n\nOnly ¹⁹F is stable.\n\nOther entries include:\n\n```text\nproton-unbound states\nbeta-plus emitters\nbeta-minus emitters\nbeta-delayed neutron emitters\nneutron-rich nuclei\nestimated masses\n```\n\nMass-table presence alone does not define bound-state stability.\n\n---\n\n# 16. Atomic Fluorine\n\nAtomic Fluorine:\n\n$$\n2p^5\n$$\n\ncontains one unpaired electron.\n\nTherefore isolated neutral F is:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\nHIGHLY REACTIVE\n```\n\nBut ordinary elemental Fluorine is principally molecular:\n\n$$\nF_2\n$$\n\nThus:\n\n$$\n\\boxed{\nF\n\\neq\nF_2\n}\n$$\n\n---\n\n# 17. Molecular Fluorine\n\nCanonical molecule:\n\n```text\nMAT:0009:MOL:F2\n```\n\nGround electronic state:\n\n$$\nX\\,{}^1\\Sigma_g^+\n$$\n\nGeometry:\n\n```text\nLINEAR\n```\n\nEquilibrium bond distance:\n\n$$\nr_e\\approx1.412\\ {\\rm \\AA}\n$$\n\nRepresentative vibrational constant:\n\n$$\n\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\n$$\n\nRepresentative equilibrium rotational constant:\n\n$$\nB_e\\approx0.8893\\ {\\rm cm^{-1}}\n$$\n\n---\n\n# 18. Atomic Versus Molecular Magnetism\n\nAtomic F:\n\n```text\nOPEN-SHELL\nPARAMAGNETIC\n```\n\nGround-state \\(F_2\\):\n\n```text\nCLOSED-SHELL\nSINGLET\nDIAMAGNETIC\n```\n\nTherefore:\n\n$$\n\\boxed{\nM_{F({\\rm atom})}\n\\neq\nM_{F_2({\\rm molecule})}\n}\n$$\n\nAgain, assembly changes magnetic behavior without changing elemental identity.\n\n---\n\n# 19. Frequency Architecture\n\nThere is no universal Fluorine frequency.\n\nSeparate mechanisms include:\n\n```text\nF I atomic electronic transitions\nF II ionic transitions\nF2 molecular vibration\nF2 molecular rotation\nF2 electronic transitions\n19F NMR\nHF vibration\nC-F molecular vibrations\nsolid fluoride phonons\nplasma emission\n```\n\nRequired MAT rule:\n\n```text\nNO UNIVERSAL FLUORINE FREQUENCY\n```\n\n---\n\n# 20. F–F Bond Counterexample\n\nRSC's representative bond-enthalpy table gives approximately:\n\n$$\nD(F-F)\\sim155\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nwhile representative heteroatomic bond enthalpies include:\n\n$$\nH-F\\sim565\\ {\\rm kJ\\,mol^{-1}}\n$$\n\n$$\nC-F\\sim485\\ {\\rm kJ\\,mol^{-1}}\n$$\n\nThese are tabulated bond-enthalpy references, not universal exact dissociation energies for every molecular environment.\n\nThe important result is:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{extreme reactant bond strength}\n}\n$$\n\n---\n\n# 21. Full Reaction-Energy Principle\n\nFluorination cannot be understood by examining only the F–F bond.\n\nA reaction depends on:\n\n$$\n\\Delta E\n\\sim\n\\sum E_{\\rm bonds\\ broken}\n-\n\\sum E_{\\rm bonds\\ formed}\n$$\n\nplus:\n\n```text\nentropy\nphase\nsolvation\nsurface energy\nactivation barriers\nelectronic-state effects\n```\n\nMAT therefore evaluates:\n\n```text\nBEFORE STATE\n+\nPATH\n+\nAFTER STATE\n```\n\nrather than assigning reactivity from one bond.\n\n---\n\n# 22. Physical State\n\nNear ordinary conditions, elemental Fluorine is a very pale yellow reactive gas.\n\nRepresentative RSC phase temperatures:\n\n$$\nT_m=53.48\\ {\\rm K}\n$$\n\n$$\nT_b=85.04\\ {\\rm K}\n$$\n\nState path:\n\n$$\nF_2(g)\n\\rightarrow\nF_2(l)\n\\rightarrow\nF_2(s)\n$$\n\nLow temperature does not automatically mean chemical inertness.\n\n---\n\n# 23. Oxidation-State Architecture\n\nElemental:\n\n$$\nF_2\n$$\n\nhas formal oxidation state:\n\n$$\n0\n$$\n\nIn ordinary compounds Fluorine is assigned:\n\n$$\n\\boxed{-1}\n$$\n\nBecause Fluorine is the most electronegative conventional element, it does not take a positive oxidation state in normal compound formalism.\n\nThis makes Fluorine an unusually clean oxidation-state anchor.\n\n---\n\n# 24. Hydrogen Relationship\n\nResolved parent relationship:\n\n```text\nMAT:0001\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nMAT:CMP:HF\n```\n\nMolecular HF is linear.\n\nImportant relationship classes:\n\n```text\nchemical bonding\nacid-base chemistry\nhydrogen bonding\nmineral chemistry\nsurface processing\nsilica/glass chemistry\nspectroscopy\n```\n\nHF properties remain compound-specific.\n\n---\n\n# 25. HF State Dependence\n\nMAT must separate:\n\n```text\nHF(g)\nanhydrous HF(l)\nconcentrated HF solutions\ndilute aqueous fluoride/HF systems\nfluoride salts\n```\n\nbecause:\n\n$$\n\\boxed{\n\\text{same elemental pair}\n+\n\\text{different environment}\n=\n\\text{different chemistry}\n}\n$$\n\n---\n\n# 26. Silicon / Glass Relationship\n\nFuture parent relationship:\n\n```text\nMAT:0009\n↔\nMAT:0014\n```\n\nTarget status:\n\n```text\nRESERVED-PENDING-SILICON\n```\n\nImportant Si–F products include:\n\n```text\nSiF4\nfluorosilicate species\nsurface-bound Si-F states\n```\n\nThe selective reactivity of HF/fluoride chemistry with silica creates a major:\n\n```text\nCHEMISTRY\n→\nMATERIAL-PROCESSING\n```\n\nrelationship.\n\n---\n\n# 27. Lithium Relationship\n\nResolved:\n\n```text\nMAT:0003\n↔\nMAT:0009\n```\n\nImportant material:\n\n```text\nMAT:CMP:LiF\n```\n\nRelationship classes:\n\n```text\nionic solid\nbattery interphase\nmolten salt\nelectrochemical material\noptical/ceramic material\n```\n\n---\n\n# 28. FLiBe Relationship Closure\n\nEarlier MAT relationships contained:\n\n```text\nLi\n+\nBe\n+\nfuture F\n```\n\nfor FLiBe-type salts.\n\nFluorine now resolves the parent-element triad:\n\n```text\nMAT:0003 Lithium\nMAT:0004 Beryllium\nMAT:0009 Fluorine\n```\n\nRepresentative components:\n\n$$\nLiF+BeF_2\n$$\n\nThis becomes a resolved three-parent materials relationship.\n\nSpecific salt compositions and thermophysical properties remain separate material records.\n\n---\n\n# 29. Boron Relationship\n\nResolved:\n\n```text\nMAT:0005\n↔\nMAT:0009\n```\n\nImportant species:\n\n```text\nBF3\nBF4-\nboron fluorides\nfluoroborate families\n```\n\nBF₃:\n\n```text\nTRIGONAL-PLANAR\n```\n\napproximately:\n\n$$\n120^\\circ\n$$\n\nIt is a classic Lewis-acid system.\n\n---\n\n# 30. Carbon Relationship\n\nResolved:\n\n```text\nMAT:0006\n↔\nMAT:0009\n```\n\nImportant families include:\n\n```text\nC-F bonds\nfluorocarbons\nfluoropolymers\nfluorinated pharmaceuticals\nsurface fluorination\nfluorinated electrolytes\n```\n\nMajor material example:\n\n$$\n(-CF_2-CF_2-)_n\n$$\n\nor PTFE.\n\n---\n\n# 31. PTFE / Fluoropolymer Architecture\n\nPTFE and related fluoropolymers demonstrate:\n\n```text\nstrong C-F bonding\nlow surface energy\nchemical resistance\nelectrical insulation\ndifferent wetting behavior\n```\n\nThese are polymer/material properties.\n\nThey are not intrinsic bulk properties of elemental Fluorine.\n\n---\n\n# 32. Surface Fluorination\n\nA thin fluorinated surface layer can change:\n\n```text\nwetting\nadhesion\nsurface energy\nchemical compatibility\nelectrical behavior\nbiological interaction\n```\n\nwithout changing most of the object's bulk composition.\n\nCore rule:\n\n$$\n\\boxed{\n\\text{surface chemistry}\n\\neq\n\\text{bulk chemistry}\n}\n$$\n\n---\n\n# 33. Nitrogen Relationship\n\nResolved:\n\n```text\nMAT:0007\n↔\nMAT:0009\n```\n\nImportant compound:\n\n```text\nNF3\n```\n\nApplications can include electronics-manufacturing and plasma-processing chemistry.\n\nThe compound itself is not equivalent to atomic F or F₂.\n\n---\n\n# 34. Oxygen Relationship\n\nResolved:\n\n```text\nMAT:0008\n↔\nMAT:0009\n```\n\nImportant oxygen fluorides include:\n\n```text\nOF2\nO2F2\n```\n\nThese provide a valuable formal-oxidation-state exception.\n\nBecause F is more electronegative than O, Oxygen can receive positive formal oxidation states in Oxygen–Fluorine compounds.\n\nTherefore:\n\n$$\n\\boxed{\nO\\approx-2\n}\n$$\n\nis not universal.\n\n---\n\n# 35. Relative Electronegativity Principle\n\nFormal oxidation assignment depends on the relative electronegativities of bonded atoms.\n\nThus:\n\n```text\nO-H\n```\n\nand:\n\n```text\nO-F\n```\n\ndo not assign the same formal oxidation sign to Oxygen.\n\nMAT therefore avoids element-wide oxidation-state defaults when compound context changes the assignment.\n\n---\n\n# 36. Semiconductor Plasma Processing\n\nFluorine-containing precursor families include:\n\n```text\nCF4\nNF3\nSF6\nother fluorocarbons\n```\n\nPlasma excitation can produce reactive species including:\n\n```text\nF radicals\nmolecular radicals\npositive ions\nnegative ions\nexcited fragments\n```\n\nGeneral transformation:\n\n$$\n\\boxed{\n\\text{stable precursor}\n+\n\\text{plasma energy}\n\\rightarrow\n\\text{reactive processing state}\n}\n$$\n\n---\n\n# 37. Silicon Etching Architecture\n\nRepresentative path:\n\n```text\nSi-containing surface\n+\nactivated F chemistry\n→\nvolatile Si-F products\n→\nmaterial removal\n```\n\nThe complete process depends on:\n\n```text\nprecursor\nplasma power\npressure\nsurface material\ntemperature\nion energy\nradical flux\nmask chemistry\nreactor geometry\n```\n\nMAT stores this as process/environment data rather than as an intrinsic elemental property.\n\n---\n\n# 38. Nuclear-Processing Relationship\n\nFuture relationship:\n\n```text\nMAT:0009\n↔\nMAT:0092 Uranium\n```\n\nImportant compound:\n\n```text\nUF6\n```\n\nIts volatility enables processing of Uranium in molecular form.\n\nCritical distinction:\n\n```text\nFLUORINE\n=\nPROCESS-ENABLING CHEMISTRY\n```\n\nnot:\n\n```text\nFLUORINE\n=\nURANIUM NUCLEAR ENERGY SOURCE\n```\n\nNo operational enrichment or device parameters belong in the Fluorine element record.\n\n---\n\n# 39. High Oxidation-State Stabilisation\n\nStrongly electronegative Fluorine ligands can stabilize high formal oxidation states in other elements.\n\nFuture examples include families associated with:\n\n```text\nSF6\nUF6\nPt fluorides\ntransition-metal fluorides\n```\n\nMAT principle:\n\n$$\n\\boxed{\n\\text{ligand identity}\n\\rightarrow\n\\text{accessible electronic/oxidation state}\n}\n$$\n\n---\n\n# 40. Noble-Gas Chemistry Preview\n\nFuture Xenon relationships include:\n\n```text\nXeF2\nXeF4\nXeF6\n```\n\nThese demonstrate:\n\n$$\n\\boxed{\n\\text{chemical inertness}\n\\neq\n\\text{absolute impossibility of compound formation}\n}\n$$\n\nThe relationship remains:\n\n```text\nRESERVED-PENDING-XENON\n```\n\n---\n\n# 41. Coordination Geometry Generator\n\nFluorine participates in diverse geometries depending on the central atom.\n\nExamples:\n\n```text\nHF   → linear\nBF3  → trigonal planar\nCF4  → tetrahedral\nSF6  → octahedral\nXeF2 → linear\nXeF4 → square planar\n```\n\nTherefore:\n\n$$\n\\boxed{\n\\text{Fluorine ligand}\n\\neq\n\\text{one universal geometry}\n}\n$$\n\nGeometry emerges from the whole electronic structure.\n\n---\n\n# 42. Fluoride Ion\n\nCanonical object:\n\n```text\nMAT:0009:ION:F-1\n```\n\nElectronic configuration:\n\n$$\n1s^22s^22p^6\n$$\n\nFluoride is not merely the endpoint of electron capture.\n\nIn suitable solids it may be a mobile charge carrier.\n\n---\n\n# 43. Fluoride-Ion Conduction\n\nGeneral transport:\n\n$$\nF^-\n\\rightarrow\nF^-\n$$\n\nbetween lattice sites.\n\nCandidate material families include:\n\n```text\nalkaline-earth fluorides\nrare-earth fluorides\nfluorite-structure materials\nmixed fluorides\nfluoride solid electrolytes\n```\n\nState variables include:\n\n```text\nvacancies\ninterstitials\ndopants\ntemperature\ncrystal phase\ngrain boundaries\ndefect concentration\n```\n\nThis adds another MAT mobile-ion family:\n\n```text\nH+\nLi+\nO2-\nF-\n```\n\n---\n\n# 44. Battery / Electrochemical Branch\n\nFluorine occurs in:\n\n```text\nelectrolyte salts\nsolid electrolytes\ninterphases\nfluorinated solvents/additives\nmetal fluorides\nconversion electrodes\nLiF-rich surface layers\n```\n\nStrong bonding can sometimes improve stability.\n\nBut:\n\n$$\n\\boxed{\n\\text{high stability}\n\\not\\Rightarrow\n\\text{easy reversibility}\n}\n$$\n\nThis creates a materials-design trade-off.\n\n---\n\n# 45. Organic Molecular Design\n\nSubstitution of H or another group by F can change:\n\n```text\ndipole distribution\nmetabolic stability\nconformation\nlipophilicity\nacidity/basicity\nprotein binding\nreaction selectivity\n```\n\nThe effect is molecular-context dependent.\n\nTherefore:\n\n$$\n\\boxed{\n\\text{single-atom substitution}\n\\rightarrow\n\\text{potentially large molecular-function change}\n}\n$$\n\nwithout implying that fluorination always improves a molecule.\n\n---\n\n# 46. Biological State Separation\n\nElemental F₂:\n\n```text\nHIGHLY REACTIVE\nHIGHLY HAZARDOUS\nNO NORMAL BIOLOGICAL ROLE\n```\n\nFluoride ion in minerals/biological systems:\n\n```text\nCONTEXT-DEPENDENT\nDOSE-DEPENDENT\nCHEMICAL-FORM-DEPENDENT\n```\n\nOrganofluorines:\n\n```text\nMOLECULE-SPECIFIC\n```\n\nTherefore there is no scientifically useful scalar:\n\n```text\nBIOLOGICAL VALUE OF FLUORINE\n```\n\n---\n\n# 47. Environmental State Separation\n\nElemental F₂ does not persist as a major free natural reservoir because of its reactivity.\n\nNatural Fluorine occurs largely as fluoride-containing minerals.\n\nImportant examples:\n\n```text\nfluorite\nfluorapatite\ncryolite\nother fluoride minerals\n```\n\nPersistence of synthetic fluorinated compounds must be evaluated compound by compound.\n\nElemental electronegativity does not by itself determine environmental persistence.\n\n---\n\n# 48. Elemental-Fluorine Production Principle\n\nThe stable natural chemical state is generally fluoride, not free F₂.\n\nProducing F₂ therefore requires external energy.\n\nHistorical/industrial electrochemical concept:\n\n$$\nF^-\n\\xrightarrow{\\rm electrical\\ energy}\nF_2\n$$\n\nHenri Moissan isolated elemental Fluorine in 1886 through electrolysis of a fluoride/HF system.\n\nThis is a clean MAT example of:\n\n$$\n\\boxed{\n\\text{external energy}\n\\rightarrow\n\\text{less thermodynamically favoured elemental state}\n}\n$$\n\nDetailed industrial operating instructions belong outside the elemental reference record.\n\n---\n\n# 49. Materials Compatibility\n\nMechanical strength alone does not predict compatibility with Fluorine environments.\n\nRelevant variables include:\n\n```text\nsurface state\npassivation\ntemperature\npressure\nF2 concentration\nHF exposure\nwater content\nmaterial composition\ntime\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{mechanical strength}\n\\neq\n\\text{chemical compatibility}\n}\n$$\n\n---\n\n# 50. Causali E — Electron Capture\n\nInitial state:\n\n$$\nB=F\n$$\n\nIntervention:\n\n$$\nA=e^-\n$$\n\nCandidate state:\n\n$$\nC=F^-\n$$\n\nThis yields a closed-shell anion.\n\n---\n\n# 51. Causali E — Surface Fluorination\n\nInitial material:\n\n$$\nS_0=M\n$$\n\nIntervention:\n\n```text\nfluorination process\n```\n\nCandidate surface:\n\n$$\nC=M-F_{\\rm surface}\n$$\n\nPotential changed outputs:\n\n```text\nsurface energy\nwetting\nchemical resistance\nelectronic structure\nadhesion\n```\n\nBulk composition may remain largely unchanged.\n\n---\n\n# 52. Causali E — Plasma Processing\n\nInitial state:\n\n```text\nstable fluorinated precursor\n+\nsolid surface\n```\n\nEnvironment:\n\n```text\nplasma\nelectric field\nelectron-energy distribution\npressure\n```\n\nCandidate reactive state:\n\n```text\nF radical / ion / excited fragment\n```\n\nCandidate material result:\n\n```text\nsurface reaction\nvolatile product\netching\ndeposition modification\ncleaning\n```\n\n---\n\n# 53. Causali E — Isotope Decay\n\nInitial state:\n\n$$\n{}^{18}F\n$$\n\nTime evolution:\n\n$$\n{}^{18}F\n\\rightarrow\n{}^{18}O\n+\ne^+\n+\n\\nu_e\n$$\n\nThis provides:\n\n```text\nknown parent\nknown daughter\nmeasurable half-life\ndetectable annihilation photons\n```\n\nand therefore a particularly strong measured causal path.\n\n---\n\n# 54. Main Fluorine Result\n\nFluorine introduces a distinct MAT design principle:\n\n$$\n\\boxed{\n\\text{an element can exert its greatest influence by changing}\n\\newline\n\\text{the electronic state of another material}\n}\n$$\n\nIt also reinforces:\n\n$$\n\\boxed{\n\\text{extreme reactivity}\n\\neq\n\\text{strong elemental bond}\n}\n$$\n\nand:\n\n$$\n\\boxed{\n\\text{bond stability}\n\\neq\n\\text{reversibility}\n}\n$$\n\nThese three rules make Fluorine a major materials-design node.\n\n---\n\n# 55. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  molecular_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  NMR_architecture: \"PASS\"\n  fluoride_material_architecture: \"PASS\"\n  mobile_ion_architecture: \"PASS\"\n  surface_architecture: \"PASS\"\n  polymer_architecture: \"PASS\"\n  process_architecture: \"PASS\"\n  oxidation_state_architecture: \"PASS\"\n  environmental_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe F₂ molecular layer is consistent with the NIST diatomic compilation: the ground state is \\(X\\,^1\\Sigma_g^+\\); the legacy values \\(r_e\\approx1.412\\) Å, \\(\\omega_e\\approx916.93\\ {\\rm cm^{-1}}\\), and \\(B_e\\approx0.8893\\ {\\rm cm^{-1}}\\) are appropriate reference constants. The RSC compilation also supports the useful comparison **F–F ≈155, C–F ≈485 and H–F ≈565 kJ/mol**, plus Pauling electronegativity **3.98**. ([NIST WebBook][2])\n\nRSC gives elemental F₂ melting at **53.48 K** and boiling at **85.04 K**. It also credits Henri Moissan with successful isolation in **1886**, following failed attempts by Davy, Gore and others; this will become important in the later People & Intellectual Lineage file. ([Periodic Table][3])\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0009-Fluorine-F-Nuclear-Evaluation.md) provides 25 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "6d2e216c02ea3cb50829141052f3e4f814634509ae0ec40b6d961af87f717481",
   "header": {
     "mat_id": "MAT:0009",
     "record_name": "Fluorine",
@@ -1021,6 +1021,1660 @@
           "estimated_mass_requires_flag": true,
           "nuclear_semantics_require_evaluated_data": true
         }
+      }
+    },
+    {
+      "path": "records/0009-Fluorine-F/data/isotopes/0009-Fluorine-F-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0009:REG:NUBASE2020",
+        "record_id": "MAT:0009",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 13,
+            "Z": 9,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "13F",
+            "mass_excess": {
+              "value": 42030,
+              "unit": "keV",
+              "raw": "42030#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "500#",
+              "uncertainty": 500
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1/2+#",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "p ?",
+            "source_line": 109,
+            "raw_line": "013 0090   13F     42030#       500#                                                    1/2+#                          p ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-13",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:13:0"
+          },
+          {
+            "A": 14,
+            "Z": 9,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "14F",
+            "mass_excess": {
+              "value": 31960,
+              "unit": "keV",
+              "raw": "31960",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "40",
+              "uncertainty": 40
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 500,
+              "unit": "ys",
+              "raw": "500",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "60",
+              "uncertainty": 60,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2-",
+            "ensdf_update_year_raw": "14",
+            "discovery_year_raw": "2010",
+            "decay_and_abundance_raw": "p ?",
+            "source_line": 119,
+            "raw_line": "014 0090   14F     31960         40                                   500     ys 60     2-            14          2010 p ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0013862943611198907,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.00016635532333438688
+              },
+              "mean_lifetime": {
+                "value": 721.3475204444817,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 86.5617024533378
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-14",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:14:0"
+          },
+          {
+            "A": 15,
+            "Z": 9,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "15F",
+            "mass_excess": {
+              "value": 16567,
+              "unit": "keV",
+              "raw": "16567",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "14",
+              "uncertainty": 14
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 1.1,
+              "unit": "zs",
+              "raw": "1.1",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.3",
+              "uncertainty": 0.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+",
+            "ensdf_update_year_raw": "16",
+            "discovery_year_raw": "1978",
+            "decay_and_abundance_raw": "p=100",
+            "source_line": 127,
+            "raw_line": "015 0090   15F     16567         14                                     1.1   zs 0.3    1/2+          16          1978 p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.6301338005090411,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.17185467286610212
+              },
+              "mean_lifetime": {
+                "value": 1.58696454497786,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 0.43280851226668904
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-15",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:15:0"
+          },
+          {
+            "A": 16,
+            "Z": 9,
+            "N": 7,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "16F",
+            "mass_excess": {
+              "value": 10675,
+              "unit": "keV",
+              "raw": "10675",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "5",
+              "uncertainty": 5
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 21,
+              "unit": "zs",
+              "raw": "21",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "5",
+              "uncertainty": 5,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0-",
+            "ensdf_update_year_raw": "99",
+            "discovery_year_raw": "1964",
+            "decay_and_abundance_raw": "p=100",
+            "source_line": 139,
+            "raw_line": "016 0090   16F     10675          5                                    21     zs 5      0-            99          1964 p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.033007008598092635,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.007858811570974436
+              },
+              "mean_lifetime": {
+                "value": 30.296595858668233,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 7.213475204444817
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-16",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:16:0"
+          },
+          {
+            "A": 17,
+            "Z": 9,
+            "N": 8,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "17F",
+            "mass_excess": {
+              "value": 1951.7,
+              "unit": "keV",
+              "raw": "1951.70",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.25",
+              "uncertainty": 0.25
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 64.37,
+              "unit": "s",
+              "raw": "64.370",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.027",
+              "uncertainty": 0.027,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5/2+",
+            "ensdf_update_year_raw": "99",
+            "discovery_year_raw": "1934",
+            "decay_and_abundance_raw": "B+=100",
+            "source_line": 146,
+            "raw_line": "017 0090   17F      1951.70       0.25                                 64.370  s 0.027  5/2+          99          1934 B+=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.010768171206461787,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.000004516709998049841
+              },
+              "mean_lifetime": {
+                "value": 92.86627978202259,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.038952766104002015
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-17",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:17:0"
+          },
+          {
+            "A": 17,
+            "Z": 9,
+            "N": 8,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "17F",
+            "mass_excess": {
+              "value": 13144.7,
+              "unit": "keV",
+              "raw": "13144.7",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.9",
+              "uncertainty": 1.9
+            },
+            "excitation_energy": {
+              "value": 11193,
+              "unit": "keV",
+              "raw": "11193.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.9",
+              "uncertainty": 1.9
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1/2-    T=3/2",
+            "ensdf_update_year_raw": "99",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 147,
+            "raw_line": "017 0098   17F  i  13144.7        1.9     11193.0        1.9     RQ                     1/2-    T=3/2 99               ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-17i",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:17:8"
+          },
+          {
+            "A": 18,
+            "Z": 9,
+            "N": 9,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "18F",
+            "mass_excess": {
+              "value": 873.1,
+              "unit": "keV",
+              "raw": "873.1",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.5",
+              "uncertainty": 0.5
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 109.734,
+              "unit": "m",
+              "raw": "109.734",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.008",
+              "uncertainty": 0.008,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1+",
+            "ensdf_update_year_raw": "96",
+            "discovery_year_raw": "1937",
+            "decay_and_abundance_raw": "B+=100",
+            "source_line": 155,
+            "raw_line": "018 0090   18F       873.1        0.5                                 109.734  m 0.008  1+            96          1937 B+=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0063166127231299805,
+                "unit": "1/m",
+                "relation": "=",
+                "uncertainty": 4.605035976546909e-7
+              },
+              "mean_lifetime": {
+                "value": 158.3126976169095,
+                "unit": "m",
+                "relation": "=",
+                "uncertainty": 0.011541560327111709
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-18",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:18:0"
+          },
+          {
+            "A": 18,
+            "Z": 9,
+            "N": 9,
+            "state_index": 1,
+            "state_label": "m",
+            "source_label": "18F",
+            "mass_excess": {
+              "value": 1994.5,
+              "unit": "keV",
+              "raw": "1994.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.5",
+              "uncertainty": 0.5
+            },
+            "excitation_energy": {
+              "value": 1121.36,
+              "unit": "keV",
+              "raw": "1121.36",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.15",
+              "uncertainty": 0.15
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 162,
+              "unit": "ns",
+              "raw": "162",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "7",
+              "uncertainty": 7,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5+",
+            "ensdf_update_year_raw": "96",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 156,
+            "raw_line": "018 0091   18F  m   1994.5        0.5      1121.36       0.15         162     ns 7      5+            96               IT=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.004278686299752749,
+                "unit": "1/ns",
+                "relation": "=",
+                "uncertainty": 0.00018488150677943978
+              },
+              "mean_lifetime": {
+                "value": 233.71659662401208,
+                "unit": "ns",
+                "relation": "=",
+                "uncertainty": 10.098865286222745
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-18m",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:18:1"
+          },
+          {
+            "A": 18,
+            "Z": 9,
+            "N": 9,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "18F",
+            "mass_excess": {
+              "value": 1914.7,
+              "unit": "keV",
+              "raw": "1914.7",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.5",
+              "uncertainty": 0.5
+            },
+            "excitation_energy": {
+              "value": 1041.55,
+              "unit": "keV",
+              "raw": "1041.55",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.08",
+              "uncertainty": 0.08
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=1",
+            "ensdf_update_year_raw": "96",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 157,
+            "raw_line": "018 0098   18F  i   1914.7        0.5      1041.55       0.08                           0+      T=1   96               IT=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-18i",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:18:8"
+          },
+          {
+            "A": 19,
+            "Z": 9,
+            "N": 10,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "19F",
+            "mass_excess": {
+              "value": -1487.4451,
+              "unit": "keV",
+              "raw": "-1487.4451",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0008",
+              "uncertainty": 0.0008
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "1/2+*",
+            "ensdf_update_year_raw": "96",
+            "discovery_year_raw": "1920",
+            "decay_and_abundance_raw": "IS=100",
+            "source_line": 164,
+            "raw_line": "019 0090   19F     -1487.4451     0.0008                              stbl              1/2+*         96          1920 IS=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-19",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:19:0"
+          },
+          {
+            "A": 19,
+            "Z": 9,
+            "N": 10,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "19F",
+            "mass_excess": {
+              "value": 6052.2,
+              "unit": "keV",
+              "raw": "6052.2",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9
+            },
+            "excitation_energy": {
+              "value": 7539.6,
+              "unit": "keV",
+              "raw": "7539.6",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "5/2+    T=3/2",
+            "ensdf_update_year_raw": "96",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 165,
+            "raw_line": "019 0098   19F  i   6052.2        0.9      7539.6        0.9                            5/2+    T=3/2 96               IT=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-19i",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:19:8"
+          },
+          {
+            "A": 20,
+            "Z": 9,
+            "N": 11,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "20F",
+            "mass_excess": {
+              "value": -17.463,
+              "unit": "keV",
+              "raw": "-17.463",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.030",
+              "uncertainty": 0.03
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 11.0062,
+              "unit": "s",
+              "raw": "11.0062",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0080",
+              "uncertainty": 0.008,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2+",
+            "ensdf_update_year_raw": "98",
+            "discovery_year_raw": "1935",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 174,
+            "raw_line": "020 0090   20F       -17.463      0.030                                11.0062 s 0.0080 2+            98          1935 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.06297788342570054,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0000457762958519384
+              },
+              "mean_lifetime": {
+                "value": 15.87859015903211,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.011541560327111709
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-20",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:20:0"
+          },
+          {
+            "A": 20,
+            "Z": 9,
+            "N": 11,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "20F",
+            "mass_excess": {
+              "value": 6503,
+              "unit": "keV",
+              "raw": "6503",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_energy": {
+              "value": 6521,
+              "unit": "keV",
+              "raw": "6521",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=2",
+            "ensdf_update_year_raw": "98",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 175,
+            "raw_line": "020 0098   20F  i   6503          3        6521          3       RQ                     0+      T=2   98               ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-20i",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:20:8"
+          },
+          {
+            "A": 21,
+            "Z": 9,
+            "N": 12,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "21F",
+            "mass_excess": {
+              "value": -47.6,
+              "unit": "keV",
+              "raw": "-47.6",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.8",
+              "uncertainty": 1.8
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 4.158,
+              "unit": "s",
+              "raw": "4.158",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.020",
+              "uncertainty": 0.02,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5/2+",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "1955",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 186,
+            "raw_line": "021 0090   21F       -47.6        1.8                                   4.158  s 0.020  5/2+          15          1955 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.16670206362673046,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0008018377278823013
+              },
+              "mean_lifetime": {
+                "value": 5.99872598001631,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.02885390081777927
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-21",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:21:0"
+          },
+          {
+            "A": 22,
+            "Z": 9,
+            "N": 13,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "22F",
+            "mass_excess": {
+              "value": 2793,
+              "unit": "keV",
+              "raw": "2793",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "12",
+              "uncertainty": 12
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 4.23,
+              "unit": "s",
+              "raw": "4.23",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.04",
+              "uncertainty": 0.04,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(4+)",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "1965",
+            "decay_and_abundance_raw": "B-=100;B-n<11",
+            "source_line": 196,
+            "raw_line": "022 0090   22F      2793         12                                     4.23   s 0.04   (4+)          15          1965 B-=100;B-n<11",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.16386458169265844,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0015495468717981885
+              },
+              "mean_lifetime": {
+                "value": 6.102600022960316,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.05770780163555854
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-22",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:22:0"
+          },
+          {
+            "A": 23,
+            "Z": 9,
+            "N": 14,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "23F",
+            "mass_excess": {
+              "value": 3290,
+              "unit": "keV",
+              "raw": "3290",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "30",
+              "uncertainty": 30
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.23,
+              "unit": "s",
+              "raw": "2.23",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.14",
+              "uncertainty": 0.14,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5/2+",
+            "ensdf_update_year_raw": "21",
+            "discovery_year_raw": "1970",
+            "decay_and_abundance_raw": "B-=100;B-n<14",
+            "source_line": 209,
+            "raw_line": "023 0090   23F      3290         30                                     2.23   s 0.14   5/2+          21          1970 B-=100;B-n<14",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.31082833208966154,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.019513886319530323
+              },
+              "mean_lifetime": {
+                "value": 3.2172099411823885,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.2019773057244549
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-23",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:23:0"
+          },
+          {
+            "A": 24,
+            "Z": 9,
+            "N": 15,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "24F",
+            "mass_excess": {
+              "value": 7540,
+              "unit": "keV",
+              "raw": "7540",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 384,
+              "unit": "ms",
+              "raw": "384",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "16",
+              "uncertainty": 16,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3+",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "1970",
+            "decay_and_abundance_raw": "B-=100;B-n<5.9",
+            "source_line": 221,
+            "raw_line": "024 0090   24F      7540        100                                   384     ms 16     3+            07          1970 B-=100;B-n<5.9",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0018050707827081908,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00007521128261284129
+              },
+              "mean_lifetime": {
+                "value": 553.994895701362,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 23.083120654223414
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-24",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:24:0"
+          },
+          {
+            "A": 25,
+            "Z": 9,
+            "N": 16,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "25F",
+            "mass_excess": {
+              "value": 11330,
+              "unit": "keV",
+              "raw": "11330",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 80,
+              "unit": "ms",
+              "raw": "80",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "9",
+              "uncertainty": 9,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(5/2+)",
+            "ensdf_update_year_raw": "09",
+            "discovery_year_raw": "1970",
+            "decay_and_abundance_raw": "B-=100;B-n=23.1 45;B-2n ?",
+            "source_line": 236,
+            "raw_line": "025 0090   25F     11330        100                                    80     ms 9      (5/2+)        09          1970 B-=100;B-n=23.1 45;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.008664339756999316,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0009747382226624231
+              },
+              "mean_lifetime": {
+                "value": 115.41560327111708,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 12.984255368000671
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-25",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:25:0"
+          },
+          {
+            "A": 26,
+            "Z": 9,
+            "N": 17,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "26F",
+            "mass_excess": {
+              "value": 18670,
+              "unit": "keV",
+              "raw": "18670",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "110",
+              "uncertainty": 110
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 8.2,
+              "unit": "ms",
+              "raw": "8.2",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1+",
+            "ensdf_update_year_raw": "16",
+            "discovery_year_raw": "1979",
+            "decay_and_abundance_raw": "B-=100;B-n=13.5 40;B-2n ?",
+            "source_line": 246,
+            "raw_line": "026 0090   26F     18670        110                                     8.2   ms 0.9    1+            16          1979 B-=100;B-n=13.5 40;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.08453014397072504,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.009277698728494212
+              },
+              "mean_lifetime": {
+                "value": 11.8300993352895,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 1.2984255368000672
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-26",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:26:0"
+          },
+          {
+            "A": 26,
+            "Z": 9,
+            "N": 17,
+            "state_index": 1,
+            "state_label": "m",
+            "source_label": "26F",
+            "mass_excess": {
+              "value": 19310,
+              "unit": "keV",
+              "raw": "19310",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "110",
+              "uncertainty": 110
+            },
+            "excitation_energy": {
+              "value": 643.4,
+              "unit": "keV",
+              "raw": "643.4",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.1",
+              "uncertainty": 0.1
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.2,
+              "unit": "ms",
+              "raw": "2.2",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.1",
+              "uncertainty": 0.1,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(4+)",
+            "ensdf_update_year_raw": "16",
+            "discovery_year_raw": "2013",
+            "decay_and_abundance_raw": "IT=82 11;B-=?;B-n=12 8",
+            "source_line": 247,
+            "raw_line": "026 0091   26F  m  19310        110         643.4        0.1            2.2   ms 0.1    (4+)          16          2013 IT=82 11;B-=?;B-n=12 8",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.31506690025452055,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.014321222738841842
+              },
+              "mean_lifetime": {
+                "value": 3.17392908995572,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.14426950408889636
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-26m",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:26:1"
+          },
+          {
+            "A": 27,
+            "Z": 9,
+            "N": 18,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "27F",
+            "mass_excess": {
+              "value": 25130,
+              "unit": "keV",
+              "raw": "25130",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "120",
+              "uncertainty": 120
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 5,
+              "unit": "ms",
+              "raw": "5.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.2",
+              "uncertainty": 0.2,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5/2+#",
+            "ensdf_update_year_raw": "11",
+            "discovery_year_raw": "1981",
+            "decay_and_abundance_raw": "B-=100;B-n=77 21;B-2n ?",
+            "source_line": 260,
+            "raw_line": "027 0090   27F     25130        120                                     5.0   ms 0.2    5/2+#         11          1981 B-=100;B-n=77 21;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.13862943611198905,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.005545177444479563
+              },
+              "mean_lifetime": {
+                "value": 7.213475204444817,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.2885390081777927
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-27",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:27:0"
+          },
+          {
+            "A": 28,
+            "Z": 9,
+            "N": 19,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "28F",
+            "mass_excess": {
+              "value": 33400,
+              "unit": "keV",
+              "raw": "33400",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "120",
+              "uncertainty": 120
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 46,
+              "unit": "zs",
+              "raw": "46",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(4-)",
+            "ensdf_update_year_raw": "13",
+            "discovery_year_raw": "2012",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 272,
+            "raw_line": "028 0090   28F     33400        120                                    46     zs        (4-)          13          2012 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.015068416968694463,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": null
+              },
+              "mean_lifetime": {
+                "value": 66.36397188089232,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": null
+              },
+              "uncertainty_method": "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-28",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:28:0"
+          },
+          {
+            "A": 29,
+            "Z": 9,
+            "N": 20,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "29F",
+            "mass_excess": {
+              "value": 40150,
+              "unit": "keV",
+              "raw": "40150",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "530",
+              "uncertainty": 530
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.5,
+              "unit": "ms",
+              "raw": "2.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.3",
+              "uncertainty": 0.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(5/2+)",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1989",
+            "decay_and_abundance_raw": "B-=100;B-n=60 40;B-2n ?",
+            "source_line": 286,
+            "raw_line": "029 0090   29F     40150        530                                     2.5   ms 0.3    (5/2+)        12          1989 B-=100;B-n=60 40;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.2772588722239781,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.03327106466687737
+              },
+              "mean_lifetime": {
+                "value": 3.6067376022224087,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.43280851226668904
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-29",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:29:0"
+          },
+          {
+            "A": 30,
+            "Z": 9,
+            "N": 21,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "30F",
+            "mass_excess": {
+              "value": 48960,
+              "unit": "keV",
+              "raw": "48960#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "500#",
+              "uncertainty": 500
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "<260ns",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "",
+            "ensdf_update_year_raw": "10",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "n ?",
+            "source_line": 298,
+            "raw_line": "030 0090   30F     48960#       500#                                             <260ns               10               n ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0009:ISO:F-30",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:30:0"
+          },
+          {
+            "A": 31,
+            "Z": 9,
+            "N": 22,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "31F",
+            "mass_excess": {
+              "value": 56840,
+              "unit": "keV",
+              "raw": "56840#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "540#",
+              "uncertainty": 540
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2,
+              "unit": "ms",
+              "raw": "2#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": ">260ns",
+              "uncertainty": null,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "5/2+#",
+            "ensdf_update_year_raw": "13",
+            "discovery_year_raw": "1999",
+            "decay_and_abundance_raw": "B- ?;B-n ?;B-2n ?",
+            "source_line": 309,
+            "raw_line": "031 0090   31F     56840#       540#                                    2#    ms >260ns 5/2+#         13          1999 B- ?;B-n ?;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-ESTIMATE",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.34657359027997264,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": null
+              },
+              "mean_lifetime": {
+                "value": 2.8853900817779268,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": null
+              },
+              "uncertainty_method": "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0009:ISO:F-31",
+            "evaluation_entry_id": "MAT:0009:NUBASE2020:31:0"
+          }
+        ]
       }
     },
     {
@@ -2144,7 +3798,14 @@
             "asset_id": "MAT:0009:FIG:V02:001",
             "filename": "0009-Fluorine-F-FIG-002-Atomic-Identity.svg",
             "path": "images/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Fluorine atomic identity (MAT:0009). F · Z = 9. 1s2 2s2 2p5 · 2P°3/2. 18.99840316273(92). monoisotopic weight u. I1 = 17.42282 eV. SRC-000157. EA = 3.401191 eV. SRC-000159. χ = 3.98 Pauling. bond polarization. one below closed. 2p6 − 1e−. EA ≠ χ.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/scientific/0009-Fluorine-F-FIG-002-Atomic-Identity.svg",
+              "sha256": "a503633a014185e287a93d4b0e268d182c3a9ac64a47aedf261043d4c26bd95c",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V03": {
             "assets": [
@@ -2158,7 +3819,22 @@
               }
             ],
             "path": "diagrams/bonding/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F bond counterexample (kJ/mol). F–F ≈ 155. weak reactant bond. H–F ≈ 565. strong product. C–F ≈ 485. strong product. reactivity ≠. reactant strength. Full landscape decides. SRC-000161. / Record fluoride geometries (§I6). HF linear. diatomic. BF3 trigonal. planar. CF4 tetrahedral. tetra. SF6 octahedral. octa. XeF2 linear. triatomic. XeF4 square. planar. Only geometries stated in record.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0009-Fluorine-F/diagrams/bonding/0009-Fluorine-F-DIAGRAM-001-F2-HF-CF.svg",
+                  "sha256": "fae59e9a09107d29ce064a148307cc432d89a303b30f17cb61ce66ec6a876a3b"
+                },
+                {
+                  "source": "records/0009-Fluorine-F/diagrams/bonding/0009-Fluorine-F-DIAGRAM-002-Fluoride-Geometries.svg",
+                  "sha256": "1954749228d97f3e5ca95ef89d33624b5b464286be4e511b9151e8fe66af3716"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V04": {
             "assets": [
@@ -2172,13 +3848,35 @@
               }
             ],
             "path": "images/quantum/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F electron structure. 2p5 open shell. one hole. + e− → 2p6. closed anion. F− mobile?. solid-dependent. no orbit paths. probability only. Capture ≠ conduction. / F + e− → F−. F atom 2p5. electron attachment (EA 3.40 eV). F− 2p6 closed shell. Anion ≠ mobile carrier.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0009-Fluorine-F/images/quantum/0009-Fluorine-F-FIG-003-Electron-Probability.svg",
+                  "sha256": "ef86d74f248a87ee7907db636a1582152d93b321c18af3a50e8b767be4cc7db3"
+                },
+                {
+                  "source": "records/0009-Fluorine-F/images/quantum/0009-Fluorine-F-FIG-004-Electron-Capture.svg",
+                  "sha256": "61c6cd72d9b1b185791f600174bea665203dc73d0a425345f5784341a2dab3f1"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V05": {
             "asset_id": "MAT:0009:FIG:V05:001",
             "filename": "0009-Fluorine-F-FIG-005-Isotope-Map.svg",
             "path": "images/isotope/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F isotopes 13F–31F. 14F. 500 ys. 15F. 1.1 zs. 16F. 21 zs. 17F. 64.370 s. 18F. 109.732 min PET. 19F. STABLE NMR. 20F. 11.0062 s. 21F. 4.158 s. 22F. 4.23 s. 23F. 2.23 s. 24F. 384 ms. 25F. 80 ms. 26F. 8.2 ms. 27F. 5.0 ms. 28F. 46 zs. 29F. 2.5 ms halo?. 30F. 2024 resonance. 31F. active drip. 13F/30F observed beyond mass table.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/isotope/0009-Fluorine-F-FIG-005-Isotope-Map.svg",
+              "sha256": "33df03214f03e8bfef733376998d041cdb4b9d964c2b261ee137d58609c1552c",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V06": {
             "assets": [
@@ -2192,13 +3890,35 @@
               }
             ],
             "path": "images/spectral/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F I / F II lines (nm). 95.1870 F I. 2P°→2P persistent. 95.8525 F I. companion line. 60.5669 F II. ion persistent. 60.6804 F II. ion persistent. SRC-000179. Not F2/NMR. / F2 molecular + 19F NMR layer. F2 vib 916.93. cm−1 ωe. F2 rot 0.8893. cm−1 Be. 19F I=1/2. 100% NMR. ν = γB/2π. field explicit. NO UNIVERSAL F FREQUENCY.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0009-Fluorine-F/images/spectral/0009-Fluorine-F-FIG-006-Atomic-Spectrum.svg",
+                  "sha256": "de9403f2e85df96f6071c42e2f7a38894351a34786f7b0664c2dc2bbffd025e8"
+                },
+                {
+                  "source": "records/0009-Fluorine-F/images/spectral/0009-Fluorine-F-FIG-007-Molecular-NMR-Spectrum.svg",
+                  "sha256": "84bb8e5eaa2d3cfa3dcc18ce8e24c57262f151ad4005e65d37d1217d00079311"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V07": {
             "asset_id": "MAT:0009:FIG:V07:001",
             "filename": "0009-Fluorine-F-FIG-008-Physical-State.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F2 phases. Tm 53.48 K. solid forms. Tb 85.04 K. normal boiling. very pale yellow. reactive gas. cold ≠ inert. still reactive. SRC-000161.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-008-Physical-State.svg",
+              "sha256": "657aaa35a8087fd01ac6f407bf1ada96753faadf21af0713320cd5350aee113c",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V08": {
             "assets": [
@@ -2212,19 +3932,48 @@
               }
             ],
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F− hopping transport. F− at site. vacancy/interstitial path. adjacent site. conductivity = f(defects,T). Carrier, not free ion. / Fluoride shuttle (research). fluorination at electrode. F− through electrolyte. defluorination return. reversibility = material. Stability ⇄ reversibility trade.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-003-Fluoride-Ion-Conduction.svg",
+                  "sha256": "85ad3c2327f13bff3aa61eaa4d84032b0c989dd63c09f59753b8571007923539"
+                },
+                {
+                  "source": "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-004-Fluoride-Battery.svg",
+                  "sha256": "0470713fa8990096c894cdb869011ad17f29b30438cd7f7a9a7507f19b3a742b"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V09": {
             "asset_id": "MAT:0009:DIAGRAM:V09:001",
             "filename": "0009-Fluorine-F-DIAGRAM-005-Magnetic-NMR-State.svg",
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F magnetism. F atom. open-shell para. F2 singlet. diamagnetic. 19F NMR. I=1/2, 100%. solids vary. state-dependent. Assembly changes response.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/diagrams/fields/0009-Fluorine-F-DIAGRAM-005-Magnetic-NMR-State.svg",
+              "sha256": "6d2260ba4888a9cb4660c20f8eafc835203cd99789a0f453e140b6891a93001f",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V10": {
             "asset_id": "MAT:0009:FIG:V10:001",
             "filename": "0009-Fluorine-F-FIG-009-Thermal-and-Molten-Salt.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Thermal + salt states. F2 Tm/Tb. 53.48 / 85.04 K. LiF/BeF2 melt. coordinated network. FLiBe polymeric. BeF4/Be2F7 units. T/P required. always. Salt ≠ elemental phases.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-009-Thermal-and-Molten-Salt.svg",
+              "sha256": "bcac30607cf40983180cdf38c8e9590df5478022948f1413dfeedc7c2af89a6e",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V11": {
             "assets": [
@@ -2238,25 +3987,61 @@
               }
             ],
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "PTFE chain. [−CF2−CF2−]n. repeat unit. Tm ≈ 327 °C. processing hard. low friction. surface effect. Plunkett 1938. accidental + seen. Polymer, not element. / BeF2 / FLiBe network. BeF4 tetrahedra. corner-sharing. Be2F7/Be3F10. polymeric units. SiO2 analogy. topology only. 2LiF-BeF2 ref. composition-gated. SRC-000171/176/177.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-010-PTFE-Structure.svg",
+                  "sha256": "cf292a275f1bba927ec295a2569e36a33b970cfeedcc514201c059c528ec3f4f"
+                },
+                {
+                  "source": "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-011-BeF2-FLiBe-Network.svg",
+                  "sha256": "a82b7aa2f7f3e697c4e2353e0bcdf09322db8da05bb77cf204395c7adf42e517"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V12": {
             "asset_id": "MAT:0009:FIG:V12:001",
             "filename": "0009-Fluorine-F-FIG-012-Compatibility-State-Map.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Compatibility axes. form · T · t. state variables. H2O content. HF risk lever. passivation?. surface decides. strength ≠. compatibility. System property.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/properties/0009-Fluorine-F-FIG-012-Compatibility-State-Map.svg",
+              "sha256": "fb4db1cf014e440112b3c12e75a36504e9be82c76a4836755255479eefe9b4e9",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V13": {
             "asset_id": "MAT:0009:DIAGRAM:V13:001",
             "filename": "0009-Fluorine-F-DIAGRAM-006-Transformation-Network.svg",
             "path": "diagrams/processes/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F transformation network. F− electrolysis → F2. Li/Be/B/C/N/O/Si → fluorides. polymers ← C–F growth. plasma → radicals/ions. 18F → 18O PET decay (nuclear). Chemical vs nuclear apart.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/diagrams/processes/0009-Fluorine-F-DIAGRAM-006-Transformation-Network.svg",
+              "sha256": "2e8ec4d5fd7e4251244dd30fadf54e45cf8b7b6eba5a455be1fe25c97e820cb0",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V14": {
             "asset_id": "MAT:0009:DIAGRAM:V14:001",
             "filename": "0009-Fluorine-F-DIAGRAM-007-Knowledge-Graph.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "MAT:0009 knowledge graph. MAT:0009 Fluorine. — DECAYS-TO —. — FORMS-HOMONUCLEAR-MOLECULE —. — FORMS-COMPOUND-WITH —. — FORMS-FLUORIDE-WITH —. — FORMS-MOLTEN-SALT-FAMILY —. — CHEMICAL-NETWORK-WITH —. — FORMS-OXYGEN-FLUORIDES —. — FORMS-HIGH-OXIDATION-FLUORIDE —. — FORMS-NOBLE-GAS-FLUORIDES —. — STABILIZES-HIGH-OXIDATION-STATE —. — FORMS-VOLATILE-FLUORIDE —. — NATURAL-MINERAL-RESERVOIR —. — MOBILE-ION-IN —. — LEGACY-SUCCESSOR-OF —. Full edges: F relationships registry.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/diagrams/relationships/0009-Fluorine-F-DIAGRAM-007-Knowledge-Graph.svg",
+              "sha256": "23fad532a59eb6ca7fa015c6bab4e754646a9c46910ed9adaf351d6130508eae",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V15": {
             "assets": [
@@ -2266,7 +4051,18 @@
               }
             ],
             "path": "models/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F2 Molecule: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result.",
+            "description_provenance": {
+              "method": "Editorial description from retained filename and inspected glTF scene structure",
+              "review_status": "STRUCTURE-INSPECTED-SCIENTIFIC-GEOMETRY-UNVERIFIED",
+              "sources": [
+                {
+                  "path": "records/0009-Fluorine-F/models/scientific/0009-Fluorine-F-MODEL-SCI-001-F2-Molecule.glb",
+                  "sha256": "09490f197bc2879dafa3d8ebba89a2f718cbb0121815f8bd4506f7a8fa495b33"
+                }
+              ]
+            }
           },
           "V16": {
             "asset_id": "MAT:0009:MODEL:DATA:001",
@@ -2278,13 +4074,27 @@
             "asset_id": "MAT:0009:FIG:V17:001",
             "filename": "0009-Fluorine-F-FIG-013-Applications.svg",
             "path": "images/applications/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F applications by state. 19F NMR. spectroscopy. 18F PET. 110 min tracer. etching. plasma radicals. FLiBe salts. heat/blanket R&D. batteries. F− shuttles. minerals. fluorite ore. State-gated uses.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/images/applications/0009-Fluorine-F-FIG-013-Applications.svg",
+              "sha256": "29d703ce30865828bfbf7305299f039966cd67a129cb09ed40c987561d296b2e",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V18": {
             "asset_id": "MAT:0009:DIAGRAM:V18:001",
             "filename": "0009-Fluorine-F-DIAGRAM-008-Evidence-Provenance.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "F evidence provenance. NIST ASD → atomic ladder. NIST + NUBASE → isotopes. 2021/2024 → 13F/30F new. WebBook → molecules. USGS/ORNL → salts/minerals. OECD/EPA → PFAS terms. Terms need jurisdiction.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0009-Fluorine-F/diagrams/relationships/0009-Fluorine-F-DIAGRAM-008-Evidence-Provenance.svg",
+              "sha256": "ca8e7082a03804cfdef33c65751c6c5a7567855279e9b8605fd360e23254ee33",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           }
         },
         "summary": {
@@ -2855,7 +4665,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000157",

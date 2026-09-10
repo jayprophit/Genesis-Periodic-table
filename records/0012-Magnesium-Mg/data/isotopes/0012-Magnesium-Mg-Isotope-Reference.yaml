@@ -1,0 +1,89 @@
+registry_id: MAT:0012:REG:ISOTOPE-REFERENCE
+parent_id: MAT:0012
+version: 1.0.0
+NIST_atomic_mass_table:
+  minimum_mass_number: 19
+  maximum_mass_number: 40
+  source_id: SRC-000243
+stable:
+  Mg24:
+    isotope_id: MAT:0012:ISO:Mg-24
+    mass_number: 24
+    protons: 12
+    neutrons: 12
+    relative_atomic_mass:
+      value: 23.985041697
+      uncertainty: 1.4e-8
+      unit: u
+    isotopic_composition:
+      value: 0.7899
+      uncertainty: 0.0004
+    spin_parity: 0+
+    stability: STABLE
+  Mg25:
+    isotope_id: MAT:0012:ISO:Mg-25
+    mass_number: 25
+    protons: 12
+    neutrons: 13
+    relative_atomic_mass:
+      value: 24.985836976
+      uncertainty: 5e-8
+      unit: u
+    isotopic_composition:
+      value: 0.1
+      uncertainty: 0.0001
+    spin_parity: 5/2+
+    stability: STABLE
+    NMR_active: true
+    quadrupolar: true
+  Mg26:
+    isotope_id: MAT:0012:ISO:Mg-26
+    mass_number: 26
+    protons: 12
+    neutrons: 14
+    relative_atomic_mass:
+      value: 25.982592968
+      uncertainty: 3.1e-8
+      unit: u
+    isotopic_composition:
+      value: 0.1101
+      uncertainty: 0.0003
+    spin_parity: 0+
+    stability: STABLE
+key_radioactive:
+  Mg27:
+    isotope_id: MAT:0012:ISO:Mg-27
+    decay:
+      principal: BETA-MINUS
+    daughter:
+      id: MAT:0013:ISO:Al-27
+      status: RESERVED-PENDING-ALUMINIUM
+    evaluated_half_life:
+      status: NEXT-BATCH
+  Mg28:
+    isotope_id: MAT:0012:ISO:Mg-28
+    decay:
+      principal: BETA-MINUS
+    daughter:
+      id: MAT:0013:ISO:Al-28
+      status: RESERVED-PENDING-ALUMINIUM
+    secondary_chain:
+      target: MAT:0014:ISO:Si-28
+      status: RESERVED-PENDING-SILICON
+    evaluated_half_life:
+      status: NEXT-BATCH
+rules:
+  natural_isotope_ratio_is_universal: false
+  stable_half_life_representation: NOT-APPLICABLE
+  mass_table_entry_implies_particle_bound: false
+  exact_radioactive_semantics_require_evaluated_data: true
+  full_Mg19_to_Mg40_children:
+    status: NEXT-BATCH
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/50.txt
+  source_sha256: f48b140791b557fedd065c37d60e27e358ccf2d8735ab612572baa77c6e5afc5
+  source_line: 2197
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

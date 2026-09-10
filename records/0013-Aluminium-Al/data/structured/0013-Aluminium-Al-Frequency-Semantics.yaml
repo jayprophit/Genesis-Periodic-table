@@ -1,0 +1,54 @@
+registry_id: MAT:0013:REG:FREQUENCY-SEMANTICS
+record_id: MAT:0013
+statement:
+  universal_aluminium_frequency:
+    exists_as_single_intrinsic_value: false
+valid_frequency_domains:
+  atomic_electronic_transitions:
+    examples:
+      - Al_I
+      - Al_II
+      - Al_III
+  nuclear_magnetic_resonance:
+    isotope: 27Al
+    field_dependent: true
+  lattice_vibrations:
+    material_and_phase_dependent: true
+  phonons:
+    crystal_structure_dependent: true
+  acoustic_resonance:
+    geometry_dependent: true
+  electromagnetic_response:
+    frequency_dependent: true
+  plasma_response:
+    density_and_charge_state_dependent: true
+  optical_response:
+    wavelength_and_material_state_dependent: true
+required_context:
+  - physical_phenomenon
+  - species
+  - charge_state
+  - phase
+  - temperature
+  - pressure
+  - magnetic_field_if_relevant
+  - electric_field_if_relevant
+  - geometry_if_relevant
+  - measurement_method
+  - reference_frame_or_medium
+  - source
+rules:
+  spectral_line_equals_element_frequency: false
+  NMR_frequency_equals_element_frequency: false
+  mechanical_resonance_equals_atomic_frequency: false
+  compound_vibrational_mode_equals_parent_element_frequency: false
+  wavelength_requires_medium_where_precision_requires_it: true
+  frequency_requires_phenomenon_label: true
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/49.txt
+  source_sha256: 9dd82277cc3de3dd242f14c7fb81f4a775c6bad890bfbb29e9b691c435ad4740
+  source_line: 1414
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

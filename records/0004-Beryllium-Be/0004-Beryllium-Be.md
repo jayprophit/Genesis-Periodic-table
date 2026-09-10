@@ -2310,3 +2310,7 @@ schema_validation_status: "PENDING"
 visual_specification: "NOT-YET-LOCKED"
 visual_assets: "NOT-GENERATED"
 ```
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0004-Beryllium-Be-Nuclear-Evaluation.md) provides 21 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

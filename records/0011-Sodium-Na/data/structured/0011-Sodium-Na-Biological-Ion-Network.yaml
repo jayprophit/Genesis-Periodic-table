@@ -1,0 +1,86 @@
+registry_id: MAT:0011:REG:BIOLOGICAL-ION-NETWORK
+record_id: MAT:0011
+active_species: Na+
+elemental_metal_role:
+  normal_biology: false
+electrochemical_gradient:
+  extracellular_Na:
+    relative_state: HIGH
+  intracellular_Na:
+    relative_state: LOW
+  maintained_by:
+    - Na_K_ATPase
+    - membrane_selectivity
+    - cellular_transport_network
+action_potential:
+  resting_state:
+    voltage_gated_Na_channels:
+      mostly_closed: true
+  depolarization:
+    trigger:
+      membrane_voltage_change: true
+    voltage_gated_Na_channels:
+      activation: true
+    dominant_Na_flux:
+      direction: INWARD
+    driver:
+      - concentration_gradient
+      - electrical_gradient
+    result:
+      membrane_depolarization: true
+  peak_and_early_repolarization:
+    Na_channels:
+      inactivation: true
+    K_channels:
+      outward_K_flux: true
+  rapid_repolarization:
+    principal_mechanism:
+      - voltage_gated_channel_dynamics
+      - reduced_Na_conductance
+      - increased_K_conductance
+    Na_K_ATPase_is_direct_ms_repolarization_mechanism: false
+  long_term_gradient_restoration:
+    Na_K_ATPase: true
+Na_K_ATPase:
+  relationship:
+    parents:
+      - MAT:0011
+      - MAT:0019
+  potassium_status: RESERVED-PENDING-POTASSIUM
+  stoichiometry_per_ATP:
+    Na_out: 3
+    K_in: 2
+    ATP_hydrolyzed: 1
+  net_charge:
+    positive_outward: 1
+  electrogenic: true
+  discovery:
+    contributor: Jens_Christian_Skou
+    year: 1957
+other_biological_roles:
+  - secondary_active_transport
+  - glucose_cotransport
+  - amino_acid_transport
+  - osmotic_balance
+  - extracellular_volume
+  - muscle_excitation
+  - nerve_signalling
+principle:
+  statement: >
+    Ion gradients store electrochemical free energy that can be converted into electrical signalling and coupled
+    transport.
+rules:
+  metallic_Na_equals_biological_Na_plus: false
+  Na_influx_equals_ATPase_transport: false
+  pump_maintains_gradient_but_does_not_create_each_action_potential_upstroke: true
+source_ids:
+  - SRC-000237
+  - SRC-000238
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/43.txt
+  source_sha256: 6deabebe37c282ee5246e846496c422a8c636df500ffef3897be41d691815347
+  source_line: 222
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

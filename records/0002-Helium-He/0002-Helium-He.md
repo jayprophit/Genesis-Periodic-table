@@ -1427,3 +1427,7 @@ visuals:
   specification: "LOCKED"
   generated: false
 ```
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0002-Helium-He-Nuclear-Evaluation.md) provides 8 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

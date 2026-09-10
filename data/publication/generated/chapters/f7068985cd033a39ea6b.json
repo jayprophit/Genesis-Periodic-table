@@ -1,0 +1,330 @@
+{
+  "id": "records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-010-Evidence.md",
+  "key": "f7068985cd033a39ea6b",
+  "mat": "MAT:0012",
+  "title": "Magnesium Evidence Matrix",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "> **Imported research — review pending.** Recovered from [52.txt, line 1199](../../../archive/source-intake/mat-42-52/52.txt). Source assertions of validation are historical statements, not independent test results. See the intake ledger for duplicates and unresolved references.\n\n# Magnesium Evidence Matrix\n\n| Domain               | Sources                          |\n| -------------------- | -------------------------------- |\n| atomic/ionization    | SRC-000242                       |\n| isotope masses       | SRC-000243                       |\n| nuclear              | SRC-000254                       |\n| spectroscopy         | SRC-000244 / 268                 |\n| ²⁵Mg NMR             | SRC-000255                       |\n| deformation          | SRC-000256                       |\n| compounds            | SRC-000257–262                   |\n| high pressure        | SRC-000263                       |\n| MgB₂                 | SRC-000248 / 249 / 264 / 274–276 |\n| MgH₂                 | SRC-000247 / 265                 |\n| batteries            | SRC-000250 / 251 / 266           |\n| isotope geochemistry | SRC-000269                       |\n| ²⁶Al–²⁶Mg            | SRC-000270                       |\n| corrosion            | SRC-000271 / 277                 |\n| discovery            | SRC-000272                       |\n| Grignard             | SRC-000273                       |\n",
+  "bodyHash": "b89711315af6f47098c6d73745a6ea7c61d9fd6db140cb4edc2463e2a144b2bf",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000242",
+      "source_aliases": [
+        "SRC-MG-001"
+      ],
+      "title": "NIST Atomic Spectra Database — Magnesium Ionization Energies",
+      "organization": "National Institute of Standards and Technology",
+      "database": "ASD v5.12",
+      "source_type": "EVALUATED-ATOMIC-SPECTROSCOPY",
+      "supports": [
+        "magnesium_ground_configuration",
+        "magnesium_ground_level",
+        "magnesium_ionization_ladder",
+        "Mg2_plus_closed_shell"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Mg&units=1&unc_out=1"
+    },
+    {
+      "source_id": "SRC-000243",
+      "source_aliases": [
+        "SRC-MG-002"
+      ],
+      "title": "Atomic Weights and Isotopic Compositions for Magnesium",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-ISOTOPE-DATABASE",
+      "supports": [
+        "magnesium_standard_atomic_weight_interval",
+        "Mg19_to_Mg40_masses",
+        "Mg24_mass_and_composition",
+        "Mg25_mass_and_composition",
+        "Mg26_mass_and_composition"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Mg"
+    },
+    {
+      "source_id": "SRC-000244",
+      "source_aliases": [
+        "SRC-MG-003"
+      ],
+      "title": "NIST Handbook of Basic Atomic Spectroscopic Data — Magnesium I and Magnesium II",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "EVALUATED-ATOMIC-SPECTROSCOPY",
+      "supports": [
+        "MgI_285_21251_nm",
+        "MgII_279_55301_nm",
+        "MgII_280_27056_nm",
+        "magnesium_atomic_spectrum"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://physics.nist.gov/PhysRefData/Handbook/Tables/magnesiumtable3.htm"
+    },
+    {
+      "source_id": "SRC-000247",
+      "source_aliases": [
+        "SRC-MG-H2-001"
+      ],
+      "title": "Magnesium-based hydrogen storage materials: Design and performance optimization",
+      "journal": "International Journal of Hydrogen Energy",
+      "year": 2026,
+      "source_type": "CURRENT-HYDROGEN-STORAGE-REVIEW",
+      "supports": [
+        "MgH2",
+        "theoretical_7_6_wt_percent",
+        "thermodynamic_stability",
+        "dehydrogenation_temperature",
+        "catalytic_modification",
+        "nanostructuring"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000248",
+      "source_aliases": [
+        "SRC-MG-SC-001"
+      ],
+      "title": "First-Principles Zone-Center Theory of Superconductivity in MgB2",
+      "organization": "National Institute of Standards and Technology",
+      "source_type": "SUPERCONDUCTIVITY-AND-PHONON-REFERENCE",
+      "supports": [
+        "MgB2",
+        "Tc_around_40_K",
+        "boron_isotope_effect",
+        "electron_phonon_coupling",
+        "phonon_structure"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://www.nist.gov/publications/first-principles-zone-center-theory-superconductivity-mgb2"
+    },
+    {
+      "source_id": "SRC-000250",
+      "source_aliases": [
+        "SRC-MG-BATT-001"
+      ],
+      "title": "Electrolytes for rechargeable magnesium batteries",
+      "journal": "Nature Reviews Clean Technology",
+      "year": 2026,
+      "source_type": "CURRENT-MAGNESIUM-BATTERY-REVIEW",
+      "supports": [
+        "magnesium_battery_electrolytes",
+        "Mg_plating_stripping",
+        "electrolyte_design",
+        "interface_challenges"
+      ],
+      "intake_origin": "50.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000254",
+      "title": "The NUBASE2020 evaluation of nuclear physics properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "journal": "Chinese Physics C",
+      "year": 2021,
+      "volume": 45,
+      "article": "030001",
+      "doi": "10.1088/1674-1137/abddae",
+      "source_type": "EVALUATED-NUCLEAR-DATABASE",
+      "supports": [
+        "Mg19_to_Mg40",
+        "magnesium_half_lives",
+        "magnesium_decay_modes",
+        "spin_parity",
+        "delayed_neutron_branching",
+        "Mg27_half_life_correction",
+        "Mg28_half_life"
+      ],
+      "intake_origin": "51.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://doi.org/10.1088/1674-1137/abddae",
+      "same_work_as": "SRC-000008",
+      "scope_note": "Record-specific accession retained for backwards compatibility; this is not independent corroborating evidence."
+    },
+    {
+      "source_id": "SRC-000255",
+      "title": "25Mg NMR — nuclear constants and solid-state coordination studies",
+      "source_type": "NMR-AND-COORDINATION-REFERENCE",
+      "supports": [
+        "Mg25_spin",
+        "Mg25_magnetogyric_ratio",
+        "quadrupolar_nucleus",
+        "chlorophyll_25Mg_NMR",
+        "Mg_coordination_environment"
+      ],
+      "intake_origin": "51.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000256",
+      "title": "Orientation engineering and deformation mechanisms of magnesium alloys",
+      "year": 2024,
+      "journal": "Journal of Materials Research and Technology",
+      "source_type": "MAGNESIUM-DEFORMATION-REVIEW",
+      "supports": [
+        "HCP_magnesium",
+        "basal_slip",
+        "prismatic_slip",
+        "pyramidal_slip",
+        "twinning",
+        "texture",
+        "mechanical_anisotropy"
+      ],
+      "intake_origin": "51.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000257",
+      "title": "Magnesium Oxide — rock-salt structure and material properties",
+      "source_type": "CERAMIC-STRUCTURE-REFERENCE",
+      "supports": [
+        "MgO",
+        "Fm_3m",
+        "rock_salt_structure",
+        "refractory_MgO",
+        "MgO_band_gap"
+      ],
+      "intake_origin": "51.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000263",
+      "title": "Equation of state and high-pressure/high-temperature phase diagram of magnesium",
+      "authors": [
+        "G. W. Stinton",
+        "S. G. MacLeod",
+        "H. Cynn",
+        "D. Errandonea",
+        "W. J. Evans",
+        "J. E. Proctor",
+        "Y. Meng",
+        "M. I. McMahon"
+      ],
+      "journal": "Physical Review B",
+      "year": 2014,
+      "volume": 90,
+      "article": "134105",
+      "doi": "10.1103/PhysRevB.90.134105",
+      "source_type": "PRIMARY-HIGH-PRESSURE-EXPERIMENT",
+      "supports": [
+        "Mg_hcp_bcc_transition",
+        "Mg_to_211_GPa",
+        "high_temperature_phase_diagram",
+        "magnesium_melting_curve"
+      ],
+      "intake_origin": "51.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://doi.org/10.1103/PhysRevB.90.134105"
+    },
+    {
+      "source_id": "SRC-000269",
+      "title": "Magnesium Isotope Geochemistry",
+      "authors": [
+        "Fang-Zhen Teng",
+        "Nicolas Dauphas",
+        "James M. Watkins"
+      ],
+      "source_type": "STABLE-ISOTOPE-GEOCHEMISTRY-REFERENCE",
+      "supports": [
+        "delta25Mg",
+        "delta26Mg",
+        "DSM3",
+        "Mg_isotope_fractionation",
+        "weathering",
+        "carbonates",
+        "mantle",
+        "geochemical_tracing"
+      ],
+      "intake_origin": "52.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000270",
+      "title": "Early Solar System Chronology from Short-Lived Chronometers",
+      "authors": [
+        "Aryavart Anand",
+        "Klaus Mezger"
+      ],
+      "journal": "Chemie der Erde / Geochemistry",
+      "year": 2023,
+      "article": "126004",
+      "doi": "10.1016/j.chemer.2023.126004",
+      "source_type": "COSMOCHEMICAL-CHRONOLOGY-REVIEW",
+      "supports": [
+        "Al26_Mg26",
+        "extinct_radionuclide",
+        "early_solar_system_chronology",
+        "radiogenic_Mg26"
+      ],
+      "intake_origin": "52.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://doi.org/10.1016/j.chemer.2023.126004"
+    },
+    {
+      "source_id": "SRC-000271",
+      "title": "Magnesium Alloy Sacrificial-Anode Corrosion in Chloride Environments",
+      "source_type": "CORROSION-AND-CATHODIC-PROTECTION-REFERENCE",
+      "supports": [
+        "magnesium_corrosion",
+        "MgOH2_surface_products",
+        "chloride_effect",
+        "sacrificial_anode"
+      ],
+      "intake_origin": "52.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000272",
+      "title": "Magnesium — Discovery History",
+      "organization": "Royal Society of Chemistry",
+      "source_type": "SCIENTIFIC-HISTORY",
+      "supports": [
+        "Joseph_Black",
+        "Humphry_Davy",
+        "Antoine_Alexandre_Brutus_Bussy",
+        "recognition_1755",
+        "electrochemical_preparation_1808",
+        "substantial_metal_preparation_1831"
+      ],
+      "intake_origin": "52.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    },
+    {
+      "source_id": "SRC-000273",
+      "title": "Victor Grignard — Organomagnesium Compounds in Preparative Organic Chemistry",
+      "organization": "Nobel Prize Outreach",
+      "year": 1912,
+      "source_type": "ORGANOMETALLIC-HISTORY",
+      "supports": [
+        "Victor_Grignard",
+        "Grignard_reagents",
+        "organomagnesium",
+        "Nobel_1912"
+      ],
+      "intake_origin": "52.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW"
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 16
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

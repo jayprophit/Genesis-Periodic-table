@@ -1,0 +1,1946 @@
+Yes — I’m ready. I’ve now done the reconciliation pass rather than only judging MAT from the appearance of a few pages.
+
+A few important things became clearer from the repository. MAT already has the correct **three-authority model**: authored Markdown for human-readable prose, canonical YAML/registries for scientific data, and generated publication/index assets for presentation. Your README also already defines conditions, units, measurement-vs-prediction status, provenance, uncertainty, time, scale, environment, manufacturing history, negative results, and separation of scientific evidence from speculation. That is substantially stronger than an ordinary ebook architecture. 
+
+The `0000-Origin-State` structure also confirms the architecture we developed earlier: it isn't simply a chapter. It is a record package with `calculations`, `data`, `diagrams`, `experiments`, `graphs`, `images`, `models`, `relationships`, `sources`, and `tables`, plus its main manuscript and visual specification.  Hydrogen follows that expanded record-package model and already branches into isotopes, nuclear states, quantum/electronic states, ions, molecules, compounds, phases, processes, reactions, environments, applications, experiments, graphs, models and sources.  
+
+I also confirmed the two things you were telling me about earlier: **both `downloadfiles/ebookcraft` and `downloadfiles/ebookcraft (1)` are actually in the repository**, along with the Walter Russell reference images and the MAT ebook production standard.  The newer `ebookcraft (1)` is itself a Vite-style application, so Codex can run it beside MAT and compare the experiences directly rather than guessing from screenshots. 
+
+And MAT Studio is further along than a simple static reader. It already has a publication tree, periodic-table and model views, coverage filtering, bookmarks, local manuscript overlays, themes, font sizing, multilingual workflow UI, source-backed data views, evidence review, HTML/EPUB export, print/PDF preview and text-to-speech.  The root toolchain already contains separate validators for records, sources, relationships, assets, links, IDs, book synchronization and elements, plus publication builds and Playwright end-to-end testing. 
+
+So the main problem is **not that MAT lacks engineering**. The larger gap is the layer between the engineering and the reader: information architecture, narrative editorial structure, professional-domain traversal, richer cross-reference semantics, true citation granularity, progressive depth and the visual/paginated feel of a major reference work.
+
+The external benchmark supports that direction. EPUB 3.3 explicitly separates publication content, navigation, reading-system behavior and accessibility, rather than treating an ebook as one long HTML document.  Scientific references such as the NIST Chemistry WebBook organize one entity into selectable categories including thermochemistry, phase data, ion energetics, spectroscopy and literature references instead of forcing every dataset into the same view.  PubChem similarly separates human reports from programmatic REST access, which is close to the dual human/machine model MAT needs. 
+
+The architectural change I would make is therefore evolutionary rather than destructive: **a MAT record remains the canonical scientific object, while its content is exposed through multiple domain lenses and multiple reading depths.** Hydrogen remains `MAT:0001`; chemistry, physics, medicine, engineering, history, education, AI and other views do not become competing copies of Hydrogen.
+
+Here is the master Codex instruction. Paste this whole block into Codex from the root of the MAT repository.
+
+```text
+PROJECT:
+Materials Atlas Table Codex — MAT
+Repository:
+jayprophit/Materials-Atlas-Table-Codex---MAT
+
+ROLE:
+Act as a coordinated senior multidisciplinary team consisting of:
+
+- principal software architect
+- senior full-stack engineer
+- scientific data architect
+- materials scientist
+- chemist
+- physicist
+- biologist
+- biomedical/medical information architect
+- pharmaceutical data specialist
+- mechanical/materials/process engineer
+- electrical/electronic engineer
+- manufacturing engineer
+- laboratory/research technician
+- historian of science
+- research librarian
+- information scientist
+- knowledge-graph engineer
+- ontology engineer
+- AI/ML data engineer
+- scientific visualization specialist
+- technical author/editor
+- textbook/reference-book editor
+- ebook/EPUB publishing specialist
+- UX/UI designer
+- accessibility specialist
+- QA/test engineer
+- provenance/citation specialist
+
+MISSION:
+
+Perform a full professional audit, architectural improvement and implementation pass on MAT.
+
+DO NOT treat MAT merely as:
+- a periodic table,
+- a website,
+- an ebook,
+- a database,
+- a wiki,
+- or a scientific dashboard.
+
+MAT is all of the following simultaneously:
+
+1. a scientific/materials reference work;
+2. a digital codex/atlas;
+3. a professional handbook/data book;
+4. an encyclopedia/dictionary-style reference system;
+5. a structured knowledge graph;
+6. a machine-readable scientific dataset;
+7. an AI/ML research corpus;
+8. a future materials simulation/synthesis knowledge foundation;
+9. a conventional and unconventional research archive;
+10. a publication capable of web, ebook, print/PDF and structured-data output.
+
+Its architecture must support humans and machines without sacrificing either.
+
+============================================================
+0. NON-DESTRUCTIVE RULE
+============================================================
+
+Do not immediately redesign or rewrite the repository.
+
+FIRST audit the existing system.
+
+Preserve:
+- canonical data;
+- existing identifiers;
+- existing provenance;
+- previous migration work;
+- existing valid schemas;
+- existing useful book functionality;
+- source history;
+- unconventional/historical material;
+- author hypotheses;
+- negative results;
+- archived references.
+
+Never fabricate scientific data to make a record look complete.
+
+Use explicit values such as UNKNOWN, UNAVAILABLE, NOT_MEASURED,
+NOT_APPLICABLE, PLANNED, REQUIRES_REVIEW, or equivalent existing
+MAT null semantics when evidence is unavailable.
+
+Create a working branch before major changes.
+
+Do not delete legacy/reference material merely because it does not
+represent accepted mainstream science.
+
+============================================================
+1. RUN AND INSPECT EVERYTHING FIRST
+============================================================
+
+Before changing architecture:
+
+A. Read:
+- README.md
+- CHANGELOG.md
+- all architecture documents
+- methodology documents
+- governance documents
+- production/release documents
+- schemas
+- templates
+- source registries
+- validation scripts
+- publication build scripts
+- Studio
+- book reader
+- records
+- assets
+- downloadfiles
+
+B. Explicitly inspect:
+
+downloadfiles/ebookcraft/
+downloadfiles/ebookcraft (1)/
+
+Treat ebookcraft (1) as the newer comparative design unless evidence
+inside the project establishes otherwise.
+
+Also inspect all reference imagery in downloadfiles, including the
+Walter Russell / alternative-periodic-arrangement references.
+
+These files are design/research references.
+Do not blindly copy copyrighted artwork into MAT.
+Determine what concepts need original MAT-designed replacements.
+
+C. Run the existing MAT application and build pipelines.
+
+Use the repository's own commands where applicable:
+
+npm ci
+npm run validate
+npm test
+npm run build:book
+npm run build:publication
+npm run check:studio
+npm run test:studio
+npm run test:e2e
+
+Run MAT Studio.
+
+Run the existing book reader.
+
+Run ebookcraft and ebookcraft (1) separately if their dependency
+manifests permit it.
+
+Use browser automation / Playwright.
+
+Capture desktop, tablet and mobile screenshots.
+
+Test at minimum:
+- wide desktop;
+- normal laptop;
+- portrait tablet;
+- landscape tablet;
+- modern mobile portrait;
+- narrow/mobile accessibility viewport;
+- print/paperback preview;
+- A4/PDF preview.
+
+Do not evaluate the UI only by reading CSS or React code.
+
+Interact with it.
+
+Click the menus.
+Expand/collapse the tree.
+Open several elements.
+Open domain/sub-records.
+Search.
+Bookmark.
+Use evidence views.
+Try read-aloud.
+Try print mode.
+Try export mode.
+Try keyboard navigation.
+Resize the viewport.
+Check long tables.
+Check equations.
+Check images.
+Check citations.
+Check mobile navigation.
+Check focus states.
+
+Produce BEFORE screenshots for later comparison.
+
+============================================================
+2. TRACE THE ACTUAL DATA PIPELINE
+============================================================
+
+Trace one complete record from filesystem to browser.
+
+Start with:
+
+records/0000-Origin-State/
+
+Then:
+
+records/0001-Hydrogen-H/
+
+Follow:
+
+source Markdown/YAML
+    ->
+schema validation
+    ->
+registries
+    ->
+relationships
+    ->
+build scripts
+    ->
+publication model
+    ->
+book/index assets
+    ->
+Studio loader
+    ->
+frontend rendering
+    ->
+export formats
+
+Document exactly:
+
+WHERE the canonical fact lives;
+WHERE its prose explanation lives;
+WHERE citations live;
+WHERE relationships live;
+WHERE visual assets live;
+WHICH generated files depend on it;
+WHICH files must never be hand-edited.
+
+If there are duplicated authorities, identify and remove ambiguity
+without deleting useful content.
+
+Canonical fact ownership must be unambiguous.
+
+============================================================
+3. AUDIT RECORD COMPLETENESS
+============================================================
+
+Use 0000 and the best-developed early element records as the reference
+architecture.
+
+Audit at least:
+
+0000 Origin State
+0001 Hydrogen
+0002 Helium
+0003 Lithium
+0004 Beryllium
+0005 Boron
+0006 Carbon
+0007 Nitrogen
+0008 Oxygen
+0009 Fluorine
+
+Then inspect all subsequent records currently present in the repo,
+including Neon, Sodium, Magnesium and later generated/baseline records.
+
+DO NOT assume the point where completeness changes.
+
+Measure it.
+
+Generate a machine-produced RECORD COVERAGE MATRIX.
+
+For every element, compare:
+
+- main manuscript sections;
+- canonical data fields;
+- data subdocuments;
+- sources;
+- calculations;
+- relationships;
+- experiments;
+- graphs;
+- tables;
+- images;
+- diagrams;
+- models;
+- validation state;
+- source coverage;
+- uncertainty coverage;
+- condition coverage;
+- domain coverage;
+- narrative/history coverage;
+- citation coverage;
+- cross-link coverage;
+- visual coverage;
+- review coverage.
+
+Classify each field/content family as something equivalent to:
+
+COMPLETE
+PARTIAL
+BASELINE
+PLACEHOLDER
+MISSING
+UNKNOWN
+NOT_APPLICABLE
+REQUIRES_REVIEW
+
+Do not populate missing measurements by guessing.
+
+Save this audit as a generated QA artifact, not as hand-maintained
+scientific truth.
+
+============================================================
+4. PRESERVE THE MAT CORE RECORD MODEL
+============================================================
+
+The MAT record remains the scientific parent object.
+
+Example:
+
+MAT:0001 = Hydrogen
+
+Hydrogen must NOT become separate contradictory copies for chemistry,
+physics, biology, medicine, aerospace, etc.
+
+Instead use:
+
+ONE CANONICAL KNOWLEDGE CORE
++
+MULTIPLE DOMAIN VIEWS
++
+MULTIPLE READING DEPTHS.
+
+The canonical object owns facts.
+
+Domain pages reference, filter, interpret and extend those facts.
+
+============================================================
+5. ADD A DOMAIN-LENS ARCHITECTURE
+============================================================
+
+MAT is intended for essentially every field that uses matter or
+materials.
+
+DO NOT hard-code only:
+"chemistry, physics, biology".
+
+Create an extensible DOMAIN REGISTRY / TAXONOMY.
+
+Potential domain families include, but are not limited to:
+
+- chemistry
+- physics
+- nuclear science
+- quantum science
+- materials science
+- biology
+- biochemistry
+- medicine
+- pharmacology/pharmaceuticals
+- toxicology
+- environmental science
+- geology
+- geochemistry
+- astronomy
+- astrophysics
+- planetary science
+- energy
+- electrical engineering
+- electronic engineering
+- mechanical engineering
+- chemical engineering
+- civil engineering
+- structural engineering
+- aerospace
+- automotive
+- marine
+- manufacturing
+- metallurgy
+- ceramics
+- polymers
+- composites
+- semiconductor engineering
+- nanotechnology
+- photonics
+- optics
+- acoustics
+- magnetics
+- thermal engineering
+- cryogenics
+- plasma engineering
+- robotics
+- computing
+- AI/ML
+- simulation
+- data science
+- laboratory practice
+- industrial processes
+- agriculture
+- food science
+- textiles
+- construction
+- mining
+- recycling
+- conservation
+- archaeology
+- history of science
+- education
+- safety
+- regulation
+- metrology
+- standards
+
+Do not create empty folders for thousands of combinations.
+
+Use a registry-driven model.
+
+A domain becomes visible for an element when that domain has meaningful
+content or relationships.
+
+Allow new domains to be registered without altering every element schema.
+
+============================================================
+6. ELEMENT HOME PAGE = FRONT DOOR
+============================================================
+
+Every element/material needs a calm, professionally edited overview.
+
+The home page should orient the reader without dumping the entire
+scientific record.
+
+For an element such as Hydrogen, provide:
+
+- identity;
+- symbol and atomic number;
+- concise description;
+- natural/material manifestation;
+- why it matters;
+- where it occurs;
+- major forms/states;
+- headline physical/chemical properties;
+- key applications;
+- key hazards;
+- major scientific relationships;
+- discovery/history summary;
+- evidence/quality status;
+- links to deeper domains;
+- key visuals;
+- related records;
+- primary sources.
+
+Then allow the user to enter deeper specialist views.
+
+The overview should work for:
+- a general reader;
+- a school student;
+- a researcher orienting themselves;
+- an AI retrieving a high-level summary.
+
+It must not replace technical depth.
+
+============================================================
+7. ADD A REAL NARRATIVE / HISTORY LAYER
+============================================================
+
+MAT currently has strong factual/data architecture but should read more
+like a major reference book.
+
+Add an editorial/narrative layer where appropriate:
+
+- discovery;
+- pre-discovery knowledge;
+- naming;
+- etymology;
+- important experiments;
+- scientists/researchers;
+- major corrections to earlier understanding;
+- technological milestones;
+- industrial adoption;
+- important controversies;
+- historical models;
+- present scientific understanding;
+- remaining open questions.
+
+Do not turn every record into a novel.
+
+Use concise, well-sourced narrative sections that explain WHY the data
+matters and HOW human knowledge developed.
+
+History must distinguish:
+- contemporary evidence;
+- historical belief;
+- superseded model;
+- disputed interpretation;
+- folklore/esoteric interpretation;
+- modern verified knowledge.
+
+============================================================
+8. EVIDENCE LANES — ABSOLUTELY PRESERVE ALL REFERENCE MATERIAL
+============================================================
+
+MAT intentionally contains more than conventional textbook material.
+
+It may contain:
+
+- established science;
+- evaluated reference data;
+- derived values;
+- computational predictions;
+- emerging research;
+- hypotheses;
+- historical scientific models;
+- unconventional research;
+- esoteric systems;
+- historical claims;
+- patents;
+- testimony;
+- declassified/redacted documents;
+- archived claims;
+- mysteries;
+- disputed claims;
+- author concepts;
+- negative results;
+- alleged experiments;
+- claims whose original source cannot currently be verified.
+
+DO NOT DELETE these solely for being unconventional.
+
+DO NOT PRESENT them all as equally true.
+
+Create a strong typed EVIDENCE / CLAIM system.
+
+A claim and its evidence status are separate objects.
+
+Suggested concepts — adapt to current MAT schema rather than blindly
+replacing it:
+
+ESTABLISHED
+EVALUATED_REFERENCE
+REPLICATED_EXPERIMENT
+MEASURED
+DERIVED
+COMPUTATIONAL_PREDICTION
+EMERGING
+HYPOTHESIS
+HISTORICAL_MODEL
+SUPERSEDED
+UNCONVENTIONAL
+ESOTERIC
+ANECDOTAL
+PATENT_CLAIM
+ARCHIVAL_CLAIM
+DISPUTED
+CONTRADICTED
+UNVERIFIED
+SOURCE_UNAVAILABLE
+REDACTED
+AUTHOR_HYPOTHESIS
+
+Also retain:
+- confidence;
+- provenance;
+- date;
+- reviewer;
+- independent replication;
+- source quality;
+- counter-evidence;
+- known limitations.
+
+Never let an evidence label become a political or editorial censorship
+mechanism.
+
+It is metadata so users and AI can tell WHAT KIND OF CLAIM they are
+looking at.
+
+============================================================
+9. BUILD A FIRST-CLASS KNOWLEDGE GRAPH AND LINK SYSTEM
+============================================================
+
+Do not rely on ad-hoc Markdown hyperlinks.
+
+Create or strengthen a typed entity/relationship/link registry.
+
+Internal entities include:
+
+ELEMENT
+ISOTOPE
+ION
+MOLECULE
+COMPOUND
+MATERIAL
+ALLOTROPE
+PHASE
+PROCESS
+REACTION
+ENVIRONMENT
+APPLICATION
+EXPERIMENT
+EQUATION
+CONSTANT
+PROPERTY
+SPECTRUM
+FREQUENCY
+MODEL
+THEORY
+CLAIM
+PERSON
+ORGANIZATION
+PATENT
+PAPER
+BOOK
+DATASET
+STANDARD
+VIDEO
+WEBSITE
+IMAGE
+ARCHIVE
+SOURCE
+
+A mention of Hydrogen in another MAT record should be capable of
+resolving to MAT:0001.
+
+The renderer should support automatic or authored entity links without
+rewriting the same URL everywhere.
+
+Examples:
+
+Hydrogen
+→ internal MAT Hydrogen record.
+
+A scientist/researcher
+→ MAT person entity + appropriate authoritative external biography or
+primary source.
+
+A paper
+→ DOI / publisher / repository.
+
+A patent
+→ patent identifier and authoritative patent registry where publicly
+accessible.
+
+Wikipedia
+→ direct relevant article, treated as a tertiary reference rather than
+a primary scientific authority.
+
+YouTube/video
+→ direct exact video, channel/creator metadata, topic relationship and
+access date.
+
+Dataset
+→ exact dataset landing page/API/DOI.
+
+Standard
+→ exact standards organization record when permitted.
+
+============================================================
+10. CENTRAL SOURCE / LINK REGISTRY
+============================================================
+
+A URL should not have to be manually changed in 40 element files.
+
+Expand the existing source registry where appropriate.
+
+Each source should support fields such as:
+
+source_id
+source_type
+title
+author/person IDs
+organization
+publication
+date
+edition/version
+DOI
+ISBN
+patent_number
+URL
+archive_URL
+accessed_date
+language
+rights/licence
+primary/secondary/tertiary
+peer_review_status
+evidence_relevance
+notes
+replacement_source
+link_status
+last_checked
+content_hash where legal/useful
+
+Do not require every field for every source type.
+
+Use typed schemas.
+
+============================================================
+11. SIDE CITATIONS / MARGIN CITATIONS
+============================================================
+
+Implement proper scientific citation UX.
+
+A fact/paragraph/table/chart/equation/image should be able to carry
+fine-grained source references.
+
+Desktop:
+- margin/side citations where space allows.
+
+Tablet/mobile:
+- inline expandable citation markers / footnote sheet.
+
+Print/PDF:
+- footnotes/endnotes/reference list according to publication style.
+
+EPUB:
+- accessible EPUB note semantics.
+
+AI:
+- fact → source IDs must remain machine traversable.
+
+Citation hover/tap preview can show:
+
+- source title;
+- author;
+- year;
+- evidence type;
+- source type;
+- DOI/link;
+- data condition;
+- provenance status.
+
+Do not obscure reading with enormous citation blocks.
+
+============================================================
+12. LINK HEALTH
+============================================================
+
+The repository already has link validation.
+
+Strengthen it into source-health management.
+
+Detect:
+
+OK
+REDIRECTED
+BROKEN
+TIMEOUT
+PAYWALLED
+REMOVED
+ARCHIVED
+UNKNOWN
+
+When an external link dies:
+- do not erase historical citation identity;
+- preserve metadata;
+- try an archived/alternate legitimate source where available;
+- flag it for review.
+
+YouTube videos and public web resources may disappear.
+MAT should know the source existed even if the URL later fails.
+
+============================================================
+13. FACT-LEVEL PROVENANCE
+============================================================
+
+For important quantitative facts, retain:
+
+value
+unit
+quantity/property ID
+conditions
+temperature
+pressure
+phase
+composition
+isotope
+measurement method
+uncertainty
+significant figures
+source
+evidence status
+date/version
+review state
+
+Never treat:
+
+"melting point = X"
+
+as universally sufficient when X depends on pressure, phase,
+composition or measurement definition.
+
+This is essential for future simulation and materials synthesis.
+
+============================================================
+14. MACHINE-READABLE MAT
+============================================================
+
+Human pagination must NEVER become the canonical data structure.
+
+Every meaningful machine-readable object should have:
+
+- stable MAT ID;
+- type;
+- label;
+- relationships;
+- provenance;
+- evidence state;
+- version;
+- schema version;
+- timestamps where relevant.
+
+Provide structured exports where architecture permits:
+
+JSON
+YAML
+JSON-LD
+CSV for tabular extracts
+EPUB for reading
+HTML
+print/PDF
+potential API-ready publication model
+
+Do not generate redundant authorities.
+
+Generated exports must derive from canonical sources.
+
+Prepare the architecture so a future MAT API can support queries such as:
+
+"give all known phases of hydrogen at pressure P and temperature T"
+
+"find materials satisfying a target conductivity and thermal range"
+
+"show all claims relating element X to model Y"
+
+"return only established or independently replicated evidence"
+
+"return experimental failures involving process Z"
+
+"show sources and uncertainty for this numerical property"
+
+"traverse materials → processes → properties → applications"
+
+============================================================
+15. PROFESSIONAL / INDUSTRY USE
+============================================================
+
+A specialist should be able to find their relevant information quickly.
+
+Provide domain navigation/search/filtering rather than a giant static
+profession list.
+
+Examples:
+
+chemist:
+bonding, oxidation states, compounds, reactions, thermochemistry,
+spectroscopy.
+
+physicist:
+electronic/nuclear/quantum states, fields, phase behavior, transport,
+spectra, constants.
+
+biologist:
+biological role, biomolecules, pathways, organism/environment relevance.
+
+medicine/pharma:
+physiological relevance, isotopes/tracers, toxicology, diagnostics,
+drug/material relationships — with appropriate medical-source quality
+labels.
+
+engineer:
+material properties, tolerances, environmental dependence, processing,
+manufacturing, failure modes, standards, applications.
+
+technician:
+measurement methods, practical tables, calibration, safety, procedures,
+instrumentation.
+
+AI/ML:
+stable IDs, schemas, provenance, machine-readable relationships,
+null semantics and confidence.
+
+============================================================
+16. EDUCATION WITHOUT DUPLICATING THE SCIENCE
+============================================================
+
+Support multiple reading depths.
+
+Do not create contradictory child versions of facts for:
+- primary school;
+- secondary school;
+- college;
+- university;
+- postgraduate;
+- professional.
+
+Use progressive disclosure / reading modes.
+
+Possible levels:
+
+QUICK
+FOUNDATIONAL
+ACADEMIC
+PROFESSIONAL
+RESEARCH
+DATA
+
+The canonical science remains the same.
+
+A simpler level changes:
+- wording;
+- explanation depth;
+- terminology support;
+- number of visible fields;
+- equation depth.
+
+It does NOT change the underlying factual value.
+
+Add glossary/tooltips for terminology.
+
+============================================================
+17. FIVE-STAR BOOK / CODEX READING EXPERIENCE
+============================================================
+
+Benchmark MAT against the useful characteristics of:
+
+- premium printed reference books;
+- scientific handbooks;
+- university textbooks;
+- dictionaries;
+- thesauri;
+- encyclopedias;
+- Bibles/large cross-referenced works;
+- historical codices;
+- atlases;
+- technical data books;
+- field manuals;
+- scientific PDFs;
+- reports;
+- infographics;
+- pamphlets/quick-reference books;
+- Kindle;
+- Apple Books;
+- modern EPUB readers;
+- Wikipedia;
+- NIST-style technical references;
+- PubChem-style data references.
+
+Do not imitate one product visually.
+
+Take the strongest interaction pattern for MAT.
+
+The reading UI should feel like a BOOK first and a scientific
+workstation when deeper tools are requested.
+
+============================================================
+18. NAVIGATION
+============================================================
+
+Default navigation should be calm.
+
+Large menu trees should start collapsed.
+
+The user previously requested that front matter / foundation / data /
+methodology / visualization / index / governance / migration / back
+matter be logically grouped rather than permanently dominating the
+element navigation.
+
+Use a book/library icon and recognizable publication metaphors where
+appropriate.
+
+Provide:
+
+- table of contents;
+- chapter/section tree;
+- breadcrumbs;
+- previous/next;
+- related topic links;
+- element-to-element links;
+- domain navigation;
+- index;
+- glossary;
+- people index;
+- source index;
+- figure index;
+- table index;
+- equation index;
+- concept index.
+
+Allow deep linking directly to a section/fact/figure where technically
+possible.
+
+============================================================
+19. TRUE READING PAGINATION
+============================================================
+
+Implement OPTIONAL reading pagination.
+
+Do not store canonical content according to visual page numbers.
+
+Web/reflow:
+content adapts naturally.
+
+Paginated reader mode:
+divide presentation into stable visual page surfaces based on viewport,
+typography and content-flow rules.
+
+Print:
+generate physical page numbering.
+
+EPUB:
+let the reading system reflow according to EPUB conventions.
+
+Provide:
+- page progress;
+- chapter progress;
+- book progress;
+- next/previous page;
+- keyboard navigation;
+- touch/swipe where appropriate;
+- restore last reading position.
+
+Avoid breaking:
+- tables;
+- equations;
+- figures;
+- captions;
+- citation blocks
+across pages in unreadable ways.
+
+============================================================
+20. TYPOGRAPHY / BOOK RHYTHM
+============================================================
+
+Improve:
+
+- measure/line length;
+- margins;
+- vertical rhythm;
+- heading hierarchy;
+- paragraph spacing;
+- figure placement;
+- caption style;
+- table readability;
+- equation spacing;
+- footnotes;
+- pullouts/callouts;
+- chapter-opening treatment.
+
+Avoid turning every piece of information into a floating dashboard card.
+
+Use cards when information is modular.
+
+Use normal editorial flow when information is narrative.
+
+Allow visual quiet.
+
+A five-star technical book needs rhythm, not maximum density on every
+screen.
+
+============================================================
+21. VISUAL CONTENT SYSTEM
+============================================================
+
+Separate these categories:
+
+A. DATA-GENERATED VISUALS
+These should be generated deterministically from MAT data where
+possible:
+
+- plots;
+- line graphs;
+- bar charts;
+- scatter plots;
+- radar plots if scientifically justified;
+- phase diagrams where source data permits;
+- spectra;
+- isotope abundance charts;
+- property comparisons;
+- relationship diagrams;
+- timelines;
+- tables.
+
+Do not generate these with image AI when exact scientific values exist.
+
+Generate accessible SVG/Canvas/HTML and data tables behind them.
+
+B. SCIENTIFIC DIAGRAMS
+Generate programmatically where possible:
+- electron configurations;
+- orbital diagrams;
+- lattice diagrams;
+- process flows;
+- relationship maps;
+- atom/isotope diagrams;
+- energy-level diagrams.
+
+C. ILLUSTRATIVE/ARTISTIC ASSETS
+Use an image-generation workflow only where a genuinely illustrative
+image is required.
+
+============================================================
+22. WALTER RUSSELL / ALTERNATIVE TABLE REFERENCES
+============================================================
+
+Inspect all Walter Russell and alternative periodic-arrangement
+references currently in downloadfiles and elsewhere.
+
+The purpose is NOT to make Russell's model indistinguishable from the
+accepted periodic table.
+
+Create an "Alternative / Historical Models" lane.
+
+For each visual/model distinguish:
+
+- attribution;
+- original historical source;
+- date;
+- claimed meaning;
+- MAT reconstruction;
+- conventional scientific comparison;
+- evidence status;
+- criticisms/limitations;
+- source links.
+
+The user wants original MAT visual reconstructions including variants
+such as:
+
+- conventional table;
+- Russell-associated arrangements;
+- spiral/radial arrangements;
+- musical-note/frequency mappings;
+- angular arrangements;
+- other relevant historical representations.
+
+Generate ORIGINAL MAT diagrams based on documented geometry/data.
+
+Do not copy reference images pixel-for-pixel.
+
+Where a musical/frequency mapping is not established physical science,
+label it according to its actual evidence/model status.
+
+============================================================
+23. IMAGE LABELS
+============================================================
+
+Audit captions underneath existing/reference images.
+
+Captions must describe MAT's actual representation rather than blindly
+reuse wording embedded in a source image.
+
+Use:
+
+Figure ID
+Title
+Description
+Model/evidence lane
+Source/inspiration where required
+Rights/attribution
+Alt text
+Relationship to canonical MAT entities
+
+============================================================
+24. SEARCH
+============================================================
+
+Search should eventually span:
+
+elements
+symbols
+MAT IDs
+properties
+compounds
+materials
+processes
+applications
+people
+authors
+papers
+books
+patents
+datasets
+experiments
+models
+claims
+industries/domains
+sources
+citations
+keywords
+
+Add filter facets where useful:
+
+evidence
+domain
+source type
+record type
+review status
+date
+property
+phase
+availability
+
+Do not overload the default search UI.
+
+============================================================
+25. READER TOOLS
+============================================================
+
+Preserve useful existing features and improve them only when necessary.
+
+Review support for:
+
+- bookmark;
+- reading position;
+- notes;
+- favorites if distinct from bookmarks;
+- citation copying/export;
+- search;
+- text size;
+- theme;
+- read aloud;
+- print/PDF;
+- EPUB;
+- translation workflow;
+- share/deep-link;
+- glossary;
+- figure enlargement;
+- table expansion;
+- copy value + unit + citation.
+
+Translation must never silently alter canonical scientific meaning.
+
+============================================================
+26. HOVER / TAP INTERACTION
+============================================================
+
+Desktop:
+hover can preview:
+
+- element;
+- person;
+- definition;
+- citation;
+- source;
+- image;
+- equation variable;
+- related material.
+
+Mobile/tablet:
+the same interaction must work by tap/focus, not depend on hover.
+
+Large images may open in an accessible lightbox/detail viewer with:
+- zoom;
+- pan;
+- caption;
+- source;
+- alt description;
+- download/export only when rights allow.
+
+============================================================
+27. EXPERT REVIEW SYSTEM
+============================================================
+
+Prepare record/section review metadata.
+
+A whole element should not simply be called "verified" because one
+chemist checked one table.
+
+Support review scopes such as:
+
+- chemistry;
+- physics;
+- biology;
+- materials;
+- medical/pharma;
+- mathematics;
+- data/provenance;
+- historical;
+- editorial;
+- accessibility.
+
+Possible metadata:
+
+review_status
+review_scope
+reviewer
+credentials/organization where publishable
+date
+version reviewed
+issues
+resolution
+next_review
+
+Use sensible privacy and contributor rules.
+
+============================================================
+28. CORRECTIONS AND CONTRIBUTIONS
+============================================================
+
+Provide a controlled "suggest correction/addition" pathway.
+
+A correction must not silently overwrite canonical data.
+
+It should produce a reviewable change/proposal containing:
+
+- record;
+- exact field/section;
+- existing value;
+- suggested value;
+- evidence/source;
+- rationale;
+- submitter metadata if supplied;
+- review state.
+
+Architecture should be compatible with Git/GitHub review workflows.
+
+============================================================
+29. ACCESSIBILITY
+============================================================
+
+Treat accessibility as a release requirement.
+
+Target WCAG 2.2 AA for the web reader and applicable EPUB
+accessibility practices.
+
+Check:
+
+- semantic landmarks;
+- headings;
+- keyboard access;
+- focus;
+- screen reader labels;
+- table headers;
+- alt text;
+- color contrast;
+- non-color evidence indicators;
+- reduced motion;
+- zoom;
+- reflow;
+- touch targets;
+- captions/transcripts;
+- equation accessibility;
+- citation accessibility;
+- print readability.
+
+Animations must respect prefers-reduced-motion.
+
+============================================================
+30. RESPONSIVE DESIGN
+============================================================
+
+Desktop:
+may use margins, side citations and multi-column support areas.
+
+Tablet:
+retain book identity without squeezing side panels.
+
+Phone:
+single primary reading column.
+
+Do not shrink desktop UI until it technically fits.
+
+Recompose it.
+
+Navigation should become drawers/sheets/compact controls.
+
+Data tables should have deliberate mobile behavior.
+
+============================================================
+31. PERFORMANCE / OFFLINE
+============================================================
+
+MAT is intended to remain useful offline.
+
+Preserve or improve offline capability.
+
+Do not ship all 118+ future records, all high-resolution images and
+all 3D assets into the initial browser payload unnecessarily.
+
+Use sensible:
+- lazy loading;
+- caching;
+- indexed/offline metadata;
+- generated indexes;
+- asset sizing;
+- code splitting.
+
+Keep search useful offline where feasible.
+
+============================================================
+32. DATA VISUALIZATION QUALITY
+============================================================
+
+Every graph must have:
+
+- title;
+- variable names;
+- units;
+- axes;
+- conditions;
+- source;
+- uncertainty/error bars where available;
+- accessible alternative;
+- underlying table/download where suitable.
+
+Never create decorative scientific graphs from invented numbers.
+
+Pie charts should only be used when part-to-whole representation is
+actually appropriate.
+
+Do not use radar/spider plots merely for visual novelty.
+
+============================================================
+33. MEDICAL / SAFETY CONTENT
+============================================================
+
+Medical, pharmaceutical, toxicity and exposure information must clearly
+separate:
+
+- reference data;
+- regulatory thresholds;
+- established clinical use;
+- preclinical research;
+- historical claims;
+- speculative claims.
+
+Preserve source jurisdiction and date.
+
+Do not let MAT presentation transform experimental material into
+medical advice.
+
+============================================================
+34. PATENTS / REDACTED / HARD-TO-ACCESS SOURCES
+============================================================
+
+A patent proves that a document/claim was filed or granted according to
+its legal record; it does not by itself establish physical efficacy.
+
+Represent accordingly.
+
+For alleged non-public or unavailable material:
+
+do not invent contents.
+
+Record:
+- that a reference/claim is reported;
+- who reported it;
+- where;
+- access state;
+- what is independently verifiable;
+- what remains unavailable.
+
+============================================================
+35. CROSS-REFERENCE ENGINE
+============================================================
+
+Support explicit typed relations such as:
+
+IS_ISOTOPE_OF
+ION_OF
+COMPOUND_CONTAINS
+BONDS_WITH
+REACTS_WITH
+TRANSFORMS_TO
+PHASE_OF
+ALLOTROPE_OF
+PRODUCED_BY
+USED_IN
+MEASURED_BY
+HAS_SPECTRUM
+HAS_PROPERTY
+DEPENDS_ON
+CITED_BY
+SUPPORTED_BY
+CONTRADICTED_BY
+PROPOSED_BY
+DISCOVERED_BY
+RELATED_TO
+PART_OF
+APPLIED_IN
+HAZARD_IN
+BIOLOGICAL_ROLE
+HISTORICAL_MODEL_OF
+
+Reuse the existing MAT relationship architecture when possible.
+
+Do not introduce another incompatible graph system.
+
+============================================================
+36. PEOPLE / INTELLECTUAL LINEAGE
+============================================================
+
+Create/strengthen a structured People directory.
+
+A person should be linkable from anywhere in MAT.
+
+Separate:
+
+A. historical/scientific contributors;
+B. authors of cited publications;
+C. inventors/patent holders;
+D. MAT contributors/reviewers;
+E. people associated with unconventional/historical claims.
+
+Person pages/records may contain:
+
+name
+dates
+fields
+organizations
+known contributions
+related MAT records
+works
+patents
+sources
+external authority links
+evidence/context notes
+
+Avoid biographies becoming unsourced editorial claims.
+
+============================================================
+37. BOOK INDEXING
+============================================================
+
+Generate professional indexes where practical:
+
+- master index;
+- element/material index;
+- subject index;
+- people index;
+- compound index;
+- process index;
+- application index;
+- equation index;
+- figure index;
+- table index;
+- source/bibliography index;
+- patent index;
+- model/theory index.
+
+For the web these can be interactive.
+For print/EPUB derive appropriate equivalents.
+
+============================================================
+38. CONTENT DUPLICATION RULE
+============================================================
+
+Do not copy a canonical density value into ten profession pages as ten
+separate truths.
+
+Reference the same fact.
+
+Domain-specific prose may explain its significance differently.
+
+Example:
+
+canonical:
+hydrogen property X = value + unit + conditions + source.
+
+aerospace lens:
+explains why property X matters to storage/propulsion engineering.
+
+cryogenics lens:
+explains why property X matters at low temperature.
+
+The factual object remains one object.
+
+============================================================
+39. RECORD DIRECTORY REVIEW
+============================================================
+
+Do not blindly replace the existing:
+
+calculations/
+data/
+diagrams/
+experiments/
+graphs/
+images/
+models/
+relationships/
+sources/
+tables/
+
+This organization is valuable.
+
+Determine whether a complementary structure is needed for:
+
+domains/
+narrative/
+claims/
+citations/
+reviews/
+
+Before adding physical directories, decide whether each should instead
+be represented through metadata/registries/generated views.
+
+Prefer architecture over folder proliferation.
+
+Document the decision.
+
+============================================================
+40. FRONTEND VS BACKEND
+============================================================
+
+Strictly separate:
+
+CANONICAL KNOWLEDGE
+from
+PUBLICATION PROJECTION
+from
+USER STATE.
+
+Canonical scientific records:
+repository-controlled.
+
+Generated publication:
+rebuildable.
+
+Reader state such as bookmarks/notes/position:
+local/user-controlled unless a future optional account service is
+introduced.
+
+Do NOT require an account to read MAT.
+
+============================================================
+41. BOOK VS STUDIO
+============================================================
+
+Do not confuse MAT Studio with the public reader.
+
+STUDIO:
+authoring, review, data inspection, export, publication workflow.
+
+PUBLIC READER:
+calm, beautiful, low-friction reading/reference experience.
+
+A normal reader should not see authoring controls unless explicitly
+entering an editing/contribution environment.
+
+Audit whether this separation is currently clear enough.
+
+============================================================
+42. COMPARE EBOOKCRAFT TO MAT
+============================================================
+
+Run both ebookcraft prototypes.
+
+Create a comparative UX matrix covering:
+
+- book feeling;
+- typography;
+- navigation;
+- chapter presentation;
+- information density;
+- imagery;
+- icons;
+- interaction;
+- page rhythm;
+- responsive behavior;
+- history/narrative;
+- reference usability;
+- visual hierarchy;
+- accessibility;
+- search;
+- pagination;
+- scientific suitability.
+
+Do NOT simply replace MAT with ebookcraft.
+
+Extract only the better interaction/design ideas.
+
+MAT's scientific architecture remains authoritative.
+
+============================================================
+43. PROFESSIONAL BENCHMARK REVIEW
+============================================================
+
+Score the current MAT before changes from 1–5 for:
+
+scientific data architecture
+scientific provenance
+research usefulness
+chemist usefulness
+physicist usefulness
+biology usefulness
+medical/pharma usefulness
+engineering usefulness
+technician usefulness
+education usefulness
+general-reader usefulness
+AI/ML usefulness
+knowledge-graph maturity
+citations
+search/retrieval
+book/editorial quality
+narrative/history
+navigation
+typography
+visual hierarchy
+data visualization
+accessibility
+mobile UX
+tablet UX
+desktop UX
+print/PDF
+EPUB
+offline capability
+performance
+maintainability
+extensibility
+
+For every score below 5:
+state the concrete reason and required fix.
+
+Repeat the benchmark after implementation.
+
+Do not claim 5/5 unless measurable acceptance criteria are satisfied.
+
+============================================================
+44. IMPLEMENTATION PRIORITY
+============================================================
+
+After the audit, implement in safe dependency order.
+
+Suggested sequence:
+
+1. protect canonical architecture;
+2. establish audit/baseline;
+3. fix authority/duplication problems;
+4. strengthen typed entity/source/relationship model;
+5. introduce domain registry/lenses;
+6. improve citation granularity;
+7. improve element overview + narrative structure;
+8. improve public reader information architecture;
+9. implement book-quality reading/pagination behavior;
+10. integrate improved visual patterns from ebookcraft;
+11. generated visual/data pipeline;
+12. accessibility/responsive polish;
+13. tests;
+14. documentation.
+
+Adapt this order if repository dependencies require it.
+
+============================================================
+45. TESTING
+============================================================
+
+Add/extend automated tests for:
+
+- schema validity;
+- ID uniqueness;
+- source resolution;
+- relationship validity;
+- dead internal links;
+- external-link reporting;
+- generated publication synchronization;
+- domain registry;
+- evidence states;
+- invalid scientific null semantics;
+- citations;
+- accessibility basics;
+- keyboard navigation;
+- responsive reader;
+- search;
+- bookmarks;
+- pagination;
+- deep linking;
+- EPUB generation;
+- exports;
+- print layouts.
+
+Use Playwright for user journeys.
+
+============================================================
+46. VISUAL REGRESSION
+============================================================
+
+Capture after screenshots using the same viewports as before.
+
+Compare:
+
+BEFORE
+AFTER
+
+Especially:
+
+- landing/front page;
+- MAT:0000;
+- Hydrogen overview;
+- Hydrogen specialist/domain view;
+- history/narrative page;
+- data-heavy page;
+- graph page;
+- source/citation page;
+- alternative model page;
+- search;
+- mobile;
+- tablet;
+- paperback/A4 preview.
+
+============================================================
+47. DO NOT HIDE SCIENTIFIC COMPLEXITY
+============================================================
+
+Progressive disclosure means:
+
+simple first view
++
+deeper specialist access.
+
+It does NOT mean deleting complexity.
+
+MAT should be capable of going deeper than a normal textbook while
+remaining readable at entry level.
+
+============================================================
+48. README / DOCUMENTATION UPDATE
+============================================================
+
+After implementation update documentation explaining:
+
+- canonical architecture;
+- domain lenses;
+- evidence lanes;
+- knowledge graph;
+- citations;
+- source registry;
+- review workflow;
+- publication pipeline;
+- generated content;
+- public reader vs Studio;
+- how to add a new domain;
+- how to add a source;
+- how to add a relation;
+- how to add a visualization;
+- how to mark unknown data;
+- how to run validation;
+- how to build and preview.
+
+Do not overwrite important historical documentation.
+
+============================================================
+49. COMPLETION REPORT
+============================================================
+
+At the end give me:
+
+A. Executive review of the original MAT.
+B. Exact architectural problems found.
+C. Exact files changed.
+D. Exact files added.
+E. Exact migrations performed.
+F. Data-completeness matrix.
+G. Broken/weak source report.
+H. Internal/external link report.
+I. UI/UX benchmark before and after.
+J. Accessibility result.
+K. Build/test results.
+L. Before/after screenshot locations.
+M. Remaining image-generation requirements.
+N. Remaining scientific-data gaps.
+O. Remaining expert-review requirements.
+P. Recommended next production record/element.
+Q. Git diff summary.
+R. Commit hashes.
+
+Do not report a test as passed unless you actually executed it.
+
+============================================================
+50. STOP CONDITIONS
+============================================================
+
+STOP and report rather than fabricate if:
+
+- a canonical schema decision is genuinely ambiguous;
+- a migration would destroy scientific provenance;
+- a source cannot be verified;
+- a number cannot be sourced;
+- a licence/rights decision belongs to the repository owner;
+- a change would invalidate MAT IDs;
+- a generated visualization requires unavailable data.
+
+Otherwise proceed autonomously through the audit, implementation,
+testing and visual validation.
+
+============================================================
+FINAL PRODUCT STANDARD
+============================================================
+
+MAT should feel:
+
+to a casual reader:
+like a beautifully produced scientific atlas/book;
+
+to a student:
+like a navigable textbook and encyclopedia;
+
+to a scientist:
+like a traceable professional reference;
+
+to an engineer:
+like a usable technical handbook;
+
+to a historian:
+like a sourced history of ideas and discoveries;
+
+to an unconventional/esoteric researcher:
+like a comprehensive but evidence-labelled archive;
+
+to an AI:
+like a typed, versioned, provenance-rich scientific knowledge graph;
+
+to a developer:
+like a stable data platform with deterministic publication outputs.
+
+The target is not "a prettier periodic table".
+
+The target is a five-star, research-grade,
+human-and-machine Materials Atlas Table Codex.
+
+Begin by auditing and running the existing repository.
+Do not redesign from assumptions.
+```
+
+One thing I would **not** ask Codex to do in that first pass is mass-fill all later elements. First make the architecture capable of representing them correctly, run the early-record coverage comparison, and identify the precise point and categories where the production depth drops. Then we can use that report to build the second production prompt that fills Neon onward using the fully locked MAT template without contaminating the records with guessed values.
+
+That separation matters: **architecture first, scientific completion second, image generation third.** The charts, tables, spectra and property plots that are derivable from actual numerical data should be generated by code; only genuine illustrations and original reconstructions need an image-generation pass. That is the safest way to get MAT from a very ambitious repository to something I would consider genuinely publishable and useful as the materials knowledge foundation you have in mind.

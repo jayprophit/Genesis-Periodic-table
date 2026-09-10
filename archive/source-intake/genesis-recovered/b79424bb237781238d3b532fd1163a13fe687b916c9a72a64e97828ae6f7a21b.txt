@@ -1,0 +1,218 @@
+registry_id: "MAT:0010:REG:ATOMIC-SPECTRUM"
+record_id: "MAT:0010"
+version: "1.0.0"
+
+wavelength_convention:
+
+  NIST_ASD:
+    vacuum_below:
+      value: 200
+      unit: "nm"
+
+    air_between:
+      minimum: 200
+      maximum: 2000
+      unit: "nm"
+
+    vacuum_above:
+      value: 2000
+      unit: "nm"
+
+species:
+
+  Ne_I:
+
+    ground_state:
+      configuration: "2s2 2p6"
+      term: "1S0"
+      J: 0
+
+    selected_ground_resonance_lines:
+
+      - wavelength:
+          value: 61.56283
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 162435.6780
+
+      - wavelength:
+          value: 61.86716
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 161636.6175
+
+      - wavelength:
+          value: 61.91023
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 161524.1739
+
+      - wavelength:
+          value: 62.68232
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 159534.6196
+
+      - wavelength:
+          value: 73.58962
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 135888.7173
+
+      - wavelength:
+          value: 74.37195
+          unit: "nm"
+          medium: "VACUUM"
+        upper_level_cm1: 134459.2871
+
+    selected_visible_persistent_lines:
+
+      - wavelength:
+          value: 540.05618
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 585.24879
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 602.99969
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 607.43377
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 614.30626
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 632.81646
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 640.2248
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 650.65281
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 692.94673
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+      - wavelength:
+          value: 703.24131
+          unit: "nm"
+          medium: "STANDARD-AIR"
+
+  Ne_II:
+
+    ground_state:
+      configuration: "2s2 2p5"
+      term: "2P°3/2"
+
+    selected_persistent_lines:
+
+      - wavelength:
+          value: 35.29549
+          unit: "nm"
+          medium: "VACUUM"
+
+      - wavelength:
+          value: 35.49620
+          unit: "nm"
+          medium: "VACUUM"
+
+      - wavelength:
+          value: 44.50393
+          unit: "nm"
+          medium: "VACUUM"
+
+      - wavelength:
+          value: 44.62552
+          unit: "nm"
+          medium: "VACUUM"
+
+      - wavelength:
+          value: 44.65902
+          unit: "nm"
+          medium: "VACUUM"
+
+      - wavelength:
+          value: 46.07284
+          unit: "nm"
+          medium: "VACUUM"
+
+metastable_Ne_I:
+
+  lower_3s_family:
+
+    - level_id: "MAT:0010:ESTATE:NE-3S-J2"
+
+      configuration:
+        "2p5(2P°3/2)3s"
+
+      term:
+        "2[3/2]°"
+
+      J: 2
+
+      energy:
+        value: 134041.8400
+        unit: "cm-1"
+
+      classification:
+        metastable: true
+
+      exact_radiative_lifetime:
+        status: "DATA-EXTRACTION-REQUIRED"
+
+    - level_id: "MAT:0010:ESTATE:NE-3S-J0"
+
+      configuration:
+        "2p5(2P°1/2)3s"
+
+      term:
+        "2[1/2]°"
+
+      J: 0
+
+      energy:
+        value: 134818.6405
+        unit: "cm-1"
+
+      classification:
+        metastable: true
+
+      exact_radiative_lifetime:
+        status: "DATA-EXTRACTION-REQUIRED"
+
+  radiatively_allowed_3s_J1_levels:
+
+    - energy_cm1: 134459.2871
+      J: 1
+
+    - energy_cm1: 135888.7173
+      J: 1
+
+rules:
+  selected_spectrum_is_exhaustive: false
+  exhaustive_NIST_export_status: "NON-CORE-DATA-EXTRACTION"
+  metastable_means_infinite_lifetime: false
+  discharge_line_equals_laser_output: false
+  air_wavelength_equals_vacuum_wavelength: false
+  universal_neon_frequency: false
+
+source_id: "SRC-000208"

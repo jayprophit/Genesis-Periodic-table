@@ -1,0 +1,2796 @@
+The Sodium core is now ready to migrate. The recovered historical `G0011` is **1,284 lines** and correctly identifies Sodium as the first explicit period-3 restart after Neon: \([Ne]3s^1\), paired with Lithium as the first strong **same-valence-pattern / different-shell** comparison.
+
+A few values are worth tightening before the MAT version. NIST gives neutral Sodium as \([Ne]3s\), \(^{2}S_{1/2}\), with first ionization energy **5.13907696 ± 0.00000025 eV**. The second ionization jumps to **47.28636 ± 0.00025 eV**, because Na⁺ has the Neon closed shell. Natural Sodium is monoisotopic ²³Na with mass **22.9897692820(19) u** and standard atomic weight **22.98976928(2)**. ([NIST][1])
+
+The legacy D-line values are also right in substance; current NIST values are **588.995095 nm** and **589.5924 nm**, representing the fine-structure split \(3s\,^2S_{1/2}\rightarrow3p\,^2P^\circ_{3/2,1/2}\) transitions. ([NIST][2])
+
+# 0011 — Sodium — Na
+
+```yaml
+mat_id: MAT:0011
+record_name: Sodium
+symbol: Na
+record_class: CHEMICAL_ELEMENT
+atomic_number: 11
+parent_id: MAT:0000
+schema_version: 1.0.0
+record_version: 1.0.0
+status: RESEARCHED
+legacy_id: G0011
+legacy_name: Sodium
+
+reference_implementation:
+  - MAT:0001
+  - MAT:0002
+  - MAT:0003
+  - MAT:0004
+  - MAT:0005
+  - MAT:0006
+  - MAT:0007
+  - MAT:0008
+  - MAT:0009
+  - MAT:0010
+```
+
+# 0. Record Navigation
+
+Previous:
+
+```text
+MAT:0010
+0010-Neon-Ne
+```
+
+Current:
+
+```text
+MAT:0011
+0011-Sodium-Na
+```
+
+---
+
+# 1. Elemental Identity
+
+| Property               | Value          |
+| ---------------------- | -------------- |
+| Element                | Sodium         |
+| Symbol                 | Na             |
+| Atomic number          | 11             |
+| Protons                | 11             |
+| Neutral electrons      | 11             |
+| Period                 | 3              |
+| Group                  | 1              |
+| Block                  | s              |
+| Ground configuration   | [Ne]3s¹        |
+| Ground level           | ²S₁/₂          |
+| Standard atomic weight | 22.98976928(2) |
+| Stable natural isotope | ²³Na           |
+| Common oxidation state | +1             |
+| State near 20 °C       | solid metal    |
+
+Primary sources:
+
+```text
+SRC-000214
+SRC-000215
+SRC-000216
+SRC-000217
+```
+
+---
+
+# 2. Period-3 Shell Restart
+
+Neon closes the second period:
+
+$$
+Ne=[He]2s^22p^6
+$$
+
+Sodium begins the third:
+
+$$
+Na=[Ne]3s^1
+$$
+
+Thus:
+
+$$
+\boxed{
+2p^6\rightarrow3s^1
+}
+$$
+
+This is MAT's first explicit:
+
+```text
+CLOSED-SHELL
+→
+NEW-VALENCE-SHELL
+```
+
+transition.
+
+---
+
+# 3. Historical Genesis Cycle → MAT Periodic Repetition
+
+The legacy record correctly compared:
+
+$$
+Li=[He]2s^1
+$$
+
+with:
+
+$$
+Na=[Ne]3s^1
+$$
+
+MAT formalizes this as:
+
+```text
+SAME OUTER-ELECTRON COUNT
++
+DIFFERENT PRINCIPAL SHELL
+```
+
+or:
+
+$$
+\boxed{
+\text{periodic repetition}
++
+\text{radial expansion}
+}
+$$
+
+It is not exact physical repetition.
+
+---
+
+# 4. Lithium–Sodium Periodic Relationship
+
+Resolved elemental relationship:
+
+```text
+MAT:0003
+↔
+MAT:0011
+```
+
+Shared:
+
+```text
+group_1: true
+outer_s_electrons: 1
+common_cation_charge: +1
+metallic_elemental_state: true
+```
+
+Different:
+
+```text
+principal_valence_shell:
+  Li: 2
+  Na: 3
+
+ionic_radius:
+  identical: false
+
+metallic_radius:
+  identical: false
+
+ionization_energy:
+  identical: false
+
+host_material_compatibility:
+  identical: false
+```
+
+Core rule:
+
+$$
+\boxed{
+\text{same valence pattern}
+\neq
+\text{same material behaviour}
+}
+$$
+
+---
+
+# 5. Atomic Ground State
+
+Neutral Sodium:
+
+$$
+[Ne]3s^1
+$$
+
+Ground level:
+
+$$
+{}^2S_{1/2}
+$$
+
+Canonical object:
+
+```text
+MAT:0011:ATOM:Na
+```
+
+The single \(3s\) valence electron makes neutral atomic Sodium open-shell.
+
+---
+
+# 6. First Ionisation
+
+$$
+Na\rightarrow Na^++e^-
+$$
+
+NIST ASD:
+
+$$
+E_{I1}
+=
+5.13907696\pm0.00000025\ {\rm eV}
+$$
+
+Canonical ion:
+
+```text
+MAT:0011:ION:Na+1
+```
+
+---
+
+# 7. Closed-Shell Sodium Ion
+
+Removing the \(3s\) electron gives:
+
+$$
+Na^+
+=
+[Ne]
+$$
+
+Therefore:
+
+$$
+\boxed{
+Na^+
+\text{ is isoelectronic with }
+Ne
+}
+$$
+
+Electron count:
+
+$$
+10
+$$
+
+But:
+
+$$
+Z_{Na}=11
+$$
+
+while:
+
+$$
+Z_{Ne}=10
+$$
+
+so the systems remain physically distinct.
+
+---
+
+# 8. First-to-Second Ionisation Jump
+
+First ionization:
+
+$$
+5.13907696\ {\rm eV}
+$$
+
+Second ionization:
+
+$$
+47.28636\ {\rm eV}
+$$
+
+Ratio:
+
+$$
+\frac{47.28636}{5.13907696}
+\approx9.20
+$$
+
+The large jump reflects the transition from removing:
+
+```text
+OUTER 3s VALENCE ELECTRON
+```
+
+to disrupting:
+
+```text
+NEON-LIKE CLOSED SHELL
+```
+
+This is one of MAT's cleanest electronic-shell energy signatures.
+
+---
+
+# 9. Ionisation Ladder
+
+NIST ASD:
+
+$$
+E_{I1}=5.13907696\ {\rm eV}
+$$
+
+$$
+E_{I2}=47.28636\ {\rm eV}
+$$
+
+$$
+E_{I3}=[71.6200]\ {\rm eV}
+$$
+
+$$
+E_{I4}=[98.936]\ {\rm eV}
+$$
+
+$$
+E_{I5}=138.404\ {\rm eV}
+$$
+
+$$
+E_{I6}=[172.23]\ {\rm eV}
+$$
+
+$$
+E_{I7}=[208.504]\ {\rm eV}
+$$
+
+$$
+E_{I8}=[264.192]\ {\rm eV}
+$$
+
+$$
+E_{I9}=(299.856)\ {\rm eV}
+$$
+
+$$
+E_{I10}=(1465.0992)\ {\rm eV}
+$$
+
+$$
+E_{I11}=(1648.702285)\ {\rm eV}
+$$
+
+Source evaluation brackets/parentheses are retained.
+
+---
+
+# 10. Dominant Chemical State
+
+Ordinary Sodium chemistry overwhelmingly favours:
+
+$$
+Na^+
+$$
+
+rather than:
+
+$$
+Na^{2+}
+$$
+
+because the first ionization removes a single outer electron and the next begins disrupting the closed shell.
+
+This makes Na⁺ an important MAT reference for:
+
+```text
+MOBILE-MONOVALENT-CATION
+```
+
+---
+
+# 11. Natural Isotope Simplicity
+
+Natural Sodium is conventionally monoisotopic:
+
+$$
+{}^{23}Na
+$$
+
+NIST composition:
+
+$$
+1
+$$
+
+Relative atomic mass:
+
+$$
+22.9897692820(19)\ u
+$$
+
+Canonical isotope:
+
+```text
+MAT:0011:ISO:Na-23
+```
+
+---
+
+# 12. Sodium-23
+
+Nucleus:
+
+```text
+Z = 11
+N = 12
+A = 23
+```
+
+Status:
+
+```text
+STABLE
+```
+
+Spin/parity:
+
+$$
+\frac32^+
+$$
+
+Nuclear spin:
+
+$$
+I=\frac32
+$$
+
+Therefore naturally occurring Sodium is intrinsically NMR-active.
+
+---
+
+# 13. Sodium-23 NMR
+
+Because:
+
+$$
+I=\frac32
+$$
+
+²³Na is a quadrupolar NMR nucleus.
+
+Relevant domains:
+
+```text
+solution chemistry
+electrolytes
+glasses
+ceramics
+solid electrolytes
+battery electrodes
+biological tissues
+ion transport
+```
+
+Unlike ¹³C studies, natural Sodium does not require rare-isotope enrichment simply to obtain a spin-active nucleus.
+
+Required rule:
+
+```text
+23Na NMR FREQUENCY
+=
+MAGNETIC-FIELD-DEPENDENT
+```
+
+There is no universal Sodium NMR frequency.
+
+---
+
+# 14. Sodium-22
+
+Canonical child:
+
+```text
+MAT:0011:ISO:Na-22
+```
+
+Reference half-life:
+
+$$
+t_{1/2}
+\approx2.6018\ {\rm y}
+$$
+
+Principal daughter:
+
+```text
+MAT:0010:ISO:Ne-22
+```
+
+Decay family:
+
+```text
+BETA-PLUS
+ELECTRON-CAPTURE
+```
+
+Important photon:
+
+$$
+1274.537\ {\rm keV}
+$$
+
+with positron annihilation radiation also present following β⁺ decay.
+
+Primary roles:
+
+```text
+calibration
+tracing
+nuclear metrology
+research
+```
+
+---
+
+# 15. Decay Energy ≠ Practical Battery
+
+²²Na contains usable nuclear decay energy.
+
+That does not automatically make it a useful general-purpose power source.
+
+Required engineering variables would include:
+
+```text
+isotope availability
+specific activity
+conversion efficiency
+radiation shielding
+thermal management
+radiation damage
+system mass
+cost
+regulation
+```
+
+Therefore:
+
+$$
+\boxed{
+\text{available decay energy}
+\neq
+\text{practical energy-storage device}
+}
+$$
+
+The historical energy-harvesting idea is retained as a conceptual comparison only.
+
+---
+
+# 16. Sodium-24 Activation Branch
+
+Stable:
+
+$$
+{}^{23}Na
+$$
+
+can undergo neutron capture:
+
+$$
+{}^{23}Na+n
+\rightarrow
+{}^{24}Na
+$$
+
+²⁴Na then beta-decays principally to:
+
+$$
+{}^{24}Mg
+$$
+
+Reference half-life:
+
+$$
+14.997\pm0.012\ {\rm h}
+$$
+
+Strong gamma lines include approximately:
+
+$$
+1368.630\ {\rm keV}
+$$
+
+and:
+
+$$
+2754.049\ {\rm keV}
+$$
+
+This establishes a future resolved nuclear edge:
+
+```text
+Na
+→
+Mg
+```
+
+once Magnesium child records exist.
+
+---
+
+# 17. Nuclear versus Chemical Sodium
+
+Compare:
+
+Chemical:
+
+$$
+Na\rightarrow Na^++e^-
+$$
+
+Nuclear:
+
+$$
+{}^{24}Na\rightarrow{}^{24}Mg+\beta^-+\bar\nu_e+\gamma
+$$
+
+These are categorically different transformations.
+
+Required MAT rule:
+
+```text
+IONIZATION
+!=
+NUCLEAR TRANSMUTATION
+```
+
+---
+
+# 18. Isotope Architecture
+
+Current NIST atomic-mass table spans:
+
+$$
+{}^{18}Na
+$$
+
+through:
+
+$$
+{}^{37}Na
+$$
+
+within its present dataset.
+
+This includes:
+
+```text
+proton-rich states
+radioactive bound nuclides
+stable 23Na
+neutron-rich states
+estimated masses
+particle-unbound states
+```
+
+Exact binding/lifetime semantics belong in the full isotope-child pass.
+
+---
+
+# 19. Sodium D Lines
+
+The most recognizable neutral-Sodium transitions are:
+
+$$
+588.995095\ {\rm nm}
+$$
+
+and:
+
+$$
+589.5924\ {\rm nm}
+$$
+
+They arise from:
+
+$$
+3s\,{}^2S_{1/2}
+\rightarrow
+3p\,{}^2P^\circ_{3/2}
+$$
+
+and:
+
+$$
+3s\,{}^2S_{1/2}
+\rightarrow
+3p\,{}^2P^\circ_{1/2}
+$$
+
+respectively.
+
+---
+
+# 20. Fine Structure Matters
+
+The familiar yellow Sodium feature is a doublet rather than a single electronic line.
+
+Thus:
+
+$$
+\boxed{
+\text{apparently one colour}
+\neq
+\text{one atomic transition}
+}
+$$
+
+Spin–orbit splitting creates distinct upper \(3p\) levels.
+
+---
+
+# 21. Excitation to Light
+
+General path:
+
+$$
+Na+E
+\rightarrow
+Na^*
+$$
+
+followed by:
+
+$$
+Na^*
+\rightarrow
+Na+h\nu
+$$
+
+Possible excitation inputs:
+
+```text
+thermal
+flame
+electron collision
+electrical discharge
+photon absorption
+plasma
+```
+
+This produces the strong Sodium spectral signature.
+
+---
+
+# 22. Flame Emission
+
+Volatile/excited Sodium species can generate intense yellow emission in a flame.
+
+This provides a classic analytical relationship:
+
+```text
+CHEMICAL SAMPLE
+→
+THERMAL EXCITATION
+→
+ATOMIC SPECTRUM
+→
+ELEMENT IDENTIFICATION
+```
+
+Flame colour is not a bulk ground-state property of solid metallic Sodium or sodium salts.
+
+---
+
+# 23. No Universal Sodium Frequency
+
+Mechanisms must remain separated:
+
+```text
+Na I electronic spectrum
+Na II spectrum
+fine-structure splitting
+23Na NMR
+NaCl lattice phonons
+battery-ion hopping
+biological Na+ transport
+plasma collision frequencies
+metallic electron response
+```
+
+Therefore no valid scalar:
+
+```text
+sodium_frequency
+```
+
+exists.
+
+---
+
+# 24. Metallic Sodium
+
+At ordinary conditions elemental Sodium is a soft metallic solid.
+
+Representative properties:
+
+Density:
+
+$$
+\rho\approx0.97\ {\rm g\,cm^{-3}}
+$$
+
+Melting point:
+
+$$
+97.794^\circ{\rm C}
+$$
+
+Boiling point:
+
+$$
+882.940^\circ{\rm C}
+$$
+
+Elemental-metal properties must remain distinct from Na⁺ compounds.
+
+---
+
+# 25. Liquid Sodium
+
+Above its melting point:
+
+$$
+Na(s)\rightarrow Na(l)
+$$
+
+Liquid Sodium retains metallic electronic conduction while gaining fluid transport.
+
+This enables:
+
+```text
+heat transfer
+electromagnetic pumping
+conductive-fluid experiments
+MHD research
+specialized reactor coolant systems
+```
+
+---
+
+# 26. Magnetohydrodynamic State
+
+For conducting liquid metal, one important force-density term is:
+
+$$
+\mathbf f=\mathbf J\times\mathbf B
+$$
+
+The behavior depends on:
+
+```text
+electrical conductivity
+fluid velocity
+magnetic field
+current density
+geometry
+temperature
+surface chemistry
+```
+
+Thus:
+
+$$
+\boxed{
+Na(l)
+\neq
+NaCl(s)
+\neq
+Na^+_{\rm biological}
+}
+$$
+
+even though all contain Sodium.
+
+---
+
+# 27. Sodium–Potassium Future Relationship
+
+Future:
+
+```text
+MAT:0011
+↔
+MAT:0019
+```
+
+Relevant material family:
+
+```text
+NaK
+```
+
+Alloying can produce compositions liquid over wider temperature ranges than either pure elemental metal.
+
+This creates:
+
+$$
+\boxed{
+\text{composition}
+\rightarrow
+\text{melting-range engineering}
+}
+$$
+
+---
+
+# 28. Sodium and Water
+
+Simplified reaction:
+
+$$
+2Na+2H_2O
+\rightarrow
+2NaOH+H_2
+$$
+
+This is an energetic redox reaction.
+
+Relevant outputs include:
+
+```text
+Na+ formation
+OH- chemistry
+H2 generation
+heat release
+phase change
+possible ignition
+```
+
+It is a material-safety relationship, not merely a stoichiometric equation.
+
+---
+
+# 29. Causali E — Multi-Output Water Reaction
+
+Initial state:
+
+$$
+B=Na^0
+$$
+
+Intervention:
+
+$$
+A=H_2O
+$$
+
+Candidate outputs include:
+
+$$
+C_1=Na^+
+$$
+
+$$
+C_2=OH^-
+$$
+
+$$
+C_3=H_2
+$$
+
+$$
+C_4=\text{thermal-energy redistribution}
+$$
+
+Thus one intervention can produce multiple chemically and energetically distinct state changes.
+
+---
+
+# 30. Chlorine Relationship
+
+Future parent:
+
+```text
+MAT:0017
+```
+
+Relationship:
+
+```text
+MAT:0011
+↔
+MAT:0017
+```
+
+Important material:
+
+```text
+MAT:CMP:NaCl
+```
+
+Idealized electron-transfer picture:
+
+$$
+Na\rightarrow Na^++e^-
+$$
+
+$$
+Cl+e^-\rightarrow Cl^-
+$$
+
+Solid NaCl then forms an extended ionic lattice.
+
+Important qualification:
+
+```text
+IONIC BOND MODEL
+!=
+LITERAL LOCALIZED CLASSICAL ELECTRON TRANSFER AT ALL TIMES
+```
+
+The crystal electronic structure is collective.
+
+---
+
+# 31. Oxygen Relationship
+
+Resolved parent:
+
+```text
+MAT:0008
+↔
+MAT:0011
+```
+
+Important Sodium–Oxygen chemical states include:
+
+```text
+Na2O
+Na2O2
+NaO2
+NaOH
+Na2CO3
+NaHCO3
+sodium silicates
+sodium phosphates
+```
+
+These must remain independent material/species children.
+
+---
+
+# 32. Oxide / Peroxide / Superoxide Separation
+
+Sodium provides a useful extension of the Oxygen species registry:
+
+Oxide:
+
+$$
+Na_2O
+$$
+
+Peroxide:
+
+$$
+Na_2O_2
+$$
+
+Superoxide:
+
+$$
+NaO_2
+$$
+
+The Oxygen electronic species differ:
+
+```text
+O2-
+O2^2-
+O2^-
+```
+
+respectively.
+
+Thus:
+
+$$
+\boxed{
+\text{same two elements}
++
+\text{different stoichiometry}
+=
+\text{different electronic species}
+}
+$$
+
+---
+
+# 33. Carbon Relationship
+
+Resolved parent:
+
+```text
+MAT:0006
+↔
+MAT:0011
+```
+
+Important materials:
+
+```text
+Na2CO3
+NaHCO3
+sodium carboxylates
+hard-carbon battery hosts
+```
+
+This forms a high-connectivity:
+
+```text
+Na-C-O
+```
+
+chemical/material network.
+
+---
+
+# 34. Fluorine Relationship
+
+Resolved parent:
+
+```text
+MAT:0009
+↔
+MAT:0011
+```
+
+Important material:
+
+$$
+NaF
+$$
+
+Comparison:
+
+$$
+LiF
+\leftrightarrow
+NaF
+$$
+
+provides:
+
+```text
+same anion
+same nominal cation charge
+different cation size
+different lattice energetics
+different transport/material properties
+```
+
+---
+
+# 35. Nitrogen Relationship
+
+Resolved parent:
+
+```text
+MAT:0007
+↔
+MAT:0011
+```
+
+Important species include:
+
+```text
+NaNO3
+NaNO2
+NaN3
+NaNH2
+```
+
+Core rule:
+
+$$
+\boxed{
+\text{same Na}^+
+\neq
+\text{same compound behaviour}
+}
+$$
+
+The partner ion and structure remain decisive.
+
+---
+
+# 36. Sodium-Ion Energy Storage
+
+Na⁺ is MAT's second major mobile alkali-metal battery ion after Li⁺.
+
+Current principal material families include:
+
+```text
+hard-carbon anodes
+layered-oxide cathodes
+polyanionic cathodes
+Prussian-blue / Prussian-white analogues
+liquid electrolytes
+solid electrolytes
+```
+
+Battery behavior depends on:
+
+```text
+host structure
+defects
+surface state
+electrolyte
+interface
+temperature
+state of charge
+cycling history
+```
+
+---
+
+# 37. Lithium-Ion versus Sodium-Ion
+
+Both ions have:
+
+$$
+q=+1
+$$
+
+but their size and energetics differ.
+
+Therefore:
+
+$$
+\boxed{
+\text{same charge}
++
+\text{different ion size}
+\rightarrow
+\text{different host compatibility}
+}
+$$
+
+Possible consequences include:
+
+```text
+different diffusion barriers
+different interlayer spacing requirements
+different host strain
+different preferred phases
+different interfacial chemistry
+```
+
+---
+
+# 38. Graphite versus Hard Carbon
+
+A major Li/Na comparison is:
+
+```text
+Li+ + graphite
+```
+
+versus:
+
+```text
+Na+ + hard carbon
+```
+
+Conventional graphite does not provide the same broadly useful Sodium-storage pathway found for Lithium under ordinary commercial Li-ion conditions.
+
+Hard carbon therefore occupies a central Sodium-ion anode role.
+
+Important hard-carbon variables include:
+
+```text
+interlayer spacing
+micropore structure
+closed-pore volume
+defects
+surface functional groups
+heteroatoms
+particle morphology
+electrolyte
+SEI
+```
+
+---
+
+# 39. Layered Sodium Oxides
+
+Important structural families include:
+
+```text
+P2
+O3
+other stacking / transition variants
+```
+
+Performance can depend on:
+
+```text
+Na site geometry
+transition-metal substitution
+oxygen stacking
+phase transitions
+air stability
+vacancies
+redox mechanism
+```
+
+Thus:
+
+$$
+\boxed{
+\text{crystal geometry}
+\rightarrow
+\text{ion mobility and phase behaviour}
+}
+$$
+
+---
+
+# 40. Prussian-Blue-Type Frameworks
+
+Open-framework Sodium cathodes provide cavities and channels for Na⁺.
+
+Relevant state variables include:
+
+```text
+framework vacancies
+coordinated water
+interstitial water
+transition-metal composition
+Na occupancy
+particle size
+defect distribution
+```
+
+This reinforces:
+
+$$
+\boxed{
+\text{void topology}
+\rightarrow
+\text{ion accessibility}
+}
+$$
+
+---
+
+# 41. Current Technology Context
+
+By 2026 Sodium-ion batteries have moved beyond purely laboratory research into early commercial/mass-production contexts.
+
+MAT does not encode this as:
+
+```text
+SODIUM-ION HAS REPLACED LITHIUM-ION
+```
+
+Instead:
+
+```text
+technology_state: COMMERCIALIZING
+application_fit: CONTEXT-DEPENDENT
+```
+
+Lithium-ion and Sodium-ion remain distinct engineering systems with different trade-offs.
+
+---
+
+# 42. Biological Sodium
+
+In animal physiology, Sodium functions primarily as:
+
+$$
+Na^+
+$$
+
+Key roles include:
+
+```text
+membrane potential
+action potentials
+secondary active transport
+osmotic balance
+fluid balance
+muscle function
+nerve signalling
+```
+
+These are ionic-system properties, not properties of metallic Na.
+
+---
+
+# 43. Sodium–Potassium ATPase
+
+Canonical biological relationship:
+
+```text
+MAT:0011
+↔
+MAT:0019
+```
+
+A common pump stoichiometry is:
+
+$$
+3Na^+_{\rm in}
++
+2K^+_{\rm out}
++
+ATP
+$$
+
+leading to transport of:
+
+$$
+3Na^+
+$$
+
+outward and:
+
+$$
+2K^+
+$$
+
+inward per ATP hydrolysed.
+
+The process is electrogenic because one net positive charge moves outward per cycle.
+
+---
+
+# 44. Biological Electrochemical Potential
+
+A membrane may maintain:
+
+$$
+\Delta[Na^+]
+$$
+
+together with:
+
+$$
+\Delta V
+$$
+
+The electrochemical potential combines concentration and electric-potential terms.
+
+This provides a rigorous conceptual connection between:
+
+```text
+biological membranes
+battery electrolytes
+solid ion conductors
+electrochemical cells
+```
+
+without claiming the systems are mechanically identical.
+
+---
+
+# 45. Natural Sodium
+
+Free elemental Sodium is not a major natural terrestrial reservoir because it is chemically reactive.
+
+Natural Sodium occurs chiefly as ionic compounds.
+
+Important geological/environmental reservoirs include:
+
+```text
+seawater
+halite
+evaporites
+silicates
+feldspars
+clays
+dissolved salts
+```
+
+Therefore:
+
+```text
+NATURAL SODIUM
+!=
+METALLIC Na
+```
+
+---
+
+# 46. High-Pressure Sodium
+
+At sufficiently high pressure Sodium departs dramatically from the ordinary nearly-free-electron metal picture.
+
+Experiment around:
+
+$$
+\sim200\ {\rm GPa}
+$$
+
+identified an optically transparent, wide-bandgap insulating phase.
+
+The structure is commonly described as:
+
+```text
+hP4
+```
+
+with electrons displaced toward lattice interstitial regions.
+
+---
+
+# 47. Electride-Type High-Pressure State
+
+At extreme compression, core overlap pushes valence-electron density into interstitial regions.
+
+The resulting high-pressure state can be described using an electride-like picture:
+
+```text
+atomic cores
++
+interstitial localized electron density
+```
+
+Thus:
+
+$$
+\boxed{
+\text{compression of a metal}
+\not\Rightarrow
+\text{monotonically more metallic behaviour}
+}
+$$
+
+This is one of Sodium's most important counterintuitive condensed-matter results.
+
+---
+
+# 48. Pressure as Electronic-Structure Control
+
+Initial state:
+
+```text
+ordinary metallic Na
+```
+
+Intervention:
+
+```text
+extreme compression
+```
+
+Candidate state:
+
+```text
+transparent insulating dense Na
+```
+
+Same element.
+
+Different structure.
+
+Different electron localization.
+
+Different optical/electronic properties.
+
+Therefore:
+
+$$
+\boxed{
+P
+\rightarrow
+\text{structure}
+\rightarrow
+\text{electron localization}
+\rightarrow
+\text{electronic phase}
+}
+$$
+
+---
+
+# 49. Sodium–Neon Isoelectronic Edge
+
+Resolved parent elements:
+
+```text
+MAT:0010
+↔
+MAT:0011
+```
+
+Specific state relation:
+
+```text
+MAT:0011:ION:Na+1
+↔
+MAT:0010:ATOM:Ne
+```
+
+Status:
+
+```text
+RESERVED-PENDING-Na+-CHILD-FILE
+```
+
+Shared electron count:
+
+$$
+10
+$$
+
+---
+
+# 50. Ten-Electron Series Extension
+
+The sequence now includes:
+
+$$
+N^{3-}
+$$
+
+$$
+O^{2-}
+$$
+
+$$
+F^-
+$$
+
+$$
+Ne
+$$
+
+$$
+Na^+
+$$
+
+with:
+
+$$
+Mg^{2+}
+$$
+
+to follow.
+
+This lets MAT compare nuclear charge at nearly fixed electron configuration.
+
+---
+
+# 51. Causali E — Ionisation
+
+Initial:
+
+$$
+B=Na
+$$
+
+Intervention:
+
+$$
+A=E
+$$
+
+Candidate:
+
+$$
+C=Na^++e^-
+$$
+
+The unusually low first ionization threshold relative to the second provides a measurable shell-boundary response.
+
+---
+
+# 52. Causali E — Battery Insertion
+
+Initial host:
+
+$$
+H_0
+$$
+
+Ion:
+
+$$
+Na^+
+$$
+
+Intervention:
+
+```text
+electrochemical potential
+```
+
+Candidate:
+
+$$
+H(Na_x)
+$$
+
+Possible changed variables include:
+
+```text
+lattice parameter
+electronic state
+oxidation state
+phase
+stress
+diffusion pathway
+interfacial state
+```
+
+---
+
+# 53. Causali E — Membrane Transport
+
+Initial:
+
+```text
+Na+ concentration gradient
++
+membrane potential
+```
+
+Intervention:
+
+```text
+channel opening
+or
+ATP-driven transport
+```
+
+Candidate outputs:
+
+```text
+ion flux
+membrane-voltage change
+osmotic response
+secondary transport
+```
+
+This is a multi-output causal network.
+
+---
+
+# 54. Causali E — High Pressure
+
+Initial:
+
+$$
+B=Na_{\rm metal}
+$$
+
+Intervention:
+
+$$
+A=P
+$$
+
+Candidate near extreme compression:
+
+$$
+C=Na_{\rm insulating/electride-like}
+$$
+
+This demonstrates:
+
+$$
+\boxed{
+\text{same composition}
++
+\text{different pressure}
+=
+\text{different electronic phase}
+}
+$$
+
+---
+
+# 55. Main Sodium Result
+
+Sodium introduces several major MAT principles:
+
+$$
+\boxed{
+\text{periodic repetition}
+\neq
+\text{exact physical repetition}
+}
+$$
+
+$$
+\boxed{
+\text{same ion charge}
+\neq
+\text{same host compatibility}
+}
+$$
+
+$$
+\boxed{
+\text{same element}
++
+\text{different physical state}
+=
+\text{different field physics}
+}
+$$
+
+$$
+\boxed{
+\text{compression}
+\not\Rightarrow
+\text{monotonically greater metallicity}
+}
+$$
+
+and:
+
+$$
+\boxed{
+\text{biological ion transport}
+\text{ and }
+\text{engineered electrochemistry}
+\text{ share electrochemical principles}
+}
+$$
+
+without being the same system.
+
+---
+
+# 56. Current Status
+
+```yaml
+status: RESEARCHED
+migration_status: CONTENT-CORE-MIGRATED
+schema_validation_status: PENDING
+scientific_core: RESEARCHED
+visual_specification: NOT-YET-LOCKED
+visual_assets: NOT-GENERATED
+```
+
+The high-pressure branch is particularly valuable: experimentally, Sodium becomes optically transparent near **200 GPa**, with a wide-bandgap insulating hP4 phase attributed to core overlap, \(p\)-\(d\) hybridization and valence-electron density being pushed into interstitial regions. That gives MAT a direct counterexample to the naive rule “compression always makes a metal more metallic.” ([Nature][3])
+
+The battery material branch is also current rather than historical. A January 2026 *Nature Reviews Chemistry* review treats structure, substitution, redox behavior and phase evolution in layered Sodium oxides as central design variables; a March 2026 review likewise identifies hard carbon, layered oxides, polyanionic compounds and Prussian-blue analogues among the major Sodium-ion material families. ([Nature][4])
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na.yaml
+
+```yaml
+mat_id: "MAT:0011"
+record_name: "Sodium"
+symbol: "Na"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 11
+
+legacy:
+  legacy_id: "G0011"
+  migration_status: "CONTENT-CORE-MIGRATED"
+
+identity:
+  proton_count: 11
+  neutral_electron_count: 11
+  period: 3
+  group: 1
+  block: "s"
+
+atomic_weight:
+  value: 22.98976928
+  uncertainty: 0.00000002
+  source_id: "SRC-000215"
+
+electronic_ground_state:
+  configuration: "[Ne]3s1"
+  term: "2S1/2"
+  open_shell: true
+  source_id: "SRC-000214"
+
+periodic_architecture:
+
+  period_start:
+    closed_shell_parent: "MAT:0010"
+    new_shell: 3
+    outer_configuration: "3s1"
+
+  lithium_analogue:
+    element: "MAT:0003"
+    relationship: "SAME-VALENCE-PATTERN-DIFFERENT-SHELL"
+
+  principle:
+    "PERIODIC-REPETITION-PLUS-RADIAL-EXPANSION"
+
+ionization:
+
+  first:
+    value: 5.13907696
+    uncertainty: 0.00000025
+    unit: "eV"
+
+  second:
+    value: 47.28636
+    uncertainty: 0.00025
+    unit: "eV"
+
+  third:
+    value: 71.6200
+    uncertainty: 0.0012
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  fourth:
+    value: 98.936
+    uncertainty: 0.012
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  fifth:
+    value: 138.404
+    uncertainty: 0.012
+    unit: "eV"
+
+  sixth:
+    value: 172.23
+    uncertainty: 0.05
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  seventh:
+    value: 208.504
+    uncertainty: 0.012
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  eighth:
+    value: 264.192
+    uncertainty: 0.022
+    unit: "eV"
+    qualifier: "NIST-SQUARE-BRACKET"
+
+  ninth:
+    value: 299.856
+    uncertainty: 0.007
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  tenth:
+    value: 1465.0992
+    uncertainty: 0.0007
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  eleventh:
+    value: 1648.702285
+    uncertainty: 0.000005
+    unit: "eV"
+    qualifier: "NIST-PARENTHESIZED"
+
+  source_id: "SRC-000214"
+
+dominant_ion:
+
+  id: "MAT:0011:ION:Na+1"
+
+  charge: 1
+
+  electron_configuration:
+    "[Ne]"
+
+  electron_count: 10
+
+  isoelectronic_with:
+    - "MAT:0010:ATOM:Ne"
+
+spectroscopy:
+
+  D2:
+    wavelength:
+      value: 588.995095
+      uncertainty: 0.000003
+      unit: "nm"
+      medium: "STANDARD-AIR"
+
+    transition:
+      lower: "3s 2S1/2"
+      upper: "3p 2P°3/2"
+
+  D1:
+    wavelength:
+      value: 589.5924
+      unit: "nm"
+      medium: "STANDARD-AIR"
+
+    transition:
+      lower: "3s 2S1/2"
+      upper: "3p 2P°1/2"
+
+  source_id: "SRC-000217"
+
+physical_reference:
+
+  state_20C: "SOLID"
+
+  density:
+    approximate_value: 0.97
+    unit: "g/cm3"
+
+  melting_point:
+    value: 97.794
+    unit: "degC"
+
+  boiling_point:
+    value: 882.940
+    unit: "degC"
+
+  source_id: "SRC-000216"
+
+high_pressure:
+
+  transparent_dense_sodium:
+
+    observed: true
+
+    approximate_pressure:
+      value: 200
+      unit: "GPa"
+
+    structure: "hP4"
+
+    electronic_state:
+      metallic: false
+      transparent: true
+      wide_bandgap_dielectric: true
+
+    mechanism:
+      - core_overlap
+      - p_d_hybridization
+      - interstitial_valence_electron_localization
+
+    evidence: "MEASURED+COMPUTATIONAL-INTERPRETATION"
+
+    source_id: "SRC-000219"
+
+isotope_branch:
+
+  NIST_mass_range:
+    minimum: 18
+    maximum: 37
+
+  stable:
+    - "MAT:0011:ISO:Na-23"
+
+  key_radioactive:
+    - "MAT:0011:ISO:Na-21"
+    - "MAT:0011:ISO:Na-22"
+    - "MAT:0011:ISO:Na-24"
+    - "MAT:0011:ISO:Na-25"
+    - "MAT:0011:ISO:Na-26"
+
+biological_architecture:
+
+  principal_state:
+    "Na+"
+
+  roles:
+    - membrane_potential
+    - nerve_signalling
+    - muscle_function
+    - osmotic_balance
+    - secondary_active_transport
+
+  Na_K_ATPase:
+
+    Na_out:
+      value: 3
+
+    K_in:
+      value: 2
+
+    ATP:
+      value: 1
+
+    electrogenic: true
+
+    source_id: "SRC-000222"
+
+battery_architecture:
+
+  charge_carrier:
+    "Na+"
+
+  major_material_families:
+    anodes:
+      - hard_carbon
+
+    cathodes:
+      - layered_oxides
+      - polyanionic_materials
+      - Prussian_blue_analogues
+
+  status_2026:
+    "COMMERCIALIZING"
+
+  source_ids:
+    - "SRC-000220"
+    - "SRC-000221"
+
+relationships:
+
+  resolved:
+    - "MAT:0003"
+    - "MAT:0006"
+    - "MAT:0007"
+    - "MAT:0008"
+    - "MAT:0009"
+    - "MAT:0010"
+
+  future:
+    - "MAT:0012"
+    - "MAT:0017"
+    - "MAT:0019"
+
+scientific_status:
+
+  atomic_identity: "ESTABLISHED"
+  Na_plus_closed_shell: "ESTABLISHED"
+  Na23_monoisotopic_natural_state: "ESTABLISHED"
+  D_line_fine_structure: "ESTABLISHED"
+  metallic_sodium: "ESTABLISHED"
+  sodium_ion_batteries: "ESTABLISHED-TECHNOLOGY"
+  biological_Na_transport: "ESTABLISHED"
+  high_pressure_insulating_sodium: "ESTABLISHED"
+
+status: "RESEARCHED"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-Reference.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:ISOTOPE-REFERENCE"
+parent_id: "MAT:0011"
+version: "1.0.0"
+
+NIST_atomic_mass_table:
+
+  minimum_mass_number: 18
+  maximum_mass_number: 37
+  source_id: "SRC-000215"
+
+stable_isotope:
+
+  isotope_id: "MAT:0011:ISO:Na-23"
+
+  mass_number: 23
+  protons: 11
+  neutrons: 12
+
+  relative_atomic_mass:
+    value: 22.9897692820
+    uncertainty: 0.0000000019
+    unit: "u"
+
+  isotopic_composition:
+    value: 1
+
+  stability: "STABLE"
+  half_life: "NOT-APPLICABLE"
+
+  spin_parity: "3/2+"
+
+  NMR_active: true
+
+key_radioactive_isotopes:
+
+  Na21:
+
+    isotope_id: "MAT:0011:ISO:Na-21"
+
+    approximate_half_life:
+      value: 22.4
+      unit: "s"
+
+    principal_decay: "BETA-PLUS"
+
+    daughter:
+      id: "MAT:0010:ISO:Ne-21"
+      status: "RESOLVED"
+
+    exact_evaluated_child:
+      status: "NEXT-BATCH"
+
+  Na22:
+
+    isotope_id: "MAT:0011:ISO:Na-22"
+
+    half_life:
+      value: 2.6018
+      unit: "y"
+
+    decay:
+      - BETA-PLUS
+      - ELECTRON-CAPTURE
+
+    daughter:
+      id: "MAT:0010:ISO:Ne-22"
+      status: "RESOLVED"
+
+    gamma_reference:
+      value: 1274.537
+      unit: "keV"
+
+    exact_child:
+      status: "NEXT-BATCH"
+
+  Na24:
+
+    isotope_id: "MAT:0011:ISO:Na-24"
+
+    half_life:
+      value: 14.997
+      uncertainty: 0.012
+      unit: "h"
+
+    decay:
+      principal: "BETA-MINUS"
+
+    daughter:
+      id: "MAT:0012:ISO:Mg-24"
+      status: "RESERVED-PENDING-MAGNESIUM"
+
+    gamma_lines:
+
+      - value: 1368.630
+        unit: "keV"
+
+      - value: 2754.049
+        unit: "keV"
+
+    activation_relationship:
+      parent:
+        "MAT:0011:ISO:Na-23"
+
+      reaction:
+        "23Na(n,gamma)24Na"
+
+  Na25:
+
+    isotope_id: "MAT:0011:ISO:Na-25"
+    principal_decay: "BETA-MINUS"
+    exact_evaluated_child:
+      status: "NEXT-BATCH"
+
+  Na26:
+
+    isotope_id: "MAT:0011:ISO:Na-26"
+    principal_decay: "BETA-MINUS"
+    exact_evaluated_child:
+      status: "NEXT-BATCH"
+
+rules:
+
+  mass_table_entry_implies_bound_state: false
+
+  stable_half_life:
+    representation: "NOT-APPLICABLE"
+
+  natural_composition_is_monoisotopic: true
+
+  gamma_energy_requires_decay_source: true
+
+  detailed_NUBASE_extraction:
+    status: "NEXT-BATCH"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000218"
+```
+
+The nuclear references above are deliberately separated by function. IAEA metrology data give the ²²Na **1274.537 keV** photon and the principal ²⁴Na lines at **1368.630** and **2754.049 keV**; IAEA activation guidance gives ²⁴Na \(T_{1/2}=14.997\pm0.012\) h. ([Nuclear Data Section][5])
+
+The biology relation is also suitable for MAT rather than merely an application note: Na⁺/K⁺-ATPase commonly transports **3 Na⁺ outward and 2 K⁺ inward per ATP**, creating a net outward positive-charge movement and contributing to electrochemical gradients. ([PubMed][6])
+
+# APPEND TO: data/registries/sources.yaml
+
+```yaml
+  - source_id: "SRC-000214"
+    source_aliases:
+      - "SRC-NA-001"
+    title: "NIST Atomic Spectra Database — Sodium Ionization Energies"
+    organization: "National Institute of Standards and Technology"
+    database: "ASD v5.12"
+    source_type: "EVALUATED-ATOMIC-SPECTROSCOPY"
+    supports:
+      - sodium_ground_configuration
+      - sodium_ground_level
+      - sodium_ionization_ladder
+      - Na_plus_closed_shell
+
+  - source_id: "SRC-000215"
+    source_aliases:
+      - "SRC-NA-002"
+    title: "Atomic Weights and Isotopic Compositions for Sodium"
+    organization: "National Institute of Standards and Technology"
+    source_type: "EVALUATED-ISOTOPE-DATABASE"
+    supports:
+      - sodium_standard_atomic_weight
+      - Na23_mass
+      - Na23_isotopic_composition
+      - Na18_to_Na37_mass_table
+
+  - source_id: "SRC-000216"
+    source_aliases:
+      - "SRC-NA-003"
+    title: "Sodium — Element Information, Properties and Uses"
+    organization: "Royal Society of Chemistry"
+    source_type: "SCIENTIFIC-REFERENCE"
+    supports:
+      - sodium_density
+      - sodium_melting_point
+      - sodium_boiling_point
+      - metallic_sodium
+      - sodium_water_reaction
+      - sodium_heat_transfer
+
+  - source_id: "SRC-000217"
+    source_aliases:
+      - "SRC-NA-004"
+    title: "NIST Handbook of Basic Atomic Spectroscopic Data — Neutral Sodium"
+    organization: "National Institute of Standards and Technology"
+    source_type: "EVALUATED-ATOMIC-SPECTROSCOPY"
+    supports:
+      - Na_D1
+      - Na_D2
+      - sodium_fine_structure
+      - sodium_flame_emission
+
+  - source_id: "SRC-000218"
+    source_aliases:
+      - "SRC-NA-NUC-001"
+    title: "IAEA Recommended Sodium-22 and Sodium-24 Decay and Activation Data"
+    organization: "International Atomic Energy Agency"
+    source_type: "EVALUATED-NUCLEAR-DECAY-AND-METROLOGY"
+    supports:
+      - Na22_half_life
+      - Na22_1274_537_keV
+      - Na24_half_life
+      - Na24_1368_630_keV
+      - Na24_2754_049_keV
+      - Na23_neutron_activation
+
+  - source_id: "SRC-000219"
+    source_aliases:
+      - "SRC-NA-HP-001"
+    title: "Transparent dense sodium"
+    authors:
+      - "Yanming Ma"
+      - "Mikhail Eremets"
+      - "Artem R. Oganov"
+      - "Yu Xie"
+      - "Ivan Trojan"
+      - "Sergey Medvedev"
+      - "Andriy O. Lyakhov"
+      - "Mario Valle"
+      - "Vitali Prakapenka"
+    journal: "Nature"
+    year: 2009
+    volume: 458
+    pages: "182-185"
+    doi: "10.1038/nature07786"
+    source_type: "PRIMARY-HIGH-PRESSURE-EXPERIMENT"
+    supports:
+      - transparent_sodium
+      - insulating_dense_sodium
+      - hP4_sodium
+      - high_pressure_electride_like_state
+      - pressure_induced_electron_localization
+
+  - source_id: "SRC-000220"
+    source_aliases:
+      - "SRC-NA-BATT-001"
+    title: "Substitution and electrochemistry in layered oxide cathode materials for sodium-ion batteries"
+    journal: "Nature Reviews Chemistry"
+    year: 2026
+    volume: 10
+    pages: "196-211"
+    doi: "10.1038/s41570-025-00795-3"
+    source_type: "CURRENT-SODIUM-ION-MATERIALS-REVIEW"
+    supports:
+      - sodium_layered_oxides
+      - substitution
+      - phase_transitions
+      - sodium_transport
+      - structure_property_relationships
+
+  - source_id: "SRC-000221"
+    source_aliases:
+      - "SRC-NA-BATT-002"
+    title: "Sodium-Ion Batteries: materials chemistry, interfaces and industrialization progress"
+    year: 2026
+    journal: "Ionics"
+    volume: 32
+    pages: "4899-4980"
+    doi: "10.1007/s11581-026-07080-3"
+    source_type: "CURRENT-SODIUM-ION-TECHNOLOGY-REVIEW"
+    supports:
+      - hard_carbon
+      - layered_oxide
+      - polyanionic_cathodes
+      - Prussian_blue_analogues
+      - sodium_electrolytes
+      - commercialization
+
+  - source_id: "SRC-000222"
+    source_aliases:
+      - "SRC-NA-BIO-001"
+    title: "Physiology, Sodium Potassium Pump"
+    source_type: "BIOLOGICAL-REFERENCE"
+    supports:
+      - sodium_potassium_ATPase
+      - 3_Na_out
+      - 2_K_in
+      - membrane_potential
+      - osmotic_balance
+```
+
+# UPDATE: docs/05-index/01-Record-Index.md
+
+```text
+0011 | Sodium | Na | 11 | IN-PROGRESS
+```
+
+# UPDATE: docs/07-migration/01-Legacy-File-Map.md
+
+```text
+G0011 | records/0011-Sodium-Na/ | IN-PROGRESS
+```
+
+# RESOLVE PRIOR ELEMENT REFERENCES
+
+## Neon → Sodium
+
+Parent relationship:
+
+```text
+MAT:0010
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Specific ion relation:
+
+```text
+MAT:0010:ATOM:Ne
+↔
+MAT:0011:ION:Na+1
+```
+
+Status:
+
+```text
+RESERVED-PENDING-Na+-CHILD-FILE
+```
+
+until a dedicated ion child exists.
+
+---
+
+## Oxygen → Sodium
+
+Parent:
+
+```text
+MAT:0008
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Specific:
+
+```text
+Na2O
+Na2O2
+NaO2
+NaOH
+```
+
+remain material/species children.
+
+---
+
+## Fluorine → Sodium
+
+Parent:
+
+```text
+MAT:0009
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Specific:
+
+```text
+NaF
+```
+
+remains a material child.
+
+---
+
+## Carbon → Sodium
+
+Parent:
+
+```text
+MAT:0006
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Relationship classes:
+
+```text
+carbonate chemistry
+bicarbonate chemistry
+hard-carbon battery host
+```
+
+---
+
+## Nitrogen → Sodium
+
+Parent:
+
+```text
+MAT:0007
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Specific children include:
+
+```text
+NaNO3
+NaNO2
+NaN3
+NaNH2
+```
+
+---
+
+## Lithium → Sodium
+
+Parent:
+
+```text
+MAT:0003
+↔
+MAT:0011
+```
+
+Status:
+
+```text
+RESOLVED
+```
+
+Relationship:
+
+```text
+PERIODIC-ANALOGUE
+GROUP-1
+MOBILE-CATION-COMPARISON
+BATTERY-COMPARISON
+```
+
+---
+
+# NUCLEAR FORWARD REFERENCES
+
+Because the Sodium isotope child files have not yet been generated:
+
+```text
+MAT:0010:ISO:Ne-23
+→
+MAT:0011:ISO:Na-23
+```
+
+remains:
+
+```text
+RESERVED-PENDING-Na23-CHILD
+```
+
+even though the Sodium parent record now exists.
+
+Likewise:
+
+```text
+MAT:0011:ISO:Na-24
+→
+MAT:0012:ISO:Mg-24
+```
+
+remains:
+
+```text
+RESERVED-PENDING-MAGNESIUM
+```
+
+---
+
+# CURRENT SODIUM STATE
+
+```yaml
+record: "MAT:0011"
+
+status: "RESEARCHED"
+migration_status: "CONTENT-CORE-MIGRATED"
+
+completion:
+
+  legacy_source_recovered: true
+
+  atomic_identity: true
+  period_3_shell_restart: true
+  lithium_periodic_analogue: true
+
+  ionization_architecture: true
+  first_second_ionization_jump: true
+  Na_plus_closed_shell_architecture: true
+
+  isotope_mass_range: true
+  Na23_stable_core: true
+  Na23_NMR_core: true
+
+  Na22_decay_core: true
+  Na24_activation_core: true
+
+  D_line_spectroscopy: true
+  fine_structure_architecture: true
+  flame_emission_core: true
+  no_universal_frequency: true
+
+  metallic_sodium: true
+  liquid_sodium: true
+  MHD_architecture: true
+
+  water_reaction: true
+
+  oxygen_relationship: true
+  carbon_relationship: true
+  fluorine_relationship: true
+  nitrogen_relationship: true
+  chlorine_forward_relationship: true
+
+  sodium_ion_battery_core: true
+  Li_vs_Na_host_compatibility: true
+  hard_carbon_architecture: true
+  layered_oxide_architecture: true
+  Prussian_blue_architecture: true
+
+  biological_sodium: true
+  Na_K_ATPase_core: true
+  electrochemical_potential_biology_link: true
+
+  natural_sodium_state: true
+
+  high_pressure_transparent_sodium: true
+  electride_like_high_pressure_state: true
+
+remaining:
+
+  - exact_Na18_to_Na37_nuclear_child_files
+  - Na21_decay_Q
+  - Na22_decay_Q_and_branching
+  - Na24_decay_Q
+  - neutron_rich_sodium_semantics
+
+  - detailed_23Na_NMR_registry
+  - full_Na_I_Na_II_spectrum
+  - hyperfine_structure
+  - laser_cooling_atomic_physics_branch
+
+  - ambient_crystal_structure_and_elastic_properties
+  - liquid_sodium_thermophysical_properties
+  - liquid_sodium_electrical_thermal_transport
+
+  - NaK_material_relationship
+  - NaCl_detailed_relationship
+  - NaOH
+  - Na2O_Na2O2_NaO2
+  - Na2CO3_NaHCO3
+  - NaH
+  - NaBH4
+  - NaAlH4
+
+  - seawater_and_halite_registry
+  - silicate_and_evaporite_geochemistry
+
+  - sodium_ion_battery_detailed_layer
+  - hard_carbon_mechanism
+  - P2_O3_layered_oxide_registry
+  - Prussian_blue_registry
+  - solid_electrolytes
+
+  - biological_gradient_registry
+  - nerve_action_potential_relationship
+
+  - high_pressure_phase_sequence
+  - electride_electron_density_model
+
+  - full_relationship_registry
+  - people_and_intellectual_lineage
+  - experiments
+  - tables
+  - graph_manifest
+
+  - V01_to_V18_visual_specification
+  - G0011_migration_audit
+  - schema_validation
+
+schema_validation_status: "PENDING"
+visual_specification: "NOT-YET-LOCKED"
+visual_assets: "NOT-GENERATED"
+```
+
+This first Sodium batch preserves the most important idea in `G0011`: **periodicity is recurrence with changed scale and context, not duplication**. Lithium and Sodium both expose an \(s^1\) valence pattern and prefer +1 ions, yet the larger Sodium ion changes lattice fit, diffusion, carbon-host compatibility, melting behavior and electrochemical design.
+
+The next Sodium pass is the **full isotope + metallic/electrochemical/material layer**: ¹⁸Na–³⁷Na nuclear children, exact ²²Na/²⁴Na decay calculations, ²³Na NMR/hyperfine structure, liquid-Sodium transport, NaK, NaCl/NaOH/oxides/carbonates/hydrides, seawater/halite geochemistry, detailed hard-carbon/P2/O3/Prussian-blue/solid-electrolyte architecture, and the full high-pressure Sodium phase/electride sequence.
+
+[1]: https://physics.nist.gov/cgi-bin/Elements/elInfo.pl?context=text&element=11&utm_source=chatgpt.com "physics.nist.gov Elemental Data Index: 11 Sodium"
+[2]: https://physics.nist.gov/PhysRefData/Handbook/Tables/sodiumtable3_a.htm?utm_source=chatgpt.com "Persistent Lines of Neutral Sodium ( Na I )"
+[3]: https://www.nature.com/articles/nature07786?utm_source=chatgpt.com "Transparent dense sodium | Nature"
+[4]: https://www.nature.com/articles/s41570-025-00795-3?utm_source=chatgpt.com "Substitution and electrochemistry in layered oxide cathode materials for sodium-ion batteries | Nature Reviews Chemistry"
+[5]: https://www-nds.iaea.org/index-meeting-crp/TM_IRDFF_Dosimetry/docs/NDS-IRDFF-II.pdf?utm_source=chatgpt.com "IRDFF-II: An Updated Neutron Metrology LibraryA. Trkov,<sup>1</sup> P.J. Griffin,<sup>2</sup> S.P. Simakov,<sup>3</sup> L.R. Greenwood,<sup>4</sup> K.I. Zolotarev,<sup>5</sup> R. Capote,<sup>1</sup>"
+[6]: https://pubmed.ncbi.nlm.nih.gov/30725773/?utm_source=chatgpt.com "Physiology, Sodium Potassium Pump - PubMed"

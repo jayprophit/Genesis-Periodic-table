@@ -1,0 +1,46 @@
+{
+  "id": "records/0013-Aluminium-Al/calculations/0013-Aluminium-Al-CALC-002-Al28-to-Si28.md",
+  "key": "3408681bc3c5f5736e1a",
+  "mat": "MAT:0013",
+  "title": "Aluminium-28 → Silicon-28",
+  "section": "Material Atlas Table",
+  "lane": "science",
+  "body": "> **Imported research — review pending.** Recovered from [49.txt, line 827](../../../archive/source-intake/mat-42-52/49.txt). Source assertions of validation are historical statements, not independent test results. See the intake ledger for duplicates and unresolved references.\n\n# Aluminium-28 → Silicon-28\n\n\\[\n{}^{28}\\mathrm{Al}\n\\rightarrow\n{}^{28}\\mathrm{Si}\n+\ne^-\n+\n\\bar{\\nu}_e\n\\]\n\nUsing neutral atomic mass excesses:\n\n\\[\nME(^{28}\\mathrm{Al})\n=\n-16850.72\\ \\mathrm{keV}\n\\]\n\n\\[\nME(^{28}\\mathrm{Si})\n=\n-21492.7971\\ \\mathrm{keV}\n\\]\n\nFor beta-minus decay using neutral atomic masses:\n\n\\[\nQ_{\\beta^-}\n=\nME_p-ME_d\n\\]\n\nThus:\n\n\\[\nQ_{\\beta^-}\n=\n-16850.72\n-\n(-21492.7971)\n\\]\n\n\\[\n\\boxed{\nQ_{\\beta^-}\n=\n4642.0771\\ \\mathrm{keV}\n}\n\\]\n\nApproximate propagated uncertainty:\n\n\\[\n\\sigma_Q\n\\approx\n0.050\\ \\mathrm{keV}\n\\]\n\nFull chain:\n\n\\[\n\\boxed{\n{}^{28}\\mathrm{Mg}\n\\rightarrow\n{}^{28}\\mathrm{Al}\n\\rightarrow\n{}^{28}\\mathrm{Si}\n}\n\\]\n\nThese remain two distinct nuclear transformations.\n\n```yaml\ncalculation_id: \"MAT:0013:CALC:002\"\n\nparent: \"MAT:0013:ISO:Al-28\"\ndaughter: \"MAT:0014:ISO:Si-28\"\n\nq_beta_minus:\n  value: 4.6420771\n  uncertainty: 0.000050\n  unit: \"MeV\"\n\nprior_chain_parent:\n  id: \"MAT:0012:ISO:Mg-28\"\n  status: \"RESOLVED\"\n\nsource_id: \"SRC-000278\"\n\n[1]: https://cpc.ihep.ac.cn/article/doi/10.1088/1674-1137/abddae \"https://cpc.ihep.ac.cn/article/doi/10.1088/1674-1137/abddae\"\n[2]: https://fsunuc.physics.fsu.edu/git/rtang/PtolemyGUI/src/commit/939b63a79f354795f6202c1eed0619f48504d579/frecsoTools/nubase_4.mas20.txt \"https://fsunuc.physics.fsu.edu/git/rtang/PtolemyGUI/src/commit/939b63a79f354795f6202c1eed0619f48504d579/frecsoTools/nubase_4.mas20.txt\"\n[3]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10784626/ \"https://pmc.ncbi.nlm.nih.gov/articles/PMC10784626/\"\n[4]: https://physics.nist.gov/PhysRefData/Handbook/Tables/aluminumtable3.htm \"https://physics.nist.gov/PhysRefData/Handbook/Tables/aluminumtable3.htm\"\n[5]: https://www.aanda.org/articles/aa/pdf/2017/05/aa29854-16.pdf \"https://www.aanda.org/articles/aa/pdf/2017/05/aa29854-16.pdf\"\n[6]: https://physics.nist.gov/cgi-bin/ASD/lines_hold.pl?el=Al \"https://physics.nist.gov/cgi-bin/ASD/lines_hold.pl?el=Al\"\n",
+  "bodyHash": "e2611907d453e1bee6186ffa78b41d8c4caa52c4a26f1e7cb4c6dc0a5d8df902",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [
+    {
+      "source_id": "SRC-000278",
+      "title": "The NUBASE2020 evaluation of nuclear physics properties",
+      "authors": [
+        "F. G. Kondev",
+        "M. Wang",
+        "W. J. Huang",
+        "S. Naimi",
+        "G. Audi"
+      ],
+      "publication": "Chinese Physics C",
+      "volume": 45,
+      "article": "030001",
+      "year": 2021,
+      "doi": "10.1088/1674-1137/abddae",
+      "source_class": "EVALUATED-NUCLEAR-DATA",
+      "authority": "PRIMARY-EVALUATED-REFERENCE",
+      "intake_origin": "48.txt",
+      "verification_status": "CITATION-RECOVERED-NEEDS-REVIEW",
+      "url": "https://doi.org/10.1088/1674-1137/abddae",
+      "same_work_as": "SRC-000008",
+      "scope_note": "Record-specific accession retained for backwards compatibility; this is not independent corroborating evidence."
+    }
+  ],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 1
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

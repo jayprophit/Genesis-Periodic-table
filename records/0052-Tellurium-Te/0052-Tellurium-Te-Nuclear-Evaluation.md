@@ -1,0 +1,91 @@
+# Tellurium — Evaluated Nuclear States
+
+<!-- generated-by: sync-nuclear-evaluation.mjs -->
+
+**MAT Core Data · dated evaluation.** 64 nuclear states are transcribed from NUBASE2020, published in 2021. This is a reproducible source extraction, not independent experimental validation or a claim that later research is complete.
+
+- [Parent Tellurium record](0052-Tellurium-Te.md)
+- [Structured evaluation](data/isotopes/0052-Tellurium-Te-NUBASE2020-Evaluation.yaml)
+- [Retained original source](../../data/catalog/sources/nubase_4.mas20.txt)
+- [Evaluation paper](https://doi.org/10.1088/1674-1137/abddae) · SRC-000008
+
+## How to read this table
+
+A is the mass number; N is the neutron count. Ground states, isomers, levels and isobaric analogue states retain the source state index. Mass excess is in keV, not atomic mass units. A `#` means an estimate from systematics; `?`, inequalities, asymmetric uncertainty text and spin qualifiers are preserved. `stbl` means stable in this evaluation, `p-unst` means particle unstable. Blank source fields remain unavailable. The final column preserves decay/abundance notation without equating decay branching with natural abundance.
+
+## Nuclear state catalogue
+
+| Nuclide / state | N | Mass excess | Half-life | Spin / parity | Decay or abundance (source text) | Source line |
+|---|---:|---|---|---|---|---:|
+| 104Te | 52 | -49630 keV (unc. 320) | <4 ns | 0+ | A=100 | 1829 |
+| 105Te | 53 | -52810 keV (unc. 300) | 633 ns (unc. 66) | (7/2+) | A~100 | 1850 |
+| 106Te | 54 | -58220 keV (unc. 100) | 78 us (unc. 11) | 0+ | A=100 | 1871 |
+| 107Te | 55 | -60660# keV (unc. 100#) | 3.22 ms (unc. 0.09) | 5/2+# | A=70 30;B+ ?;B+p ? | 1895 |
+| 108Te | 56 | -65782 keV (unc. 5) | 2.1 s (unc. 0.1) | 0+ | B+=51 4;A=49 4;B+p=2.4 10;B+A<0.065 | 1915 |
+| 109Te | 57 | -67715 keV (unc. 4) | 4.4 s (unc. 0.2) | (5/2+) | B+=96.1 13;A=3.9 13;B+p=9.4 31;B+A<0.0049 | 1942 |
+| 110Te | 58 | -72230 keV (unc. 7) | 18.6 s (unc. 0.8) | 0+ | B+~100;A ? | 1962 |
+| 111Te | 59 | -73587 keV (unc. 6) | 26.2 s (unc. 0.6) | (5/2)+ | B+=100;B+p=? | 1983 |
+| 112Te | 60 | -77568 keV (unc. 8) | 2.0 m (unc. 0.2) | 0+ | B+=100 | 2005 |
+| 113Te | 61 | -78347 keV (unc. 28) | 1.7 m (unc. 0.2) | (7/2+) | B+=100 | 2028 |
+| 114Te | 62 | -81890 keV (unc. 24) | 15.2 m (unc. 0.7) | 0+ | B+=100 | 2052 |
+| 115Te | 63 | -82063 keV (unc. 28) | 5.8 m (unc. 0.2) | 7/2+ | B+=100 | 2077 |
+| 115Te · m [1] | 63 | -82053 keV (unc. 30) | 6.7 m (unc. 0.4) | (1/2+) | B+~100;IT ? | 2078 |
+| 115Te · n [2] | 63 | -81783 keV (unc. 28) | 7.5 us (unc. 0.2) | 11/2- | IT=100 | 2079 |
+| 116Te | 64 | -85264 keV (unc. 24) | 2.49 h (unc. 0.04) | 0+ | B+=100 | 2104 |
+| 117Te | 65 | -85096 keV (unc. 13) | 62 m (unc. 2) | 1/2+* | B+=100;EC=75 1;e+=25 1 | 2132 |
+| 117Te · m [1] | 65 | -84800 keV (unc. 13) | 103 ms (unc. 3) | (11/2-) | IT=100 | 2133 |
+| 118Te | 66 | -87691 keV (unc. 18) | 6.00 d (unc. 0.02) | 0+ | EC=100 | 2161 |
+| 119Te | 67 | -87183 keV (unc. 7) | 16.05 h (unc. 0.05) | 1/2+* | B+=100;EC=97.94 5;e+=2.06 5 | 2191 |
+| 119Te · m [1] | 67 | -86922 keV (unc. 7) | 4.70 d (unc. 0.04) | 11/2-* | B+=100;EC=99.59 4;e+=0.41 4 | 2192 |
+| 120Te | 68 | -89362.2 keV (unc. 1.8) | stbl (unc. >1.6Zy) | 0+ | IS=0.09 1;2B+ ? | 2219 |
+| 121Te | 69 | -88543 keV (unc. 26) | 19.31 d (unc. 0.07) | 1/2+ | B+=100 | 2249 |
+| 121Te · m [1] | 69 | -88249 keV (unc. 26) | 164.7 d (unc. 0.5) | 11/2- | IT=88.6 11;B+=11.4 11 | 2250 |
+| 122Te | 70 | -90313.3 keV (unc. 1.4) | stbl | 0+ | IS=2.55 12 | 2281 |
+| 123Te | 71 | -89171.0 keV (unc. 1.4) | stbl (unc. >2Py) | 1/2+* | IS=0.89 3;EC=100 | 2318 |
+| 123Te · m [1] | 71 | -88923.5 keV (unc. 1.4) | 119.2 d (unc. 0.1) | 11/2- | IT=100 | 2319 |
+| 124Te | 72 | -90524.1 keV (unc. 1.4) | stbl | 0+ | IS=4.74 14 | 2351 |
+| 125Te | 73 | -89021.8 keV (unc. 1.4) | stbl | 1/2+* | IS=7.07 15 | 2386 |
+| 125Te · m [1] | 73 | -88877.0 keV (unc. 1.4) | 57.40 d (unc. 0.15) | 11/2- | IT=100 | 2387 |
+| 126Te | 74 | -90064.2 keV (unc. 1.4) | stbl | 0+ | IS=18.84 25 | 2423 |
+| 127Te | 75 | -88280.5 keV (unc. 1.4) | 9.35 h (unc. 0.07) | 3/2+ | B-=100 | 2458 |
+| 127Te · m [1] | 75 | -88192.3 keV (unc. 1.4) | 106.1 d (unc. 0.7) | 11/2- | IT=97.86 3;B-=2.14 3 | 2459 |
+| 128Te | 76 | -88993.8 keV (unc. 0.7) | 2.25 Yy (unc. 0.09) | 0+ | IS=31.74 8;2B-=100 | 2496 |
+| 128Te · m [1] | 76 | -86203.0 keV (unc. 0.8) | 363 ns (unc. 27) | (10+) | IT=100 | 2497 |
+| 129Te | 77 | -87004.9 keV (unc. 0.7) | 69.6 m (unc. 0.3) | 3/2+ | B-=100 | 2532 |
+| 129Te · m [1] | 77 | -86899.4 keV (unc. 0.7) | 33.6 d (unc. 0.1) | 11/2- | IT=64 7;B-=36 7 | 2533 |
+| 130Te | 78 | -87352.960 keV (unc. 0.011) | 791 Ey (unc. 21) | 0+ | IS=34.08 62;2B-=100 | 2566 |
+| 130Te · m [1] | 78 | -85206.55 keV (unc. 0.04) | 186 ns (unc. 11) | 7- | IT=100 | 2567 |
+| 130Te · n [2] | 78 | -84685.8 keV (unc. 0.8) | 1.90 us (unc. 0.08) | (10+) | IT=100 | 2568 |
+| 130Te · p [3] | 78 | -82979.1 keV (unc. 0.9) | 53 ns (unc. 8) | (15-) | IT=100 | 2569 |
+| 131Te | 79 | -85211.02 keV (unc. 0.06) | 25.0 m (unc. 0.1) | 3/2+ | B-=100 | 2604 |
+| 131Te · m [1] | 79 | -85028.76 keV (unc. 0.06) | 32.48 h (unc. 0.11) | 11/2- | B-=74.1 5;IT=25.9 5 | 2605 |
+| 131Te · n [2] | 79 | -83271.0 keV (unc. 0.4) | 93 ms (unc. 12) | (23/2+) | IT=100 | 2606 |
+| 132Te | 80 | -85188 keV (unc. 3) | 3.204 d (unc. 0.013) | 0+ | B-=100 | 2632 |
+| 132Te · m [1] | 80 | -83413 keV (unc. 3) | 145 ns (unc. 8) | 6+ | IT=100 | 2633 |
+| 132Te · n [2] | 80 | -83263 keV (unc. 3) | 28.5 us (unc. 0.9) | 7- | IT=100 | 2634 |
+| 132Te · p [3] | 80 | -82465 keV (unc. 3) | 3.62 us (unc. 0.06) | (10+) | IT=100 | 2635 |
+| 133Te | 81 | -82937.1 keV (unc. 2.1) | 12.5 m (unc. 0.3) | 3/2+# | B-=100 | 2661 |
+| 133Te · m [1] | 81 | -82602.8 keV (unc. 2.1) | 55.4 m (unc. 0.4) | (11/2-) | B-=83.5 20;IT=16.5 20 | 2662 |
+| 133Te · n [2] | 81 | -81326.7 keV (unc. 2.2) | 100 ns (unc. 5) | (19/2-) | IT=100 | 2663 |
+| 134Te | 82 | -82533.8 keV (unc. 2.7) | 41.8 m (unc. 0.8) | 0+ | B-=100 | 2695 |
+| 134Te · m [1] | 82 | -80842.5 keV (unc. 2.7) | 164.5 ns (unc. 0.7) | 6+ | IT=100 | 2696 |
+| 135Te | 83 | -77728.8 keV (unc. 1.7) | 19.0 s (unc. 0.2) | (7/2-) | B-=100 | 2724 |
+| 135Te · m [1] | 83 | -76173.9 keV (unc. 1.7) | 511 ns (unc. 20) | (19/2-) | IT=100 | 2725 |
+| 136Te | 84 | -74425.3 keV (unc. 2.3) | 17.63 s (unc. 0.09) | 0+ | B-=100;B-n=1.37 4 | 2751 |
+| 137Te | 85 | -69303.8 keV (unc. 2.1) | 2.49 s (unc. 0.05) | 3/2-# | B-=100;B-n=2.94 14 | 2780 |
+| 138Te | 86 | -65696 keV (unc. 4) | 1.46 s (unc. 0.25) | 0+ | B-=100;B-n=4.80 23 | 2805 |
+| 139Te | 87 | -60205 keV (unc. 4) | 724 ms (unc. 81) | 5/2-# | B-=100;B-n ? | 2833 |
+| 140Te | 88 | -56367 keV (unc. 14) | 351 ms (unc. 5) | 0+ | B-=100;B-n=? | 2859 |
+| 141Te | 89 | -50670# keV (unc. 400#) | 193 ms (unc. 16) | 5/2-# | B-=100;B-n ?;B-2n ? | 2886 |
+| 142Te | 90 | -46550# keV (unc. 500#) | 147 ms (unc. 8) | 0+ | B-=100;B-n ?;B-2n ? | 2911 |
+| 143Te | 91 | -40530# keV (unc. 500#) | 120 ms (unc. 8) | 7/2+# | B-=100;B-n ?;B-2n ? | 2938 |
+| 144Te | 92 | -36220# keV (unc. 300#) | 93 ms (unc. 60) | 0+ | B-=100;B-n ?;B-2n ? | 2962 |
+| 145Te | 93 | -30010# keV (unc. 300#) | 75# ms (unc. >550ns) | 0+ | B- ?;B-n ?;B-2n ? | 2993 |
+
+## Provenance and review
+
+Source snapshot SHA-256: `1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859`. Retrieved 2026-09-08. Every structured entry preserves the original line and its line number. The parser is checked against the source's published column specification and representative ground states, isomers, estimates and stable states. Post-2020 findings and supplied research batches retain separate provenance and review status.
+
+## Derived decay metrics
+
+The structured evaluation now includes a decay constant and mean lifetime for each positive numeric half-life. These use the single exponential model, \(\lambda=\ln(2)/T_{1/2}\) and \(\tau=T_{1/2}/\ln(2)\). Values retain the original time unit: a half-life in years produces a rate per source year, without silently assuming a calendar conversion. Inequalities reverse for the reciprocal decay constant. Estimates remain estimates. Stable or unavailable half-lives have no numeric result. Symmetric uncertainty is propagated to first order; asymmetric source uncertainties remain unpropagated and visible. These calculations add no new experimental evidence or significant figures.

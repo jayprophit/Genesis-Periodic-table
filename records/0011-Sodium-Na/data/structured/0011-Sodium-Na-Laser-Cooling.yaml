@@ -1,0 +1,64 @@
+registry_id: MAT:0011:REG:LASER-COOLING
+record_id: MAT:0011
+species: NEUTRAL-23Na
+principal_optical_family: 3s 2S1/2 <-> 3p 2P°3/2 D2
+wavelength:
+  approximate_value: 589
+  unit: nm
+mechanisms:
+  radiation_pressure:
+    photon_momentum_transfer: true
+  Doppler_cooling:
+    frequency_detuning: true
+  Zeeman_slower:
+    spatially_varying_magnetic_field: true
+    purpose: Compensate changing Doppler shift as atoms decelerate.
+  optical_molasses:
+    counterpropagating_beams: true
+  magneto_optical_trap:
+    laser_detuning: true
+    magnetic_field_gradient: true
+hyperfine_architecture:
+  cooling_cycle:
+    requires_hyperfine_state_selection: true
+  repumping:
+    required_to_return_population_from_dark_hyperfine_state: true
+historical_NIST_sodium:
+  contributors:
+    - William_D_Phillips
+    - Harold_J_Metcalf
+    - colleagues
+  beam_deceleration:
+    established: true
+  magnetic_trapping:
+    established: true
+  optical_molasses:
+    established: true
+  sub_Doppler_result:
+    simple_Doppler_limit:
+      approximate_value: 240
+      unit: microkelvin
+    measured_optical_molasses:
+      approximate_value: 40
+      unit: microkelvin
+applications:
+  - precision_spectroscopy
+  - ultracold_collisions
+  - atom_optics
+  - quantum_gases
+  - Bose_Einstein_condensation
+  - inertial_sensing_research
+rules:
+  laser_cooling_means_zero_temperature: false
+  photon_absorption_only_heats_atoms: false
+  cooling_requires_frequency_and_state_control: true
+  sodium_D2_line_equals_universal_sodium_frequency: false
+source_id: SRC-000236
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/43.txt
+  source_sha256: 6deabebe37c282ee5246e846496c422a8c636df500ffef3897be41d691815347
+  source_line: 135
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

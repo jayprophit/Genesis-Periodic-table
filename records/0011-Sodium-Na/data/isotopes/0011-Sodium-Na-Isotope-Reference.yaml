@@ -1,0 +1,104 @@
+registry_id: MAT:0011:REG:ISOTOPE-REFERENCE
+parent_id: MAT:0011
+version: 1.0.0
+NIST_atomic_mass_table:
+  minimum_mass_number: 18
+  maximum_mass_number: 37
+  source_id: SRC-000215
+stable_isotope:
+  isotope_id: MAT:0011:ISO:Na-23
+  mass_number: 23
+  protons: 11
+  neutrons: 12
+  relative_atomic_mass:
+    value: 22.989769282
+    uncertainty: 1.9e-9
+    unit: u
+  isotopic_composition:
+    value: 1
+  stability: STABLE
+  half_life: NOT-APPLICABLE
+  spin_parity: 3/2+
+  NMR_active: true
+key_radioactive_isotopes:
+  Na21:
+    isotope_id: MAT:0011:ISO:Na-21
+    approximate_half_life:
+      value: 22.4
+      unit: s
+    principal_decay: BETA-PLUS
+    daughter:
+      id: MAT:0010:ISO:Ne-21
+      status: RESOLVED
+    exact_evaluated_child:
+      status: NEXT-BATCH
+  Na22:
+    isotope_id: MAT:0011:ISO:Na-22
+    half_life:
+      value: 2.6018
+      unit: y
+    decay:
+      - BETA-PLUS
+      - ELECTRON-CAPTURE
+    daughter:
+      id: MAT:0010:ISO:Ne-22
+      status: RESOLVED
+    gamma_reference:
+      value: 1274.537
+      unit: keV
+    exact_child:
+      status: NEXT-BATCH
+  Na24:
+    isotope_id: MAT:0011:ISO:Na-24
+    half_life:
+      value: 14.956
+      uncertainty: 0.0015
+      unit: h
+      source_id: SRC-000223
+      evidence_type: EVALUATED
+    decay:
+      principal: BETA-MINUS
+    daughter:
+      id: MAT:0012:ISO:Mg-24
+      status: RESERVED-PENDING-MAGNESIUM
+    gamma_lines:
+      - value: 1368.63
+        unit: keV
+      - value: 2754.049
+        unit: keV
+    activation_relationship:
+      parent: MAT:0011:ISO:Na-23
+      reaction: 23Na(n,gamma)24Na
+    historical_half_life:
+      value: 14.997
+      uncertainty: 0.012
+      unit: h
+  Na25:
+    isotope_id: MAT:0011:ISO:Na-25
+    principal_decay: BETA-MINUS
+    exact_evaluated_child:
+      status: NEXT-BATCH
+  Na26:
+    isotope_id: MAT:0011:ISO:Na-26
+    principal_decay: BETA-MINUS
+    exact_evaluated_child:
+      status: NEXT-BATCH
+rules:
+  mass_table_entry_implies_bound_state: false
+  stable_half_life:
+    representation: NOT-APPLICABLE
+  natural_composition_is_monoisotopic: true
+  gamma_energy_requires_decay_source: true
+  detailed_NUBASE_extraction:
+    status: NEXT-BATCH
+source_ids:
+  - SRC-000215
+  - SRC-000218
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/41.txt
+  source_sha256: 8325c3157b85fc6759927c426d634a97e5c53ad978a3fd673d847aecc488a31d
+  source_line: 2166
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

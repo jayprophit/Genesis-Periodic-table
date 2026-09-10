@@ -1,0 +1,3103 @@
+NUBASE2020 also makes the exotic branch much clearer: ¹⁹Mg is a two-proton emitter, the sequence ²⁰Mg–²³Mg is β⁺-decaying, ²⁷Mg onward is neutron-rich β⁻ territory, and by ³⁹Mg the evaluated lifetime is <180 ns with neutron emission indicated; ⁴⁰Mg is experimentally known but still has an estimated millisecond-scale lifetime.
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotopes.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:ISOTOPES"
+parent_id: "MAT:0012"
+version: "1.0.0"
+
+evaluation:
+  primary: "NUBASE2020"
+  source_id: "SRC-000254"
+
+range:
+  core_MAT_children:
+    minimum_A: 19
+    maximum_A: 40
+
+stable:
+  - MAT:0012:ISO:Mg-24
+  - MAT:0012:ISO:Mg-25
+  - MAT:0012:ISO:Mg-26
+
+proton_rich:
+  - MAT:0012:ISO:Mg-19
+  - MAT:0012:ISO:Mg-20
+  - MAT:0012:ISO:Mg-21
+  - MAT:0012:ISO:Mg-22
+  - MAT:0012:ISO:Mg-23
+
+neutron_rich:
+  - MAT:0012:ISO:Mg-27
+  - MAT:0012:ISO:Mg-28
+  - MAT:0012:ISO:Mg-29
+  - MAT:0012:ISO:Mg-30
+  - MAT:0012:ISO:Mg-31
+  - MAT:0012:ISO:Mg-32
+  - MAT:0012:ISO:Mg-33
+  - MAT:0012:ISO:Mg-34
+  - MAT:0012:ISO:Mg-35
+  - MAT:0012:ISO:Mg-36
+  - MAT:0012:ISO:Mg-37
+  - MAT:0012:ISO:Mg-38
+  - MAT:0012:ISO:Mg-39
+  - MAT:0012:ISO:Mg-40
+
+rules:
+  mass_number_alone_predicts_binding: false
+  beta_decay_equals_particle_stability: false
+  estimated_values_require_flag: true
+  source_qualifier_hash_must_be_preserved: true
+  historical_half_lives_may_be_retained_as_provenance: true
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-19-Magnesium-19.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-19"
+
+nucleus:
+  Z: 12
+  N: 7
+  A: 19
+  spin_parity: "1/2-#"
+
+mass_excess:
+  value: 31840
+  uncertainty: 60
+  unit: "keV"
+
+lifetime:
+  value: 5
+  uncertainty: 3
+  unit: "ps"
+
+classification:
+  particle_bound: false
+  proton_rich: true
+  two_proton_unbound: true
+
+decay:
+  two_proton_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-20-Magnesium-20.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-20"
+
+nucleus:
+  Z: 12
+  N: 8
+  A: 20
+  spin_parity: "0+"
+
+mass_excess:
+  value: 17477.7
+  uncertainty: 1.9
+  unit: "keV"
+
+half_life:
+  value: 90.4
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 30.3
+    uncertainty: 1.2
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-21-Magnesium-21.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-21"
+
+nucleus:
+  Z: 12
+  N: 9
+  A: 21
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: 10903.9
+  uncertainty: 0.8
+  unit: "keV"
+
+half_life:
+  value: 120.0
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 20.1
+    uncertainty: 2.1
+
+  beta_delayed_alpha_percent:
+    value: 0.116
+    uncertainty: 0.018
+
+  beta_delayed_proton_alpha_percent:
+    value: 0.016
+    uncertainty: 0.003
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-22-Magnesium-22.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-22"
+
+nucleus:
+  Z: 12
+  N: 10
+  A: 22
+  spin_parity: "0+"
+
+mass_excess:
+  value: -399.99
+  uncertainty: 0.16
+  unit: "keV"
+
+half_life:
+  value: 3.8745
+  uncertainty: 0.0007
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-23-Magnesium-23.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-23"
+
+nucleus:
+  Z: 12
+  N: 11
+  A: 23
+  spin_parity: "3/2+"
+
+mass_excess:
+  value: -5473.67
+  uncertainty: 0.03
+  unit: "keV"
+
+half_life:
+  value: 11.3039
+  uncertainty: 0.0032
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+daughter:
+  id: "MAT:0011:ISO:Na-23"
+  status: "RESOLVED"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-24-Magnesium-24.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-24"
+
+nucleus:
+  Z: 12
+  N: 12
+  A: 24
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 23.985041697
+  uncertainty: 0.000000014
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.7899
+  uncertainty: 0.0004
+
+stability:
+  status: "STABLE"
+
+roles:
+  - dominant_natural_magnesium_isotope
+  - stellar_nuclear_network
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-25-Magnesium-25.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-25"
+
+nucleus:
+  Z: 12
+  N: 13
+  A: 25
+  spin_parity: "5/2+"
+
+relative_atomic_mass:
+  value: 24.985836976
+  uncertainty: 0.000000050
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.1000
+  uncertainty: 0.0001
+
+stability:
+  status: "STABLE"
+
+NMR:
+  active: true
+  quadrupolar: true
+
+astrophysics:
+  produced_by:
+    - "22Ne(alpha,n)25Mg"
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+  - "SRC-000255"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-26-Magnesium-26.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-26"
+
+nucleus:
+  Z: 12
+  N: 14
+  A: 26
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 25.982592968
+  uncertainty: 0.000000031
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.1101
+  uncertainty: 0.0003
+
+stability:
+  status: "STABLE"
+
+relationships:
+
+  stellar:
+    - "22Ne(alpha,gamma)26Mg"
+
+  extinct_radionuclide:
+    parent: "26Al"
+    relationship: "DECAY-DAUGHTER"
+
+  early_solar_system:
+    chronology:
+      "26Al-26Mg"
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-27-Magnesium-27.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-27"
+
+nucleus:
+  Z: 12
+  N: 15
+  A: 27
+  spin_parity: "1/2+"
+
+mass_excess:
+  value: -14586.59
+  uncertainty: 0.05
+  unit: "keV"
+
+half_life:
+
+  current_NUBASE2020:
+    value: 9.435
+    uncertainty: 0.027
+    unit: "min"
+
+  legacy_G0012:
+    approximate_value: 9.458
+    unit: "min"
+    status: "SUPERSEDED-HISTORICAL-WORKING-VALUE"
+
+decay:
+  beta_minus_percent: 100
+
+daughter:
+  id: "MAT:0013:ISO:Al-27"
+  status: "RESERVED-PENDING-ALUMINIUM"
+
+calculation_id:
+  "MAT:0012:CALC:001"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-28-Magnesium-28.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-28"
+
+nucleus:
+  Z: 12
+  N: 16
+  A: 28
+  spin_parity: "0+"
+
+mass_excess:
+  value: -15019.95
+  uncertainty: 0.26
+  unit: "keV"
+
+half_life:
+  value: 20.915
+  uncertainty: 0.009
+  unit: "h"
+
+decay:
+  beta_minus_percent: 100
+
+daughter:
+  id: "MAT:0013:ISO:Al-28"
+  status: "RESERVED-PENDING-ALUMINIUM"
+
+decay_chain:
+  - "28Mg"
+  - "28Al"
+  - "28Si"
+
+calculation_ids:
+  - "MAT:0012:CALC:002"
+  - "MAT:0012:CALC:003"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-29-Magnesium-29.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-29"
+
+nucleus:
+  Z: 12
+  N: 17
+  A: 29
+  spin_parity: "3/2+"
+
+mass_excess:
+  value: -10612.4
+  uncertainty: 0.3
+  unit: "keV"
+
+half_life:
+  value: 1.30
+  uncertainty: 0.12
+  unit: "s"
+
+decay:
+  beta_minus_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-30-Magnesium-30.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-30"
+
+nucleus:
+  Z: 12
+  N: 18
+  A: 30
+  spin_parity: "0+"
+
+mass_excess:
+  value: -8881.4
+  uncertainty: 1.3
+  unit: "keV"
+
+half_life:
+  value: 317
+  uncertainty: 4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    relation: "LESS-THAN"
+    value: 0.06
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-31-Magnesium-31.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-31"
+
+nucleus:
+  Z: 12
+  N: 19
+  A: 31
+  spin_parity: "1/2+"
+
+mass_excess:
+  value: -3122
+  uncertainty: 3
+  unit: "keV"
+
+half_life:
+  value: 270
+  uncertainty: 2
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 6.2
+    uncertainty: 1.9
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-32-Magnesium-32.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-32"
+
+nucleus:
+  Z: 12
+  N: 20
+  A: 32
+  spin_parity: "0+"
+
+mass_excess:
+  value: -829
+  uncertainty: 3
+  unit: "keV"
+
+half_life:
+  value: 80.4
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 5.5
+    uncertainty: 0.5
+
+nuclear_structure:
+  island_of_inversion_relationship:
+    important: true
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-33-Magnesium-33.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-33"
+
+nucleus:
+  Z: 12
+  N: 21
+  A: 33
+  spin_parity: "3/2-"
+
+mass_excess:
+  value: 4962.9
+  uncertainty: 2.7
+  unit: "keV"
+
+half_life:
+  value: 92.0
+  uncertainty: 1.2
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 14
+    uncertainty: 2
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-34-Magnesium-34.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-34"
+
+nucleus:
+  Z: 12
+  N: 22
+  A: 34
+  spin_parity: "0+"
+
+mass_excess:
+  value: 8323
+  uncertainty: 7
+  unit: "keV"
+
+half_life:
+  value: 44.9
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 21
+    uncertainty: 7
+
+  beta_delayed_two_neutron_percent:
+    relation: "LESS-THAN"
+    value: 0.1
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-35-Magnesium-35.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-35"
+
+nucleus:
+  Z: 12
+  N: 23
+  A: 35
+  spin_parity: "(3/2-,5/2-)"
+
+mass_excess:
+  value: 15640
+  uncertainty: 270
+  unit: "keV"
+
+half_life:
+  value: 11.3
+  uncertainty: 0.6
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 52
+    uncertainty: 46
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-36-Magnesium-36.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-36"
+
+nucleus:
+  Z: 12
+  N: 24
+  A: 36
+  spin_parity: "0+"
+
+mass_excess:
+  value: 20380
+  uncertainty: 690
+  unit: "keV"
+
+half_life:
+  value: 3.9
+  uncertainty: 1.3
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 48
+    uncertainty: 12
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-37-Magnesium-37.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-37"
+
+nucleus:
+  Z: 12
+  N: 25
+  A: 37
+  spin_parity: "(3/2-)"
+
+mass_excess:
+  value: 28210
+  uncertainty: 700
+  unit: "keV"
+
+half_life:
+  value: 8
+  uncertainty: 4
+  unit: "ms"
+
+decay:
+  beta_minus:
+    status: "EXPECTED / INCOMPLETELY-QUANTIFIED"
+
+  beta_delayed_neutron:
+    status: "POSSIBLE"
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-38-Magnesium-38.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-38"
+
+nucleus:
+  Z: 12
+  N: 26
+  A: 38
+  spin_parity: "0+"
+
+mass_excess:
+  value: 34070
+  uncertainty: 500
+  qualifier: "#"
+  unit: "keV"
+
+half_life:
+  estimated_value: 2
+  unit: "ms"
+  qualifier: "#"
+
+experimental_lifetime_bound:
+  relation: "GREATER-THAN"
+  value: 260
+  unit: "ns"
+
+decay:
+  beta_minus:
+    estimated_percent: 100
+
+  beta_delayed_neutron:
+    status: "UNKNOWN"
+
+  beta_delayed_two_neutron:
+    status: "UNKNOWN"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-39-Magnesium-39.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-39"
+
+nucleus:
+  Z: 12
+  N: 27
+  A: 39
+  spin_parity: "7/2-#"
+
+mass_excess:
+  value: 42780
+  uncertainty: 510
+  qualifier: "#"
+  unit: "keV"
+
+lifetime:
+  relation: "LESS-THAN"
+  value: 180
+  unit: "ns"
+
+classification:
+  extreme_neutron_rich: true
+  particle_binding: "NOT-FULLY-ESTABLISHED"
+
+decay:
+  neutron_emission:
+    status: "INDICATED"
+
+  beta_minus:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-40-Magnesium-40.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-40"
+
+nucleus:
+  Z: 12
+  N: 28
+  A: 40
+  spin_parity: "0+"
+
+mass_excess:
+  value: 49550
+  uncertainty: 500
+  qualifier: "#"
+  unit: "keV"
+
+half_life:
+  estimated_value: 1
+  unit: "ms"
+  qualifier: "#"
+
+experimental_lifetime_bound:
+  relation: "GREATER-THAN"
+  value: 170
+  unit: "ns"
+
+first_observation_year: 2007
+
+decay:
+  beta_minus:
+    status: "POSSIBLE"
+
+  beta_delayed_neutron:
+    status: "POSSIBLE"
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+nuclear_structure:
+  N_28:
+    conventional_magic_number: true
+
+  shell_closure_behavior:
+    status: "ACTIVE-RESEARCH"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-001-Mg27-BetaMinus-Q.md
+
+# Magnesium-27 → Aluminium-27
+
+$$
+{}^{27}Mg\rightarrow{}^{27}Al+e^-+\bar\nu_e
+$$
+
+NUBASE2020 mass excesses:
+
+$$
+ME(^{27}Mg)=-14586.59\ {\rm keV}
+$$
+
+$$
+ME(^{27}Al)=-17196.86\ {\rm keV}
+$$
+
+Using neutral atomic masses:
+
+$$
+Q_{\beta^-}=ME_p-ME_d
+$$
+
+$$
+Q_{\beta^-}
+=
+-14586.59-(-17196.86)
+$$
+
+$$
+\boxed{
+Q_{\beta^-}=2610.27\ {\rm keV}
+}
+$$
+
+```yaml
+calculation_id: "MAT:0012:CALC:001"
+q_beta_minus:
+  value: 2.61027
+  unit: "MeV"
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-002-Mg28-BetaMinus-Q.md
+
+# Magnesium-28 → Aluminium-28
+
+$$
+{}^{28}Mg
+\rightarrow
+{}^{28}Al+e^-+\bar\nu_e
+$$
+
+$$
+ME(^{28}Mg)=-15019.95\ {\rm keV}
+$$
+
+$$
+ME(^{28}Al)=-16850.72\ {\rm keV}
+$$
+
+Therefore:
+
+$$
+\boxed{
+Q_{\beta^-}
+=
+1830.77\ {\rm keV}
+}
+$$
+
+```yaml
+calculation_id: "MAT:0012:CALC:002"
+q_beta_minus:
+  value: 1.83077
+  unit: "MeV"
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-003-Al28-to-Si28.md
+
+# Aluminium-28 → Silicon-28
+
+$$
+{}^{28}Al
+\rightarrow
+{}^{28}Si+e^-+\bar\nu_e
+$$
+
+$$
+ME(^{28}Al)=-16850.72\ {\rm keV}
+$$
+
+$$
+ME(^{28}Si)=-21492.7971\ {\rm keV}
+$$
+
+Therefore:
+
+$$
+\boxed{
+Q_{\beta^-}
+=
+4642.0771\ {\rm keV}
+}
+$$
+
+Full directed chain:
+
+$$
+\boxed{
+{}^{28}Mg
+\rightarrow
+{}^{28}Al
+\rightarrow
+{}^{28}Si
+}
+$$
+
+This is stored as two distinct nuclear edges, not one direct decay.
+
+The production split is now explicit and should stay that way throughout MAT: Bayer = bauxite → alumina; Hall–Héroult = alumina → Aluminium metal. The Hall–Héroult process was independently developed by Charles Martin Hall and Paul Héroult in 1886 and remains the central primary-smelting route.
+
+The legacy superconducting/interface branch is also scientifically solid: bulk Aluminium has \(T_c\approx1.2\) K, and Al/AlOₓ/Al Josephson junctions remain a standard superconducting-quantum-device architecture. Modern work continues to show that oxide disorder, oxygen deficiency and interface defects can materially affect loss and decoherence—supporting the legacy decision to promote INTERFACE to a core MAT coordinate.
+
+The next continue is the full Aluminium isotope + alloy/surface/material pass: ²¹Al–⁴³Al children, ²⁶Al/²⁸Al calculations, detailed ²⁷Al NMR and Al I/II/III spectra, FCC slip mechanics, precipitation sequences, native/anodic oxide architecture, corundum/sapphire/ruby, AlN/AlF₃/AlCl₃/AlH₃, detailed Bayer/Hall–Héroult/recycling flows, Aluminium-air/Al-ion interfaces, superconducting Al/AlOₓ/Al and the high-pressure phase layer.
+
+The live repository check also shows an important migration issue: the project is still publicly titled **“Genesis Periodic Table”** in the README, and the root records still use the older `G0000`, `G0001`, etc. naming. The application rebuild should therefore separate **content migration** from **UI/application migration**, so OpenCode does not accidentally damage the scientific records while redesigning MAT. ([github.com][1])
+
+Here is the next paste-ready OpenCode continuation prompt.
+
+CONTINUE THE EXISTING MAT IMPLEMENTATION.
+
+PROJECT:
+Materials Atlas Table — MAT
+
+REPOSITORY:
+Materials-Atlas-Table-Codex---MAT
+
+DO NOT restart this project.
+DO NOT replace working scientific content with placeholders.
+DO NOT simplify the scientific architecture.
+DO NOT delete source records.
+DO NOT silently invent scientific values.
+
+The goal is to transform MAT into a world-class, book-quality, scientific reference platform while retaining a canonical machine-readable data architecture underneath it.
+
+MAT must ultimately feel like:
+
+* a premium scientific encyclopedia
+* a reference textbook
+* an interactive atlas
+* a periodic table
+* a scientific database
+* a research notebook
+* a visual scientific instrument
+* an offline-capable digital book
+* an API-accessible knowledge system
+
+The design philosophy remains:
+
+SEE IT
+→ UNDERSTAND IT
+→ INSPECT IT
+→ MEASURE IT
+→ DERIVE IT
+→ VERIFY IT
+
+==================================================
+PHASE 101 — REPOSITORY SAFETY FIRST
+===================================
+
+Before changing anything:
+
+1. Audit the repository tree.
+2. Determine what is currently functioning.
+3. Identify current content files.
+4. Identify UI/application files if present.
+5. Identify static-site files.
+6. Identify JavaScript/TypeScript.
+7. Identify CSS.
+8. Identify generated files.
+9. Identify assets.
+10. Identify schemas.
+11. Identify tests.
+12. Identify build scripts.
+13. Identify service workers.
+14. Identify manifests.
+15. Identify deployment configuration.
+
+Create:
+
+docs/audits/repository-baseline.md
+
+Record:
+
+* current files
+* current architecture
+* current routes
+* current build command
+* current dependencies
+* current problems
+* migration risks
+
+Do not perform destructive restructuring until this audit exists.
+
+==================================================
+PHASE 102 — SOURCE CONTENT MUST REMAIN CANONICAL
+================================================
+
+Treat the existing scientific records as source data.
+
+Never replace a populated scientific value with an AI guess.
+
+Scientific status vocabulary must support:
+
+KNOWN
+ESTABLISHED
+MEASURED
+CALCULATED
+ESTIMATED
+MODEL-DEPENDENT
+CONTEXT-DEPENDENT
+DISPUTED
+RESEARCH GAP
+INSUFFICIENT DATA
+UNKNOWN
+NOT APPLICABLE
+
+Unknown information must remain explicitly unknown.
+
+Never turn UNKNOWN into a fabricated number merely to make a component look complete.
+
+Every future metric should eventually support:
+
+value
+unit
+uncertainty
+conditions
+method
+source
+source date
+confidence
+status
+notes
+
+==================================================
+PHASE 103 — MAT CONTENT MIGRATION
+=================================
+
+The repository currently contains legacy Genesis-named records.
+
+MAT is now the project identity.
+
+Do NOT immediately delete legacy filenames.
+
+Implement a migration layer.
+
+Target canonical naming convention:
+
+0000-Origin-State.md
+0001-Hydrogen-H.md
+0002-Helium-He.md
+0003-Lithium-Li.md
+...
+
+Continue through all 118 officially recognised chemical elements.
+
+0000 is NOT a conventional chemical element.
+
+0000 represents the MAT origin/foundation/root record.
+
+Create a migration manifest such as:
+
+data/migrations/content-map.json
+
+Example:
+
+{
+"legacy": "G0001 — Hydrogen.md",
+"canonical": "0001-Hydrogen-H.md",
+"atomicNumber": 1,
+"symbol": "H",
+"status": "mapped"
+}
+
+Migration rules:
+
+* preserve Git history
+* preserve content
+* preserve references
+* preserve links
+* preserve citations
+* preserve asset associations
+* avoid duplicated canonical records
+* prevent broken routes
+
+Legacy URL requests should redirect or resolve to the new canonical record.
+
+==================================================
+PHASE 104 — THREE-LAYER ARCHITECTURE
+====================================
+
+Maintain three distinct layers.
+
+LAYER A — CANONICAL DATA
+
+Machine-readable scientific truth layer.
+
+Examples:
+
+data/
+schemas/
+citations/
+relationships/
+metrics/
+isotopes/
+materials/
+compounds/
+
+LAYER B — HUMAN REFERENCE BOOK
+
+Readable chapters generated or assembled from canonical information.
+
+Examples:
+
+book/
+chapters/
+front-matter/
+back-matter/
+appendices/
+
+LAYER C — INTERACTIVE VISUALISATION
+
+Application components:
+
+periodic table
+graphs
+charts
+spectra
+3D structures
+atomic visualisations
+comparison tools
+relationship graphs
+interactive equations
+timelines
+
+Do not combine all three layers into monolithic Markdown files.
+
+==================================================
+PHASE 105 — APPLICATION SHELL
+=============================
+
+MAT should behave as a book first.
+
+Recommended high-level shell:
+
+┌──────────────────────────────────────────────────┐
+│ MAT header / command bar                         │
+├─────────────┬──────────────────────────┬─────────┤
+│ Library /   │                          │ Context │
+│ Contents    │       BOOK READER        │ Panel   │
+│             │                          │         │
+│ collapsed   │                          │ optional│
+│ sections    │                          │         │
+├─────────────┴──────────────────────────┴─────────┤
+│ previous     page/folio/progress          next  │
+└──────────────────────────────────────────────────┘
+
+Desktop:
+
+left navigation
+central book
+optional right inspector
+
+Tablet:
+
+collapsible navigation drawer
+book reader
+bottom controls
+
+Mobile:
+
+single-column reader
+navigation opens as drawer
+inspector opens as bottom sheet
+
+==================================================
+PHASE 106 — FIX THE NAVIGATION
+==============================
+
+THIS IS A REQUIRED BEHAVIOUR.
+
+The current style must NOT display the entire navigation tree expanded.
+
+All major branches start CLOSED.
+
+A branch expands only when:
+
+* the reader deliberately selects it
+* the active page is located inside it
+
+Only the active lineage should remain expanded.
+
+Example:
+
+MAT
+▸ Book
+▸ Periodic Table
+▸ Elements
+▸ Materials
+▸ Compounds
+▸ Data
+▸ Visualisations
+▸ Research
+
+When Elements is selected:
+
+MAT
+▸ Book
+▸ Periodic Table
+▾ Elements
+▸ Period 1
+▸ Period 2
+▸ Period 3
+...
+▸ Materials
+
+When Period 1 is selected:
+
+▾ Elements
+▾ Period 1
+Hydrogen
+Helium
+▸ Period 2
+
+Do NOT open unrelated siblings automatically.
+
+Remember the navigation state between sessions.
+
+==================================================
+PHASE 107 — GROUP BOOK ADMINISTRATION SECTIONS
+==============================================
+
+The following sections should not occupy equal visual prominence with scientific content:
+
+Start Here
+Front Matter
+Foundation
+Data
+Methodology
+Visualization
+Index
+Governance
+Migration
+Back Matter
+
+Group them inside one parent:
+
+BOOK & REFERENCE
+
+Example:
+
+▸ BOOK & REFERENCE
+Start Here
+Front Matter
+Foundation
+Data
+Methodology
+Visualization
+Index
+Governance
+Migration
+Back Matter
+
+Closed by default.
+
+This reduces visual clutter.
+
+==================================================
+PHASE 108 — PRIMARY SCIENTIFIC NAVIGATION
+=========================================
+
+Give high prominence to:
+
+Periodic Table
+Elements
+Isotopes
+Compounds
+Materials
+Relationships
+Properties
+Spectra
+Applications
+Visual Atlas
+
+Possible top-level hierarchy:
+
+READ
+EXPLORE
+ANALYSE
+REFERENCE
+
+READ
+Book
+Continue Reading
+Bookmarks
+Notes
+
+EXPLORE
+Periodic Table
+Elements
+Isotopes
+Materials
+Compounds
+Relationships
+
+ANALYSE
+Compare
+Graphs
+Spectra
+Equations
+3D
+Property Explorer
+
+REFERENCE
+Book & Reference
+Sources
+Glossary
+Index
+
+==================================================
+PHASE 109 — BOOK AESTHETIC
+==========================
+
+The central reading surface should genuinely feel like a book.
+
+Avoid generic dashboard styling.
+
+Add:
+
+* strong typographic hierarchy
+* generous margins
+* readable line lengths
+* chapter openings
+* section numbering
+* figure numbering
+* table numbering
+* equation numbering
+* captions
+* citations
+* marginal notes
+* footnotes
+* folio/page indicators
+* running chapter title
+* subtle paper depth
+* restrained shadows
+* book-like spacing
+* scientific callout boxes
+
+Do not make the background look artificially yellow or gimmicky.
+
+Support:
+
+Light
+Dark
+System
+
+Optional later:
+
+Paper
+High Contrast
+
+==================================================
+PHASE 110 — TYPOGRAPHY
+======================
+
+Use typography suited to long scientific reading.
+
+Separate:
+
+DISPLAY FONT
+for covers and chapter headings
+
+READING FONT
+for long-form text
+
+MONOSPACED FONT
+for data/code/equations where appropriate
+
+Math must remain extremely clear.
+
+Typography must respond correctly from desktop down to mobile.
+
+Use responsive clamp() sizing where appropriate.
+
+Do not use tiny UI typography just to fit more information.
+
+==================================================
+PHASE 111 — PAGE COMPOSITION
+============================
+
+Each element should read like a scientific chapter.
+
+Suggested chapter progression:
+
+1. Element Identity
+2. At a Glance
+3. Natural State
+4. Atomic Structure
+5. Nuclear Structure
+6. Isotopes
+7. Quantum Structure
+8. Electronic Configuration
+9. Bonding
+10. Compounds
+11. Crystal / Material Structure
+12. Physical Properties
+13. Mechanical Properties
+14. Thermal Properties
+15. Electrical Properties
+16. Magnetic Properties
+17. Optical Properties
+18. Spectral Properties
+19. Frequency / Resonance Behaviour
+20. Chemical Behaviour
+21. Thermodynamics
+22. Phase Behaviour
+23. Geological Occurrence
+24. Environmental Behaviour
+25. Biological Relevance
+26. Industrial Processing
+27. Manufacturing
+28. Engineering Uses
+29. Computing / Technology Uses
+30. Energy Applications
+31. Safety
+32. Historical Context
+33. Scientific Principles
+34. Equations
+35. Experimental Methods
+36. Visual Atlas
+37. Relationships
+38. Data Tables
+39. Sources
+40. Research Gaps
+
+Use progressive disclosure.
+
+Do not make all 40 sections visually expanded at once.
+
+==================================================
+PHASE 112 — CHAPTER HERO
+========================
+
+Every element chapter should begin with a powerful identity block.
+
+Example concept:
+
+01
+
+H
+
+HYDROGEN
+
+Hydrogen
+
+Atomic number      1
+Standard atomic wt 1.008
+Period             1
+Group              1
+Block              s
+
+Include:
+
+symbol
+name
+atomic number
+classification
+period
+group
+block
+state
+key visual
+short scientifically accurate summary
+
+Optional visual motifs may derive from actual element data.
+
+Do not use arbitrary decorative science graphics that imply false information.
+
+==================================================
+PHASE 113 — DATA VISUALISATION SYSTEM
+=====================================
+
+Create reusable components rather than hand-building charts per element.
+
+Examples:
+
+<PropertyGauge />
+<SpectrumPlot />
+<PhaseDiagram />
+<IsotopeChart />
+<DecayChain />
+<ElectronShell />
+<OrbitalViewer />
+<CrystalViewer />
+<TemperatureScale />
+<PressureScale />
+<PropertyRadar />
+<PropertyComparison />
+<RelationshipGraph />
+<Timeline />
+<EquationPanel />
+<DataTable />
+
+Every visual should display:
+
+title
+description
+units
+conditions
+source
+uncertainty where known
+
+==================================================
+PHASE 114 — FIGURE SYSTEM
+=========================
+
+Create a standard scientific figure component.
+
+Every figure receives a stable ID.
+
+Example:
+
+MAT-H-ATOM-001
+MAT-H-ISO-001
+MAT-H-SPECTRA-001
+MAT-H-BOND-001
+
+Figure model:
+
+{
+"id": "...",
+"title": "...",
+"caption": "...",
+"asset": "...",
+"alt": "...",
+"source": "...",
+"record": "0001",
+"category": "atomic"
+}
+
+Support:
+
+image
+SVG
+interactive SVG
+Canvas
+WebGL
+3D
+chart
+diagram
+
+==================================================
+PHASE 115 — ANIMATION
+=====================
+
+Use animation for understanding rather than decoration.
+
+Good examples:
+
+* smooth page transition
+* accordion expansion
+* orbital rotation
+* electron probability transition
+* isotope selection
+* spectral-line highlighting
+* graph transitions
+* property comparisons
+* relationship exploration
+* page progress
+* chapter entrance
+
+Avoid:
+
+* constant bouncing
+* excessive glowing
+* unnecessary particles
+* distracting animated backgrounds
+
+Respect:
+
+prefers-reduced-motion
+
+==================================================
+PHASE 116 — READER MEMORY
+=========================
+
+Implement robust local reading memory.
+
+Use IndexedDB as primary persistent client storage.
+
+Remember:
+
+last record
+last chapter
+last heading
+scroll position
+reading percentage
+open navigation branch
+bookmarks
+notes
+favourites
+recent history
+comparison items
+display preferences
+reader width
+font size
+theme
+panel state
+
+Suggested stores:
+
+readerState
+readingHistory
+bookmarks
+notes
+favorites
+preferences
+comparisons
+cacheMetadata
+
+==================================================
+PHASE 117 — CONTINUE READING
+============================
+
+Create a Continue Reading feature.
+
+Home screen card:
+
+CONTINUE READING
+
+Hydrogen
+Quantum Structure
+62%
+
+Resume →
+
+Also show:
+
+recently viewed
+bookmarked
+favourites
+
+Do not require user accounts for local reader memory.
+
+==================================================
+PHASE 118 — NOTES
+=================
+
+Allow local private notes.
+
+Notes can attach to:
+
+record
+chapter
+heading
+figure
+equation
+metric
+citation
+
+Schema example:
+
+{
+id,
+recordId,
+targetType,
+targetId,
+text,
+createdAt,
+updatedAt
+}
+
+Provide:
+
+create
+edit
+delete
+search
+export
+
+Local-first.
+
+==================================================
+PHASE 119 — BOOKMARKS
+=====================
+
+Bookmarks must support granular references.
+
+A user may bookmark:
+
+Hydrogen
+Hydrogen → Isotopes
+Hydrogen → Figure 7
+Hydrogen → Equation 14
+Hydrogen → Melting Point
+
+A bookmark should return the reader to the exact location.
+
+==================================================
+PHASE 120 — CLIENT CACHE
+========================
+
+Implement safe caching.
+
+Use:
+
+Cache Storage
+Service Worker
+IndexedDB metadata
+
+Separate caches by purpose.
+
+Example:
+
+mat-shell-v1
+mat-content-v1
+mat-assets-v1
+mat-data-v1
+
+Never call:
+
+caches.keys().forEach(deleteEverything)
+
+unless the deletion is restricted to MAT-owned cache prefixes.
+
+MAT must never indiscriminately delete another application's caches.
+
+==================================================
+PHASE 121 — CACHE VERSIONING
+============================
+
+Implement controlled version migration.
+
+Example:
+
+CACHE_VERSION = "v3"
+
+MAT_CACHE_PREFIX = "mat-"
+
+During activation:
+
+delete obsolete MAT caches only.
+
+Preserve current MAT cache.
+
+Never delete unrelated cache keys.
+
+==================================================
+PHASE 122 — OFFLINE MODE
+========================
+
+MAT should remain useful without internet.
+
+Offline core:
+
+application shell
+table of contents
+periodic table
+previously downloaded element records
+bookmarks
+notes
+reading history
+core fonts/icons
+core styles
+
+Provide an Offline Library manager.
+
+Users may choose:
+
+Core only
+Current chapter
+Selected elements
+Entire periodic table
+Figures
+Complete offline edition
+
+Show approximate storage usage.
+
+==================================================
+PHASE 123 — STORAGE MANAGEMENT
+==============================
+
+Create:
+
+Settings
+→ Storage
+
+Display:
+
+Application cache
+Scientific data
+Figures
+Offline chapters
+Reader memory
+Notes
+
+Controls:
+
+Clear temporary cache
+Remove downloaded figures
+Remove offline scientific data
+Reset reading history
+Export notes
+Reset MAT local data
+
+Do not combine every action into a dangerous single button.
+
+==================================================
+PHASE 124 — SEARCH
+==================
+
+Search must become a central MAT feature.
+
+Search:
+
+element names
+symbols
+atomic numbers
+properties
+metrics
+units
+isotopes
+compounds
+materials
+headings
+figures
+equations
+sources
+applications
+
+Example query:
+
+Fe
+
+returns:
+
+Iron — Element
+Atomic number 26
+
+Example:
+
+ferromagnetic
+
+returns:
+
+Iron
+Cobalt
+Nickel
+Magnetism chapter
+relevant materials
+
+==================================================
+PHASE 125 — SEARCH INDEX
+========================
+
+Do not repeatedly search raw Markdown files at runtime.
+
+Generate an index at build time.
+
+Example:
+
+public/search-index.json
+
+or a compact indexed database.
+
+Index:
+
+record ID
+title
+symbol
+atomic number
+aliases
+headings
+keywords
+metric keys
+figure captions
+relationship terms
+
+Use a lightweight local search library or a custom index.
+
+Avoid unnecessary cloud dependencies.
+
+==================================================
+PHASE 126 — COMMAND PALETTE
+===========================
+
+Add:
+
+Ctrl/Cmd + K
+
+Command examples:
+
+Go to Hydrogen
+Open Periodic Table
+Search isotopes
+Compare Iron and Copper
+Continue Reading
+Toggle dark mode
+Open Notes
+Open Sources
+
+Mobile should have an equivalent search/action button.
+
+==================================================
+PHASE 127 — PERIODIC TABLE
+==========================
+
+Create a first-class interactive periodic table.
+
+Each cell should show at minimum:
+
+atomic number
+symbol
+name
+
+Optional secondary information depending on zoom:
+
+atomic weight
+state
+category
+electronegativity
+density
+
+Do not overload the default cell.
+
+Hover/focus may reveal details.
+
+Click opens the element.
+
+Long press or context action may:
+
+bookmark
+compare
+preview
+
+==================================================
+PHASE 128 — PERIODIC TABLE MODES
+================================
+
+Allow property colouring modes.
+
+Examples:
+
+classification
+state
+atomic mass
+density
+electronegativity
+melting point
+boiling point
+thermal conductivity
+electrical conductivity
+magnetic behaviour
+
+Always include legend and units.
+
+Never imply a quantitative scale without displaying the scale.
+
+==================================================
+PHASE 129 — COMPARISON ENGINE
+=============================
+
+Implement side-by-side element comparison.
+
+User selects 2–6 records.
+
+Compare:
+
+identity
+atomic data
+nuclear data
+electronic data
+physical properties
+thermal properties
+electrical properties
+magnetic properties
+mechanical properties
+spectral properties
+applications
+
+Tables should handle missing data correctly.
+
+UNKNOWN ≠ 0.
+
+NOT APPLICABLE ≠ 0.
+
+==================================================
+PHASE 130 — RELATIONSHIP GRAPH
+==============================
+
+Build a relationship explorer.
+
+Nodes may include:
+
+elements
+isotopes
+compounds
+materials
+scientists
+discoveries
+applications
+processes
+properties
+
+Edges must be typed.
+
+Examples:
+
+BONDS_WITH
+COMPONENT_OF
+ISOTOPE_OF
+DISCOVERED_BY
+USED_IN
+DECAYS_TO
+PRODUCED_BY
+SHARES_PROPERTY
+CRYSTALLISES_AS
+
+Do not present inferred relationships as established facts unless labelled as inferred.
+
+==================================================
+PHASE 131 — CITATION ARCHITECTURE
+=================================
+
+Citations are data.
+
+Create a reusable citation structure.
+
+Each citation should support:
+
+id
+title
+authors
+publisher
+journal
+year
+DOI
+URL
+accessed
+pages
+record associations
+metric associations
+notes
+evidence type
+
+Scientific metrics should eventually reference citation IDs.
+
+==================================================
+PHASE 132 — SCIENTIST / CONTRIBUTOR DIRECTORY
+=============================================
+
+Separate:
+
+A. historical/scientific contributors
+
+from:
+
+B. MAT project contributors/reviewers
+
+Do not imply historical scientists contributed directly to MAT.
+
+Historical contributors may connect to:
+
+discoveries
+equations
+experiments
+elements
+theories
+methods
+
+==================================================
+PHASE 133 — THEORY CLASSIFICATION
+=================================
+
+MAT contains user-originated hypotheses and conceptual frameworks alongside established scientific material.
+
+These must NOT be presented as established scientific fact.
+
+Create clear content classification:
+
+ESTABLISHED SCIENCE
+SCIENTIFIC MODEL
+HISTORICAL MODEL
+HYPOTHESIS
+SPECULATIVE
+USER-PROPOSED FRAMEWORK
+UNVERIFIED
+DISPUTED
+
+The original theory text must be preserved as authored where appropriate, but visually and semantically separated from canonical scientific data.
+
+==================================================
+PHASE 134 — EQUATION ENGINE
+===========================
+
+Equations should be first-class records.
+
+Schema:
+
+equation ID
+name
+expression
+variables
+units
+domain
+assumptions
+conditions
+derivation
+source
+related metrics
+related elements
+
+Render with high-quality mathematical typesetting.
+
+An equation should be expandable:
+
+Equation
+→ Variables
+→ Explanation
+→ Assumptions
+→ Derivation
+→ Example
+→ Source
+
+==================================================
+PHASE 135 — ACCESSIBILITY
+=========================
+
+Target WCAG 2.2 AA.
+
+Required:
+
+keyboard navigation
+visible focus
+semantic headings
+ARIA only when needed
+accessible accordions
+accessible tables
+alt text
+chart descriptions
+colour-independent status indicators
+sufficient contrast
+reduced-motion support
+screen-reader labels
+
+Periodic table must be keyboard navigable.
+
+==================================================
+PHASE 136 — PERFORMANCE
+=======================
+
+Large MAT datasets must not make initial load heavy.
+
+Use:
+
+route splitting
+lazy loading
+dynamic imports
+virtualisation where justified
+image optimisation
+SVG optimisation
+deferred 3D loading
+progressive data loading
+
+Do not load:
+
+all elements
+all figures
+all 3D assets
+all isotope data
+
+on first page load.
+
+==================================================
+PHASE 137 — FULL-STACK ARCHITECTURE
+===================================
+
+Maintain static/offline capability as first-class.
+
+Do not make a backend mandatory to read MAT.
+
+Architecture:
+
+STATIC CORE
++
+OPTIONAL LOCAL/FULL SERVER
+
+Suggested boundary:
+
+packages/
+core/
+schemas/
+search/
+reader/
+visualisations/
+
+apps/
+web/
+server/
+
+content/
+data/
+assets/
+docs/
+
+The web application must still build into a deployable static edition.
+
+==================================================
+PHASE 138 — OPTIONAL SERVER
+===========================
+
+Provide an optional server for advanced functionality.
+
+Use a lightweight Node-based API unless the existing repository already uses another stack worth preserving.
+
+Possible endpoints:
+
+GET /api/elements
+GET /api/elements/:id
+GET /api/elements/:id/isotopes
+GET /api/search
+GET /api/relationships/:id
+GET /api/citations/:id
+GET /api/schema
+GET /api/version
+
+Future authenticated functionality can be added separately.
+
+Do not force authentication into the basic book.
+
+==================================================
+PHASE 139 — LOCAL DATABASE
+==========================
+
+For optional server mode use SQLite initially.
+
+Good for:
+
+metadata
+relationships
+citations
+indexes
+user-local optional data
+application state
+
+Canonical scientific source files remain version-controlled.
+
+Do not bury the only copy of scientific information inside an opaque database.
+
+==================================================
+PHASE 140 — VALIDATION
+======================
+
+Create machine validation.
+
+Validate:
+
+record IDs
+atomic numbers
+symbols
+units
+metric formats
+citation references
+asset references
+figure IDs
+relationship targets
+duplicate IDs
+broken links
+missing required fields
+
+Create:
+
+npm run validate:data
+
+or equivalent according to the project stack.
+
+==================================================
+PHASE 141 — SCIENTIFIC CONSISTENCY CHECKS
+=========================================
+
+Create non-destructive sanity checks.
+
+Examples:
+
+atomic number uniqueness
+element symbol uniqueness
+expected element count
+isotope parent exists
+relationship target exists
+units parse correctly
+temperature scales labelled
+pressure conditions specified where required
+
+A consistency warning must not automatically overwrite scientific information.
+
+==================================================
+PHASE 142 — TESTING
+===================
+
+Required categories:
+
+unit tests
+component tests
+navigation tests
+storage tests
+cache tests
+search tests
+data-validation tests
+accessibility tests
+responsive tests
+build tests
+
+Critical test:
+
+refresh application
+→ reader returns to correct last location
+
+Critical test:
+
+reload while offline
+→ downloaded chapter still opens
+
+Critical test:
+
+activate new service worker
+→ unrelated browser caches survive
+
+Critical test:
+
+navigation initial state
+→ unrelated branches remain closed
+
+==================================================
+PHASE 143 — VISUAL REGRESSION
+=============================
+
+Test core responsive widths:
+
+320
+360
+390
+430
+768
+1024
+1280
+1440
+1920
+
+Verify:
+
+navigation
+chapter headers
+tables
+figures
+equations
+periodic table
+comparison
+notes
+search
+
+No horizontal document overflow on normal reading pages.
+
+==================================================
+PHASE 144 — EMPTY / ERROR STATES
+================================
+
+Design these intentionally.
+
+Examples:
+
+No search results
+No bookmarks
+No notes
+Record unavailable
+Figure missing
+Offline asset unavailable
+Scientific value unknown
+Insufficient data
+Source unavailable
+
+Do not display broken blank containers.
+
+==================================================
+PHASE 145 — LOADING STATES
+==========================
+
+Use subtle skeletons or book-like placeholders.
+
+Do not use large intrusive global spinners for every action.
+
+A previously cached chapter should open immediately.
+
+==================================================
+PHASE 146 — DESIGN TOKENS
+=========================
+
+Create a design-token system.
+
+Tokens should include:
+
+spacing
+radius
+shadow
+reader width
+navigation width
+inspector width
+type scale
+line height
+surface levels
+border levels
+semantic status colours
+scientific category colours
+
+Do not scatter arbitrary values across dozens of components.
+
+==================================================
+PHASE 147 — COMPONENT ARCHITECTURE
+==================================
+
+Break components by responsibility.
+
+Example:
+
+components/
+book/
+navigation/
+periodic-table/
+scientific/
+figures/
+charts/
+search/
+notes/
+citations/
+relationships/
+settings/
+common/
+
+Avoid a single giant App component.
+
+==================================================
+PHASE 148 — STATE MANAGEMENT
+============================
+
+Separate:
+
+URL state
+reader state
+persistent preferences
+scientific data
+temporary UI state
+
+Do not store everything globally.
+
+URL should represent shareable scientific position where practical.
+
+Example:
+
+/elements/0001-hydrogen/atomic-structure
+
+rather than storing all navigation position invisibly.
+
+==================================================
+PHASE 149 — URL DESIGN
+======================
+
+Human-readable canonical routes:
+
+/
+/book
+/periodic-table
+/elements
+/elements/0001-hydrogen
+/elements/0001-hydrogen/isotopes
+/compare
+/materials
+/compounds
+/relationships
+/sources
+/research
+
+Legacy routes should resolve or redirect.
+
+==================================================
+PHASE 150 — HOME PAGE
+=====================
+
+The MAT home page should NOT look like a software admin dashboard.
+
+It should resemble the entrance to a scientific atlas.
+
+Suggested composition:
+
+MAT
+
+MATERIALS ATLAS TABLE
+
+A structured atlas of elements,
+materials, properties and relationships.
+
+[Explore Periodic Table]
+[Open the Book]
+
+Continue Reading
+
+Interactive Periodic Table
+
+Browse:
+Elements
+Isotopes
+Materials
+Compounds
+Properties
+
+Featured Visualisation
+
+Latest / Recently Added
+
+Research & Methodology
+
+==================================================
+PHASE 151 — COVER
+=================
+
+Create an optional digital cover experience.
+
+MAT
+MATERIALS
+ATLAS
+TABLE
+
+Scientific reference edition
+
+The cover can contain a restrained data-derived graphic.
+
+Do not use meaningless futuristic glowing atoms.
+
+==================================================
+PHASE 152 — PRINT MODE
+======================
+
+Add high-quality print CSS.
+
+Printing an element chapter should:
+
+hide navigation
+hide interactive controls
+retain title
+retain tables
+retain citations
+retain equation numbers
+retain figure captions
+show URLs/DOIs appropriately
+avoid splitting figures unnecessarily
+
+This allows MAT to operate as both software and a real book.
+
+==================================================
+PHASE 153 — EXPORT ARCHITECTURE
+===============================
+
+Prepare for future exports:
+
+Markdown
+JSON
+CSV
+PDF
+print
+citation formats
+
+Do not build all exporters now if doing so destabilises the core reader.
+
+Create clean interfaces so they can be added later.
+
+==================================================
+PHASE 154 — PWA
+===============
+
+MAT should be installable.
+
+Implement:
+
+manifest
+icons
+theme colours
+service worker
+offline shell
+install readiness
+
+Do not break normal browser usage.
+
+==================================================
+PHASE 155 — ERROR BOUNDARIES
+============================
+
+One failed visualisation must not crash an entire element chapter.
+
+Use isolated failure boundaries around expensive or experimental components.
+
+Display a readable fallback.
+
+==================================================
+PHASE 156 — 3D
+==============
+
+3D must be lazy-loaded.
+
+Possible scientific 3D modules:
+
+atomic representation
+electron probability
+molecule
+crystal lattice
+material morphology
+metric-driven data sculpture
+
+Clearly label representation type.
+
+Do not imply that a stylised atomic model is a literal photograph of an atom.
+
+==================================================
+PHASE 157 — DATA-DRIVEN VISUALS
+===============================
+
+Where possible generate visuals from actual MAT metrics.
+
+Examples:
+
+density comparison
+thermal scale
+conductivity
+electronegativity
+isotope abundance
+spectral lines
+phase transitions
+
+This is preferred to generic decorative imagery.
+
+==================================================
+PHASE 158 — SECURITY
+====================
+
+No remote code execution.
+
+Sanitise rendered Markdown/HTML.
+
+Do not blindly allow arbitrary inline scripts from content records.
+
+Validate external links.
+
+Keep secrets out of the repository.
+
+No API keys in client bundles.
+
+==================================================
+PHASE 159 — PRIVACY
+===================
+
+Local reader memory should remain local by default.
+
+Bookmarks, notes and reading history should not silently transmit to external services.
+
+Analytics must not be a dependency for MAT functionality.
+
+==================================================
+PHASE 160 — DOCUMENTATION
+=========================
+
+Create or update:
+
+README.md
+CONTRIBUTING.md
+ARCHITECTURE.md
+docs/CONTENT-MODEL.md
+docs/DESIGN-SYSTEM.md
+docs/OFFLINE.md
+docs/DATA-SCHEMA.md
+docs/MIGRATION.md
+docs/SCIENTIFIC-INTEGRITY.md
+
+README must identify the project as:
+
+Materials Atlas Table (MAT)
+
+If historical Genesis material is retained, explain it as historical/project lineage rather than presenting Genesis as the current application name.
+
+==================================================
+PHASE 161 — README CLEAN-UP
+===========================
+
+The existing README contains foundational theory material.
+
+Do not delete it.
+
+Move or reorganise appropriately.
+
+The repository front page should first explain:
+
+what MAT is
+what it contains
+how to run it
+how the data is organised
+scientific-status policy
+how to contribute
+how to build
+how to validate
+
+Long theoretical writings belong in a clearly classified dedicated section/document.
+
+==================================================
+PHASE 162 — AGENT WORKFLOW
+==========================
+
+I am using OpenCode with free models.
+
+Available model choices include:
+
+Muse Spark 1.3
+Big Pickle
+Ling 3.0 Flash Fine
+MiMo v2.5
+Memotron 3 Ultra
+Memotron 3.5 Lightning
+
+Use them strategically rather than letting every agent rewrite everything.
+
+Suggested roles:
+
+MEMOTRON 3 ULTRA
+Architecture
+repository audit
+schema reasoning
+large-context review
+final architectural review
+
+MIMO V2.5
+primary implementation
+TypeScript/JavaScript
+state
+storage
+API
+tests
+component integration
+
+MUSE SPARK 1.3
+visual direction
+book composition
+typography
+component styling
+animations
+responsive polish
+
+MEMOTRON 3.5 LIGHTNING
+fast implementation loops
+tests
+lint fixes
+small refactors
+regression fixes
+
+BIG PICKLE
+independent code review
+edge cases
+critique
+architecture challenge
+bug search
+
+LING 3.0 FLASH FINE
+documentation
+cleanup
+repetitive migrations
+small components
+schema/document consistency
+
+If OpenCode exposes slightly different model names, use the exact names available in the UI.
+
+==================================================
+PHASE 163 — AGENT HANDOFF FILE
+==============================
+
+Create:
+
+AGENTS.md
+
+It must tell every subsequent agent:
+
+* what MAT is
+* source-of-truth locations
+* scientific integrity rules
+* filenames
+* architecture
+* component boundaries
+* prohibited destructive actions
+* test commands
+* validation commands
+* current implementation phase
+* known issues
+
+This prevents free agents from repeatedly misunderstanding the project.
+
+==================================================
+PHASE 164 — TASK LEDGER
+=======================
+
+Create:
+
+docs/IMPLEMENTATION-LEDGER.md
+
+Use:
+
+[ ] pending
+[~] in progress
+[x] complete
+[!] blocked
+
+Every major implementation task should be recorded.
+
+Do not rely on model conversation memory as the project-management system.
+
+==================================================
+PHASE 165 — MACHINE PROJECT MEMORY
+==================================
+
+Create a lightweight repository memory system for coding agents.
+
+Suggested:
+
+.opencode/
+project-context.md
+architecture.md
+conventions.md
+current-state.md
+decisions.md
+
+or use the actual OpenCode-supported convention if one already exists.
+
+The purpose is to make model switching cheap.
+
+When switching from MiMo to Muse, for example, the next model must be able to understand the current state without reconstructing the entire project.
+
+==================================================
+PHASE 166 — DECISION LOG
+========================
+
+Create:
+
+docs/decisions/
+
+Record important architectural decisions.
+
+Examples:
+
+0001-static-first.md
+0002-indexeddb-reader-memory.md
+0003-mat-cache-prefix.md
+0004-canonical-content-ids.md
+0005-progressive-navigation.md
+
+Short ADR-style records are enough.
+
+==================================================
+PHASE 167 — NO MASS REWRITE
+===========================
+
+Critical instruction:
+
+DO NOT ask an AI model to rewrite all 118 element records in one pass.
+
+That creates:
+
+scientific hallucinations
+schema drift
+format drift
+truncation
+citation loss
+
+Instead build:
+
+schema
+validator
+template
+migration system
+generation tooling
+
+Then process records individually or in controlled small batches.
+
+==================================================
+PHASE 168 — DEFINITION OF DONE
+==============================
+
+This redesign is not complete merely because the home page looks better.
+
+DONE requires:
+
+[ ] repository builds
+[ ] existing content remains accessible
+[ ] MAT identity implemented
+[ ] menus closed by default
+[ ] active lineage expands correctly
+[ ] book reader redesigned
+[ ] responsive layouts work
+[ ] reading position persists
+[ ] bookmarks persist
+[ ] notes persist
+[ ] favourites persist
+[ ] history persists
+[ ] cache versioning works
+[ ] unrelated caches remain untouched
+[ ] offline shell works
+[ ] downloaded content works offline
+[ ] periodic table works
+[ ] search works
+[ ] search index generated
+[ ] scientific-status labels work
+[ ] citations are supported
+[ ] print mode works
+[ ] accessibility tested
+[ ] application builds statically
+[ ] optional backend remains separable
+[ ] tests pass
+[ ] scientific-data validation passes
+[ ] documentation updated
+
+==================================================
+PHASE 169 — IMPLEMENTATION ORDER
+================================
+
+Execute in this order:
+
+STEP 1
+Repository audit.
+
+STEP 2
+Create architecture/docs/project memory.
+
+STEP 3
+Protect and map existing scientific content.
+
+STEP 4
+Build the new application shell.
+
+STEP 5
+Fix collapsed navigation.
+
+STEP 6
+Implement book typography/layout.
+
+STEP 7
+Implement canonical routing.
+
+STEP 8
+Implement IndexedDB reader memory.
+
+STEP 9
+Implement bookmarks/history/favourites/notes.
+
+STEP 10
+Implement versioned service-worker cache.
+
+STEP 11
+Implement offline reader.
+
+STEP 12
+Build periodic table.
+
+STEP 13
+Generate local search index.
+
+STEP 14
+Implement global search and Ctrl/Cmd+K.
+
+STEP 15
+Create scientific components.
+
+STEP 16
+Create figures/graphs infrastructure.
+
+STEP 17
+Create comparison system.
+
+STEP 18
+Create relationship explorer foundations.
+
+STEP 19
+Add optional server/API layer.
+
+STEP 20
+Add SQLite only where justified.
+
+STEP 21
+Implement tests and validation.
+
+STEP 22
+Run accessibility/performance audit.
+
+STEP 23
+Update README/documentation.
+
+STEP 24
+Final independent review using a different agent.
+
+==================================================
+PHASE 170 — FIRST EXECUTION NOW
+===============================
+
+Do not merely explain what should be done.
+
+Start implementing.
+
+First:
+
+1. inspect the repository
+2. create the baseline audit
+3. create AGENTS.md
+4. create architecture documentation
+5. create implementation ledger
+6. identify current frontend stack
+7. identify safest migration path
+8. implement the collapsed navigation behaviour
+9. establish design tokens
+10. establish reader shell
+11. implement reader persistence
+12. implement MAT-only versioned cache
+13. run tests/build
+14. fix failures
+
+After each meaningful batch:
+
+* run tests
+* run build
+* inspect diffs
+* verify no content loss
+
+Do not stop after generating documentation if code changes are feasible.
+
+==================================================
+RESPONSE FORMAT
+===============
+
+At the end of the OpenCode run report:
+
+1. FILES INSPECTED
+2. FILES CREATED
+3. FILES MODIFIED
+4. FEATURES IMPLEMENTED
+5. TEST RESULTS
+6. BUILD RESULTS
+7. SCIENTIFIC DATA CHANGES
+8. MIGRATION STATUS
+9. KNOWN ISSUES
+10. NEXT IMPLEMENTATION TASKS
+
+For every scientific-data modification, explicitly state what changed.
+
+If no scientific data was changed, state:
+
+SCIENTIFIC DATA CHANGES: NONE
+
+Do not claim completion without running the relevant validation/build/test commands.
+
+Continue working through the implementation ledger in priority order.
+
+One especially important finding from the current repository is that the README still places the original **Causality / Constant / Potential** framework directly on the repository front page alongside statements about alchemy, time travel and other speculative ideas. That material can remain part of MAT's intellectual history, but the rebuild should classify it separately from established scientific data so readers cannot mistake hypotheses for experimentally established physics. ([github.com][1])
+
+The next logical continuation is the **actual target MAT folder/file architecture**—down to `apps/`, `packages/`, `data/`, `book/`, `schemas/`, `assets/`, IndexedDB stores, API routes, tests, and the 0000–0118 record structure—so you can have OpenCode create the structure rather than letting an agent invent it.
+
+[1]: https://github.com/jayprophit/Materials-Atlas-Table-Codex---MAT "GitHub - jayprophit/Materials-Atlas-Table-Codex---MAT: A detailed metrics of data · GitHub"

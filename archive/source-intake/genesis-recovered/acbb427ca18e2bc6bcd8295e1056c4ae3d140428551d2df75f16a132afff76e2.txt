@@ -1,0 +1,62 @@
+registry_id: "MAT:0010:REG:INCLUSION-COMPOUNDS"
+record_id: "MAT:0010"
+
+N2_Ne:
+
+  compound:
+    formula: "(N2)6Ne7"
+
+  parents:
+    - "MAT:0007"
+    - "MAT:0010"
+
+  classification:
+    - HIGH-PRESSURE-INSERTION-COMPOUND
+    - VAN-DER-WAALS-COMPOUND
+    - CLATHRATE-LIKE
+
+  experimental:
+
+    temperature:
+      value: 296
+      unit: "K"
+
+    methods:
+      - visual_phase_observation
+      - Raman_spectroscopy
+      - synchrotron_single_crystal_XRD
+
+  structure:
+
+    N2_role:
+      "HOST-LATTICE"
+
+    Ne_role:
+      "GUEST"
+
+    topology:
+      description: >
+        N2 molecular centers form distorted dodecahedral
+        cage architecture containing Neon guest atoms.
+
+    quadrupolar_host_interaction:
+      important: true
+
+  significance:
+
+    - stable_stoichiometric_high_pressure_N2_Ne_phase
+    - noble_gas_inclusion_chemistry
+    - weak_interaction_material
+    - pressure_enabled_assembly
+
+  source_id: "SRC-000209"
+
+principle:
+
+  statement:
+    "Weakly interacting species can form ordered stoichiometric materials under suitable pressure."
+
+rules:
+  inclusion_compound_equals_covalent_Ne_N_bond: false
+  high_pressure_phase_equals_ambient_stability: false
+  noble_gas_inertness_equals_no_material_assembly: false

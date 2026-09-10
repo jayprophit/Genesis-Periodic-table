@@ -1349,3 +1349,7 @@ visuals:
 The atomic values above are from NIST ASD: Carbon is `1s²2s²2p²`, \(^{3}P_0\), with first ionisation energy **11.2602880 ± 0.0000011 eV** and the higher ionisation ladder shown above. ([NIST][1]) NIST gives ¹²C abundance `0.9893(8)`, ¹³C `0.0107(8)`, and the standard atomic-weight interval `[12.0096,12.0116]`. ([NIST][2])
 
 The SI Brochure still defines the dalton/unified atomic mass unit as **one twelfth of the mass of a free Carbon-12 atom at rest in its ground state**, so the legacy Carbon-12 measurement-reference idea remains scientifically valid. ([BIPM][3])
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0006-Carbon-C-Nuclear-Evaluation.md) provides 21 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

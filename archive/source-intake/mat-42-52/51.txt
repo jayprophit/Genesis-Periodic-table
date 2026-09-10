@@ -1,0 +1,2430 @@
+Continuing from the **actual recovered Magnesium Part 2 production batch**. I’m keeping the same file-by-file structure, identifiers, status semantics, calculation layout, and checkpoint flow rather than introducing a new format. This batch is the one that completes the **Mg-19 → Mg-40 isotope layer, decay calculations, HCP deformation, alloys, core compounds, MgH₂, MgB₂, Grignard chemistry, battery architecture, ²⁵Mg NMR, biological coordination, high-pressure Mg, and stellar nuclear relationships**. 
+
+# `0012-Magnesium-Mg` — Part 2
+
+NUBASE2020 makes the exotic branch much clearer: ¹⁹Mg is a **two-proton emitter**, the sequence ²⁰Mg–²³Mg is β⁺-decaying, ²⁷Mg onward is neutron-rich β⁻ territory, and by ³⁹Mg the evaluated lifetime is **<180 ns** with neutron emission indicated; ⁴⁰Mg is experimentally known but still has an estimated millisecond-scale lifetime. 
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotopes.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:ISOTOPES"
+parent_id: "MAT:0012"
+version: "1.0.0"
+
+evaluation:
+  primary: "NUBASE2020"
+  source_id: "SRC-000254"
+
+range:
+  core_MAT_children:
+    minimum_A: 19
+    maximum_A: 40
+
+stable:
+  - MAT:0012:ISO:Mg-24
+  - MAT:0012:ISO:Mg-25
+  - MAT:0012:ISO:Mg-26
+
+proton_rich:
+  - MAT:0012:ISO:Mg-19
+  - MAT:0012:ISO:Mg-20
+  - MAT:0012:ISO:Mg-21
+  - MAT:0012:ISO:Mg-22
+  - MAT:0012:ISO:Mg-23
+
+neutron_rich:
+  - MAT:0012:ISO:Mg-27
+  - MAT:0012:ISO:Mg-28
+  - MAT:0012:ISO:Mg-29
+  - MAT:0012:ISO:Mg-30
+  - MAT:0012:ISO:Mg-31
+  - MAT:0012:ISO:Mg-32
+  - MAT:0012:ISO:Mg-33
+  - MAT:0012:ISO:Mg-34
+  - MAT:0012:ISO:Mg-35
+  - MAT:0012:ISO:Mg-36
+  - MAT:0012:ISO:Mg-37
+  - MAT:0012:ISO:Mg-38
+  - MAT:0012:ISO:Mg-39
+  - MAT:0012:ISO:Mg-40
+
+rules:
+  mass_number_alone_predicts_binding: false
+  beta_decay_equals_particle_stability: false
+  estimated_values_require_flag: true
+  source_qualifier_hash_must_be_preserved: true
+  historical_half_lives_may_be_retained_as_provenance: true
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-19-Magnesium-19.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-19"
+
+nucleus:
+  Z: 12
+  N: 7
+  A: 19
+  spin_parity: "1/2-#"
+
+mass_excess:
+  value: 31840
+  uncertainty: 60
+  unit: "keV"
+
+lifetime:
+  value: 5
+  uncertainty: 3
+  unit: "ps"
+
+classification:
+  particle_bound: false
+  proton_rich: true
+  two_proton_unbound: true
+
+decay:
+  two_proton_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-20-Magnesium-20.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-20"
+
+nucleus:
+  Z: 12
+  N: 8
+  A: 20
+  spin_parity: "0+"
+
+mass_excess:
+  value: 17477.7
+  uncertainty: 1.9
+  unit: "keV"
+
+half_life:
+  value: 90.4
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 30.3
+    uncertainty: 1.2
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-21-Magnesium-21.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-21"
+
+nucleus:
+  Z: 12
+  N: 9
+  A: 21
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: 10903.9
+  uncertainty: 0.8
+  unit: "keV"
+
+half_life:
+  value: 120.0
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 20.1
+    uncertainty: 2.1
+
+  beta_delayed_alpha_percent:
+    value: 0.116
+    uncertainty: 0.018
+
+  beta_delayed_proton_alpha_percent:
+    value: 0.016
+    uncertainty: 0.003
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-22-Magnesium-22.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-22"
+
+nucleus:
+  Z: 12
+  N: 10
+  A: 22
+  spin_parity: "0+"
+
+mass_excess:
+  value: -399.99
+  uncertainty: 0.16
+  unit: "keV"
+
+half_life:
+  value: 3.8745
+  uncertainty: 0.0007
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-23-Magnesium-23.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-23"
+
+nucleus:
+  Z: 12
+  N: 11
+  A: 23
+  spin_parity: "3/2+"
+
+mass_excess:
+  value: -5473.67
+  uncertainty: 0.03
+  unit: "keV"
+
+half_life:
+  value: 11.3039
+  uncertainty: 0.0032
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+daughter:
+  id: "MAT:0011:ISO:Na-23"
+  status: "RESOLVED"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-24-Magnesium-24.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-24"
+
+nucleus:
+  Z: 12
+  N: 12
+  A: 24
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 23.985041697
+  uncertainty: 0.000000014
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.7899
+  uncertainty: 0.0004
+
+stability:
+  status: "STABLE"
+
+roles:
+  - dominant_natural_magnesium_isotope
+  - stellar_nuclear_network
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-25-Magnesium-25.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-25"
+
+nucleus:
+  Z: 12
+  N: 13
+  A: 25
+  spin_parity: "5/2+"
+
+relative_atomic_mass:
+  value: 24.985836976
+  uncertainty: 0.000000050
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.1000
+  uncertainty: 0.0001
+
+stability:
+  status: "STABLE"
+
+NMR:
+  active: true
+  quadrupolar: true
+
+astrophysics:
+  produced_by:
+    - "22Ne(alpha,n)25Mg"
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+  - "SRC-000255"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-26-Magnesium-26.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-26"
+
+nucleus:
+  Z: 12
+  N: 14
+  A: 26
+  spin_parity: "0+"
+
+relative_atomic_mass:
+  value: 25.982592968
+  uncertainty: 0.000000031
+  unit: "u"
+
+representative_isotopic_composition:
+  value: 0.1101
+  uncertainty: 0.0003
+
+stability:
+  status: "STABLE"
+
+relationships:
+
+  stellar:
+    - "22Ne(alpha,gamma)26Mg"
+
+  extinct_radionuclide:
+    parent: "26Al"
+    relationship: "DECAY-DAUGHTER"
+
+  early_solar_system:
+    chronology:
+      "26Al-26Mg"
+
+source_ids:
+  - "SRC-000243"
+  - "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-27-Magnesium-27.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-27"
+
+nucleus:
+  Z: 12
+  N: 15
+  A: 27
+  spin_parity: "1/2+"
+
+mass_excess:
+  value: -14586.59
+  uncertainty: 0.05
+  unit: "keV"
+
+half_life:
+
+  current_NUBASE2020:
+    value: 9.435
+    uncertainty: 0.027
+    unit: "min"
+
+  legacy_G0012:
+    approximate_value: 9.458
+    unit: "min"
+    status: "SUPERSEDED-HISTORICAL-WORKING-VALUE"
+
+decay:
+  beta_minus_percent: 100
+
+daughter:
+  id: "MAT:0013:ISO:Al-27"
+  status: "RESERVED-PENDING-ALUMINIUM"
+
+calculation_id:
+  "MAT:0012:CALC:001"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-28-Magnesium-28.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-28"
+
+nucleus:
+  Z: 12
+  N: 16
+  A: 28
+  spin_parity: "0+"
+
+mass_excess:
+  value: -15019.95
+  uncertainty: 0.26
+  unit: "keV"
+
+half_life:
+  value: 20.915
+  uncertainty: 0.009
+  unit: "h"
+
+decay:
+  beta_minus_percent: 100
+
+daughter:
+  id: "MAT:0013:ISO:Al-28"
+  status: "RESERVED-PENDING-ALUMINIUM"
+
+decay_chain:
+  - "28Mg"
+  - "28Al"
+  - "28Si"
+
+calculation_ids:
+  - "MAT:0012:CALC:002"
+  - "MAT:0012:CALC:003"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-29-Magnesium-29.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-29"
+
+nucleus:
+  Z: 12
+  N: 17
+  A: 29
+  spin_parity: "3/2+"
+
+mass_excess:
+  value: -10612.4
+  uncertainty: 0.3
+  unit: "keV"
+
+half_life:
+  value: 1.30
+  uncertainty: 0.12
+  unit: "s"
+
+decay:
+  beta_minus_percent: 100
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-30-Magnesium-30.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-30"
+
+nucleus:
+  Z: 12
+  N: 18
+  A: 30
+  spin_parity: "0+"
+
+mass_excess:
+  value: -8881.4
+  uncertainty: 1.3
+  unit: "keV"
+
+half_life:
+  value: 317
+  uncertainty: 4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    relation: "LESS-THAN"
+    value: 0.06
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-31-Magnesium-31.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-31"
+
+nucleus:
+  Z: 12
+  N: 19
+  A: 31
+  spin_parity: "1/2+"
+
+mass_excess:
+  value: -3122
+  uncertainty: 3
+  unit: "keV"
+
+half_life:
+  value: 270
+  uncertainty: 2
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 6.2
+    uncertainty: 1.9
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-32-Magnesium-32.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-32"
+
+nucleus:
+  Z: 12
+  N: 20
+  A: 32
+  spin_parity: "0+"
+
+mass_excess:
+  value: -829
+  uncertainty: 3
+  unit: "keV"
+
+half_life:
+  value: 80.4
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 5.5
+    uncertainty: 0.5
+
+nuclear_structure:
+  island_of_inversion_relationship:
+    important: true
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-33-Magnesium-33.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-33"
+
+nucleus:
+  Z: 12
+  N: 21
+  A: 33
+  spin_parity: "3/2-"
+
+mass_excess:
+  value: 4962.9
+  uncertainty: 2.7
+  unit: "keV"
+
+half_life:
+  value: 92.0
+  uncertainty: 1.2
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 14
+    uncertainty: 2
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-34-Magnesium-34.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-34"
+
+nucleus:
+  Z: 12
+  N: 22
+  A: 34
+  spin_parity: "0+"
+
+mass_excess:
+  value: 8323
+  uncertainty: 7
+  unit: "keV"
+
+half_life:
+  value: 44.9
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 21
+    uncertainty: 7
+
+  beta_delayed_two_neutron_percent:
+    relation: "LESS-THAN"
+    value: 0.1
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-35-Magnesium-35.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-35"
+
+nucleus:
+  Z: 12
+  N: 23
+  A: 35
+  spin_parity: "(3/2-,5/2-)"
+
+mass_excess:
+  value: 15640
+  uncertainty: 270
+  unit: "keV"
+
+half_life:
+  value: 11.3
+  uncertainty: 0.6
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 52
+    uncertainty: 46
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-36-Magnesium-36.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-36"
+
+nucleus:
+  Z: 12
+  N: 24
+  A: 36
+  spin_parity: "0+"
+
+mass_excess:
+  value: 20380
+  uncertainty: 690
+  unit: "keV"
+
+half_life:
+  value: 3.9
+  uncertainty: 1.3
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 48
+    uncertainty: 12
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-37-Magnesium-37.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-37"
+
+nucleus:
+  Z: 12
+  N: 25
+  A: 37
+  spin_parity: "(3/2-)"
+
+mass_excess:
+  value: 28210
+  uncertainty: 700
+  unit: "keV"
+
+half_life:
+  value: 8
+  uncertainty: 4
+  unit: "ms"
+
+decay:
+  beta_minus:
+    status: "EXPECTED / INCOMPLETELY-QUANTIFIED"
+
+  beta_delayed_neutron:
+    status: "POSSIBLE"
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-38-Magnesium-38.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-38"
+
+nucleus:
+  Z: 12
+  N: 26
+  A: 38
+  spin_parity: "0+"
+
+mass_excess:
+  value: 34070
+  uncertainty: 500
+  qualifier: "#"
+  unit: "keV"
+
+half_life:
+  estimated_value: 2
+  unit: "ms"
+  qualifier: "#"
+
+experimental_lifetime_bound:
+  relation: "GREATER-THAN"
+  value: 260
+  unit: "ns"
+
+decay:
+  beta_minus:
+    estimated_percent: 100
+
+  beta_delayed_neutron:
+    status: "UNKNOWN"
+
+  beta_delayed_two_neutron:
+    status: "UNKNOWN"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-39-Magnesium-39.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-39"
+
+nucleus:
+  Z: 12
+  N: 27
+  A: 39
+  spin_parity: "7/2-#"
+
+mass_excess:
+  value: 42780
+  uncertainty: 510
+  qualifier: "#"
+  unit: "keV"
+
+lifetime:
+  relation: "LESS-THAN"
+  value: 180
+  unit: "ns"
+
+classification:
+  extreme_neutron_rich: true
+  particle_binding: "NOT-FULLY-ESTABLISHED"
+
+decay:
+  neutron_emission:
+    status: "INDICATED"
+
+  beta_minus:
+    status: "POSSIBLE"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/isotopes/0012-Magnesium-Mg-Isotope-40-Magnesium-40.yaml
+
+```yaml
+isotope_id: "MAT:0012:ISO:Mg-40"
+
+nucleus:
+  Z: 12
+  N: 28
+  A: 40
+  spin_parity: "0+"
+
+mass_excess:
+  value: 49550
+  uncertainty: 500
+  qualifier: "#"
+  unit: "keV"
+
+half_life:
+  estimated_value: 1
+  unit: "ms"
+  qualifier: "#"
+
+experimental_lifetime_bound:
+  relation: "GREATER-THAN"
+  value: 170
+  unit: "ns"
+
+first_observation_year: 2007
+
+decay:
+  beta_minus:
+    status: "POSSIBLE"
+
+  beta_delayed_neutron:
+    status: "POSSIBLE"
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+nuclear_structure:
+  N_28:
+    conventional_magic_number: true
+
+  shell_closure_behavior:
+    status: "ACTIVE-RESEARCH"
+
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-001-Mg27-BetaMinus-Q.md
+
+# Magnesium-27 → Aluminium-27
+
+$$
+{}^{27}Mg\rightarrow{}^{27}Al+e^-+\bar\nu_e
+$$
+
+NUBASE2020 mass excesses:
+
+$$
+ME(^{27}Mg)=-14586.59\ {\rm keV}
+$$
+
+$$
+ME(^{27}Al)=-17196.86\ {\rm keV}
+$$
+
+Using neutral atomic masses:
+
+$$
+Q_{\beta^-}=ME_p-ME_d
+$$
+
+$$
+Q_{\beta^-}
+=
+-14586.59-(-17196.86)
+$$
+
+$$
+\boxed{
+Q_{\beta^-}=2610.27\ {\rm keV}
+}
+$$
+
+```yaml
+calculation_id: "MAT:0012:CALC:001"
+q_beta_minus:
+  value: 2.61027
+  unit: "MeV"
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-002-Mg28-BetaMinus-Q.md
+
+# Magnesium-28 → Aluminium-28
+
+$$
+{}^{28}Mg
+\rightarrow
+{}^{28}Al+e^-+\bar\nu_e
+$$
+
+$$
+ME(^{28}Mg)=-15019.95\ {\rm keV}
+$$
+
+$$
+ME(^{28}Al)=-16850.72\ {\rm keV}
+$$
+
+Therefore:
+
+$$
+\boxed{
+Q_{\beta^-}
+=
+1830.77\ {\rm keV}
+}
+$$
+
+```yaml
+calculation_id: "MAT:0012:CALC:002"
+q_beta_minus:
+  value: 1.83077
+  unit: "MeV"
+source_id: "SRC-000254"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-CALC-003-Al28-to-Si28.md
+
+# Aluminium-28 → Silicon-28
+
+$$
+{}^{28}Al
+\rightarrow
+{}^{28}Si+e^-+\bar\nu_e
+$$
+
+$$
+ME(^{28}Al)=-16850.72\ {\rm keV}
+$$
+
+$$
+ME(^{28}Si)=-21492.7971\ {\rm keV}
+$$
+
+Therefore:
+
+$$
+\boxed{
+Q_{\beta^-}
+=
+4642.0771\ {\rm keV}
+}
+$$
+
+Full directed chain:
+
+$$
+\boxed{
+{}^{28}Mg
+\rightarrow
+{}^{28}Al
+\rightarrow
+{}^{28}Si
+}
+$$
+
+This is stored as two distinct nuclear edges, not one direct decay.
+
+The mechanical layer also needs a strong state/history model. Ambient Mg is hcp with \(c/a\approx1.624\). At room temperature, **basal \(\langle a\rangle\) slip and twinning are far easier than many non-basal modes**, creating texture- and loading-dependent anisotropy; temperature, alloying, grain size and rare-earth additions can substantially change the active deformation mechanisms. 
+
+# FILE: records/0012-Magnesium-Mg/data/properties/0012-Magnesium-Mg-HCP-Deformation.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:HCP-DEFORMATION"
+record_id: "MAT:0012"
+
+ambient_structure:
+  phase: "MAT:0012:PHASE:HCP-MG"
+  space_group: "P63/mmc"
+
+  lattice:
+    a:
+      approximate_value: 0.3209
+      unit: "nm"
+
+    c:
+      approximate_value: 0.5211
+      unit: "nm"
+
+    c_over_a:
+      approximate_value: 1.624
+
+deformation:
+
+  room_temperature:
+
+    dominant_easy_slip:
+      type: "BASAL-<a>"
+      plane: "{0001}"
+      direction: "<11-20>"
+
+    twinning:
+      important: true
+
+      common_extension_twin:
+        plane: "{10-12}"
+
+    non_basal_slip:
+      relative_activation:
+        "HARDER-THAN-BASAL"
+
+      classes:
+        - prismatic_a
+        - pyramidal_c_plus_a
+
+  elevated_temperature:
+
+    non_basal_activity:
+      increases: true
+
+anisotropy_controls:
+  - crystallographic_texture
+  - grain_orientation
+  - grain_size
+  - loading_direction
+  - tension_vs_compression
+  - temperature
+  - alloying
+  - precipitates
+  - rare_earth_content
+  - strain_rate
+  - prior_processing
+
+important_effects:
+  - yield_asymmetry
+  - tension_compression_asymmetry
+  - directional_ductility
+  - texture_evolution
+  - twinning_detwinning
+
+rules:
+  HCP_equals_brittle: false
+  magnesium_is_mechanically_isotropic: false
+  one_CRSS_value_is_universal: false
+  alloy_response_equals_pure_Mg_response: false
+
+source_id: "SRC-000256"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Alloy-Architecture.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:ALLOYS"
+record_id: "MAT:0012"
+
+families:
+
+  Mg_Al:
+    parents:
+      - "MAT:0012"
+      - "MAT:0013"
+
+    aluminium_status:
+      "RESERVED-PENDING-ALUMINIUM"
+
+    functions:
+      - castability
+      - solid_solution_strengthening
+      - precipitation_strengthening
+      - lightweight_structures
+
+  Mg_Zn:
+    parents:
+      - "MAT:0012"
+      - "MAT:0030"
+
+    zinc_status:
+      "RESERVED-PENDING-ZINC"
+
+    functions:
+      - strengthening
+      - precipitation_control
+
+  Mg_Mn:
+    parent_Mn:
+      "MAT:0025"
+
+    functions:
+      - impurity_control
+      - corrosion_response
+
+  Mg_Si:
+    parent_Si:
+      "MAT:0014"
+
+    silicon_status:
+      "RESERVED-PENDING-SILICON"
+
+  Mg_RE:
+
+    rare_earth_additions:
+      functions:
+        - texture_modification
+        - creep_resistance
+        - high_temperature_strength
+        - non_basal_slip_activation
+
+material_state_variables:
+  - composition
+  - phase_fraction
+  - precipitate_size
+  - precipitate_distribution
+  - grain_size
+  - texture
+  - heat_treatment
+  - deformation_history
+  - corrosion_environment
+
+rule:
+  alloy_property_equals_weighted_parent_average: false
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Core-Compounds.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:CORE-COMPOUNDS"
+record_id: "MAT:0012"
+
+MgO:
+
+  id: "MAT:CMP:MgO"
+
+  parents:
+    - "MAT:0012"
+    - "MAT:0008"
+
+  mineral:
+    "PERICLASE"
+
+  structure:
+    prototype: "ROCK-SALT"
+    space_group: "Fm-3m"
+    coordination:
+      Mg: 6
+      O: 6
+
+  electronic:
+    class: "WIDE-BANDGAP-INSULATOR"
+    representative_band_gap:
+      approximate_value: 7.8
+      unit: "eV"
+      material_quality_dependent: true
+
+  melting_point:
+    approximate_value: 2852
+    unit: "degC"
+
+  material_class:
+    - refractory
+    - ceramic
+    - electrical_insulator
+
+  source_id: "SRC-000257"
+
+Mg_OH_2:
+
+  id: "MAT:CMP:Mg(OH)2"
+
+  mineral:
+    "BRUCITE"
+
+  structure:
+    class: "LAYERED"
+    conventional_ambient_space_group: "P-3m1"
+
+    lattice_reference:
+      a:
+        approximate_value: 3.142
+        unit: "angstrom"
+
+      c:
+        approximate_value: 4.766
+        unit: "angstrom"
+
+  structural_nuance:
+    hydrogen_ordering_under_perturbation: true
+
+  source_id: "SRC-000258"
+
+MgCO3:
+
+  id: "MAT:CMP:MgCO3"
+
+  mineral:
+    "MAGNESITE"
+
+  parents:
+    - "MAT:0012"
+    - "MAT:0006"
+    - "MAT:0008"
+
+  structure:
+    crystal_system: "RHOMBOHEDRAL"
+    space_group: "R-3c"
+
+  coordination:
+    Mg: "OCTAHEDRAL"
+
+  source_id: "SRC-000262"
+
+MgCl2:
+
+  id: "MAT:CMP:MgCl2"
+
+  parents:
+    - "MAT:0012"
+    - "MAT:0017"
+
+  chlorine_status:
+    "RESERVED-PENDING-CHLORINE"
+
+  structure:
+    type: "LAYERED-CdCl2-TYPE"
+    space_group: "R-3m"
+
+    lattice_reference:
+      a:
+        value: 3.6363
+        unit: "angstrom"
+
+      c:
+        value: 17.6663
+        unit: "angstrom"
+
+  source_id: "SRC-000259"
+
+MgF2:
+
+  id: "MAT:CMP:MgF2"
+
+  parents:
+    - "MAT:0012"
+    - "MAT:0009"
+
+  structure:
+    ambient:
+      prototype: "RUTILE"
+      space_group: "P42/mnm"
+
+    high_pressure_sequence:
+      - pressure_approx_GPa: 9.1
+        structure: "CaCl2-type"
+        space_group: "Pnnm"
+
+      - pressure_approx_GPa: 14
+        structure: "PdF2-type"
+        space_group: "Pa-3"
+
+      - pressure_approx_GPa: 35
+        structure: "COTUNNITE-TYPE"
+        space_group: "Pnam"
+
+  source_id: "SRC-000260"
+
+Mg3N2:
+
+  id: "MAT:CMP:Mg3N2"
+
+  parents:
+    - "MAT:0012"
+    - "MAT:0007"
+
+  structure:
+    type: "ANTI-BIXBYITE"
+    space_group: "Ia-3"
+
+    lattice_parameter:
+      approximate_value: 9.95
+      unit: "angstrom"
+
+  source_id: "SRC-000261"
+
+rules:
+  same_Mg2_plus_means_same_crystal_structure: false
+  formula_alone_determines_property: false
+  polymorph_and_pressure_are_first_class: true
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-MgH2.yaml
+
+```yaml
+material_id: "MAT:CMP:MgH2"
+
+parents:
+  - "MAT:0012"
+  - "MAT:0001"
+
+classification:
+  - METAL-HYDRIDE
+  - HYDROGEN-STORAGE-MATERIAL
+
+stoichiometric_hydrogen_capacity:
+
+  gravimetric:
+    approximate_value: 7.6
+    unit: "wt%"
+
+phases:
+
+  alpha_MgH2:
+
+    aliases:
+      - "LOW-PRESSURE-MgH2"
+      - "RUTILE-TYPE-MgH2"
+
+    structure:
+      crystal_system: "TETRAGONAL"
+      space_group: "P42/mnm"
+
+    stability:
+      ordinary_reference_phase: true
+
+  gamma_MgH2:
+
+    structure:
+      crystal_system: "ORTHORHOMBIC"
+      prototype: "alpha-PbO2"
+      space_group: "Pbcn"
+
+    classification:
+      metastable: true
+      high_pressure_related: true
+
+    experimental_high_pressure_synthesis:
+      established: true
+
+hydrogenation:
+
+  reaction:
+    "Mg + H2 <-> MgH2"
+
+  stages:
+    - gas_transport
+    - surface_adsorption
+    - H2_dissociation
+    - H_diffusion
+    - hydride_nucleation
+    - phase_boundary_growth
+
+material_changes:
+  - lattice_structure
+  - volume
+  - electronic_structure
+  - mechanical_stress
+  - thermal_properties
+
+major_limitations:
+
+  dehydrogenation_temperature:
+    ordinary_unmodified_bulk:
+      typically_above: 300
+      unit: "degC"
+
+  thermodynamic_stability:
+    high: true
+
+  kinetics:
+    slow_without_modification: true
+
+engineering_controls:
+  - transition_metal_catalysts
+  - metal_oxide_catalysts
+  - carbon_based_catalysts
+  - nanostructuring
+  - nanoconfinement
+  - alloying
+  - reactive_hydride_composites
+  - high_entropy_catalysts
+  - defect_engineering
+  - interface_engineering
+
+history_variables:
+  - cycle_count
+  - phase_history
+  - catalyst_history
+  - oxide_history
+  - thermal_history
+  - strain
+  - particle_coarsening
+
+rules:
+  theoretical_7_6_wt_percent_equals_system_capacity: false
+  catalyst_changes_kinetics_only: false
+  phase_identity_is_optional: false
+  hydrogen_storage_equals_simple_void_filling: false
+
+source_ids:
+  - "SRC-000247"
+  - "SRC-000265"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-MgB2.yaml
+
+```yaml
+material_id: "MAT:CMP:MgB2"
+
+parents:
+  - "MAT:0012"
+  - "MAT:0005"
+
+classification:
+  - INTERMETALLIC-BORIDE
+  - PHONON-MEDIATED-SUPERCONDUCTOR
+  - MULTIBAND-SUPERCONDUCTOR
+
+structure:
+
+  prototype:
+    "AlB2"
+
+  space_group:
+    "P6/mmm"
+
+  arrangement:
+    boron:
+      structure: "HONEYCOMB-LAYERS"
+
+    magnesium:
+      structure: "LAYERS-BETWEEN-BORON-SHEETS"
+
+electronic_bands:
+
+  sigma:
+    character:
+      "B s/px/py"
+    dimensionality:
+      "QUASI-2D"
+
+  pi:
+    character:
+      "B pz"
+    dimensionality:
+      "MORE-3D"
+
+superconductivity:
+
+  Tc:
+    representative_value:
+      approximately: 39
+      unit: "K"
+
+  gaps:
+
+    sigma_gap:
+      representative_range:
+        approximately: "6-7"
+        unit: "meV"
+
+    pi_gap:
+      representative_range:
+        approximately: "1.7-2.2"
+        unit: "meV"
+
+    common_transition_temperature:
+      true
+
+  electron_phonon_coupling:
+    established: true
+
+    important_mode:
+      "BORON E2g BOND-STRETCHING"
+
+isotope_effect:
+
+  boron:
+    established: true
+
+    historical_shift:
+      approximate_delta_Tc: 1.0
+      unit: "K"
+
+    partial_isotope_exponent:
+      approximate_value: 0.26
+      uncertainty: 0.03
+
+  magnesium:
+    isotope_effect:
+      comparatively_small: true
+
+core_principle:
+
+  equation:
+    "ISOTOPE MASS -> PHONON SPECTRUM -> ELECTRON-PHONON COUPLING -> Tc"
+
+rules:
+  one_superconducting_gap_is_sufficient: false
+  MgB2_property_equals_Mg_property: false
+  MgB2_property_equals_B_property: false
+  isotope_substitution_changes_elemental_identity: false
+
+source_ids:
+  - "SRC-000248"
+  - "SRC-000249"
+  - "SRC-000264"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Grignard-Chemistry.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:GRIGNARD"
+record_id: "MAT:0012"
+
+general_family:
+  formula:
+    "RMgX"
+
+components:
+
+  R:
+    description:
+      "ORGANIC GROUP"
+
+  Mg:
+    element:
+      "MAT:0012"
+
+  X:
+    description:
+      "HALIDE"
+
+classification:
+  - ORGANOMAGNESIUM
+  - CARBON-BOND-FORMING-REAGENT-FAMILY
+
+canonical_relationships:
+
+  carbon_parent:
+    id: "MAT:0006"
+    status: "RESOLVED"
+
+  halogen_parent:
+    status: "ELEMENT-DEPENDENT"
+
+reaction_role:
+
+  common:
+    - nucleophilic_carbon_transfer
+    - carbon_carbon_bond_formation
+    - carbonyl_addition
+
+state_variables:
+  - solvent
+  - halide
+  - organic_group
+  - concentration
+  - aggregation
+  - coordination
+  - temperature
+  - moisture
+  - substrate
+
+important_rule:
+
+  statement:
+    "RMgX is not adequately represented as isolated R- plus Mg2+ plus X- classical particles."
+
+  solution_structure:
+    aggregation_and_equilibria: true
+
+scientific_lineage:
+  Victor_Grignard:
+    role:
+      - DISCOVERY-CONTRIBUTOR
+      - ORGANOMETALLIC-CHEMISTRY-PIONEER
+
+source_id: "SRC-000245"
+```
+
+MgH₂ remains a strong example of why MAT needs **phase and process history**. Its ordinary low-pressure hydride is rutile-type tetragonal, while the \(\gamma\) form is an orthorhombic high-pressure-derived metastable phase. MgB₂ gives the complementary emergence example: alternating Mg and honeycomb-B layers, distinct σ/π bands and multiple superconducting gaps. 
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Multivalent-Battery.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:MAGNESIUM-BATTERY"
+record_id: "MAT:0012"
+
+charge_carrier:
+  species: "Mg2+"
+  charge: 2
+
+technology_status_2026:
+  class: "ACTIVE-RESEARCH"
+  Li_ion_equivalent_maturity: false
+
+potential_strengths:
+  - divalent_charge_transfer
+  - magnesium_abundance
+  - metallic_Mg_anode_interest
+  - high_volumetric_capacity_potential
+
+fundamental_challenges:
+
+  electrolyte:
+
+    Mg2_solvation:
+      strong: true
+
+    desolvation:
+      kinetic_barrier: true
+
+    active_species:
+      may_include:
+        - solvated_Mg2_plus
+        - MgCl_plus_like_complexes
+        - other_coordination_complexes
+
+  metal_anode:
+
+    passivation:
+      major_issue: true
+
+    interphase:
+      can_block_Mg_transport: true
+
+    plating_stripping:
+      electrolyte_dependent: true
+
+  cathode:
+
+    Mg2_charge_density:
+      high: true
+
+    consequences:
+      - strong_host_interaction
+      - slow_diffusion
+      - lattice_distortion
+      - trapping
+      - high_migration_barriers
+
+cathode_families:
+  - Chevrel_related
+  - transition_metal_oxides
+  - amorphous_oxides
+  - sulfides
+  - polyanionic_materials
+  - Prussian_blue_analogues
+  - organic_electrodes
+  - disordered_hosts
+
+2026_research_direction:
+
+  amorphous_oxide_design:
+    purpose:
+      - reduce_Mg2_migration_barrier
+      - improve_room_temperature_transport
+
+  electrolyte_engineering:
+    purpose:
+      - stable_Mg_interface
+      - reversible_plating_stripping
+      - improved_desolvation
+
+rules:
+  divalent_charge_equals_double_cell_performance: false
+  Mg2_transport_equals_Li_plus_transport: false
+  electrolyte_species_equals_bare_Mg2_plus: false
+  theoretical_capacity_equals_practical_full_cell_capacity: false
+
+source_ids:
+  - "SRC-000250"
+  - "SRC-000251"
+  - "SRC-000266"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/spectra/0012-Magnesium-Mg-Mg25-NMR.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:MG25-NMR"
+isotope_id: "MAT:0012:ISO:Mg-25"
+
+nuclear_spin:
+  value: "5/2"
+
+natural_abundance:
+  representative_value: 0.1000
+
+magnetogyric_ratio:
+
+  radian:
+    approximate_value: -1.63890e7
+    unit: "rad s^-1 T^-1"
+
+  gamma_over_2pi:
+    approximate_value: -2.608
+    unit: "MHz/T"
+
+quadrupole_moment:
+  approximate_value: 2.2e-29
+  uncertainty: 0.3e-29
+  unit: "m2"
+
+measurement_characteristics:
+
+  low_gamma:
+    true
+
+  quadrupolar_broadening:
+    important: true
+
+  solid_state_sensitivity:
+    comparatively_low: true
+
+  higher_field:
+    beneficial: true
+
+applications:
+  - minerals
+  - ceramics
+  - chlorophyll
+  - Mg_coordination_sites
+  - biological_complexes
+  - organomagnesium_compounds
+  - battery_materials
+
+chlorophyll_example:
+
+  Mg_coordination:
+    "SQUARE-PYRAMIDAL-IN-STUDIED-CHLOROPHYLL-a-SAMPLE"
+
+  measured_CQ:
+    value: 12.9
+    uncertainty: 0.1
+    unit: "MHz"
+
+  eta_Q:
+    value: 1.00
+    uncertainty: 0.05
+
+rules:
+  NMR_frequency_is_fixed: false
+  quadrupolar_parameters_are_universal_Mg25_constants: false
+  CQ_is_local_environment_dependent: true
+
+source_id: "SRC-000255"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Biological-Coordination.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:BIOLOGICAL-COORDINATION"
+record_id: "MAT:0012"
+
+active_state:
+  species: "Mg2+"
+
+coordination_preferences:
+
+  hard_oxygen_donor_affinity:
+    important: true
+
+  common_biological_ligands:
+    - phosphate_oxygen
+    - carboxylate_oxygen
+    - water
+    - nucleic_acid_oxygen
+    - chlorophyll_nitrogen_coordination
+
+hydration:
+
+  Mg2_plus:
+    strongly_hydrated: true
+
+  water_exchange:
+    affects_biological_kinetics: true
+
+Mg_ATP:
+
+  canonical_object:
+    "MAT:CMP:Mg-ATP"
+
+  role:
+    - kinase_substrate_complex
+    - phosphate_transfer
+    - ATPase_chemistry
+    - energy_metabolism
+
+  principle:
+    "BIOLOGICAL ATP FUNCTION OFTEN INVOLVES Mg-COORDINATED ATP RATHER THAN ISOLATED ATP4-."
+
+chlorophyll:
+
+  canonical_family:
+    "MAGNESIUM-CHLORINS"
+
+  central_Mg:
+    coordinated_to:
+      - four_macrocycle_nitrogens
+
+  axial_coordination:
+    context_dependent: true
+
+  functions:
+    - molecular_geometry
+    - electronic_energy_levels
+    - photophysics
+    - photosynthetic_energy_transfer
+
+enzymes:
+
+  estimated_scale:
+    "HUNDREDS-OF-ENZYME-SYSTEMS"
+
+  exact_count:
+    status: "DEFINITION-DEPENDENT"
+
+rules:
+  Mg2_equals_metallic_Mg: false
+  chlorophyll_light_absorption_equals_isolated_Mg_atom_absorption: false
+  ATP_equals_MgATP_in_all_contexts: false
+  coordination_geometry_is_first_class: true
+
+source_ids:
+  - "SRC-000252"
+  - "SRC-000255"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/phases/0012-Magnesium-Mg-High-Pressure.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:HIGH-PRESSURE"
+record_id: "MAT:0012"
+
+ambient:
+  structure: "HCP"
+
+room_temperature_transition:
+
+  target:
+    "BCC"
+
+  experimental_onset_values:
+
+    broad_phase_diagram_study:
+      approximate_value: 45
+      unit: "GPa"
+
+    single_crystal_2023:
+      value: 56.6
+      uncertainty: 2.0
+      unit: "GPa"
+
+  interpretation:
+    source_condition_dependent: true
+
+  variables:
+    - hydrostaticity
+    - pressure_medium
+    - crystal_orientation
+    - deformation
+    - kinetics
+    - temperature
+
+bcc:
+
+  experimentally_observed: true
+
+  high_pressure_stability:
+    measured_to:
+      value: 211
+      unit: "GPa"
+
+    temperature_reference:
+      value: 300
+      unit: "K"
+
+high_temperature:
+
+  melting_curve:
+    measured_to_pressure:
+      value: 105
+      unit: "GPa"
+
+  possible_additional_phase_near:
+    pressure:
+      approximate_value: 10
+      unit: "GPa"
+
+    temperature:
+      approximate_value: 1200
+      unit: "K"
+
+    status:
+      "INCOMPLETELY-RESOLVED"
+
+rules:
+  transition_pressure_is_one_exact_constant: false
+  theoretical_phase_prediction_equals_measurement: false
+  shock_transition_pressure_equals_static_transition_pressure: false
+
+source_id: "SRC-000263"
+```
+
+# FILE: records/0012-Magnesium-Mg/relationships/0012-Magnesium-Mg-Stellar-and-Isotope-Relationships.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:STELLAR-NUCLEAR"
+record_id: "MAT:0012"
+
+relationships:
+
+  - relationship_id: "MAT:0012:REL:NUC:001"
+
+    source:
+      - "MAT:0010:ISO:Ne-20"
+      - alpha
+
+    type:
+      "ALPHA-CAPTURE"
+
+    target:
+      "MAT:0012:ISO:Mg-24"
+
+    reaction:
+      "20Ne(alpha,gamma)24Mg"
+
+    environment:
+      "STELLAR"
+
+  - relationship_id: "MAT:0012:REL:NUC:002"
+
+    source:
+      - "MAT:0010:ISO:Ne-22"
+      - alpha
+
+    type:
+      "STELLAR-NEUTRON-SOURCE"
+
+    target:
+      "MAT:0012:ISO:Mg-25"
+
+    coproduct:
+      neutron
+
+    reaction:
+      "22Ne(alpha,n)25Mg"
+
+    astrophysical_role:
+      - main_s_process_branch
+      - weak_s_process
+
+  - relationship_id: "MAT:0012:REL:NUC:003"
+
+    source:
+      - "MAT:0010:ISO:Ne-22"
+      - alpha
+
+    type:
+      "COMPETING-ALPHA-CAPTURE"
+
+    target:
+      "MAT:0012:ISO:Mg-26"
+
+    reaction:
+      "22Ne(alpha,gamma)26Mg"
+
+  - relationship_id: "MAT:0012:REL:NUC:004"
+
+    source:
+      "MAT:0013:ISO:Al-26"
+
+    type:
+      "DECAYS-TO"
+
+    target:
+      "MAT:0012:ISO:Mg-26"
+
+    target_status:
+      "RESERVED-PENDING-ALUMINIUM"
+
+    significance:
+      - early_solar_system_chronometer
+      - extinct_radionuclide_system
+
+  - relationship_id: "MAT:0012:REL:NUC:005"
+
+    source:
+      "MAT:0012:ISO:Mg-24"
+
+    type:
+      "ALPHA-CAPTURE"
+
+    target:
+      "MAT:0014:ISO:Si-28"
+
+    target_status:
+      "RESERVED-PENDING-SILICON"
+
+    reaction:
+      "24Mg(alpha,gamma)28Si"
+
+rules:
+  stellar_reaction_equals_ordinary_chemistry: false
+  reaction_rate_is_universal_constant: false
+  stellar_rate_requires_temperature_and_cross_section: true
+  alpha_n_and_alpha_gamma_channels_compete: true
+
+source_id: "SRC-000267"
+```
+
+# FILE: records/0012-Magnesium-Mg/calculations/0012-Magnesium-Mg-Causal-Material-Map.md
+
+# Magnesium Causal Material Map
+
+## Electronic
+
+$$
+Mg
+\xrightarrow{-2e^-}
+Mg^{2+}
+$$
+
+produces:
+
+```text
+closed-shell ion
+smaller ionic radius
+different coordination
+different transport
+```
+
+---
+
+## Structural
+
+$$
+Mg_{\rm HCP}
+\xrightarrow{P}
+Mg_{\rm BCC}
+$$
+
+Same composition.
+
+Different lattice symmetry.
+
+Different mechanical/electronic state.
+
+---
+
+## Hydrogen
+
+$$
+Mg+H_2
+\rightleftharpoons
+MgH_2
+$$
+
+Changes:
+
+```text
+composition
+phase
+volume
+electronic state
+mechanics
+hydrogen chemical potential
+```
+
+---
+
+## Superconductivity
+
+$$
+Mg+B
+\rightarrow
+MgB_2
+$$
+
+Emergent:
+
+```text
+39-K superconductivity
+two superconducting gaps
+strong B-phonon coupling
+measurable isotope effect
+```
+
+---
+
+## Battery
+
+$$
+Mg
+\rightleftharpoons
+Mg^{2+}+2e^-
+$$
+
+but cell performance additionally requires:
+
+```text
+electrolyte
+solvation
+desolvation
+interphase
+cathode diffusion
+phase stability
+```
+
+---
+
+## Biology
+
+$$
+Mg^{2+}+ATP
+\rightleftharpoons
+MgATP
+$$
+
+Function emerges from coordinated state, not from isolated constituents alone.
+
+# APPEND TO: data/registries/sources.yaml
+
+```yaml
+  - source_id: "SRC-000254"
+    title: "The NUBASE2020 evaluation of nuclear physics properties"
+    authors:
+      - "F. G. Kondev"
+      - "M. Wang"
+      - "W. J. Huang"
+      - "S. Naimi"
+      - "G. Audi"
+    journal: "Chinese Physics C"
+    year: 2021
+    volume: 45
+    article: "030001"
+    doi: "10.1088/1674-1137/abddae"
+    source_type: "EVALUATED-NUCLEAR-DATABASE"
+    supports:
+      - Mg19_to_Mg40
+      - magnesium_half_lives
+      - magnesium_decay_modes
+      - spin_parity
+      - delayed_neutron_branching
+      - Mg27_half_life_correction
+      - Mg28_half_life
+
+  - source_id: "SRC-000255"
+    title: "25Mg NMR — nuclear constants and solid-state coordination studies"
+    source_type: "NMR-AND-COORDINATION-REFERENCE"
+    supports:
+      - Mg25_spin
+      - Mg25_magnetogyric_ratio
+      - quadrupolar_nucleus
+      - chlorophyll_25Mg_NMR
+      - Mg_coordination_environment
+
+  - source_id: "SRC-000256"
+    title: "Orientation engineering and deformation mechanisms of magnesium alloys"
+    year: 2024
+    journal: "Journal of Materials Research and Technology"
+    source_type: "MAGNESIUM-DEFORMATION-REVIEW"
+    supports:
+      - HCP_magnesium
+      - basal_slip
+      - prismatic_slip
+      - pyramidal_slip
+      - twinning
+      - texture
+      - mechanical_anisotropy
+
+  - source_id: "SRC-000257"
+    title: "Magnesium Oxide — rock-salt structure and material properties"
+    source_type: "CERAMIC-STRUCTURE-REFERENCE"
+    supports:
+      - MgO
+      - Fm_3m
+      - rock_salt_structure
+      - refractory_MgO
+      - MgO_band_gap
+
+  - source_id: "SRC-000258"
+    title: "Brucite Mg(OH)2 structure under small perturbation"
+    year: 2021
+    journal: "Journal of Physics and Chemistry of Solids"
+    doi: "10.1016/j.jpcs.2021.110078"
+    source_type: "CRYSTAL-STRUCTURE-REFERENCE"
+    supports:
+      - MgOH2
+      - brucite
+      - P_3m1
+      - hydrogen_ordering
+      - pressure_perturbation
+
+  - source_id: "SRC-000259"
+    title: "The structures and crystal chemistry of magnesium chloride and cadmium chloride"
+    journal: "Journal of Solid State Chemistry"
+    year: 1991
+    doi: "10.1016/0022-4596(91)90387-W"
+    source_type: "CRYSTALLOGRAPHIC-REFERENCE"
+    supports:
+      - MgCl2
+      - R_3m
+      - layered_magnesium_chloride
+
+  - source_id: "SRC-000260"
+    title: "MgF2 rutile and pressure-induced structural sequence"
+    source_type: "FLUORIDE-CRYSTAL-AND-PRESSURE-REFERENCE"
+    supports:
+      - MgF2
+      - P42_mnm
+      - Pnnm
+      - Pa_3
+      - Pnam
+      - pressure_transitions
+
+  - source_id: "SRC-000261"
+    title: "Structural properties of Mg3N2"
+    source_type: "NITRIDE-CRYSTAL-REFERENCE"
+    supports:
+      - Mg3N2
+      - anti_bixbyite
+      - Ia_3
+      - magnesium_nitride
+
+  - source_id: "SRC-000262"
+    title: "Magnesite MgCO3 crystal and electronic structure"
+    source_type: "CARBONATE-CRYSTAL-REFERENCE"
+    supports:
+      - MgCO3
+      - magnesite
+      - R_3c
+      - carbonate_layers
+
+  - source_id: "SRC-000263"
+    title: "Equation of state and high-pressure/high-temperature phase diagram of magnesium"
+    authors:
+      - "G. W. Stinton"
+      - "S. G. MacLeod"
+      - "H. Cynn"
+      - "D. Errandonea"
+      - "W. J. Evans"
+      - "J. E. Proctor"
+      - "Y. Meng"
+      - "M. I. McMahon"
+    journal: "Physical Review B"
+    year: 2014
+    volume: 90
+    article: "134105"
+    doi: "10.1103/PhysRevB.90.134105"
+    source_type: "PRIMARY-HIGH-PRESSURE-EXPERIMENT"
+    supports:
+      - Mg_hcp_bcc_transition
+      - Mg_to_211_GPa
+      - high_temperature_phase_diagram
+      - magnesium_melting_curve
+
+  - source_id: "SRC-000264"
+    title: "MgB2 structure and multigap superconductivity references"
+    source_type: "SUPERCONDUCTIVITY-STRUCTURE-REFERENCE"
+    supports:
+      - MgB2_P6_mmm
+      - sigma_band
+      - pi_band
+      - sigma_gap
+      - pi_gap
+      - multiband_superconductivity
+
+  - source_id: "SRC-000265"
+    title: "Magnesium-based hydrogen storage materials"
+    journal: "International Journal of Hydrogen Energy"
+    year: 2026
+    article: "153673"
+    doi: "10.1016/j.ijhydene.2026.153673"
+    source_type: "CURRENT-MgH2-REVIEW"
+    supports:
+      - MgH2_7_6_wt_percent
+      - high_dehydrogenation_temperature
+      - catalyst_engineering
+      - nanostructuring
+      - high_entropy_catalysts
+
+  - source_id: "SRC-000266"
+    title: "Room-temperature magnesium-ion batteries — amorphous cathodes and electrolyte engineering"
+    journal: "Journal of Magnesium and Alloys"
+    year: 2026
+    article: "102195"
+    doi: "10.1016/j.jma.2026.102195"
+    source_type: "CURRENT-MAGNESIUM-BATTERY-REVIEW"
+    supports:
+      - sluggish_Mg2_diffusion
+      - anode_passivation
+      - amorphous_cathodes
+      - electrolyte_interface
+      - room_temperature_Mg_batteries
+
+  - source_id: "SRC-000267"
+    title: "22Ne(alpha,n)25Mg and 22Ne(alpha,gamma)26Mg — astrophysical status"
+    journal: "European Physical Journal A"
+    year: 2025
+    source_type: "CURRENT-ASTROPHYSICAL-NUCLEAR-REVIEW"
+    supports:
+      - Ne22_alpha_n_Mg25
+      - Ne22_alpha_gamma_Mg26
+      - stellar_neutron_source
+      - weak_s_process
+      - main_s_process
+```
+
+# PATCH: records/0012-Magnesium-Mg/0012-Magnesium-Mg.md
+
+Replace:
+
+```text
+27Mg half-life ≈ 9.458 min
+```
+
+with:
+
+```text
+NUBASE2020:
+
+27Mg
+T1/2 = 9.435 ± 0.027 min
+
+Legacy G0012:
+≈ 9.458 min
+
+legacy value status:
+SUPERSEDED-HISTORICAL
+```
+
+Keep:
+
+```text
+28Mg
+T1/2 = 20.915 ± 0.009 h
+```
+
+Add nuclear decay energies:
+
+```text
+27Mg → 27Al
+Qβ− ≈ 2.61027 MeV
+
+28Mg → 28Al
+Qβ− ≈ 1.83077 MeV
+
+28Al → 28Si
+Qβ− ≈ 4.64208 MeV
+```
+
+# CURRENT MAGNESIUM STATE
+
+```yaml
+record: "MAT:0012"
+
+status: "RESEARCHED"
+migration_status: "CONTENT-MIGRATED"
+
+completion:
+
+  full_Mg19_to_Mg40_isotope_layer: true
+  stable_isotope_children: true
+  proton_rich_children: true
+  neutron_rich_children: true
+
+  Mg27_half_life_correction: true
+  Mg27_decay_Q: true
+  Mg28_decay_Q: true
+  Mg28_Al28_Si28_chain: true
+
+  Mg25_NMR_detail: true
+
+  HCP_deformation_architecture: true
+  basal_slip: true
+  twinning: true
+  anisotropy: true
+
+  alloy_architecture: true
+
+  MgO: true
+  MgOH2: true
+  MgCO3: true
+  MgCl2: true
+  MgF2: true
+  Mg3N2: true
+
+  MgH2_detailed_architecture: true
+  alpha_MgH2: true
+  gamma_MgH2: true
+  current_2026_hydrogen_research: true
+
+  MgB2_detailed_structure: true
+  sigma_pi_bands: true
+  two_gap_superconductivity: true
+  boron_isotope_effect: true
+
+  Grignard_architecture: true
+
+  magnesium_battery_detail: true
+  Mg_interface_architecture: true
+  cathode_architecture: true
+
+  biological_coordination: true
+  Mg_ATP: true
+  chlorophyll_coordination: true
+
+  high_pressure_Mg: true
+  HCP_BCC_transition: true
+
+  stellar_nuclear_network: true
+  Ne22_alpha_n_Mg25: true
+  Ne22_alpha_gamma_Mg26: true
+  Al26_Mg26_chronometer_edge: true
+
+remaining:
+
+  - exhaustive_Mg_I_and_Mg_II_spectroscopy
+  - astrophysical_h_and_k_line_diagnostics
+
+  - Mg24_Mg25_Mg26_geochemical_fractionation
+  - 26Al_26Mg_chronometry_detailed_layer
+
+  - full_Mg_Al_and_Mg_Zn_material_children
+  - corrosion_surface_film_detail
+  - sacrificial_anode_electrochemistry
+
+  - complete_relationship_registry
+  - people_and_intellectual_lineage
+  - experiments
+
+  - tables
+  - graph_manifest
+
+  - V01_to_V18_visual_specification
+  - G0012_migration_audit
+  - schema_validation
+
+schema_validation_status: "PENDING"
+visual_specification: "NOT-YET-LOCKED"
+visual_assets: "NOT-GENERATED"
+```
+
+That is the correct **Magnesium Part 2 checkpoint** from the earlier production workflow. It leaves Magnesium as `RESEARCHED / CONTENT-MIGRATED`, with the remaining finishing layers explicitly queued. 
+
+The next `continue` is the **final Magnesium finishing pass**:
+
+**complete Mg I/Mg II spectroscopy → astrophysical h/k diagnostics → Mg isotope geochemistry → detailed ²⁶Al–²⁶Mg chronology → Mg–Al/Mg–Zn relationship children → corrosion/surface-film and sacrificial-anode electrochemistry → complete relationship graph → people/intellectual lineage → experiments → tables → graphs → locked V01–V18 visual specification → `G0012 → MAT:0012` migration audit → schema validation → `CORE-VALIDATED` decision.** 

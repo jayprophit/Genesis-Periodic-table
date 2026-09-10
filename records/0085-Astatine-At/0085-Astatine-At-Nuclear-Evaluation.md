@@ -1,0 +1,105 @@
+# Astatine — Evaluated Nuclear States
+
+<!-- generated-by: sync-nuclear-evaluation.mjs -->
+
+**MAT Core Data · dated evaluation.** 78 nuclear states are transcribed from NUBASE2020, published in 2021. This is a reproducible source extraction, not independent experimental validation or a claim that later research is complete.
+
+- [Parent Astatine record](0085-Astatine-At.md)
+- [Structured evaluation](data/isotopes/0085-Astatine-At-NUBASE2020-Evaluation.yaml)
+- [Retained original source](../../data/catalog/sources/nubase_4.mas20.txt)
+- [Evaluation paper](https://doi.org/10.1088/1674-1137/abddae) · SRC-000008
+
+## How to read this table
+
+A is the mass number; N is the neutron count. Ground states, isomers, levels and isobaric analogue states retain the source state index. Mass excess is in keV, not atomic mass units. A `#` means an estimate from systematics; `?`, inequalities, asymmetric uncertainty text and spin qualifiers are preserved. `stbl` means stable in this evaluation, `p-unst` means particle unstable. Blank source fields remain unavailable. The final column preserves decay/abundance notation without equating decay branching with natural abundance.
+
+## Nuclear state catalogue
+
+| Nuclide / state | N | Mass excess | Half-life | Spin / parity | Decay or abundance (source text) | Source line |
+|---|---:|---|---|---|---|---:|
+| 191At | 106 | 3864 keV (unc. 16) | 2.1 ms (unc. 0.8) | 1/2+ | A~100;B+ ? | 4352 |
+| 191At · m [1] | 106 | 3922 keV (unc. 18) | 2.2 ms (unc. 0.4) | (7/2-) | A~100;B+ ? | 4353 |
+| 192At | 107 | 2926 keV (unc. 28) | 11.5 ms (unc. 0.6) | 3+# | A=100;B+ ?;B+SF<0.51 | 4383 |
+| 192At · m [1] | 107 | 2926 keV (unc. 28) | 88 ms (unc. 6) | (9-,10-) | A=100;B+ ?;B+SF<0.51 | 4384 |
+| 193At | 108 | -67 keV (unc. 22) | 29 ms (unc. 5) | 1/2+ | A~100 | 4413 |
+| 193At · m [1] | 108 | -59 keV (unc. 21) | 21 ms (unc. 5) | 7/2- | A~100 | 4414 |
+| 193At · n [2] | 108 | -25 keV (unc. 21) | 28 ms (unc. 4) | 13/2+ | IT=76 10;A=24 10 | 4415 |
+| 194At | 109 | -716 keV (unc. 24) | 286 ms (unc. 7) | (5-) | A~100;B+=8.3#;B+SF=0.032# | 4442 |
+| 194At · m [1] | 109 | -740 keV (unc. 30) | 323 ms (unc. 7) | 10- | A~100;B+=8.3#;B+SF=0.032# | 4443 |
+| 195At | 110 | -3470 keV (unc. 10) | 290 ms (unc. 20) | 1/2+* | A~100;B+ ? | 4471 |
+| 195At · m [1] | 110 | -3441 keV (unc. 8) | 143 ms (unc. 3) | 7/2-* | A=88 4;IT=12 4;B+ ? | 4472 |
+| 195At · p [3] | 110 | -3370# keV (unc. 40#) | UNAVAILABLE | (13/2+) | IT ? | 4473 |
+| 196At | 111 | -3910 keV (unc. 30) | 377 ms (unc. 4) | (3+)* | A=97.5 3;B+ ?;B+SF=0.009 1 | 4498 |
+| 196At · m [1] | 111 | -3950 keV (unc. 18) | 20# ms | 10-# | A~100 | 4499 |
+| 196At · n [2] | 111 | -3750 keV (unc. 30) | 11 us (unc. 2) | (5+) | IT=100 | 4500 |
+| 197At | 112 | -6355 keV (unc. 8) | 388.2 ms (unc. 5.6) | 9/2-* | A=96.1 12;B+=3.9 12 | 4529 |
+| 197At · m [1] | 112 | -6311 keV (unc. 9) | 2.0 s (unc. 0.2) | 1/2+* | A~100;B+ ?;IT<0.004;B+ ? | 4530 |
+| 197At · n [2] | 112 | -6044 keV (unc. 8) | 1.3 us (unc. 0.2) | 13/2+ | IT=100 | 4531 |
+| 198At | 113 | -6709 keV (unc. 5) | 4.47 s (unc. 0.05) | 3+* | A~97.0 17;B+ ? | 4557 |
+| 198At · m [1] | 113 | -6442 keV (unc. 5) | 1.23 s (unc. 0.05) | 10-* | A=93 4;B+ ? | 4558 |
+| 199At | 114 | -8823 keV (unc. 5) | 7.02 s (unc. 0.12) | 9/2-* | A=89 6;B+ ? | 4582 |
+| 199At · m [1] | 114 | -8579 keV (unc. 5) | 273 ms (unc. 9) | 1/2+* | IT~99;A~1 | 4583 |
+| 199At · n [2] | 114 | -8250 keV (unc. 5) | 70 ns (unc. 20) | 13/2+ | IT=100 | 4584 |
+| 199At · p [3] | 114 | -6530 keV (unc. 5) | 800 ns (unc. 50) | (29/2+) | IT=100 | 4585 |
+| 200At | 115 | -8988 keV (unc. 24) | 43.2 s (unc. 0.9) | (3+)* | A=52 3;B+=48 3 | 4609 |
+| 200At · m [1] | 115 | -8875 keV (unc. 25) | 47 s (unc. 1) | (7+)* | A=43 7;B+=57 7;IT ? | 4610 |
+| 200At · n [2] | 115 | -8644 keV (unc. 25) | 8.0 s (unc. 2.1) | (10-)* | IT ?;A~10.5 3;B+ ? | 4611 |
+| 201At | 116 | -10789 keV (unc. 8) | 85.2 s (unc. 1.6) | 9/2-* | A=71 7;B+=29 7 | 4638 |
+| 201At · m [1] | 116 | -10330 keV (unc. 8) | 45 ms (unc. 3) | 1/2+ | IT=100 | 4639 |
+| 201At · n [2] | 116 | -8469 keV (unc. 8) | 3.39 us (unc. 0.09) | 29/2+ | IT=100 | 4640 |
+| 202At | 117 | -10595 keV (unc. 28) | 184 s (unc. 1) | 3+* | B+=88 7;A=12 7 | 4666 |
+| 202At · m [1] | 117 | -10401 keV (unc. 28) | 182 s (unc. 2) | 7+* | B+=91.5 15;A=8.5 15;IT ? | 4667 |
+| 202At · n [2] | 117 | -10010 keV (unc. 28) | 460 ms (unc. 50) | 10- | IT=99.904 11;A=0.096 11;B+ ? | 4668 |
+| 203At | 118 | -12163 keV (unc. 11) | 7.4 m (unc. 0.2) | 9/2-* | B+=69 3;A=31 3 | 4700 |
+| 203At · m [1] | 118 | -11480 keV (unc. 11) | 3.5 ms (unc. 0.6) | 1/2+ | IT=100 | 4701 |
+| 203At · n [2] | 118 | -9833 keV (unc. 11) | 9.77 us (unc. 0.21) | 29/2+ | IT=100 | 4702 |
+| 204At | 119 | -11875 keV (unc. 23) | 9.12 m (unc. 0.11) | 7+* | B+=96.2 2;A=3.8 2 | 4733 |
+| 204At · m [1] | 119 | -11288 keV (unc. 23) | 108 ms (unc. 10) | 10- | IT=100 | 4734 |
+| 205At | 120 | -12985 keV (unc. 12) | 26.9 m (unc. 0.8) | 9/2-* | B+=90 2;A=10 2 | 4764 |
+| 205At · m [1] | 120 | -10645 keV (unc. 12) | 7.76 us (unc. 0.14) | 29/2+ | IT=100 | 4765 |
+| 206At | 121 | -12439 keV (unc. 14) | 30.6 m (unc. 0.8) | (6)+* | B+=99.10 8;A=0.90 8 | 4792 |
+| 206At · m [1] | 121 | -11629 keV (unc. 14) | 813 ns (unc. 21) | (10)- | IT=100 | 4793 |
+| 207At | 122 | -13227 keV (unc. 12) | 1.81 h (unc. 0.03) | 9/2-* | B+~90;A~10 | 4814 |
+| 207At · m [1] | 122 | -11110 keV (unc. 12) | 108 ns (unc. 2) | 25/2+ | IT=100 | 4815 |
+| 208At | 123 | -12470 keV (unc. 9) | 1.63 h (unc. 0.03) | 6+* | B+=99.45 6;A=0.55 6 | 4834 |
+| 208At · m [1] | 123 | -10194 keV (unc. 9) | 1.5 us (unc. 0.2) | 16- | IT=100 | 4835 |
+| 209At | 124 | -12884 keV (unc. 5) | 5.42 h (unc. 0.05) | 9/2-* | B+=96.1 4;A=3.9 4 | 4853 |
+| 209At · m [1] | 124 | -10455 keV (unc. 5) | 916 ns (unc. 10) | 29/2+ | IT=100 | 4854 |
+| 210At | 125 | -11972 keV (unc. 8) | 8.1 h (unc. 0.4) | (5)+* | B+=99.825 20;A=0.175 20 | 4879 |
+| 210At · m [1] | 125 | -9422 keV (unc. 8) | 482 ns (unc. 6) | (15)- | IT=100 | 4880 |
+| 210At · n [2] | 125 | -7944 keV (unc. 8) | 5.66 us (unc. 0.07) | (19)+ | IT=100 | 4881 |
+| 211At | 126 | -11647.2 keV (unc. 2.7) | 7.214 h (unc. 0.007) | 9/2-* | EC=58.20 8;A=41.80 8 | 4903 |
+| 211At · m [1] | 126 | -6832.7 keV (unc. 2.7) | 4.23 us (unc. 0.07) | (39/2-) | IT=100 | 4904 |
+| 212At | 127 | -8628.1 keV (unc. 2.4) | 314 ms (unc. 3) | (1-) | A~100;B+ ?;B- ? | 4925 |
+| 212At · m [1] | 127 | -8405.2 keV (unc. 2.4) | 119 ms (unc. 3) | (9-) | A~100;IT ? | 4926 |
+| 212At · n [2] | 127 | -3856.7 keV (unc. 2.8) | 152 us (unc. 5) | (25-) | IT=100 | 4927 |
+| 213At | 128 | -6580 keV (unc. 5) | 125 ns (unc. 6) | 9/2- | A=100 | 4953 |
+| 213At · m [1] | 128 | -5222 keV (unc. 24) | 110 ns (unc. 17) | 25/2-# | IT=100 | 4954 |
+| 213At · n [2] | 128 | -3582 keV (unc. 27) | 45 us (unc. 4) | 49/2+# | IT=100 | 4955 |
+| 214At | 129 | -3379 keV (unc. 4) | 558 ns (unc. 10) | 1- | A=100 | 4978 |
+| 214At · m [1] | 129 | -3321 keV (unc. 8) | 265 ns (unc. 30) | UNAVAILABLE | A~100;IT ? | 4979 |
+| 214At · n [2] | 129 | -3147 keV (unc. 5) | 760 ns (unc. 15) | 9- | A~100;IT ? | 4980 |
+| 215At | 130 | -1257 keV (unc. 7) | 37 us (unc. 3) | 9/2- | A=100 | 5004 |
+| 216At | 131 | 2257 keV (unc. 4) | 300 us (unc. 30) | 1- | A~100;B- ?;EC ? | 5025 |
+| 216At · m [1] | 131 | 2417 keV (unc. 10) | 100# us | 9-# | A=100 | 5026 |
+| 217At | 132 | 4395 keV (unc. 5) | 32.6 ms (unc. 0.3) | 9/2-* | A=99.992 2;B-=0.008 2 | 5046 |
+| 218At | 133 | 8100 keV (unc. 12) | 1.28 s (unc. 0.06) | (2-,3-)* | A~100;B- ? | 5062 |
+| 219At | 134 | 10396 keV (unc. 3) | 56 s (unc. 3) | (9/2-)* | A=93.6 10;B-=6.4 10 | 5078 |
+| 220At | 135 | 14376 keV (unc. 14) | 3.71 m (unc. 0.04) | 3-# | B-=92 2;A=8 2 | 5091 |
+| 221At | 136 | 16783 keV (unc. 14) | 2.3 m (unc. 0.2) | 3/2-# | B-=100 | 5104 |
+| 222At | 137 | 20953 keV (unc. 16) | 54 s (unc. 10) | UNAVAILABLE | B-=100 | 5116 |
+| 223At | 138 | 23428 keV (unc. 14) | 50 s (unc. 7) | 3/2-# | B-~100;A ? | 5129 |
+| 224At | 139 | 27711 keV (unc. 22) | 2.5 m (unc. 1.5) | 2+# | B-=100 | 5142 |
+| 225At | 140 | 30300# keV (unc. 300#) | 3# s (unc. >300ns) | 1/2+# | B- ?;B-n ? | 5154 |
+| 226At | 141 | 34660# keV (unc. 300#) | 7# m (unc. >300ns) | 2+# | B- ?;B-n ? | 5166 |
+| 227At | 142 | 37430# keV (unc. 300#) | 5# s (unc. >300ns) | 1/2+# | B- ?;B-n ? | 5178 |
+| 228At | 143 | 41880# keV (unc. 400#) | 1# m (unc. >300ns) | 3+# | B- ?;B-n ? | 5189 |
+| 229At | 144 | 44890# keV (unc. 400#) | 1# s (unc. >300ns) | 1/2+# | B- ?;B-n ? | 5202 |
+
+## Provenance and review
+
+Source snapshot SHA-256: `1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859`. Retrieved 2026-09-08. Every structured entry preserves the original line and its line number. The parser is checked against the source's published column specification and representative ground states, isomers, estimates and stable states. Post-2020 findings and supplied research batches retain separate provenance and review status.
+
+## Derived decay metrics
+
+The structured evaluation now includes a decay constant and mean lifetime for each positive numeric half-life. These use the single exponential model, \(\lambda=\ln(2)/T_{1/2}\) and \(\tau=T_{1/2}/\ln(2)\). Values retain the original time unit: a half-life in years produces a rate per source year, without silently assuming a calendar conversion. Inequalities reverse for the reciprocal decay constant. Estimates remain estimates. Stable or unavailable half-lives have no numeric result. Symmetric uncertainty is propagated to first order; asymmetric source uncertainties remain unpropagated and visible. These calculations add no new experimental evidence or significant figures.

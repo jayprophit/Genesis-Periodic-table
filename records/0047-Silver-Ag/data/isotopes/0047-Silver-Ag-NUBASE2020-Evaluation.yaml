@@ -1,0 +1,5907 @@
+registry_id: MAT:0047:REG:NUBASE2020
+record_id: MAT:0047
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 92
+    Z: 47
+    N: 45
+    state_index: 0
+    state_label: ground
+    source_label: 92Ag
+    mass_excess:
+      value: -37530
+      unit: keV
+      raw: -37530#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1
+      unit: ms
+      raw: 1#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">400ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "2016"
+    decay_and_abundance_raw: B+ ?; p ?
+    source_line: 1525
+    raw_line: 092 0470   92Ag   -37530#       400#                                    1#    ms >400ns               16          2016
+      B+ ?; p ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.6931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 1.4426950408889634
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-92
+    evaluation_entry_id: MAT:0047:NUBASE2020:92:0
+  - A: 93
+    Z: 47
+    N: 46
+    state_index: 0
+    state_label: ground
+    source_label: 93Ag
+    mass_excess:
+      value: -46400
+      unit: keV
+      raw: -46400#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 228
+      unit: ns
+      raw: "228"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "16"
+      uncertainty: 16
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: p=?; B+ ?;B+p ?
+    source_line: 1550
+    raw_line: 093 0470   93Ag   -46400#       400#                                  228     ns 16     9/2+#         16          1994
+      p=?; B+ ?;B+p ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.003040119212982216
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00021334169915664675
+      mean_lifetime:
+        value: 328.93446932268364
+        unit: ns
+        relation: =
+        uncertainty: 23.083120654223414
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-93
+    evaluation_entry_id: MAT:0047:NUBASE2020:93:0
+  - A: 94
+    Z: 47
+    N: 47
+    state_index: 0
+    state_label: ground
+    source_label: 94Ag
+    mass_excess:
+      value: -52400
+      unit: keV
+      raw: -52400#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 27
+      unit: ms
+      raw: "27"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 0+#
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B+=100;B+p<0.2
+    source_line: 1576
+    raw_line: 094 0470   94Ag   -52400#       400#                                   27     ms 2      0+#           06          1994
+      B+=100;B+p<0.2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.025672117798516494
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0019016383554456662
+      mean_lifetime:
+        value: 38.952766104002016
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-94
+    evaluation_entry_id: MAT:0047:NUBASE2020:94:0
+  - A: 94
+    Z: 47
+    N: 47
+    state_index: 1
+    state_label: m
+    source_label: 94Ag
+    mass_excess:
+      value: -51050
+      unit: keV
+      raw: -51050#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 570#
+      uncertainty: 570
+    excitation_energy:
+      value: 1350
+      unit: keV
+      raw: 1350#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 470
+      unit: ms
+      raw: "470"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+      status: RADIOACTIVE
+    spin_parity_raw: (7+)
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B+=100;B+p=17.0 6
+    source_line: 1577
+    raw_line: 094 0471   94Ag m -51050#       570#       1350#       400#           470     ms 10     (7+)          06          1994
+      B+=100;B+p=17.0 6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0014747812352339262
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003137832415391332
+      mean_lifetime:
+        value: 678.0666692178128
+        unit: ms
+        relation: =
+        uncertainty: 14.426950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-94m
+    evaluation_entry_id: MAT:0047:NUBASE2020:94:1
+  - A: 94
+    Z: 47
+    N: 47
+    state_index: 2
+    state_label: n
+    source_label: 94Ag
+    mass_excess:
+      value: -45900
+      unit: keV
+      raw: "-45900"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "370"
+      uncertainty: 370
+    excitation_energy:
+      value: 6500
+      unit: keV
+      raw: 6500#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 550#
+      uncertainty: 550
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 400
+      unit: ms
+      raw: "400"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: (21+)
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "2002"
+    decay_and_abundance_raw: B+=95.4 7;B+p~27;p=4.1 6;2p=0.5 3
+    source_line: 1578
+    raw_line: 094 0472   94Ag n -45900        370        6500#       550#           400     ms 40     (21+)         06          2002
+      B+=95.4 7;B+p~27;p=4.1 6;2p=0.5 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0017328679513998633
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00017328679513998636
+      mean_lifetime:
+        value: 577.0780163555854
+        unit: ms
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-94n
+    evaluation_entry_id: MAT:0047:NUBASE2020:94:2
+  - A: 95
+    Z: 47
+    N: 48
+    state_index: 0
+    state_label: ground
+    source_label: 95Ag
+    mass_excess:
+      value: -59910
+      unit: keV
+      raw: -59910#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.78
+      unit: s
+      raw: "1.78"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B+=100;B+p=2.3 2
+    source_line: 1601
+    raw_line: 095 0470   95Ag   -59910#       400#                                    1.78   s 0.06   (9/2+)        10          1994
+      B+=100;B+p=2.3 2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.38940852840446366
+        unit: 1/s
+        relation: =
+        uncertainty: 0.013126130170936976
+      mean_lifetime:
+        value: 2.567997172782355
+        unit: s
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-95
+    evaluation_entry_id: MAT:0047:NUBASE2020:95:0
+  - A: 95
+    Z: 47
+    N: 48
+    state_index: 1
+    state_label: m
+    source_label: 95Ag
+    mass_excess:
+      value: -59570
+      unit: keV
+      raw: -59570#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: 344.2
+      unit: keV
+      raw: "344.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 500
+      unit: ms
+      raw: <500
+      null_reason: null
+      relation: <
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2-)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2003"
+    decay_and_abundance_raw: IT=100
+    source_line: 1602
+    raw_line: 095 0471   95Ag m -59570#       400#        344.2        0.3         <500     ms        (1/2-)        10          2003 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0013862943611198907
+        unit: 1/ms
+        relation: ">"
+        uncertainty: null
+      mean_lifetime:
+        value: 721.3475204444817
+        unit: ms
+        relation: <
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-95m
+    evaluation_entry_id: MAT:0047:NUBASE2020:95:1
+  - A: 95
+    Z: 47
+    N: 48
+    state_index: 2
+    state_label: n
+    source_label: 95Ag
+    mass_excess:
+      value: -57380
+      unit: keV
+      raw: -57380#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: 2531.3
+      unit: keV
+      raw: "2531.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 16
+      unit: ms
+      raw: <16
+      null_reason: null
+      relation: <
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (23/2+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2003"
+    decay_and_abundance_raw: IT=100
+    source_line: 1603
+    raw_line: 095 0472   95Ag n -57380#       400#       2531.3        1.5          <16     ms        (23/2+)       10          2003 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.04332169878499658
+        unit: 1/ms
+        relation: ">"
+        uncertainty: null
+      mean_lifetime:
+        value: 23.083120654223414
+        unit: ms
+        relation: <
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-95n
+    evaluation_entry_id: MAT:0047:NUBASE2020:95:2
+  - A: 95
+    Z: 47
+    N: 48
+    state_index: 3
+    state_label: p
+    source_label: 95Ag
+    mass_excess:
+      value: -55050
+      unit: keV
+      raw: -55050#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: 4860
+      unit: keV
+      raw: "4860.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 40
+      unit: ms
+      raw: <40
+      null_reason: null
+      relation: <
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (37/2+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2003"
+    decay_and_abundance_raw: IT=100
+    source_line: 1604
+    raw_line: 095 0473   95Ag p -55050#       400#       4860.0        1.5          <40     ms        (37/2+)       10          2003 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01732867951399863
+        unit: 1/ms
+        relation: ">"
+        uncertainty: null
+      mean_lifetime:
+        value: 57.70780163555854
+        unit: ms
+        relation: <
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-95p
+    evaluation_entry_id: MAT:0047:NUBASE2020:95:3
+  - A: 96
+    Z: 47
+    N: 49
+    state_index: 0
+    state_label: ground
+    source_label: 96Ag
+    mass_excess:
+      value: -64510
+      unit: keV
+      raw: "-64510"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 4.45
+      unit: s
+      raw: "4.45"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: (8)+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: B+=100;B+p=4.2 4
+    source_line: 1626
+    raw_line: 096 0470   96Ag   -64510         90                                *    4.45   s 0.03   (8)+          08          1982
+      B+=100;B+p=4.2 4
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.15576341136178545
+        unit: 1/s
+        relation: =
+        uncertainty: 0.001050090413674958
+      mean_lifetime:
+        value: 6.419992931955887
+        unit: s
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-96
+    evaluation_entry_id: MAT:0047:NUBASE2020:96:0
+  - A: 96
+    Z: 47
+    N: 49
+    state_index: 1
+    state_label: m
+    source_label: 96Ag
+    mass_excess:
+      value: -64510
+      unit: keV
+      raw: -64510#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 100#
+      uncertainty: 100
+    excitation_energy:
+      value: 0
+      unit: keV
+      raw: 0#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 6.9
+      unit: s
+      raw: "6.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: (2+)
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "2003"
+    decay_and_abundance_raw: B+=100;B+p=14.9 18
+    source_line: 1627
+    raw_line: 096 0471   96Ag m -64510#       100#          0#        50#        *    6.9    s 0.5    (2+)          08          2003
+      B+=100;B+p=14.9 18
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.10045611312462975
+        unit: 1/s
+        relation: =
+        uncertainty: 0.007279428487292011
+      mean_lifetime:
+        value: 9.954595782133849
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-96m
+    evaluation_entry_id: MAT:0047:NUBASE2020:96:1
+  - A: 96
+    Z: 47
+    N: 49
+    state_index: 2
+    state_label: n
+    source_label: 96Ag
+    mass_excess:
+      value: -62050
+      unit: keV
+      raw: "-62050"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+    excitation_energy:
+      value: 2461.4
+      unit: keV
+      raw: "2461.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 103.2
+      unit: us
+      raw: "103.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4.5"
+      uncertainty: 4.5
+      status: RADIOACTIVE
+    spin_parity_raw: (13-)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: IT=100
+    source_line: 1628
+    raw_line: 096 0472   96Ag n -62050         90        2461.4        0.3          103.2   us 4.5    (13-)                     2011 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006716542447286291
+        unit: 1/us
+        relation: =
+        uncertainty: 0.00029287249043399524
+      mean_lifetime:
+        value: 148.88612821974104
+        unit: us
+        relation: =
+        uncertainty: 6.4921276840003355
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-96n
+    evaluation_entry_id: MAT:0047:NUBASE2020:96:2
+  - A: 96
+    Z: 47
+    N: 49
+    state_index: 3
+    state_label: p
+    source_label: 96Ag
+    mass_excess:
+      value: -61820
+      unit: keV
+      raw: "-61820"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+    excitation_energy:
+      value: 2686.7
+      unit: keV
+      raw: "2686.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.561
+      unit: us
+      raw: "1.561"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.016"
+      uncertainty: 0.016
+      status: RADIOACTIVE
+    spin_parity_raw: (15+)
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: IT=100
+    source_line: 1629
+    raw_line: 096 0473   96Ag p -61820         90        2686.7        0.4            1.561 us 0.016  (15+)         08          2011 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.44404047441380223
+        unit: 1/us
+        relation: =
+        uncertainty: 0.004551343747995411
+      mean_lifetime:
+        value: 2.252046958827672
+        unit: us
+        relation: =
+        uncertainty: 0.023083120654223417
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-96p
+    evaluation_entry_id: MAT:0047:NUBASE2020:96:3
+  - A: 96
+    Z: 47
+    N: 49
+    state_index: 4
+    state_label: q
+    source_label: 96Ag
+    mass_excess:
+      value: -57560
+      unit: keV
+      raw: "-57560"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+    excitation_energy:
+      value: 6951.8
+      unit: keV
+      raw: "6951.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.4"
+      uncertainty: 1.4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 132
+      unit: ns
+      raw: "132"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "17"
+      uncertainty: 17
+      status: RADIOACTIVE
+    spin_parity_raw: (19+)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: IT=100
+    source_line: 1630
+    raw_line: 096 0474   96Ag q -57560         90        6951.8        1.4          132     ns 17     (19+)                     2011 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00525111500424201
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0006762799626675316
+      mean_lifetime:
+        value: 190.43574539734317
+        unit: ns
+        relation: =
+        uncertainty: 24.525815695112378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-96q
+    evaluation_entry_id: MAT:0047:NUBASE2020:96:4
+  - A: 97
+    Z: 47
+    N: 50
+    state_index: 0
+    state_label: ground
+    source_label: 97Ag
+    mass_excess:
+      value: -70904
+      unit: keV
+      raw: "-70904"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "12"
+      uncertainty: 12
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 25.5
+      unit: s
+      raw: "25.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2)+*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B+=100
+    source_line: 1656
+    raw_line: 097 0470   97Ag   -70904         12                                    25.5    s 0.3    (9/2)+*       10          1978 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.027182242374899815
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00031979108676352723
+      mean_lifetime:
+        value: 36.78872354266857
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-97
+    evaluation_entry_id: MAT:0047:NUBASE2020:97:0
+  - A: 97
+    Z: 47
+    N: 50
+    state_index: 1
+    state_label: m
+    source_label: 97Ag
+    mass_excess:
+      value: -70290
+      unit: keV
+      raw: "-70290"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 620
+      unit: keV
+      raw: "620"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_origin: MD
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 100
+      unit: ms
+      raw: 100#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: IT ?
+    source_line: 1657
+    raw_line: 097 0471   97Ag m -70290         40         620         40       MD   100#    ms        1/2-#                     2019 IT ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 144.26950408889635
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-97m
+    evaluation_entry_id: MAT:0047:NUBASE2020:97:1
+  - A: 98
+    Z: 47
+    N: 51
+    state_index: 0
+    state_label: ground
+    source_label: 98Ag
+    mass_excess:
+      value: -73070
+      unit: keV
+      raw: "-73070"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 47.5
+      unit: s
+      raw: "47.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: (6)+*
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B+=100;B+p=0.0012 5
+    source_line: 1687
+    raw_line: 098 0470   98Ag   -73070         30                                    47.5    s 0.3    (6)+*         20          1978
+      B+=100;B+p=0.0012 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.014592572222314637
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00009216361403567138
+      mean_lifetime:
+        value: 68.52801444222577
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-98
+    evaluation_entry_id: MAT:0047:NUBASE2020:98:0
+  - A: 98
+    Z: 47
+    N: 51
+    state_index: 1
+    state_label: m
+    source_label: 98Ag
+    mass_excess:
+      value: -72960
+      unit: keV
+      raw: "-72960"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: 107.28
+      unit: keV
+      raw: "107.28"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 161
+      unit: ns
+      raw: "161"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+      status: RADIOACTIVE
+    spin_parity_raw: (4+)
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1998"
+    decay_and_abundance_raw: IT=100
+    source_line: 1688
+    raw_line: 098 0471   98Ag m -72960         30         107.28       0.10         161     ns 7      (4+)          20          1998 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004305261991055561
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00018718530395893742
+      mean_lifetime:
+        value: 232.27390158312312
+        unit: ns
+        relation: =
+        uncertainty: 10.098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-98m
+    evaluation_entry_id: MAT:0047:NUBASE2020:98:1
+  - A: 99
+    Z: 47
+    N: 52
+    state_index: 0
+    state_label: ground
+    source_label: 99Ag
+    mass_excess:
+      value: -76712
+      unit: keV
+      raw: "-76712"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.07
+      unit: m
+      raw: "2.07"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2)+*
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1967"
+    decay_and_abundance_raw: B+=100
+    source_line: 1712
+    raw_line: 099 0470   99Ag   -76712          6                                     2.07   m 0.05   (9/2)+*       17          1967 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.33485371041543255
+        unit: 1/m
+        relation: =
+        uncertainty: 0.008088253874768903
+      mean_lifetime:
+        value: 2.9863787346401542
+        unit: m
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-99
+    evaluation_entry_id: MAT:0047:NUBASE2020:99:0
+  - A: 99
+    Z: 47
+    N: 52
+    state_index: 1
+    state_label: m
+    source_label: 99Ag
+    mass_excess:
+      value: -76206
+      unit: keV
+      raw: "-76206"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: 506.2
+      unit: keV
+      raw: "506.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10.5
+      unit: s
+      raw: "10.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2)-*
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: IT=100
+    source_line: 1713
+    raw_line: 099 0471   99Ag m -76206          6         506.2        0.4           10.5    s 0.5    (1/2)-*       17          1978 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06601401719618527
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0031435246283897746
+      mean_lifetime:
+        value: 15.148297929334117
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-99m
+    evaluation_entry_id: MAT:0047:NUBASE2020:99:1
+  - A: 100
+    Z: 47
+    N: 53
+    state_index: 0
+    state_label: ground
+    source_label: 100Ag
+    mass_excess:
+      value: -78138
+      unit: keV
+      raw: "-78138"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.01
+      unit: m
+      raw: "2.01"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+      status: RADIOACTIVE
+    spin_parity_raw: (5)+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1970"
+    decay_and_abundance_raw: B+=100
+    source_line: 1739
+    raw_line: 100 0470   100Ag  -78138          5                                     2.01   m 0.09   (5)+*         08          1970 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34484934356216185
+        unit: 1/m
+        relation: =
+        uncertainty: 0.015441015383380382
+      mean_lifetime:
+        value: 2.8998170321868164
+        unit: m
+        relation: =
+        uncertainty: 0.12984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-100
+    evaluation_entry_id: MAT:0047:NUBASE2020:100:0
+  - A: 100
+    Z: 47
+    N: 53
+    state_index: 1
+    state_label: m
+    source_label: 100Ag
+    mass_excess:
+      value: -78122
+      unit: keV
+      raw: "-78122"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 15.52
+      unit: keV
+      raw: "15.52"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.16"
+      uncertainty: 0.16
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.24
+      unit: m
+      raw: "2.24"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.13"
+      uncertainty: 0.13
+      status: RADIOACTIVE
+    spin_parity_raw: (2)+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1980"
+    decay_and_abundance_raw: B+=?;IT ?
+    source_line: 1740
+    raw_line: 100 0471   100Agm -78122          5          15.52       0.16           2.24   m 0.13   (2)+          08          1980
+      B+=?;IT ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.3094407056071184
+        unit: 1/m
+        relation: =
+        uncertainty: 0.017958612378984547
+      mean_lifetime:
+        value: 3.2316368915912785
+        unit: m
+        relation: =
+        uncertainty: 0.18755035531556524
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-100m
+    evaluation_entry_id: MAT:0047:NUBASE2020:100:1
+  - A: 101
+    Z: 47
+    N: 54
+    state_index: 0
+    state_label: ground
+    source_label: 101Ag
+    mass_excess:
+      value: -81334
+      unit: keV
+      raw: "-81334"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11.1
+      unit: m
+      raw: "11.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+*
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1966"
+    decay_and_abundance_raw: B+=100
+    source_line: 1762
+    raw_line: 101 0470   101Ag  -81334          5                                    11.1    m 0.3    9/2+*         06          1966 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.062445691942337414
+        unit: 1/m
+        relation: =
+        uncertainty: 0.001687721403846957
+      mean_lifetime:
+        value: 16.013914953867495
+        unit: m
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-101
+    evaluation_entry_id: MAT:0047:NUBASE2020:101:0
+  - A: 101
+    Z: 47
+    N: 54
+    state_index: 1
+    state_label: m
+    source_label: 101Ag
+    mass_excess:
+      value: -81060
+      unit: keV
+      raw: "-81060"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 274.1
+      unit: keV
+      raw: "274.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.1
+      unit: s
+      raw: "3.10"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2)-*
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: IT=100
+    source_line: 1763
+    raw_line: 101 0471   101Agm -81060          5         274.1        0.3            3.10   s 0.10   (1/2)-*       06          1975 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.22359586469675655
+        unit: 1/s
+        relation: =
+        uncertainty: 0.007212769828927631
+      mean_lifetime:
+        value: 4.472354626755787
+        unit: s
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-101m
+    evaluation_entry_id: MAT:0047:NUBASE2020:101:1
+  - A: 102
+    Z: 47
+    N: 55
+    state_index: 0
+    state_label: ground
+    source_label: 102Ag
+    mass_excess:
+      value: -82247
+      unit: keV
+      raw: "-82247"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 12.9
+      unit: m
+      raw: "12.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 5+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1960"
+    decay_and_abundance_raw: B+=100
+    source_line: 1782
+    raw_line: 102 0470   102Ag  -82247          8                                    12.9    m 0.3    5+*           09          1960 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.05373233957829033
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0012495892925183797
+      mean_lifetime:
+        value: 18.61076602746763
+        unit: m
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-102
+    evaluation_entry_id: MAT:0047:NUBASE2020:102:0
+  - A: 102
+    Z: 47
+    N: 55
+    state_index: 1
+    state_label: m
+    source_label: 102Ag
+    mass_excess:
+      value: -82238
+      unit: keV
+      raw: "-82238"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_energy:
+      value: 9.4
+      unit: keV
+      raw: "9.40"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.7
+      unit: m
+      raw: "7.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 2+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1967"
+    decay_and_abundance_raw: B+=51 5;IT=49 5
+    source_line: 1783
+    raw_line: 102 0471   102Agm -82238          8           9.40       0.07           7.7    m 0.5    2+*           09          1967
+      B+=51 5;IT=49 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.09001911435843445
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0058453970362619765
+      mean_lifetime:
+        value: 11.10875181484502
+        unit: m
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-102m
+    evaluation_entry_id: MAT:0047:NUBASE2020:102:1
+  - A: 103
+    Z: 47
+    N: 56
+    state_index: 0
+    state_label: ground
+    source_label: 103Ag
+    mass_excess:
+      value: -84803
+      unit: keV
+      raw: "-84803"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 65.7
+      unit: m
+      raw: "65.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1954"
+    decay_and_abundance_raw: B+=100
+    source_line: 1801
+    raw_line: 103 0470   103Ag  -84803          4                                    65.7    m 0.7    7/2+*         09          1954 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010550185396650614
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00011240684593082843
+      mean_lifetime:
+        value: 94.78506418640491
+        unit: m
+        relation: =
+        uncertainty: 1.0098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-103
+    evaluation_entry_id: MAT:0047:NUBASE2020:103:0
+  - A: 103
+    Z: 47
+    N: 56
+    state_index: 1
+    state_label: m
+    source_label: 103Ag
+    mass_excess:
+      value: -84669
+      unit: keV
+      raw: "-84669"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 134.45
+      unit: keV
+      raw: "134.45"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.7
+      unit: s
+      raw: "5.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1962"
+    decay_and_abundance_raw: IT=100
+    source_line: 1802
+    raw_line: 103 0471   103Agm -84669          4         134.45       0.04           5.7    s 0.3    1/2-          09          1962 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.12160476851928864
+        unit: 1/s
+        relation: =
+        uncertainty: 0.006400250974699402
+      mean_lifetime:
+        value: 8.223361733067092
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-103m
+    evaluation_entry_id: MAT:0047:NUBASE2020:103:1
+  - A: 104
+    Z: 47
+    N: 57
+    state_index: 0
+    state_label: ground
+    source_label: 104Ag
+    mass_excess:
+      value: -85116
+      unit: keV
+      raw: "-85116"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 69.2
+      unit: m
+      raw: "69.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: 5+*
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1955"
+    decay_and_abundance_raw: B+=100
+    source_line: 1822
+    raw_line: 104 0470   104Ag  -85116          4                                    69.2    m 1.0    5+*           07          1955 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010016577753756434
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00014474823343578661
+      mean_lifetime:
+        value: 99.83449682951627
+        unit: m
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-104
+    evaluation_entry_id: MAT:0047:NUBASE2020:104:0
+  - A: 104
+    Z: 47
+    N: 57
+    state_index: 1
+    state_label: m
+    source_label: 104Ag
+    mass_excess:
+      value: -85109
+      unit: keV
+      raw: "-85109"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 6.9
+      unit: keV
+      raw: "6.90"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.22"
+      uncertainty: 0.22
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 33.5
+      unit: m
+      raw: "33.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.0"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 2+*
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1959"
+    decay_and_abundance_raw: B+~100;IT<0.07
+    source_line: 1823
+    raw_line: 104 0471   104Agm -85109          4           6.90       0.22          33.5    m 2.0    2+*           07          1959
+      B+~100;IT<0.07
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.02069096061372971
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0012352812306704304
+      mean_lifetime:
+        value: 48.330283869780274
+        unit: m
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-104m
+    evaluation_entry_id: MAT:0047:NUBASE2020:104:1
+  - A: 105
+    Z: 47
+    N: 58
+    state_index: 0
+    state_label: ground
+    source_label: 105Ag
+    mass_excess:
+      value: -87071
+      unit: keV
+      raw: "-87071"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 41.29
+      unit: d
+      raw: "41.29"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B+=100
+    source_line: 1842
+    raw_line: 105 0470   105Ag  -87071          5                                    41.29   d 0.07   1/2-*         19          1939 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.016787289429884847
+        unit: 1/d
+        relation: =
+        uncertainty: 0.000028459923954757552
+      mean_lifetime:
+        value: 59.5688782383053
+        unit: d
+        relation: =
+        uncertainty: 0.10098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-105
+    evaluation_entry_id: MAT:0047:NUBASE2020:105:0
+  - A: 105
+    Z: 47
+    N: 58
+    state_index: 1
+    state_label: m
+    source_label: 105Ag
+    mass_excess:
+      value: -87046
+      unit: keV
+      raw: "-87046"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 25.468
+      unit: keV
+      raw: "25.468"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.016"
+      uncertainty: 0.016
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.23
+      unit: m
+      raw: "7.23"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.16"
+      uncertainty: 0.16
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1969"
+    decay_and_abundance_raw: IT=99.66 7;B+=0.34 7
+    source_line: 1843
+    raw_line: 105 0471   105Agm -87046          5          25.468      0.016          7.23   m 0.16   7/2+          19          1969
+      IT=99.66 7;B+=0.34 7
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0958709793305595
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0021216260986015936
+      mean_lifetime:
+        value: 10.430685145627207
+        unit: m
+        relation: =
+        uncertainty: 0.23083120654223416
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-105m
+    evaluation_entry_id: MAT:0047:NUBASE2020:105:1
+  - A: 106
+    Z: 47
+    N: 59
+    state_index: 0
+    state_label: ground
+    source_label: 106Ag
+    mass_excess:
+      value: -86942
+      unit: keV
+      raw: "-86942"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 23.96
+      unit: m
+      raw: "23.96"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+      status: RADIOACTIVE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1937"
+    decay_and_abundance_raw: B+~100;B- ?
+    source_line: 1863
+    raw_line: 106 0470   106Ag  -86942          3                                    23.96   m 0.04   1+*           08          1937
+      B+~100;B- ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.028929348103503557
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00004829607362855352
+      mean_lifetime:
+        value: 34.566973179699566
+        unit: m
+        relation: =
+        uncertainty: 0.05770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-106
+    evaluation_entry_id: MAT:0047:NUBASE2020:106:0
+  - A: 106
+    Z: 47
+    N: 59
+    state_index: 1
+    state_label: m
+    source_label: 106Ag
+    mass_excess:
+      value: -86852
+      unit: keV
+      raw: "-86852"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 89.66
+      unit: keV
+      raw: "89.66"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8.28
+      unit: d
+      raw: "8.28"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 6+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: B+=100;IT ?
+    source_line: 1864
+    raw_line: 106 0471   106Agm -86852          3          89.66       0.07           8.28   d 0.02   6+*           08          1938
+      B+=100;IT ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.08371342760385814
+        unit: 1/d
+        relation: =
+        uncertainty: 0.00020220634686922258
+      mean_lifetime:
+        value: 11.945514938560617
+        unit: d
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-106m
+    evaluation_entry_id: MAT:0047:NUBASE2020:106:1
+  - A: 107
+    Z: 47
+    N: 60
+    state_index: 0
+    state_label: ground
+    source_label: 107Ag
+    mass_excess:
+      value: -88406.7
+      unit: keV
+      raw: "-88406.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1924"
+    decay_and_abundance_raw: IS=51.839 8
+    source_line: 1888
+    raw_line: 107 0470   107Ag  -88406.7        2.4                                 stbl              1/2-*         08          1924
+      IS=51.839 8
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0047:ISO:Ag-107
+    evaluation_entry_id: MAT:0047:NUBASE2020:107:0
+  - A: 107
+    Z: 47
+    N: 60
+    state_index: 1
+    state_label: m
+    source_label: 107Ag
+    mass_excess:
+      value: -88313.6
+      unit: keV
+      raw: "-88313.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: 93.125
+      unit: keV
+      raw: "93.125"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.019"
+      uncertainty: 0.019
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 44.3
+      unit: s
+      raw: "44.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1940"
+    decay_and_abundance_raw: IT=100
+    source_line: 1889
+    raw_line: 107 0471   107Agm -88313.6        2.4        93.125      0.019         44.3    s 0.2    7/2+          08          1940 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.015646663218057456
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00007063956306120748
+      mean_lifetime:
+        value: 63.911390311381076
+        unit: s
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-107m
+    evaluation_entry_id: MAT:0047:NUBASE2020:107:1
+  - A: 108
+    Z: 47
+    N: 61
+    state_index: 0
+    state_label: ground
+    source_label: 108Ag
+    mass_excess:
+      value: -87606.8
+      unit: keV
+      raw: "-87606.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.382
+      unit: m
+      raw: "2.382"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.011"
+      uncertainty: 0.011
+      status: RADIOACTIVE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1937"
+    decay_and_abundance_raw: B-=97.15 20;B+=2.85 20
+    source_line: 1908
+    raw_line: 108 0470   108Ag  -87606.8        2.4                                   2.382  m 0.011  1+*           08          1937
+      B-=97.15 20;B+=2.85 20
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.29099377857260506
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00134379998501203
+      mean_lifetime:
+        value: 3.436499587397511
+        unit: m
+        relation: =
+        uncertainty: 0.015869645449778598
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-108
+    evaluation_entry_id: MAT:0047:NUBASE2020:108:0
+  - A: 108
+    Z: 47
+    N: 61
+    state_index: 1
+    state_label: m
+    source_label: 108Ag
+    mass_excess:
+      value: -87497.3
+      unit: keV
+      raw: "-87497.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: 109.466
+      unit: keV
+      raw: "109.466"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.007"
+      uncertainty: 0.007
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 439
+      unit: y
+      raw: "439"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "9"
+      uncertainty: 9
+      status: RADIOACTIVE
+    spin_parity_raw: 6+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1969"
+    decay_and_abundance_raw: B+=91.3 9;IT=8.7 9
+    source_line: 1909
+    raw_line: 108 0471   108Agm -87497.3        2.4       109.466      0.007        439      y 9      6+*           08          1969
+      B+=91.3 9;IT=8.7 9
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015789229625511282
+        unit: 1/y
+        relation: =
+        uncertainty: 0.00003236971905002313
+      mean_lifetime:
+        value: 633.343122950255
+        unit: y
+        relation: =
+        uncertainty: 12.984255368000671
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-108m
+    evaluation_entry_id: MAT:0047:NUBASE2020:108:1
+  - A: 109
+    Z: 47
+    N: 62
+    state_index: 0
+    state_label: ground
+    source_label: 109Ag
+    mass_excess:
+      value: -88719.4
+      unit: keV
+      raw: "-88719.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1924"
+    decay_and_abundance_raw: IS=48.161 8
+    source_line: 1932
+    raw_line: 109 0470   109Ag  -88719.4        1.3                                 stbl              1/2-*         16          1924
+      IS=48.161 8
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0047:ISO:Ag-109
+    evaluation_entry_id: MAT:0047:NUBASE2020:109:0
+  - A: 109
+    Z: 47
+    N: 62
+    state_index: 1
+    state_label: m
+    source_label: 109Ag
+    mass_excess:
+      value: -88631.4
+      unit: keV
+      raw: "-88631.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: 88.0337
+      unit: keV
+      raw: "88.0337"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.0010"
+      uncertainty: 0.001
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 39.79
+      unit: s
+      raw: "39.79"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.21"
+      uncertainty: 0.21
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+*
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1967"
+    decay_and_abundance_raw: IT=100
+    source_line: 1933
+    raw_line: 109 0471   109Agm -88631.4        1.3        88.0337     0.0010        39.79   s 0.21   7/2+*         16          1967 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.017420135223924233
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00009193838645448828
+      mean_lifetime:
+        value: 57.40483567697186
+        unit: s
+        relation: =
+        uncertainty: 0.3029659585866823
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-109m
+    evaluation_entry_id: MAT:0047:NUBASE2020:109:1
+  - A: 110
+    Z: 47
+    N: 63
+    state_index: 0
+    state_label: ground
+    source_label: 110Ag
+    mass_excess:
+      value: -87457.3
+      unit: keV
+      raw: "-87457.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 24.56
+      unit: s
+      raw: "24.56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.11"
+      uncertainty: 0.11
+      status: RADIOACTIVE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1937"
+    decay_and_abundance_raw: B-~100;EC=0.30 6
+    source_line: 1954
+    raw_line: 110 0470   110Ag  -87457.3        1.3                                  24.56   s 0.11   1+*           12          1937
+      B-~100;EC=0.30 6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.02822260507165901
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00012640417580954768
+      mean_lifetime:
+        value: 35.43259020423294
+        unit: s
+        relation: =
+        uncertainty: 0.158696454497786
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-110
+    evaluation_entry_id: MAT:0047:NUBASE2020:110:0
+  - A: 110
+    Z: 47
+    N: 63
+    state_index: 1
+    state_label: m
+    source_label: 110Ag
+    mass_excess:
+      value: -87456.2
+      unit: keV
+      raw: "-87456.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: 1.112
+      unit: keV
+      raw: "1.112"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.016"
+      uncertainty: 0.016
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 660
+      unit: ns
+      raw: "660"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: 2-
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: IT=100
+    source_line: 1955
+    raw_line: 110 0471   110Agm -87456.2        1.3         1.112      0.016        660     ns 40     2-            12          1975 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001050223000848402
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0000636498788392971
+      mean_lifetime:
+        value: 952.1787269867159
+        unit: ns
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-110m
+    evaluation_entry_id: MAT:0047:NUBASE2020:110:1
+  - A: 110
+    Z: 47
+    N: 63
+    state_index: 2
+    state_label: n
+    source_label: 110Ag
+    mass_excess:
+      value: -87339.7
+      unit: keV
+      raw: "-87339.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: 117.59
+      unit: keV
+      raw: "117.59"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 249.863
+      unit: d
+      raw: "249.863"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.024"
+      uncertainty: 0.024
+      status: RADIOACTIVE
+    spin_parity_raw: 6+*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: B-=98.67 8;IT=1.33 8
+    source_line: 1956
+    raw_line: 110 0472   110Agn -87339.7        1.3       117.59       0.05         249.863  d 0.024  6+*           12          1938
+      B-=98.67 8;IT=1.33 8
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0027741089339355777
+        unit: 1/d
+        relation: =
+        uncertainty: 2.6646047799975934e-7
+      mean_lifetime:
+        value: 360.4761110016391
+        unit: d
+        relation: =
+        uncertainty: 0.03462468098133512
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-110n
+    evaluation_entry_id: MAT:0047:NUBASE2020:110:2
+  - A: 111
+    Z: 47
+    N: 64
+    state_index: 0
+    state_label: ground
+    source_label: 111Ag
+    mass_excess:
+      value: -88215.4
+      unit: keV
+      raw: "-88215.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.433
+      unit: d
+      raw: "7.433"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.010"
+      uncertainty: 0.01
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1937"
+    decay_and_abundance_raw: B-=100
+    source_line: 1974
+    raw_line: 111 0470   111Ag  -88215.4        1.5                                   7.433  d 0.010  1/2-*         09          1937 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.09325268136148868
+        unit: 1/d
+        relation: =
+        uncertainty: 0.00012545766361023636
+      mean_lifetime:
+        value: 10.723552238927665
+        unit: d
+        relation: =
+        uncertainty: 0.014426950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-111
+    evaluation_entry_id: MAT:0047:NUBASE2020:111:0
+  - A: 111
+    Z: 47
+    N: 64
+    state_index: 1
+    state_label: m
+    source_label: 111Ag
+    mass_excess:
+      value: -88155.6
+      unit: keV
+      raw: "-88155.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: 59.82
+      unit: keV
+      raw: "59.82"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 64.8
+      unit: s
+      raw: "64.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1957"
+    decay_and_abundance_raw: IT=99.3 2;B-=0.7 2
+    source_line: 1975
+    raw_line: 111 0471   111Agm -88155.6        1.5        59.82       0.04          64.8    s 0.8    7/2+          09          1957
+      IT=99.3 2;B-=0.7 2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010696715749381872
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00013205821912817126
+      mean_lifetime:
+        value: 93.48663864960483
+        unit: s
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-111m
+    evaluation_entry_id: MAT:0047:NUBASE2020:111:1
+  - A: 112
+    Z: 47
+    N: 65
+    state_index: 0
+    state_label: ground
+    source_label: 112Ag
+    mass_excess:
+      value: -86583.7
+      unit: keV
+      raw: "-86583.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.13
+      unit: h
+      raw: "3.130"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.008"
+      uncertainty: 0.008
+      status: RADIOACTIVE
+    spin_parity_raw: 2-*
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: B-=100
+    source_line: 1996
+    raw_line: 112 0470   112Ag  -86583.7        2.4                                   3.130  h 0.008  2-*           15          1938 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.22145277334183555
+        unit: 1/h
+        relation: =
+        uncertainty: 0.0005660134781899951
+      mean_lifetime:
+        value: 4.515635477982456
+        unit: h
+        relation: =
+        uncertainty: 0.011541560327111709
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-112
+    evaluation_entry_id: MAT:0047:NUBASE2020:112:0
+  - A: 113
+    Z: 47
+    N: 66
+    state_index: 0
+    state_label: ground
+    source_label: 113Ag
+    mass_excess:
+      value: -87027
+      unit: keV
+      raw: "-87027"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "17"
+      uncertainty: 17
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.37
+      unit: h
+      raw: "5.37"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1949"
+    decay_and_abundance_raw: B-=100
+    source_line: 2019
+    raw_line: 113 0470   113Ag  -87027         17                                     5.37   h 0.05   1/2-*         10          1949 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.12907768725511085
+        unit: 1/h
+        relation: =
+        uncertainty: 0.0012018406634554083
+      mean_lifetime:
+        value: 7.747272369573734
+        unit: h
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-113
+    evaluation_entry_id: MAT:0047:NUBASE2020:113:0
+  - A: 113
+    Z: 47
+    N: 66
+    state_index: 1
+    state_label: m
+    source_label: 113Ag
+    mass_excess:
+      value: -86984
+      unit: keV
+      raw: "-86984"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "17"
+      uncertainty: 17
+    excitation_energy:
+      value: 43.5
+      unit: keV
+      raw: "43.50"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 68.7
+      unit: s
+      raw: "68.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.6"
+      uncertainty: 1.6
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1958"
+    decay_and_abundance_raw: IT=64 7;B-=36 7
+    source_line: 2020
+    raw_line: 113 0471   113Agm -86984         17          43.50       0.10          68.7    s 1.6    7/2+          10          1958
+      IT=64 7;B-=36 7
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010089478610770673
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00023498057899902587
+      mean_lifetime:
+        value: 99.11314930907179
+        unit: s
+        relation: =
+        uncertainty: 2.3083120654223417
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-113m
+    evaluation_entry_id: MAT:0047:NUBASE2020:113:1
+  - A: 114
+    Z: 47
+    N: 67
+    state_index: 0
+    state_label: ground
+    source_label: 114Ag
+    mass_excess:
+      value: -84931
+      unit: keV
+      raw: "-84931"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.6
+      unit: s
+      raw: "4.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.1"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: 1+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1958"
+    decay_and_abundance_raw: B-=100
+    source_line: 2042
+    raw_line: 114 0470   114Ag  -84931          5                                     4.6    s 0.1    1+            12          1958 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.15068416968694465
+        unit: 1/s
+        relation: =
+        uncertainty: 0.003275742819281406
+      mean_lifetime:
+        value: 6.636397188089231
+        unit: s
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-114
+    evaluation_entry_id: MAT:0047:NUBASE2020:114:0
+  - A: 114
+    Z: 47
+    N: 67
+    state_index: 1
+    state_label: m
+    source_label: 114Ag
+    mass_excess:
+      value: -84732
+      unit: keV
+      raw: "-84732"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 198.9
+      unit: keV
+      raw: "198.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.5
+      unit: ms
+      raw: "1.50"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: (6+)
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1990"
+    decay_and_abundance_raw: IT=100
+    source_line: 2043
+    raw_line: 114 0471   114Agm -84732          5         198.9        1.0            1.50  ms 0.05   (6+)          12          1990 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.46209812037329684
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.015403270679109895
+      mean_lifetime:
+        value: 2.1640425613334453
+        unit: ms
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-114m
+    evaluation_entry_id: MAT:0047:NUBASE2020:114:1
+  - A: 115
+    Z: 47
+    N: 68
+    state_index: 0
+    state_label: ground
+    source_label: 115Ag
+    mass_excess:
+      value: -84983
+      unit: keV
+      raw: "-84983"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "18"
+      uncertainty: 18
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 20
+      unit: m
+      raw: "20.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1949"
+    decay_and_abundance_raw: B-=100
+    source_line: 2066
+    raw_line: 115 0470   115Ag  -84983         18                                    20.0    m 0.5    1/2-          12          1949 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03465735902799726
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0008664339756999316
+      mean_lifetime:
+        value: 28.85390081777927
+        unit: m
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-115
+    evaluation_entry_id: MAT:0047:NUBASE2020:115:0
+  - A: 115
+    Z: 47
+    N: 68
+    state_index: 1
+    state_label: m
+    source_label: 115Ag
+    mass_excess:
+      value: -84942
+      unit: keV
+      raw: "-84942"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "18"
+      uncertainty: 18
+    excitation_energy:
+      value: 41.16
+      unit: keV
+      raw: "41.16"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 18
+      unit: s
+      raw: "18.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1958"
+    decay_and_abundance_raw: B-=79.0 3;IT=21.0 3
+    source_line: 2067
+    raw_line: 115 0471   115Agm -84942         18          41.16       0.10          18.0    s 0.7    7/2+          12          1958
+      B-=79.0 3;IT=21.0 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03850817669777474
+        unit: 1/s
+        relation: =
+        uncertainty: 0.001497540204913462
+      mean_lifetime:
+        value: 25.968510736001342
+        unit: s
+        relation: =
+        uncertainty: 1.0098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-115m
+    evaluation_entry_id: MAT:0047:NUBASE2020:115:1
+  - A: 116
+    Z: 47
+    N: 69
+    state_index: 0
+    state_label: ground
+    source_label: 116Ag
+    mass_excess:
+      value: -82543
+      unit: keV
+      raw: "-82543"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.83
+      unit: m
+      raw: "3.83"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+      status: RADIOACTIVE
+    spin_parity_raw: (0-)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1958"
+    decay_and_abundance_raw: B-=100
+    source_line: 2091
+    raw_line: 116 0470   116Ag  -82543          3                                     3.83   m 0.08   (0-)          10          1958 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1809783761253121
+        unit: 1/m
+        relation: =
+        uncertainty: 0.003780227177552211
+      mean_lifetime:
+        value: 5.52552200660473
+        unit: m
+        relation: =
+        uncertainty: 0.11541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-116
+    evaluation_entry_id: MAT:0047:NUBASE2020:116:0
+  - A: 116
+    Z: 47
+    N: 69
+    state_index: 1
+    state_label: m
+    source_label: 116Ag
+    mass_excess:
+      value: -82495
+      unit: keV
+      raw: "-82495"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 47.9
+      unit: keV
+      raw: "47.90"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 20
+      unit: s
+      raw: "20"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: (3+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2005"
+    decay_and_abundance_raw: B-=93 4;IT=7 4
+    source_line: 2092
+    raw_line: 116 0471   116Agm -82495          3          47.90       0.10          20      s 1      (3+)          10          2005
+      B-=93 4;IT=7 4
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03465735902799726
+        unit: 1/s
+        relation: =
+        uncertainty: 0.001732867951399863
+      mean_lifetime:
+        value: 28.85390081777927
+        unit: s
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-116m
+    evaluation_entry_id: MAT:0047:NUBASE2020:116:1
+  - A: 116
+    Z: 47
+    N: 69
+    state_index: 2
+    state_label: n
+    source_label: 116Ag
+    mass_excess:
+      value: -82413
+      unit: keV
+      raw: "-82413"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 129.8
+      unit: keV
+      raw: "129.80"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.22"
+      uncertainty: 0.22
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 9.3
+      unit: s
+      raw: "9.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: (6-)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1970"
+    decay_and_abundance_raw: B-=92 4;IT=8 4
+    source_line: 2093
+    raw_line: 116 0472   116Agn -82413          3         129.80       0.22           9.3    s 0.3    (6-)          10          1970
+      B-=92 4;IT=8 4
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.07453195489891884
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0024042566096425426
+      mean_lifetime:
+        value: 13.417063880267362
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-116n
+    evaluation_entry_id: MAT:0047:NUBASE2020:116:2
+  - A: 117
+    Z: 47
+    N: 70
+    state_index: 0
+    state_label: ground
+    source_label: 117Ag
+    mass_excess:
+      value: -82182
+      unit: keV
+      raw: "-82182"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 73.6
+      unit: s
+      raw: "73.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.4"
+      uncertainty: 1.4
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1958"
+    decay_and_abundance_raw: B-=100
+    source_line: 2120
+    raw_line: 117 0470   117Ag  -82182         14                                    73.6    s 1.4    1/2-#         11          1958 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00941776060543404
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00017914218542945185
+      mean_lifetime:
+        value: 106.1823550094277
+        unit: s
+        relation: =
+        uncertainty: 2.019773057244549
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-117
+    evaluation_entry_id: MAT:0047:NUBASE2020:117:0
+  - A: 117
+    Z: 47
+    N: 70
+    state_index: 1
+    state_label: m
+    source_label: 117Ag
+    mass_excess:
+      value: -82153
+      unit: keV
+      raw: "-82153"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+    excitation_energy:
+      value: 28.6
+      unit: keV
+      raw: "28.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.34
+      unit: s
+      raw: "5.34"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+#
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1990"
+    decay_and_abundance_raw: B-=94.0 15;IT=6.0 15
+    source_line: 2121
+    raw_line: 117 0471   117Agm -82153         14          28.6        0.2            5.34   s 0.05   7/2+#         11          1990
+      B-=94.0 15;IT=6.0 15
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.12980284280148788
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0012153824232349053
+      mean_lifetime:
+        value: 7.703991518347065
+        unit: s
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-117m
+    evaluation_entry_id: MAT:0047:NUBASE2020:117:1
+  - A: 118
+    Z: 47
+    N: 71
+    state_index: 0
+    state_label: ground
+    source_label: 118Ag
+    mass_excess:
+      value: -79553.8
+      unit: keV
+      raw: "-79553.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.5"
+      uncertainty: 2.5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.76
+      unit: s
+      raw: "3.76"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.15"
+      uncertainty: 0.15
+      status: RADIOACTIVE
+    spin_parity_raw: (2-)
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1967"
+    decay_and_abundance_raw: B-=100
+    source_line: 2147
+    raw_line: 118 0470   118Ag  -79553.8        2.5                                   3.76   s 0.15   (2-)          95          1967 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.18434765440424078
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0073542947235734355
+      mean_lifetime:
+        value: 5.424533353742502
+        unit: s
+        relation: =
+        uncertainty: 0.21640425613334452
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-118
+    evaluation_entry_id: MAT:0047:NUBASE2020:118:0
+  - A: 118
+    Z: 47
+    N: 71
+    state_index: 1
+    state_label: m
+    source_label: 118Ag
+    mass_excess:
+      value: -79508
+      unit: keV
+      raw: "-79508.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.5"
+      uncertainty: 2.5
+    excitation_energy:
+      value: 45.79
+      unit: keV
+      raw: "45.79"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 0.1
+      unit: us
+      raw: ~0.1
+      null_reason: null
+      relation: "~"
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (1,2)-
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1989"
+    decay_and_abundance_raw: IT=100
+    source_line: 2148
+    raw_line: 118 0471   118Agm -79508.0        2.5        45.79       0.09          ~0.1   us        (1,2)-        95          1989 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 6.931471805599452
+        unit: 1/us
+        relation: "~"
+        uncertainty: null
+      mean_lifetime:
+        value: 0.14426950408889636
+        unit: us
+        relation: "~"
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-118m
+    evaluation_entry_id: MAT:0047:NUBASE2020:118:1
+  - A: 118
+    Z: 47
+    N: 71
+    state_index: 2
+    state_label: n
+    source_label: 118Ag
+    mass_excess:
+      value: -79426.2
+      unit: keV
+      raw: "-79426.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.5"
+      uncertainty: 2.5
+    excitation_energy:
+      value: 127.63
+      unit: keV
+      raw: "127.63"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2
+      unit: s
+      raw: "2.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: (5+)
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: B-=59 3;IT=41 3
+    source_line: 2149
+    raw_line: 118 0472   118Agn -79426.2        2.5       127.63       0.10           2.0    s 0.2    (5+)          95          1971
+      B-=59 3;IT=41 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34657359027997264
+        unit: 1/s
+        relation: =
+        uncertainty: 0.03465735902799726
+      mean_lifetime:
+        value: 2.8853900817779268
+        unit: s
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-118n
+    evaluation_entry_id: MAT:0047:NUBASE2020:118:2
+  - A: 118
+    Z: 47
+    N: 71
+    state_index: 3
+    state_label: p
+    source_label: 118Ag
+    mass_excess:
+      value: -79274.4
+      unit: keV
+      raw: "-79274.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.5"
+      uncertainty: 2.5
+    excitation_energy:
+      value: 279.37
+      unit: keV
+      raw: "279.37"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.20"
+      uncertainty: 0.2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 0.1
+      unit: us
+      raw: ~0.1
+      null_reason: null
+      relation: "~"
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (3+)
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1989"
+    decay_and_abundance_raw: IT=100
+    source_line: 2150
+    raw_line: 118 0473   118Agp -79274.4        2.5       279.37       0.20          ~0.1   us        (3+)          95          1989 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 6.931471805599452
+        unit: 1/us
+        relation: "~"
+        uncertainty: null
+      mean_lifetime:
+        value: 0.14426950408889636
+        unit: us
+        relation: "~"
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-118p
+    evaluation_entry_id: MAT:0047:NUBASE2020:118:3
+  - A: 119
+    Z: 47
+    N: 72
+    state_index: 0
+    state_label: ground
+    source_label: 119Ag
+    mass_excess:
+      value: -78646
+      unit: keV
+      raw: "-78646"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "15"
+      uncertainty: 15
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: true
+    half_life:
+      value: 6
+      unit: s
+      raw: "6.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: B-=100
+    source_line: 2176
+    raw_line: 119 0470   119Ag  -78646         15                                *&   6.0    s 0.5    1/2-#         09          1975 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.11552453009332421
+        unit: 1/s
+        relation: =
+        uncertainty: 0.009627044174443685
+      mean_lifetime:
+        value: 8.656170245333781
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-119
+    evaluation_entry_id: MAT:0047:NUBASE2020:119:0
+  - A: 119
+    Z: 47
+    N: 72
+    state_index: 1
+    state_label: m
+    source_label: 119Ag
+    mass_excess:
+      value: -78626
+      unit: keV
+      raw: -78626#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 25#
+      uncertainty: 25
+    excitation_energy:
+      value: 20
+      unit: keV
+      raw: 20#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 20#
+      uncertainty: 20
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: true
+    half_life:
+      value: 2.1
+      unit: s
+      raw: "2.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.1"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+#
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: B-=100
+    source_line: 2177
+    raw_line: 119 0471   119Agm -78626#        25#         20#        20#        *&   2.1    s 0.1    7/2+#         09          1975 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.3300700859809263
+        unit: 1/s
+        relation: =
+        uncertainty: 0.01571762314194887
+      mean_lifetime:
+        value: 3.0296595858668236
+        unit: s
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-119m
+    evaluation_entry_id: MAT:0047:NUBASE2020:119:1
+  - A: 120
+    Z: 47
+    N: 73
+    state_index: 0
+    state_label: ground
+    source_label: 120Ag
+    mass_excess:
+      value: -75652
+      unit: keV
+      raw: "-75652"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 1.52
+      unit: s
+      raw: "1.52"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+      status: RADIOACTIVE
+    spin_parity_raw: 4(+)
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: B-=100;B-n<0.003
+    source_line: 2205
+    raw_line: 120 0470   120Ag  -75652          4                                *    1.52   s 0.07   4(+)          02          1971
+      B-=100;B-n<0.003
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.4560178819473324
+        unit: 1/s
+        relation: =
+        uncertainty: 0.021000823510732416
+      mean_lifetime:
+        value: 2.1928964621512246
+        unit: s
+        relation: =
+        uncertainty: 0.10098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-120
+    evaluation_entry_id: MAT:0047:NUBASE2020:120:0
+  - A: 120
+    Z: 47
+    N: 73
+    state_index: 1
+    state_label: m
+    source_label: 120Ag
+    mass_excess:
+      value: -75650
+      unit: keV
+      raw: -75650#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_energy:
+      value: 0
+      unit: keV
+      raw: 0#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 940
+      unit: ms
+      raw: "940"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "100"
+      uncertainty: 100
+      status: RADIOACTIVE
+    spin_parity_raw: (0-,1-)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2012"
+    decay_and_abundance_raw: B-=?;IT ?;B-n ?
+    source_line: 2206
+    raw_line: 120 0471   120Agm -75650#        50#          0#        50#        *  940     ms 100    (0-,1-)                   2012
+      B-=?;IT ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0007373906176169631
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00007844581038478331
+      mean_lifetime:
+        value: 1356.1333384356255
+        unit: ms
+        relation: =
+        uncertainty: 144.26950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-120m
+    evaluation_entry_id: MAT:0047:NUBASE2020:120:1
+  - A: 120
+    Z: 47
+    N: 73
+    state_index: 2
+    state_label: n
+    source_label: 120Ag
+    mass_excess:
+      value: -75449
+      unit: keV
+      raw: "-75449"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 203.2
+      unit: keV
+      raw: "203.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 384
+      unit: ms
+      raw: "384"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "22"
+      uncertainty: 22
+      status: RADIOACTIVE
+    spin_parity_raw: 7(-)
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: IT=68 10;B-=32 10;B-n ?
+    source_line: 2207
+    raw_line: 120 0472   120Agn -75449          4         203.2        0.2          384     ms 22     7(-)          02          1971
+      IT=68 10;B-=32 10;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0018050707827081908
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00010341551359265676
+      mean_lifetime:
+        value: 553.994895701362
+        unit: ms
+        relation: =
+        uncertainty: 31.739290899557197
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-120n
+    evaluation_entry_id: MAT:0047:NUBASE2020:120:2
+  - A: 121
+    Z: 47
+    N: 74
+    state_index: 0
+    state_label: ground
+    source_label: 121Ag
+    mass_excess:
+      value: -74403
+      unit: keV
+      raw: "-74403"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "12"
+      uncertainty: 12
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 777
+      unit: ms
+      raw: "777"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+#
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: B-=100;B-n=0.080 13
+    source_line: 2235
+    raw_line: 121 0470   121Ag  -74403         12                                *  777     ms 10     7/2+#         10          1982
+      B-=100;B-n=0.080 13
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0008920813134619631
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00001148109798535345
+      mean_lifetime:
+        value: 1120.9740467707245
+        unit: ms
+        relation: =
+        uncertainty: 14.426950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-121
+    evaluation_entry_id: MAT:0047:NUBASE2020:121:0
+  - A: 121
+    Z: 47
+    N: 74
+    state_index: 1
+    state_label: m
+    source_label: 121Ag
+    mass_excess:
+      value: -74383
+      unit: keV
+      raw: -74383#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 23#
+      uncertainty: 23
+    excitation_energy:
+      value: 20
+      unit: keV
+      raw: 20#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 20#
+      uncertainty: 20
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 200
+      unit: ms
+      raw: 200#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;IT ?;B-n ?
+    source_line: 2236
+    raw_line: 121 0471   121Agm
+      -74383#        23#         20#        20#        *  200#    ms        1/2-#                          B- ?;IT ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0034657359027997266
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 288.5390081777927
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-121m
+    evaluation_entry_id: MAT:0047:NUBASE2020:121:1
+  - A: 122
+    Z: 47
+    N: 75
+    state_index: 0
+    state_label: ground
+    source_label: 122Ag
+    mass_excess:
+      value: -71110
+      unit: keV
+      raw: "-71110"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 529
+      unit: ms
+      raw: "529"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "13"
+      uncertainty: 13
+      status: RADIOACTIVE
+    spin_parity_raw: (3+)
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B-=100;B-n=0.186 10
+    source_line: 2265
+    raw_line: 122 0470   122Ag  -71110         40                                *  529     ms 13     (3+)          07          1978
+      B-=100;B-n=0.186 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001310297127712562
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003220011845040322
+      mean_lifetime:
+        value: 763.1856766302617
+        unit: ms
+        relation: =
+        uncertainty: 18.755035531556526
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-122
+    evaluation_entry_id: MAT:0047:NUBASE2020:122:0
+  - A: 122
+    Z: 47
+    N: 75
+    state_index: 1
+    state_label: m
+    source_label: 122Ag
+    mass_excess:
+      value: -71030
+      unit: keV
+      raw: -71030#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 60#
+      uncertainty: 60
+    excitation_energy:
+      value: 80
+      unit: keV
+      raw: 80#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 550
+      unit: ms
+      raw: "550"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+      status: RADIOACTIVE
+    spin_parity_raw: (1-)
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;IT ?;B-n=?
+    source_line: 2266
+    raw_line: 122 0471   122Agm -71030#        60#         80#        50#        *  550     ms 50     (1-)          07          2000
+      B-=100;IT ?;B-n=?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0012602676010180823
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00011456978191073476
+      mean_lifetime:
+        value: 793.4822724889299
+        unit: ms
+        relation: =
+        uncertainty: 72.13475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-122m
+    evaluation_entry_id: MAT:0047:NUBASE2020:122:1
+  - A: 122
+    Z: 47
+    N: 75
+    state_index: 2
+    state_label: n
+    source_label: 122Ag
+    mass_excess:
+      value: -71030
+      unit: keV
+      raw: -71030#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 60#
+      uncertainty: 60
+    excitation_energy:
+      value: 80
+      unit: keV
+      raw: 80#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 200
+      unit: ms
+      raw: "200"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+      status: RADIOACTIVE
+    spin_parity_raw: (9-)
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;IT ?;B-n ?
+    source_line: 2267
+    raw_line: 122 0472   122Agn -71030#        60#         80#        50#        *  200     ms 50     (9-)          07          2000
+      B-=100;IT ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0034657359027997266
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0008664339756999317
+      mean_lifetime:
+        value: 288.5390081777927
+        unit: ms
+        relation: =
+        uncertainty: 72.13475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-122n
+    evaluation_entry_id: MAT:0047:NUBASE2020:122:2
+  - A: 122
+    Z: 47
+    N: 75
+    state_index: 3
+    state_label: p
+    source_label: 122Ag
+    mass_excess:
+      value: -70940
+      unit: keV
+      raw: -70940#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 60#
+      uncertainty: 60
+    excitation_energy:
+      value: 171
+      unit: keV
+      raw: 171#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6.3
+      unit: us
+      raw: "6.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: (1+)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2013"
+    decay_and_abundance_raw: IT=100
+    source_line: 2268
+    raw_line: 122 0473   122Agp -70940#        60#        171#        50#             6.3   us 1.0    (1+)                      2013 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.11002336199364211
+        unit: 1/us
+        relation: =
+        uncertainty: 0.017464025713276526
+      mean_lifetime:
+        value: 9.08897875760047
+        unit: us
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-122p
+    evaluation_entry_id: MAT:0047:NUBASE2020:122:3
+  - A: 123
+    Z: 47
+    N: 76
+    state_index: 0
+    state_label: ground
+    source_label: 123Ag
+    mass_excess:
+      value: -69570
+      unit: keV
+      raw: "-69570"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 294
+      unit: ms
+      raw: "294"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: (7/2+)*
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1976"
+    decay_and_abundance_raw: B-=100;B-n=0.56 5
+    source_line: 2300
+    raw_line: 123 0470   123Ag  -69570         30                                   294     ms 5      (7/2+)*       17          1976
+      B-=100;B-n=0.56 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.002357643471292331
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0000400959774029308
+      mean_lifetime:
+        value: 424.15234202135525
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-123
+    evaluation_entry_id: MAT:0047:NUBASE2020:123:0
+  - A: 123
+    Z: 47
+    N: 76
+    state_index: 1
+    state_label: m
+    source_label: 123Ag
+    mass_excess:
+      value: -69510
+      unit: keV
+      raw: "-69510"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: 59.5
+      unit: keV
+      raw: "59.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 100
+      unit: ms
+      raw: 100#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2-)*
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 2301
+    raw_line: 123 0471   123Agm -69510         30          59.5        0.5          100#    ms        (1/2-)*                   2019
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 144.26950408889635
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-123m
+    evaluation_entry_id: MAT:0047:NUBASE2020:123:1
+  - A: 123
+    Z: 47
+    N: 76
+    state_index: 2
+    state_label: n
+    source_label: 123Ag
+    mass_excess:
+      value: -68120
+      unit: keV
+      raw: -68120#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 30#
+      uncertainty: 30
+    excitation_energy:
+      value: 1450
+      unit: keV
+      raw: 1450#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 14#
+      uncertainty: 14
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 202
+      unit: ns
+      raw: "202"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "2013"
+    decay_and_abundance_raw: IT=100
+    source_line: 2302
+    raw_line: 123 0472   123Agn -68120#        30#       1450#        14#           202     ns 20                   17          2013 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0034314216859403232
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00033974472138023
+      mean_lifetime:
+        value: 291.42439825957064
+        unit: ns
+        relation: =
+        uncertainty: 28.85390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-123n
+    evaluation_entry_id: MAT:0047:NUBASE2020:123:2
+  - A: 123
+    Z: 47
+    N: 76
+    state_index: 3
+    state_label: p
+    source_label: 123Ag
+    mass_excess:
+      value: -68100
+      unit: keV
+      raw: "-68100"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: 1472.8
+      unit: keV
+      raw: "1472.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 393
+      unit: ns
+      raw: "393"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "16"
+      uncertainty: 16
+      status: RADIOACTIVE
+    spin_parity_raw: (17/2-)
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: IT=100
+    source_line: 2303
+    raw_line: 123 0473   123Agp -68100         30        1472.8        0.8          393     ns 16     (17/2-)       17          2009 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0017637332838675453
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00007180593522107054
+      mean_lifetime:
+        value: 566.9791510693626
+        unit: ns
+        relation: =
+        uncertainty: 23.083120654223414
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-123p
+    evaluation_entry_id: MAT:0047:NUBASE2020:123:3
+  - A: 124
+    Z: 47
+    N: 77
+    state_index: 0
+    state_label: ground
+    source_label: 124Ag
+    mass_excess:
+      value: -66230
+      unit: keV
+      raw: "-66230"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "250"
+      uncertainty: 250
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 177.9
+      unit: ms
+      raw: "177.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.6"
+      uncertainty: 2.6
+      status: RADIOACTIVE
+    spin_parity_raw: (2-)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1984"
+    decay_and_abundance_raw: B-=100;B-n=1.3 9
+    source_line: 2335
+    raw_line: 124 0470   124Ag  -66230        250                                *  177.9   ms 2.6    (2-)          15          1984
+      B-=100;B-n=1.3 9
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.003896274202135724
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000056943861301590115
+      mean_lifetime:
+        value: 256.6554477741466
+        unit: ms
+        relation: =
+        uncertainty: 3.751007106311305
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-124
+    evaluation_entry_id: MAT:0047:NUBASE2020:124:0
+  - A: 124
+    Z: 47
+    N: 77
+    state_index: 1
+    state_label: m
+    source_label: 124Ag
+    mass_excess:
+      value: -66180
+      unit: keV
+      raw: -66180#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 260#
+      uncertainty: 260
+    excitation_energy:
+      value: 50
+      unit: keV
+      raw: 50#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 50#
+      uncertainty: 50
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 144
+      unit: ms
+      raw: "144"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+      status: RADIOACTIVE
+    spin_parity_raw: 9-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1995"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 2336
+    raw_line: 124 0471   124Agm -66180#       260#         50#        50#        *  144     ms 20     9-#           15          1995
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004813522087221842
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000668544734336367
+      mean_lifetime:
+        value: 207.74808588801073
+        unit: ms
+        relation: =
+        uncertainty: 28.85390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-124m
+    evaluation_entry_id: MAT:0047:NUBASE2020:124:1
+  - A: 124
+    Z: 47
+    N: 77
+    state_index: 2
+    state_label: n
+    source_label: 124Ag
+    mass_excess:
+      value: -66070
+      unit: keV
+      raw: "-66070"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "250"
+      uncertainty: 250
+    excitation_energy:
+      value: 155.6
+      unit: keV
+      raw: "155.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 140
+      unit: ns
+      raw: "140"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+      status: RADIOACTIVE
+    spin_parity_raw: (1+)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2012"
+    decay_and_abundance_raw: IT=100
+    source_line: 2337
+    raw_line: 124 0472   124Agn -66070        250         155.6        0.5          140     ns 50     (1+)          15          2012 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004951051289713895
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.001768232603469248
+      mean_lifetime:
+        value: 201.97730572445488
+        unit: ns
+        relation: =
+        uncertainty: 72.13475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-124n
+    evaluation_entry_id: MAT:0047:NUBASE2020:124:2
+  - A: 124
+    Z: 47
+    N: 77
+    state_index: 3
+    state_label: p
+    source_label: 124Ag
+    mass_excess:
+      value: -66000
+      unit: keV
+      raw: "-66000"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "250"
+      uncertainty: 250
+    excitation_energy:
+      value: 231.1
+      unit: keV
+      raw: "231.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.48
+      unit: us
+      raw: "1.48"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.15"
+      uncertainty: 0.15
+      status: RADIOACTIVE
+    spin_parity_raw: (1-)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2012"
+    decay_and_abundance_raw: IT=100
+    source_line: 2338
+    raw_line: 124 0473   124Agp -66000        250         231.1        0.7            1.48  us 0.15   (1-)          15          2012 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.4683426895675306
+        unit: 1/us
+        relation: =
+        uncertainty: 0.04746716448319567
+      mean_lifetime:
+        value: 2.135188660515666
+        unit: us
+        relation: =
+        uncertainty: 0.21640425613334452
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-124p
+    evaluation_entry_id: MAT:0047:NUBASE2020:124:3
+  - A: 125
+    Z: 47
+    N: 78
+    state_index: 0
+    state_label: ground
+    source_label: 125Ag
+    mass_excess:
+      value: -64520
+      unit: keV
+      raw: "-64520"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "430"
+      uncertainty: 430
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 160
+      unit: ms
+      raw: "160"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2+)*
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B-=100;B-n=11.8 10
+    source_line: 2367
+    raw_line: 125 0470   125Ag  -64520        430                                   160     ms 5      (9/2+)*       15          1994
+      B-=100;B-n=11.8 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004332169878499658
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0001353803087031143
+      mean_lifetime:
+        value: 230.83120654223416
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-125
+    evaluation_entry_id: MAT:0047:NUBASE2020:125:0
+  - A: 125
+    Z: 47
+    N: 78
+    state_index: 1
+    state_label: m
+    source_label: 125Ag
+    mass_excess:
+      value: -64420
+      unit: keV
+      raw: "-64420"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "430"
+      uncertainty: 430
+    excitation_energy:
+      value: 97.1
+      unit: keV
+      raw: "97.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 50
+      unit: ms
+      raw: 50#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2-)*
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: B- ?;IT ?;B-n ?
+    source_line: 2368
+    raw_line: 125 0471   125Agm -64420        430          97.1        0.5           50#    ms        (1/2-)*                   2019
+      B- ?;IT ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.013862943611198907
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 72.13475204444818
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-125m
+    evaluation_entry_id: MAT:0047:NUBASE2020:125:1
+  - A: 125
+    Z: 47
+    N: 78
+    state_index: 2
+    state_label: n
+    source_label: 125Ag
+    mass_excess:
+      value: -63020
+      unit: keV
+      raw: "-63020"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "430"
+      uncertainty: 430
+    excitation_energy:
+      value: 1501.2
+      unit: keV
+      raw: "1501.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.6"
+      uncertainty: 0.6
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 491
+      unit: ns
+      raw: "491"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+      status: RADIOACTIVE
+    spin_parity_raw: (17/2-)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: IT=100
+    source_line: 2369
+    raw_line: 125 0472   125Agn -63020        430        1501.2        0.6          491     ns 20     (17/2-)       15          2009 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001411705052056915
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00005750326077624909
+      mean_lifetime:
+        value: 708.3632650764811
+        unit: ns
+        relation: =
+        uncertainty: 28.85390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-125n
+    evaluation_entry_id: MAT:0047:NUBASE2020:125:2
+  - A: 126
+    Z: 47
+    N: 79
+    state_index: 0
+    state_label: ground
+    source_label: 126Ag
+    mass_excess:
+      value: -60720
+      unit: keV
+      raw: -60720#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 52
+      unit: ms
+      raw: "52"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+      status: RADIOACTIVE
+    spin_parity_raw: 3+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B-=100;B-n=13.7 11
+    source_line: 2407
+    raw_line: 126 0470   126Ag  -60720#       200#                                   52     ms 10     3+#           15          1994
+      B-=100;B-n=13.7 11
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01332975347230664
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0025634141292897386
+      mean_lifetime:
+        value: 75.0201421262261
+        unit: ms
+        relation: =
+        uncertainty: 14.426950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-126
+    evaluation_entry_id: MAT:0047:NUBASE2020:126:0
+  - A: 126
+    Z: 47
+    N: 79
+    state_index: 1
+    state_label: m
+    source_label: 126Ag
+    mass_excess:
+      value: -60620
+      unit: keV
+      raw: -60620#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 220#
+      uncertainty: 220
+    excitation_energy:
+      value: 100
+      unit: keV
+      raw: 100#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 100#
+      uncertainty: 100
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 108.4
+      unit: ms
+      raw: "108.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+      status: RADIOACTIVE
+    spin_parity_raw: 9-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1995"
+    decay_and_abundance_raw: B-=100;IT ?;B-n ?
+    source_line: 2408
+    raw_line: 126 0471   126Agm -60620#       220#        100#       100#           108.4   ms 2.4    9-#           15          1995
+      B-=100;IT ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006394346684132336
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000141572251309203
+      mean_lifetime:
+        value: 156.38814243236365
+        unit: ms
+        relation: =
+        uncertainty: 3.4624680981335123
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-126m
+    evaluation_entry_id: MAT:0047:NUBASE2020:126:1
+  - A: 126
+    Z: 47
+    N: 79
+    state_index: 2
+    state_label: n
+    source_label: 126Ag
+    mass_excess:
+      value: -60470
+      unit: keV
+      raw: -60470#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: 254.8
+      unit: keV
+      raw: "254.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 27
+      unit: us
+      raw: "27"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 1-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2012"
+    decay_and_abundance_raw: IT=100
+    source_line: 2409
+    raw_line: 126 0472   126Agn -60470#       200#        254.8        0.5           27     us 6      1-#           15          2012 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.025672117798516494
+        unit: 1/us
+        relation: =
+        uncertainty: 0.005704915066336998
+      mean_lifetime:
+        value: 38.952766104002016
+        unit: us
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-126n
+    evaluation_entry_id: MAT:0047:NUBASE2020:126:2
+  - A: 127
+    Z: 47
+    N: 80
+    state_index: 0
+    state_label: ground
+    source_label: 127Ag
+    mass_excess:
+      value: -58650
+      unit: keV
+      raw: -58650#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 89
+      unit: ms
+      raw: "89"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2+)*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1995"
+    decay_and_abundance_raw: B-=100;B-n=14.6 15
+    source_line: 2440
+    raw_line: 127 0470   127Ag  -58650#       200#                               *   89     ms 2      (9/2+)*       11          1995
+      B-=100;B-n=14.6 15
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007788170568089273
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00017501506894582636
+      mean_lifetime:
+        value: 128.39985863911775
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-127
+    evaluation_entry_id: MAT:0047:NUBASE2020:127:0
+  - A: 127
+    Z: 47
+    N: 80
+    state_index: 1
+    state_label: m
+    source_label: 127Ag
+    mass_excess:
+      value: -58630
+      unit: keV
+      raw: -58630#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: 20
+      unit: keV
+      raw: 20#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 20#
+      uncertainty: 20
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 20
+      unit: ms
+      raw: 20#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2-)*
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;IT ?
+    source_line: 2441
+    raw_line: 127 0471   127Agm
+      -58630#       200#         20#        20#        *   20#    ms        (1/2-)*                        B- ?;IT ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03465735902799726
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 28.85390081777927
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-127m
+    evaluation_entry_id: MAT:0047:NUBASE2020:127:1
+  - A: 127
+    Z: 47
+    N: 80
+    state_index: 2
+    state_label: n
+    source_label: 127Ag
+    mass_excess:
+      value: -56710
+      unit: keV
+      raw: -56710#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: 1938
+      unit: keV
+      raw: "1938"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "17"
+      uncertainty: 17
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 67.5
+      unit: ms
+      raw: "67.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.9"
+      uncertainty: 0.9
+      status: RADIOACTIVE
+    spin_parity_raw: (27/2+)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2021"
+    decay_and_abundance_raw: B-=91.2 8;IT=8.8 8
+    source_line: 2442
+    raw_line: 127 0472   127Agn -56710#       200#       1938         17             67.5   ms 0.9    (27/2+)                   2021
+      B-=91.2 8;IT=8.8 8
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010268847119406597
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00013691796159208796
+      mean_lifetime:
+        value: 97.38191526000503
+        unit: ms
+        relation: =
+        uncertainty: 1.2984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-127n
+    evaluation_entry_id: MAT:0047:NUBASE2020:127:2
+  - A: 128
+    Z: 47
+    N: 81
+    state_index: 0
+    state_label: ground
+    source_label: 128Ag
+    mass_excess:
+      value: -54710
+      unit: keV
+      raw: -54710#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 60
+      unit: ms
+      raw: "60"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+      status: RADIOACTIVE
+    spin_parity_raw: 3+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;B-n=20 5;B-2n ?
+    source_line: 2479
+    raw_line: 128 0470   128Ag  -54710#       300#                                   60     ms 3      3+#           15          2000
+      B-=100;B-n=20 5;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.011552453009332421
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0005776226504666211
+      mean_lifetime:
+        value: 86.5617024533378
+        unit: ms
+        relation: =
+        uncertainty: 4.328085122666891
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-128
+    evaluation_entry_id: MAT:0047:NUBASE2020:128:0
+  - A: 129
+    Z: 47
+    N: 82
+    state_index: 0
+    state_label: ground
+    source_label: 129Ag
+    mass_excess:
+      value: -51870
+      unit: keV
+      raw: -51870#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 49.9
+      unit: ms
+      raw: "49.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3.5"
+      uncertainty: 3.5
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;B-n<20
+    source_line: 2513
+    raw_line: 129 0470   129Ag  -51870#       400#                               *   49.9   ms 3.5    9/2+#         14          2000
+      B-=100;B-n<20
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01389072506132155
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0009742993529985055
+      mean_lifetime:
+        value: 71.99048254035928
+        unit: ms
+        relation: =
+        uncertainty: 5.0494326431113725
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-129
+    evaluation_entry_id: MAT:0047:NUBASE2020:129:0
+  - A: 129
+    Z: 47
+    N: 82
+    state_index: 1
+    state_label: m
+    source_label: 129Ag
+    mass_excess:
+      value: -51850
+      unit: keV
+      raw: -51850#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: 20
+      unit: keV
+      raw: 20#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 20#
+      uncertainty: 20
+    excitation_origin: ""
+    ordering_uncertain: true
+    ordering_inverted: false
+    half_life:
+      value: 10
+      unit: ms
+      raw: 10#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-#
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;B-n ?
+    source_line: 2514
+    raw_line: 129 0471   129Agm
+      -51850#       400#         20#        20#        *   10#    ms        1/2-#         14               B- ?;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 14.426950408889635
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-129m
+    evaluation_entry_id: MAT:0047:NUBASE2020:129:1
+  - A: 130
+    Z: 47
+    N: 83
+    state_index: 0
+    state_label: ground
+    source_label: 130Ag
+    mass_excess:
+      value: -45900
+      unit: keV
+      raw: -45900#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 420#
+      uncertainty: 420
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 40.6
+      unit: ms
+      raw: "40.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4.5"
+      uncertainty: 4.5
+      status: RADIOACTIVE
+    spin_parity_raw: 1-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 2551
+    raw_line: 130 0470   130Ag  -45900#       420#                                   40.6   ms 4.5    1-#           15          2000
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.017072590654185843
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.001892282215365426
+      mean_lifetime:
+        value: 58.57341866009192
+        unit: ms
+        relation: =
+        uncertainty: 6.4921276840003355
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-130
+    evaluation_entry_id: MAT:0047:NUBASE2020:130:0
+  - A: 131
+    Z: 47
+    N: 84
+    state_index: 0
+    state_label: ground
+    source_label: 131Ag
+    mass_excess:
+      value: -40750
+      unit: keV
+      raw: -40750#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 35
+      unit: ms
+      raw: "35"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2013"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n=10
+    source_line: 2591
+    raw_line: 131 0470   131Ag  -40750#       500#                                   35     ms 8      9/2+#         15          2013
+      B-=100;B-n ?;B-2n=10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01980420515885558
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.004526675464881276
+      mean_lifetime:
+        value: 50.49432643111372
+        unit: ms
+        relation: =
+        uncertainty: 11.541560327111707
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-131
+    evaluation_entry_id: MAT:0047:NUBASE2020:131:0
+  - A: 132
+    Z: 47
+    N: 85
+    state_index: 0
+    state_label: ground
+    source_label: 132Ag
+    mass_excess:
+      value: -34400
+      unit: keV
+      raw: -34400#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 30
+      unit: ms
+      raw: "30"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+      status: RADIOACTIVE
+    spin_parity_raw: 6-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2015"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 2624
+    raw_line: 132 0470   132Ag  -34400#       500#                                   30     ms 14     6-#           15          2015
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.023104906018664842
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.010782289475376928
+      mean_lifetime:
+        value: 43.2808512266689
+        unit: ms
+        relation: =
+        uncertainty: 20.19773057244549
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0047:ISO:Ag-132
+    evaluation_entry_id: MAT:0047:NUBASE2020:132:0
+  - A: 133
+    Z: 47
+    N: 86
+    state_index: 0
+    state_label: ground
+    source_label: 133Ag
+    mass_excess:
+      value: -29080
+      unit: keV
+      raw: -29080#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;B-n ?
+    source_line: 2654
+    raw_line: 133
+      0470   133Ag  -29080#       500#                                                    9/2+#                          B- ?;B-n
+      ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0047:ISO:Ag-133
+    evaluation_entry_id: MAT:0047:NUBASE2020:133:0

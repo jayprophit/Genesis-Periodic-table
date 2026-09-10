@@ -1,0 +1,2316 @@
+The final Sodium pass closes the remaining atomic, biological and lineage layers. NIST confirms the D₂/D₁ pair at **588.995095 nm** and **589.592424 nm** in standard air, with Einstein \(A\) values near \(6.16\times10^7\) and \(6.14\times10^7\ \mathrm{s^{-1}}\). Na II is a completely different spectrum with hundreds of ionic lines, so MAT keeps neutral Sodium, Na⁺ spectroscopy and ²³Na NMR separate. ([NIST][1])
+
+Sodium also has an unusually strong experimental lineage outside chemistry. NIST's Phillips/Metcalf program used resonant light and Zeeman tuning to slow and trap neutral Sodium atoms, ultimately reaching temperatures below the simple Doppler-limit expectation. ([NIST][2]) In biology, Hodgkin and Huxley established the rapid Na⁺/K⁺ permeability changes underlying nerve impulses, while Skou later identified Na⁺/K⁺-ATPase as the ATP-driven pump maintaining the gradients; the pump should **not** be described as the mechanism directly producing the millisecond repolarization of each action potential. ([Nobel Prize][3])
+
+# FILE: records/0011-Sodium-Na/data/spectra/0011-Sodium-Na-Atomic-Spectroscopy.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:ATOMIC-SPECTROSCOPY"
+record_id: "MAT:0011"
+version: "1.0.0"
+
+wavelength_convention:
+  source: "NIST-ASD"
+  vacuum_below_nm: 200
+  air_between_nm:
+    minimum: 200
+    maximum: 2000
+  vacuum_above_nm: 2000
+
+Na_I:
+
+  ground:
+    configuration: "2p6 3s"
+    term: "2S"
+    J: "1/2"
+    energy_cm1: 0
+
+  resonance_doublet:
+
+    D2:
+      wavelength:
+        value: 588.995095
+        uncertainty: 0.000003
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+      transition:
+        lower: "3s 2S1/2"
+        upper: "3p 2P°3/2"
+
+      upper_energy:
+        value: 16973.36619
+        unit: "cm-1"
+
+      Einstein_A:
+        value: 6.16e7
+        unit: "s^-1"
+
+    D1:
+      wavelength:
+        value: 589.592424
+        uncertainty: 0.000003
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+      transition:
+        lower: "3s 2S1/2"
+        upper: "3p 2P°1/2"
+
+      upper_energy:
+        value: 16956.17025
+        unit: "cm-1"
+
+      Einstein_A:
+        value: 6.14e7
+        unit: "s^-1"
+
+  selected_secondary_lines_nm:
+    - 568.26333
+    - 568.81934
+    - 568.82046
+    - 615.42253
+    - 616.07470
+
+Na_II:
+
+  electronic_family:
+    "NEON-LIKE-ION"
+
+  selected_optical_lines:
+
+    - wavelength:
+        value: 437.5215
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 438.4194
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 438.7489
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 439.2814
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 439.6317
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 444.6695
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 445.4736
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 541.4546
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+  complete_NIST_line_count_in_current_query:
+    value: 259
+
+rules:
+  Na_I_equals_Na_II_spectrum: false
+  Na_I_equals_Na23_NMR: false
+  D_line_equals_one_transition: false
+  flame_colour_equals_bulk_ground_state_colour: false
+  universal_sodium_frequency: false
+
+source_id: "SRC-000235"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Laser-Cooling.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:LASER-COOLING"
+record_id: "MAT:0011"
+
+species:
+  "NEUTRAL-23Na"
+
+principal_optical_family:
+  "3s 2S1/2 <-> 3p 2P°3/2 D2"
+
+wavelength:
+  approximate_value: 589.0
+  unit: "nm"
+
+mechanisms:
+
+  radiation_pressure:
+    photon_momentum_transfer: true
+
+  Doppler_cooling:
+    frequency_detuning: true
+
+  Zeeman_slower:
+    spatially_varying_magnetic_field: true
+    purpose:
+      "Compensate changing Doppler shift as atoms decelerate."
+
+  optical_molasses:
+    counterpropagating_beams: true
+
+  magneto_optical_trap:
+    laser_detuning: true
+    magnetic_field_gradient: true
+
+hyperfine_architecture:
+
+  cooling_cycle:
+    requires_hyperfine_state_selection: true
+
+  repumping:
+    required_to_return_population_from_dark_hyperfine_state: true
+
+historical_NIST_sodium:
+
+  contributors:
+    - William_D_Phillips
+    - Harold_J_Metcalf
+    - colleagues
+
+  beam_deceleration:
+    established: true
+
+  magnetic_trapping:
+    established: true
+
+  optical_molasses:
+    established: true
+
+  sub_Doppler_result:
+
+    simple_Doppler_limit:
+      approximate_value: 240
+      unit: "microkelvin"
+
+    measured_optical_molasses:
+      approximate_value: 40
+      unit: "microkelvin"
+
+applications:
+  - precision_spectroscopy
+  - ultracold_collisions
+  - atom_optics
+  - quantum_gases
+  - Bose_Einstein_condensation
+  - inertial_sensing_research
+
+rules:
+  laser_cooling_means_zero_temperature: false
+  photon_absorption_only_heats_atoms: false
+  cooling_requires_frequency_and_state_control: true
+  sodium_D2_line_equals_universal_sodium_frequency: false
+
+source_id: "SRC-000236"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Biological-Ion-Network.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:BIOLOGICAL-ION-NETWORK"
+record_id: "MAT:0011"
+
+active_species:
+  "Na+"
+
+elemental_metal_role:
+  normal_biology: false
+
+electrochemical_gradient:
+
+  extracellular_Na:
+    relative_state: "HIGH"
+
+  intracellular_Na:
+    relative_state: "LOW"
+
+  maintained_by:
+    - Na_K_ATPase
+    - membrane_selectivity
+    - cellular_transport_network
+
+action_potential:
+
+  resting_state:
+    voltage_gated_Na_channels:
+      mostly_closed: true
+
+  depolarization:
+
+    trigger:
+      membrane_voltage_change: true
+
+    voltage_gated_Na_channels:
+      activation: true
+
+    dominant_Na_flux:
+      direction: "INWARD"
+
+    driver:
+      - concentration_gradient
+      - electrical_gradient
+
+    result:
+      membrane_depolarization: true
+
+  peak_and_early_repolarization:
+
+    Na_channels:
+      inactivation: true
+
+    K_channels:
+      outward_K_flux: true
+
+  rapid_repolarization:
+
+    principal_mechanism:
+      - voltage_gated_channel_dynamics
+      - reduced_Na_conductance
+      - increased_K_conductance
+
+    Na_K_ATPase_is_direct_ms_repolarization_mechanism: false
+
+  long_term_gradient_restoration:
+    Na_K_ATPase: true
+
+Na_K_ATPase:
+
+  relationship:
+    parents:
+      - "MAT:0011"
+      - "MAT:0019"
+
+  potassium_status:
+    "RESERVED-PENDING-POTASSIUM"
+
+  stoichiometry_per_ATP:
+
+    Na_out: 3
+    K_in: 2
+    ATP_hydrolyzed: 1
+
+  net_charge:
+    positive_outward: 1
+
+  electrogenic: true
+
+  discovery:
+    contributor: "Jens_Christian_Skou"
+    year: 1957
+
+other_biological_roles:
+
+  - secondary_active_transport
+  - glucose_cotransport
+  - amino_acid_transport
+  - osmotic_balance
+  - extracellular_volume
+  - muscle_excitation
+  - nerve_signalling
+
+principle:
+
+  statement: >
+    Ion gradients store electrochemical free energy that can be
+    converted into electrical signalling and coupled transport.
+
+rules:
+  metallic_Na_equals_biological_Na_plus: false
+  Na_influx_equals_ATPase_transport: false
+  pump_maintains_gradient_but_does_not_create_each_action_potential_upstroke: true
+
+source_ids:
+  - "SRC-000237"
+  - "SRC-000238"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Extended-Compound-Families.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:EXTENDED-COMPOUNDS"
+record_id: "MAT:0011"
+
+silicates:
+
+  sodium_metasilicate:
+    id: "MAT:CMP:Na2SiO3"
+    formula: "Na2SiO3"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0014"
+      - "MAT:0008"
+
+    silicon_status:
+      "RESERVED-PENDING-SILICON"
+
+    material_family:
+      - sodium_silicate
+      - waterglass_related
+
+  general_rule:
+    sodium_silicate_family_is_single_fixed_stoichiometry: false
+
+phosphates:
+
+  trisodium_phosphate:
+    id: "MAT:CMP:Na3PO4"
+
+  disodium_hydrogen_phosphate:
+    id: "MAT:CMP:Na2HPO4"
+
+  sodium_dihydrogen_phosphate:
+    id: "MAT:CMP:NaH2PO4"
+
+  parent_phosphorus:
+    id: "MAT:0015"
+    status: "RESERVED-PENDING-PHOSPHORUS"
+
+  functions:
+    - buffering
+    - ionic_materials
+    - glass_chemistry
+    - biological_solution_chemistry
+    - electrochemical_materials
+
+nitrogen_compounds:
+
+  sodium_nitrate:
+    id: "MAT:CMP:NaNO3"
+    formula: "NaNO3"
+
+  sodium_nitrite:
+    id: "MAT:CMP:NaNO2"
+    formula: "NaNO2"
+
+  sodium_azide:
+    id: "MAT:CMP:NaN3"
+    formula: "NaN3"
+
+  sodium_amide:
+    id: "MAT:CMP:NaNH2"
+    formula: "NaNH2"
+
+  nitrogen_parent:
+    id: "MAT:0007"
+    status: "RESOLVED"
+
+  rule:
+    shared_Na_plus_does_not_imply_shared_reactivity: true
+
+hydrogen_family:
+
+  sodium_hydride:
+    id: "MAT:CMP:NaH"
+
+  sodium_borohydride:
+    id: "MAT:CMP:NaBH4"
+
+  sodium_alanate:
+    id: "MAT:CMP:NaAlH4"
+
+  distinguish:
+    - simple_saline_hydride
+    - complex_borohydride
+    - complex_alanate
+
+source_ids:
+  - "SRC-000241"
+  - "SRC-000216"
+
+rules:
+  compound_formula_is_elemental_property: false
+  exact_material_properties_require_child_record: true
+```
+
+# FILE: records/0011-Sodium-Na/relationships/0011-Sodium-Na-Relationships.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:RELATIONSHIPS"
+record_id: "MAT:0011"
+version: "1.0.0"
+
+relationships:
+
+  # PERIODIC / ELECTRONIC
+
+  - relationship_id: "MAT:0011:REL:0001"
+    source: "MAT:0011"
+    type: "PERIODIC-ANALOGUE"
+    target: "MAT:0003"
+    target_status: "RESOLVED"
+    shared_outer_configuration: "ns1"
+
+  - relationship_id: "MAT:0011:REL:0002"
+    source: "MAT:0011:ION:Na+1"
+    type: "ISOELECTRONIC-WITH"
+    target: "MAT:0010:ATOM:Ne"
+    target_status: "RESOLVED"
+    electron_count: 10
+
+  # NUCLEAR
+
+  - relationship_id: "MAT:0011:REL:0010"
+    source: "MAT:0011:ISO:Na-21"
+    type: "DECAYS-TO"
+    target: "MAT:0010:ISO:Ne-21"
+    mechanism: "BETA-PLUS"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0011:REL:0011"
+    source: "MAT:0011:ISO:Na-22"
+    type: "DECAYS-TO"
+    target: "MAT:0010:ISO:Ne-22"
+    mechanism:
+      - BETA-PLUS
+      - ELECTRON-CAPTURE
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0011:REL:0012"
+    source: "MAT:0011:ISO:Na-23"
+    type: "NEUTRON-CAPTURE-TO"
+    target: "MAT:0011:ISO:Na-24"
+
+  - relationship_id: "MAT:0011:REL:0013"
+    source: "MAT:0011:ISO:Na-24"
+    type: "DECAYS-TO"
+    target: "MAT:0012:ISO:Mg-24"
+    mechanism: "BETA-MINUS"
+    target_status: "RESERVED-PENDING-MAGNESIUM"
+
+  # HYDROGEN / WATER
+
+  - relationship_id: "MAT:0011:REL:0020"
+    source:
+      - "MAT:0011"
+      - "MAT:0001"
+      - "MAT:0008"
+    type: "REACTS-IN-WATER-SYSTEM"
+    products:
+      - NaOH
+      - H2
+
+  - relationship_id: "MAT:0011:REL:0021"
+    source: "MAT:0011"
+    type: "FORMS-HYDRIDE"
+    target: "NaH"
+
+  - relationship_id: "MAT:0011:REL:0022"
+    source:
+      - "MAT:0011"
+      - "MAT:0005"
+      - "MAT:0001"
+    type: "FORMS-COMPLEX-HYDRIDE"
+    target: "NaBH4"
+
+  # CARBON / OXYGEN
+
+  - relationship_id: "MAT:0011:REL:0030"
+    source: "MAT:0011"
+    type: "FORMS-CARBONATE-NETWORK"
+    target: "MAT:0006"
+    target_status: "RESOLVED"
+    products:
+      - Na2CO3
+      - NaHCO3
+
+  - relationship_id: "MAT:0011:REL:0031"
+    source: "MAT:0011"
+    type: "FORMS-OXYGEN-SPECIES-SALTS"
+    target: "MAT:0008"
+    target_status: "RESOLVED"
+    products:
+      - Na2O
+      - Na2O2
+      - NaO2
+      - NaOH
+
+  # FLUORINE
+
+  - relationship_id: "MAT:0011:REL:0040"
+    source: "MAT:0011"
+    type: "FORMS-FLUORIDE"
+    target: "MAT:0009"
+    target_status: "RESOLVED"
+    product: "NaF"
+
+  # NITROGEN
+
+  - relationship_id: "MAT:0011:REL:0050"
+    source: "MAT:0011"
+    type: "FORMS-NITROGEN-CONTAINING-SALTS"
+    target: "MAT:0007"
+    target_status: "RESOLVED"
+    products:
+      - NaNO3
+      - NaNO2
+      - NaN3
+      - NaNH2
+
+  # SILICON
+
+  - relationship_id: "MAT:0011:REL:0060"
+    source: "MAT:0011"
+    type: "FORMS-SILICATE-NETWORK"
+    target: "MAT:0014"
+    target_status: "RESERVED-PENDING-SILICON"
+    products:
+      - Na2SiO3
+      - sodium_silicate_glasses
+
+  # PHOSPHORUS
+
+  - relationship_id: "MAT:0011:REL:0061"
+    source: "MAT:0011"
+    type: "FORMS-PHOSPHATE-NETWORK"
+    target: "MAT:0015"
+    target_status: "RESERVED-PENDING-PHOSPHORUS"
+
+  # CHLORINE
+
+  - relationship_id: "MAT:0011:REL:0070"
+    source: "MAT:0011"
+    type: "FORMS-HALIDE"
+    target: "MAT:0017"
+    target_status: "RESERVED-PENDING-CHLORINE"
+    product: "NaCl"
+
+  # POTASSIUM
+
+  - relationship_id: "MAT:0011:REL:0080"
+    source: "MAT:0011"
+    type: "FORMS-ALKALI-METAL-ALLOY"
+    target: "MAT:0019"
+    target_status: "RESERVED-PENDING-POTASSIUM"
+    material: "NaK"
+
+  - relationship_id: "MAT:0011:REL:0081"
+    source:
+      - "MAT:0011"
+      - "MAT:0019"
+    type: "BIOLOGICAL-ION-GRADIENT-PAIR"
+    target: "NA-K-ATPASE"
+    target_status: "RESERVED-PENDING-POTASSIUM"
+
+  # BATTERY
+
+  - relationship_id: "MAT:0011:REL:0090"
+    source: "MAT:0011:ION:Na+1"
+    type: "MOBILE-ION-IN"
+    target:
+      - hard_carbon
+      - layered_oxides
+      - polyanionic_cathodes
+      - Prussian_blue_analogues
+      - solid_electrolytes
+
+  # HIGH PRESSURE
+
+  - relationship_id: "MAT:0011:REL:0100"
+    source: "MAT:0011:PHASE:BCC"
+    type: "PRESSURE-TRANSFORMS-THROUGH"
+    targets:
+      - FCC
+      - cI16
+      - oP8
+      - tI19
+      - hP4
+
+  - relationship_id: "MAT:0011:REL:0101"
+    source: "MAT:0011:PHASE:hP4"
+    type: "HAS-ELECTRONIC-CLASS"
+    target: "ELECTRIDE"
+
+  # SPECTROSCOPY / COLD ATOMS
+
+  - relationship_id: "MAT:0011:REL:0110"
+    source: "MAT:0011:ATOM:Na"
+    type: "HAS-RESONANCE-DOUBLEt"
+    target:
+      - D1
+      - D2
+
+  - relationship_id: "MAT:0011:REL:0111"
+    source: "MAT:0011:ATOM:Na"
+    type: "LASER-COOLABLE"
+    target: "ULTRACOLD-SODIUM"
+
+  # LEGACY
+
+  - relationship_id: "MAT:0011:REL:0999"
+    source: "MAT:0011"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0011"
+
+rules:
+  chemical_and_nuclear_edges_are_distinct: true
+  Na_plus_role_is_context_dependent: true
+  same_charge_does_not_imply_same_transport: true
+  graph_is_exhaustive: false
+```
+
+Sodium's discovery and spectroscopy lineage are unusually clean. Humphry Davy isolated metallic Sodium in **1807** by electrolysis of caustic soda. ([Periodic Table][4]) Fraunhofer mapped the solar dark-line system; William Swan showed the extreme sensitivity of the yellow Sodium feature to trace contamination; Bunsen and Kirchhoff then systematized spectral analysis and connected characteristic emission and absorption lines to elemental identity. ([Royal Society of Chemistry][5])
+
+# FILE: records/0011-Sodium-Na/relationships/0011-Sodium-Na-People-and-Intellectual-Lineage.md
+
+# Sodium — People and Intellectual Lineage
+
+## Humphry Davy
+
+Role:
+
+```text
+ELEMENT-ISOLATION-PIONEER
+ELECTROCHEMISTRY-PIONEER
+EXPERIMENTAL-CONTRIBUTOR
+```
+
+In 1807 Davy isolated Sodium metal by electrolysis of sodium hydroxide.
+
+MAT transformation:
+
+```text
+IONIC SODIUM COMPOUND
++
+ELECTRICAL ENERGY
+→
+ELEMENTAL SODIUM
+```
+
+Source:
+
+```text
+SRC-000239
+```
+
+---
+
+# Sodium Spectroscopy
+
+## Joseph von Fraunhofer
+
+Role:
+
+```text
+SPECTROSCOPY-PIONEER
+SOLAR-SPECTRUM-CONTRIBUTOR
+INSTRUMENTATION-CONTRIBUTOR
+```
+
+Fraunhofer mapped dark solar absorption lines and labelled the prominent line system historically containing the Sodium D feature.
+
+---
+
+## William Swan
+
+Role:
+
+```text
+FLAME-SPECTROSCOPY-CONTRIBUTOR
+SODIUM-SENSITIVITY-CONTRIBUTOR
+```
+
+Swan demonstrated that extremely small amounts of Sodium contamination could generate the strong yellow double-line signal.
+
+---
+
+## Robert Bunsen
+
+Role:
+
+```text
+ANALYTICAL-SPECTROSCOPY-PIONEER
+CHEMICAL-ANALYSIS-CONTRIBUTOR
+```
+
+## Gustav Kirchhoff
+
+Role:
+
+```text
+SPECTROSCOPY-PIONEER
+THEORETICAL-EXTENDER
+ATOMIC-ABSORPTION-EMISSION-LINEAGE
+```
+
+Their work systematized the principle:
+
+```text
+ELEMENT
+→
+CHARACTERISTIC EMISSION SPECTRUM
+
+same transition energies
+
+→
+CHARACTERISTIC ABSORPTION SPECTRUM
+```
+
+Source:
+
+```text
+SRC-000240
+```
+
+---
+
+# Sodium-Ion Nerve Signalling
+
+## Alan Lloyd Hodgkin
+
+Role:
+
+```text
+MEMBRANE-BIOPHYSICS-PIONEER
+SODIUM-ION-SIGNALLING-CONTRIBUTOR
+```
+
+## Andrew Fielding Huxley
+
+Role:
+
+```text
+MEMBRANE-BIOPHYSICS-PIONEER
+MATHEMATICAL-MODEL-CONTRIBUTOR
+```
+
+Their voltage-clamp work established that changing Na⁺ and K⁺ membrane conductances underlie the nerve action potential.
+
+MAT distinction:
+
+```text
+RAPID ACTION POTENTIAL
+→
+ION-CHANNEL DYNAMICS
+```
+
+not:
+
+```text
+RAPID ACTION POTENTIAL
+→
+DIRECT ATPase PUMP CYCLE
+```
+
+Source:
+
+```text
+SRC-000237
+```
+
+---
+
+# Sodium-Potassium Pump
+
+## Jens Christian Skou
+
+Role:
+
+```text
+ION-PUMP-DISCOVERY
+MEMBRANE-TRANSPORT-CONTRIBUTOR
+BIOCHEMISTRY-PIONEER
+```
+
+In 1957 Skou identified Na⁺,K⁺-activated ATPase.
+
+Canonical transport:
+
+```text
+3 Na+ OUT
+2 K+ IN
+1 ATP
+```
+
+The pump maintains the gradients used by channels and coupled transport systems.
+
+Source:
+
+```text
+SRC-000238
+```
+
+---
+
+# Laser Cooling / Atomic Physics
+
+## William Daniel Phillips
+
+Role:
+
+```text
+LASER-COOLING-PIONEER
+ATOMIC-PHYSICS-CONTRIBUTOR
+ULTRACOLD-SODIUM-CONTRIBUTOR
+```
+
+## Harold Metcalf
+
+Role:
+
+```text
+LASER-COOLING-PIONEER
+ZEEMAN-SLOWING-CONTRIBUTOR
+```
+
+Their NIST work used Sodium beams as a major platform for:
+
+```text
+laser deceleration
+Zeeman slowing
+magnetic trapping
+optical molasses
+sub-Doppler cooling
+```
+
+---
+
+## Steven Chu
+
+Role:
+
+```text
+LASER-COOLING-PIONEER
+OPTICAL-MOLASSES-CONTRIBUTOR
+```
+
+Sodium was also a central atom in early optical-molasses experiments.
+
+Source:
+
+```text
+SRC-000236
+```
+
+---
+
+# High-Pressure Sodium
+
+## Yanming Ma
+
+## Mikhail I. Eremets
+
+## Artem R. Oganov
+
+## Yu Xie
+
+## Ivan Trojan
+
+## Sergey Medvedev
+
+## Andriy O. Lyakhov
+
+## Mario Valle
+
+## Vitali Prakapenka
+
+Role family:
+
+```text
+HIGH-PRESSURE-SODIUM-CONTRIBUTOR
+CONDENSED-MATTER-CONTRIBUTOR
+```
+
+Their 2009 work established transparent dense hP4 Sodium.
+
+Source:
+
+```text
+SRC-000219
+```
+
+---
+
+# Modern Electride Confirmation
+
+Role family:
+
+```text
+SINGLE-CRYSTAL-HIGH-PRESSURE-CONTRIBUTOR
+QUANTUM-CRYSTALLOGRAPHY-CONTRIBUTOR
+ELECTRIDE-STRUCTURE-CONTRIBUTOR
+```
+
+The 2025 single-crystal study supplied experimental signatures of interstitial electron density in hP4 Sodium.
+
+Source:
+
+```text
+SRC-000233
+```
+
+---
+
+# Principle Lineage
+
+Sodium also connects to:
+
+```text
+Faraday
+Arrhenius
+Nernst
+Gibbs
+Boltzmann
+Pauli
+Schrodinger
+Heisenberg
+Born
+Bloch
+Fermi
+Sommerfeld
+```
+
+These represent principle-level intellectual lineage rather than Sodium discovery.
+
+---
+
+# Replicator Architecture
+
+Permitted roles:
+
+```text
+REPLICATOR
+EXPERIMENTAL-EXTENDER
+THEORETICAL-EXTENDER
+INSTRUMENTATION-CONTRIBUTOR
+DATA-EVALUATOR
+ATOMIC-PHYSICS-CONTRIBUTOR
+BIOPHYSICS-CONTRIBUTOR
+BATTERY-MATERIALS-CONTRIBUTOR
+MAT-CURATOR
+```
+
+Do not assign `REPLICATOR` solely because work occurred later.
+
+# FILE: records/0011-Sodium-Na/experiments/0011-Sodium-Na-Experiments.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:EXPERIMENTS"
+record_id: "MAT:0011"
+
+entries:
+
+  - experiment_id: "MAT:0011:EXP:001"
+    name: "Isolation of Elemental Sodium"
+    class: "ELECTROCHEMISTRY"
+    year: 1807
+    contributor:
+      - Humphry_Davy
+    source_id: "SRC-000239"
+
+  - experiment_id: "MAT:0011:EXP:002"
+    name: "Sodium Spectral Identification"
+    class: "ATOMIC-SPECTROSCOPY"
+    period: "19TH-CENTURY"
+    contributors:
+      - Joseph_von_Fraunhofer
+      - William_Swan
+      - Robert_Bunsen
+      - Gustav_Kirchhoff
+    source_id: "SRC-000240"
+
+  - experiment_id: "MAT:0011:EXP:003"
+    name: "Ionic Mechanism of the Nerve Action Potential"
+    class: "MEMBRANE-BIOPHYSICS"
+    period: "1950s"
+    contributors:
+      - Alan_Hodgkin
+      - Andrew_Huxley
+    source_id: "SRC-000237"
+
+  - experiment_id: "MAT:0011:EXP:004"
+    name: "Discovery of Na,K-ATPase"
+    class: "MEMBRANE-TRANSPORT"
+    year: 1957
+    contributor:
+      - Jens_Christian_Skou
+    source_id: "SRC-000238"
+
+  - experiment_id: "MAT:0011:EXP:005"
+    name: "Laser Deceleration and Trapping of Sodium"
+    class: "ULTRACOLD-ATOMIC-PHYSICS"
+    period: "1980s"
+    contributors:
+      - William_D_Phillips
+      - Harold_J_Metcalf
+    source_id: "SRC-000236"
+
+  - experiment_id: "MAT:0011:EXP:006"
+    name: "Transparent Dense Sodium"
+    class: "HIGH-PRESSURE-CONDENSED-MATTER"
+    year: 2009
+    source_id: "SRC-000219"
+
+  - experiment_id: "MAT:0011:EXP:007"
+    name: "Experimental Interstitial Electron Density in hP4 Sodium"
+    class: "HIGH-PRESSURE-QUANTUM-CRYSTALLOGRAPHY"
+    year: 2025
+    source_id: "SRC-000233"
+```
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-001-Isotopes.md
+
+# Sodium Isotope Summary
+
+| Isotope | State                 | Half-life / role  |
+| ------- | --------------------- | ----------------- |
+| ¹⁸Na    | proton-rich           | 1.3 ± 0.4 zs      |
+| ¹⁹Na    | proton-unbound        | >1 as             |
+| ²⁰Na    | β⁺                    | 447.9 ms          |
+| ²¹Na    | β⁺                    | 22.4550 s         |
+| ²²Na    | β⁺/EC                 | 2.6019 y          |
+| ²³Na    | stable                | natural 100%; NMR |
+| ²⁴Na    | β⁻                    | 14.9560 h         |
+| ²⁵Na    | β⁻                    | 59.1 s            |
+| ²⁶Na    | β⁻                    | 1.07128 s         |
+| ²⁷Na    | β⁻                    | 301 ms            |
+| ²⁸Na    | β⁻                    | 33.1 ms           |
+| ²⁹Na    | β⁻/βn                 | 43.2 ms           |
+| ³⁰Na    | β⁻/βn                 | 45.9 ms           |
+| ³¹Na    | β⁻/βn                 | 16.8 ms           |
+| ³²Na    | β⁻/βn                 | 12.9 ms           |
+| ³³Na    | β⁻/βn                 | 8.2 ms            |
+| ³⁴Na    | neutron-rich          | 5.5 ms            |
+| ³⁵Na    | neutron-rich          | 1.5 ms            |
+| ³⁶Na    | extreme neutron-rich  | <180 ns           |
+| ³⁷Na    | observed neutron-rich | ~1 ms estimated   |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-002-Spectroscopy.md
+
+# Sodium Spectroscopic Architecture
+
+| Object              | Feature                        |
+| ------------------- | ------------------------------ |
+| Na I D₂             | 588.995095 nm air              |
+| Na I D₁             | 589.592424 nm air              |
+| Na I                | strong flame emission          |
+| Na II               | distinct ionic spectrum        |
+| ²³Na NMR            | field-dependent                |
+| Na atomic hyperfine | nuclear/electronic coupling    |
+| solid compounds     | lattice phonons                |
+| metal               | electronic/collective response |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-003-Periodic-Reset.md
+
+# Lithium → Sodium Periodic Comparison
+
+| Variable               | Li               | Na                    |
+| ---------------------- | ---------------- | --------------------- |
+| outer configuration    | 2s¹              | 3s¹                   |
+| common charge          | +1               | +1                    |
+| shell                  | n=2              | n=3                   |
+| ionic size             | smaller          | larger                |
+| graphite compatibility | strong Li system | different Na behavior |
+| hard-carbon role       | secondary        | central Na-ion anode  |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-004-Biology.md
+
+# Biological Sodium Network
+
+| Stage                 | Na⁺ role                              |
+| --------------------- | ------------------------------------- |
+| resting gradient      | extracellular concentration high      |
+| depolarization        | rapid inward Na⁺ current              |
+| channel inactivation  | Na⁺ conductance falls                 |
+| repolarization        | K⁺ current dominates                  |
+| long-term restoration | Na/K-ATPase maintains gradients       |
+| secondary transport   | Na⁺ gradient drives coupled transport |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-005-Compounds.md
+
+# Sodium Compound Families
+
+| Family         | Examples                   |
+| -------------- | -------------------------- |
+| halides        | NaCl, NaF                  |
+| oxides         | Na₂O, Na₂O₂, NaO₂          |
+| hydroxide      | NaOH                       |
+| carbonates     | Na₂CO₃, NaHCO₃             |
+| nitrogen salts | NaNO₃, NaNO₂, NaN₃         |
+| amide          | NaNH₂                      |
+| silicates      | Na₂SiO₃-related            |
+| phosphates     | Na₃PO₄ / Na₂HPO₄ / NaH₂PO₄ |
+| hydrides       | NaH, NaBH₄, NaAlH₄         |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-006-Battery.md
+
+# Sodium-Ion Materials
+
+| Component         | Families                |
+| ----------------- | ----------------------- |
+| anode             | hard carbon             |
+| cathode           | P2/O3 layered oxides    |
+| cathode           | polyanionic compounds   |
+| cathode           | Prussian-blue analogues |
+| electrolyte       | liquid organic          |
+| solid electrolyte | NASICON / β-alumina     |
+| solid electrolyte | sulfides / halides      |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-007-High-Pressure.md
+
+# High-Pressure Sodium
+
+| Approx. pressure | State                                                  |
+| ---------------: | ------------------------------------------------------ |
+|            low P | bcc metal                                              |
+|          ~65 GPa | fcc                                                    |
+|         ~103 GPa | cI16                                                   |
+|     ~118–119 GPa | oP8                                                    |
+|         ~125 GPa | tI19                                                   |
+|         ~200 GPa | hP4 transparent insulator                              |
+|          223 GPa | interstitial electron density experimentally supported |
+|       to 310 GPa | hP4 retained in 2025 study                             |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-008-Liquid-Metal.md
+
+# Sodium Liquid-Metal Architecture
+
+| System               | State                                 |
+| -------------------- | ------------------------------------- |
+| Na(s)                | metallic crystal                      |
+| Na(l)                | conducting fluid                      |
+| NaK                  | liquid alloy family                   |
+| electromagnetic pump | J × B coupling                        |
+| coolant system       | convective + conductive heat transfer |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-009-Geochemistry.md
+
+# Natural Sodium
+
+| Reservoir         | Sodium state                |
+| ----------------- | --------------------------- |
+| seawater          | dissolved Na⁺               |
+| halite            | NaCl crystal                |
+| evaporite         | ionic salts                 |
+| feldspar/silicate | lattice-bound Na            |
+| brine             | aqueous Na⁺                 |
+| free native Na    | not major natural reservoir |
+
+# FILE: records/0011-Sodium-Na/tables/0011-Sodium-Na-TABLE-010-Evidence.md
+
+# Sodium Evidence Matrix
+
+| Domain              | Sources                            |
+| ------------------- | ---------------------------------- |
+| atomic / ionization | SRC-000214                         |
+| isotope masses      | SRC-000215                         |
+| nuclear evaluation  | SRC-000223 / 224                   |
+| D lines / Na II     | SRC-000217 / 235                   |
+| ²³Na NMR/hyperfine  | SRC-000225                         |
+| laser cooling       | SRC-000236                         |
+| liquid Sodium       | SRC-000226                         |
+| NaK                 | SRC-000227                         |
+| geochemistry        | SRC-000228                         |
+| batteries           | SRC-000220 / 221 / 230 / 231 / 232 |
+| biology             | SRC-000237 / 238                   |
+| high pressure       | SRC-000219 / 233 / 234             |
+| history             | SRC-000239 / 240                   |
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Graph-Manifest.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:GRAPHS"
+record_id: "MAT:0011"
+
+graphs:
+
+  - id: "MAT:0011:GRAPH:001"
+    name: "Sodium Isotope Lifetime Map"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:002"
+    name: "Sodium Ionization Ladder"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:003"
+    name: "Na I D-Line Fine Structure"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:004"
+    name: "Na I versus Na II Spectrum"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:005"
+    name: "Na23 Hyperfine / NMR Architecture"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:006"
+    name: "Lithium-Sodium Periodic Reset"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:007"
+    name: "Sodium-Ion Battery Material Map"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:008"
+    name: "Biological Sodium Electrochemical Gradient"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:009"
+    name: "Na/K ATPase State Cycle"
+    status: "SCHEMATIC-READY"
+
+  - id: "MAT:0011:GRAPH:010"
+    name: "High-Pressure Sodium Phase Sequence"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0011:GRAPH:011"
+    name: "Metal-to-Electride Electron-Density Map"
+    status: "SCIENTIFIC-SCHEMATIC"
+
+  - id: "MAT:0011:GRAPH:012"
+    name: "Sodium Knowledge Graph"
+    status: "READY-FOR-GENERATION"
+```
+
+The atomic-cooling lineage also fits your broader MAT architecture very well: it demonstrates that a spectral line is not merely something to plot—it can be used as a **force and state-control mechanism**. Phillips and Metcalf used resonant Sodium light together with magnetic-field control to decelerate atoms, and later Sodium optical-molasses work observed temperatures far below the initial Doppler-limit expectation. ([NIST][6])
+
+# FILE: records/0011-Sodium-Na/0011-Sodium-Na-Visual-Specification.md
+
+# 0011 Sodium — Locked Visual Specification
+
+## V01 — Natural / Material Manifestation
+
+```text
+images/natural/0011-Sodium-Na-FIG-001-Natural-and-Metallic.png
+```
+
+Show separately:
+
+```text
+metallic Na
+halite
+seawater Na+
+sodium-bearing silicate
+```
+
+Required:
+
+```text
+NATURAL SODIUM
+!=
+FREE METALLIC Na
+```
+
+---
+
+## V02 — Conventional Atomic Identity
+
+```text
+images/scientific/0011-Sodium-Na-FIG-002-Atomic-Identity.svg
+```
+
+Include:
+
+```text
+Na
+Z = 11
+[Ne]3s1
+2S1/2
+22.98976928(2)
+```
+
+Highlight:
+
+```text
+PERIOD-3 SHELL RESTART
+```
+
+---
+
+## V03 — Bonding / Ionic Architecture
+
+```text
+diagrams/bonding/0011-Sodium-Na-DIAGRAM-001-Compound-Bonding.svg
+```
+
+Compare:
+
+```text
+metallic Na
+Na+
+NaCl
+NaF
+Na2O
+Na2O2
+NaO2
+NaH
+NaBH4
+```
+
+Required:
+
+```text
+Na+ PRESENCE
+!=
+SAME BONDING ARCHITECTURE
+```
+
+---
+
+## V04 — Atomic / Electron Probability
+
+Asset:
+
+```text
+images/quantum/0011-Sodium-Na-FIG-003-Shell-Reset.svg
+```
+
+Show:
+
+```text
+Ne 2p6
+↓ + one electron
+Na 3s1
+```
+
+Second panel:
+
+```text
+Na
+→ ionization
+→ Na+
+→ [Ne]
+```
+
+---
+
+## V05 — Isotope / Nuclear
+
+```text
+images/isotope/0011-Sodium-Na-FIG-004-Isotope-Map.svg
+```
+
+Highlight:
+
+```text
+21Na → beta+
+22Na → beta+/EC / calibration
+23Na → stable / NMR
+24Na → activation / beta-
+neutron-rich Na → delayed neutron branches
+```
+
+Include:
+
+```text
+24Na half-life provenance correction
+```
+
+---
+
+## V06 — Spectral / Frequency
+
+Asset 1:
+
+```text
+images/spectral/0011-Sodium-Na-FIG-005-D-Lines.svg
+```
+
+Show:
+
+```text
+588.995095 nm
+589.592424 nm
+```
+
+Asset 2:
+
+```text
+images/spectral/0011-Sodium-Na-FIG-006-Spectral-Mechanisms.svg
+```
+
+Separate:
+
+```text
+Na I
+Na II
+Na23 NMR
+hyperfine structure
+solid phonons
+metal response
+ion hopping
+```
+
+Required:
+
+```text
+NO UNIVERSAL SODIUM FREQUENCY
+```
+
+---
+
+## V07 — Physical
+
+```text
+images/properties/0011-Sodium-Na-FIG-007-Physical-Dashboard.svg
+```
+
+Show:
+
+```text
+soft metal
+density ~0.97 g/cm3
+Tm ~97.794 C
+Tb ~882.940 C
+```
+
+---
+
+## V08 — Electrical / Electrochemical
+
+Asset 1:
+
+```text
+diagrams/fields/0011-Sodium-Na-DIAGRAM-002-Na-Ion-Transport.svg
+```
+
+Show:
+
+```text
+Na+
+→ host site
+→ diffusion
+→ next site
+```
+
+Asset 2:
+
+```text
+diagrams/fields/0011-Sodium-Na-DIAGRAM-003-Sodium-Ion-Battery.svg
+```
+
+Include:
+
+```text
+hard carbon
+layered oxide
+PBA
+solid electrolyte
+```
+
+---
+
+## V09 — Magnetic / NMR
+
+```text
+diagrams/fields/0011-Sodium-Na-DIAGRAM-004-Na23-NMR-Hyperfine.svg
+```
+
+Show separately:
+
+```text
+atomic electronic spin
+23Na nuclear spin I=3/2
+quadrupolar interaction
+Zeeman splitting
+hyperfine structure
+```
+
+---
+
+## V10 — Thermal / Liquid Metal
+
+```text
+images/properties/0011-Sodium-Na-FIG-008-Liquid-Sodium.svg
+```
+
+Show:
+
+```text
+solid Na
+→ melt
+→ conductive liquid
+```
+
+plus:
+
+```text
+temperature-dependent density
+thermal conductivity
+heat capacity
+```
+
+Do not display them as constants.
+
+---
+
+## V11 — Mechanical / Structural
+
+```text
+images/properties/0011-Sodium-Na-FIG-009-BCC-and-Alloy.svg
+```
+
+Show:
+
+```text
+ambient bcc Sodium
+NaK composition concept
+ionic crystals separately
+```
+
+---
+
+## V12 — Pressure / Environment
+
+```text
+images/properties/0011-Sodium-Na-FIG-010-High-Pressure-Sequence.svg
+```
+
+Show:
+
+```text
+bcc
+→ fcc
+→ cI16
+→ oP8
+→ tI19
+→ hP4
+```
+
+and:
+
+```text
+METAL
+→ TRANSPARENT INSULATING ELECTRIDE
+```
+
+---
+
+## V13 — Transformation / Process
+
+```text
+diagrams/processes/0011-Sodium-Na-DIAGRAM-005-Transformation-Network.svg
+```
+
+Branches:
+
+```text
+Na
+├── ionization → Na+
+├── flame/discharge → Na*
+├── melting → Na(l)
+├── alloying → NaK
+├── water → NaOH + H2
+├── O → oxide/peroxide/superoxide
+├── Cl → NaCl
+├── F → NaF
+├── electrochemistry → Na+ insertion
+├── biology → ion transport
+└── pressure → hP4 electride
+```
+
+---
+
+## V14 — Knowledge Graph
+
+```text
+diagrams/relationships/0011-Sodium-Na-DIAGRAM-006-Knowledge-Graph.svg
+```
+
+Clusters:
+
+```text
+Lithium comparison
+Ne/Na+ isoelectronic
+isotopes
+spectroscopy
+laser cooling
+liquid metal
+NaK
+salts
+geochemistry
+battery materials
+biology
+high pressure
+people
+sources
+```
+
+---
+
+## V15 — Scientific 3D
+
+Model 1:
+
+```text
+models/scientific/0011-Sodium-Na-MODEL-SCI-001-BCC-Na.glb
+```
+
+Model 2:
+
+```text
+models/scientific/0011-Sodium-Na-MODEL-SCI-002-NaCl.glb
+```
+
+Model 3:
+
+```text
+models/scientific/0011-Sodium-Na-MODEL-SCI-003-Hard-Carbon-Na.glb
+```
+
+Model 4:
+
+```text
+models/scientific/0011-Sodium-Na-MODEL-SCI-004-hP4-Electride.glb
+```
+
+hP4 model must distinguish:
+
+```text
+nuclei
+interstitial electron-density maxima
+```
+
+without rendering electrons as literal classical particles.
+
+---
+
+## V16 — Data-Extruded 3D
+
+```text
+models/data-extruded/0011-Sodium-Na-MODEL-DATA-001.glb
+```
+
+Use universal MAT data-extrusion transform.
+
+---
+
+## V17 — Applications
+
+```text
+images/applications/0011-Sodium-Na-FIG-011-Applications.svg
+```
+
+Clusters:
+
+```text
+sodium-ion batteries
+liquid-metal cooling
+NaK
+lighting/spectroscopy
+laser cooling
+chemical manufacturing
+glass/silicates
+salts
+biological ion transport
+geochemistry
+nuclear tracers
+```
+
+---
+
+## V18 — Evidence / Provenance
+
+```text
+diagrams/relationships/0011-Sodium-Na-DIAGRAM-007-Evidence-Provenance.svg
+```
+
+Show:
+
+```text
+NIST ASD
+NIST isotopes
+NUBASE
+DDEP
+RSC
+USGS
+Argonne
+DOE
+Nature
+Nature Reviews
+NIST laser cooling
+Nobel / Hodgkin-Huxley
+Nobel / Skou
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Visual-Manifest.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:VISUALS"
+record_id: "MAT:0011"
+
+summary:
+  visual_slots: 18
+  two_dimensional_assets: 18
+  scientific_3d_models: 4
+  data_extruded_models: 1
+  total_core_visual_assets: 23
+
+status:
+  specification: "LOCKED"
+  generated: false
+```
+
+# FILE: records/0011-Sodium-Na/0011-Sodium-Na-Migration-Audit.md
+
+# G0011 → MAT:0011 Migration Audit
+
+## Result
+
+```text
+CONTENT-MIGRATED
+```
+
+### AUDIT-001 — Periodic repetition
+
+Legacy:
+
+```text
+Li ↔ Na
+```
+
+Preserved as:
+
+```text
+SAME ns1 VALENCE PATTERN
++
+DIFFERENT PRINCIPAL SHELL
+```
+
+Required:
+
+```text
+PERIODIC REPETITION
+!=
+EXACT PHYSICAL DUPLICATION
+```
+
+### AUDIT-002 — Radial expansion
+
+```text
+PRESERVED + FORMALIZED
+```
+
+as shell/radius/host-compatibility changes.
+
+### AUDIT-003 — Na+
+
+```text
+PRESERVED + ISOELECTRONIC-WITH-Ne
+```
+
+### AUDIT-004 — First/second ionization jump
+
+```text
+PRESERVED + QUANTIFIED
+```
+
+### AUDIT-005 — 23Na
+
+```text
+PRESERVED + NMR/HYPERFINE EXPANDED
+```
+
+### AUDIT-006 — 22Na
+
+```text
+PRESERVED + DECAY-Q/BRANCH-SEPARATED
+```
+
+### AUDIT-007 — 24Na
+
+Legacy:
+
+```text
+14.997 h
+```
+
+retained as historical evaluation.
+
+Current MAT:
+
+```text
+NUBASE2020: 14.9560 ± 0.0015 h
+DDEP:       14.9581 ± 0.0020 h
+```
+
+Status:
+
+```text
+SUPERSEDED-WORKING-VALUE
+```
+
+### AUDIT-008 — Sodium D lines
+
+```text
+PRESERVED + FINE-STRUCTURE-RESOLVED
+```
+
+### AUDIT-009 — Flame colour
+
+```text
+PRESERVED
+```
+
+Correction:
+
+```text
+FLAME EMISSION
+!=
+GROUND-STATE BULK COLOUR
+```
+
+### AUDIT-010 — Laser cooling
+
+```text
+LEGACY SPECTROSCOPY EXTENDED TO STATE CONTROL
+```
+
+Adds:
+
+```text
+radiation pressure
+Zeeman slowing
+optical molasses
+atomic trapping
+```
+
+### AUDIT-011 — Liquid Sodium
+
+```text
+PRESERVED + TEMPERATURE-DEPENDENT PROPERTIES
+```
+
+### AUDIT-012 — MHD
+
+```text
+PRESERVED + JxB FIELD FORMALIZATION
+```
+
+### AUDIT-013 — NaK
+
+```text
+PRESERVED + COMPOSITION-FIRST
+```
+
+### AUDIT-014 — Water reaction
+
+```text
+PRESERVED + MULTI-OUTPUT-CAUSAL MAP
+```
+
+### AUDIT-015 — Sodium compounds
+
+```text
+PRESERVED + SPECIES-CHILD SEPARATION
+```
+
+### AUDIT-016 — Oxide/peroxide/superoxide
+
+```text
+PRESERVED + OXYGEN-SPECIES-TYPED
+```
+
+### AUDIT-017 — Sodium-ion batteries
+
+```text
+PRESERVED + MODERN-2026-MATERIAL ARCHITECTURE
+```
+
+### AUDIT-018 — Graphite versus hard carbon
+
+```text
+PRESERVED
+```
+
+Rule:
+
+```text
+Li HOST SUCCESS
+!=
+Na HOST SUCCESS
+```
+
+### AUDIT-019 — Biological sodium
+
+```text
+PRESERVED + ION-STATE-SEPARATION
+```
+
+### AUDIT-020 — Action potential
+
+```text
+EXPANDED
+```
+
+Correction:
+
+```text
+Na/K ATPase
+!=
+DIRECT RAPID REPOLARIZATION MECHANISM
+```
+
+### AUDIT-021 — Na/K ATPase
+
+```text
+PRESERVED + 3Na/2K/ATP STATE MAP
+```
+
+### AUDIT-022 — Geochemistry
+
+```text
+PRESERVED + SEAWATER/HALITE/SILICATE SEPARATION
+```
+
+### AUDIT-023 — High-pressure transparent Sodium
+
+```text
+PRESERVED + PHASE-SEQUENCE EXPANDED
+```
+
+### AUDIT-024 — Electride
+
+Older wording:
+
+```text
+ELECTRIDE-LIKE
+```
+
+upgraded to:
+
+```text
+EXPERIMENTALLY SUPPORTED ELECTRIDE
+```
+
+for hP4 Sodium using 2025 evidence.
+
+### AUDIT-025 — Frequency
+
+```text
+PRESERVED
+```
+
+No universal Sodium frequency.
+
+### AUDIT-026 — Legacy lock
+
+Any legacy:
+
+```text
+PRODUCTION ELEMENT — LOCKED
+```
+
+is historical only.
+
+MAT validation is independent.
+
+# FILE: records/0011-Sodium-Na/0011-Sodium-Na-Schema-Validation.md
+
+# Sodium Schema Validation
+
+```yaml
+record_id: "MAT:0011"
+validation_version: "1.0.0"
+overall: "PASS"
+
+validation:
+
+  atomic_identity: "PASS"
+  period_3_restart: "PASS"
+  periodic_analogue_architecture: "PASS"
+
+  ionization_architecture: "PASS"
+  closed_shell_Na_plus: "PASS"
+
+  isotope_namespace: "PASS"
+  isotope_semantics: "PASS"
+  isomer_architecture: "PASS"
+  decay_evaluation_provenance: "PASS"
+
+  atomic_spectroscopy: "PASS"
+  ionic_spectroscopy: "PASS"
+  hyperfine_architecture: "PASS"
+  NMR_architecture: "PASS"
+  laser_cooling_architecture: "PASS"
+  no_universal_frequency: "PASS"
+
+  metallic_state_architecture: "PASS"
+  liquid_metal_architecture: "PASS"
+  NaK_architecture: "PASS"
+
+  compound_family_architecture: "PASS"
+  geochemistry_architecture: "PASS"
+
+  battery_architecture: "PASS"
+  ion_transport_architecture: "PASS"
+
+  biological_architecture: "PASS"
+  action_potential_architecture: "PASS"
+  NaK_ATPase_architecture: "PASS"
+
+  high_pressure_architecture: "PASS"
+  electride_architecture: "PASS"
+
+  people_lineage: "PASS"
+  evidence_architecture: "PASS"
+
+scientific_core: "CORE-VALIDATED"
+exhaustive_content: false
+```
+
+# FINAL SODIUM STATUS
+
+```yaml
+status: "RESEARCHED"
+completeness: "RESEARCHED"
+
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  isotope_semantics: "PASS"
+  spectroscopy_architecture: "PASS"
+  NMR_hyperfine_architecture: "PASS"
+  atomic_cooling_architecture: "PASS"
+  metallic_architecture: "PASS"
+  compound_architecture: "PASS"
+  battery_architecture: "PASS"
+  biological_architecture: "PASS"
+  high_pressure_architecture: "PASS"
+  evidence_architecture: "PASS"
+  scientific_core: "CORE-VALIDATED"
+  exhaustive_content: false
+
+visuals:
+  specification: "LOCKED"
+  generated: false
+```
+
+# INDEX PATCHES
+
+Update:
+
+```text
+docs/05-index/01-Record-Index.md
+```
+
+to:
+
+```text
+0011 | Sodium | Na | 11 | CORE-VALIDATED
+```
+
+Update:
+
+```text
+docs/07-migration/01-Legacy-File-Map.md
+```
+
+to:
+
+```text
+G0011 | records/0011-Sodium-Na/ | MIGRATED-PENDING-ARCHIVE
+```
+
+# APPEND TO: data/registries/sources.yaml
+
+```yaml
+  - source_id: "SRC-000235"
+    title: "NIST Atomic Spectra Database — Sodium I and Sodium II"
+    organization: "National Institute of Standards and Technology"
+    database: "ASD v5.12"
+    source_type: "EVALUATED-ATOMIC-SPECTROSCOPY"
+    supports:
+      - Na_I_D1
+      - Na_I_D2
+      - Na_I_secondary_lines
+      - Na_II_spectrum
+      - air_vacuum_wavelength_semantics
+
+  - source_id: "SRC-000236"
+    title: "NIST Laser Cooling and Trapping of Sodium Atoms"
+    organization: "National Institute of Standards and Technology"
+    source_type: "ATOMIC-PHYSICS-HISTORY-AND-EXPERIMENT"
+    supports:
+      - William_Phillips
+      - Harold_Metcalf
+      - sodium_beam_deceleration
+      - Zeeman_slower
+      - optical_molasses
+      - magnetic_trapping
+      - sub_Doppler_sodium
+
+  - source_id: "SRC-000237"
+    title: "Ionic mechanisms of nerve excitation — Hodgkin and Huxley lineage"
+    organization: "Nobel Prize Outreach"
+    source_type: "BIOPHYSICS-HISTORY"
+    supports:
+      - Alan_Hodgkin
+      - Andrew_Huxley
+      - sodium_influx
+      - potassium_efflux
+      - action_potential
+
+  - source_id: "SRC-000238"
+    title: "Jens C. Skou — Discovery of Na+,K+-ATPase"
+    organization: "Nobel Prize Outreach"
+    source_type: "BIOCHEMISTRY-HISTORY"
+    supports:
+      - Jens_Skou
+      - Na_K_ATPase
+      - ATP_driven_ion_transport
+      - sodium_potassium_gradient
+
+  - source_id: "SRC-000239"
+    title: "Sodium — Discovery and Element History"
+    organization: "Royal Society of Chemistry"
+    source_type: "SCIENTIFIC-HISTORY"
+    supports:
+      - Humphry_Davy
+      - sodium_isolation_1807
+      - electrolysis
+      - sodium_name
+
+  - source_id: "SRC-000240"
+    title: "History of Spectroscopy — Fraunhofer, Swan, Bunsen and Kirchhoff"
+    organization: "Royal Society of Chemistry"
+    source_type: "SPECTROSCOPY-HISTORY"
+    supports:
+      - Joseph_von_Fraunhofer
+      - William_Swan
+      - Robert_Bunsen
+      - Gustav_Kirchhoff
+      - sodium_double_yellow_line
+      - emission_absorption_relationship
+
+  - source_id: "SRC-000241"
+    title: "Sodium Silicate"
+    organization: "PubChem / National Library of Medicine"
+    source_type: "CHEMICAL-COMPOUND-REFERENCE"
+    supports:
+      - Na2SiO3
+      - sodium_silicate
+      - waterglass_family
+```
+
+# MAT REFERENCE MATRIX THROUGH SODIUM
+
+```text
+0001 Hydrogen
+→ molecule / isotope / plasma
+
+0002 Helium
+→ closed-shell 1s / quantum fluids
+
+0003 Lithium
+→ first 2s1 alkali / Li+ electrochemistry
+
+0004 Beryllium
+→ anisotropy / neutron materials
+
+0005 Boron
+→ multicentre bonding / clusters
+
+0006 Carbon
+→ topology / dimensionality / polymers
+
+0007 Nitrogen
+→ fixation / atmospheric chemistry
+
+0008 Oxygen
+→ spin states / oxides / redox
+
+0009 Fluorine
+→ electronegativity / fluoride transport
+
+0010 Neon
+→ closed-shell period boundary
+
+0011 Sodium
+→ period-3 restart /
+  Na+ closed-shell ion /
+  atomic fine structure /
+  laser-force control /
+  liquid-metal MHD /
+  sodium-ion electrochemistry /
+  biological electrochemical gradients /
+  pressure-induced electride transition
+```
+
+# NEXT RECORD
+
+```text
+0012-Magnesium-Mg
+```
+
+Magnesium will introduce:
+
+```text
+[Ne]3s2
+GROUP-2 PERIODIC REPEAT OF Be
+
+Mg ATOM
+Mg+
+Mg2+ CLOSED-SHELL ION
+
+24Mg / 25Mg / 26Mg
+25Mg NMR
+28Mg / RADIOACTIVE BRANCHES
+
+Mg I / Mg II SPECTROSCOPY
+Mg II h/k LINES
+ASTROPHYSICAL SPECTROSCOPY
+
+HCP METALLIC MAGNESIUM
+ANISOTROPY
+LOW DENSITY STRUCTURAL METAL
+ALLOYING
+
+MgO
+Mg(OH)2
+MgCO3
+MgCl2
+MgF2
+MgH2
+
+GRIGNARD CHEMISTRY
+ORGANOMAGNESIUM
+
+MAGNESIUM-ION BATTERIES
+MULTIVALENT Mg2+ TRANSPORT
+SOLID ELECTROLYTES
+
+BIOLOGICAL Mg2+
+ATP COORDINATION
+CHLOROPHYLL
+ENZYME COFACTORS
+
+SEAWATER / DOLOMITE / MAGNESITE
+
+COMBUSTION / BRIGHT EMISSION
+
+HIGH-PRESSURE Mg
+ELECTRONIC PHASE CHANGES
+
+Li / Be / Na / Mg
+PERIODIC SCALE COMPARISON
+```
+
+With those patches, **`0011-Sodium-Na` is ready for `CORE-VALIDATED`**. Sodium is a particularly strong MAT record because one electronic motif—an easily removed \(3s^1\) electron—propagates into atomic spectra, Na⁺ chemistry, batteries, membrane potentials and periodicity, yet pressure can completely invert the familiar low-pressure result and turn the same element into an insulating electride.
+
+The next production record is **`0012-Magnesium-Mg`**.
+
+[1]: https://physics.nist.gov/cgi-bin/ASD/lines1.pl?A_out=0&J_out=on&allowed_out=1&bibrefs=1&conf_out=on&de=0&en_unit=0&enrg_out=on&forbid_out=1&format=0&intens_out=on&limits_type=0&line_out=0&low_w=370&max_low_enrg=&max_str=&max_upp_enrg=&min_accur=&min_intens=&min_str=&order_out=0&output=0&page_size=15&show_av=2&show_calc_wl=1&show_obs_wl=1&spectra=sodium+i&submit=Retrieve+Data&term_out=on&tsb_value=0&unc_out=1&unit=1&upp_w=800 "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?A_out=0&J_out=on&allowed_out=1&bibrefs=1&conf_out=on&de=0&en_unit=0&enrg_out=on&forbid_out=1&format=0&intens_out=on&limits_type=0&line_out=0&low_w=370&max_low_enrg=&max_str=&max_upp_enrg=&min_accur=&min_intens=&min_str=&order_out=0&output=0&page_size=15&show_av=2&show_calc_wl=1&show_obs_wl=1&spectra=sodium+i&submit=Retrieve+Data&term_out=on&tsb_value=0&unc_out=1&unit=1&upp_w=800"
+[2]: https://www.nist.gov/nist-and-nobel/bill-phillips/nobel-moment-bill-phillips "https://www.nist.gov/nist-and-nobel/bill-phillips/nobel-moment-bill-phillips"
+[3]: https://www.nobelprize.org/nobel_prizes/medicine/laureates/1963/hodgkin-facts.html "https://www.nobelprize.org/nobel_prizes/medicine/laureates/1963/hodgkin-facts.html"
+[4]: https://periodic-table.rsc.org/element/11/sodium "https://periodic-table.rsc.org/element/11/sodium"
+[5]: https://www.rsc.org/images/History%20of%20spectroscopy_tcm18-168453.pdf?utm_source=chatgpt.com "History of spectroscopy"
+[6]: https://www.nist.gov/physics/nists-quantum-research-highlights "https://www.nist.gov/physics/nists-quantum-research-highlights"

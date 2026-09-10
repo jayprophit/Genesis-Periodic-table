@@ -30,6 +30,7 @@ materials:
       source_id: "SRC-000071"
 
     rule: "Do not assign 47 GPa to all B4C material states."
+    relationship_id: MAT:0005:REL:1000
 
   boron_nitride:
 
@@ -49,10 +50,10 @@ materials:
       - "NANOSTRUCTURED-BN"
 
     rule: >
-      h-BN, c-BN and other BN structures are distinct material
-      states with different properties.
+      h-BN, c-BN and other BN structures are distinct material states with different properties.
 
     source_id: "SRC-000072"
+    relationship_id: MAT:0005:REL:1001
 
   boron_oxide:
 
@@ -68,6 +69,7 @@ materials:
     functions:
       - glass_network_component
       - borate_precursor
+    relationship_id: MAT:0005:REL:1002
 
   borosilicate:
 
@@ -87,6 +89,7 @@ materials:
       - thermal_shock_resistance
       - chemical_durability
       - optical_transmission
+    relationship_id: MAT:0005:REL:1003
 
   boranes:
 
@@ -103,6 +106,7 @@ materials:
 
     safety:
       compound_specific: true
+    relationship_id: MAT:0005:REL:1004
 
   magnesium_diboride:
 
@@ -119,6 +123,7 @@ materials:
       - superconducting_material
 
     elemental_boron_superconductivity_equivalent: false
+    relationship_id: MAT:0005:REL:1005
 
   boron_doped_diamond:
 
@@ -141,8 +146,8 @@ materials:
     source_id: "SRC-000074"
 
     rule: >
-      Superconductivity belongs to the doped diamond state,
-      not to elemental Boron or undoped diamond independently.
+      Superconductivity belongs to the doped diamond state, not to elemental Boron or undoped diamond independently.
+    relationship_id: MAT:0005:REL:1006
 
   metal_borides:
 
@@ -158,6 +163,7 @@ materials:
       - hard
       - electrically_conducting
       - chemically_resistant
+    relationship_id: MAT:0005:REL:1007
 
 rules:
   compound_property_equals_boron_property: false

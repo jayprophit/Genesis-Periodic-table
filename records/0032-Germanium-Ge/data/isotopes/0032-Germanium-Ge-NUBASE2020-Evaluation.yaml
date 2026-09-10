@@ -1,0 +1,2803 @@
+registry_id: MAT:0032:REG:NUBASE2020
+record_id: MAT:0032
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 58
+    Z: 32
+    N: 26
+    state_index: 0
+    state_label: ground
+    source_label: 58Ge
+    mass_excess:
+      value: -7580
+      unit: keV
+      raw: -7580#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: 2p ?
+    source_line: 806
+    raw_line: 058 0320   58Ge    -7580#       500#                                                    0+                             2p ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0032:ISO:Ge-58
+    evaluation_entry_id: MAT:0032:NUBASE2020:58:0
+  - A: 59
+    Z: 32
+    N: 27
+    state_index: 0
+    state_label: ground
+    source_label: 59Ge
+    mass_excess:
+      value: -16370
+      unit: keV
+      raw: -16370#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 13.3
+      unit: ms
+      raw: "13.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.7"
+      uncertainty: 1.7
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-#
+    ensdf_update_year_raw: "18"
+    discovery_year_raw: "2015"
+    decay_and_abundance_raw: B+~100;B+p=93 7;2p<0.2
+    source_line: 824
+    raw_line: 059 0320   59Ge   -16370#       400#                                   13.3   ms 1.7    7/2-#         18          2015
+      B+~100;B+p=93 7;2p<0.2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.052116329365409414
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.006661485708360602
+      mean_lifetime:
+        value: 19.187844043823215
+        unit: ms
+        relation: =
+        uncertainty: 2.4525815695112376
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-59
+    evaluation_entry_id: MAT:0032:NUBASE2020:59:0
+  - A: 60
+    Z: 32
+    N: 28
+    state_index: 0
+    state_label: ground
+    source_label: 60Ge
+    mass_excess:
+      value: -27530
+      unit: keV
+      raw: -27530#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 21
+      unit: ms
+      raw: "21"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "2005"
+    decay_and_abundance_raw: B+=100;B+p~100;B+2p<14
+    source_line: 846
+    raw_line: 060 0320   60Ge   -27530#       300#                                   21     ms 6      0+            13          2005
+      B+=100;B+p~100;B+2p<14
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.033007008598092635
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.009430573885169324
+      mean_lifetime:
+        value: 30.296595858668233
+        unit: ms
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-60
+    evaluation_entry_id: MAT:0032:NUBASE2020:60:0
+  - A: 61
+    Z: 32
+    N: 29
+    state_index: 0
+    state_label: ground
+    source_label: 61Ge
+    mass_excess:
+      value: -33790
+      unit: keV
+      raw: -33790#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 40.7
+      unit: ms
+      raw: "40.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1987"
+    decay_and_abundance_raw: B+=100;B+p=87 3
+    source_line: 869
+    raw_line: 061 0320   61Ge   -33790#       300#                                   40.7   ms 0.4    3/2-#         15          1987
+      B+=100;B+p=87 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.017030643257001113
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00016737732930713624
+      mean_lifetime:
+        value: 58.717688164180814
+        unit: ms
+        relation: =
+        uncertainty: 0.5770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-61
+    evaluation_entry_id: MAT:0032:NUBASE2020:61:0
+  - A: 62
+    Z: 32
+    N: 30
+    state_index: 0
+    state_label: ground
+    source_label: 62Ge
+    mass_excess:
+      value: -42140
+      unit: keV
+      raw: -42140#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 140#
+      uncertainty: 140
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 82.5
+      unit: ms
+      raw: "82.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.4"
+      uncertainty: 1.4
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1991"
+    decay_and_abundance_raw: B+=100;B+p ?
+    source_line: 886
+    raw_line: 062 0320   62Ge   -42140#       140#                                   82.5   ms 1.4    0+            12          1991
+      B+=100;B+p ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.008401784006787216
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00014257572860002548
+      mean_lifetime:
+        value: 119.02234087333949
+        unit: ms
+        relation: =
+        uncertainty: 2.019773057244549
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-62
+    evaluation_entry_id: MAT:0032:NUBASE2020:62:0
+  - A: 63
+    Z: 32
+    N: 31
+    state_index: 0
+    state_label: ground
+    source_label: 63Ge
+    mass_excess:
+      value: -46920
+      unit: keV
+      raw: "-46920"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 153.6
+      unit: ms
+      raw: "153.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.1"
+      uncertainty: 1.1
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-#
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1991"
+    decay_and_abundance_raw: B+=100;B+p ?
+    source_line: 901
+    raw_line: 063 0320   63Ge   -46920         40                                   153.6   ms 1.1    3/2-#         09          1991
+      B+=100;B+p ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004512676956770477
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000032317347997705247
+      mean_lifetime:
+        value: 221.5979582805448
+        unit: ms
+        relation: =
+        uncertainty: 1.58696454497786
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-63
+    evaluation_entry_id: MAT:0032:NUBASE2020:63:0
+  - A: 64
+    Z: 32
+    N: 32
+    state_index: 0
+    state_label: ground
+    source_label: 64Ge
+    mass_excess:
+      value: -54316
+      unit: keV
+      raw: "-54316"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 63.7
+      unit: s
+      raw: "63.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.5"
+      uncertainty: 2.5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B+=100
+    source_line: 920
+    raw_line: 064 0320   64Ge   -54316          4                                    63.7    s 2.5    0+            07          1972 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010881431405964604
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0004270577474868369
+      mean_lifetime:
+        value: 91.89967410462698
+        unit: s
+        relation: =
+        uncertainty: 3.6067376022224087
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-64
+    evaluation_entry_id: MAT:0032:NUBASE2020:64:0
+  - A: 65
+    Z: 32
+    N: 33
+    state_index: 0
+    state_label: ground
+    source_label: 65Ge
+    mass_excess:
+      value: -56478.2
+      unit: keV
+      raw: "-56478.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.2"
+      uncertainty: 2.2
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 30.9
+      unit: s
+      raw: "30.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B+=100;B+p=0.011 3
+    source_line: 937
+    raw_line: 065 0320   65Ge   -56478.2        2.2                                  30.9    s 0.5    3/2-          10          1972
+      B+=100;B+p=0.011 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.02243194759093674
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0003629764982352224
+      mean_lifetime:
+        value: 44.57927676346897
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-65
+    evaluation_entry_id: MAT:0032:NUBASE2020:65:0
+  - A: 66
+    Z: 32
+    N: 34
+    state_index: 0
+    state_label: ground
+    source_label: 66Ge
+    mass_excess:
+      value: -61607
+      unit: keV
+      raw: "-61607.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.26
+      unit: h
+      raw: "2.26"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1950"
+    decay_and_abundance_raw: B+=100
+    source_line: 956
+    raw_line: 066 0320   66Ge   -61607.0        2.4                                   2.26   h 0.05   0+            10          1950 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.30670229228316165
+        unit: 1/h
+        relation: =
+        uncertainty: 0.006785448944317736
+      mean_lifetime:
+        value: 3.260490792409057
+        unit: h
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-66
+    evaluation_entry_id: MAT:0032:NUBASE2020:66:0
+  - A: 67
+    Z: 32
+    N: 35
+    state_index: 0
+    state_label: ground
+    source_label: 67Ge
+    mass_excess:
+      value: -62674
+      unit: keV
+      raw: "-62674"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 18.9
+      unit: m
+      raw: "18.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1950"
+    decay_and_abundance_raw: B+=100
+    source_line: 977
+    raw_line: 067 0320   67Ge   -62674          4                                    18.9    m 0.3    1/2-          05          1950 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.036674453997880704
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0005821341904425508
+      mean_lifetime:
+        value: 27.266936272801406
+        unit: m
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-67
+    evaluation_entry_id: MAT:0032:NUBASE2020:67:0
+  - A: 67
+    Z: 32
+    N: 35
+    state_index: 1
+    state_label: m
+    source_label: 67Ge
+    mass_excess:
+      value: -62656
+      unit: keV
+      raw: "-62656"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 18.2
+      unit: keV
+      raw: "18.20"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 13.7
+      unit: us
+      raw: "13.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.9"
+      uncertainty: 0.9
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2-
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: IT=100
+    source_line: 978
+    raw_line: 067 0321   67Ge m -62656          4          18.20       0.05          13.7   us 0.9    5/2-          05          1978 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.05059468471240477
+        unit: 1/us
+        relation: =
+        uncertainty: 0.003323738411763817
+      mean_lifetime:
+        value: 19.764922060178797
+        unit: us
+        relation: =
+        uncertainty: 1.2984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-67m
+    evaluation_entry_id: MAT:0032:NUBASE2020:67:1
+  - A: 67
+    Z: 32
+    N: 35
+    state_index: 2
+    state_label: n
+    source_label: 67Ge
+    mass_excess:
+      value: -61922
+      unit: keV
+      raw: "-61922"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 751.7
+      unit: keV
+      raw: "751.70"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 109.1
+      unit: ns
+      raw: "109.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3.8"
+      uncertainty: 3.8
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1973"
+    decay_and_abundance_raw: IT=100
+    source_line: 979
+    raw_line: 067 0322   67Ge n -61922          4         751.70       0.06         109.1   ns 3.8    9/2+          05          1973 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006353319711823514
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00022128886255663933
+      mean_lifetime:
+        value: 157.3980289609859
+        unit: ns
+        relation: =
+        uncertainty: 5.482241155378061
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-67n
+    evaluation_entry_id: MAT:0032:NUBASE2020:67:2
+  - A: 68
+    Z: 32
+    N: 36
+    state_index: 0
+    state_label: ground
+    source_label: 68Ge
+    mass_excess:
+      value: -66978.8
+      unit: keV
+      raw: "-66978.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.9"
+      uncertainty: 1.9
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 271.05
+      unit: d
+      raw: "271.05"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1948"
+    decay_and_abundance_raw: EC=100
+    source_line: 997
+    raw_line: 068 0320   68Ge   -66978.8        1.9                                 271.05   d 0.08   0+            12          1948 EC=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0025572668532003145
+        unit: 1/d
+        relation: =
+        uncertainty: 7.547734670947248e-7
+      mean_lifetime:
+        value: 391.04249083295355
+        unit: d
+        relation: =
+        uncertainty: 0.11541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-68
+    evaluation_entry_id: MAT:0032:NUBASE2020:68:0
+  - A: 69
+    Z: 32
+    N: 37
+    state_index: 0
+    state_label: ground
+    source_label: 69Ge
+    mass_excess:
+      value: -67100.7
+      unit: keV
+      raw: "-67100.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 39.05
+      unit: h
+      raw: "39.05"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2-*
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1938"
+    decay_and_abundance_raw: B+=100
+    source_line: 1016
+    raw_line: 069 0320   69Ge   -67100.7        1.3                                  39.05   h 0.10   5/2-*         14          1938 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.017750247901663133
+        unit: 1/h
+        relation: =
+        uncertainty: 0.00004545518028594913
+      mean_lifetime:
+        value: 56.337241346714016
+        unit: h
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-69
+    evaluation_entry_id: MAT:0032:NUBASE2020:69:0
+  - A: 69
+    Z: 32
+    N: 37
+    state_index: 1
+    state_label: m
+    source_label: 69Ge
+    mass_excess:
+      value: -67013.9
+      unit: keV
+      raw: "-67013.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: 86.76
+      unit: keV
+      raw: "86.76"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.1
+      unit: us
+      raw: "5.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: IT=100
+    source_line: 1017
+    raw_line: 069 0321   69Ge m -67013.9        1.3        86.76       0.02           5.1   us 0.2    1/2-          14          1978 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1359112118744991
+        unit: 1/us
+        relation: =
+        uncertainty: 0.005329851446058788
+      mean_lifetime:
+        value: 7.357744708533713
+        unit: us
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-69m
+    evaluation_entry_id: MAT:0032:NUBASE2020:69:1
+  - A: 69
+    Z: 32
+    N: 37
+    state_index: 2
+    state_label: n
+    source_label: 69Ge
+    mass_excess:
+      value: -66702.8
+      unit: keV
+      raw: "-66702.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.3"
+      uncertainty: 1.3
+    excitation_energy:
+      value: 397.94
+      unit: keV
+      raw: "397.94"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.81
+      unit: us
+      raw: "2.81"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: IT=100
+    source_line: 1018
+    raw_line: 069 0322   69Ge n -66702.8        1.3       397.94       0.02           2.81  us 0.05   9/2+          14          1978 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.24667159450531861
+        unit: 1/us
+        relation: =
+        uncertainty: 0.004389174279454068
+      mean_lifetime:
+        value: 4.0539730648979875
+        unit: us
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-69n
+    evaluation_entry_id: MAT:0032:NUBASE2020:69:2
+  - A: 70
+    Z: 32
+    N: 38
+    state_index: 0
+    state_label: ground
+    source_label: 70Ge
+    mass_excess:
+      value: -70562
+      unit: keV
+      raw: "-70562.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1923"
+    decay_and_abundance_raw: IS=20.52 19
+    source_line: 1040
+    raw_line: 070 0320   70Ge   -70562.0        0.8                                 stbl              0+            16          1923
+      IS=20.52 19
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0032:ISO:Ge-70
+    evaluation_entry_id: MAT:0032:NUBASE2020:70:0
+  - A: 71
+    Z: 32
+    N: 39
+    state_index: 0
+    state_label: ground
+    source_label: 71Ge
+    mass_excess:
+      value: -69906.7
+      unit: keV
+      raw: "-69906.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11.43
+      unit: d
+      raw: "11.43"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1941"
+    decay_and_abundance_raw: EC=100
+    source_line: 1057
+    raw_line: 071 0320   71Ge   -69906.7        0.8                                  11.43   d 0.03   1/2-*         10          1941 EC=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06064279794925156
+        unit: 1/d
+        relation: =
+        uncertainty: 0.0001591674486856996
+      mean_lifetime:
+        value: 16.490004317360853
+        unit: d
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-71
+    evaluation_entry_id: MAT:0032:NUBASE2020:71:0
+  - A: 71
+    Z: 32
+    N: 39
+    state_index: 1
+    state_label: m
+    source_label: 71Ge
+    mass_excess:
+      value: -69708.3
+      unit: keV
+      raw: "-69708.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+    excitation_energy:
+      value: 198.354
+      unit: keV
+      raw: "198.354"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.014"
+      uncertainty: 0.014
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 20.41
+      unit: ms
+      raw: "20.41"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.18"
+      uncertainty: 0.18
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1959"
+    decay_and_abundance_raw: IT=100
+    source_line: 1058
+    raw_line: 071 0321   71Ge m -69708.3        0.8       198.354      0.014         20.41  ms 0.18   9/2+          10          1959 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03396115534345641
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0002995104341902084
+      mean_lifetime:
+        value: 29.445405784543745
+        unit: ms
+        relation: =
+        uncertainty: 0.25968510736001343
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-71m
+    evaluation_entry_id: MAT:0032:NUBASE2020:71:1
+  - A: 72
+    Z: 32
+    N: 40
+    state_index: 0
+    state_label: ground
+    source_label: 72Ge
+    mass_excess:
+      value: -72585.91
+      unit: keV
+      raw: "-72585.91"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1923"
+    decay_and_abundance_raw: IS=27.45 15
+    source_line: 1078
+    raw_line: 072 0320   72Ge   -72585.91       0.08                                stbl              0+            10          1923
+      IS=27.45 15
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0032:ISO:Ge-72
+    evaluation_entry_id: MAT:0032:NUBASE2020:72:0
+  - A: 72
+    Z: 32
+    N: 40
+    state_index: 1
+    state_label: m
+    source_label: 72Ge
+    mass_excess:
+      value: -71894.48
+      unit: keV
+      raw: "-71894.48"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+    excitation_energy:
+      value: 691.43
+      unit: keV
+      raw: "691.43"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 444.2
+      unit: ns
+      raw: "444.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1984"
+    decay_and_abundance_raw: IT=100
+    source_line: 1079
+    raw_line: 072 0321   72Ge m -71894.48       0.09      691.43       0.04         444.2   ns 0.8    0+            10          1984 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015604393979287378
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0000028103366014024996
+      mean_lifetime:
+        value: 640.8451371628776
+        unit: ns
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-72m
+    evaluation_entry_id: MAT:0032:NUBASE2020:72:1
+  - A: 73
+    Z: 32
+    N: 41
+    state_index: 0
+    state_label: ground
+    source_label: 73Ge
+    mass_excess:
+      value: -71297.53
+      unit: keV
+      raw: "-71297.53"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 9/2+*
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1933"
+    decay_and_abundance_raw: IS=7.76 8
+    source_line: 1096
+    raw_line: 073 0320   73Ge   -71297.53       0.06                                stbl              9/2+*         19          1933
+      IS=7.76 8
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0032:ISO:Ge-73
+    evaluation_entry_id: MAT:0032:NUBASE2020:73:0
+  - A: 73
+    Z: 32
+    N: 41
+    state_index: 1
+    state_label: m
+    source_label: 73Ge
+    mass_excess:
+      value: -71284.25
+      unit: keV
+      raw: "-71284.25"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_energy:
+      value: 13.2845
+      unit: keV
+      raw: "13.2845"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.0015"
+      uncertainty: 0.0015
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.91
+      unit: us
+      raw: "2.91"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: IT=100
+    source_line: 1097
+    raw_line: 073 0321   73Ge m -71284.25       0.06       13.2845     0.0015         2.91  us 0.03   5/2+          19          1975 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.23819490740891588
+        unit: 1/us
+        relation: =
+        uncertainty: 0.002455617602153772
+      mean_lifetime:
+        value: 4.198242568986884
+        unit: us
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-73m
+    evaluation_entry_id: MAT:0032:NUBASE2020:73:1
+  - A: 73
+    Z: 32
+    N: 41
+    state_index: 2
+    state_label: n
+    source_label: 73Ge
+    mass_excess:
+      value: -71230.8
+      unit: keV
+      raw: "-71230.80"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_energy:
+      value: 66.725
+      unit: keV
+      raw: "66.725"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.009"
+      uncertainty: 0.009
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 499
+      unit: ms
+      raw: "499"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "11"
+      uncertainty: 11
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1957"
+    decay_and_abundance_raw: IT=100
+    source_line: 1098
+    raw_line: 073 0322   73Ge n -71230.80       0.06       66.725      0.009        499     ms 11     1/2-          19          1957 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001389072506132155
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003062083680852446
+      mean_lifetime:
+        value: 719.9048254035928
+        unit: ms
+        relation: =
+        uncertainty: 15.869645449778599
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-73n
+    evaluation_entry_id: MAT:0032:NUBASE2020:73:2
+  - A: 74
+    Z: 32
+    N: 42
+    state_index: 0
+    state_label: ground
+    source_label: 74Ge
+    mass_excess:
+      value: -73422.451
+      unit: keV
+      raw: "-73422.451"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.013"
+      uncertainty: 0.013
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1923"
+    decay_and_abundance_raw: IS=36.52 12
+    source_line: 1118
+    raw_line: 074 0320   74Ge   -73422.451      0.013                               stbl              0+            06          1923
+      IS=36.52 12
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0032:ISO:Ge-74
+    evaluation_entry_id: MAT:0032:NUBASE2020:74:0
+  - A: 75
+    Z: 32
+    N: 43
+    state_index: 0
+    state_label: ground
+    source_label: 75Ge
+    mass_excess:
+      value: -71856.97
+      unit: keV
+      raw: "-71856.97"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 82.78
+      unit: m
+      raw: "82.78"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-*
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B-=100
+    source_line: 1135
+    raw_line: 075 0320   75Ge   -71856.97       0.05                                 82.78   m 0.04   1/2-*         13          1939 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.008373365312393638
+        unit: 1/m
+        relation: =
+        uncertainty: 0.000004046081329980013
+      mean_lifetime:
+        value: 119.4262954847884
+        unit: m
+        relation: =
+        uncertainty: 0.05770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-75
+    evaluation_entry_id: MAT:0032:NUBASE2020:75:0
+  - A: 75
+    Z: 32
+    N: 43
+    state_index: 1
+    state_label: m
+    source_label: 75Ge
+    mass_excess:
+      value: -71717.28
+      unit: keV
+      raw: "-71717.28"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_energy:
+      value: 139.69
+      unit: keV
+      raw: "139.69"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 47.7
+      unit: s
+      raw: "47.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1952"
+    decay_and_abundance_raw: IT~100;B-=0.030 6
+    source_line: 1136
+    raw_line: 075 0321   75Ge m -71717.28       0.06      139.69       0.03          47.7    s 0.5    7/2+          13          1952
+      IT~100;B-=0.030 6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.014531387433122541
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00015232062298870588
+      mean_lifetime:
+        value: 68.81655345040356
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-75m
+    evaluation_entry_id: MAT:0032:NUBASE2020:75:1
+  - A: 75
+    Z: 32
+    N: 43
+    state_index: 2
+    state_label: n
+    source_label: 75Ge
+    mass_excess:
+      value: -71664.78
+      unit: keV
+      raw: "-71664.78"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+    excitation_energy:
+      value: 192.19
+      unit: keV
+      raw: "192.19"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 216
+      unit: ns
+      raw: "216"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: IT=100
+    source_line: 1137
+    raw_line: 075 0322   75Ge n -71664.78       0.08      192.19       0.06         216     ns 5      5/2+          13          1982 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0032090147248145617
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00007428274825959632
+      mean_lifetime:
+        value: 311.62212883201613
+        unit: ns
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-75n
+    evaluation_entry_id: MAT:0032:NUBASE2020:75:2
+  - A: 76
+    Z: 32
+    N: 44
+    state_index: 0
+    state_label: ground
+    source_label: 76Ge
+    mass_excess:
+      value: -73212.898
+      unit: keV
+      raw: "-73212.898"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.018"
+      uncertainty: 0.018
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.88
+      unit: Zy
+      raw: "1.88"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1933"
+    decay_and_abundance_raw: IS=7.75 12;2B-=100
+    source_line: 1156
+    raw_line: 076 0320   76Ge   -73212.898      0.018                                 1.88  Zy 0.08   0+            95          1933
+      IS=7.75 12;2B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.36869530880848156
+        unit: 1/Zy
+        relation: =
+        uncertainty: 0.015689162076956663
+      mean_lifetime:
+        value: 2.712266676871251
+        unit: Zy
+        relation: =
+        uncertainty: 0.11541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-76
+    evaluation_entry_id: MAT:0032:NUBASE2020:76:0
+  - A: 77
+    Z: 32
+    N: 45
+    state_index: 0
+    state_label: ground
+    source_label: 77Ge
+    mass_excess:
+      value: -71212.87
+      unit: keV
+      raw: "-71212.87"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11.211
+      unit: h
+      raw: "11.211"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.003"
+      uncertainty: 0.003
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B-=100
+    source_line: 1173
+    raw_line: 077 0320   77Ge   -71212.87       0.05                                 11.211  h 0.003  7/2+          20          1939 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06182741776469051
+        unit: 1/h
+        relation: =
+        uncertainty: 0.000016544666246906744
+      mean_lifetime:
+        value: 16.17405410340617
+        unit: h
+        relation: =
+        uncertainty: 0.00432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-77
+    evaluation_entry_id: MAT:0032:NUBASE2020:77:0
+  - A: 77
+    Z: 32
+    N: 45
+    state_index: 1
+    state_label: m
+    source_label: 77Ge
+    mass_excess:
+      value: -71053.16
+      unit: keV
+      raw: "-71053.16"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.08"
+      uncertainty: 0.08
+    excitation_energy:
+      value: 159.71
+      unit: keV
+      raw: "159.71"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 53.7
+      unit: s
+      raw: "53.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.6"
+      uncertainty: 0.6
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2-
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1947"
+    decay_and_abundance_raw: B-=81 2;IT=19 2
+    source_line: 1174
+    raw_line: 077 0321   77Ge m -71053.16       0.08      159.71       0.06          53.7    s 0.6    1/2-          20          1947
+      B-=81 2;IT=19 2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012907768725511085
+        unit: 1/s
+        relation: =
+        uncertainty: 0.000144220879614649
+      mean_lifetime:
+        value: 77.47272369573734
+        unit: s
+        relation: =
+        uncertainty: 0.8656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-77m
+    evaluation_entry_id: MAT:0032:NUBASE2020:77:1
+  - A: 78
+    Z: 32
+    N: 46
+    state_index: 0
+    state_label: ground
+    source_label: 78Ge
+    mass_excess:
+      value: -71862
+      unit: keV
+      raw: "-71862"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 88
+      unit: m
+      raw: "88.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1953"
+    decay_and_abundance_raw: B-=100
+    source_line: 1194
+    raw_line: 078 0320   78Ge   -71862          4                                    88.0    m 1.0    0+            09          1953 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007876672506363015
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00008950764211776153
+      mean_lifetime:
+        value: 126.95716359822879
+        unit: m
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-78
+    evaluation_entry_id: MAT:0032:NUBASE2020:78:0
+  - A: 79
+    Z: 32
+    N: 47
+    state_index: 0
+    state_label: ground
+    source_label: 79Ge
+    mass_excess:
+      value: -69530
+      unit: keV
+      raw: "-69530"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 18.98
+      unit: s
+      raw: "18.98"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2)-
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1970"
+    decay_and_abundance_raw: B-=100
+    source_line: 1212
+    raw_line: 079 0320   79Ge   -69530         40                                    18.98   s 0.03   (1/2)-        16          1970 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03651987252686751
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00005772371843024369
+      mean_lifetime:
+        value: 27.382351876072526
+        unit: s
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-79
+    evaluation_entry_id: MAT:0032:NUBASE2020:79:0
+  - A: 79
+    Z: 32
+    N: 47
+    state_index: 1
+    state_label: m
+    source_label: 79Ge
+    mass_excess:
+      value: -69340
+      unit: keV
+      raw: "-69340"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 185.95
+      unit: keV
+      raw: "185.95"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 39
+      unit: s
+      raw: "39.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2+#
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1970"
+    decay_and_abundance_raw: B-=96 1;IT=4 1
+    source_line: 1213
+    raw_line: 079 0321   79Ge m -69340         40         185.95       0.04          39.0    s 1.0    7/2+#         16          1970
+      B-=96 1;IT=4 1
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.017773004629742187
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00045571806742928685
+      mean_lifetime:
+        value: 56.265106594669575
+        unit: s
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-79m
+    evaluation_entry_id: MAT:0032:NUBASE2020:79:1
+  - A: 80
+    Z: 32
+    N: 48
+    state_index: 0
+    state_label: ground
+    source_label: 80Ge
+    mass_excess:
+      value: -69535.3
+      unit: keV
+      raw: "-69535.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.1"
+      uncertainty: 2.1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 29.5
+      unit: s
+      raw: "29.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B-=100
+    source_line: 1232
+    raw_line: 080 0320   80Ge   -69535.3        2.1                                  29.5    s 0.4    0+            05          1972 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.02349651459525238
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0003185968080712188
+      mean_lifetime:
+        value: 42.55950370622442
+        unit: s
+        relation: =
+        uncertainty: 0.5770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-80
+    evaluation_entry_id: MAT:0032:NUBASE2020:80:0
+  - A: 81
+    Z: 32
+    N: 49
+    state_index: 0
+    state_label: ground
+    source_label: 81Ge
+    mass_excess:
+      value: -66291.7
+      unit: keV
+      raw: "-66291.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.1"
+      uncertainty: 2.1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 9
+      unit: s
+      raw: "9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B-=100
+    source_line: 1250
+    raw_line: 081 0320   81Ge   -66291.7        2.1                                   9      s 2      9/2+#         08          1972 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.07701635339554948
+        unit: 1/s
+        relation: =
+        uncertainty: 0.017114745199010996
+      mean_lifetime:
+        value: 12.984255368000671
+        unit: s
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-81
+    evaluation_entry_id: MAT:0032:NUBASE2020:81:0
+  - A: 81
+    Z: 32
+    N: 49
+    state_index: 1
+    state_label: m
+    source_label: 81Ge
+    mass_excess:
+      value: -65612.6
+      unit: keV
+      raw: "-65612.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.1"
+      uncertainty: 2.1
+    excitation_energy:
+      value: 679.14
+      unit: keV
+      raw: "679.14"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.04"
+      uncertainty: 0.04
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6
+      unit: s
+      raw: "6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2+)
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1981"
+    decay_and_abundance_raw: B-~100;IT<1
+    source_line: 1251
+    raw_line: 081 0321   81Ge m -65612.6        2.1       679.14       0.04           6      s 2      (1/2+)        08          1981
+      B-~100;IT<1
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.11552453009332421
+        unit: 1/s
+        relation: =
+        uncertainty: 0.03850817669777474
+      mean_lifetime:
+        value: 8.656170245333781
+        unit: s
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-81m
+    evaluation_entry_id: MAT:0032:NUBASE2020:81:1
+  - A: 82
+    Z: 32
+    N: 50
+    state_index: 0
+    state_label: ground
+    source_label: 82Ge
+    mass_excess:
+      value: -65415.1
+      unit: keV
+      raw: "-65415.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.2"
+      uncertainty: 2.2
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.31
+      unit: s
+      raw: "4.31"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.19"
+      uncertainty: 0.19
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B-=100
+    source_line: 1273
+    raw_line: 082 0320   82Ge   -65415.1        2.2                                   4.31   s 0.19   0+            19          1972 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1608230117308458
+        unit: 1/s
+        relation: =
+        uncertainty: 0.007089645528737982
+      mean_lifetime:
+        value: 6.218015626231432
+        unit: s
+        relation: =
+        uncertainty: 0.2741120577689031
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-82
+    evaluation_entry_id: MAT:0032:NUBASE2020:82:0
+  - A: 83
+    Z: 32
+    N: 51
+    state_index: 0
+    state_label: ground
+    source_label: 83Ge
+    mass_excess:
+      value: -60976.4
+      unit: keV
+      raw: "-60976.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.4"
+      uncertainty: 2.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.85
+      unit: s
+      raw: "1.85"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: (5/2+)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 1293
+    raw_line: 083 0320   83Ge   -60976.4        2.4                                   1.85   s 0.06   (5/2+)        15          1972
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.37467415165402446
+        unit: 1/s
+        relation: =
+        uncertainty: 0.012151594107698088
+      mean_lifetime:
+        value: 2.6689858256445826
+        unit: s
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-83
+    evaluation_entry_id: MAT:0032:NUBASE2020:83:0
+  - A: 84
+    Z: 32
+    N: 52
+    state_index: 0
+    state_label: ground
+    source_label: 84Ge
+    mass_excess:
+      value: -58148
+      unit: keV
+      raw: "-58148"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 951
+      unit: ms
+      raw: "951"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "9"
+      uncertainty: 9
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1972"
+    decay_and_abundance_raw: B-=100;B-n=10.6 6
+    source_line: 1318
+    raw_line: 084 0320   84Ge   -58148          3                                   951     ms 9      0+            09          1972
+      B-=100;B-n=10.6 6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0007288613886014146
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000006897741847962915
+      mean_lifetime:
+        value: 1372.0029838854043
+        unit: ms
+        relation: =
+        uncertainty: 12.984255368000671
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-84
+    evaluation_entry_id: MAT:0032:NUBASE2020:84:0
+  - A: 85
+    Z: 32
+    N: 53
+    state_index: 0
+    state_label: ground
+    source_label: 85Ge
+    mass_excess:
+      value: -53123
+      unit: keV
+      raw: "-53123"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 495
+      unit: ms
+      raw: "495"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: (3/2+,5/2+)#
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1991"
+    decay_and_abundance_raw: B-=100;B-n=17.2 18;B-2n ?
+    source_line: 1341
+    raw_line: 085 0320   85Ge   -53123          4                                   495     ms 5      (3/2+,5/2+)#  14          1991
+      B-=100;B-n=17.2 18;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001400297334464536
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000014144417519843797
+      mean_lifetime:
+        value: 714.1340452400369
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-85
+    evaluation_entry_id: MAT:0032:NUBASE2020:85:0
+  - A: 86
+    Z: 32
+    N: 54
+    state_index: 0
+    state_label: ground
+    source_label: 86Ge
+    mass_excess:
+      value: -49400
+      unit: keV
+      raw: "-49400"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "440"
+      uncertainty: 440
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 221.6
+      unit: ms
+      raw: "221.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "11"
+      uncertainty: 11
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: B-=100;B-n=45 15
+    source_line: 1365
+    raw_line: 086 0320   86Ge   -49400        440                                   221.6   ms 11     0+            15          1994
+      B-=100;B-n=45 15
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00312792048989145
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0001552668113213265
+      mean_lifetime:
+        value: 319.70122106099427
+        unit: ms
+        relation: =
+        uncertainty: 15.869645449778599
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-86
+    evaluation_entry_id: MAT:0032:NUBASE2020:86:0
+  - A: 87
+    Z: 32
+    N: 55
+    state_index: 0
+    state_label: ground
+    source_label: 87Ge
+    mass_excess:
+      value: -43590
+      unit: keV
+      raw: -43590#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 103
+      unit: ms
+      raw: "103"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 1386
+    raw_line: 087 0320   87Ge   -43590#       300#                                  103     ms 4      5/2+#         15          1997
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.006729584277281022
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0002613430787293601
+      mean_lifetime:
+        value: 148.59758921156325
+        unit: ms
+        relation: =
+        uncertainty: 5.7707801635558535
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-87
+    evaluation_entry_id: MAT:0032:NUBASE2020:87:0
+  - A: 88
+    Z: 32
+    N: 56
+    state_index: 0
+    state_label: ground
+    source_label: 88Ge
+    mass_excess:
+      value: -39520
+      unit: keV
+      raw: -39520#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 61
+      unit: ms
+      raw: "61"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 1406
+    raw_line: 088 0320   88Ge   -39520#       400#                                   61     ms 6      0+            14          1997
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.011363068533769595
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0011176788721740584
+      mean_lifetime:
+        value: 88.00439749422677
+        unit: ms
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-88
+    evaluation_entry_id: MAT:0032:NUBASE2020:88:0
+  - A: 89
+    Z: 32
+    N: 57
+    state_index: 0
+    state_label: ground
+    source_label: 89Ge
+    mass_excess:
+      value: -33040
+      unit: keV
+      raw: -33040#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 60
+      unit: ms
+      raw: 60#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">300ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+#
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 1428
+    raw_line: 089 0320   89Ge   -33040#       400#                                   60#    ms >300ns 3/2+#         13          1997
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.011552453009332421
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 86.5617024533378
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-89
+    evaluation_entry_id: MAT:0032:NUBASE2020:89:0
+  - A: 90
+    Z: 32
+    N: 58
+    state_index: 0
+    state_label: ground
+    source_label: 90Ge
+    mass_excess:
+      value: -28470
+      unit: keV
+      raw: -28470#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 30
+      unit: ms
+      raw: 30#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">400ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "2010"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 1447
+    raw_line: 090 0320   90Ge   -28470#       500#                                   30#    ms >400ns 0+            20          2010
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.023104906018664842
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 43.2808512266689
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0032:ISO:Ge-90
+    evaluation_entry_id: MAT:0032:NUBASE2020:90:0

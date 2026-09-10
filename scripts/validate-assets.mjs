@@ -19,7 +19,7 @@ const sched = [
   { re: /table-manifest/i, schema: "data/schema/1.0.0/mat-table-manifest.schema.json", kind: "table" },
   { re: /graph-manifest/i, schema: "data/schema/1.0.0/mat-graph-manifest.schema.json", kind: "graph" },
 ];
-const DONE = /^(GENERATED|COMPLETE|CORE-COMPLETE|ARCHITECTURE-COMPLETE)$/;
+const DONE = /^(EXISTS|GENERATED|COMPLETE|CORE-COMPLETE|ARCHITECTURE-COMPLETE)$/;
 const PENDING = /(REQUIRED|PENDING|NOT-GENERATED|NOT-YET|EXTRACTION)/;
 
 for (const { re, schema, kind } of sched) {

@@ -1,0 +1,67 @@
+registry_id: MAT:0012:REG:STELLAR-NUCLEAR
+record_id: MAT:0012
+relationships:
+  - relationship_id: MAT:0012:REL:1000
+    source:
+      - MAT:0010:ISO:Ne-20
+      - alpha
+    type: ALPHA-CAPTURE
+    target: MAT:0012:ISO:Mg-24
+    reaction: 20Ne(alpha,gamma)24Mg
+    environment: STELLAR
+    legacy_relationship_ids:
+      - MAT:0012:REL:NUC:001
+  - relationship_id: MAT:0012:REL:1001
+    source:
+      - MAT:0010:ISO:Ne-22
+      - alpha
+    type: STELLAR-NEUTRON-SOURCE
+    target: MAT:0012:ISO:Mg-25
+    coproduct: neutron
+    reaction: 22Ne(alpha,n)25Mg
+    astrophysical_role:
+      - main_s_process_branch
+      - weak_s_process
+    legacy_relationship_ids:
+      - MAT:0012:REL:NUC:002
+  - relationship_id: MAT:0012:REL:1002
+    source:
+      - MAT:0010:ISO:Ne-22
+      - alpha
+    type: COMPETING-ALPHA-CAPTURE
+    target: MAT:0012:ISO:Mg-26
+    reaction: 22Ne(alpha,gamma)26Mg
+    legacy_relationship_ids:
+      - MAT:0012:REL:NUC:003
+  - relationship_id: MAT:0012:REL:1003
+    source: MAT:0013:ISO:Al-26
+    type: DECAYS-TO
+    target: MAT:0012:ISO:Mg-26
+    target_status: RESERVED-PENDING-ALUMINIUM
+    significance:
+      - early_solar_system_chronometer
+      - extinct_radionuclide_system
+    legacy_relationship_ids:
+      - MAT:0012:REL:NUC:004
+  - relationship_id: MAT:0012:REL:1004
+    source: MAT:0012:ISO:Mg-24
+    type: ALPHA-CAPTURE
+    target: MAT:0014:ISO:Si-28
+    target_status: RESERVED-PENDING-SILICON
+    reaction: 24Mg(alpha,gamma)28Si
+    legacy_relationship_ids:
+      - MAT:0012:REL:NUC:005
+rules:
+  stellar_reaction_equals_ordinary_chemistry: false
+  reaction_rate_is_universal_constant: false
+  stellar_rate_requires_temperature_and_cross_section: true
+  alpha_n_and_alpha_gamma_channels_compete: true
+source_id: SRC-000267
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1886
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

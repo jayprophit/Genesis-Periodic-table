@@ -1,0 +1,105 @@
+registry_id: MAT:0011:REG:ATOMIC-SPECTROSCOPY
+record_id: MAT:0011
+version: 1.0.0
+wavelength_convention:
+  source: NIST-ASD
+  vacuum_below_nm: 200
+  air_between_nm:
+    minimum: 200
+    maximum: 2000
+  vacuum_above_nm: 2000
+Na_I:
+  ground:
+    configuration: 2p6 3s
+    term: 2S
+    J: 1/2
+    energy_cm1: 0
+  resonance_doublet:
+    D2:
+      wavelength:
+        value: 588.995095
+        uncertainty: 0.000003
+        unit: nm
+        medium: STANDARD-AIR
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°3/2
+      upper_energy:
+        value: 16973.36619
+        unit: cm-1
+      Einstein_A:
+        value: 61600000
+        unit: s^-1
+    D1:
+      wavelength:
+        value: 589.592424
+        uncertainty: 0.000003
+        unit: nm
+        medium: STANDARD-AIR
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°1/2
+      upper_energy:
+        value: 16956.17025
+        unit: cm-1
+      Einstein_A:
+        value: 61400000
+        unit: s^-1
+  selected_secondary_lines_nm:
+    - 568.26333
+    - 568.81934
+    - 568.82046
+    - 615.42253
+    - 616.0747
+Na_II:
+  electronic_family: NEON-LIKE-ION
+  selected_optical_lines:
+    - wavelength:
+        value: 437.5215
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 438.4194
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 438.7489
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 439.2814
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 439.6317
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 444.6695
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 445.4736
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 541.4546
+        unit: nm
+        medium: STANDARD-AIR
+  complete_NIST_line_count_in_current_query:
+    value: 259
+rules:
+  Na_I_equals_Na_II_spectrum: false
+  Na_I_equals_Na23_NMR: false
+  D_line_equals_one_transition: false
+  flame_colour_equals_bulk_ground_state_colour: false
+  universal_sodium_frequency: false
+source_id: SRC-000235
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/43.txt
+  source_sha256: 6deabebe37c282ee5246e846496c422a8c636df500ffef3897be41d691815347
+  source_line: 5
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

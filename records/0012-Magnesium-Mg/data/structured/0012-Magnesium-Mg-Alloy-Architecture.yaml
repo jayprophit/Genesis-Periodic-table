@@ -1,0 +1,56 @@
+registry_id: MAT:0012:REG:ALLOYS
+record_id: MAT:0012
+families:
+  Mg_Al:
+    parents:
+      - MAT:0012
+      - MAT:0013
+    aluminium_status: RESERVED-PENDING-ALUMINIUM
+    functions:
+      - castability
+      - solid_solution_strengthening
+      - precipitation_strengthening
+      - lightweight_structures
+  Mg_Zn:
+    parents:
+      - MAT:0012
+      - MAT:0030
+    zinc_status: RESERVED-PENDING-ZINC
+    functions:
+      - strengthening
+      - precipitation_control
+  Mg_Mn:
+    parent_Mn: MAT:0025
+    functions:
+      - impurity_control
+      - corrosion_response
+  Mg_Si:
+    parent_Si: MAT:0014
+    silicon_status: RESERVED-PENDING-SILICON
+  Mg_RE:
+    rare_earth_additions:
+      functions:
+        - texture_modification
+        - creep_resistance
+        - high_temperature_strength
+        - non_basal_slip_activation
+material_state_variables:
+  - composition
+  - phase_fraction
+  - precipitate_size
+  - precipitate_distribution
+  - grain_size
+  - texture
+  - heat_treatment
+  - deformation_history
+  - corrosion_environment
+rule:
+  alloy_property_equals_weighted_parent_average: false
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1033
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

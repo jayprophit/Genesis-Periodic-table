@@ -1,6 +1,7 @@
 // Checks MAT identifier integrity: uniqueness of definitions, malformed
 // IDs, record ownership of child IDs. Run: npm run validate:ids
 import { R, walkFiles, recordDirs, issue, warn, summary, MAT_ID_OR_PARENT, RESERVED } from "./lib.mjs";
+import {matIdentifiers,childReferenceStatus} from './identifier-references.mjs';
 
 let failed = 0;
 const defined = new Map(); // id -> file
@@ -19,17 +20,18 @@ function define(id, file, kind) {
 const knownParents = new Set(recordDirs().map((d) => "MAT:" + d.slice(0, 4)));
 
 const files = [...walkFiles("records", (f) => /\.(md|yaml)$/.test(f)), ...walkFiles("docs", (f) => f.endsWith(".md")), ...walkFiles("data", (f) => f.endsWith(".yaml"))];
+const owned=new Set();
+for(const f of files){const owner=f.match(/^records\/(\d{4})-/)?.[1];if(!owner)continue;for(const {id}of matIdentifiers(R(f)))if(id.startsWith('MAT:'+owner+':'))owned.add(id);}
 for (const f of files) {
   let src;
   try { src = R(f); } catch { continue; }
   const rec = "MAT:" + ((f.match(/records\/(\d{4})-/) || [])[1] || "");
-  for (const m of src.matchAll(/MAT:([0-9]{4}(?::[A-Z0-9:+-]+)?)/g)) {
-    let id = "MAT:" + m[1].replace(/:+$/, "");
+  for (const {id} of matIdentifiers(src)) {
     if (id.includes(RESERVED)) continue;
     if (!MAT_ID_OR_PARENT.test(id)) { issue(f, rec || null, id, "malformed MAT identifier", "form MAT:NNNN or MAT:NNNN:NS:child"); failed++; continue; }
-    const parent = "MAT:" + m[1].slice(0, 4);
+    const parent = id.slice(0,8);
     if (!knownParents.has(parent)) {
-      const n = parseInt(m[1].slice(0, 4), 10);
+      const n = parseInt(id.slice(4,8), 10);
       if (n >= 0 && n <= 118) warn(f, rec || null, id, `forward reference to unpublished record ${parent}`, "mark RESERVED-PENDING-RECORD or publish the record");
       else { issue(f, rec || null, id, `references out-of-range record ${parent}`, "record numbers run 0000-0118"); failed++; }
       continue;
@@ -38,7 +40,7 @@ for (const f of files) {
     if (inRec && !id.startsWith(rec) && !["MAT:0000", "MAT:REG"].some((p) => id.startsWith(p))) {
       // cross-record references are legal (relationships); only flag children claimed by wrong record
       const childNs = id.match(/^MAT:\d{4}:([A-Z]+)/)?.[1];
-      if (childNs && !["REL"].includes(childNs)) warn(f, rec, id, "child ID owned by another record used here", "verify cross-record usage is intentional");
+      if (childNs && !["REL"].includes(childNs) && childReferenceStatus(id,rec,owned)==='UNRESOLVED-CHILD-REFERENCE') warn(f, rec, id, "child reference is not documented in its owning record", "define or explicitly resolve the target; cross-record references with documented targets are legal");
     }
   }
   // mat_id is canonically defined once (main record chapter); structured

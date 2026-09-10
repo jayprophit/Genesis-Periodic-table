@@ -7,14 +7,15 @@
 > directly under `records/NNNN-Name-Symbol/`.
 >
 > - **Read the MAT Codex** — `book/index.html` (offline-capable, printable edition in `dist/`).
-> - **Explore the Material Atlas Table** — records `0000`–`0009` under `records/`.
+> - **Explore the Material Atlas Table** — Origin State `0000` and all 118 element records `0001`–`0118` under `records/`.
 > - **Machine-readable data** — canonical YAML under each record's `data/` plus the global registry `data/registries/sources.yaml`.
 > - **Scientific methodology** — `docs/03-methodology/`.
 > - **Schemas** — versioned contracts in `data/schema/1.0.0/`.
 > - **Contributing / authoring** — `docs/06-governance/` and `templates/`.
 > - **Build and validate locally** — `npm ci`, `npm run validate`, `npm run build:book`, `npm test`.
 > - **Project status** — `CHANGELOG.md` (Pending section is the honest backlog).
-- **Release readiness** — `docs/09-production/01-Release-Readiness-Checklist.md`.
+> - **Release readiness** — `docs/09-production/01-Release-Readiness-Checklist.md`.
+> - **Measured local verification** — `docs/09-production/03-Local-Verification.md` and `data/quality/benchmark.json`.
 >
 > Three layers, three authorities:
 >

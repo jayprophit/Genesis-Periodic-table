@@ -1770,3 +1770,7 @@ visuals:
 The F₂ molecular layer is consistent with the NIST diatomic compilation: the ground state is \(X\,^1\Sigma_g^+\); the legacy values \(r_e\approx1.412\) Å, \(\omega_e\approx916.93\ {\rm cm^{-1}}\), and \(B_e\approx0.8893\ {\rm cm^{-1}}\) are appropriate reference constants. The RSC compilation also supports the useful comparison **F–F ≈155, C–F ≈485 and H–F ≈565 kJ/mol**, plus Pauling electronegativity **3.98**. ([NIST WebBook][2])
 
 RSC gives elemental F₂ melting at **53.48 K** and boiling at **85.04 K**. It also credits Henri Moissan with successful isolation in **1886**, following failed attempts by Davy, Gore and others; this will become important in the later People & Intellectual Lineage file. ([Periodic Table][3])
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0009-Fluorine-F-Nuclear-Evaluation.md) provides 25 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

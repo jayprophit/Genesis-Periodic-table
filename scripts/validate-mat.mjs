@@ -2,6 +2,7 @@
 import { spawnSync } from "node:child_process";
 
 const suites = [
+  "scripts/validate-elements.mjs",
   "scripts/validate-records.mjs",
   "scripts/validate-sources.mjs",
   "scripts/validate-relationships.mjs",

@@ -1,0 +1,2106 @@
+The Sodium nuclear pass now has one important correction to the earlier `G0011`/first MAT batch: **²⁴Na should no longer use 14.997 h as the current working half-life**. NUBASE2020 gives **14.9560(15) h**, while DDEP recommends **14.9581(20) h**; `14.997(12) h` is retained only as an older evaluation in the provenance layer. ²²Na is likewise tightened to **2.6019(6) y** in NUBASE2020.  NIST's current mass table covers ¹⁸Na–³⁷Na and marks ³³Na–³⁷Na as extrapolated/estimated masses.
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-18-Sodium-18.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-18"
+parent_id: "MAT:0011"
+
+nucleus:
+  protons: 11
+  neutrons: 7
+  mass_number: 18
+  spin_parity: "1-#"
+
+relative_atomic_mass:
+  value: 18.02688
+  uncertainty: 0.00012
+  unit: "u"
+
+stability:
+  status: "EXTREMELY-SHORT-LIVED-PROTON-RICH-STATE"
+
+half_life:
+  value: 1.3
+  uncertainty: 0.4
+  unit: "zs"
+
+particle_decay:
+  proton_emission:
+    status: "INDICATED / INCOMPLETELY-EVALUATED"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-19-Sodium-19.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-19"
+
+nucleus:
+  protons: 11
+  neutrons: 8
+  mass_number: 19
+  spin_parity: "(5/2+)"
+
+relative_atomic_mass:
+  value: 19.013880
+  uncertainty: 0.000011
+  unit: "u"
+
+stability:
+  status: "PROTON-UNBOUND"
+
+lifetime:
+  relation: "GREATER-THAN"
+  value: 1
+  unit: "as"
+
+decay:
+  principal_mode: "PROTON-EMISSION"
+  probability_percent: 100
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-20-Sodium-20.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-20"
+
+nucleus:
+  protons: 11
+  neutrons: 9
+  mass_number: 20
+  spin_parity: "2+"
+
+relative_atomic_mass:
+  value: 20.0073544
+  uncertainty: 0.0000012
+  unit: "u"
+
+stability:
+  status: "RADIOACTIVE"
+
+half_life:
+  value: 447.9
+  uncertainty: 2.3
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_alpha_percent:
+    value: 25.0
+    uncertainty: 0.4
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-21-Sodium-21.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-21"
+
+nucleus:
+  protons: 11
+  neutrons: 10
+  mass_number: 21
+  spin_parity: "3/2+"
+
+relative_atomic_mass:
+  value: 20.99765469
+  uncertainty: 0.00000030
+  unit: "u"
+
+stability:
+  status: "RADIOACTIVE"
+
+half_life:
+  value: 22.4550
+  uncertainty: 0.0054
+  unit: "s"
+
+decay:
+  principal_mode: "BETA-PLUS"
+  probability_percent: 100
+
+daughter:
+  id: "MAT:0010:ISO:Ne-21"
+  status: "RESOLVED"
+
+calculation_id: "MAT:0011:CALC:001"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-22-Sodium-22.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-22"
+
+nucleus:
+  protons: 11
+  neutrons: 11
+  mass_number: 22
+  spin_parity: "3+"
+
+relative_atomic_mass:
+  value: 21.99443741
+  uncertainty: 0.00000018
+  unit: "u"
+
+stability:
+  status: "RADIOACTIVE"
+
+half_life:
+  NUBASE2020:
+    value: 2.6019
+    uncertainty: 0.0006
+    unit: "y"
+
+decay:
+
+  positron:
+    probability_percent: 90.57
+    uncertainty: 0.08
+
+  electron_capture:
+    probability_percent: 9.43
+    uncertainty: 0.06
+
+daughter:
+  id: "MAT:0010:ISO:Ne-22"
+  status: "RESOLVED"
+
+principal_gamma:
+  energy:
+    value: 1274.537
+    unit: "keV"
+
+applications:
+  - calibration
+  - positron_source_research
+  - nuclear_metrology
+  - tracer_research
+
+calculation_id: "MAT:0011:CALC:002"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+  - "SRC-000224"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-23-Sodium-23.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-23"
+
+nucleus:
+  protons: 11
+  neutrons: 12
+  mass_number: 23
+  spin_parity: "3/2+"
+
+relative_atomic_mass:
+  value: 22.9897692820
+  uncertainty: 0.0000000019
+  unit: "u"
+
+isotopic_composition:
+  value: 1
+
+stability:
+  status: "STABLE"
+  half_life: "NOT-APPLICABLE"
+
+nuclear_spin:
+  value: "3/2"
+
+NMR_active: true
+quadrupolar_nucleus: true
+
+activation_child:
+  reaction: "23Na(n,gamma)24Na"
+  target: "MAT:0011:ISO:Na-24"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+  - "SRC-000225"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-24-Sodium-24.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-24"
+
+nucleus:
+  protons: 11
+  neutrons: 13
+  mass_number: 24
+  spin_parity: "4+"
+
+relative_atomic_mass:
+  value: 23.990962950
+  uncertainty: 0.000000038
+  unit: "u"
+
+stability:
+  status: "RADIOACTIVE"
+
+half_life:
+
+  MAT_nuclear_evaluation:
+    value: 14.9560
+    uncertainty: 0.0015
+    unit: "h"
+    source_id: "SRC-000223"
+
+  DDEP_decay_metrology:
+    value: 14.9581
+    uncertainty: 0.0020
+    unit: "h"
+    source_id: "SRC-000224"
+
+  historical_older_evaluation:
+    value: 14.997
+    uncertainty: 0.012
+    unit: "h"
+    status: "SUPERSEDED-HISTORICAL"
+
+decay:
+  principal_mode: "BETA-MINUS"
+  probability_percent: 100
+
+daughter:
+  id: "MAT:0012:ISO:Mg-24"
+  status: "RESERVED-PENDING-MAGNESIUM"
+
+principal_gamma_lines:
+
+  - energy:
+      value: 1368.630
+      uncertainty: 0.005
+      unit: "keV"
+
+    emission_probability_percent:
+      approximate_value: 99.9934
+
+  - energy:
+      value: 2754.049
+      uncertainty: 0.013
+      unit: "keV"
+
+    emission_probability_percent:
+      approximate_value: 99.863
+
+isomer:
+
+  id: "MAT:0011:ISO:Na-24m"
+
+  excitation_energy:
+    value: 472.2074
+    uncertainty: 0.0008
+    unit: "keV"
+
+  spin_parity: "1+"
+
+  half_life:
+    value: 20.18
+    uncertainty: 0.10
+    unit: "ms"
+
+  decay:
+    internal_transition: "APPROXIMATELY-100-PERCENT"
+
+calculation_id: "MAT:0011:CALC:003"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+  - "SRC-000224"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-25-Sodium-25.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-25"
+
+nucleus:
+  protons: 11
+  neutrons: 14
+  mass_number: 25
+  spin_parity: "5/2+"
+
+relative_atomic_mass:
+  value: 24.9899540
+  uncertainty: 0.0000013
+  unit: "u"
+
+half_life:
+  value: 59.1
+  uncertainty: 0.6
+  unit: "s"
+
+decay:
+  principal_mode: "BETA-MINUS"
+  probability_percent: 100
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-26-Sodium-26.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-26"
+
+nucleus:
+  protons: 11
+  neutrons: 15
+  mass_number: 26
+  spin_parity: "3+"
+
+relative_atomic_mass:
+  value: 25.9926346
+  uncertainty: 0.0000038
+  unit: "u"
+
+half_life:
+  value: 1071.28
+  uncertainty: 0.25
+  unit: "ms"
+
+decay:
+  principal_mode: "BETA-MINUS"
+  probability_percent: 100
+
+isomer:
+
+  id: "MAT:0011:ISO:Na-26m"
+
+  excitation_energy:
+    value: 82.4
+    uncertainty: 0.04
+    unit: "keV"
+
+  spin_parity: "1+"
+
+  half_life:
+    value: 4.35
+    uncertainty: 0.16
+    unit: "us"
+
+  decay:
+    internal_transition_percent: 100
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-27-Sodium-27.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-27"
+
+nucleus:
+  protons: 11
+  neutrons: 16
+  mass_number: 27
+  spin_parity: "5/2+"
+
+relative_atomic_mass:
+  value: 26.9940765
+  uncertainty: 0.0000040
+  unit: "u"
+
+half_life:
+  value: 301
+  uncertainty: 6
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 0.098
+    uncertainty: 0.024
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-28-Sodium-28.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-28"
+
+nucleus:
+  protons: 11
+  neutrons: 17
+  mass_number: 28
+  spin_parity: "1+"
+
+relative_atomic_mass:
+  value: 27.998939
+  uncertainty: 0.000011
+  unit: "u"
+
+half_life:
+  value: 33.1
+  uncertainty: 1.3
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 0.58
+    uncertainty: 0.12
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-29-Sodium-29.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-29"
+
+nucleus:
+  protons: 11
+  neutrons: 18
+  mass_number: 29
+  spin_parity: "3/2+"
+
+relative_atomic_mass:
+  value: 29.0028771
+  uncertainty: 0.0000079
+  unit: "u"
+
+half_life:
+  value: 43.2
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 22
+    uncertainty: 3
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-30-Sodium-30.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-30"
+
+nucleus:
+  protons: 11
+  neutrons: 19
+  mass_number: 30
+  spin_parity: "2+"
+
+relative_atomic_mass:
+  value: 30.0090979
+  uncertainty: 0.0000051
+  unit: "u"
+
+half_life:
+  value: 45.9
+  uncertainty: 0.7
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 28.6
+    uncertainty: 2.2
+
+  beta_delayed_two_neutron_percent:
+    value: 1.24
+    uncertainty: 0.19
+
+  beta_delayed_alpha_percent:
+    value: 5.5e-5
+    uncertainty: 2.0e-5
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-31-Sodium-31.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-31"
+
+nucleus:
+  protons: 11
+  neutrons: 20
+  mass_number: 31
+  spin_parity: "3/2+"
+
+relative_atomic_mass:
+  value: 31.013163
+  uncertainty: 0.000025
+  unit: "u"
+
+half_life:
+  value: 16.8
+  uncertainty: 0.3
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 36.0
+    uncertainty: 3.5
+
+  beta_delayed_two_neutron_percent:
+    value: 0.73
+    uncertainty: 0.09
+
+  beta_delayed_three_neutron_percent:
+    relation: "LESS-THAN"
+    value: 0.05
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-32-Sodium-32.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-32"
+
+nucleus:
+  protons: 11
+  neutrons: 21
+  mass_number: 32
+  spin_parity: "(3-)"
+
+relative_atomic_mass:
+  value: 32.02019
+  uncertainty: 0.00013
+  unit: "u"
+
+half_life:
+  value: 12.9
+  uncertainty: 0.3
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 26
+    uncertainty: 6
+
+  beta_delayed_two_neutron_percent:
+    value: 7.6
+    uncertainty: 1.5
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-33-Sodium-33.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-33"
+
+nucleus:
+  protons: 11
+  neutrons: 22
+  mass_number: 33
+  spin_parity: "(3/2+)"
+
+relative_atomic_mass:
+  value: 33.02573
+  uncertainty: 0.00064
+  unit: "u"
+  estimated_mass_table_value: true
+
+half_life:
+  value: 8.2
+  uncertainty: 0.4
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 47
+    uncertainty: 6
+
+  beta_delayed_two_neutron_percent:
+    value: 13
+    uncertainty: 3
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-34-Sodium-34.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-34"
+
+nucleus:
+  protons: 11
+  neutrons: 23
+  mass_number: 34
+  spin_parity: "1+"
+
+relative_atomic_mass:
+  value: 34.03359
+  uncertainty: 0.00054
+  unit: "u"
+  estimated_mass_table_value: true
+
+half_life:
+  value: 5.5
+  uncertainty: 1.0
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    approximate_value: 15
+    estimated: true
+
+  beta_delayed_two_neutron_percent:
+    approximate_value: 50
+    estimated: true
+
+rules:
+  estimated_branching_is_measured: false
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-35-Sodium-35.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-35"
+
+nucleus:
+  protons: 11
+  neutrons: 24
+  mass_number: 35
+  spin_parity: "3/2+#"
+
+relative_atomic_mass:
+  value: 35.04062
+  uncertainty: 0.00063
+  unit: "u"
+  estimated_mass_table_value: true
+
+half_life:
+  value: 1.5
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron:
+    status: "POSSIBLE / NOT-QUANTIFIED"
+
+  beta_delayed_two_neutron:
+    status: "POSSIBLE / NOT-QUANTIFIED"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-36-Sodium-36.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-36"
+
+nucleus:
+  protons: 11
+  neutrons: 25
+  mass_number: 36
+  spin_parity: "NOT-ESTABLISHED"
+
+relative_atomic_mass:
+  value: 36.04929
+  uncertainty: 0.00064
+  unit: "u"
+  estimated_mass_table_value: true
+
+current_status:
+  classification: "VERY-NEUTRON-RICH-SHORT-LIVED-NUCLEAR-STATE"
+
+lifetime:
+  relation: "LESS-THAN"
+  value: 180
+  unit: "ns"
+
+particle_binding:
+  status: "NOT-FULLY-ESTABLISHED-IN-NUBASE2020"
+
+decay:
+  neutron_emission:
+    status: "SUGGESTED / UNCERTAIN"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotope-37-Sodium-37.yaml
+
+```yaml
+isotope_id: "MAT:0011:ISO:Na-37"
+
+nucleus:
+  protons: 11
+  neutrons: 26
+  mass_number: 37
+  spin_parity: "3/2+#"
+
+relative_atomic_mass:
+  value: 37.05705
+  uncertainty: 0.00065
+  unit: "u"
+  estimated_mass_table_value: true
+
+experimental_status:
+  observed: true
+  first_observation_year: 2002
+
+half_life:
+
+  evaluated_estimate:
+    value: 1
+    unit: "ms"
+    estimated: true
+
+  experimental_lower_bound:
+    relation: "GREATER-THAN"
+    value: 1.5
+    unit: "us"
+
+decay:
+  beta_minus:
+    status: "EXPECTED"
+  beta_delayed_neutron:
+    status: "POSSIBLE"
+  beta_delayed_two_neutron:
+    status: "POSSIBLE"
+
+status: "ACTIVE-RESEARCH"
+
+source_ids:
+  - "SRC-000215"
+  - "SRC-000223"
+```
+
+# FILE: records/0011-Sodium-Na/data/isotopes/0011-Sodium-Na-Isotopes.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:ISOTOPES"
+parent_id: "MAT:0011"
+
+range:
+  NIST_atomic_mass_table:
+    minimum: 18
+    maximum: 37
+
+stable:
+  - MAT:0011:ISO:Na-23
+
+radioactive_or_unbound:
+  - MAT:0011:ISO:Na-18
+  - MAT:0011:ISO:Na-19
+  - MAT:0011:ISO:Na-20
+  - MAT:0011:ISO:Na-21
+  - MAT:0011:ISO:Na-22
+  - MAT:0011:ISO:Na-24
+  - MAT:0011:ISO:Na-25
+  - MAT:0011:ISO:Na-26
+  - MAT:0011:ISO:Na-27
+  - MAT:0011:ISO:Na-28
+  - MAT:0011:ISO:Na-29
+  - MAT:0011:ISO:Na-30
+  - MAT:0011:ISO:Na-31
+  - MAT:0011:ISO:Na-32
+  - MAT:0011:ISO:Na-33
+  - MAT:0011:ISO:Na-34
+  - MAT:0011:ISO:Na-35
+  - MAT:0011:ISO:Na-36
+  - MAT:0011:ISO:Na-37
+
+metastable_children:
+  - MAT:0011:ISO:Na-24m
+  - MAT:0011:ISO:Na-26m
+
+rules:
+  mass_number_predicts_stability: false
+  estimated_mass_requires_flag: true
+  beta_delayed_neutron_multiplicity_is_first_class: true
+  isomer_is_distinct_state: true
+  source_specific_half_lives_may_coexist: true
+```
+
+# FILE: records/0011-Sodium-Na/calculations/0011-Sodium-Na-CALC-001-Na21-BetaPlus-Q.md
+
+# CALC-001 — Sodium-21 Beta-Plus Decay
+
+$$
+{}^{21}Na\rightarrow{}^{21}Ne+e^++\nu_e
+$$
+
+Using neutral atomic masses:
+
+$$
+M({}^{21}Na)=20.99765469\ u
+$$
+
+$$
+M({}^{21}Ne)=20.993846685\ u
+$$
+
+Electron-capture mass difference:
+
+$$
+Q_{EC}
+=
+[M_p-M_d]c^2
+$$
+
+$$
+\boxed{
+Q_{EC}\approx3.54713\ {\rm MeV}
+}
+$$
+
+For positron emission:
+
+$$
+Q_{\beta^+}
+=
+Q_{EC}-2m_ec^2
+$$
+
+$$
+\boxed{
+Q_{\beta^+}\approx2.52514\ {\rm MeV}
+}
+$$
+
+```yaml
+calculation_id: "MAT:0011:CALC:001"
+parent: "MAT:0011:ISO:Na-21"
+daughter: "MAT:0010:ISO:Ne-21"
+q_EC_MeV: 3.54713
+q_beta_plus_MeV: 2.52514
+classification: "DERIVED-FROM-EVALUATED-ATOMIC-MASSES"
+```
+
+# FILE: records/0011-Sodium-Na/calculations/0011-Sodium-Na-CALC-002-Na22-Decay-Q.md
+
+# CALC-002 — Sodium-22 Decay Energetics
+
+$$
+{}^{22}Na\rightarrow{}^{22}Ne
+$$
+
+Atomic masses give:
+
+$$
+\boxed{
+Q_{EC}\approx2.84320\ {\rm MeV}
+}
+$$
+
+Ground-state positron-emission allowance:
+
+$$
+\boxed{
+Q_{\beta^+,gs}
+\approx1.82120\ {\rm MeV}
+}
+$$
+
+However, the dominant decay populates the approximately:
+
+$$
+1274.537\ {\rm keV}
+$$
+
+excited state of ²²Ne.
+
+Therefore the familiar β⁺ branch has a much smaller positron endpoint scale:
+
+$$
+1.82120-1.274537
+\approx
+0.54666\ {\rm MeV}
+$$
+
+before small recoil corrections.
+
+Important rule:
+
+```text
+TOTAL DECAY Q
+!=
+POSITRON ENDPOINT OF THE DOMINANT EXCITED-STATE BRANCH
+```
+
+# FILE: records/0011-Sodium-Na/calculations/0011-Sodium-Na-CALC-003-Na24-BetaMinus-Q.md
+
+# CALC-003 — Sodium-24 Beta-Minus Decay
+
+$$
+{}^{24}Na
+\rightarrow
+{}^{24}Mg+e^-+\bar\nu_e
+$$
+
+Atomic masses:
+
+$$
+M({}^{24}Na)=23.990962950\ u
+$$
+
+$$
+M({}^{24}Mg)=23.985041697\ u
+$$
+
+For β⁻ decay:
+
+$$
+Q_{\beta^-}
+=
+[M_p-M_d]c^2
+$$
+
+$$
+\boxed{
+Q_{\beta^-}\approx5.51561\ {\rm MeV}
+}
+$$
+
+This total Q value must not be confused with the electron endpoint for a particular branch because much of the decay proceeds through excited ²⁴Mg levels followed by gamma emission.
+
+For ²³Na itself, the nuclear spin is \(I=3/2\), so it is both NMR-active and quadrupolar; its Larmor frequency scales with magnetic field rather than being a fixed “Sodium frequency.” The ground-state atomic hyperfine constant is about **885.813 MHz**, while the D-line excited states introduce additional magnetic-dipole and electric-quadrupole structure. That makes Sodium a particularly useful bridge between atomic spectroscopy and condensed/biological NMR.
+
+Liquid Sodium is similarly state-specific. Argonne's current Cardinal implementation derives density, enthalpy, heat capacity and thermal conductivity from the Fink–Leibowitz Sodium correlations rather than treating these as fixed constants.  The NaK implementation likewise treats eutectic NaK with a potassium mass fraction of **0.778**, reinforcing the legacy point that alloying can dramatically alter the accessible liquid range.
+
+# FILE: records/0011-Sodium-Na/data/spectra/0011-Sodium-Na-Na23-NMR-and-Hyperfine.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:NA23-NMR-HYPERFINE"
+record_id: "MAT:0011"
+
+Na23:
+
+  isotope_id: "MAT:0011:ISO:Na-23"
+
+  nuclear_spin:
+    value: "3/2"
+
+  quadrupolar: true
+
+  magnetic_moment:
+    approximate_value: 2.21752
+    unit: "nuclear_magneton"
+
+  gyromagnetic_ratio_over_2pi:
+    approximate_value: 11.262
+    unit: "MHz/T"
+
+  NMR_frequency:
+    equation: "nu = (gamma / 2pi) * B0"
+    field_dependent: true
+
+  environments:
+    - aqueous_Na_plus
+    - biological_tissue
+    - glasses
+    - ceramics
+    - battery_electrodes
+    - solid_electrolytes
+    - molten_salts
+
+atomic_hyperfine:
+
+  ground_3s_2S1_2:
+
+    A_over_h:
+      value: 885.81306440
+      uncertainty: 0.00000050
+      unit: "MHz"
+
+  excited_3p_2P1_2:
+
+    A_over_h:
+      value: 94.44
+      uncertainty: 0.13
+      unit: "MHz"
+
+  excited_3p_2P3_2:
+
+    A_over_h:
+      value: 18.534
+      uncertainty: 0.015
+      unit: "MHz"
+
+    B_over_h:
+      value: 2.724
+      uncertainty: 0.030
+      unit: "MHz"
+
+rules:
+  NMR_frequency_is_universal: false
+  atomic_hyperfine_equals_NMR_chemical_shift: false
+  nuclear_quadrupole_interaction_requires_EFG_context: true
+
+source_id: "SRC-000225"
+```
+
+# FILE: records/0011-Sodium-Na/data/properties/0011-Sodium-Na-Liquid-Metal-Properties.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:LIQUID-METAL"
+record_id: "MAT:0011"
+
+phase:
+  id: "MAT:0011:PHASE:LIQUID-NA"
+
+state_transition:
+  melting_point:
+    approximate_value: 97.794
+    unit: "degC"
+
+transport:
+
+  electrical:
+    metallic_conduction: true
+
+  thermal:
+    high_thermal_transport: true
+
+  fluid:
+    advective_heat_transport: true
+
+temperature_dependent_properties:
+
+  density:
+    correlation_available: true
+
+  thermal_conductivity:
+    correlation_available: true
+
+  heat_capacity:
+    correlation_available: true
+
+  enthalpy:
+    correlation_available: true
+
+  viscosity:
+    correlation_available: true
+
+canonical_property_model:
+  authors:
+    - J_K_Fink
+    - L_Leibowitz
+  year: 1995
+
+exact_tabulated_curves:
+  status: "DATA-EXTRACTION-REQUIRED"
+
+MHD:
+
+  Lorentz_force_density:
+    equation: "f = J x B"
+
+  possible_uses:
+    - electromagnetic_pumping
+    - flow_measurement
+    - induction_experiments
+    - reactor_thermal_hydraulics
+
+  state_variables:
+    - temperature
+    - conductivity
+    - flow_velocity
+    - magnetic_field
+    - current_density
+    - geometry
+
+rules:
+  liquid_sodium_property_equals_room_temperature_solid_property: false
+  thermophysical_property_is_constant: false
+
+source_id: "SRC-000226"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-NaK.yaml
+
+```yaml
+material_id: "MAT:MAT:NAK"
+name: "Sodium-Potassium Alloy"
+parents:
+  - "MAT:0011"
+  - "MAT:0019"
+
+potassium_parent_status:
+  "RESERVED-PENDING-POTASSIUM"
+
+classification:
+  - alkali_metal_alloy
+  - liquid_metal_family
+  - conductive_fluid
+
+eutectic_reference:
+
+  potassium_mass_fraction:
+    value: 0.778
+
+  sodium_mass_fraction:
+    value: 0.222
+
+property_model:
+  source_family:
+    "NaK Handbook / Argonne Cardinal"
+
+  implemented_properties:
+    - density
+    - viscosity
+    - thermal_conductivity
+    - isobaric_heat_capacity
+
+safety:
+  reacts_with_water: true
+  reacts_with_air: true
+  handling_requires_specialized_controls: true
+
+principle:
+
+  statement:
+    "Composition can engineer melting behaviour without changing the constituent elements."
+
+rules:
+  NaK_equals_pure_Na: false
+  NaK_equals_pure_K: false
+  eutectic_composition_equals_all_NaK_compositions: false
+
+source_id: "SRC-000227"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Core-Compound-Families.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:CORE-COMPOUNDS"
+record_id: "MAT:0011"
+
+families:
+
+  sodium_chloride:
+
+    id: "MAT:CMP:NaCl"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0017"
+
+    chlorine_status: "RESERVED-PENDING-CHLORINE"
+
+    mineral_name: "HALITE"
+
+    crystal_structure:
+      common_name: "ROCK-SALT"
+      coordination:
+        Na: 6
+        Cl: 6
+
+    class:
+      - ionic_solid
+      - evaporite_mineral
+      - dissolved_electrolyte
+
+  sodium_fluoride:
+
+    id: "MAT:CMP:NaF"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0009"
+
+    fluorine_status: "RESOLVED"
+
+    class:
+      - ionic_fluoride
+
+  sodium_hydroxide:
+
+    id: "MAT:CMP:NaOH"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0008"
+      - "MAT:0001"
+
+    class:
+      - strong_base
+      - ionic_material
+
+  sodium_oxide:
+
+    id: "MAT:CMP:Na2O"
+
+    oxygen_species:
+      formal: "O2-"
+
+  sodium_peroxide:
+
+    id: "MAT:CMP:Na2O2"
+
+    oxygen_species:
+      formal: "O2^2-"
+
+  sodium_superoxide:
+
+    id: "MAT:CMP:NaO2"
+
+    oxygen_species:
+      formal: "O2^-"
+
+  sodium_carbonate:
+
+    id: "MAT:CMP:Na2CO3"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0006"
+      - "MAT:0008"
+
+  sodium_bicarbonate:
+
+    id: "MAT:CMP:NaHCO3"
+
+    parents:
+      - "MAT:0011"
+      - "MAT:0001"
+      - "MAT:0006"
+      - "MAT:0008"
+
+  sodium_hydride:
+
+    id: "MAT:CMP:NaH"
+
+    class:
+      - saline_hydride
+      - ionic_hydride
+
+  sodium_borohydride:
+
+    id: "MAT:CMP:NaBH4"
+
+    class:
+      - complex_hydride
+      - borohydride
+      - reducing_agent
+      - hydrogen_carrier_research
+
+  sodium_alanate:
+
+    id: "MAT:CMP:NaAlH4"
+
+    class:
+      - complex_hydride
+      - alanate
+      - reversible_hydrogen_storage_research
+
+    DOE_system_modeling:
+      historical_research_program: true
+
+rules:
+  sharing_Na_plus_means_same_material_property: false
+  oxygen_stoichiometry_is_first_class: true
+  hydride_class_must_be_explicit: true
+  hydrogen_storage_material_equals_practical_storage_system: false
+
+source_ids:
+  - "SRC-000228"
+  - "SRC-000229"
+```
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Geochemistry.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:GEOCHEMISTRY"
+record_id: "MAT:0011"
+
+natural_free_metal:
+  major_reservoir: false
+
+principal_natural_state:
+  "Na+ IN MINERALS AND AQUEOUS SOLUTION"
+
+reservoirs:
+
+  seawater:
+
+    sodium:
+      average_concentration:
+        approximate_value: 10500
+        unit: "mg/L"
+
+    chloride:
+      approximate_value: 19000
+      unit: "mg/L"
+
+    total_dissolved_solids:
+      approximate_value: 35000
+      unit: "mg/L"
+
+    state:
+      sodium_is_dissolved_Na_plus: true
+
+  halite:
+
+    formula: "NaCl"
+
+    classification:
+      - mineral
+      - evaporite
+      - rock_salt
+
+    formation_context:
+      - evaporation_of_saline_water
+      - sedimentary_evaporite_deposit
+
+  silicate_minerals:
+
+    sodium_occurrence:
+      - feldspar_family
+      - silicate_minerals
+      - altered_clay_systems
+
+  brines:
+
+    sodium_chloride_dominated_possible: true
+
+rules:
+  seawater_contains_metallic_sodium: false
+  halite_property_equals_elemental_sodium_property: false
+  sodium_concentration_depends_on_water_body: true
+  10500_mg_L_is_average_reference_not_universal: true
+
+source_id: "SRC-000228"
+```
+
+USGS's seawater reference gives about **10,500 mg/L sodium**, versus about 19,000 mg/L chloride and total dissolved solids near 35,000 mg/L; the Sodium is present as dissolved ionic chemistry, not elemental metal.  DOE's materials work also supports preserving sodium alanate as a **hydrogen-storage research material**, while keeping the distinction between material capacity and complete storage-system performance.
+
+The battery section benefits from a similar distinction. Current 2026 literature treats hard carbon as the leading practical Sodium-ion anode, but its storage mechanism is still not reducible to one universally settled cartoon: pseudo-graphitic domains, interlayer spacing, surface sites, pores and especially **closed porosity** all contribute.  Solid electrolytes now span oxide, sulfide, halide and related families, while PBAs remain highly sensitive to crystal structure, vacancies, water and defects.
+
+The high-pressure layer has also improved since the original record. Sodium's room-temperature sequence is approximately **bcc → fcc → cI16 → oP8 → tI19 → hP4** at about 65, 103, 118–119, 125 and 200 GPa.  More importantly, a 2025 single-crystal experiment at **223 GPa** provided experimental evidence supporting interstitial electron localization in transparent hP4 Sodium, strengthening the classification from merely “electride-like” to **experimentally supported electride state**.
+
+# FILE: records/0011-Sodium-Na/data/structured/0011-Sodium-Na-Sodium-Ion-Battery-Materials.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:SODIUM-ION-BATTERIES"
+record_id: "MAT:0011"
+
+charge_carrier:
+  id: "MAT:0011:ION:Na+1"
+  charge: 1
+
+technology_status_2026:
+  state: "COMMERCIALIZING"
+  universal_replacement_for_Li_ion: false
+
+anodes:
+
+  hard_carbon:
+
+    classification:
+      - dominant_practical_anode_family
+
+    structural_variables:
+      - pseudo_graphitic_domain_size
+      - interlayer_spacing
+      - defect_density
+      - surface_functional_groups
+      - heteroatom_content
+      - open_porosity
+      - closed_porosity
+      - micropore_size
+      - particle_morphology
+
+    sodium_storage_models:
+      status: "MULTI-MECHANISM / STILL-UNDER-ACTIVE-REFINEMENT"
+
+      candidate_contributions:
+        - surface_adsorption
+        - defect_site_storage
+        - interlayer_insertion
+        - pore_filling
+        - closed_pore_storage
+
+    key_2026_result:
+      closed_porosity:
+        important_for_low_potential_storage: true
+
+    interface:
+      SEI:
+        first_class_variable: true
+
+      electrolyte_dependence: true
+
+  graphite:
+
+    conventional_Na_storage:
+      same_as_Li_graphite: false
+
+    rule:
+      "Graphite success in Li-ion does not automatically transfer to Na-ion."
+
+cathodes:
+
+  layered_oxides:
+
+    structural_families:
+      - P2
+      - O3
+      - mixed_or_transformed_stacking
+
+    variables:
+      - Na_site_geometry
+      - transition_metal_composition
+      - substitution
+      - oxygen_stacking
+      - vacancies
+      - redox_state
+      - phase_transition
+      - air_stability
+
+  polyanionic:
+
+    families:
+      - phosphates
+      - fluorophosphates
+      - sulfates
+      - mixed_polyanion_materials
+
+  Prussian_blue_analogues:
+
+    open_framework: true
+
+    key_variables:
+      - cyanide_vacancies
+      - coordinated_water
+      - interstitial_water
+      - transition_metal_identity
+      - Na_occupancy
+      - Jahn_Teller_distortion
+      - particle_size
+
+solid_electrolytes:
+
+  families:
+    - beta_alumina_related
+    - NASICON_related
+    - sulfide
+    - halide
+    - antiperovskite_related
+
+  examples:
+    - beta_double_prime_alumina
+    - NASICON_family
+    - Na3PS4
+    - Na11Sn2PS12
+    - Na3OCl
+    - Na2ZrCl6
+
+  challenges:
+    - room_temperature_ionic_conductivity
+    - interface_resistance
+    - chemical_stability
+    - mechanical_contact
+    - dendrite_suppression
+    - manufacturability
+    - cost
+
+Li_vs_Na:
+
+  common_charge:
+    value: 1
+
+  same_ionic_radius: false
+
+  implications:
+    - host_spacing
+    - diffusion_barrier
+    - lattice_strain
+    - preferred_crystal_structure
+    - interface_chemistry
+
+rules:
+  one_hard_carbon_mechanism_is_universally_proven: false
+  host_topology_is_first_class: true
+  defect_content_is_first_class: true
+  water_in_PBA_is_optional_metadata: false
+  theoretical_capacity_equals_practical_cell_capacity: false
+
+source_ids:
+  - "SRC-000220"
+  - "SRC-000221"
+  - "SRC-000230"
+  - "SRC-000231"
+  - "SRC-000232"
+```
+
+# FILE: records/0011-Sodium-Na/data/phases/0011-Sodium-Na-High-Pressure-Phases.yaml
+
+```yaml
+registry_id: "MAT:0011:REG:HIGH-PRESSURE"
+record_id: "MAT:0011"
+
+room_temperature_sequence:
+
+  - phase: "BCC"
+    pressure_range:
+      approximate_upper: 65
+      unit: "GPa"
+
+    electronic:
+      metallic: true
+
+  - phase: "FCC"
+    onset:
+      approximate_value: 65
+      unit: "GPa"
+
+  - phase: "cI16"
+    onset:
+      approximate_value: 103
+      unit: "GPa"
+
+  - phase: "oP8"
+    onset:
+      approximate_value: 118
+      uncertainty_context: "literature reports ~118-119"
+      unit: "GPa"
+
+  - phase: "tI19"
+    onset:
+      approximate_value: 125
+      unit: "GPa"
+
+  - phase: "hP4"
+    onset:
+      approximate_value: 200
+      modern_single_crystal_reference:
+        observed_above:
+          approximate_value: 206
+          unit: "GPa"
+
+electronic_evolution:
+
+  ordinary_low_pressure:
+    description: "NEARLY-FREE-ELECTRON METAL"
+
+  compressed_intermediate:
+    description:
+      "Increasingly complex band structure and reduced simple-metal behavior."
+
+  hP4:
+
+    optical:
+      transparent: true
+
+    electronic:
+      insulating: true
+      wide_bandgap: true
+
+    electride:
+
+      theoretical_prediction:
+        interstitial_electron_localization: true
+
+      experimental_support_2025:
+
+        method:
+          - single_crystal_XRD
+          - quantum_crystallography
+
+        measurement_pressure:
+          value: 223
+          unit: "GPa"
+
+        conclusion:
+          "EXPERIMENTAL-SIGNATURES-SUPPORT-ELECTRIDE-NATURE"
+
+    measured_structure_extension:
+
+      highest_static_pressure_in_2025_study:
+        value: 310
+        unit: "GPa"
+
+      hP4_retained: true
+
+phase_transition_rule:
+
+  simple_compression_model:
+    "PRESSURE -> BROADER BANDS -> MORE METALLIC"
+
+  sodium_result:
+    valid_universally: false
+
+  observed_path:
+    "PRESSURE -> STRUCTURAL COMPLEXITY -> INTERSTITIAL ELECTRON LOCALIZATION -> INSULATOR"
+
+melting_anomaly:
+
+  qualitative:
+    melting_curve_nonmonotonic: true
+
+  established_feature:
+    melting_temperature_falls_strongly_after_initial_rise: true
+
+  full_curve:
+    status: "DATA-EXTRACTION-REQUIRED"
+
+rules:
+  compression_always_increases_metallicity: false
+  electride_label_is_purely_theoretical_for_hP4_Na: false
+  hP4_electride_has_experimental_support: true
+  phase_boundaries_are_approximate_and_temperature_dependent: true
+
+source_ids:
+  - "SRC-000219"
+  - "SRC-000233"
+  - "SRC-000234"
+```
+
+# FILE: records/0011-Sodium-Na/calculations/0011-Sodium-Na-High-Pressure-Causal-Map.md
+
+# Sodium High-Pressure Causal Map
+
+Low pressure:
+
+$$
+Na_{\rm bcc}
+$$
+
+Apply:
+
+$$
+P\uparrow
+$$
+
+Observed structural sequence:
+
+$$
+bcc
+\rightarrow
+fcc
+\rightarrow
+cI16
+\rightarrow
+oP8
+\rightarrow
+tI19
+\rightarrow
+hP4
+$$
+
+At hP4:
+
+$$
+\text{core overlap}
++
+p-d\ \text{hybridization}
++
+\text{interstitial electron localization}
+$$
+
+leads to:
+
+$$
+\boxed{
+\text{transparent insulating electride state}
+}
+$$
+
+This is a direct Causali E example:
+
+```yaml
+initial_state:
+  composition: Na
+  electronic_class: METAL
+
+intervention:
+  pressure: EXTREME
+
+retained:
+  elemental_identity: Na
+
+changed:
+  - crystal_structure
+  - electron_density_topology
+  - optical_response
+  - electronic_transport
+
+candidate_state:
+  structure: hP4
+  class:
+    - TRANSPARENT
+    - INSULATING
+    - ELECTRIDE
+
+evidence:
+  structure: MEASURED
+  optical_transition: MEASURED
+  interstitial_electron_localization: EXPERIMENTALLY-SUPPORTED
+```
+
+# PATCH: records/0011-Sodium-Na/0011-Sodium-Na.md
+
+Replace the earlier ²⁴Na working value:
+
+```text
+14.997 ± 0.012 h
+```
+
+with:
+
+```text
+NUBASE2020:
+14.9560 ± 0.0015 h
+
+DDEP decay-metrology evaluation:
+14.9581 ± 0.0020 h
+
+Older historical evaluation:
+14.997 ± 0.012 h
+```
+
+Add:
+
+```text
+MAT stores source-specific evaluated constants when
+evaluations differ within their uncertainty/history.
+
+The older 14.997 h value is preserved for provenance,
+but is not the current default working value.
+```
+
+Also upgrade:
+
+```text
+HIGH-PRESSURE ELECTRIDE-LIKE SODIUM
+```
+
+to:
+
+```text
+HIGH-PRESSURE hP4 SODIUM
+=
+EXPERIMENTALLY SUPPORTED ELECTRIDE STATE
+```
+
+with the evidence distinction:
+
+```text
+2009:
+transparent insulating hP4 experimentally established;
+interstitial-electron mechanism supported by calculation.
+
+2025:
+single-crystal / quantum-crystallography experiment
+provides direct experimental signatures supporting
+interstitial electron localization.
+```
+
+# APPEND TO: data/registries/sources.yaml
+
+```yaml
+  - source_id: "SRC-000223"
+    title: "The NUBASE2020 evaluation of nuclear physics properties"
+    authors:
+      - "F. G. Kondev"
+      - "M. Wang"
+      - "W. J. Huang"
+      - "S. Naimi"
+      - "G. Audi"
+    journal: "Chinese Physics C"
+    year: 2021
+    volume: 45
+    article: "030001"
+    doi: "10.1088/1674-1137/abddae"
+    source_type: "EVALUATED-NUCLEAR-DATABASE"
+    supports:
+      - Na18_to_Na37
+      - isotope_half_lives
+      - spin_parity
+      - decay_modes
+      - delayed_neutron_branching
+      - Na24_current_evaluation
+
+  - source_id: "SRC-000224"
+    title: "Sodium-22 / Sodium-24 Evaluated Decay Data"
+    organization: "DDEP / evaluated radionuclide metrology"
+    source_type: "DECAY-DATA-EVALUATION"
+    supports:
+      - Na22_decay_branching
+      - Na22_gamma
+      - Na24_half_life
+      - Na24_gamma_1368_630
+      - Na24_gamma_2754_049
+      - historical_half_life_comparison
+
+  - source_id: "SRC-000225"
+    title: "Sodium D Line and 23Na Hyperfine / Nuclear Magnetic Reference Data"
+    source_type: "ATOMIC-AND-NMR-REFERENCE"
+    supports:
+      - Na23_spin
+      - Na23_magnetic_moment
+      - Na23_gyromagnetic_ratio
+      - Na_ground_hyperfine
+      - Na_D_line_hyperfine
+
+  - source_id: "SRC-000226"
+    title: "Thermodynamic and transport properties of sodium liquid and vapor"
+    authors:
+      - "J. K. Fink"
+      - "L. Leibowitz"
+    organization: "Argonne National Laboratory"
+    year: 1995
+    source_type: "LIQUID-METAL-THERMOPHYSICAL-REFERENCE"
+    supports:
+      - liquid_Na_density
+      - liquid_Na_thermal_conductivity
+      - liquid_Na_heat_capacity
+      - liquid_Na_enthalpy
+      - sodium_coolant_model
+
+  - source_id: "SRC-000227"
+    title: "NaK Fluid Properties"
+    organization: "Argonne National Laboratory / Cardinal"
+    source_type: "LIQUID-METAL-ALLOY-REFERENCE"
+    supports:
+      - NaK
+      - eutectic_K_mass_fraction_0_778
+      - density
+      - viscosity
+      - thermal_conductivity
+      - heat_capacity
+
+  - source_id: "SRC-000228"
+    title: "USGS Seawater and Sodium-Chloride Geochemistry References"
+    organization: "United States Geological Survey"
+    source_type: "GEOLOGICAL-AND-AQUEOUS-REFERENCE"
+    supports:
+      - seawater_sodium
+      - sodium_chloride_brines
+      - halite
+      - evaporite_geochemistry
+
+  - source_id: "SRC-000229"
+    title: "Metal Hydride Storage Materials — Sodium Alanate"
+    organization: "U.S. Department of Energy"
+    source_type: "HYDROGEN-STORAGE-MATERIALS-REFERENCE"
+    supports:
+      - NaAlH4
+      - sodium_alanate
+      - complex_hydride_storage
+      - material_vs_system_performance
+
+  - source_id: "SRC-000230"
+    title: "Hard carbons for sodium-ion batteries: focus on sodium storage mechanisms through quantitative analysis of literature"
+    journal: "Journal of Solid State Chemistry"
+    year: 2026
+    volume: 360
+    article: "126075"
+    doi: "10.1016/j.jssc.2026.126075"
+    source_type: "CURRENT-HARD-CARBON-META-ANALYSIS"
+    supports:
+      - hard_carbon
+      - closed_porosity
+      - slope_capacity
+      - plateau_capacity
+      - sodium_storage_mechanisms
+
+  - source_id: "SRC-000231"
+    title: "Inorganic Sodium Solid-State Electrolytes: Progress, Existing Issues, and Solutions Towards High-Performance All Solid-State Batteries"
+    journal: "Electrochemical Energy Reviews"
+    year: 2026
+    volume: 9
+    article: 6
+    doi: "10.1007/s41918-026-00279-y"
+    source_type: "CURRENT-SOLID-ELECTROLYTE-REVIEW"
+    supports:
+      - sodium_solid_electrolytes
+      - NASICON
+      - beta_alumina
+      - sulfide_electrolytes
+      - halide_electrolytes
+      - interface_challenges
+
+  - source_id: "SRC-000232"
+    title: "Crystal structure, synthesis, problems, and solutions for Prussian blue analogue cathodes for sodium-ion batteries"
+    journal: "Coordination Chemistry Reviews"
+    year: 2026
+    volume: 552
+    article: "217543"
+    doi: "10.1016/j.ccr.2025.217543"
+    source_type: "CURRENT-PBA-REVIEW"
+    supports:
+      - Prussian_blue_analogues
+      - framework_structure
+      - vacancies
+      - water
+      - sodium_storage
+
+  - source_id: "SRC-000233"
+    title: "Experimental signatures of interstitial electron density in transparent dense sodium"
+    journal: "Communications Materials"
+    year: 2025
+    doi: "10.1038/s43246-025-00925-w"
+    source_type: "PRIMARY-HIGH-PRESSURE-SINGLE-CRYSTAL-EXPERIMENT"
+    supports:
+      - hP4_sodium
+      - 223_GPa_single_crystal
+      - interstitial_electron_density
+      - experimental_electride_evidence
+      - hP4_to_310_GPa
+
+  - source_id: "SRC-000234"
+    title: "High-pressure structural and melting architecture of Sodium"
+    source_type: "CURRENT-HIGH-PRESSURE-SYNTHESIS"
+    supports:
+      - bcc_fcc_cI16_oP8_tI19_hP4_sequence
+      - nonmonotonic_melting
+      - pressure_induced_electronic_reorganization
+```
+
+# CURRENT SODIUM STATUS
+
+```yaml
+record: "MAT:0011"
+
+status: "RESEARCHED"
+migration_status: "CONTENT-MIGRATED"
+
+completion:
+
+  isotope_child_files: true
+  Na18_to_Na37_semantics: true
+
+  Na21_decay_calculation: true
+  Na22_decay_calculation: true
+  Na24_decay_calculation: true
+
+  Na24_half_life_correction: true
+  Na24_evaluation_provenance: true
+
+  Na23_NMR: true
+  Na23_hyperfine: true
+
+  liquid_sodium_architecture: true
+  liquid_sodium_property_model: true
+  MHD_architecture: true
+
+  NaK_architecture: true
+
+  NaCl: true
+  NaF: true
+  NaOH: true
+  Na2O: true
+  Na2O2: true
+  NaO2: true
+  Na2CO3: true
+  NaHCO3: true
+
+  NaH: true
+  NaBH4: true
+  NaAlH4: true
+
+  seawater_geochemistry: true
+  halite_evaporite_architecture: true
+
+  sodium_ion_battery_materials: true
+  hard_carbon_detail: true
+  layered_oxide_detail: true
+  Prussian_blue_detail: true
+  solid_electrolyte_detail: true
+
+  high_pressure_phase_sequence: true
+  hP4_electride: true
+  2025_experimental_electride_update: true
+
+remaining:
+
+  - exhaustive_Na_I_and_Na_II_atomic_spectrum
+  - selected_laser_cooling_transitions
+  - ambient_BCC_crystallographic_child
+  - elastic_mechanical_property_layer
+
+  - biological_action_potential_relationship
+  - sodium_channel_families
+  - detailed_Na_K_ATPase_state_map
+
+  - sodium_silicates
+  - sodium_phosphates
+  - nitrate_nitrite_azide_amide_registry
+
+  - complete_relationship_registry
+  - people_and_intellectual_lineage
+  - experiments
+
+  - tables
+  - graph_manifest
+
+  - V01_to_V18_visual_specification
+  - G0011_migration_audit
+  - schema_validation
+
+schema_validation_status: "PENDING"
+visual_specification: "NOT-YET-LOCKED"
+visual_assets: "NOT-GENERATED"
+```
+
+This batch strengthens one of the best recurring MAT principles from your old `G0011`: **Sodium is not “larger Lithium.”** Both expose an \(s^1\) pattern and a +1 mobile ion, but shell radius, host structure, pressure, phase, defects and interfaces change what that apparently identical valence logic actually produces. The high-pressure result is an extreme example: the familiar alkali metal eventually becomes a transparent, insulating, experimentally supported electride without changing elemental composition.
+
+The next `continue` is the **final Sodium finishing pass**: full Na I/Na II spectroscopy and atomic-cooling layer, biological Na⁺/action-potential network, remaining salt/material relationships, complete knowledge graph and intellectual lineage, experiments, tables/graphs, locked V01–V18, the `G0011 → MAT:0011` migration audit, and the `CORE-VALIDATED` decision.

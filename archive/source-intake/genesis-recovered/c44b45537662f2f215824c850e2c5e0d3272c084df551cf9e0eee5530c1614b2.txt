@@ -1,0 +1,51 @@
+registry_id: "MAT:0010:REG:NEUTRON-RICH"
+record_id: "MAT:0010"
+
+key_states:
+
+  Ne31:
+    isotope: "MAT:0010:ISO:Ne-31"
+    particle_bound: true
+    one_neutron_halo: true
+    deformation: true
+
+  Ne32:
+    isotope: "MAT:0010:ISO:Ne-32"
+    particle_bound: true
+
+  Ne33:
+    isotope: "MAT:0010:ISO:Ne-33"
+    neutron_unbound: true
+
+  Ne34:
+    isotope: "MAT:0010:ISO:Ne-34"
+    particle_bound: true
+    neutron_dripline_reference: true
+
+key_result:
+
+  statement: >
+    The Neon neutron-rich boundary is not a monotonic
+    "every larger A becomes unbound" sequence.
+
+  sequence:
+    - "31Ne bound"
+    - "32Ne bound"
+    - "33Ne unbound"
+    - "34Ne bound"
+
+  interpretation:
+    - odd_even_pairing
+    - shell_evolution
+    - deformation
+    - many_body_nuclear_structure
+
+rules:
+  mass_number_alone_predicts_binding: false
+  neutron_rich_equals_neutron_unbound: false
+  dripline_can_show_odd_even_structure: true
+
+source_ids:
+  - "SRC-000198"
+  - "SRC-000206"
+  - "SRC-000207"

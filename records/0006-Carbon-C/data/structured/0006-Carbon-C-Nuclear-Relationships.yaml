@@ -14,6 +14,7 @@ relationships:
       - "MAT:0004:ISO:Be-8"
 
     mechanism: "NUCLEAR-RESONANT-PATHWAY"
+    relationship_id: MAT:0006:REL:1007
 
   triple_alpha_stage_2:
 
@@ -32,17 +33,20 @@ relationships:
 
     final_product:
       - "MAT:0006:ISO:C-12"
+    relationship_id: MAT:0006:REL:1008
 
   net_triple_alpha:
 
     reaction: "3(4He) -> 12C"
     calculation_id: "MAT:0006:CALC:001"
+    relationship_id: MAT:0006:REL:1009
 
   Be10_decay:
 
     parent: "MAT:0004:ISO:Be-10"
     daughter: "MAT:0005:ISO:B-10"
     note: "Earlier Be->B relationship; retained as neighboring network context."
+    relationship_id: MAT:0006:REL:1010
 
   C14_decay:
 
@@ -50,6 +54,7 @@ relationships:
     daughter: "MAT:0007:ISO:N-14"
     daughter_status: "RESOLVED"
     calculation_id: "MAT:0006:CALC:002"
+    relationship_id: MAT:0006:REL:1011
 
 rules:
   Hoyle_excitation_energy_equals_triple_alpha_q_value: false

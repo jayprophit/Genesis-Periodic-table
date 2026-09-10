@@ -1,0 +1,76 @@
+registry_id: MAT:0012:REG:MAGNESIUM-BATTERY
+record_id: MAT:0012
+charge_carrier:
+  species: Mg2+
+  charge: 2
+technology_status_2026:
+  class: ACTIVE-RESEARCH
+  Li_ion_equivalent_maturity: false
+potential_strengths:
+  - divalent_charge_transfer
+  - magnesium_abundance
+  - metallic_Mg_anode_interest
+  - high_volumetric_capacity_potential
+fundamental_challenges:
+  electrolyte:
+    Mg2_solvation:
+      strong: true
+    desolvation:
+      kinetic_barrier: true
+    active_species:
+      may_include:
+        - solvated_Mg2_plus
+        - MgCl_plus_like_complexes
+        - other_coordination_complexes
+  metal_anode:
+    passivation:
+      major_issue: true
+    interphase:
+      can_block_Mg_transport: true
+    plating_stripping:
+      electrolyte_dependent: true
+  cathode:
+    Mg2_charge_density:
+      high: true
+    consequences:
+      - strong_host_interaction
+      - slow_diffusion
+      - lattice_distortion
+      - trapping
+      - high_migration_barriers
+cathode_families:
+  - Chevrel_related
+  - transition_metal_oxides
+  - amorphous_oxides
+  - sulfides
+  - polyanionic_materials
+  - Prussian_blue_analogues
+  - organic_electrodes
+  - disordered_hosts
+2026_research_direction:
+  amorphous_oxide_design:
+    purpose:
+      - reduce_Mg2_migration_barrier
+      - improve_room_temperature_transport
+  electrolyte_engineering:
+    purpose:
+      - stable_Mg_interface
+      - reversible_plating_stripping
+      - improved_desolvation
+rules:
+  divalent_charge_equals_double_cell_performance: false
+  Mg2_transport_equals_Li_plus_transport: false
+  electrolyte_species_equals_bare_Mg2_plus: false
+  theoretical_capacity_equals_practical_full_cell_capacity: false
+source_ids:
+  - SRC-000250
+  - SRC-000251
+  - SRC-000266
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1564
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

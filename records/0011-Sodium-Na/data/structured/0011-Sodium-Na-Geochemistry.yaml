@@ -1,0 +1,49 @@
+registry_id: MAT:0011:REG:GEOCHEMISTRY
+record_id: MAT:0011
+natural_free_metal:
+  major_reservoir: false
+principal_natural_state: Na+ IN MINERALS AND AQUEOUS SOLUTION
+reservoirs:
+  seawater:
+    sodium:
+      average_concentration:
+        approximate_value: 10500
+        unit: mg/L
+    chloride:
+      approximate_value: 19000
+      unit: mg/L
+    total_dissolved_solids:
+      approximate_value: 35000
+      unit: mg/L
+    state:
+      sodium_is_dissolved_Na_plus: true
+  halite:
+    formula: NaCl
+    classification:
+      - mineral
+      - evaporite
+      - rock_salt
+    formation_context:
+      - evaporation_of_saline_water
+      - sedimentary_evaporite_deposit
+  silicate_minerals:
+    sodium_occurrence:
+      - feldspar_family
+      - silicate_minerals
+      - altered_clay_systems
+  brines:
+    sodium_chloride_dominated_possible: true
+rules:
+  seawater_contains_metallic_sodium: false
+  halite_property_equals_elemental_sodium_property: false
+  sodium_concentration_depends_on_water_body: true
+  10500_mg_L_is_average_reference_not_universal: true
+source_id: SRC-000228
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1367
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

@@ -1,0 +1,499 @@
+registry_id: MAT:0002:REG:NUBASE2020
+record_id: MAT:0002
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 3
+    Z: 2
+    N: 1
+    state_index: 0
+    state_label: ground
+    source_label: 3He
+    mass_excess:
+      value: 14931.21888
+      unit: keV
+      raw: "14931.21888"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.00006"
+      uncertainty: 0.00006
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "98"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: IS=0.0002 2
+    source_line: 30
+    raw_line: 003 0020   3He     14931.21888    0.00006                             stbl              1/2+*         98          1934
+      IS=0.0002 2
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0002:ISO:He-3
+    evaluation_entry_id: MAT:0002:NUBASE2020:3:0
+  - A: 4
+    Z: 2
+    N: 2
+    state_index: 0
+    state_label: ground
+    source_label: 4He
+    mass_excess:
+      value: 2424.91587
+      unit: keV
+      raw: "2424.91587"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.00015"
+      uncertainty: 0.00015
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "98"
+    discovery_year_raw: "1908"
+    decay_and_abundance_raw: IS=99.9998 2
+    source_line: 33
+    raw_line: 004 0020   4He      2424.91587    0.00015                             stbl              0+            98          1908
+      IS=99.9998 2
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0002:ISO:He-4
+    evaluation_entry_id: MAT:0002:NUBASE2020:4:0
+  - A: 5
+    Z: 2
+    N: 3
+    state_index: 0
+    state_label: ground
+    source_label: 5He
+    mass_excess:
+      value: 11231
+      unit: keV
+      raw: "11231"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 602
+      unit: ys
+      raw: "602"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "22"
+      uncertainty: 22
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1937"
+    decay_and_abundance_raw: n=100
+    source_line: 36
+    raw_line: 005 0020   5He     11231         20                                   602     ys 22     3/2-          02          1937 n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0011514072766776499
+        unit: 1/ys
+        relation: =
+        uncertainty: 0.00004207800678888421
+      mean_lifetime:
+        value: 868.502414615156
+        unit: ys
+        relation: =
+        uncertainty: 31.739290899557197
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-5
+    evaluation_entry_id: MAT:0002:NUBASE2020:5:0
+  - A: 6
+    Z: 2
+    N: 4
+    state_index: 0
+    state_label: ground
+    source_label: 6He
+    mass_excess:
+      value: 17592.1
+      unit: keV
+      raw: "17592.10"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 806.92
+      unit: ms
+      raw: "806.92"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.24"
+      uncertainty: 0.24
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1936"
+    decay_and_abundance_raw: B-=100;B-d=0.000278 18
+    source_line: 40
+    raw_line: 006 0020   6He     17592.10       0.05                                806.92  ms 0.24   0+            02          1936
+      B-=100;B-d=0.000278 18
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0008590035946065847
+        unit: 1/ms
+        relation: =
+        uncertainty: 2.5549108053534464e-7
+      mean_lifetime:
+        value: 1164.1394823941223
+        unit: ms
+        relation: =
+        uncertainty: 0.3462468098133512
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-6
+    evaluation_entry_id: MAT:0002:NUBASE2020:6:0
+  - A: 7
+    Z: 2
+    N: 5
+    state_index: 0
+    state_label: ground
+    source_label: 7He
+    mass_excess:
+      value: 26073
+      unit: keV
+      raw: "26073"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.51
+      unit: zs
+      raw: "2.51"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+      status: RADIOACTIVE
+    spin_parity_raw: (3/2)-
+    ensdf_update_year_raw: "03"
+    discovery_year_raw: "1967"
+    decay_and_abundance_raw: n=100
+    source_line: 46
+    raw_line: 007 0020   7He     26073          8                                     2.51  zs 0.07   (3/2)-        03          1967 n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.2761542552031655
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.007701513093315374
+      mean_lifetime:
+        value: 3.621164552631298
+        unit: zs
+        relation: =
+        uncertainty: 0.10098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-7
+    evaluation_entry_id: MAT:0002:NUBASE2020:7:0
+  - A: 8
+    Z: 2
+    N: 6
+    state_index: 0
+    state_label: ground
+    source_label: 8He
+    mass_excess:
+      value: 31609.68
+      unit: keV
+      raw: "31609.68"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 119.5
+      unit: ms
+      raw: "119.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1965"
+    decay_and_abundance_raw: B-=100;B-n=16 1;B-t=0.9 1
+    source_line: 52
+    raw_line: 008 0020   8He     31609.68       0.09                                119.5   ms 1.5    0+            05          1965
+      B-=100;B-n=16 1;B-t=0.9 1
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.005800394816401216
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0000728083031347433
+      mean_lifetime:
+        value: 172.40205738623112
+        unit: ms
+        relation: =
+        uncertainty: 2.1640425613334453
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-8
+    evaluation_entry_id: MAT:0002:NUBASE2020:8:0
+  - A: 9
+    Z: 2
+    N: 7
+    state_index: 0
+    state_label: ground
+    source_label: 9He
+    mass_excess:
+      value: 40940
+      unit: keV
+      raw: "40940"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.5
+      unit: zs
+      raw: "2.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.3"
+      uncertainty: 2.3
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2(+)
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1987"
+    decay_and_abundance_raw: n=100
+    source_line: 61
+    raw_line: 009 0020   9He     40940         50                                     2.5   zs 2.3    1/2(+)        06          1987 n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.2772588722239781
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.25507816244605985
+      mean_lifetime:
+        value: 3.6067376022224087
+        unit: zs
+        relation: =
+        uncertainty: 3.3181985940446155
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-9
+    evaluation_entry_id: MAT:0002:NUBASE2020:9:0
+  - A: 10
+    Z: 2
+    N: 8
+    state_index: 0
+    state_label: ground
+    source_label: 10He
+    mass_excess:
+      value: 49200
+      unit: keV
+      raw: "49200"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "90"
+      uncertainty: 90
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 260
+      unit: ys
+      raw: "260"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: 2n=100
+    source_line: 68
+    raw_line: 010 0020   10He    49200         90                                   260     ys 40     0+            07          1994 2n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.002665950694461328
+        unit: 1/ys
+        relation: =
+        uncertainty: 0.0004101462606863582
+      mean_lifetime:
+        value: 375.1007106311305
+        unit: ys
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0002:ISO:He-10
+    evaluation_entry_id: MAT:0002:NUBASE2020:10:0

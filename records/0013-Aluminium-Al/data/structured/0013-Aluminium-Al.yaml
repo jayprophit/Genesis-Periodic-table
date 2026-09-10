@@ -1,20 +1,91 @@
+mat_id: MAT:0013
+record_name: Aluminium
+symbol: Al
+record_class: CHEMICAL_ELEMENT
+atomic_number: 13
+legacy:
+  legacy_id: G0013
+  migration_status: CONTENT-MIGRATION-IN-PROGRESS
+identity:
+  proton_count: 13
+  neutral_electron_count: 13
+  period: 3
+  group: 13
+  block: p
+periodic_architecture:
+  period_3_position: 3
+  preceding_record:
+    id: MAT:0012
+    symbol: Mg
+    transition:
+      from: "[Ne]3s2"
+      to: "[Ne]3s2 3p1"
+  first_period_3_p_electron:
+    value: true
+  periodic_analogue:
+    id: MAT:0005
+    element: Boron
+    shared_group: 13
+  rule:
+    statement: >
+      Aluminium repeats the Group-13 valence-electron count of Boron at a larger shell scale but does not inherit
+      Boron's bulk structural or electronic behaviour unchanged.
+electronic_ground_state:
+  configuration: "[Ne]3s2 3p1"
+  term: 2P°1/2
+ionization_architecture:
+  Al_to_Al_plus:
+    ionization_energy:
+      value: 5.985769
+      uncertainty: 0.000003
+      unit: eV
+  Al_plus_to_Al_2plus:
+    parent_configuration: "[Ne]3s2"
+    ionization_energy:
+      value: 18.82855
+      uncertainty: 0.00005
+      unit: eV
+  Al_2plus_to_Al_3plus:
+    parent_configuration: "[Ne]3s"
+    ionization_energy:
+      value: 28.447642
+      uncertainty: 0.000025
+      unit: eV
+  Al_3plus:
+    electron_count: 10
+    configuration: "[Ne]"
+    closed_shell_core: true
+    isoelectronic_relationships:
+      - MAT:0010:ATOM:Ne
+      - MAT:0011:ION:Na+1
+      - MAT:0012:ION:Mg+2
+rules:
+  proton_count_defines_elemental_identity: true
+  ionization_changes_element_identity: false
+  Al3_plus_equals_neutral_Al: false
+  same_valence_count_means_same_material_behavior: false
+  bulk_Al_equals_Al3_plus: false
+  compound_property_equals_parent_element_property: false
+standard_atomic_weight:
+  value: 26.9815384
+  uncertainty: 3e-7
+  source_id: SRC-000281
+natural_isotope_architecture:
+  monoisotopic_normal_material: true
+  dominant_and_stable:
+    isotope_id: MAT:0013:ISO:Al-27
+    abundance_fraction: 1
+status: RESEARCHED-IN-PROGRESS
+source_ids:
+  - SRC-000279
+  - SRC-000280
+  - SRC-000281
 registry_id: MAT:0013:REG:MASTER
 record_id: MAT:0013
 record_version: 1.1.0
 created: 2026-09-08
 updated: 2026-09-08
-status: BASELINE
-record_class: CHEMICAL_ELEMENT
 schema_version: 1.0.0
-identity:
-  canonical_name: Aluminium
-  symbol: Al
-  atomic_number: 13
-  mat_id: MAT:0013
-  period: 3
-  group: 13
-  block: p
-  category: Post-Transition Metal
 properties:
   atomic_weight:
     value: 26.9815384
@@ -115,3 +186,12 @@ completeness:
   safety: PLANNED
   sources: PLANNED
   visuals: PLANNED
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/48.txt
+  source_sha256: 362af80a9d21ad40a3d6fe84e51331e0f425736b5ce4c7f442c689e070947fee
+  source_line: 12
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.
+scientific_validation_status: NEEDS-REVIEW

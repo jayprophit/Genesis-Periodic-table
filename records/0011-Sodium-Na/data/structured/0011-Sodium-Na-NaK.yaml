@@ -1,0 +1,41 @@
+material_id: MAT:MAT:NAK
+name: Sodium-Potassium Alloy
+parents:
+  - MAT:0011
+  - MAT:0019
+potassium_parent_status: RESERVED-PENDING-POTASSIUM
+classification:
+  - alkali_metal_alloy
+  - liquid_metal_family
+  - conductive_fluid
+eutectic_reference:
+  potassium_mass_fraction:
+    value: 0.778
+  sodium_mass_fraction:
+    value: 0.222
+property_model:
+  source_family: NaK Handbook / Argonne Cardinal
+  implemented_properties:
+    - density
+    - viscosity
+    - thermal_conductivity
+    - isobaric_heat_capacity
+safety:
+  reacts_with_water: true
+  reacts_with_air: true
+  handling_requires_specialized_controls: true
+principle:
+  statement: Composition can engineer melting behaviour without changing the constituent elements.
+rules:
+  NaK_equals_pure_Na: false
+  NaK_equals_pure_K: false
+  eutectic_composition_equals_all_NaK_compositions: false
+source_id: SRC-000227
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1176
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

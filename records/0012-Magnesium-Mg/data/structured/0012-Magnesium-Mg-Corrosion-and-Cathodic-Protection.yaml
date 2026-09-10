@@ -1,0 +1,69 @@
+registry_id: MAT:0012:REG:CORROSION
+record_id: MAT:0012
+metal_state:
+  species: Mg0
+anodic_reaction:
+  equation: Mg -> Mg2+ + 2e-
+  classification: OXIDATION
+aqueous_corrosion:
+  possible_products:
+    - Mg2_plus
+    - MgOH2
+    - hydrogen
+  surface_film:
+    may_include:
+      - MgO
+      - MgOH2
+      - carbonate_containing_species
+  protection:
+    perfect_passivation: false
+chloride_environment:
+  film_breakdown:
+    important: true
+  pitting:
+    possible: true
+  corrosion_rate:
+    environment_dependent: true
+sacrificial_anode:
+  principle:
+    description: >
+      Electrically couple a sufficiently active Mg alloy anode to the structure to be protected, causing the Mg alloy to
+      preferentially oxidize while supplying cathodic current to the protected structure.
+  standardized_product_class:
+    ASTM_B843:
+      current_revision: B843-18(2025)
+      magnesium_alloy_anodes: true
+  applications:
+    - buried_steel
+    - water_tanks
+    - selected_pipeline_systems
+    - marine_or_soil_cathodic_protection
+state_variables:
+  - alloy_composition
+  - chloride_concentration
+  - temperature
+  - pH
+  - water_chemistry
+  - surface_film
+  - galvanic_couple
+  - current_density
+  - geometry
+  - time
+MAT_principle:
+  statement: Corrosion can be intentionally redirected and used as an engineering function.
+rules:
+  corrosion_is_always_failure: false
+  magnesium_alloy_anode_equals_pure_magnesium: false
+  standard_specification_equals_guaranteed_system_performance: false
+  cathodic_protection_design_requires_environment_context: true
+source_ids:
+  - SRC-000271
+  - SRC-000277
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/52.txt
+  source_sha256: b861250812208c0efe06787d836f7fe1e0d32d119fe2ab1555c9118f53229c35
+  source_line: 346
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

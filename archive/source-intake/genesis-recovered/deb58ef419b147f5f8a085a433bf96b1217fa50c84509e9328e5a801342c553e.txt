@@ -1,0 +1,148 @@
+registry_id: "MAT:0013:REG:FCC-ELASTICITY"
+record_id: "MAT:0013"
+
+crystal_structure:
+
+  ambient:
+    crystal_system: "CUBIC"
+    Bravais_lattice: "FACE-CENTERED-CUBIC"
+    shorthand: "FCC"
+
+    close_packing:
+      type: "CUBIC-CLOSE-PACKED"
+      stacking_sequence: "ABCABC"
+
+    space_group:
+      Hermann_Mauguin: "Fm-3m"
+      number: 225
+
+    conventional_cell:
+      atoms_per_conventional_cell: 4
+
+    coordination_number:
+      value: 12
+
+lattice_parameter:
+
+  representative:
+    a:
+      value: 4.0495
+      unit: "angstrom"
+
+  equivalent:
+    a:
+      value: 404.95
+      unit: "pm"
+
+  qualifier:
+    exact_universal_value: false
+
+  dependencies:
+    - temperature
+    - pressure
+    - purity
+    - isotope_composition
+    - solute_content
+    - strain
+
+geometry:
+
+  nearest_neighbor_distance:
+    equation: "d_nn = a / sqrt(2)"
+
+    using_representative_a:
+      value: 2.86343
+      unit: "angstrom"
+
+  d_111:
+    equation: "d_111 = a / sqrt(3)"
+
+    using_representative_a:
+      value: 2.33798
+      unit: "angstrom"
+
+  d_200:
+    equation: "d_200 = a / 2"
+
+    using_representative_a:
+      value: 2.02475
+      unit: "angstrom"
+
+single_crystal_elasticity:
+
+  reference_temperature:
+    approximate_value: 300
+    unit: "K"
+
+  cubic_independent_constants:
+
+    C11:
+      value: 106.75
+      unit: "GPa"
+
+    C12:
+      value: 60.41
+      unit: "GPa"
+
+    C44:
+      value: 28.34
+      unit: "GPa"
+
+  Zener_anisotropy:
+
+    equation:
+      "A = 2*C44/(C11-C12)"
+
+    approximate_value:
+      value: 1.223
+
+    perfectly_isotropic_if:
+      value: 1
+
+    aluminium_perfectly_elastically_isotropic:
+      false
+
+quasi_isotropic_polycrystal_reference:
+
+  Young_modulus:
+    approximate_value: 70.8
+    unit: "GPa"
+
+  shear_modulus:
+    approximate_value: 26.2
+    unit: "GPa"
+
+  bulk_modulus:
+    approximate_value: 75.9
+    unit: "GPa"
+
+  Poisson_ratio:
+    approximate_value: 0.345
+
+interpretation:
+
+  cubic_symmetry_means_no_anisotropy:
+    false
+
+  single_crystal_direction_matters:
+    true
+
+  polycrystal_texture_can_create_macroscopic_anisotropy:
+    true
+
+  random_polycrystal_is_more_nearly_isotropic:
+    true
+
+rules:
+
+  lattice_parameter_requires_state_context: true
+
+  single_crystal_modulus_equals_all_polycrystal_moduli: false
+
+  elastic_constant_equals_plastic_strength: false
+
+  crystal_symmetry_equals_mechanical_isotropy: false
+
+source_ids:
+  - "SRC-000289"
+  - "SRC-000290"

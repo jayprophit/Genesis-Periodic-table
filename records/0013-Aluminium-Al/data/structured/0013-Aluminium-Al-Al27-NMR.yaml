@@ -1,0 +1,93 @@
+registry_id: MAT:0013:REG:AL27-NMR
+record_id: MAT:0013
+isotope_id: MAT:0013:ISO:Al-27
+nucleus:
+  abundance_fraction: 1
+  spin: 5/2
+  quadrupolar: true
+magnetic_resonance:
+  gyromagnetic_ratio_over_2pi:
+    approximate_value: 11.094
+    unit: MHz/T
+  Larmor_relation:
+    equation: nu_0 = (gamma / 2pi) * B_0
+  frequency_fixed_without_field:
+    value: false
+reference_frequency_ratio:
+  Xi_27Al:
+    value: 26.056859
+    unit: percent
+  conventional_reference:
+    material: Al(NO3)3
+    solvent: D2O
+    concentration:
+      approximate_value: 1.1
+      unit: mol/L
+quadrupole_architecture:
+  origin:
+    nuclear_spin_greater_than_half: true
+  couples_to:
+    - electric_field_gradient
+  observables:
+    - quadrupole_coupling
+    - line_broadening
+    - satellite_transitions
+    - second_order_line_shape
+    - site_symmetry_information
+  symmetry_dependence:
+    high_symmetry:
+      generally_reduces_EFG_effects: true
+    low_symmetry:
+      can_broaden_spectrum_strongly: true
+transitions:
+  total_allowed_delta_m_plus_minus_1:
+    count: 5
+  central_transition:
+    from: +1/2
+    to: -1/2
+  satellite_pairs:
+    count: 2
+materials_information:
+  NMR_can_probe:
+    - coordination_environment
+    - local_symmetry
+    - disorder
+    - crystallographic_sites
+    - phase_identity
+    - chemical_shift
+    - quadrupolar_interaction
+    - metallic_Knight_shift
+  metallic_aluminium:
+    Knight_shift:
+      approximate_value: 1640
+      uncertainty: 10
+      unit: ppm
+      context_dependent: true
+quadrupole_moment:
+  commonly_used_value:
+    approximate_value: 146.6
+    unit: millibarn
+  newer_calculation_recommendations_exist: true
+  rule:
+    reference_value_must_be_stated_when_high_precision_is_required: true
+rules:
+  Al27_NMR_frequency_is_constant: false
+  resonance_frequency_requires:
+    - magnetic_field
+    - reference_convention
+    - chemical_environment
+  chemical_shift_is_element_constant: false
+  quadrupolar_linewidth_is_element_constant: false
+  same_Al_coordination_means_identical_spectrum: false
+  metallic_Al_shift_equals_Al3_plus_shift: false
+source_ids:
+  - SRC-000283
+  - SRC-000286
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/49.txt
+  source_sha256: 9dd82277cc3de3dd242f14c7fb81f4a775c6bad890bfbb29e9b691c435ad4740
+  source_line: 932
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

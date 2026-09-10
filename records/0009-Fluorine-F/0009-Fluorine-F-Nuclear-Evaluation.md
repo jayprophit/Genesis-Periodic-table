@@ -1,0 +1,52 @@
+# Fluorine — Evaluated Nuclear States
+
+<!-- generated-by: sync-nuclear-evaluation.mjs -->
+
+**MAT Core Data · dated evaluation.** 25 nuclear states are transcribed from NUBASE2020, published in 2021. This is a reproducible source extraction, not independent experimental validation or a claim that later research is complete.
+
+- [Parent Fluorine record](0009-Fluorine-F.md)
+- [Structured evaluation](data/isotopes/0009-Fluorine-F-NUBASE2020-Evaluation.yaml)
+- [Retained original source](../../data/catalog/sources/nubase_4.mas20.txt)
+- [Evaluation paper](https://doi.org/10.1088/1674-1137/abddae) · SRC-000008
+
+## How to read this table
+
+A is the mass number; N is the neutron count. Ground states, isomers, levels and isobaric analogue states retain the source state index. Mass excess is in keV, not atomic mass units. A `#` means an estimate from systematics; `?`, inequalities, asymmetric uncertainty text and spin qualifiers are preserved. `stbl` means stable in this evaluation, `p-unst` means particle unstable. Blank source fields remain unavailable. The final column preserves decay/abundance notation without equating decay branching with natural abundance.
+
+## Nuclear state catalogue
+
+| Nuclide / state | N | Mass excess | Half-life | Spin / parity | Decay or abundance (source text) | Source line |
+|---|---:|---|---|---|---|---:|
+| 13F | 4 | 42030# keV (unc. 500#) | UNAVAILABLE | 1/2+# | p ? | 109 |
+| 14F | 5 | 31960 keV (unc. 40) | 500 ys (unc. 60) | 2- | p ? | 119 |
+| 15F | 6 | 16567 keV (unc. 14) | 1.1 zs (unc. 0.3) | 1/2+ | p=100 | 127 |
+| 16F | 7 | 10675 keV (unc. 5) | 21 zs (unc. 5) | 0- | p=100 | 139 |
+| 17F | 8 | 1951.70 keV (unc. 0.25) | 64.370 s (unc. 0.027) | 5/2+ | B+=100 | 146 |
+| 17F · i [8] | 8 | 13144.7 keV (unc. 1.9) | UNAVAILABLE | 1/2-    T=3/2 | UNAVAILABLE | 147 |
+| 18F | 9 | 873.1 keV (unc. 0.5) | 109.734 m (unc. 0.008) | 1+ | B+=100 | 155 |
+| 18F · m [1] | 9 | 1994.5 keV (unc. 0.5) | 162 ns (unc. 7) | 5+ | IT=100 | 156 |
+| 18F · i [8] | 9 | 1914.7 keV (unc. 0.5) | UNAVAILABLE | 0+      T=1 | IT=100 | 157 |
+| 19F | 10 | -1487.4451 keV (unc. 0.0008) | stbl | 1/2+* | IS=100 | 164 |
+| 19F · i [8] | 10 | 6052.2 keV (unc. 0.9) | UNAVAILABLE | 5/2+    T=3/2 | IT=100 | 165 |
+| 20F | 11 | -17.463 keV (unc. 0.030) | 11.0062 s (unc. 0.0080) | 2+ | B-=100 | 174 |
+| 20F · i [8] | 11 | 6503 keV (unc. 3) | UNAVAILABLE | 0+      T=2 | UNAVAILABLE | 175 |
+| 21F | 12 | -47.6 keV (unc. 1.8) | 4.158 s (unc. 0.020) | 5/2+ | B-=100 | 186 |
+| 22F | 13 | 2793 keV (unc. 12) | 4.23 s (unc. 0.04) | (4+) | B-=100;B-n<11 | 196 |
+| 23F | 14 | 3290 keV (unc. 30) | 2.23 s (unc. 0.14) | 5/2+ | B-=100;B-n<14 | 209 |
+| 24F | 15 | 7540 keV (unc. 100) | 384 ms (unc. 16) | 3+ | B-=100;B-n<5.9 | 221 |
+| 25F | 16 | 11330 keV (unc. 100) | 80 ms (unc. 9) | (5/2+) | B-=100;B-n=23.1 45;B-2n ? | 236 |
+| 26F | 17 | 18670 keV (unc. 110) | 8.2 ms (unc. 0.9) | 1+ | B-=100;B-n=13.5 40;B-2n ? | 246 |
+| 26F · m [1] | 17 | 19310 keV (unc. 110) | 2.2 ms (unc. 0.1) | (4+) | IT=82 11;B-=?;B-n=12 8 | 247 |
+| 27F | 18 | 25130 keV (unc. 120) | 5.0 ms (unc. 0.2) | 5/2+# | B-=100;B-n=77 21;B-2n ? | 260 |
+| 28F | 19 | 33400 keV (unc. 120) | 46 zs | (4-) | n=100 | 272 |
+| 29F | 20 | 40150 keV (unc. 530) | 2.5 ms (unc. 0.3) | (5/2+) | B-=100;B-n=60 40;B-2n ? | 286 |
+| 30F | 21 | 48960# keV (unc. 500#) | UNAVAILABLE | UNAVAILABLE | n ? | 298 |
+| 31F | 22 | 56840# keV (unc. 540#) | 2# ms (unc. >260ns) | 5/2+# | B- ?;B-n ?;B-2n ? | 309 |
+
+## Provenance and review
+
+Source snapshot SHA-256: `1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859`. Retrieved 2026-09-08. Every structured entry preserves the original line and its line number. The parser is checked against the source's published column specification and representative ground states, isomers, estimates and stable states. Post-2020 findings and supplied research batches retain separate provenance and review status.
+
+## Derived decay metrics
+
+The structured evaluation now includes a decay constant and mean lifetime for each positive numeric half-life. These use the single exponential model, \(\lambda=\ln(2)/T_{1/2}\) and \(\tau=T_{1/2}/\ln(2)\). Values retain the original time unit: a half-life in years produces a rate per source year, without silently assuming a calendar conversion. Inequalities reverse for the reciprocal decay constant. Estimates remain estimates. Stable or unavailable half-lives have no numeric result. Symmetric uncertainty is propagated to first order; asymmetric source uncertainties remain unpropagated and visible. These calculations add no new experimental evidence or significant figures.

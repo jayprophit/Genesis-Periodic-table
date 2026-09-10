@@ -1248,3 +1248,7 @@ visuals:
 NIST gives neutral Nitrogen as `1s²2s²2p³`, \(^{4}S^\circ_{3/2}\), with first ionisation energy **14.53413 ± 0.00004 eV**; its isotope table gives ¹⁴N mass `14.00307400443(20) u`, ¹⁵N `15.00010889888(64) u`, representative compositions `0.99636(20)` and `0.00364(20)`, and standard atomic weight `[14.00643,14.00728]`. ([NIST][1])
 
 The NIST molecular compilation gives ground-state \(N_2\) \(X\,^1\Sigma_g^+\) with \(\omega_e=2358.57\ {\rm cm^{-1}}\), \(B_e=1.998241\ {\rm cm^{-1}}\), and \(r_e\approx1.097685\) Å. ([NIST WebBook][2]) NOAA gives **78.084% N₂ by volume in dry atmosphere**. ([NOAA][3])
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0007-Nitrogen-N-Nuclear-Evaluation.md) provides 23 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

@@ -1,5 +1,153 @@
-record_id: "MAT:0012"
-manifest_id: "MAT:0012:REG:RELATIONSHIPS"
-version: "1.0.0"
-
-relationships: []
+registry_id: MAT:0012:REG:RELATIONSHIPS
+record_id: MAT:0012
+version: 1.0.0
+relationships:
+  - relationship_id: MAT:0012:REL:0001
+    source: MAT:0012
+    type: PERIODIC-ANALOGUE
+    target: MAT:0004
+    target_status: RESOLVED
+    shared_outer_pattern: ns2
+  - relationship_id: MAT:0012:REL:0002
+    source: MAT:0011
+    type: PERIOD-3-SEQUENCE
+    target: MAT:0012
+    transition: 3s1 -> 3s2
+  - relationship_id: MAT:0012:REL:0010
+    source: MAT:0012:ION:Mg+2
+    type: ISOELECTRONIC-WITH
+    target: MAT:0010:ATOM:Ne
+    electron_count: 10
+  - relationship_id: MAT:0012:REL:0011
+    source: MAT:0012:ION:Mg+2
+    type: ISOELECTRONIC-WITH
+    target: MAT:0011:ION:Na+1
+    electron_count: 10
+  - relationship_id: MAT:0012:REL:0020
+    source: MAT:0012:ISO:Mg-27
+    type: DECAYS-TO
+    target: MAT:0013:ISO:Al-27
+    mechanism: BETA-MINUS
+    target_status: RESERVED-PENDING-ALUMINIUM
+  - relationship_id: MAT:0012:REL:0021
+    source: MAT:0012:ISO:Mg-28
+    type: DECAYS-TO
+    target: MAT:0013:ISO:Al-28
+    mechanism: BETA-MINUS
+    target_status: RESERVED-PENDING-ALUMINIUM
+  - relationship_id: MAT:0012:REL:0022
+    source: MAT:0013:ISO:Al-26
+    type: DECAYS-TO
+    target: MAT:0012:ISO:Mg-26
+    target_status: RESERVED-PENDING-ALUMINIUM
+    role: EARLY-SOLAR-SYSTEM-CHRONOMETER
+  - relationship_id: MAT:0012:REL:0030
+    source:
+      - MAT:0012
+      - MAT:0001
+    type: FORMS-HYDRIDE
+    target: MAT:CMP:MgH2
+    target_status: RESOLVED
+  - relationship_id: MAT:0012:REL:0040
+    source:
+      - MAT:0012
+      - MAT:0005
+    type: FORMS-SUPERCONDUCTING-COMPOUND
+    target: MAT:CMP:MgB2
+    target_status: RESOLVED
+  - relationship_id: MAT:0012:REL:0041
+    source: BORON-ISOTOPE-MASS
+    type: MODULATES
+    target: MgB2-Tc
+    mechanism: PHONON-ISOTOPE-EFFECT
+  - relationship_id: MAT:0012:REL:0050
+    source:
+      - MAT:0012
+      - MAT:0006
+    type: ORGANOMETALLIC-CARBON-CHEMISTRY
+    target: GRIGNARD-FAMILY
+    target_status: RESOLVED
+  - relationship_id: MAT:0012:REL:0051
+    source: MAT:0012
+    type: FORMS-CARBONATE
+    target: MAT:CMP:MgCO3
+  - relationship_id: MAT:0012:REL:0060
+    source:
+      - MAT:0012
+      - MAT:0007
+    type: FORMS-NITRIDE
+    target: MAT:CMP:Mg3N2
+  - relationship_id: MAT:0012:REL:0070
+    source:
+      - MAT:0012
+      - MAT:0008
+    type: FORMS-OXIDE
+    target: MAT:CMP:MgO
+  - relationship_id: MAT:0012:REL:0071
+    source: MAT:0012
+    type: FORMS-HYDROXIDE
+    target: MAT:CMP:Mg(OH)2
+  - relationship_id: MAT:0012:REL:0080
+    source:
+      - MAT:0012
+      - MAT:0009
+    type: FORMS-FLUORIDE
+    target: MAT:CMP:MgF2
+  - relationship_id: MAT:0012:REL:0081
+    source: MAT:0012
+    type: FORMS-CHLORIDE
+    target: MAT:CMP:MgCl2
+    target_status: RESERVED-PENDING-CHLORINE
+  - relationship_id: MAT:0012:REL:0090
+    source: MAT:0012:ION:Mg+2
+    type: COORDINATES
+    target: ATP
+    object: MgATP
+  - relationship_id: MAT:0012:REL:0091
+    source: MAT:0012:ION:Mg+2
+    type: CENTRAL-METAL-IN
+    target: CHLOROPHYLL
+  - relationship_id: MAT:0012:REL:0100
+    source: MAT:0012:ION:Mg+2
+    type: MOBILE-MULTIVALENT-ION-IN
+    target: MAGNESIUM-BATTERY-MATERIALS
+  - relationship_id: MAT:0012:REL:0101
+    source: MAT:0012
+    type: SACRIFICIAL-ANODE-FOR
+    target: CATHODICALLY-PROTECTED-METAL
+  - relationship_id: MAT:0012:REL:0110
+    source: MAT:0012:PHASE:HCP-MG
+    type: PRESSURE-TRANSFORMS-TO
+    target: MAT:0012:PHASE:BCC-MG
+  - relationship_id: MAT:0012:REL:0120
+    source:
+      - MAT:0010:ISO:Ne-22
+      - alpha
+    type: ALPHA-NEUTRON-REACTION
+    target: MAT:0012:ISO:Mg-25
+    coproduct: neutron
+  - relationship_id: MAT:0012:REL:0121
+    source:
+      - MAT:0010:ISO:Ne-22
+      - alpha
+    type: ALPHA-GAMMA-REACTION
+    target: MAT:0012:ISO:Mg-26
+  - relationship_id: MAT:0012:REL:0999
+    source: MAT:0012
+    type: LEGACY-SUCCESSOR-OF
+    target: G0012
+rules:
+  nuclear_and_chemical_edges_are_distinct: true
+  parent_element_property_is_not_compound_property: true
+  same_Mg2_plus_state_does_not_imply_same_coordination: true
+  isotope_effect_does_not_change_element_identity: true
+  graph_is_exhaustive: false
+manifest_id: MAT:0012:REG:RELATIONSHIPS
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/52.txt
+  source_sha256: b861250812208c0efe06787d836f7fe1e0d32d119fe2ab1555c9118f53229c35
+  source_line: 438
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

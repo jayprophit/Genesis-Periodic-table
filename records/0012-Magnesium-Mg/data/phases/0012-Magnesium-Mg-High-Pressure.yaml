@@ -1,0 +1,58 @@
+registry_id: MAT:0012:REG:HIGH-PRESSURE
+record_id: MAT:0012
+ambient:
+  structure: HCP
+room_temperature_transition:
+  target: BCC
+  experimental_onset_values:
+    broad_phase_diagram_study:
+      approximate_value: 45
+      unit: GPa
+    single_crystal_2023:
+      value: 56.6
+      uncertainty: 2
+      unit: GPa
+  interpretation:
+    source_condition_dependent: true
+  variables:
+    - hydrostaticity
+    - pressure_medium
+    - crystal_orientation
+    - deformation
+    - kinetics
+    - temperature
+bcc:
+  experimentally_observed: true
+  high_pressure_stability:
+    measured_to:
+      value: 211
+      unit: GPa
+    temperature_reference:
+      value: 300
+      unit: K
+high_temperature:
+  melting_curve:
+    measured_to_pressure:
+      value: 105
+      unit: GPa
+  possible_additional_phase_near:
+    pressure:
+      approximate_value: 10
+      unit: GPa
+    temperature:
+      approximate_value: 1200
+      unit: K
+    status: INCOMPLETELY-RESOLVED
+rules:
+  transition_pressure_is_one_exact_constant: false
+  theoretical_phase_prediction_equals_measurement: false
+  shock_transition_pressure_equals_static_transition_pressure: false
+source_id: SRC-000263
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1810
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

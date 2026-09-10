@@ -25,7 +25,7 @@ MAT:0000 — Origin State
 
 ## Child Records
 
-None yet.
+[Evaluated nuclear states](0117-Tennessine-Ts-Nuclear-Evaluation.md) · source evaluation and structured isotope data.
 
 ## Related Records
 
@@ -105,8 +105,7 @@ Electronic configuration: **[Rn]7s2 7p5 5f14 6d10 (predicted)** (PREDICTED; PUBC
 <!-- MAT-VISUAL: V05 -->
 ```
 
-| Isotope | Protons | Neutrons | Stability | Half-Life | Abundance |
-|---|---:|---:|---|---|---|
+[Evaluated nuclear states](0117-Tennessine-Ts-Nuclear-Evaluation.md) provides 4 states from NUBASE2020, including ground states and separately indexed excited states. The linked table preserves half-lives, uncertainties, qualifiers and source lines. Later measurements and wider nuclear research still require review.
 
 ---
 
@@ -361,7 +360,7 @@ NOT-SUPPORTED
 
 ```yaml
 identity: CURATED
-nuclear: PLANNED
+nuclear: PARTIAL # NUBASE2020 reference available; later research and curation pending
 quantum: PLANNED
 spectral: PLANNED
 electrical: PLANNED
@@ -387,3 +386,7 @@ visuals: PLANNED
 | 1.0.0 | 2026-09-08 | Initial baseline scaffold (superseded numeric claims; retained in Git history) |
 
 | 1.1.0 | 2026-09-08 | Source-backed baseline correction: PubChem/CIAAW, null semantics, prediction labels |
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0117-Tennessine-Ts-Nuclear-Evaluation.md) provides 4 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

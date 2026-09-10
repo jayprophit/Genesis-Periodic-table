@@ -5,8 +5,8 @@
   "title": "0006 — Carbon — C",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "# 0006 — Carbon — C\n\n```yaml\nmat_id: MAT:0006\nrecord_name: Carbon\nsymbol: C\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 6\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0006\nlegacy_name: Carbon\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0005\n0005-Boron-B\n```\n\nCurrent:\n\n```text\nMAT:0006\n0006-Carbon-C\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                       | Value              |\n| ------------------------------ | ------------------ |\n| Element                        | Carbon             |\n| Symbol                         | C                  |\n| Atomic number                  | 6                  |\n| Protons                        | 6                  |\n| Neutral electrons              | 6                  |\n| Period                         | 2                  |\n| Group                          | 14                 |\n| Block                          | p                  |\n| Ground configuration           | 1s²2s²2p²          |\n| Ground level                   | ³P₀                |\n| Standard atomic weight         | [12.0096, 12.0116] |\n| Principal stable isotopes      | ¹²C, ¹³C           |\n| Important natural radionuclide | ¹⁴C                |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000080\n```\n\n---\n\n# 2. First Four-Valence-Electron Reference\n\nCarbon has:\n\n$$\n1s^22s^22p^2\n$$\n\nwith four valence electrons.\n\nThis produces enormous bonding flexibility.\n\nMAT therefore activates a particularly broad bonding state space:\n\n```text\nsingle bonds\ndouble bonds\ntriple bonds\naromatic / delocalized systems\nextended covalent networks\nconjugated systems\ncluster/cage structures\nlayered networks\nlinear chains\n```\n\n---\n\n# 3. First Ionisation\n\n$$\nC\\rightarrow C^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n11.2602880\\pm0.0000011\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0006:ION:C+1\n```\n\n---\n\n# 4. Ionisation Ladder\n\nNIST evaluated ionisation energies include:\n\n$$\nC^+\\rightarrow C^{2+}\n$$\n\n$$\n24.383143\\pm0.000012\\ {\\rm eV}\n$$\n\n$$\nC^{2+}\\rightarrow C^{3+}\n$$\n\n$$\n47.88778\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nC^{3+}\\rightarrow C^{4+}\n$$\n\n$$\n64.49352\\pm0.00019\\ {\\rm eV}\n$$\n\nHigher removal from the 1s shell requires approximately:\n\n$$\n392.09056\\ {\\rm eV}\n$$\n\nand:\n\n$$\n489.99320779\\ {\\rm eV}\n$$\n\nCanonical states:\n\n```text\nMAT:0006:ATOM:C\nMAT:0006:ION:C+1\nMAT:0006:ION:C+2\nMAT:0006:ION:C+3\nMAT:0006:ION:C+4\nMAT:0006:ION:C+5\nMAT:0006:ION:C+6\n```\n\n---\n\n# 5. Standard Atomic Weight\n\nCarbon has a standard atomic-weight interval:\n\n$$\n[12.0096,\\ 12.0116]\n$$\n\nbecause natural isotope ratios can vary.\n\nRepresentative compositions:\n\n$$\n{}^{12}C=0.9893(8)\n$$\n\n$$\n{}^{13}C=0.0107(8)\n$$\n\nThese are representative values, not universal isotope ratios for every Carbon sample.\n\n---\n\n# 6. Carbon-12 — Mass Reference\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-12\n```\n\nFor the unified atomic mass unit / dalton:\n\n$$\n1u\n=\n\\frac1{12}\nm({}^{12}C)\n$$\n\nwhere the reference is a free neutral Carbon-12 atom at rest and in its ground state.\n\nConsequently:\n\n$$\nm_r({}^{12}C)=12\n$$\n\nexactly in unified atomic mass units.\n\nThis makes Carbon-12 a special MAT **measurement-reference node**.\n\nSource:\n\n```text\nSRC-000081\n```\n\n---\n\n# 7. Carbon-13 — Nuclear-Spin Tool\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-13\n```\n\nRelative atomic mass:\n\n$$\n13.00335483507(23)\\ u\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nTherefore ¹³C is NMR active.\n\nImportant uses include:\n\n```text\nmolecular structure determination\nmetabolic tracing\nisotope labeling\nreaction-mechanism studies\nmaterials characterization\n```\n\nBy contrast:\n\n$$\n{}^{12}C:\\ I=0\n$$\n\nin its nuclear ground state.\n\nThus:\n\n$$\n\\boxed{\n\\text{one neutron difference}\n\\rightarrow\n\\text{new measurement capability}\n}\n$$\n\nwithout fundamentally changing ordinary Carbon chemistry.\n\n---\n\n# 8. Carbon-14\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-14\n```\n\nRelative atomic mass:\n\n$$\n14.0032419884(40)\\ u\n$$\n\nDecay:\n\n$$\n{}^{14}C\n\\rightarrow\n{}^{14}N\n+\ne^-\n+\n\\bar\\nu_e\n$$\n\nClassification:\n\n```text\nBETA-MINUS RADIOACTIVE\nCOSMOGENIC\nLONG-LIVED\n```\n\n---\n\n# 9. Carbon-14 Half-Life Convention\n\nMAT must not silently merge different radiocarbon conventions.\n\nAn IAEA reference-material value uses:\n\n$$\nt_{1/2}\n=\n5700\\pm30\\ {\\rm y}\n$$\n\nwhile modern explanatory sources commonly quote approximately:\n\n$$\n5730\\ {\\rm y}\n$$\n\nSeparately, traditional **conventional radiocarbon ages** historically use the Libby half-life:\n\n$$\n5568\\ {\\rm y}\n$$\n\nas a dating convention.\n\nTherefore MAT stores:\n\n```yaml\nphysical_half_life:\n  value: 5700\n  uncertainty: 30\n  unit: y\n  source_id: SRC-000082\n\nradiocarbon_age_convention:\n  libby_half_life:\n    value: 5568\n    unit: y\n    classification: METHOD-CONVENTION\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{physical decay parameter}\n\\neq\n\\text{historical dating convention}\n}\n$$\n\n---\n\n# 10. Radiocarbon Clock\n\nRadioactive decay may be written:\n\n$$\nN(t)=N_0e^{-\\lambda t}\n$$\n\nwith:\n\n$$\n\\lambda=\\frac{\\ln2}{t_{1/2}}\n$$\n\nor equivalently:\n\n$$\nN(t)\n=\nN_0\\,2^{-t/t_{1/2}}\n$$\n\nCarbon-14 therefore provides MAT with a geological, archaeological and environmental time coordinate.\n\n---\n\n# 11. Carbon-11\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-11\n```\n\nCarbon-11 is a short-lived positron-emitting radionuclide with a half-life of roughly 20 minutes.\n\nApplications include:\n\n```text\nPET imaging\nradiotracing\nbiochemical studies\n```\n\nThis creates a strong functional contrast:\n\n```text\n11C → short timescale / high temporal activity / imaging\n\n14C → long timescale / dating / tracing\n```\n\nSame element.\n\nDifferent nuclear tools.\n\n---\n\n# 12. Isotope Architecture\n\nCurrent NIST mass tables list Carbon nuclides from:\n\n$$\n{}^8C\n$$\n\nthrough:\n\n$$\n{}^{23}C\n$$\n\nin the present dataset.\n\nOnly:\n\n```text\n12C\n13C\n```\n\nare stable.\n\nThe remaining mass numbers include combinations of:\n\n```text\nbeta emitters\npositron emitters\nproton-rich states\nneutron-rich states\nunbound resonances\nvery short-lived nuclei\n```\n\nThe full registry will keep those semantics explicit.\n\n---\n\n# 13. Triple-Alpha Closure\n\nBeryllium's nuclear forward reference now closes.\n\nFirst:\n\n$$\n{}^4He+{}^4He\n\\rightleftharpoons\n{}^8Be\n$$\n\nthen:\n\n$$\n{}^8Be+{}^4He\n\\rightarrow\n{}^{12}C^*\n$$\n\nfollowed by electromagnetic de-excitation toward:\n\n$$\n{}^{12}C\n$$\n\nThis gives:\n\n```text\nMAT:0002 Helium\n→ MAT:0004 Beryllium\n→ MAT:0006 Carbon\n```\n\na resolved nuclear pathway.\n\n---\n\n# 14. Hoyle-State Relationship\n\nAn important excited state of Carbon-12 occurs near:\n\n$$\n7.654\\ {\\rm MeV}\n$$\n\nand plays a major role in stellar triple-alpha Carbon production.\n\nCanonical future state:\n\n```text\nMAT:0006:QSTATE:C12-HOYLE\n```\n\nIt is an excited **nuclear state**, not an atomic electron state.\n\n---\n\n# 15. Nuclear Geometry\n\nModels of ¹²C nuclear structure can involve alpha-cluster organization.\n\nMAT must distinguish:\n\n```text\nNUCLEAR CLUSTER GEOMETRY\n```\n\nfrom:\n\n```text\nATOMIC ORBITAL GEOMETRY\nMOLECULAR GEOMETRY\nCRYSTAL GEOMETRY\n```\n\nCarbon will ultimately contain geometric descriptors across all four scales.\n\n---\n\n# 16. Bonding Geometry\n\nA useful chemical bonding model distinguishes:\n\n### sp-like coordination\n\n$$\n\\theta\\approx180^\\circ\n$$\n\nLinear.\n\n### sp²-like coordination\n\n$$\n\\theta\\approx120^\\circ\n$$\n\nTrigonal planar.\n\n### sp³-like coordination\n\n$$\n\\theta\\approx109.47^\\circ\n$$\n\nTetrahedral.\n\nThese are idealized local bonding descriptors.\n\nMAT does not treat hybrid orbitals as rigid classical objects.\n\n---\n\n# 17. Dimensionality\n\nCarbon is the first MAT element to strongly occupy all major structural dimensionalities.\n\n### 0D\n\n```text\nfullerenes\ncarbon quantum dots\nmolecular cages\n```\n\n### 1D\n\n```text\ncarbon nanotubes\nnanoribbons / chains\n```\n\n### 2D\n\n```text\ngraphene\nfew-layer graphene systems\n```\n\n### 3D\n\n```text\ndiamond\ngraphite crystals\namorphous networks\nporous carbon\nengineered composites\n```\n\nImportant classification correction:\n\n```text\ncarbon fibre\nactivated carbon\nporous carbon\n```\n\nare engineered material/morphology families and should not automatically be labeled fundamental crystalline allotropes.\n\n---\n\n# 18. Diamond\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:DIAMOND\n```\n\nPrincipal bonding descriptor:\n\n```text\nsp3-like tetrahedral network\n```\n\nImportant properties include:\n\n```text\nwide band gap\nextreme hardness\nhigh thermal conductivity in suitable high-purity states\nelectrical insulation when sufficiently pure\nbroad optical transmission\n```\n\nA familiar first-order Raman feature lies near:\n\n$$\n1332\\ {\\rm cm^{-1}}\n$$\n\nunder appropriate conditions.\n\n---\n\n# 19. Graphite\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nPrincipal structure:\n\n```text\nstacked sp2-bonded carbon sheets\n```\n\nGraphite introduces strong anisotropy:\n\n$$\n\\sigma_\\parallel\\neq\\sigma_\\perp\n$$\n\nand:\n\n$$\n\\kappa_\\parallel\\neq\\kappa_\\perp\n$$\n\nTherefore:\n\n$$\n\\boxed{\n\\text{property value}\n+\n\\text{measurement direction}\n}\n$$\n\nmust be stored together.\n\n---\n\n# 20. Graphene\n\nCanonical material/allotrope state:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHENE\n```\n\nGraphene is a one-atom-thick honeycomb Carbon sheet.\n\nRelevant characteristics include:\n\n```text\ntwo-dimensional structure\nsp2 bonding\nDirac-like electronic dispersion\nhigh in-plane strength\nhigh in-plane thermal transport\nhigh surface area\nstrong dependence on defects/doping/substrate\n```\n\nGraphene properties must specify:\n\n```text\nlayer number\nstrain\ndefects\ndoping\nsubstrate\ntemperature\nmeasurement method\n```\n\n---\n\n# 21. Carbon Nanotubes\n\nCanonical family:\n\n```text\nMAT:0006:MAT:CNT\n```\n\nA nanotube can be described using a chiral vector:\n\n$$\n(n,m)\n$$\n\nElectronic character can change with chirality.\n\nThus:\n\n$$\n\\boxed{\n\\text{similar composition}\n+\n\\text{different topology}\n\\rightarrow\n\\text{different electronic behaviour}\n}\n$$\n\nThis is one of MAT's strongest topology examples.\n\n---\n\n# 22. Fullerenes\n\nCanonical family:\n\n```text\nMAT:0006:MOL:FULLERENE\n```\n\nExamples include:\n\n```text\nC60\nC70\nhigher fullerene cages\n```\n\nThese are finite molecular cage structures.\n\nThey should not be assigned graphite or graphene bulk properties merely because every atom is Carbon.\n\n---\n\n# 23. Amorphous Carbon\n\nCanonical material family:\n\n```text\nMAT:0006:MAT:AMORPHOUS-CARBON\n```\n\nAmorphous Carbon does not possess the long-range translational order of a crystal.\n\nIts properties depend strongly on:\n\n```text\nsp2/sp3 fraction\nhydrogen content\ndensity\ndefects\nprocessing\ntemperature\ndeposition conditions\n```\n\nSubclasses may later include:\n\n```text\ndiamond-like carbon\nhydrogenated amorphous carbon\nglassy carbon\nsoot-related structures\n```\n\nas separate states.\n\n---\n\n# 24. Electronic-State Spectrum\n\nCarbon is perhaps MAT's clearest proof that atomic identity alone does not determine bulk conductivity.\n\nExamples:\n\n```text\ndiamond\n→ wide-gap insulating/semiconducting state\n\ngraphite\n→ semimetallic / conducting state\n\ngraphene\n→ Dirac-like zero-gap electronic system\n\nCNT\n→ metallic or semiconducting depending on chirality\n\namorphous carbon\n→ strongly process-dependent\n```\n\nTherefore:\n\n$$\nE_C\n=\nF(\n\\text{structure},\n\\text{bonding},\n\\text{defects},\n\\text{dopants},\n\\text{dimension},\nT,\nP\n)\n$$\n\n---\n\n# 25. Frequency Architecture\n\nCarbon has no single inherent frequency.\n\nMechanisms include:\n\n```text\natomic transitions\nmolecular vibrations\nRaman modes\nphonons\nelectronic excitations\nnuclear magnetic resonance\nplasma emission\nacoustic modes\n```\n\nGraphitic Raman features often include the families commonly called:\n\n```text\nD\nG\n2D\n```\n\nbut their exact positions depend on:\n\n```text\nstrain\ndefects\ndoping\ntemperature\nlayer number\nexcitation wavelength\n```\n\nTherefore spectra are state fingerprints, not universal element frequencies.\n\n---\n\n# 26. Spectroscopy as Feedback\n\nCarbon strongly validates a MAT feedback loop:\n\n$$\n\\boxed{\n\\text{process material}\n\\rightarrow\n\\text{measure spectrum}\n\\rightarrow\n\\text{infer structure/state}\n}\n$$\n\nThis can connect:\n\n```text\nRaman\nIR\nXPS\nNMR\noptical spectroscopy\ndiffraction\n```\n\nto process history and material state.\n\n---\n\n# 27. Magnetic Architecture\n\nCarbon again prohibits one magnetic label.\n\nExamples may include:\n\n```text\ndiamond → predominantly diamagnetic bulk response\ngraphite → strongly anisotropic magnetic response\ndefect-rich carbon → possible local magnetic moments\ndoped carbon → altered electronic/spin states\n```\n\nTherefore:\n\n$$\nM_C\n=\nF(\n\\text{allotrope},\n\\text{defects},\n\\text{dopants},\n\\text{orientation},\nT,\nB\n)\n$$\n\n---\n\n# 28. Organic Chemistry Hub\n\nCarbon's ability to form strong C–C and heteroatom bonds creates enormous molecular diversity.\n\nImportant families include:\n\n```text\nhydrocarbons\nalcohols\ncarbonyl compounds\ncarboxylic acids\namines\ncarbohydrates\nlipids\npeptides/proteins\nnucleic-acid components\npolymers\npharmaceuticals\norganic semiconductors\n```\n\nThese belong to compound/molecular records rather than being flattened into the elemental record.\n\n---\n\n# 29. Carbon–Hydrogen Relationship\n\nCanonical relationship:\n\n```text\nMAT:0006\nCHEMICAL-BONDS-WITH\nMAT:0001\n```\n\nC–H bonds are foundational to organic chemistry.\n\nOther H–C mechanisms include:\n\n```text\nH2 adsorption on porous carbon\nhydrocarbon chemistry\nhydrogenated amorphous carbon\npolymer chemistry\nbiological molecules\nplasma-surface interactions\n```\n\nLegacy speculative H–C harmonic/octave ideas remain in a separate historical/hypothesis layer.\n\nMeasured C–H chemistry does **not** prove an octave mechanism.\n\n---\n\n# 30. Carbon–Lithium Relationship\n\nGraphitic Carbon can host Lithium.\n\nA highly lithiated ideal graphite composition is:\n\n$$\nLiC_6\n$$\n\nRelationship:\n\n```text\nMAT:0003 Lithium\n↔\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nMechanism:\n\n```text\nINTERCALATION\n```\n\nThis resolves Lithium's earlier Carbon forward reference once the Carbon record exists.\n\n---\n\n# 31. Carbon–Boron Relationship\n\nImportant families include:\n\n```text\nB4C\nboron-doped diamond\nboron-doped graphitic carbon\nboron-containing carbon networks\n```\n\nTherefore:\n\n```text\nMAT:0005\n↔\nMAT:0006\n```\n\ncontains separate:\n\n```text\nceramic\ndopant\nelectronic\nstructural\nsuperconductivity-related\n```\n\nedges.\n\n---\n\n# 32. Carbon–Oxygen Chemistry\n\nComplete oxidation:\n\n$$\nC+O_2\n\\rightarrow\nCO_2\n$$\n\nOxygen-limited chemistry may produce:\n\n$$\n2C+O_2\n\\rightarrow\n2CO\n$$\n\nThese products have radically different biological and safety profiles.\n\nThus:\n\n```text\nCARBON OXIDATION\n```\n\nmust include product identity and environment.\n\n---\n\n# 33. Transformation, Not Disappearance\n\nCombustion illustrates:\n\n$$\nC_{\\rm solid}\n\\rightarrow\nCO_2\n$$\n\nThe Carbon nuclei remain Carbon.\n\nThe system changes:\n\n```text\nbonding\noxidation state\nphase\nmolecular identity\nlocation\nenergy distribution\n```\n\nsubject to full conservation and mass-energy accounting.\n\nThis is a scientifically useful Causali E transformation example.\n\n---\n\n# 34. Planetary Carbon Cycle\n\nCarbon requires a planetary-scale process layer.\n\nSimplified network:\n\n```text\natmospheric CO2\n↔ photosynthesis\n↔ biomass\n↔ respiration / decomposition\n↔ CO2\n```\n\nplus:\n\n```text\noceanic dissolved carbon\ncarbonate chemistry\nsediments\ncarbonate minerals\nfossil carbon\nsoil carbon\nmantle/geological carbon\nanthropogenic emissions\n```\n\nThe Carbon cycle therefore spans:\n\n```text\nmolecular\nbiological\necosystem\noceanic\natmospheric\ngeological\nplanetary\n```\n\nscales.\n\n---\n\n# 35. Biological Architecture\n\nCarbon is a central structural element of known terrestrial organic life.\n\nThe major biological network includes:\n\n$$\nC-H-O-N-P-S\n$$\n\nCarbon appears in:\n\n```text\ncarbohydrates\nlipids\namino acids\nproteins\nnucleic acids\nmetabolites\nsignalling molecules\nstructural biomolecules\n```\n\nThis does not imply that every Carbon material is biologically compatible.\n\n---\n\n# 36. Material Engineering Hub\n\nImportant future Carbon material relationships include:\n\n```text\nC + Si → SiC\nC + Fe → steels / cast irons\nC + Ti → TiC\nC + W → WC\nC + Ta → TaC\nC + Hf → HfC\nC + B → B4C\n```\n\nThe effect of Carbon can be large even at small concentration.\n\nThis creates a canonical materials-design principle:\n\n$$\n\\boxed{\n\\text{small composition change}\n\\rightarrow\n\\text{large phase/property change}\n}\n$$\n\n---\n\n# 37. Porous Carbon\n\nPorous/activated Carbon demonstrates:\n\n$$\n\\text{composition nearly unchanged}\n+\n\\text{microstructure redesigned}\n\\rightarrow\n\\text{large surface-area change}\n$$\n\nApplications can include:\n\n```text\nadsorption\nfiltration\nelectrodes\nsupercapacitors\ncatalyst supports\ngas storage\nbattery systems\n```\n\nSurface area and pore distribution must be explicit material metrics.\n\n---\n\n# 38. Main Carbon Result\n\nCarbon gives MAT its strongest structure–property demonstration yet:\n\n$$\n\\boxed{\n\\text{element}\n+\n\\text{bonding}\n+\n\\text{geometry}\n+\n\\text{dimension}\n+\n\\text{defects}\n+\n\\text{process}\n=\n\\text{material behaviour}\n}\n$$\n\nChanging no proton count while rearranging Carbon can produce:\n\n```text\ndiamond\ngraphite\ngraphene\nnanotube\nfullerene\namorphous carbon\nporous carbon\ncarbon fibre\n```\n\nwith radically different macroscopic properties.\n\nThis is foundational for future inverse material design.\n\n---\n\n# 39. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  metrology_architecture: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  topology_architecture: \"PASS\"\n  dimensionality_architecture: \"PASS\"\n  nanocarbon_architecture: \"PASS\"\n  organic_architecture: \"PASS\"\n  transport_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  carbon_cycle_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe atomic values above are from NIST ASD: Carbon is `1s²2s²2p²`, \\(^{3}P_0\\), with first ionisation energy **11.2602880 ± 0.0000011 eV** and the higher ionisation ladder shown above. ([NIST][1]) NIST gives ¹²C abundance `0.9893(8)`, ¹³C `0.0107(8)`, and the standard atomic-weight interval `[12.0096,12.0116]`. ([NIST][2])\n\nThe SI Brochure still defines the dalton/unified atomic mass unit as **one twelfth of the mass of a free Carbon-12 atom at rest in its ground state**, so the legacy Carbon-12 measurement-reference idea remains scientifically valid. ([BIPM][3])\n",
-  "bodyHash": "baf1f49bf85a8b250b3d56c2620af1b8e87908075d5db41dae26a1b198ebfed2",
+  "body": "# 0006 — Carbon — C\n\n```yaml\nmat_id: MAT:0006\nrecord_name: Carbon\nsymbol: C\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 6\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0006\nlegacy_name: Carbon\nreference_implementation:\n  - MAT:0001\n  - MAT:0002\n  - MAT:0003\n  - MAT:0004\n  - MAT:0005\n```\n\n# 0. Record Navigation\n\nPrevious:\n\n```text\nMAT:0005\n0005-Boron-B\n```\n\nCurrent:\n\n```text\nMAT:0006\n0006-Carbon-C\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                       | Value              |\n| ------------------------------ | ------------------ |\n| Element                        | Carbon             |\n| Symbol                         | C                  |\n| Atomic number                  | 6                  |\n| Protons                        | 6                  |\n| Neutral electrons              | 6                  |\n| Period                         | 2                  |\n| Group                          | 14                 |\n| Block                          | p                  |\n| Ground configuration           | 1s²2s²2p²          |\n| Ground level                   | ³P₀                |\n| Standard atomic weight         | [12.0096, 12.0116] |\n| Principal stable isotopes      | ¹²C, ¹³C           |\n| Important natural radionuclide | ¹⁴C                |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000080\n```\n\n---\n\n# 2. First Four-Valence-Electron Reference\n\nCarbon has:\n\n$$\n1s^22s^22p^2\n$$\n\nwith four valence electrons.\n\nThis produces enormous bonding flexibility.\n\nMAT therefore activates a particularly broad bonding state space:\n\n```text\nsingle bonds\ndouble bonds\ntriple bonds\naromatic / delocalized systems\nextended covalent networks\nconjugated systems\ncluster/cage structures\nlayered networks\nlinear chains\n```\n\n---\n\n# 3. First Ionisation\n\n$$\nC\\rightarrow C^+ +e^-\n$$\n\nNIST ASD:\n\n$$\nE_{I1}\n=\n11.2602880\\pm0.0000011\\ {\\rm eV}\n$$\n\nCanonical child:\n\n```text\nMAT:0006:ION:C+1\n```\n\n---\n\n# 4. Ionisation Ladder\n\nNIST evaluated ionisation energies include:\n\n$$\nC^+\\rightarrow C^{2+}\n$$\n\n$$\n24.383143\\pm0.000012\\ {\\rm eV}\n$$\n\n$$\nC^{2+}\\rightarrow C^{3+}\n$$\n\n$$\n47.88778\\pm0.00025\\ {\\rm eV}\n$$\n\n$$\nC^{3+}\\rightarrow C^{4+}\n$$\n\n$$\n64.49352\\pm0.00019\\ {\\rm eV}\n$$\n\nHigher removal from the 1s shell requires approximately:\n\n$$\n392.09056\\ {\\rm eV}\n$$\n\nand:\n\n$$\n489.99320779\\ {\\rm eV}\n$$\n\nCanonical states:\n\n```text\nMAT:0006:ATOM:C\nMAT:0006:ION:C+1\nMAT:0006:ION:C+2\nMAT:0006:ION:C+3\nMAT:0006:ION:C+4\nMAT:0006:ION:C+5\nMAT:0006:ION:C+6\n```\n\n---\n\n# 5. Standard Atomic Weight\n\nCarbon has a standard atomic-weight interval:\n\n$$\n[12.0096,\\ 12.0116]\n$$\n\nbecause natural isotope ratios can vary.\n\nRepresentative compositions:\n\n$$\n{}^{12}C=0.9893(8)\n$$\n\n$$\n{}^{13}C=0.0107(8)\n$$\n\nThese are representative values, not universal isotope ratios for every Carbon sample.\n\n---\n\n# 6. Carbon-12 — Mass Reference\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-12\n```\n\nFor the unified atomic mass unit / dalton:\n\n$$\n1u\n=\n\\frac1{12}\nm({}^{12}C)\n$$\n\nwhere the reference is a free neutral Carbon-12 atom at rest and in its ground state.\n\nConsequently:\n\n$$\nm_r({}^{12}C)=12\n$$\n\nexactly in unified atomic mass units.\n\nThis makes Carbon-12 a special MAT **measurement-reference node**.\n\nSource:\n\n```text\nSRC-000081\n```\n\n---\n\n# 7. Carbon-13 — Nuclear-Spin Tool\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-13\n```\n\nRelative atomic mass:\n\n$$\n13.00335483507(23)\\ u\n$$\n\nNuclear spin:\n\n$$\nI=\\frac12\n$$\n\nTherefore ¹³C is NMR active.\n\nImportant uses include:\n\n```text\nmolecular structure determination\nmetabolic tracing\nisotope labeling\nreaction-mechanism studies\nmaterials characterization\n```\n\nBy contrast:\n\n$$\n{}^{12}C:\\ I=0\n$$\n\nin its nuclear ground state.\n\nThus:\n\n$$\n\\boxed{\n\\text{one neutron difference}\n\\rightarrow\n\\text{new measurement capability}\n}\n$$\n\nwithout fundamentally changing ordinary Carbon chemistry.\n\n---\n\n# 8. Carbon-14\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-14\n```\n\nRelative atomic mass:\n\n$$\n14.0032419884(40)\\ u\n$$\n\nDecay:\n\n$$\n{}^{14}C\n\\rightarrow\n{}^{14}N\n+\ne^-\n+\n\\bar\\nu_e\n$$\n\nClassification:\n\n```text\nBETA-MINUS RADIOACTIVE\nCOSMOGENIC\nLONG-LIVED\n```\n\n---\n\n# 9. Carbon-14 Half-Life Convention\n\nMAT must not silently merge different radiocarbon conventions.\n\nAn IAEA reference-material value uses:\n\n$$\nt_{1/2}\n=\n5700\\pm30\\ {\\rm y}\n$$\n\nwhile modern explanatory sources commonly quote approximately:\n\n$$\n5730\\ {\\rm y}\n$$\n\nSeparately, traditional **conventional radiocarbon ages** historically use the Libby half-life:\n\n$$\n5568\\ {\\rm y}\n$$\n\nas a dating convention.\n\nTherefore MAT stores:\n\n```yaml\nphysical_half_life:\n  value: 5700\n  uncertainty: 30\n  unit: y\n  source_id: SRC-000082\n\nradiocarbon_age_convention:\n  libby_half_life:\n    value: 5568\n    unit: y\n    classification: METHOD-CONVENTION\n```\n\nCore rule:\n\n$$\n\\boxed{\n\\text{physical decay parameter}\n\\neq\n\\text{historical dating convention}\n}\n$$\n\n---\n\n# 10. Radiocarbon Clock\n\nRadioactive decay may be written:\n\n$$\nN(t)=N_0e^{-\\lambda t}\n$$\n\nwith:\n\n$$\n\\lambda=\\frac{\\ln2}{t_{1/2}}\n$$\n\nor equivalently:\n\n$$\nN(t)\n=\nN_0\\,2^{-t/t_{1/2}}\n$$\n\nCarbon-14 therefore provides MAT with a geological, archaeological and environmental time coordinate.\n\n---\n\n# 11. Carbon-11\n\nCanonical ID:\n\n```text\nMAT:0006:ISO:C-11\n```\n\nCarbon-11 is a short-lived positron-emitting radionuclide with a half-life of roughly 20 minutes.\n\nApplications include:\n\n```text\nPET imaging\nradiotracing\nbiochemical studies\n```\n\nThis creates a strong functional contrast:\n\n```text\n11C → short timescale / high temporal activity / imaging\n\n14C → long timescale / dating / tracing\n```\n\nSame element.\n\nDifferent nuclear tools.\n\n---\n\n# 12. Isotope Architecture\n\nCurrent NIST mass tables list Carbon nuclides from:\n\n$$\n{}^8C\n$$\n\nthrough:\n\n$$\n{}^{23}C\n$$\n\nin the present dataset.\n\nOnly:\n\n```text\n12C\n13C\n```\n\nare stable.\n\nThe remaining mass numbers include combinations of:\n\n```text\nbeta emitters\npositron emitters\nproton-rich states\nneutron-rich states\nunbound resonances\nvery short-lived nuclei\n```\n\nThe full registry will keep those semantics explicit.\n\n---\n\n# 13. Triple-Alpha Closure\n\nBeryllium's nuclear forward reference now closes.\n\nFirst:\n\n$$\n{}^4He+{}^4He\n\\rightleftharpoons\n{}^8Be\n$$\n\nthen:\n\n$$\n{}^8Be+{}^4He\n\\rightarrow\n{}^{12}C^*\n$$\n\nfollowed by electromagnetic de-excitation toward:\n\n$$\n{}^{12}C\n$$\n\nThis gives:\n\n```text\nMAT:0002 Helium\n→ MAT:0004 Beryllium\n→ MAT:0006 Carbon\n```\n\na resolved nuclear pathway.\n\n---\n\n# 14. Hoyle-State Relationship\n\nAn important excited state of Carbon-12 occurs near:\n\n$$\n7.654\\ {\\rm MeV}\n$$\n\nand plays a major role in stellar triple-alpha Carbon production.\n\nCanonical future state:\n\n```text\nMAT:0006:QSTATE:C12-HOYLE\n```\n\nIt is an excited **nuclear state**, not an atomic electron state.\n\n---\n\n# 15. Nuclear Geometry\n\nModels of ¹²C nuclear structure can involve alpha-cluster organization.\n\nMAT must distinguish:\n\n```text\nNUCLEAR CLUSTER GEOMETRY\n```\n\nfrom:\n\n```text\nATOMIC ORBITAL GEOMETRY\nMOLECULAR GEOMETRY\nCRYSTAL GEOMETRY\n```\n\nCarbon will ultimately contain geometric descriptors across all four scales.\n\n---\n\n# 16. Bonding Geometry\n\nA useful chemical bonding model distinguishes:\n\n### sp-like coordination\n\n$$\n\\theta\\approx180^\\circ\n$$\n\nLinear.\n\n### sp²-like coordination\n\n$$\n\\theta\\approx120^\\circ\n$$\n\nTrigonal planar.\n\n### sp³-like coordination\n\n$$\n\\theta\\approx109.47^\\circ\n$$\n\nTetrahedral.\n\nThese are idealized local bonding descriptors.\n\nMAT does not treat hybrid orbitals as rigid classical objects.\n\n---\n\n# 17. Dimensionality\n\nCarbon is the first MAT element to strongly occupy all major structural dimensionalities.\n\n### 0D\n\n```text\nfullerenes\ncarbon quantum dots\nmolecular cages\n```\n\n### 1D\n\n```text\ncarbon nanotubes\nnanoribbons / chains\n```\n\n### 2D\n\n```text\ngraphene\nfew-layer graphene systems\n```\n\n### 3D\n\n```text\ndiamond\ngraphite crystals\namorphous networks\nporous carbon\nengineered composites\n```\n\nImportant classification correction:\n\n```text\ncarbon fibre\nactivated carbon\nporous carbon\n```\n\nare engineered material/morphology families and should not automatically be labeled fundamental crystalline allotropes.\n\n---\n\n# 18. Diamond\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:DIAMOND\n```\n\nPrincipal bonding descriptor:\n\n```text\nsp3-like tetrahedral network\n```\n\nImportant properties include:\n\n```text\nwide band gap\nextreme hardness\nhigh thermal conductivity in suitable high-purity states\nelectrical insulation when sufficiently pure\nbroad optical transmission\n```\n\nA familiar first-order Raman feature lies near:\n\n$$\n1332\\ {\\rm cm^{-1}}\n$$\n\nunder appropriate conditions.\n\n---\n\n# 19. Graphite\n\nCanonical allotrope:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nPrincipal structure:\n\n```text\nstacked sp2-bonded carbon sheets\n```\n\nGraphite introduces strong anisotropy:\n\n$$\n\\sigma_\\parallel\\neq\\sigma_\\perp\n$$\n\nand:\n\n$$\n\\kappa_\\parallel\\neq\\kappa_\\perp\n$$\n\nTherefore:\n\n$$\n\\boxed{\n\\text{property value}\n+\n\\text{measurement direction}\n}\n$$\n\nmust be stored together.\n\n---\n\n# 20. Graphene\n\nCanonical material/allotrope state:\n\n```text\nMAT:0006:ALLOTROPE:GRAPHENE\n```\n\nGraphene is a one-atom-thick honeycomb Carbon sheet.\n\nRelevant characteristics include:\n\n```text\ntwo-dimensional structure\nsp2 bonding\nDirac-like electronic dispersion\nhigh in-plane strength\nhigh in-plane thermal transport\nhigh surface area\nstrong dependence on defects/doping/substrate\n```\n\nGraphene properties must specify:\n\n```text\nlayer number\nstrain\ndefects\ndoping\nsubstrate\ntemperature\nmeasurement method\n```\n\n---\n\n# 21. Carbon Nanotubes\n\nCanonical family:\n\n```text\nMAT:0006:MAT:CNT\n```\n\nA nanotube can be described using a chiral vector:\n\n$$\n(n,m)\n$$\n\nElectronic character can change with chirality.\n\nThus:\n\n$$\n\\boxed{\n\\text{similar composition}\n+\n\\text{different topology}\n\\rightarrow\n\\text{different electronic behaviour}\n}\n$$\n\nThis is one of MAT's strongest topology examples.\n\n---\n\n# 22. Fullerenes\n\nCanonical family:\n\n```text\nMAT:0006:MOL:FULLERENE\n```\n\nExamples include:\n\n```text\nC60\nC70\nhigher fullerene cages\n```\n\nThese are finite molecular cage structures.\n\nThey should not be assigned graphite or graphene bulk properties merely because every atom is Carbon.\n\n---\n\n# 23. Amorphous Carbon\n\nCanonical material family:\n\n```text\nMAT:0006:MAT:AMORPHOUS-CARBON\n```\n\nAmorphous Carbon does not possess the long-range translational order of a crystal.\n\nIts properties depend strongly on:\n\n```text\nsp2/sp3 fraction\nhydrogen content\ndensity\ndefects\nprocessing\ntemperature\ndeposition conditions\n```\n\nSubclasses may later include:\n\n```text\ndiamond-like carbon\nhydrogenated amorphous carbon\nglassy carbon\nsoot-related structures\n```\n\nas separate states.\n\n---\n\n# 24. Electronic-State Spectrum\n\nCarbon is perhaps MAT's clearest proof that atomic identity alone does not determine bulk conductivity.\n\nExamples:\n\n```text\ndiamond\n→ wide-gap insulating/semiconducting state\n\ngraphite\n→ semimetallic / conducting state\n\ngraphene\n→ Dirac-like zero-gap electronic system\n\nCNT\n→ metallic or semiconducting depending on chirality\n\namorphous carbon\n→ strongly process-dependent\n```\n\nTherefore:\n\n$$\nE_C\n=\nF(\n\\text{structure},\n\\text{bonding},\n\\text{defects},\n\\text{dopants},\n\\text{dimension},\nT,\nP\n)\n$$\n\n---\n\n# 25. Frequency Architecture\n\nCarbon has no single inherent frequency.\n\nMechanisms include:\n\n```text\natomic transitions\nmolecular vibrations\nRaman modes\nphonons\nelectronic excitations\nnuclear magnetic resonance\nplasma emission\nacoustic modes\n```\n\nGraphitic Raman features often include the families commonly called:\n\n```text\nD\nG\n2D\n```\n\nbut their exact positions depend on:\n\n```text\nstrain\ndefects\ndoping\ntemperature\nlayer number\nexcitation wavelength\n```\n\nTherefore spectra are state fingerprints, not universal element frequencies.\n\n---\n\n# 26. Spectroscopy as Feedback\n\nCarbon strongly validates a MAT feedback loop:\n\n$$\n\\boxed{\n\\text{process material}\n\\rightarrow\n\\text{measure spectrum}\n\\rightarrow\n\\text{infer structure/state}\n}\n$$\n\nThis can connect:\n\n```text\nRaman\nIR\nXPS\nNMR\noptical spectroscopy\ndiffraction\n```\n\nto process history and material state.\n\n---\n\n# 27. Magnetic Architecture\n\nCarbon again prohibits one magnetic label.\n\nExamples may include:\n\n```text\ndiamond → predominantly diamagnetic bulk response\ngraphite → strongly anisotropic magnetic response\ndefect-rich carbon → possible local magnetic moments\ndoped carbon → altered electronic/spin states\n```\n\nTherefore:\n\n$$\nM_C\n=\nF(\n\\text{allotrope},\n\\text{defects},\n\\text{dopants},\n\\text{orientation},\nT,\nB\n)\n$$\n\n---\n\n# 28. Organic Chemistry Hub\n\nCarbon's ability to form strong C–C and heteroatom bonds creates enormous molecular diversity.\n\nImportant families include:\n\n```text\nhydrocarbons\nalcohols\ncarbonyl compounds\ncarboxylic acids\namines\ncarbohydrates\nlipids\npeptides/proteins\nnucleic-acid components\npolymers\npharmaceuticals\norganic semiconductors\n```\n\nThese belong to compound/molecular records rather than being flattened into the elemental record.\n\n---\n\n# 29. Carbon–Hydrogen Relationship\n\nCanonical relationship:\n\n```text\nMAT:0006\nCHEMICAL-BONDS-WITH\nMAT:0001\n```\n\nC–H bonds are foundational to organic chemistry.\n\nOther H–C mechanisms include:\n\n```text\nH2 adsorption on porous carbon\nhydrocarbon chemistry\nhydrogenated amorphous carbon\npolymer chemistry\nbiological molecules\nplasma-surface interactions\n```\n\nLegacy speculative H–C harmonic/octave ideas remain in a separate historical/hypothesis layer.\n\nMeasured C–H chemistry does **not** prove an octave mechanism.\n\n---\n\n# 30. Carbon–Lithium Relationship\n\nGraphitic Carbon can host Lithium.\n\nA highly lithiated ideal graphite composition is:\n\n$$\nLiC_6\n$$\n\nRelationship:\n\n```text\nMAT:0003 Lithium\n↔\nMAT:0006:ALLOTROPE:GRAPHITE\n```\n\nMechanism:\n\n```text\nINTERCALATION\n```\n\nThis resolves Lithium's earlier Carbon forward reference once the Carbon record exists.\n\n---\n\n# 31. Carbon–Boron Relationship\n\nImportant families include:\n\n```text\nB4C\nboron-doped diamond\nboron-doped graphitic carbon\nboron-containing carbon networks\n```\n\nTherefore:\n\n```text\nMAT:0005\n↔\nMAT:0006\n```\n\ncontains separate:\n\n```text\nceramic\ndopant\nelectronic\nstructural\nsuperconductivity-related\n```\n\nedges.\n\n---\n\n# 32. Carbon–Oxygen Chemistry\n\nComplete oxidation:\n\n$$\nC+O_2\n\\rightarrow\nCO_2\n$$\n\nOxygen-limited chemistry may produce:\n\n$$\n2C+O_2\n\\rightarrow\n2CO\n$$\n\nThese products have radically different biological and safety profiles.\n\nThus:\n\n```text\nCARBON OXIDATION\n```\n\nmust include product identity and environment.\n\n---\n\n# 33. Transformation, Not Disappearance\n\nCombustion illustrates:\n\n$$\nC_{\\rm solid}\n\\rightarrow\nCO_2\n$$\n\nThe Carbon nuclei remain Carbon.\n\nThe system changes:\n\n```text\nbonding\noxidation state\nphase\nmolecular identity\nlocation\nenergy distribution\n```\n\nsubject to full conservation and mass-energy accounting.\n\nThis is a scientifically useful Causali E transformation example.\n\n---\n\n# 34. Planetary Carbon Cycle\n\nCarbon requires a planetary-scale process layer.\n\nSimplified network:\n\n```text\natmospheric CO2\n↔ photosynthesis\n↔ biomass\n↔ respiration / decomposition\n↔ CO2\n```\n\nplus:\n\n```text\noceanic dissolved carbon\ncarbonate chemistry\nsediments\ncarbonate minerals\nfossil carbon\nsoil carbon\nmantle/geological carbon\nanthropogenic emissions\n```\n\nThe Carbon cycle therefore spans:\n\n```text\nmolecular\nbiological\necosystem\noceanic\natmospheric\ngeological\nplanetary\n```\n\nscales.\n\n---\n\n# 35. Biological Architecture\n\nCarbon is a central structural element of known terrestrial organic life.\n\nThe major biological network includes:\n\n$$\nC-H-O-N-P-S\n$$\n\nCarbon appears in:\n\n```text\ncarbohydrates\nlipids\namino acids\nproteins\nnucleic acids\nmetabolites\nsignalling molecules\nstructural biomolecules\n```\n\nThis does not imply that every Carbon material is biologically compatible.\n\n---\n\n# 36. Material Engineering Hub\n\nImportant future Carbon material relationships include:\n\n```text\nC + Si → SiC\nC + Fe → steels / cast irons\nC + Ti → TiC\nC + W → WC\nC + Ta → TaC\nC + Hf → HfC\nC + B → B4C\n```\n\nThe effect of Carbon can be large even at small concentration.\n\nThis creates a canonical materials-design principle:\n\n$$\n\\boxed{\n\\text{small composition change}\n\\rightarrow\n\\text{large phase/property change}\n}\n$$\n\n---\n\n# 37. Porous Carbon\n\nPorous/activated Carbon demonstrates:\n\n$$\n\\text{composition nearly unchanged}\n+\n\\text{microstructure redesigned}\n\\rightarrow\n\\text{large surface-area change}\n$$\n\nApplications can include:\n\n```text\nadsorption\nfiltration\nelectrodes\nsupercapacitors\ncatalyst supports\ngas storage\nbattery systems\n```\n\nSurface area and pore distribution must be explicit material metrics.\n\n---\n\n# 38. Main Carbon Result\n\nCarbon gives MAT its strongest structure–property demonstration yet:\n\n$$\n\\boxed{\n\\text{element}\n+\n\\text{bonding}\n+\n\\text{geometry}\n+\n\\text{dimension}\n+\n\\text{defects}\n+\n\\text{process}\n=\n\\text{material behaviour}\n}\n$$\n\nChanging no proton count while rearranging Carbon can produce:\n\n```text\ndiamond\ngraphite\ngraphene\nnanotube\nfullerene\namorphous carbon\nporous carbon\ncarbon fibre\n```\n\nwith radically different macroscopic properties.\n\nThis is foundational for future inverse material design.\n\n---\n\n# 39. Current Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\n\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\n\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  isotope_semantics: \"PASS\"\n  nuclear_architecture: \"PASS\"\n  metrology_architecture: \"PASS\"\n  allotrope_architecture: \"PASS\"\n  topology_architecture: \"PASS\"\n  dimensionality_architecture: \"PASS\"\n  nanocarbon_architecture: \"PASS\"\n  organic_architecture: \"PASS\"\n  transport_architecture: \"PASS\"\n  spectral_architecture: \"PASS\"\n  biological_architecture: \"PASS\"\n  carbon_cycle_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\n\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nThe atomic values above are from NIST ASD: Carbon is `1s²2s²2p²`, \\(^{3}P_0\\), with first ionisation energy **11.2602880 ± 0.0000011 eV** and the higher ionisation ladder shown above. ([NIST][1]) NIST gives ¹²C abundance `0.9893(8)`, ¹³C `0.0107(8)`, and the standard atomic-weight interval `[12.0096,12.0116]`. ([NIST][2])\n\nThe SI Brochure still defines the dalton/unified atomic mass unit as **one twelfth of the mass of a free Carbon-12 atom at rest in its ground state**, so the legacy Carbon-12 measurement-reference idea remains scientifically valid. ([BIPM][3])\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0006-Carbon-C-Nuclear-Evaluation.md) provides 21 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "46e2e41600b258952c30671df25e4bfda0d80af53a4e0613473b66b10b5f5e8e",
   "header": {
     "mat_id": "MAT:0006",
     "record_name": "Carbon",
@@ -785,6 +785,1364 @@
           "radiocarbon_convention_equals_physical_half_life": false,
           "mass_table_entry_equals_stable_bound_nuclide": false
         }
+      }
+    },
+    {
+      "path": "records/0006-Carbon-C/data/isotopes/0006-Carbon-C-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0006:REG:NUBASE2020",
+        "record_id": "MAT:0006",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 8,
+            "Z": 6,
+            "N": 2,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "8C",
+            "mass_excess": {
+              "value": 35064,
+              "unit": "keV",
+              "raw": "35064",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "18",
+              "uncertainty": 18
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 3.5,
+              "unit": "zs",
+              "raw": "3.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.4",
+              "uncertainty": 1.4,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "18",
+            "discovery_year_raw": "1974",
+            "decay_and_abundance_raw": "2p=100",
+            "source_line": 60,
+            "raw_line": "008 0060   8C      35064         18                                     3.5   zs 1.4    0+            18          1974 2p=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.19804205158855578,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.07921682063542232
+              },
+              "mean_lifetime": {
+                "value": 5.0494326431113725,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 2.019773057244549
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-8",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:8:0"
+          },
+          {
+            "A": 9,
+            "Z": 6,
+            "N": 3,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "9C",
+            "mass_excess": {
+              "value": 28911,
+              "unit": "keV",
+              "raw": "28911.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.1",
+              "uncertainty": 2.1
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 126.5,
+              "unit": "ms",
+              "raw": "126.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.9",
+              "uncertainty": 0.9,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1964",
+            "decay_and_abundance_raw": "B+=100;B+p=7.5 6;B+A=38.4 16",
+            "source_line": 67,
+            "raw_line": "009 0060   9C      28911.0        2.1                                 126.5   ms 0.9    3/2-          06          1964 B+=100;B+p=7.5 6;B+A=38.4 16",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.005479424352252532,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.000038984046774919195
+              },
+              "mean_lifetime": {
+                "value": 182.50092267245387,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 1.2984255368000672
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-9",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:9:0"
+          },
+          {
+            "A": 10,
+            "Z": 6,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "10C",
+            "mass_excess": {
+              "value": 15698.67,
+              "unit": "keV",
+              "raw": "15698.67",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.07",
+              "uncertainty": 0.07
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 19.3011,
+              "unit": "s",
+              "raw": "19.3011",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0015",
+              "uncertainty": 0.0015,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "1949",
+            "decay_and_abundance_raw": "B+=100",
+            "source_line": 76,
+            "raw_line": "010 0060   10C     15698.67       0.07                                 19.3011 s 0.0015 0+            07          1949 B+=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.03591231487117031,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0000027909534848664303
+              },
+              "mean_lifetime": {
+                "value": 27.845601253701975,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.002164042561333445
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-10",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:10:0"
+          },
+          {
+            "A": 11,
+            "Z": 6,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "11C",
+            "mass_excess": {
+              "value": 10649.4,
+              "unit": "keV",
+              "raw": "10649.40",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.06",
+              "uncertainty": 0.06
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 20.3402,
+              "unit": "m",
+              "raw": "20.3402",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0053",
+              "uncertainty": 0.0053,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-*",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1934",
+            "decay_and_abundance_raw": "B+=100",
+            "source_line": 84,
+            "raw_line": "011 0060   11C     10649.40       0.06                                 20.3402 m 0.0053 3/2-*         12          1934 B+=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.034077697395303155,
+                "unit": "1/m",
+                "relation": "=",
+                "uncertainty": 0.000008879548686596333
+              },
+              "mean_lifetime": {
+                "value": 29.344705670689695,
+                "unit": "m",
+                "relation": "=",
+                "uncertainty": 0.007646283716711506
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-11",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:11:0"
+          },
+          {
+            "A": 11,
+            "Z": 6,
+            "N": 5,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "11C",
+            "mass_excess": {
+              "value": 22810,
+              "unit": "keV",
+              "raw": "22810",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "40",
+              "uncertainty": 40
+            },
+            "excitation_energy": {
+              "value": 12160,
+              "unit": "keV",
+              "raw": "12160",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "40",
+              "uncertainty": 40
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1/2+    T=3/2",
+            "ensdf_update_year_raw": "12",
+            "discovery_year_raw": "1971",
+            "decay_and_abundance_raw": "p=?",
+            "source_line": 85,
+            "raw_line": "011 0068   11C  i  22810         40       12160         40       RQ                     1/2+    T=3/2 12          1971 p=?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-11i",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:11:8"
+          },
+          {
+            "A": 12,
+            "Z": 6,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "12C",
+            "mass_excess": {
+              "value": 0,
+              "unit": "keV",
+              "raw": "0.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0",
+              "uncertainty": 0
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1919",
+            "decay_and_abundance_raw": "IS=98.94 6",
+            "source_line": 94,
+            "raw_line": "012 0060   12C         0.0        0.0                                 stbl              0+            17          1919 IS=98.94 6",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-12",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:12:0"
+          },
+          {
+            "A": 12,
+            "Z": 6,
+            "N": 6,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "12C",
+            "mass_excess": {
+              "value": 15108,
+              "unit": "keV",
+              "raw": "15108",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_energy": {
+              "value": 15108,
+              "unit": "keV",
+              "raw": "15108",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1+      T=1",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=?;A ?",
+            "source_line": 95,
+            "raw_line": "012 0068   12C  i  15108          3       15108          3       RQ                     1+      T=1   17               IT=?;A ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-12i",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:12:8"
+          },
+          {
+            "A": 12,
+            "Z": 6,
+            "N": 6,
+            "state_index": 9,
+            "state_label": "j",
+            "source_label": "12C",
+            "mass_excess": {
+              "value": 27595,
+              "unit": "keV",
+              "raw": "27595.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.4",
+              "uncertainty": 2.4
+            },
+            "excitation_energy": {
+              "value": 27595,
+              "unit": "keV",
+              "raw": "27595.0",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.4",
+              "uncertainty": 2.4
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "0+      T=2",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "",
+            "source_line": 96,
+            "raw_line": "012 0069   12C  j  27595.0        2.4     27595.0        2.4     RQ                     0+      T=2   17               ",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-12j",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:12:9"
+          },
+          {
+            "A": 13,
+            "Z": 6,
+            "N": 7,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "13C",
+            "mass_excess": {
+              "value": 3125.0093,
+              "unit": "keV",
+              "raw": "3125.0093",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.0002",
+              "uncertainty": 0.0002
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "1/2-*",
+            "ensdf_update_year_raw": "01",
+            "discovery_year_raw": "1929",
+            "decay_and_abundance_raw": "IS=1.06 6",
+            "source_line": 104,
+            "raw_line": "013 0060   13C      3125.0093     0.0002                              stbl              1/2-*         01          1929 IS=1.06 6",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-13",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:13:0"
+          },
+          {
+            "A": 13,
+            "Z": 6,
+            "N": 7,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "13C",
+            "mass_excess": {
+              "value": 18233.8,
+              "unit": "keV",
+              "raw": "18233.8",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.1",
+              "uncertainty": 1.1
+            },
+            "excitation_energy": {
+              "value": 15108.8,
+              "unit": "keV",
+              "raw": "15108.8",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.1",
+              "uncertainty": 1.1
+            },
+            "excitation_origin": "RQ",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "3/2-    T=3/2",
+            "ensdf_update_year_raw": "00",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "IT=0.82 7;n ?;A ?",
+            "source_line": 105,
+            "raw_line": "013 0068   13C  i  18233.8        1.1     15108.8        1.1     RQ                     3/2-    T=3/2 00               IT=0.82 7;n ?;A ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-13i",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:13:8"
+          },
+          {
+            "A": 14,
+            "Z": 6,
+            "N": 8,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "14C",
+            "mass_excess": {
+              "value": 3019.893,
+              "unit": "keV",
+              "raw": "3019.893",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.004",
+              "uncertainty": 0.004
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 5.7,
+              "unit": "ky",
+              "raw": "5.70",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.03",
+              "uncertainty": 0.03,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "01",
+            "discovery_year_raw": "1936",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 114,
+            "raw_line": "014 0060   14C      3019.893      0.004                                 5.70  ky 0.03   0+            01          1936 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.12160476851928864,
+                "unit": "1/ky",
+                "relation": "=",
+                "uncertainty": 0.0006400250974699402
+              },
+              "mean_lifetime": {
+                "value": 8.223361733067092,
+                "unit": "ky",
+                "relation": "=",
+                "uncertainty": 0.0432808512266689
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-14",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:14:0"
+          },
+          {
+            "A": 14,
+            "Z": 6,
+            "N": 8,
+            "state_index": 8,
+            "state_label": "i",
+            "source_label": "14C",
+            "mass_excess": {
+              "value": 25120,
+              "unit": "keV",
+              "raw": "25120",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_energy": {
+              "value": 22100,
+              "unit": "keV",
+              "raw": "22100",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "(2-)    T=2",
+            "ensdf_update_year_raw": "01",
+            "discovery_year_raw": "1989",
+            "decay_and_abundance_raw": "IT=100",
+            "source_line": 115,
+            "raw_line": "014 0068   14C  i  25120        100       22100        100                              (2-)    T=2   01          1989 IT=100",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-14i",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:14:8"
+          },
+          {
+            "A": 15,
+            "Z": 6,
+            "N": 9,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "15C",
+            "mass_excess": {
+              "value": 9873.1,
+              "unit": "keV",
+              "raw": "9873.1",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.8",
+              "uncertainty": 0.8
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.449,
+              "unit": "s",
+              "raw": "2.449",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.005",
+              "uncertainty": 0.005,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+",
+            "ensdf_update_year_raw": "02",
+            "discovery_year_raw": "1950",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 122,
+            "raw_line": "015 0060   15C      9873.1        0.8                                   2.449  s 0.005  1/2+          02          1950 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.28303274012247664,
+                "unit": "1/s",
+                "relation": "=",
+                "uncertainty": 0.0005778536956359263
+              },
+              "mean_lifetime": {
+                "value": 3.5331601551370713,
+                "unit": "s",
+                "relation": "=",
+                "uncertainty": 0.007213475204444817
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-15",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:15:0"
+          },
+          {
+            "A": 16,
+            "Z": 6,
+            "N": 10,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "16C",
+            "mass_excess": {
+              "value": 13694,
+              "unit": "keV",
+              "raw": "13694",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "4",
+              "uncertainty": 4
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 750,
+              "unit": "ms",
+              "raw": "750",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "6",
+              "uncertainty": 6,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "99",
+            "discovery_year_raw": "1961",
+            "decay_and_abundance_raw": "B-=100;B-n=99.0 3",
+            "source_line": 131,
+            "raw_line": "016 0060   16C     13694          4                                   750     ms 6      0+            99          1961 B-=100;B-n=99.0 3",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0009241962407465937,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00000739356992597275
+              },
+              "mean_lifetime": {
+                "value": 1082.0212806667225,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 8.656170245333781
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-16",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:16:0"
+          },
+          {
+            "A": 17,
+            "Z": 6,
+            "N": 11,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "17C",
+            "mass_excess": {
+              "value": 21032,
+              "unit": "keV",
+              "raw": "21032",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "17",
+              "uncertainty": 17
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 193,
+              "unit": "ms",
+              "raw": "193",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "6",
+              "uncertainty": 6,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1968",
+            "decay_and_abundance_raw": "B-=100;B-n=28.4 13;B-2n ?",
+            "source_line": 142,
+            "raw_line": "017 0060   17C     21032         17                                   193     ms 6      3/2+          17          1968 B-=100;B-n=28.4 13;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.00359143616870438,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00011165086534832268
+              },
+              "mean_lifetime": {
+                "value": 278.44014289156996,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 8.656170245333781
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-17",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:17:0"
+          },
+          {
+            "A": 18,
+            "Z": 6,
+            "N": 12,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "18C",
+            "mass_excess": {
+              "value": 24920,
+              "unit": "keV",
+              "raw": "24920",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "30",
+              "uncertainty": 30
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 92,
+              "unit": "ms",
+              "raw": "92",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2",
+              "uncertainty": 2,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1969",
+            "decay_and_abundance_raw": "B-=100;B-n=31.5 15;B-2n ?",
+            "source_line": 151,
+            "raw_line": "018 0060   18C     24920         30                                    92     ms 2      0+            17          1969 B-=100;B-n=31.5 15;B-2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.007534208484347231,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.00016378714096407023
+              },
+              "mean_lifetime": {
+                "value": 132.72794376178464,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 2.8853900817779268
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-18",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:18:0"
+          },
+          {
+            "A": 19,
+            "Z": 6,
+            "N": 13,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "19C",
+            "mass_excess": {
+              "value": 32410,
+              "unit": "keV",
+              "raw": "32410",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 46.2,
+              "unit": "ms",
+              "raw": "46.2",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.3",
+              "uncertainty": 2.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1974",
+            "decay_and_abundance_raw": "B-=100;B-n=47 3;B-2n=7 3",
+            "source_line": 161,
+            "raw_line": "019 0060   19C     32410        100                                    46.2   ms 2.3    1/2+          17          1974 B-=100;B-n=47 3;B-2n=7 3",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.015003185726405742,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0007469118435223637
+              },
+              "mean_lifetime": {
+                "value": 66.65251088907011,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 3.3181985940446155
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-19",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:19:0"
+          },
+          {
+            "A": 20,
+            "Z": 6,
+            "N": 14,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "20C",
+            "mass_excess": {
+              "value": 37500,
+              "unit": "keV",
+              "raw": "37500",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "230",
+              "uncertainty": 230
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 16,
+              "unit": "ms",
+              "raw": "16",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "3",
+              "uncertainty": 3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "1981",
+            "decay_and_abundance_raw": "B-=100;B-n=70 11;B-2n<18.6",
+            "source_line": 171,
+            "raw_line": "020 0060   20C     37500        230                                    16     ms 3      0+            17          1981 B-=100;B-n=70 11;B-2n<18.6",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.04332169878499658,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.008122818522186858
+              },
+              "mean_lifetime": {
+                "value": 23.083120654223414,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 4.328085122666891
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-20",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:20:0"
+          },
+          {
+            "A": 21,
+            "Z": 6,
+            "N": 15,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "21C",
+            "mass_excess": {
+              "value": 45640,
+              "unit": "keV",
+              "raw": "45640#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "600#",
+              "uncertainty": 600
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "<30ns",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "1/2+#",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "n ?",
+            "source_line": 183,
+            "raw_line": "021 0060   21C     45640#       600#                                             <30ns  1/2+#         15               n ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-21",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:21:0"
+          },
+          {
+            "A": 22,
+            "Z": 6,
+            "N": 16,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "22C",
+            "mass_excess": {
+              "value": 53610,
+              "unit": "keV",
+              "raw": "53610",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "230",
+              "uncertainty": 230
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 6.2,
+              "unit": "ms",
+              "raw": "6.2",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.3",
+              "uncertainty": 1.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "15",
+            "discovery_year_raw": "1986",
+            "decay_and_abundance_raw": "B-=100;B-n=61 14;B-2n<37",
+            "source_line": 193,
+            "raw_line": "022 0060   22C     53610        230                                     6.2   ms 1.3    0+            15          1986 B-=100;B-n=61 14;B-2n<37",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.11179793234837827,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0234415019440148
+              },
+              "mean_lifetime": {
+                "value": 8.944709253511574,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 1.8755035531556525
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0006:ISO:C-22",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:22:0"
+          },
+          {
+            "A": 23,
+            "Z": 6,
+            "N": 17,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "23C",
+            "mass_excess": {
+              "value": 64170,
+              "unit": "keV",
+              "raw": "64170#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "1000#",
+              "uncertainty": 1000
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "UNAVAILABLE"
+            },
+            "spin_parity_raw": "3/2+#",
+            "ensdf_update_year_raw": "",
+            "discovery_year_raw": "",
+            "decay_and_abundance_raw": "n ?",
+            "source_line": 206,
+            "raw_line": "023 0060   23C     64170#      1000#                                                    3/2+#                          n ?",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "A positive numeric half-life and unit are required",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0006:ISO:C-23",
+            "evaluation_entry_id": "MAT:0006:NUBASE2020:23:0"
+          }
+        ]
       }
     },
     {
@@ -1586,7 +2944,8 @@
               "stoichiometric": true,
               "source_id": "SRC-000088"
             },
-            "resolved_previous_forward_reference": true
+            "resolved_previous_forward_reference": true,
+            "relationship_id": "MAT:0006:REL:1000"
           },
           "boron_carbon": {
             "source": [
@@ -1598,7 +2957,8 @@
               "boron_doped_diamond",
               "boron_doped_graphitic_carbon"
             ],
-            "target_status": "RESOLVED"
+            "target_status": "RESOLVED",
+            "relationship_id": "MAT:0006:REL:1001"
           },
           "silicon_carbide": {
             "future_id": "MAT:CMP:SiC",
@@ -1611,7 +2971,8 @@
               "ceramic",
               "semiconductor",
               "wide_bandgap_power_material"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1002"
           },
           "iron_carbon": {
             "source": [
@@ -1630,7 +2991,8 @@
               "phase",
               "heat_treatment",
               "microstructure"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1003"
           },
           "transition_metal_carbides": {
             "representative_future_materials": [
@@ -1644,7 +3006,8 @@
               "refractory_behavior",
               "wear_resistance",
               "electrical_conduction"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1004"
           },
           "hydrogen_carbon": {
             "element_target": "MAT:0001",
@@ -1655,7 +3018,8 @@
               "hydrogenated_carbon",
               "hydrocarbon_chemistry",
               "biological_molecules"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1005"
           },
           "oxygen_carbon": {
             "target": "MAT:0008",
@@ -1664,7 +3028,8 @@
               "CO",
               "CO2",
               "carbonate_systems"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1006"
           }
         },
         "rules": {
@@ -1689,7 +3054,8 @@
             "intermediate": [
               "MAT:0004:ISO:Be-8"
             ],
-            "mechanism": "NUCLEAR-RESONANT-PATHWAY"
+            "mechanism": "NUCLEAR-RESONANT-PATHWAY",
+            "relationship_id": "MAT:0006:REL:1007"
           },
           "triple_alpha_stage_2": {
             "reactants": [
@@ -1706,22 +3072,26 @@
             },
             "final_product": [
               "MAT:0006:ISO:C-12"
-            ]
+            ],
+            "relationship_id": "MAT:0006:REL:1008"
           },
           "net_triple_alpha": {
             "reaction": "3(4He) -> 12C",
-            "calculation_id": "MAT:0006:CALC:001"
+            "calculation_id": "MAT:0006:CALC:001",
+            "relationship_id": "MAT:0006:REL:1009"
           },
           "Be10_decay": {
             "parent": "MAT:0004:ISO:Be-10",
             "daughter": "MAT:0005:ISO:B-10",
-            "note": "Earlier Be->B relationship; retained as neighboring network context."
+            "note": "Earlier Be->B relationship; retained as neighboring network context.",
+            "relationship_id": "MAT:0006:REL:1010"
           },
           "C14_decay": {
             "parent": "MAT:0006:ISO:C-14",
             "daughter": "MAT:0007:ISO:N-14",
             "daughter_status": "RESOLVED",
-            "calculation_id": "MAT:0006:CALC:002"
+            "calculation_id": "MAT:0006:CALC:002",
+            "relationship_id": "MAT:0006:REL:1011"
           }
         },
         "rules": {
@@ -2642,7 +4012,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000080",
@@ -2711,27 +4086,158 @@
     },
     {
       "source_id": "SRC-000084",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-005"
+      ],
+      "title": "On Nuclear Reactions Occurring in Very Hot Stars. I. the Synthesis of Elements from Carbon to Nickel",
+      "authors": [
+        "F. Hoyle"
+      ],
+      "journal": "The Astrophysical Journal Supplement Series",
+      "volume": 1,
+      "pages": "121-146",
+      "year": 1954,
+      "doi": "10.1086/190005",
+      "source_type": "THEORETICAL-ASTROPHYSICS-PREDICTION",
+      "supports": [
+        "Hoyle_state",
+        "C12_excitation_energy",
+        "stellar_nucleosynthesis",
+        "triple_alpha_process"
+      ]
     },
     {
       "source_id": "SRC-000086",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-007"
+      ],
+      "title": "Electric Field Effect in Atomically Thin Carbon Films",
+      "authors": [
+        "K. S. Novoselov",
+        "A. K. Geim",
+        "S. V. Morozov",
+        "D. Jiang",
+        "Y. Zhang",
+        "S. V. Dubonos",
+        "I. V. Grigorieva",
+        "A. A. Firsov"
+      ],
+      "journal": "Science",
+      "volume": 306,
+      "issue": 5696,
+      "pages": "666-669",
+      "year": 2004,
+      "doi": "10.1126/science.1102896",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "graphene_isolation",
+        "2D_carbon_films",
+        "electric_field_effect",
+        "ambipolar_transport"
+      ]
     },
     {
       "source_id": "SRC-000087",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-008"
+      ],
+      "title": "Raman Spectrum of Graphene and Graphene Layers",
+      "authors": [
+        "A. C. Ferrari",
+        "J. C. Meyer",
+        "V. Scardaci",
+        "C. Casiraghi",
+        "M. Lazzeri",
+        "F. Mauri",
+        "S. Piscanec",
+        "D. Jiang",
+        "K. S. Novoselov",
+        "S. Roth",
+        "A. K. Geim"
+      ],
+      "journal": "Physical Review Letters",
+      "volume": 97,
+      "pages": "187401",
+      "year": 2006,
+      "doi": "10.1103/PhysRevLett.97.187401",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "graphene_raman_spectrum",
+        "2D_band_evolution",
+        "D_band_fingerprints",
+        "G_band_fingerprints",
+        "layer_number_identification"
+      ]
     },
     {
       "source_id": "SRC-000088",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-009"
+      ],
+      "title": "Intercalation de métaux alcalins dans le graphite: 1re partie. Desorption des métaux alcalins intercalés dans le graphite",
+      "authors": [
+        "D. Guérard",
+        "A. Hérold"
+      ],
+      "journal": "Carbon",
+      "volume": 13,
+      "issue": 4,
+      "pages": "337-345",
+      "year": 1975,
+      "doi": "10.1016/0008-6223(75)90040-8",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "lithium_graphite_intercalation",
+        "LiC6_stage_1_compound",
+        "alkali_intercalation"
+      ]
     },
     {
       "source_id": "SRC-000089",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-010"
+      ],
+      "title": "C60: Buckminsterfullerene",
+      "authors": [
+        "H. W. Kroto",
+        "J. R. Heath",
+        "S. C. O'Brien",
+        "R. F. Curl",
+        "R. E. Smalley"
+      ],
+      "journal": "Nature",
+      "volume": 318,
+      "pages": "162-163",
+      "year": 1985,
+      "doi": "10.1038/318162a0",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "C60_fullerene_discovery",
+        "truncated_icosahedron_carbon_cage",
+        "cluster_mass_spectrometry"
+      ]
     },
     {
       "source_id": "SRC-000090",
-      "status": "UNRESOLVED"
+      "source_aliases": [
+        "SRC-C-011"
+      ],
+      "title": "Helical microtubules of graphitic carbon",
+      "authors": [
+        "Sumio Iijima"
+      ],
+      "journal": "Nature",
+      "volume": 354,
+      "pages": "56-58",
+      "year": 1991,
+      "doi": "10.1038/354056a0",
+      "source_type": "PRIMARY-EXPERIMENT",
+      "supports": [
+        "carbon_nanotube_discovery",
+        "helical_microtubules",
+        "transmission_electron_microscopy",
+        "multiwalled_nanotubes"
+      ]
     },
     {
       "source_id": "SRC-000091",
@@ -2834,19 +4340,12 @@
       ]
     }
   ],
-  "missingSources": [
-    "SRC-000084",
-    "SRC-000086",
-    "SRC-000087",
-    "SRC-000088",
-    "SRC-000089",
-    "SRC-000090"
-  ],
+  "missingSources": [],
   "counts": {
     "figures": 18,
     "graphs": 3,
     "tables": 10,
     "sources": 20
   },
-  "reviewStatus": "BLOCKED"
+  "reviewStatus": "NEEDS_REVIEW"
 }

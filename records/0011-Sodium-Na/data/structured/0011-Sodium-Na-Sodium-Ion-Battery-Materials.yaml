@@ -1,0 +1,124 @@
+registry_id: MAT:0011:REG:SODIUM-ION-BATTERIES
+record_id: MAT:0011
+charge_carrier:
+  id: MAT:0011:ION:Na+1
+  charge: 1
+technology_status_2026:
+  state: COMMERCIALIZING
+  universal_replacement_for_Li_ion: false
+anodes:
+  hard_carbon:
+    classification:
+      - dominant_practical_anode_family
+    structural_variables:
+      - pseudo_graphitic_domain_size
+      - interlayer_spacing
+      - defect_density
+      - surface_functional_groups
+      - heteroatom_content
+      - open_porosity
+      - closed_porosity
+      - micropore_size
+      - particle_morphology
+    sodium_storage_models:
+      status: MULTI-MECHANISM / STILL-UNDER-ACTIVE-REFINEMENT
+      candidate_contributions:
+        - surface_adsorption
+        - defect_site_storage
+        - interlayer_insertion
+        - pore_filling
+        - closed_pore_storage
+    key_2026_result:
+      closed_porosity:
+        important_for_low_potential_storage: true
+    interface:
+      SEI:
+        first_class_variable: true
+      electrolyte_dependence: true
+  graphite:
+    conventional_Na_storage:
+      same_as_Li_graphite: false
+    rule: Graphite success in Li-ion does not automatically transfer to Na-ion.
+cathodes:
+  layered_oxides:
+    structural_families:
+      - P2
+      - O3
+      - mixed_or_transformed_stacking
+    variables:
+      - Na_site_geometry
+      - transition_metal_composition
+      - substitution
+      - oxygen_stacking
+      - vacancies
+      - redox_state
+      - phase_transition
+      - air_stability
+  polyanionic:
+    families:
+      - phosphates
+      - fluorophosphates
+      - sulfates
+      - mixed_polyanion_materials
+  Prussian_blue_analogues:
+    open_framework: true
+    key_variables:
+      - cyanide_vacancies
+      - coordinated_water
+      - interstitial_water
+      - transition_metal_identity
+      - Na_occupancy
+      - Jahn_Teller_distortion
+      - particle_size
+solid_electrolytes:
+  families:
+    - beta_alumina_related
+    - NASICON_related
+    - sulfide
+    - halide
+    - antiperovskite_related
+  examples:
+    - beta_double_prime_alumina
+    - NASICON_family
+    - Na3PS4
+    - Na11Sn2PS12
+    - Na3OCl
+    - Na2ZrCl6
+  challenges:
+    - room_temperature_ionic_conductivity
+    - interface_resistance
+    - chemical_stability
+    - mechanical_contact
+    - dendrite_suppression
+    - manufacturability
+    - cost
+Li_vs_Na:
+  common_charge:
+    value: 1
+  same_ionic_radius: false
+  implications:
+    - host_spacing
+    - diffusion_barrier
+    - lattice_strain
+    - preferred_crystal_structure
+    - interface_chemistry
+rules:
+  one_hard_carbon_mechanism_is_universally_proven: false
+  host_topology_is_first_class: true
+  defect_content_is_first_class: true
+  water_in_PBA_is_optional_metadata: false
+  theoretical_capacity_equals_practical_cell_capacity: false
+source_ids:
+  - SRC-000220
+  - SRC-000221
+  - SRC-000230
+  - SRC-000231
+  - SRC-000232
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1438
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

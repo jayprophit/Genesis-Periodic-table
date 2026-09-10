@@ -1,0 +1,22 @@
+{
+  "id": "docs/09-production/01-Release-Readiness-Checklist.md",
+  "key": "b1eab338ddfb2a372d6b",
+  "mat": null,
+  "title": "MAT Release Readiness Checklist",
+  "section": "Governance",
+  "lane": "reference",
+  "body": "# MAT Release Readiness Checklist\n\nUse this checklist before publishing a MAT reader, Studio build, or print edition.\n\n## Scientific and content gates\n\n- [x] All referenced sources are registered with canonical IDs.\n- [ ] No placeholder, fabricated, or source-free measured values remain.\n- [ ] `0000` foundation validation is complete and its findings are classified.\n- [ ] Legacy Genesis records are either migrated, explicitly archived, or listed as out of scope.\n- [ ] Every changed record has a review date, evidence status, and change note.\n- [ ] Historical, speculative, calculated, predicted, and measured content remain visibly distinct.\n\n## Data and build gates\n\n- [x] `npm run validate`\n- [x] `npm run validate:elements`\n- [x] `npm run build:book`\n- [x] `npm test`\n- [ ] Generated indexes and publication files are unchanged after a clean rebuild.\n- [ ] Charts identify their dataset version, provenance, and last-updated date.\n- [x] Offline resources include every referenced local image, chart, stylesheet and script in the generated edition.\n\n## Reader and Studio gates\n\n- [x] Element search works by name, symbol, and atomic number.\n- [ ] Periodic, Russell, and overlay views fit desktop and narrow screens.\n- [x] Element names remain visible below symbols in the home atlas.\n- [ ] Favorites, bookmarks, notes, export, and import work after a fresh reload.\n- [ ] Visual dialogs support keyboard close, zoom, fit, download, and new-tab actions.\n- [ ] Headings, labels, focus order, contrast, and dialog names pass a complete accessibility review. Automated WCAG 2.2 AA checks and keyboard flows pass for tested reader pages; cross-browser assistive-technology review remains open.\n- [x] Studio build, unit tests, and end-to-end tests pass.\n\n## Publication gates\n\n- [x] Web reader preview checked in Chromium and a 390 × 844 narrow viewport.\n- [x] Representative A4 PDF proof checked for clipped tables, equations and headings; complete 507-chapter press proof remains open.\n- [ ] EPUB/Kindle or other requested exports open successfully.\n- [ ] Release version, date, changelog, attribution, and known limitations are recorded.\n- [ ] The release artifact is reproducible from a clean checkout.\n\n## Known blockers\n\nContent blockers must be recorded here rather than bypassed:\n\n- Completion of the `0000` foundation validation pass.\n- Remaining authored-record publication and legacy Genesis migration.\n",
+  "bodyHash": "0d50d54cb992cad42f106edef13d9ce2d9035c075f627c2d15694dc14917417d",
+  "header": {},
+  "structured": [],
+  "assets": [],
+  "sources": [],
+  "missingSources": [],
+  "counts": {
+    "figures": 0,
+    "graphs": 0,
+    "tables": 0,
+    "sources": 0
+  },
+  "reviewStatus": "NEEDS_REVIEW"
+}

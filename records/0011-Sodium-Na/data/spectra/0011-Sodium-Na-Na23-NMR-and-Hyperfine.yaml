@@ -1,0 +1,57 @@
+registry_id: MAT:0011:REG:NA23-NMR-HYPERFINE
+record_id: MAT:0011
+Na23:
+  isotope_id: MAT:0011:ISO:Na-23
+  nuclear_spin:
+    value: 3/2
+  quadrupolar: true
+  magnetic_moment:
+    approximate_value: 2.21752
+    unit: nuclear_magneton
+  gyromagnetic_ratio_over_2pi:
+    approximate_value: 11.262
+    unit: MHz/T
+  NMR_frequency:
+    equation: nu = (gamma / 2pi) * B0
+    field_dependent: true
+  environments:
+    - aqueous_Na_plus
+    - biological_tissue
+    - glasses
+    - ceramics
+    - battery_electrodes
+    - solid_electrolytes
+    - molten_salts
+atomic_hyperfine:
+  ground_3s_2S1_2:
+    A_over_h:
+      value: 885.8130644
+      uncertainty: 5e-7
+      unit: MHz
+  excited_3p_2P1_2:
+    A_over_h:
+      value: 94.44
+      uncertainty: 0.13
+      unit: MHz
+  excited_3p_2P3_2:
+    A_over_h:
+      value: 18.534
+      uncertainty: 0.015
+      unit: MHz
+    B_over_h:
+      value: 2.724
+      uncertainty: 0.03
+      unit: MHz
+rules:
+  NMR_frequency_is_universal: false
+  atomic_hyperfine_equals_NMR_chemical_shift: false
+  nuclear_quadrupole_interaction_requires_EFG_context: true
+source_id: SRC-000225
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1027
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

@@ -1,0 +1,89 @@
+registry_id: MAT:0011:REG:HIGH-PRESSURE
+record_id: MAT:0011
+room_temperature_sequence:
+  - phase: BCC
+    pressure_range:
+      approximate_upper: 65
+      unit: GPa
+    electronic:
+      metallic: true
+  - phase: FCC
+    onset:
+      approximate_value: 65
+      unit: GPa
+  - phase: cI16
+    onset:
+      approximate_value: 103
+      unit: GPa
+  - phase: oP8
+    onset:
+      approximate_value: 118
+      uncertainty_context: literature reports ~118-119
+      unit: GPa
+  - phase: tI19
+    onset:
+      approximate_value: 125
+      unit: GPa
+  - phase: hP4
+    onset:
+      approximate_value: 200
+      modern_single_crystal_reference:
+        observed_above:
+          approximate_value: 206
+          unit: GPa
+electronic_evolution:
+  ordinary_low_pressure:
+    description: NEARLY-FREE-ELECTRON METAL
+  compressed_intermediate:
+    description: Increasingly complex band structure and reduced simple-metal behavior.
+  hP4:
+    optical:
+      transparent: true
+    electronic:
+      insulating: true
+      wide_bandgap: true
+    electride:
+      theoretical_prediction:
+        interstitial_electron_localization: true
+      experimental_support_2025:
+        method:
+          - single_crystal_XRD
+          - quantum_crystallography
+        measurement_pressure:
+          value: 223
+          unit: GPa
+        conclusion: EXPERIMENTAL-SIGNATURES-SUPPORT-ELECTRIDE-NATURE
+    measured_structure_extension:
+      highest_static_pressure_in_2025_study:
+        value: 310
+        unit: GPa
+      hP4_retained: true
+phase_transition_rule:
+  simple_compression_model: PRESSURE -> BROADER BANDS -> MORE METALLIC
+  sodium_result:
+    valid_universally: false
+  observed_path: PRESSURE -> STRUCTURAL COMPLEXITY -> INTERSTITIAL ELECTRON LOCALIZATION -> INSULATOR
+melting_anomaly:
+  qualitative:
+    melting_curve_nonmonotonic: true
+  established_feature:
+    melting_temperature_falls_strongly_after_initial_rise: true
+  full_curve:
+    status: DATA-EXTRACTION-REQUIRED
+rules:
+  compression_always_increases_metallicity: false
+  electride_label_is_purely_theoretical_for_hP4_Na: false
+  hP4_electride_has_experimental_support: true
+  phase_boundaries_are_approximate_and_temperature_dependent: true
+source_ids:
+  - SRC-000219
+  - SRC-000233
+  - SRC-000234
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1593
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

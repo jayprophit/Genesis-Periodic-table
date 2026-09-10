@@ -1,0 +1,75 @@
+registry_id: MAT:0011:REG:EXTENDED-COMPOUNDS
+record_id: MAT:0011
+silicates:
+  sodium_metasilicate:
+    id: MAT:CMP:Na2SiO3
+    formula: Na2SiO3
+    parents:
+      - MAT:0011
+      - MAT:0014
+      - MAT:0008
+    silicon_status: RESERVED-PENDING-SILICON
+    material_family:
+      - sodium_silicate
+      - waterglass_related
+  general_rule:
+    sodium_silicate_family_is_single_fixed_stoichiometry: false
+phosphates:
+  trisodium_phosphate:
+    id: MAT:CMP:Na3PO4
+  disodium_hydrogen_phosphate:
+    id: MAT:CMP:Na2HPO4
+  sodium_dihydrogen_phosphate:
+    id: MAT:CMP:NaH2PO4
+  parent_phosphorus:
+    id: MAT:0015
+    status: RESERVED-PENDING-PHOSPHORUS
+  functions:
+    - buffering
+    - ionic_materials
+    - glass_chemistry
+    - biological_solution_chemistry
+    - electrochemical_materials
+nitrogen_compounds:
+  sodium_nitrate:
+    id: MAT:CMP:NaNO3
+    formula: NaNO3
+  sodium_nitrite:
+    id: MAT:CMP:NaNO2
+    formula: NaNO2
+  sodium_azide:
+    id: MAT:CMP:NaN3
+    formula: NaN3
+  sodium_amide:
+    id: MAT:CMP:NaNH2
+    formula: NaNH2
+  nitrogen_parent:
+    id: MAT:0007
+    status: RESOLVED
+  rule:
+    shared_Na_plus_does_not_imply_shared_reactivity: true
+hydrogen_family:
+  sodium_hydride:
+    id: MAT:CMP:NaH
+  sodium_borohydride:
+    id: MAT:CMP:NaBH4
+  sodium_alanate:
+    id: MAT:CMP:NaAlH4
+  distinguish:
+    - simple_saline_hydride
+    - complex_borohydride
+    - complex_alanate
+source_ids:
+  - SRC-000241
+  - SRC-000216
+rules:
+  compound_formula_is_elemental_property: false
+  exact_material_properties_require_child_record: true
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/43.txt
+  source_sha256: 6deabebe37c282ee5246e846496c422a8c636df500ffef3897be41d691815347
+  source_line: 342
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

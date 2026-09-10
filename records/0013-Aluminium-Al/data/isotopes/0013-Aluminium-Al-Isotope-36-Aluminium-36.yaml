@@ -1,0 +1,55 @@
+isotope_id: MAT:0013:ISO:Al-36
+nucleus:
+  Z: 13
+  N: 23
+  A: 36
+mass_excess:
+  NUBASE2020:
+    value: 5950
+    uncertainty: 150
+    unit: keV
+evaluated_2020_state:
+  half_life:
+    value: 90
+    uncertainty: 40
+    unit: ms
+  decay:
+    beta_minus_percent: 100
+    beta_delayed_neutron_percent:
+      relation: LESS-THAN
+      value: 31
+    beta_delayed_two_neutron:
+      status: POSSIBLE / NOT-QUANTIFIED
+post_NUBASE_research:
+  beta_decaying_isomer:
+    experimentally_identified: true
+    publication_year: 2023
+    measured_half_life_results:
+      - value: 6.6
+        uncertainty: 1.1
+        unit: ms
+      - value: 6.5
+        uncertainty: 1
+        unit: ms
+  state_assignment:
+    ground_and_isomer_populate_different_36Si_levels: true
+  theoretical_interpretation:
+    shell_model: FSU
+    proposed_near_degenerate_negative_parity_states: true
+    assignments_are_model_dependent: true
+rules:
+  NUBASE2020_value_must_not_be_silently_overwritten: true
+  post_2020_measurements_must_be_stored_as_new_evidence: true
+  proposed_spin_parity_is_established_assignment: false
+  ground_state_and_isomer_are_interchangeable: false
+source_ids:
+  - SRC-000278
+  - SRC-000287
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/49.txt
+  source_sha256: 9dd82277cc3de3dd242f14c7fb81f4a775c6bad890bfbb29e9b691c435ad4740
+  source_line: 200
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

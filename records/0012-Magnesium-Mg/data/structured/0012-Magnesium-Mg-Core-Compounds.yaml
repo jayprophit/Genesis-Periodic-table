@@ -1,0 +1,118 @@
+registry_id: MAT:0012:REG:CORE-COMPOUNDS
+record_id: MAT:0012
+MgO:
+  id: MAT:CMP:MgO
+  parents:
+    - MAT:0012
+    - MAT:0008
+  mineral: PERICLASE
+  structure:
+    prototype: ROCK-SALT
+    space_group: Fm-3m
+    coordination:
+      Mg: 6
+      O: 6
+  electronic:
+    class: WIDE-BANDGAP-INSULATOR
+    representative_band_gap:
+      approximate_value: 7.8
+      unit: eV
+      material_quality_dependent: true
+  melting_point:
+    approximate_value: 2852
+    unit: degC
+  material_class:
+    - refractory
+    - ceramic
+    - electrical_insulator
+  source_id: SRC-000257
+Mg_OH_2:
+  id: MAT:CMP:Mg(OH)2
+  mineral: BRUCITE
+  structure:
+    class: LAYERED
+    conventional_ambient_space_group: P-3m1
+    lattice_reference:
+      a:
+        approximate_value: 3.142
+        unit: angstrom
+      c:
+        approximate_value: 4.766
+        unit: angstrom
+  structural_nuance:
+    hydrogen_ordering_under_perturbation: true
+  source_id: SRC-000258
+MgCO3:
+  id: MAT:CMP:MgCO3
+  mineral: MAGNESITE
+  parents:
+    - MAT:0012
+    - MAT:0006
+    - MAT:0008
+  structure:
+    crystal_system: RHOMBOHEDRAL
+    space_group: R-3c
+  coordination:
+    Mg: OCTAHEDRAL
+  source_id: SRC-000262
+MgCl2:
+  id: MAT:CMP:MgCl2
+  parents:
+    - MAT:0012
+    - MAT:0017
+  chlorine_status: RESERVED-PENDING-CHLORINE
+  structure:
+    type: LAYERED-CdCl2-TYPE
+    space_group: R-3m
+    lattice_reference:
+      a:
+        value: 3.6363
+        unit: angstrom
+      c:
+        value: 17.6663
+        unit: angstrom
+  source_id: SRC-000259
+MgF2:
+  id: MAT:CMP:MgF2
+  parents:
+    - MAT:0012
+    - MAT:0009
+  structure:
+    ambient:
+      prototype: RUTILE
+      space_group: P42/mnm
+    high_pressure_sequence:
+      - pressure_approx_GPa: 9.1
+        structure: CaCl2-type
+        space_group: Pnnm
+      - pressure_approx_GPa: 14
+        structure: PdF2-type
+        space_group: Pa-3
+      - pressure_approx_GPa: 35
+        structure: COTUNNITE-TYPE
+        space_group: Pnam
+  source_id: SRC-000260
+Mg3N2:
+  id: MAT:CMP:Mg3N2
+  parents:
+    - MAT:0012
+    - MAT:0007
+  structure:
+    type: ANTI-BIXBYITE
+    space_group: Ia-3
+    lattice_parameter:
+      approximate_value: 9.95
+      unit: angstrom
+  source_id: SRC-000261
+rules:
+  same_Mg2_plus_means_same_crystal_structure: false
+  formula_alone_determines_property: false
+  polymorph_and_pressure_are_first_class: true
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1106
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

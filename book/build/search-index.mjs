@@ -7,7 +7,7 @@ export function buildSearchIndex(flat) {
   const sdocs = flat.map((c, i) => {
     let full = "";
     try { full = stripMd(readText(c.id)); } catch {}
-    const text = full.slice(0, 4000);
+    const text = full;
     const refs = new Set();
     try {
       const raw = readText(c.id);
@@ -27,7 +27,7 @@ export function buildSearchIndex(flat) {
     let lane = "core";
     const lid = c.id.toLowerCase();
     if (/causali-e|claims|historical|alternative|unconventional/.test(lid)) lane = "claims";
-    else if (/experiments\/|emerging|prediction|hypothes|proposed|speculative/.test(lid)) lane = "research";
+    else if (/experiments\/|research-intake|emerging|prediction|hypothes|proposed|speculative/.test(lid)) lane = "research";
     return { i, id: c.id, path: c.path, title: c.title, section: c.section, lane, text, refs: [...refs], dataset, aks: [...new Set(aks)], dois: [...dois].slice(0, 6) };
   });
   const byRec = {};

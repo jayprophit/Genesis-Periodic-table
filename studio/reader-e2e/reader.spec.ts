@@ -1,0 +1,33 @@
+import {test,expect} from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+test('cascading contents, responsive keyboard and themes',async({page})=>{
+ await page.goto('/book/#cover',{waitUntil:"domcontentloaded"});await expect(page.locator('#count')).toContainText('119 records');
+ await expect(page.getByRole('dialog')).toBeVisible();
+ await expect(page.getByRole('button',{name:'Begin Tour →'})).toBeFocused();
+ await page.keyboard.press('Shift+Tab');await expect(page.getByRole('button',{name:'Skip tour',exact:true})).toBeFocused();
+ await page.getByRole('button',{name:'Skip tour',exact:true}).click();
+ const menu=page.locator('#toc-toggle');await expect(menu).toHaveAttribute('aria-expanded','true');
+ await menu.click();await expect(page.locator('#sidebar')).toHaveAttribute('inert','');
+ await page.reload({waitUntil:"domcontentloaded"});await expect(menu).toHaveAttribute('aria-expanded','false');
+ await menu.click();await expect(menu).toHaveAttribute('aria-expanded','true');
+ const guide=page.locator('#toc summary').filter({hasText:'Guide, Reference & Book Information'});await expect(guide).toHaveCount(1);await guide.click();
+ await expect(page.locator('#toc')).toContainText('Front matter');
+ const sidebarScan=await new AxeBuilder({page}).include('#sidebar').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(sidebarScan.violations).toEqual([]);
+ await page.locator('#theme-btn').click();await expect(page.locator('body')).not.toHaveClass(/light/);
+ await page.setViewportSize({width:390,height:844});await menu.focus();
+ if(await menu.getAttribute('aria-expanded')==='true')await page.keyboard.press('Escape');
+ await page.keyboard.press('Enter');await expect(menu).toHaveAttribute('aria-expanded','true');
+ await page.keyboard.press('Escape');await expect(menu).toBeFocused();await expect(menu).toHaveAttribute('aria-expanded','false');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+ expect(scan.violations).toEqual([]);
+});
+test('reviewed Neon optics and derived nuclear data are readable',async({page})=>{
+ await page.goto('/book/#read/records%2F0010-Neon-Ne%2F0010-Neon-Ne-Optical-Reference.md',{waitUntil:"domcontentloaded"});
+ await expect(page.locator('#page')).toContainText('632.81646');await expect(page.locator('#page')).toContainText('632.9908');
+ await expect(page.locator('#source-link')).toHaveAttribute('href',/Optical-Reference/);
+ await page.goto('/book/#read/records%2F0118-Oganesson-Og%2F0118-Oganesson-Og-Nuclear-Evaluation.md',{waitUntil:"domcontentloaded"});
+ await expect(page.locator('#page')).toContainText('Derived decay metrics');
+ await page.goto('/book/#read/docs%2F00-front-matter%2F03-How-to-Use-MAT.md',{waitUntil:"domcontentloaded"});
+ await expect(page.locator('#page')).toContainText('How to Use MAT Codex');
+});

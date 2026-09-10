@@ -1,0 +1,56 @@
+registry_id: MAT:0012:REG:AL26-MG26-CHRONOLOGY
+record_id: MAT:0012
+system:
+  parent:
+    isotope: 26Al
+    future_id: MAT:0013:ISO:Al-26
+    status: RESERVED-PENDING-ALUMINIUM
+  daughter:
+    isotope: 26Mg
+    id: MAT:0012:ISO:Mg-26
+decay:
+  relationship: 26Al -> 26Mg
+  half_life:
+    adopted_reference:
+      value: 0.717
+      uncertainty: 0.017
+      unit: Myr
+chronometer_class:
+  - SHORT-LIVED-RADIONUCLIDE
+  - EXTINCT-RADIONUCLIDE-SYSTEM
+  - EARLY-SOLAR-SYSTEM-CHRONOMETER
+principle:
+  initial_state:
+    requires_initial_26Al_27Al_context: true
+  evolution:
+    radiogenic_26Mg_excess_accumulates: true
+  measurement:
+    isotope_ratio_correlation_required: true
+  interpretation:
+    possible_outputs:
+      - relative_formation_time
+      - differentiation_time
+      - thermal_history_constraint
+important_distinction:
+  stable_fractionation:
+    delta26Mg:
+      mass_dependent: true
+  radiogenic_component:
+    excess_26Mg:
+      parent_decay_derived: true
+  same_quantity: false
+rules:
+  26Mg_abundance_alone_is_a_clock: false
+  initial_Al_Mg_ratio_is_optional: false
+  closed_system_behavior_is_optional: false
+  radiogenic_and_mass_fractionation_terms_must_be_separated: true
+  chronometer_age_equals_absolute_age_without_calibration: false
+source_id: SRC-000270
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/52.txt
+  source_sha256: b861250812208c0efe06787d836f7fe1e0d32d119fe2ab1555c9118f53229c35
+  source_line: 274
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

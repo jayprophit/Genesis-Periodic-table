@@ -1,28 +1,24 @@
-// Checks internal Markdown links resolve to real files/anchors.
-// Run: npm run validate:links
-import { R, walkFiles, exists, issue, warn, summary } from "./lib.mjs";
-
-let failed = 0;
-const mdFiles = [...walkFiles("docs", (f) => f.endsWith(".md")), ...walkFiles("records", (f) => f.endsWith(".md")), "README.md", "CHANGELOG.md"];
-const linkRe = /!?\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
-for (const f of mdFiles) {
-  let src;
-  try { src = R(f); } catch { continue; }
-  const base = f.split("/").slice(0, -1).join("/");
-  for (const m of src.matchAll(linkRe)) {
-    const href = m[2];
-    if (/^(https?:|mailto:|#|data:)/.test(href)) continue;
-    const [pathPart, anchor] = href.split("#");
-    if (!pathPart) continue;
-    if (/\.(png|svg|glb|csv|json|yaml|html|js|css)$/i.test(pathPart)) {
-      const target = (base ? base + "/" : "") + pathPart;
-      if (!exists(target)) { issue(f, null, href, "linked asset missing", "link must resolve to a file on disk"); failed++; }
-      continue;
-    }
-    if (!/\.md$/i.test(pathPart)) continue;
-    const target = (base ? base + "/" : "") + pathPart;
-    const norm = target.split("/").filter((p) => p !== ".").join("/").replace(/\/[^/]+\/\.\./, "");
-    if (!exists(target) && !exists(norm)) { issue(f, null, href, "linked chapter missing", "cross-links must resolve"); failed++; }
+// Check parsed Markdown destinations and heading anchors, including reference links.
+import {R,walkFiles,exists,issue,summary} from './lib.mjs';
+import {Marked} from '../book/vendor/marked.mjs';
+import {renderDocument,canonicalId} from '../book/reader-core.mjs';
+const parser=new Marked();
+const files=[...walkFiles('docs',f=>f.endsWith('.md')),...walkFiles('records',f=>f.endsWith('.md')),'README.md','CHANGELOG.md'];
+const headings=new Map();
+for(const file of files){
+ const source=R(file),tokens=parser.lexer(source);
+ parser.walkTokens(tokens,token=>{
+  if(!['link','image'].includes(token.type))return;
+  const href=token.href;
+  if(/^(https?:|mailto:|data:)/i.test(href))return;
+  let target,anchor;
+  try{const url=new URL(href,'https://mat.invalid/'+file);target=canonicalId(decodeURIComponent(url.pathname.slice(1)));anchor=decodeURIComponent(url.hash.slice(1));}
+  catch{issue(file,null,href,'Malformed link','valid URL syntax');return;}
+  if(!exists(target)){issue(file,null,href,'Linked resource missing','target file or directory must exist');return;}
+  if(anchor&&target.endsWith('.md')){
+   if(!headings.has(target))headings.set(target,new Set(renderDocument(R(target),target).outline.map(h=>h.id)));
+   if(!headings.get(target).has(anchor))issue(file,null,href,'Heading anchor missing','target must name an actual rendered heading');
   }
+ });
 }
-process.exitCode = summary("validate:links") || failed ? 1 : 0;
+process.exitCode=summary('validate:links')?1:0;

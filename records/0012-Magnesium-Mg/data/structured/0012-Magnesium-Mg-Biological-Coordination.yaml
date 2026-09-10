@@ -1,0 +1,58 @@
+registry_id: MAT:0012:REG:BIOLOGICAL-COORDINATION
+record_id: MAT:0012
+active_state:
+  species: Mg2+
+coordination_preferences:
+  hard_oxygen_donor_affinity:
+    important: true
+  common_biological_ligands:
+    - phosphate_oxygen
+    - carboxylate_oxygen
+    - water
+    - nucleic_acid_oxygen
+    - chlorophyll_nitrogen_coordination
+hydration:
+  Mg2_plus:
+    strongly_hydrated: true
+  water_exchange:
+    affects_biological_kinetics: true
+Mg_ATP:
+  canonical_object: MAT:CMP:Mg-ATP
+  role:
+    - kinase_substrate_complex
+    - phosphate_transfer
+    - ATPase_chemistry
+    - energy_metabolism
+  principle: BIOLOGICAL ATP FUNCTION OFTEN INVOLVES Mg-COORDINATED ATP RATHER THAN ISOLATED ATP4-.
+chlorophyll:
+  canonical_family: MAGNESIUM-CHLORINS
+  central_Mg:
+    coordinated_to:
+      - four_macrocycle_nitrogens
+  axial_coordination:
+    context_dependent: true
+  functions:
+    - molecular_geometry
+    - electronic_energy_levels
+    - photophysics
+    - photosynthetic_energy_transfer
+enzymes:
+  estimated_scale: HUNDREDS-OF-ENZYME-SYSTEMS
+  exact_count:
+    status: DEFINITION-DEPENDENT
+rules:
+  Mg2_equals_metallic_Mg: false
+  chlorophyll_light_absorption_equals_isolated_Mg_atom_absorption: false
+  ATP_equals_MgATP_in_all_contexts: false
+  coordination_geometry_is_first_class: true
+source_ids:
+  - SRC-000252
+  - SRC-000255
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1730
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

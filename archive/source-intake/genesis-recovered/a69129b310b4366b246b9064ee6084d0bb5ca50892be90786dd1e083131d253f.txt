@@ -1,0 +1,151 @@
+registry_id: "MAT:0013:REG:BULK-MATERIAL"
+record_id: "MAT:0013"
+version: "1.0.0"
+
+material_state:
+  species: "Al"
+  phase: "SOLID"
+  ambient_structure: "FCC"
+
+appearance:
+  description:
+    - silvery_white
+    - metallic
+    - reflective
+    - malleable
+
+density:
+
+  representative_room_temperature:
+    value: 2.70
+    unit: "g/cm3"
+
+  equivalent:
+    value: 2700
+    unit: "kg/m3"
+
+  condition_dependence:
+    purity: true
+    temperature: true
+    porosity: true
+    alloy_composition: true
+
+phase_change:
+
+  melting_point:
+    value: 660.323
+    unit: "degC"
+
+    equivalent:
+      value: 933.473
+      unit: "K"
+
+  boiling_point:
+    value: 2519
+    unit: "degC"
+
+    equivalent:
+      value: 2792
+      unit: "K"
+
+thermal:
+
+  thermal_conductivity:
+    representative_value:
+      value: 235
+      unit: "W/(m*K)"
+
+    conditions:
+      approximate: "near-room-temperature"
+      high_purity_reference_like: true
+
+    state_dependence:
+      temperature: true
+      purity: true
+      alloying: true
+      defects: true
+
+  linear_thermal_expansion:
+    representative_value:
+      value: 23.1e-6
+      unit: "1/K"
+
+    approximation:
+      room_temperature_engineering_value: true
+
+    temperature_dependent: true
+
+electrical:
+
+  resistivity:
+    representative_value:
+      value: 2.7e-8
+      unit: "ohm*m"
+
+    approximation:
+      room_temperature_reference_like: true
+
+    strongly_affected_by:
+      - purity
+      - solute_content
+      - temperature
+      - precipitation
+      - cold_work
+      - defects
+
+  conductor:
+    true
+
+mechanical_general:
+
+  ductile:
+    true
+
+  malleable:
+    true
+
+  low_density_structural_parent:
+    true
+
+  single_intrinsic_yield_strength:
+    exists: false
+
+  single_intrinsic_ultimate_strength:
+    exists: false
+
+  single_intrinsic_hardness:
+    exists: false
+
+why_strength_is_not_one_number:
+
+  variables:
+    - purity
+    - alloy_composition
+    - grain_size
+    - precipitate_state
+    - dislocation_density
+    - texture
+    - temper
+    - strain_rate
+    - temperature
+    - processing_history
+
+rules:
+
+  pure_aluminium_property_equals_all_aluminium_alloys: false
+
+  density_is_exactly_constant: false
+
+  thermal_conductivity_is_exactly_constant: false
+
+  electrical_resistivity_is_exactly_constant: false
+
+  yield_strength_is_element_constant: false
+
+  hardness_is_element_constant: false
+
+  ambient_bulk_metal_equals_Al3_plus: false
+
+source_ids:
+  - "SRC-000288"
+  - "SRC-000291"

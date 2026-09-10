@@ -1,0 +1,1932 @@
+I checked the current repository rather than relying on the earlier version. Your assessment is correct: **MAT Studio is not functioning as a real ebook-authoring workflow yet**.
+
+The biggest problems I found are:
+
+- **Studio is largely a mock-up.** The central `LivePreview` explicitly says the real chapter preview “will render here”; it does not actually render the selected MAT chapter. 
+- **The Inspector is also a mock-up.** It hard-codes `Figures: 0`, `Tables: 0`, `Sources: 0`, and `Status: Pending` instead of reading the actual record. 
+- **The Studio and MAT data pipeline are disconnected.** There is now a publication-model generator, but the Studio is not using it as its real data source. 
+- **CI does not build or test the Studio at all.** The workflow installs the root package, validates MAT, builds the book and tests it, but there is no Studio dependency install/build/test step. 
+- **Current CI is failing** on the latest `main` because Carbon refers to missing source-registry IDs. I would keep that failure rather than invent citations.
+- **The existing 118-element file is not publication-quality baseline data.** Elements from Neon onward have `MAT:null`, and later synthetic elements contain obvious placeholder-style values such as identical `crustAbundance: 0.1`, `humanAbundance: 0.000001`, generic `[Core] + ...e⁻` configurations, and asserted phases.  
+- For example, Oganesson currently has `MAT:null`, a generic electron configuration, is simply asserted as `"Gas"`, and receives fabricated-looking abundance values. That should be replaced with **unknown/not-applicable/source-backed values**, not presented as measured data. 
+
+For the baseline, I recommend using **all 118 confirmed elements as selectable MAT identities immediately**, but distinguish `BASELINE` from `CURATED`. PubChem provides downloadable/programmatic element data and says its element pages draw on sources including IUPAC, NIST and IAEA; CIAAW provides the current 2024 standard atomic weights, while NIST ASD provides evaluated atomic ground-state and ionization data. 
+
+The important architecture would therefore be:
+
+```text
+MAT:0001 Hydrogen ── CURATED
+MAT:0002 Helium   ── CURATED
+...
+MAT:0009 Fluorine ── CURATED
+
+MAT:0010 Neon     ── BASELINE
+MAT:0011 Sodium   ── BASELINE
+...
+MAT:0118 Oganesson ─ BASELINE
+```
+
+Every one becomes selectable. When you later build Neon properly, its curated record **overlays/extends the baseline** rather than requiring you to start from an empty record.
+
+I’ve revised the OpenCode instruction around the actual faults I found:
+
+You are repairing and completing:
+
+Materials Atlas Table Codex — MAT
+
+Repository:
+
+`jayprophit/Materials-Atlas-Table-Codex---MAT`
+
+Work at senior/principal engineer level across:
+
+- React/TypeScript
+- JavaScript
+- scientific data engineering
+- ebook authoring
+- publishing systems
+- UI/UX
+- accessibility
+- data provenance
+- information architecture
+- testing
+- scientific validation
+
+This is now a RECOVERY AND IMPLEMENTATION task.
+
+Do not merely analyse and report.
+
+Inspect first, then implement, test and improve.
+
+---
+
+# 1. START FROM THE CURRENT REPOSITORY
+
+Run:
+
+```bash
+git status
+git pull --ff-only
+git log -10 --oneline
+```
+
+Do not assume this prompt's commit is still current.
+
+At the time of external audit, main was at approximately:
+
+`f9f8109`
+
+but the local repository may now be newer.
+
+Preserve all legitimate work added since then.
+
+---
+
+# 2. THE CURRENT APPLICATION IS NOT COMPLETE
+
+Do not treat the existing MAT Studio as finished.
+
+External audit has already found:
+
+1. `studio/src/components/LivePreview.tsx`
+   is effectively a placeholder.
+
+2. `studio/src/components/Inspector.tsx`
+   contains hard-coded zero values instead of actual MAT record data.
+
+3. Studio loads a manifest directly rather than consuming a properly designed Studio/publication model.
+
+4. Book/Data/Preview/Validate/Export currently resemble navigation tabs more than complete workflows.
+
+5. The root GitHub workflow does not properly install/build/test the Studio.
+
+6. The 118-element dataset contains `MAT:null` entries and scientifically unsafe placeholder-style data.
+
+7. Latest validation is also failing because Carbon references source IDs that are absent from the source registry.
+
+Do NOT hide these problems.
+
+Fix each category properly.
+
+---
+
+# 3. FIRST GOAL — MAKE THE PROGRAM ACTUALLY WORK
+
+Before improving appearance:
+
+make Studio boot reliably.
+
+Required development workflow:
+
+```bash
+npm install
+npm run studio
+```
+
+from the repository root.
+
+The root command must:
+
+1. prepare required generated MAT data;
+2. make that data available to Studio;
+3. install/use correct Studio dependencies;
+4. start Studio;
+5. report useful errors if preparation fails.
+
+Prefer npm workspaces or another clean package strategy.
+
+Do not require the user to manually run five undocumented commands.
+
+Add:
+
+```bash
+npm run studio
+npm run build:studio
+npm run test:studio
+npm run check:studio
+```
+
+Make them real.
+
+---
+
+# 4. ADD STUDIO TO CI
+
+The current CI must not ignore the application that the user actually sees.
+
+Create separate logical CI stages/jobs if necessary:
+
+```text
+SCIENTIFIC VALIDATION
+BOOK BUILD
+BOOK TESTS
+STUDIO BUILD
+STUDIO TESTS
+PUBLICATION MODEL
+GENERATED-FILE SYNC
+```
+
+Important:
+
+The existing Carbon source errors must remain visible.
+
+However, a scientific validation failure should not prevent us from discovering that the Studio itself does not compile.
+
+Use separate jobs where appropriate.
+
+Never weaken scientific validation to get a green check.
+
+---
+
+# 5. DO NOT INVENT THE MISSING CARBON SOURCES
+
+There are references around:
+
+```text
+SRC-000084
+SRC-000086
+SRC-000087
+SRC-000088
+SRC-000089
+SRC-000090
+```
+
+that currently do not resolve.
+
+Investigate them.
+
+If legitimate source information exists elsewhere in repository history or documentation, recover and register it.
+
+If not:
+
+leave an explicit unresolved-source error.
+
+DO NOT create fake:
+
+- titles
+- authors
+- journals
+- DOI numbers
+- URLs
+- dates
+
+just to make CI green.
+
+---
+
+# 6. REBUILD THE 118-ELEMENT BASELINE
+
+This is now a priority.
+
+The user wants every currently recognised chemical element available immediately so they can progressively overwrite/extend each record later.
+
+There are 118 recognised elements.
+
+Create stable MAT IDs:
+
+```text
+Hydrogen    MAT:0001
+Helium      MAT:0002
+...
+Neon        MAT:0010
+...
+Oganesson   MAT:0118
+```
+
+There must NEVER again be:
+
+```json
+"matId": "MAT:null"
+```
+
+for a recognised element.
+
+MAT:0000 remains Origin State and is NOT a chemical element.
+
+---
+
+# 7. BASELINE IS NOT THE SAME AS CURATED
+
+Introduce explicit status.
+
+For example:
+
+```json
+{
+  "recordStatus": "BASELINE"
+}
+```
+
+versus:
+
+```json
+{
+  "recordStatus": "CURATED"
+}
+```
+
+Current detailed MAT records 0001–0009 can remain:
+
+`CURATED`
+
+or another appropriate existing status.
+
+Elements 0010–0118 become:
+
+`BASELINE`
+
+until individually completed.
+
+Potential states:
+
+```text
+BASELINE
+IN-PROGRESS
+CURATED
+REVIEWED
+PUBLISHED
+DEPRECATED
+```
+
+Use existing MAT vocabulary if one already exists.
+
+Do not introduce redundant status systems.
+
+---
+
+# 8. BASELINE ELEMENT DATA MUST BE REAL DATA
+
+Replace the current unsourced 118-element placeholder file with a properly sourced baseline catalogue.
+
+Use authoritative sources.
+
+Preferred source hierarchy:
+
+### Identity and general element data
+
+PubChem Periodic Table / Element data.
+
+PubChem exposes machine-readable/downloadable element data and identifies sources including IUPAC, NIST, IAEA and other scientific authorities.
+
+### Standard atomic weights
+
+CIAAW / IUPAC 2024 standard atomic-weight table.
+
+Important:
+
+Do not convert intervals into fake single exact values.
+
+Preserve things such as:
+
+```text
+[1.00784, 1.00811]
+```
+
+where the standard atomic weight is an interval.
+
+### Ground electronic configuration and ionization energy
+
+NIST Atomic Spectra Database 5.12 where appropriate.
+
+### Nuclear/isotope information
+
+Use established evaluated nuclear sources already accepted by MAT where appropriate.
+
+---
+
+# 9. DOWNLOAD ONCE — DO NOT REQUIRE INTERNET AT RUNTIME
+
+Create an ingestion/update pipeline such as:
+
+```text
+scripts/sync-elements-baseline.mjs
+```
+
+The script may retrieve authoritative upstream data when deliberately run.
+
+The normal MAT book and Studio must NOT require PubChem/NIST/IUPAC network access to start.
+
+Store the resulting reviewed snapshot in the repository.
+
+Example:
+
+```text
+data/catalog/elements-baseline.yaml
+```
+
+or the closest architecturally appropriate location.
+
+The snapshot must contain provenance.
+
+Example:
+
+```yaml
+catalog:
+  id: MAT:ELEMENTS:BASELINE
+  version: ...
+  updated: ...
+  sources:
+    - ...
+
+elements:
+  - mat_id: MAT:0010
+    atomic_number: 10
+    symbol: Ne
+    name: Neon
+    period: 2
+    group: 18
+    block: p
+    classification: noble-gas
+
+    atomic_weight:
+      display: "20.1797(6)"
+      source_ids:
+        - ...
+
+    electron_configuration:
+      value: ...
+      source_ids:
+        - ...
+
+    first_ionization_energy:
+      value: ...
+      unit: eV
+      uncertainty: ...
+      source_ids:
+        - ...
+
+    record_status: BASELINE
+```
+
+Adapt to MAT's actual schema.
+
+---
+
+# 10. REMOVE FAKE PLACEHOLDER SCIENCE
+
+Audit the current:
+
+`book/data/elements-118.json`
+
+especially elements approximately Z >= 90.
+
+Values such as:
+
+```text
+universeAbundance: 0.000001
+crustAbundance: 0.1
+humanAbundance: 0.000001
+```
+
+repeated across synthetic elements must NOT remain unless an actual source supports them.
+
+The same applies to:
+
+```text
+phase: Solid
+phase: Gas
+electronConfiguration: "[Core] + 118e⁻"
+```
+
+and arbitrary atomic masses.
+
+Replace unsupported data with MAT null ontology.
+
+For example:
+
+```yaml
+value: null
+null_reason: UNAVAILABLE
+```
+
+or:
+
+```yaml
+value: null
+null_reason: UNKNOWN
+```
+
+or:
+
+```yaml
+value: null
+null_reason: NOT_APPLICABLE
+```
+
+depending on the established MAT schema.
+
+Never use zero as a substitute for unknown.
+
+Never use a tiny fake number as a substitute for unknown.
+
+---
+
+# 11. DISTINGUISH MEASURED FROM PREDICTED
+
+This is especially important for superheavy elements.
+
+Where properties are theoretical/predicted rather than experimentally established, represent that explicitly.
+
+Example:
+
+```yaml
+evidence_type: PREDICTED
+```
+
+not:
+
+```yaml
+evidence_type: MEASURED
+```
+
+If the baseline source does not establish the property reliably:
+
+leave it unknown.
+
+MAT values scientific honesty over filling every box.
+
+---
+
+# 12. BASIC DATA PACKAGE FOR ALL 118
+
+Each baseline record should support, where authoritative information exists:
+
+```text
+MAT ID
+atomic number
+symbol
+name
+period
+group
+block
+broad element classification
+standard atomic weight / representative atomic mass
+standard state, if authoritative
+ground-state electron configuration
+first ionization energy
+electronegativity where defined
+atomic radius WITH radius definition
+melting point where known
+boiling point where known
+density WITH conditions/reference state
+discovery year where supported
+oxidation states where supported
+basic source/provenance identifiers
+record status
+```
+
+Do not force unavailable fields.
+
+Condition-sensitive quantities require:
+
+```text
+value
+unit
+conditions
+definition/method
+source
+uncertainty where available
+```
+
+---
+
+# 13. DO NOT CREATE 109 FAKE FULL RESEARCH RECORDS
+
+Elements 0010–0118 do not need hundreds of empty files each yet.
+
+Create a lightweight baseline record system.
+
+The hierarchy should be:
+
+```text
+BASELINE ELEMENT CATALOGUE
+        +
+OPTIONAL CURATED MAT RECORD
+        ↓
+MERGED PUBLICATION VIEW
+```
+
+The curated record takes precedence when present.
+
+Example:
+
+```text
+MAT:0010 Neon
+baseline catalogue
+       ↓
+user later creates records/0010-Neon-Ne/
+       ↓
+curated fields extend/override the baseline for publication
+```
+
+Do not destroy baseline provenance when an override occurs.
+
+---
+
+# 14. EVERY ELEMENT MUST BE SELECTABLE
+
+This is a non-negotiable UX requirement.
+
+Every one of the 118 periodic-table cells must be:
+
+- keyboard focusable;
+- mouse clickable;
+- touch selectable;
+- screen-reader labelled.
+
+Do not mark elements 10–118:
+
+```html
+aria-disabled="true"
+```
+
+merely because their detailed MAT record has not been written yet.
+
+Use a proper:
+
+```html
+<button>
+```
+
+or navigable link.
+
+---
+
+# 15. PERIODIC TABLE ROUTING
+
+Selection behaviour:
+
+### CURATED
+
+Hydrogen through whichever records currently have full MAT content:
+
+open the full MAT record.
+
+### BASELINE
+
+For an element without a full record:
+
+open its generated baseline element page.
+
+Example:
+
+```text
+MAT:0010
+NEON
+BASELINE REFERENCE
+```
+
+with its verified data.
+
+Prominent banner:
+
+```text
+BASELINE ELEMENT RECORD
+
+This element is available for reference and navigation but has not yet received the full MAT curated record package.
+```
+
+Do not call baseline data “incomplete” in a way that suggests the known facts are unreliable.
+
+---
+
+# 16. BASELINE PAGE TEMPLATE
+
+Every baseline page should already resemble the eventual MAT record.
+
+Example:
+
+```text
+MAT:0010
+
+NEON
+Ne
+Atomic Number 10
+
+BASELINE REFERENCE
+
+At a glance
+
+Atomic number
+Atomic weight
+Group
+Period
+Block
+Classification
+Standard state
+Electron configuration
+Ionization energy
+
+Scientific data
+Sources
+Related periodic position
+
+──────────────
+
+MAT EXTENSIONS
+
+Atomic structure
+Isotopes
+Spectra
+Frequency
+Thermal
+Electrical
+Magnetic
+Materials
+Compounds
+Processes
+Charts
+Images
+3D models
+Equations
+Experiments
+
+Status:
+Awaiting curated MAT expansion
+```
+
+The empty future sections should use structured placeholders.
+
+Do not invent content.
+
+---
+
+# 17. MAKE ALL 118 ELEMENTS APPEAR IN STUDIO
+
+The left Studio browser must not contain only 0000–0009.
+
+Provide:
+
+```text
+▸ 0000 Origin State
+
+▸ 0001 Hydrogen      CURATED
+▸ 0002 Helium        CURATED
+...
+▸ 0009 Fluorine      CURATED
+
+▸ 0010 Neon          BASELINE
+▸ 0011 Sodium        BASELINE
+...
+▸ 0118 Oganesson     BASELINE
+```
+
+Add filtering:
+
+```text
+All
+Curated
+Baseline
+In progress
+Needs review
+```
+
+Add search by:
+
+- number;
+- MAT ID;
+- symbol;
+- name.
+
+---
+
+# 18. ADD A PERIODIC-TABLE VIEW TO STUDIO
+
+Studio should have both:
+
+### BOOK TREE
+
+and:
+
+### PERIODIC TABLE
+
+Selecting an element in either updates the same active record.
+
+Provide toggle:
+
+```text
+Tree | Periodic
+```
+
+This makes large-scale MAT authoring much easier.
+
+---
+
+# 19. REBUILD STUDIO TO FEEL LIKE AN ACTUAL EBOOK AUTHORING APPLICATION
+
+The existing three-column idea is good.
+
+The implementation is not.
+
+Transform it into:
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│ MAT Studio                                                  │
+│ File | Write | Design | Data | Review | Preview | Export    │
+├─────────────┬─────────────────────────────┬──────────────────┤
+│             │                             │                  │
+│ BOOK /      │                             │ INSPECTOR        │
+│ PERIODIC    │       ACTUAL PAGE           │                  │
+│ NAVIGATOR   │       / CANVAS              │ Page             │
+│             │                             │ Content          │
+│ 0001 H      │  real selected MAT record   │ Data             │
+│ 0002 He     │                             │ Figure           │
+│ ...         │                             │ Evidence         │
+│ 0118 Og     │                             │ Accessibility    │
+│             │                             │ Publication      │
+├─────────────┴─────────────────────────────┴──────────────────┤
+│ Build | Sources | Figures | Warnings | Save | Word count    │
+└──────────────────────────────────────────────────────────────┘
+```
+
+Do not leave placeholder panels pretending to work.
+
+---
+
+# 20. IMPLEMENT REAL MODES
+
+The top controls must actually change workflows.
+
+## WRITE
+
+Structure and scientific prose.
+
+Provide:
+
+- headings;
+- paragraphs;
+- definitions;
+- notes;
+- citations;
+- cross references.
+
+## DESIGN
+
+Publication components:
+
+- text;
+- figure;
+- image;
+- table;
+- chart;
+- graph;
+- equation;
+- callout;
+- source card;
+- timeline;
+- diagram;
+- 3D placeholder;
+- video;
+- audio.
+
+## DATA
+
+Display actual structured MAT properties.
+
+Do not edit a JSON-looking fake copy.
+
+## REVIEW
+
+Display:
+
+- scientific errors;
+- missing sources;
+- incomplete assets;
+- accessibility;
+- unresolved relationships;
+- baseline/curated status.
+
+## PREVIEW
+
+Real preview modes:
+
+```text
+Web
+EPUB
+Tablet
+6×9
+A4
+```
+
+## EXPORT
+
+Actual build/export status.
+
+Do not make these visual-only tabs.
+
+---
+
+# 21. REAL LIVE PREVIEW
+
+Replace the placeholder `LivePreview`.
+
+Best approach:
+
+reuse the same canonical renderer/publication model used by the public book.
+
+Do not create a second interpretation of MAT Markdown if avoidable.
+
+The selected element should render its real publication page.
+
+Support:
+
+```text
+zoom
+fit page
+fit width
+desktop
+tablet
+mobile
+6×9
+A4
+```
+
+---
+
+# 22. REAL INSPECTOR
+
+Replace all hard-coded counts.
+
+When Hydrogen is selected, Inspector should calculate/read actual:
+
+```text
+Record ID
+Status
+Word count
+Headings
+Figures
+Images
+Tables
+Graphs
+Datasets
+Equations
+Sources
+Citations
+Relationships
+Warnings
+Errors
+Missing alt text
+Missing assets
+```
+
+Selecting an individual page component changes Inspector context.
+
+Example:
+
+select a figure:
+
+```text
+Figure ID
+Title
+Caption
+Alt text
+Long description
+Status
+Source IDs
+Evidence classification
+Print fallback
+EPUB fallback
+```
+
+---
+
+# 23. CREATE AN AUTHORING COMPONENT LIBRARY
+
+Add an Insert/Add panel.
+
+Categories:
+
+### TEXT
+
+Heading
+Paragraph
+Definition
+Quote
+Footnote
+Marginal note
+
+### SCIENCE
+
+Property
+Equation
+Calculation
+Dataset
+Evidence block
+Source block
+
+### VISUAL
+
+Image
+Scientific illustration
+Diagram
+Chart
+Graph
+Spectrum
+Phase diagram
+Timeline
+Map
+3D model
+
+### MEDIA
+
+Audio
+Video
+Animation
+Simulation
+
+### REFERENCE
+
+Cross-reference
+Person
+Source
+Glossary term
+Related record
+
+Components must generate MAT-compatible structured placeholders where appropriate.
+
+---
+
+# 24. DO NOT MAKE IT A GENERIC WEB DASHBOARD
+
+The centre workspace should feel like a BOOK.
+
+Use:
+
+- page proportions;
+- paper surface;
+- serif reading typography;
+- margin;
+- chapter hierarchy;
+- figure captions;
+- running metadata;
+- scientific table styling.
+
+The surrounding application chrome can use a modern sans-serif interface.
+
+Aim for:
+
+```text
+Adobe InDesign
++
+Kindle Create
++
+scientific atlas
++
+reference Bible
++
+modern codex
+```
+
+not:
+
+```text
+generic SaaS admin dashboard
+```
+
+---
+
+# 25. ADD EBOOKCRAFT-LIKE PROJECT WORKFLOW
+
+EbookCraft itself was only a small scaffold, so do not pretend it contained features that were not there.
+
+Instead implement the useful PRODUCT CONCEPT:
+
+```text
+CREATE
+    ↓
+WRITE
+    ↓
+DESIGN
+    ↓
+ADD MEDIA
+    ↓
+REVIEW
+    ↓
+PREVIEW
+    ↓
+EXPORT
+```
+
+Make that workflow visible.
+
+Add a project status area showing:
+
+```text
+Book structure
+Content
+Data
+Media
+Sources
+Accessibility
+Publication
+```
+
+---
+
+# 26. DOCUMENT OUTLINE / PAGES
+
+Provide a true book outline.
+
+Allow:
+
+```text
+Front cover
+Title page
+Copyright
+Dedication
+Foreword
+Preface
+How to use MAT
+Contents
+Introduction
+
+Origin State
+
+Elements 001–118
+
+Glossary
+People
+Sources
+Index
+Appendices
+Back matter
+Back cover
+```
+
+Do not show hundreds of raw repository helper documents to the normal reader.
+
+Studio can expose technical/internal files in an advanced mode.
+
+---
+
+# 27. INTERNAL VS PUBLIC CONTENT
+
+Create presentation roles such as:
+
+```text
+PUBLIC
+EDITORIAL
+TECHNICAL
+VALIDATION
+GENERATED
+```
+
+Files such as:
+
+```text
+Schema Validation
+Migration Audit
+Visual Specification
+internal manifests
+```
+
+should not clutter the normal ebook contents unless explicitly intended for publication.
+
+Studio should allow:
+
+```text
+Show internal files
+```
+
+toggle.
+
+Default OFF for reader/book view.
+
+---
+
+# 28. FIX THE PUBLICATION MODEL
+
+Audit:
+
+`scripts/build-publication-model.mjs`
+
+It currently needs strengthening.
+
+Do not hard-code scientific glossary definitions with inappropriate source IDs.
+
+Do not attach Origin State sources to unrelated scientific definitions merely to populate a source field.
+
+Generate glossary entries from canonical controlled data where possible.
+
+If a term lacks a verified source:
+
+mark it accordingly rather than inventing provenance.
+
+---
+
+# 29. FIX CHART DATASET KEY MISMATCHES
+
+Compare:
+
+`book/data/chart-datasets.json`
+
+against:
+
+`scripts/build-publication-model.mjs`
+
+Ensure actual names agree.
+
+Do not have:
+
+```text
+universe
+```
+
+in one place and:
+
+```text
+cosmic
+```
+
+in another unless a deliberate adapter maps them.
+
+Likewise inspect:
+
+```text
+human
+humanBody
+crust
+```
+
+Add tests.
+
+---
+
+# 30. ONE GENERATED STUDIO API
+
+Studio should consume a deliberate generated model.
+
+For example:
+
+```text
+data/publication/generated/
+```
+
+Generate:
+
+```text
+studio-manifest.json
+publication-elements.json
+publication-records.json
+publication-sources.json
+publication-assets.json
+publication-validation.json
+publication-glossary.json
+publication-index.json
+```
+
+Then copy/expose them safely to Studio during:
+
+```bash
+npm run prepare:studio
+```
+
+Do not make Studio randomly fetch files that Vite does not serve.
+
+---
+
+# 31. PUBLICATION MODEL SHOULD INCLUDE BASELINE ELEMENTS
+
+The generated publication model must contain all 118 elements.
+
+Example:
+
+```json
+{
+  "mat": "MAT:0010",
+  "atomicNumber": 10,
+  "symbol": "Ne",
+  "name": "Neon",
+  "recordStatus": "BASELINE",
+  "fullRecord": false
+}
+```
+
+Full records then contain:
+
+```json
+{
+  "mat": "MAT:0001",
+  "recordStatus": "CURATED",
+  "fullRecord": true,
+  "recordPath": "records/0001-Hydrogen-H/..."
+}
+```
+
+---
+
+# 32. MAKE FORWARD REFERENCES USEFUL
+
+Many current warnings refer to elements such as:
+
+```text
+MAT:0011
+MAT:0012
+MAT:0013
+MAT:0014
+MAT:0016
+MAT:0022
+...
+```
+
+Once all 118 elemental identities exist in the baseline catalogue, teach validators the difference between:
+
+```text
+unknown MAT ID
+```
+
+and:
+
+```text
+valid baseline/reserved elemental MAT ID
+```
+
+A relationship to MAT:0014 should no longer mean “this element identity doesn't exist”.
+
+It may instead report:
+
+```text
+target exists as BASELINE but no CURATED record exists
+```
+
+This is more accurate.
+
+Do not simply silence the warning.
+
+---
+
+# 33. SEARCH ALL 118
+
+Public book search and Studio search should find:
+
+```text
+Neon
+Ne
+MAT:0010
+Atomic number 10
+```
+
+even before Neon receives the detailed MAT package.
+
+Clearly label result:
+
+`Baseline element`
+
+where applicable.
+
+---
+
+# 34. ELEMENT NEXT/PREVIOUS NAVIGATION
+
+Every baseline/curated record should support:
+
+```text
+← Previous element
+Next element →
+```
+
+Example:
+
+```text
+Fluorine ← Neon → Sodium
+```
+
+Also provide:
+
+`Back to periodic table`
+
+---
+
+# 35. ELEMENT QUICK SWITCHER
+
+Add a fast element selector.
+
+For example:
+
+```text
+Search element…
+```
+
+and/or:
+
+`Ctrl/Cmd + K`
+
+User can type:
+
+```text
+26
+Fe
+Iron
+MAT:0026
+```
+
+and jump immediately.
+
+---
+
+# 36. DON'T OVERWRITE USER SCIENCE
+
+When a curated record exists:
+
+never automatically replace curated MAT values with baseline values.
+
+Merge precedence:
+
+```text
+CURATED MAT VALUE
+      ↓
+BASELINE VALUE
+      ↓
+UNKNOWN
+```
+
+But always retain provenance for whichever value is rendered.
+
+Detect conflicting values and report them.
+
+Do not silently resolve scientific disagreements.
+
+---
+
+# 37. BASELINE → FULL RECORD GENERATOR
+
+Add an authoring action such as:
+
+`Create full MAT record`
+
+for a baseline element.
+
+Example for Neon:
+
+generate:
+
+```text
+records/0010-Neon-Ne/
+```
+
+using the current master MAT record template.
+
+Seed only approved baseline identity/basic values.
+
+Generate structured placeholders for the remainder.
+
+Do not generate fake isotope/spectrum/material data.
+
+Do not overwrite an existing folder.
+
+---
+
+# 38. MAKE THE USER'S LATER WORK EASY
+
+The user's intended workflow is:
+
+```text
+Select Neon
+→ see baseline Neon data
+→ Create/expand full record
+→ overwrite/add specialised MAT information
+→ validate
+→ preview
+→ publish
+```
+
+Design around this.
+
+Do not force them to manually create every base identity from scratch.
+
+---
+
+# 39. READER DESIGN
+
+Keep the public reader distinct from Studio.
+
+Reader:
+
+```text
+reading
+learning
+searching
+exploring
+```
+
+Studio:
+
+```text
+authoring
+editing
+design
+validation
+publishing
+```
+
+Do not expose authoring controls in the public ebook.
+
+---
+
+# 40. SCIENTIFIC READER ELEMENT PAGE
+
+For full records, maintain rich MAT architecture.
+
+For baseline records show available basic science plus future slots.
+
+Possible tabs/accordion:
+
+```text
+Overview
+Atomic
+Physical
+Chemical
+Nuclear
+Spectra
+Materials
+Visuals
+Data
+Sources
+Related
+```
+
+Hide completely empty sections or label them:
+
+`Planned for full MAT record`
+
+rather than displaying broken blank panels.
+
+---
+
+# 41. KEEP HISTORICAL / ALTERNATIVE MODELS SEPARATE
+
+Audit Russell periodic-table data and other alternative/theoretical material.
+
+Do not visually mix these into the conventional periodic table in a way that implies scientific equivalence.
+
+Use clear contexts such as:
+
+```text
+Standard scientific periodic table
+Historical models
+Alternative representations
+MAT research/theoretical overlays
+```
+
+Evidence labels must remain visible.
+
+Causali E remains explicitly theoretical/project-specific unless independently established.
+
+---
+
+# 42. ACCESSIBILITY
+
+Every 118-element interaction must support:
+
+- Tab;
+- Enter;
+- Space;
+- arrow navigation where sensible;
+- accessible element name;
+- atomic number;
+- symbol;
+- status.
+
+Example accessible label:
+
+```text
+Neon, symbol Ne, atomic number 10, baseline MAT record
+```
+
+Do not use colour alone for status.
+
+---
+
+# 43. SAVE / UNSAVED STATE
+
+Studio needs authoring-state feedback.
+
+Add:
+
+```text
+Saved
+Unsaved changes
+Validation pending
+Build required
+```
+
+Do not pretend files are saved if they are not.
+
+If actual filesystem writing is not yet implemented:
+
+make Studio read-only for those actions instead of fake-save buttons.
+
+---
+
+# 44. ERROR HANDLING
+
+Remove silent catch blocks for essential Studio resources.
+
+If Studio cannot load its model, show:
+
+```text
+MAT Studio could not load publication data.
+
+Expected:
+...
+
+Try:
+npm run prepare:studio
+```
+
+with technical details available.
+
+Do not show an empty Book Tree with no explanation.
+
+---
+
+# 45. EMPTY / LOADING / ERROR STATES
+
+Every major panel needs:
+
+```text
+loading
+ready
+empty
+error
+```
+
+states.
+
+Examples:
+
+- publication model unavailable;
+- baseline unavailable;
+- element has no figures;
+- record has no full chapter;
+- validation failed.
+
+---
+
+# 46. TEST THE ACTUAL STUDIO
+
+Add Vitest/component tests and, if appropriate, a lightweight browser smoke test.
+
+Minimum tests:
+
+```text
+Studio boots
+118 elements load
+MAT:0001 selectable
+MAT:0010 selectable
+MAT:0118 selectable
+baseline page renders
+curated record renders
+Book Tree works
+Periodic view works
+Inspector uses real data
+mode tabs change content
+missing data produces error state
+no MAT:null remains
+```
+
+---
+
+# 47. TEST THE SCIENTIFIC CATALOGUE
+
+Write validation ensuring:
+
+```text
+exactly 118 chemical elements
+atomic numbers unique 1–118
+symbols unique
+names unique
+MAT IDs unique
+MAT ID corresponds to atomic number
+0000 excluded from chemical element array
+no MAT:null
+no fake numeric missing-value sentinels
+all values with required provenance
+```
+
+---
+
+# 48. ADD BASELINE VALIDATOR
+
+Example:
+
+```bash
+npm run validate:elements
+```
+
+Check:
+
+- identity;
+- schema;
+- status;
+- provenance;
+- conditions;
+- invalid null semantics;
+- synthetic-element misuse.
+
+Make it part of:
+
+```bash
+npm run validate
+```
+
+---
+
+# 49. BUILD ORDER
+
+Recommended:
+
+```text
+1. fix Studio build/data pipeline
+2. create authoritative 118-element baseline
+3. fix publication model
+4. make all 118 selectable
+5. real LivePreview
+6. real Inspector
+7. implement Write/Design/Data/Review/Preview/Export
+8. improve visual design
+9. accessibility
+10. CI
+11. scientific validation review
+```
+
+Do not start with cosmetic CSS.
+
+---
+
+# 50. VISUAL TARGET
+
+Studio should feel intentionally designed.
+
+Use a professional dark authoring workspace around a warm/light book canvas.
+
+Example:
+
+```text
+dark app chrome
+      +
+paper/light centre page
+      +
+teal MAT accent
+      +
+muted gold publication accent
+```
+
+The page itself should look like a high-quality scientific book.
+
+Do not make the entire ebook page dark just because Studio chrome is dark.
+
+---
+
+# 51. SUGGESTED ADDITIONS
+
+Also implement or scaffold where appropriate:
+
+- undo/redo for Studio layout/draft changes;
+- breadcrumb;
+- element quick search;
+- keyboard shortcuts;
+- autosave of local Studio UI state;
+- command palette;
+- component insert menu;
+- figure manager;
+- table manager;
+- source inspector;
+- glossary inspector;
+- relationship explorer;
+- publication readiness;
+- missing-assets list;
+- accessibility report;
+- responsive preview;
+- export history;
+- build log viewer;
+- dirty-file indicator;
+- baseline/full-record comparison;
+- source/provenance diff.
+
+Do not allow scope creep to prevent the core application from working.
+
+---
+
+# 52. DO NOT REWRITE THE PUBLIC READER IN REACT
+
+React belongs in MAT Studio where its state/component model is useful.
+
+Keep the public ebook lightweight and static/offline-capable.
+
+Share:
+
+```text
+data
+schemas
+publication model
+semantic component definitions
+```
+
+rather than duplicating UI implementation.
+
+---
+
+# 53. REMOVE DEAD / DUPLICATE ARCHITECTURE
+
+Audit the reader for duplicated systems.
+
+For example inspect whether there is both:
+
+```text
+modules/atlas.mjs
+```
+
+and a separate large inline implementation in:
+
+```text
+book.js
+```
+
+If one is obsolete:
+
+migrate cleanly.
+
+Do not keep two partially independent implementations of the periodic table.
+
+Do the same for:
+
+- search;
+- charts;
+- reading tools;
+- publication UI;
+- translation;
+- TTS.
+
+---
+
+# 54. DO NOT DESTROY CURRENT WORK
+
+Before refactoring:
+
+```bash
+git status
+```
+
+Commit coherent recovery phases.
+
+Recommended commits:
+
+```text
+fix MAT Studio data and build pipeline
+add authoritative 118-element baseline catalogue
+enable all-element navigation
+connect Studio preview and inspector
+implement MAT authoring workflow
+add Studio and element validation to CI
+```
+
+---
+
+# 55. FINAL TEST
+
+At minimum run:
+
+```bash
+npm ci
+npm run validate
+npm run build:book
+npm test
+
+npm run build:publication
+npm run build:studio
+npm run test:studio
+```
+
+Then actually launch:
+
+```bash
+npm run studio
+```
+
+Manually verify:
+
+```text
+Hydrogen
+Neon
+Iron
+Gold
+Uranium
+Oganesson
+```
+
+from both:
+
+```text
+Book Tree
+Periodic Table
+```
+
+Verify baseline/curated labels.
+
+Verify real preview.
+
+Verify Inspector.
+
+Verify all workflow modes.
+
+Verify mobile/tablet layouts.
+
+---
+
+# 56. FINAL REPORT
+
+Return:
+
+### Fixed
+Actual failures repaired.
+
+### 118-element baseline
+Source/data architecture and counts.
+
+### Studio
+Which workflows now function.
+
+### Reader
+Which navigation/features changed.
+
+### Scientific integrity
+Anything intentionally left unresolved.
+
+### CI
+Exact results.
+
+### Remaining blockers
+Especially missing Carbon sources.
+
+### Files
+Exact files created/changed.
+
+Do not say “done” unless the application was actually run and tested.
+
+---
+
+PRIMARY RESULT REQUIRED:
+
+When this work is complete I must be able to:
+
+1. launch MAT Studio;
+2. see all 118 elements;
+3. click any element;
+4. view basic source-backed information immediately;
+5. distinguish baseline from fully curated records;
+6. open Hydrogen's complete MAT material;
+7. open Oganesson as a baseline record;
+8. use a real EbookCraft-style Write → Design → Data → Review → Preview → Export workflow;
+9. see a real book page in the centre;
+10. see real data in Inspector;
+11. later promote any baseline element into a full MAT record without starting from zero.
+
+Do not stop at another mock-up.
+
+Build the functioning workflow.
+
+One additional recommendation is important: **do not create 109 giant “empty” record folders right now.** The baseline-catalogue approach gives you all 118 selectable elements immediately while keeping the repository manageable. When you choose “Create full MAT record” for, say, Gold (`MAT:0079`), the system can then generate the complete locked folder/template package and inherit Gold's verified baseline data.
+
+That gives you the workflow you were originally aiming for: **browse everything now, deepen each element later, without losing scientific provenance or having to rebuild the book architecture each time.**

@@ -1,0 +1,944 @@
+registry_id: MAT:0003:REG:NUBASE2020
+record_id: MAT:0003
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 3
+    Z: 3
+    N: 0
+    state_index: 0
+    state_label: ground
+    source_label: 3Li
+    mass_excess:
+      value: 28670
+      unit: keV
+      raw: 28670#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 2000#
+      uncertainty: 2000
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: p-unst
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: PARTICLE-UNSTABLE
+    spin_parity_raw: 3/2-#
+    ensdf_update_year_raw: "98"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: p ?
+    source_line: 31
+    raw_line: 003 0030   3Li     28670#      2000#                                  p-unst            3/2-#         98               p ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-3
+    evaluation_entry_id: MAT:0003:NUBASE2020:3:0
+  - A: 4
+    Z: 3
+    N: 1
+    state_index: 0
+    state_label: ground
+    source_label: 4Li
+    mass_excess:
+      value: 25320
+      unit: keV
+      raw: "25320"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "210"
+      uncertainty: 210
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 91
+      unit: ys
+      raw: "91"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "9"
+      uncertainty: 9
+      status: RADIOACTIVE
+    spin_parity_raw: 2-
+    ensdf_update_year_raw: "98"
+    discovery_year_raw: "1965"
+    decay_and_abundance_raw: p=100
+    source_line: 34
+    raw_line: 004 0030   4Li     25320        210                                    91     ys 9      2-            98          1965 p=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007617001984175223
+        unit: 1/ys
+        relation: =
+        uncertainty: 0.0007533298665667802
+      mean_lifetime:
+        value: 131.28524872089568
+        unit: ys
+        relation: =
+        uncertainty: 12.984255368000671
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-4
+    evaluation_entry_id: MAT:0003:NUBASE2020:4:0
+  - A: 5
+    Z: 3
+    N: 2
+    state_index: 0
+    state_label: ground
+    source_label: 5Li
+    mass_excess:
+      value: 11680
+      unit: keV
+      raw: "11680"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 370
+      unit: ys
+      raw: "370"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1941"
+    decay_and_abundance_raw: p=100
+    source_line: 37
+    raw_line: 005 0030   5Li     11680         50                                   370     ys 30     3/2-          02          1941 p=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0018733707582701223
+        unit: 1/ys
+        relation: =
+        uncertainty: 0.00015189492634622612
+      mean_lifetime:
+        value: 533.7971651289165
+        unit: ys
+        relation: =
+        uncertainty: 43.2808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-5
+    evaluation_entry_id: MAT:0003:NUBASE2020:5:0
+  - A: 6
+    Z: 3
+    N: 3
+    state_index: 0
+    state_label: ground
+    source_label: 6Li
+    mass_excess:
+      value: 14086.8804
+      unit: keV
+      raw: "14086.8804"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.0014"
+      uncertainty: 0.0014
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1921"
+    decay_and_abundance_raw: IS=4.85 171
+    source_line: 41
+    raw_line: 006 0030   6Li     14086.8804     0.0014                              stbl              1+*           02          1921
+      IS=4.85 171
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-6
+    evaluation_entry_id: MAT:0003:NUBASE2020:6:0
+  - A: 6
+    Z: 3
+    N: 3
+    state_index: 8
+    state_label: i
+    source_label: 6Li
+    mass_excess:
+      value: 17649.76
+      unit: keV
+      raw: "17649.76"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_energy:
+      value: 3562.88
+      unit: keV
+      raw: "3562.88"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 56
+      unit: as
+      raw: "56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "14"
+      uncertainty: 14
+      status: RADIOACTIVE
+    spin_parity_raw: 0+      T=1
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1981"
+    decay_and_abundance_raw: IT=100
+    source_line: 42
+    raw_line: 006 0038   6Li  i  17649.76       0.10     3562.88       0.10          56     as 14     0+      T=1   02          1981 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012377628224284737
+        unit: 1/as
+        relation: =
+        uncertainty: 0.003094407056071184
+      mean_lifetime:
+        value: 80.79092228978196
+        unit: as
+        relation: =
+        uncertainty: 20.19773057244549
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-6i
+    evaluation_entry_id: MAT:0003:NUBASE2020:6:8
+  - A: 7
+    Z: 3
+    N: 4
+    state_index: 0
+    state_label: ground
+    source_label: 7Li
+    mass_excess:
+      value: 14907.105
+      unit: keV
+      raw: "14907.105"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.004"
+      uncertainty: 0.004
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 3/2-*
+    ensdf_update_year_raw: "03"
+    discovery_year_raw: "1921"
+    decay_and_abundance_raw: IS=95.15 171
+    source_line: 47
+    raw_line: 007 0030   7Li     14907.105      0.004                               stbl              3/2-*         03          1921
+      IS=95.15 171
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-7
+    evaluation_entry_id: MAT:0003:NUBASE2020:7:0
+  - A: 7
+    Z: 3
+    N: 4
+    state_index: 8
+    state_label: i
+    source_label: 7Li
+    mass_excess:
+      value: 26150
+      unit: keV
+      raw: "26150"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: 11250
+      unit: keV
+      raw: "11250"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_origin: RQ
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 3/2-    T=3/2
+    ensdf_update_year_raw: "03"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 48
+    raw_line: "007 0038   7Li  i  26150         30       11250         30       RQ                     3/2-    T=3/2 03               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-7i
+    evaluation_entry_id: MAT:0003:NUBASE2020:7:8
+  - A: 8
+    Z: 3
+    N: 5
+    state_index: 0
+    state_label: ground
+    source_label: 8Li
+    mass_excess:
+      value: 20945.8
+      unit: keV
+      raw: "20945.80"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 838.7
+      unit: ms
+      raw: "838.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 2+
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "1935"
+    decay_and_abundance_raw: B-=100;B-A=100
+    source_line: 53
+    raw_line: 008 0030   8Li     20945.80       0.05                                838.7   ms 0.3    2+            05          1935
+      B-=100;B-A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0008264542512936035
+        unit: 1/ms
+        relation: =
+        uncertainty: 2.956197393443198e-7
+      mean_lifetime:
+        value: 1209.9883307935738
+        unit: ms
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-8
+    evaluation_entry_id: MAT:0003:NUBASE2020:8:0
+  - A: 8
+    Z: 3
+    N: 5
+    state_index: 8
+    state_label: i
+    source_label: 8Li
+    mass_excess:
+      value: 31768
+      unit: keV
+      raw: "31768"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 10822
+      unit: keV
+      raw: "10822"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_origin: RQ
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+      T=2
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 54
+    raw_line: "008 0038   8Li  i  31768          5       10822          5       RQ                     0+      T=2   05               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-8i
+    evaluation_entry_id: MAT:0003:NUBASE2020:8:8
+  - A: 9
+    Z: 3
+    N: 6
+    state_index: 0
+    state_label: ground
+    source_label: 9Li
+    mass_excess:
+      value: 24954.91
+      unit: keV
+      raw: "24954.91"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.19"
+      uncertainty: 0.19
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 178.2
+      unit: ms
+      raw: "178.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1951"
+    decay_and_abundance_raw: B-=100;B-n=50.5 10
+    source_line: 62
+    raw_line: 009 0030   9Li     24954.91       0.19                                178.2   ms 0.4    3/2-          06          1951
+      B-=100;B-n=50.5 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0038897148179570444
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000008731121925829506
+      mean_lifetime:
+        value: 257.0882562864133
+        unit: ms
+        relation: =
+        uncertainty: 0.5770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-9
+    evaluation_entry_id: MAT:0003:NUBASE2020:9:0
+  - A: 10
+    Z: 3
+    N: 7
+    state_index: 0
+    state_label: ground
+    source_label: 10Li
+    mass_excess:
+      value: 33053
+      unit: keV
+      raw: "33053"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "13"
+      uncertainty: 13
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2
+      unit: zs
+      raw: "2.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: (1-,2-)
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1975"
+    decay_and_abundance_raw: n=100
+    source_line: 69
+    raw_line: 010 0030   10Li    33053         13                                     2.0   zs 0.5    (1-,2-)       07          1975 n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34657359027997264
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.08664339756999316
+      mean_lifetime:
+        value: 2.8853900817779268
+        unit: zs
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-10
+    evaluation_entry_id: MAT:0003:NUBASE2020:10:0
+  - A: 10
+    Z: 3
+    N: 7
+    state_index: 1
+    state_label: m
+    source_label: 10Li
+    mass_excess:
+      value: 33250
+      unit: keV
+      raw: "33250"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 200
+      unit: keV
+      raw: "200"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_origin: RQ
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.7
+      unit: zs
+      raw: "3.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+      status: RADIOACTIVE
+    spin_parity_raw: 1+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1994"
+    decay_and_abundance_raw: IT=100
+    source_line: 70
+    raw_line: 010 0031   10Li m  33250         40         200         40       RQ     3.7   zs 1.5    1+            07          1994 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.18733707582701223
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.07594746317311307
+      mean_lifetime:
+        value: 5.337971651289165
+        unit: zs
+        relation: =
+        uncertainty: 2.1640425613334453
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-10m
+    evaluation_entry_id: MAT:0003:NUBASE2020:10:1
+  - A: 10
+    Z: 3
+    N: 7
+    state_index: 2
+    state_label: n
+    source_label: 10Li
+    mass_excess:
+      value: 33530
+      unit: keV
+      raw: "33530"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 480
+      unit: keV
+      raw: "480"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_origin: RQ
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.35
+      unit: zs
+      raw: "1.35"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.24"
+      uncertainty: 0.24
+      status: RADIOACTIVE
+    spin_parity_raw: (2+)
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1993"
+    decay_and_abundance_raw: IT=100
+    source_line: 71
+    raw_line: 010 0032   10Li n  33530         40         480         40       RQ     1.35  zs 0.24   (2+)          07          1993 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.5134423559703298
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.09127864106139197
+      mean_lifetime:
+        value: 1.9476383052001007
+        unit: zs
+        relation: =
+        uncertainty: 0.3462468098133512
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-10n
+    evaluation_entry_id: MAT:0003:NUBASE2020:10:2
+  - A: 11
+    Z: 3
+    N: 8
+    state_index: 0
+    state_label: ground
+    source_label: 11Li
+    mass_excess:
+      value: 40728.3
+      unit: keV
+      raw: "40728.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.6"
+      uncertainty: 0.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8.75
+      unit: ms
+      raw: "8.75"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1966"
+    decay_and_abundance_raw: B-=100;B-n=86.3 9;B-2n=4.1 4;B-3n=1.9 2;B-A=1.7 3;B-d=0.0130 13;B-t=0.0093 8
+    source_line: 78
+    raw_line: 011 0030   11Li    40728.3        0.6                                   8.75  ms 0.06   3/2-*         12          1966
+      B-=100;B-n=86.3 9;B-2n=4.1 4;B-3n=1.9 2;B-A=1.7 3;B-d=0.0130 13;B-t=0.0093 8
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.07921682063542232
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000543201055785753
+      mean_lifetime:
+        value: 12.62358160777843
+        unit: ms
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-11
+    evaluation_entry_id: MAT:0003:NUBASE2020:11:0
+  - A: 12
+    Z: 3
+    N: 9
+    state_index: 0
+    state_label: ground
+    source_label: 12Li
+    mass_excess:
+      value: 49010
+      unit: keV
+      raw: "49010"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: (1-,2-)
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "2008"
+    decay_and_abundance_raw: n ?
+    source_line: 89
+    raw_line: 012 0030   12Li    49010         30                                                     (1-,2-)       17          2008 n ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0003:ISO:Li-12
+    evaluation_entry_id: MAT:0003:NUBASE2020:12:0
+  - A: 13
+    Z: 3
+    N: 10
+    state_index: 0
+    state_label: ground
+    source_label: 13Li
+    mass_excess:
+      value: 56980
+      unit: keV
+      raw: "56980"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "70"
+      uncertainty: 70
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.3
+      unit: zs
+      raw: "3.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.2"
+      uncertainty: 1.2
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2008"
+    decay_and_abundance_raw: 2n=100
+    source_line: 100
+    raw_line: 013 0030   13Li    56980         70                                     3.3   zs 1.2    3/2-#                     2008 2n=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.2100446001696804
+        unit: 1/zs
+        relation: =
+        uncertainty: 0.07637985460715652
+      mean_lifetime:
+        value: 4.760893634933579
+        unit: zs
+        relation: =
+        uncertainty: 1.7312340490667562
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0003:ISO:Li-13
+    evaluation_entry_id: MAT:0003:NUBASE2020:13:0

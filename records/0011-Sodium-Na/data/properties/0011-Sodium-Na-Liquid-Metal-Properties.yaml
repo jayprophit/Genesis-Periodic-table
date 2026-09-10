@@ -1,0 +1,60 @@
+registry_id: MAT:0011:REG:LIQUID-METAL
+record_id: MAT:0011
+phase:
+  id: MAT:0011:PHASE:LIQUID-NA
+state_transition:
+  melting_point:
+    approximate_value: 97.794
+    unit: degC
+transport:
+  electrical:
+    metallic_conduction: true
+  thermal:
+    high_thermal_transport: true
+  fluid:
+    advective_heat_transport: true
+temperature_dependent_properties:
+  density:
+    correlation_available: true
+  thermal_conductivity:
+    correlation_available: true
+  heat_capacity:
+    correlation_available: true
+  enthalpy:
+    correlation_available: true
+  viscosity:
+    correlation_available: true
+canonical_property_model:
+  authors:
+    - J_K_Fink
+    - L_Leibowitz
+  year: 1995
+exact_tabulated_curves:
+  status: DATA-EXTRACTION-REQUIRED
+MHD:
+  Lorentz_force_density:
+    equation: f = J x B
+  possible_uses:
+    - electromagnetic_pumping
+    - flow_measurement
+    - induction_experiments
+    - reactor_thermal_hydraulics
+  state_variables:
+    - temperature
+    - conductivity
+    - flow_velocity
+    - magnetic_field
+    - current_density
+    - geometry
+rules:
+  liquid_sodium_property_equals_room_temperature_solid_property: false
+  thermophysical_property_is_constant: false
+source_id: SRC-000226
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/42.txt
+  source_sha256: 2e5a387c3d2af3314c8259168d9a61f3e7a81001aafef2a7b8490cd101b17126
+  source_line: 1099
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

@@ -1,20 +1,214 @@
+mat_id: MAT:0011
+record_name: Sodium
+symbol: Na
+record_class: CHEMICAL_ELEMENT
+atomic_number: 11
+legacy:
+  legacy_id: G0011
+  migration_status: CONTENT-CORE-MIGRATED
+identity:
+  proton_count: 11
+  neutral_electron_count: 11
+  period: 3
+  group: 1
+  block: s
+atomic_weight:
+  value: 22.98976928
+  uncertainty: 2e-8
+  source_id: SRC-000215
+electronic_ground_state:
+  configuration: "[Ne]3s1"
+  term: 2S1/2
+  open_shell: true
+  source_id: SRC-000214
+periodic_architecture:
+  period_start:
+    closed_shell_parent: MAT:0010
+    new_shell: 3
+    outer_configuration: 3s1
+  lithium_analogue:
+    element: MAT:0003
+    relationship: SAME-VALENCE-PATTERN-DIFFERENT-SHELL
+  principle: PERIODIC-REPETITION-PLUS-RADIAL-EXPANSION
+ionization:
+  first:
+    value: 5.13907696
+    uncertainty: 2.5e-7
+    unit: eV
+  second:
+    value: 47.28636
+    uncertainty: 0.00025
+    unit: eV
+  third:
+    value: 71.62
+    uncertainty: 0.0012
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  fourth:
+    value: 98.936
+    uncertainty: 0.012
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  fifth:
+    value: 138.404
+    uncertainty: 0.012
+    unit: eV
+  sixth:
+    value: 172.23
+    uncertainty: 0.05
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  seventh:
+    value: 208.504
+    uncertainty: 0.012
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  eighth:
+    value: 264.192
+    uncertainty: 0.022
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  ninth:
+    value: 299.856
+    uncertainty: 0.007
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  tenth:
+    value: 1465.0992
+    uncertainty: 0.0007
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  eleventh:
+    value: 1648.702285
+    uncertainty: 0.000005
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  source_id: SRC-000214
+dominant_ion:
+  id: MAT:0011:ION:Na+1
+  charge: 1
+  electron_configuration: "[Ne]"
+  electron_count: 10
+  isoelectronic_with:
+    - MAT:0010:ATOM:Ne
+spectroscopy:
+  D2:
+    wavelength:
+      value: 588.995095
+      uncertainty: 0.000003
+      unit: nm
+      medium: STANDARD-AIR
+    transition:
+      lower: 3s 2S1/2
+      upper: 3p 2P°3/2
+  D1:
+    wavelength:
+      value: 589.5924
+      unit: nm
+      medium: STANDARD-AIR
+    transition:
+      lower: 3s 2S1/2
+      upper: 3p 2P°1/2
+  source_id: SRC-000217
+physical_reference:
+  state_20C: SOLID
+  density:
+    approximate_value: 0.97
+    unit: g/cm3
+  melting_point:
+    value: 97.794
+    unit: degC
+  boiling_point:
+    value: 882.94
+    unit: degC
+  source_id: SRC-000216
+high_pressure:
+  transparent_dense_sodium:
+    observed: true
+    approximate_pressure:
+      value: 200
+      unit: GPa
+    structure: hP4
+    electronic_state:
+      metallic: false
+      transparent: true
+      wide_bandgap_dielectric: true
+    mechanism:
+      - core_overlap
+      - p_d_hybridization
+      - interstitial_valence_electron_localization
+    evidence: MEASURED+COMPUTATIONAL-INTERPRETATION
+    source_id: SRC-000219
+isotope_branch:
+  NIST_mass_range:
+    minimum: 18
+    maximum: 37
+  stable:
+    - MAT:0011:ISO:Na-23
+  key_radioactive:
+    - MAT:0011:ISO:Na-21
+    - MAT:0011:ISO:Na-22
+    - MAT:0011:ISO:Na-24
+    - MAT:0011:ISO:Na-25
+    - MAT:0011:ISO:Na-26
+biological_architecture:
+  principal_state: Na+
+  roles:
+    - membrane_potential
+    - nerve_signalling
+    - muscle_function
+    - osmotic_balance
+    - secondary_active_transport
+  Na_K_ATPase:
+    Na_out:
+      value: 3
+    K_in:
+      value: 2
+    ATP:
+      value: 1
+    electrogenic: true
+    source_id: SRC-000222
+battery_architecture:
+  charge_carrier: Na+
+  major_material_families:
+    anodes:
+      - hard_carbon
+    cathodes:
+      - layered_oxides
+      - polyanionic_materials
+      - Prussian_blue_analogues
+  status_2026: COMMERCIALIZING
+  source_ids:
+    - SRC-000220
+    - SRC-000221
+relationships:
+  resolved:
+    - MAT:0003
+    - MAT:0006
+    - MAT:0007
+    - MAT:0008
+    - MAT:0009
+    - MAT:0010
+  future:
+    - MAT:0012
+    - MAT:0017
+    - MAT:0019
+scientific_status:
+  atomic_identity: ESTABLISHED
+  Na_plus_closed_shell: ESTABLISHED
+  Na23_monoisotopic_natural_state: ESTABLISHED
+  D_line_fine_structure: ESTABLISHED
+  metallic_sodium: ESTABLISHED
+  sodium_ion_batteries: ESTABLISHED-TECHNOLOGY
+  biological_Na_transport: ESTABLISHED
+  high_pressure_insulating_sodium: ESTABLISHED
+status: RESEARCHED-IN-PROGRESS
 registry_id: MAT:0011:REG:MASTER
 record_id: MAT:0011
 record_version: 1.1.0
 created: 2026-09-08
 updated: 2026-09-08
-status: BASELINE
-record_class: CHEMICAL_ELEMENT
 schema_version: 1.0.0
-identity:
-  canonical_name: Sodium
-  symbol: Na
-  atomic_number: 11
-  mat_id: MAT:0011
-  period: 3
-  group: 1
-  block: s
-  category: Alkali Metal
 properties:
   atomic_weight:
     value: 22.98976928
@@ -115,3 +309,12 @@ completeness:
   safety: PLANNED
   sources: PLANNED
   visuals: PLANNED
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/41.txt
+  source_sha256: 8325c3157b85fc6759927c426d634a97e5c53ad978a3fd673d847aecc488a31d
+  source_line: 1878
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.
+scientific_validation_status: NEEDS-REVIEW

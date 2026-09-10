@@ -1,0 +1,90 @@
+material_id: MAT:CMP:MgH2
+parents:
+  - MAT:0012
+  - MAT:0001
+classification:
+  - METAL-HYDRIDE
+  - HYDROGEN-STORAGE-MATERIAL
+stoichiometric_hydrogen_capacity:
+  gravimetric:
+    approximate_value: 7.6
+    unit: wt%
+phases:
+  alpha_MgH2:
+    aliases:
+      - LOW-PRESSURE-MgH2
+      - RUTILE-TYPE-MgH2
+    structure:
+      crystal_system: TETRAGONAL
+      space_group: P42/mnm
+    stability:
+      ordinary_reference_phase: true
+  gamma_MgH2:
+    structure:
+      crystal_system: ORTHORHOMBIC
+      prototype: alpha-PbO2
+      space_group: Pbcn
+    classification:
+      metastable: true
+      high_pressure_related: true
+    experimental_high_pressure_synthesis:
+      established: true
+hydrogenation:
+  reaction: Mg + H2 <-> MgH2
+  stages:
+    - gas_transport
+    - surface_adsorption
+    - H2_dissociation
+    - H_diffusion
+    - hydride_nucleation
+    - phase_boundary_growth
+material_changes:
+  - lattice_structure
+  - volume
+  - electronic_structure
+  - mechanical_stress
+  - thermal_properties
+major_limitations:
+  dehydrogenation_temperature:
+    ordinary_unmodified_bulk:
+      typically_above: 300
+      unit: degC
+  thermodynamic_stability:
+    high: true
+  kinetics:
+    slow_without_modification: true
+engineering_controls:
+  - transition_metal_catalysts
+  - metal_oxide_catalysts
+  - carbon_based_catalysts
+  - nanostructuring
+  - nanoconfinement
+  - alloying
+  - reactive_hydride_composites
+  - high_entropy_catalysts
+  - defect_engineering
+  - interface_engineering
+history_variables:
+  - cycle_count
+  - phase_history
+  - catalyst_history
+  - oxide_history
+  - thermal_history
+  - strain
+  - particle_coarsening
+rules:
+  theoretical_7_6_wt_percent_equals_system_capacity: false
+  catalyst_changes_kinetics_only: false
+  phase_identity_is_optional: false
+  hydrogen_storage_equals_simple_void_filling: false
+source_ids:
+  - SRC-000247
+  - SRC-000265
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1272
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

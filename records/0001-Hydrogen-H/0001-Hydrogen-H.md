@@ -3282,3 +3282,7 @@ Do not yet mark the legacy `G0001` file archived or fully migrated.
 The storage and safety wording above follows DOE's current split between compressed/cryogenic storage and material-based approaches such as metal hydrides, chemical storage materials and sorbents. DOE also explicitly treats hydrogen embrittlement/material compatibility, leak detection, ventilation and flame detection as important engineering concerns. ([The Department of Energy's Energy.gov][1])
 
 NIST's hydrogen thermophysical work also supports keeping **parahydrogen, normal hydrogen and orthohydrogen as distinguishable thermodynamic models**, instead of putting every H₂ property into one generic table. ([NIST][2])
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0001-Hydrogen-H-Nuclear-Evaluation.md) provides 7 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

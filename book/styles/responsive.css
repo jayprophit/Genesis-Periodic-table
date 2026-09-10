@@ -11,13 +11,8 @@
 }
 @media (max-width: 850px) {
   .mobile-bar {
-    display: flex; justify-content: space-between; align-items: center;
-    position: sticky; top: 0; z-index: 40; background: var(--bg);
-    border-bottom: 1px solid var(--line); padding: 10px 18px; font-size: 12px;
+    padding: 7px 18px;
   }
-  .mobile-bar button { font-size: 12px }
-  .mobile-bar a { font: 20px var(--serif); text-decoration: none }
-  .mobile-bar a span { font-size: 12px }
   #sidebar {
     position: fixed; left: 0; top: 58px; width: min(340px, 88vw);
     height: calc(100dvh - 58px); transform: translateX(-101%);
@@ -31,6 +26,7 @@
   .cover-diagram { height: 300px }
   .chapter-tools { gap: 7px }
   .chapter-tools a { margin-left: 0 }
+  .chart-container { height: 200px }
   body { --font-size: 16px }
 }
 @media (max-width: 560px) {
@@ -53,7 +49,9 @@
   #page > h1 { font-size: 32px }
   #page h2 { font-size: 27px }
   #page h3 { font-size: 22px }
-  .vis-grid, .related-links { grid-template-columns: 1fr }
+  .vis-grid, .viz-grid, .related-links { grid-template-columns: 1fr }
+  .chart-container { height: 180px }
+  .vis-item img { height: 120px }
   .chapter-summary ul { columns: 1 }
   .chapter-tools select { min-width: 100%; max-width: 100% }
   .chapter-top { font-size: 10px }

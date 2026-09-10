@@ -1,0 +1,53 @@
+registry_id: MAT:0012:REG:GRIGNARD
+record_id: MAT:0012
+general_family:
+  formula: RMgX
+components:
+  R:
+    description: ORGANIC GROUP
+  Mg:
+    element: MAT:0012
+  X:
+    description: HALIDE
+classification:
+  - ORGANOMAGNESIUM
+  - CARBON-BOND-FORMING-REAGENT-FAMILY
+canonical_relationships:
+  carbon_parent:
+    id: MAT:0006
+    status: RESOLVED
+  halogen_parent:
+    status: ELEMENT-DEPENDENT
+reaction_role:
+  common:
+    - nucleophilic_carbon_transfer
+    - carbon_carbon_bond_formation
+    - carbonyl_addition
+state_variables:
+  - solvent
+  - halide
+  - organic_group
+  - concentration
+  - aggregation
+  - coordination
+  - temperature
+  - moisture
+  - substrate
+important_rule:
+  statement: RMgX is not adequately represented as isolated R- plus Mg2+ plus X- classical particles.
+  solution_structure:
+    aggregation_and_equilibria: true
+scientific_lineage:
+  Victor_Grignard:
+    role:
+      - DISCOVERY-CONTRIBUTOR
+      - ORGANOMETALLIC-CHEMISTRY-PIONEER
+source_id: SRC-000245
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/51.txt
+  source_sha256: 604650d848b2ced7d0ce6da49dc65e919d4c789fb27e1a95150e1e538798a5dc
+  source_line: 1490
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

@@ -1,0 +1,271 @@
+registry_id: "MAT:0013:REG:ALLOY-FAMILIES"
+record_id: "MAT:0013"
+
+principle:
+
+  statement: >
+    Aluminium engineering properties are often produced
+    more strongly by composition plus microstructure plus
+    process history than by pure-Al properties alone.
+
+alloy_families:
+
+  Al_Cu:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0029"
+
+    conventional_wrought_family:
+      "2xxx"
+
+    principal_solute:
+      copper: true
+
+    heat_treatable:
+      generally: true
+
+    strengthening:
+      precipitation_hardening: true
+
+    canonical_binary_sequence:
+      - "SUPERSATURATED-SOLID-SOLUTION"
+      - "GP-ZONES"
+      - "theta-double-prime"
+      - "theta-prime"
+      - "theta-Al2Cu"
+
+    equilibrium_phase:
+      id: "MAT:CMP:Al2Cu"
+      alias: "theta"
+
+    magnesium_containing_branch:
+      may_form:
+        - "GPB-ZONES"
+        - "S-Al2CuMg"
+
+    uses:
+      - aerospace_structures
+      - high_specific_strength_components
+
+  Al_Mg:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0012"
+
+    conventional_wrought_family:
+      "5xxx"
+
+    principal_solute:
+      magnesium: true
+
+    heat_treatable_by_conventional_precipitation_hardening:
+      generally: false
+
+    primary_strengthening:
+      - solid_solution_strengthening
+      - work_hardening
+      - grain_refinement
+
+    sensitization:
+
+      beta_phase:
+        commonly_written:
+          - "Al3Mg2"
+          - "Al8Mg5"
+
+      grain_boundary_precipitation:
+        important: true
+
+      consequence:
+        may_reduce_intergranular_corrosion_resistance: true
+
+      strong_function_of:
+        - Mg_content
+        - temperature
+        - exposure_time
+        - grain_boundary_structure
+        - processing_history
+
+    uses:
+      - marine
+      - welded_structures
+      - transportation
+
+  Al_Mg_Si:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0012"
+      - "MAT:0014"
+
+    conventional_wrought_family:
+      "6xxx"
+
+    heat_treatable:
+      true
+
+    precipitation_system:
+      Mg_Si_based: true
+
+    simplified_sequence:
+      - "SUPERSATURATED-SOLID-SOLUTION"
+      - "Mg/Si-CLUSTERS"
+      - "CO-CLUSTERS"
+      - "GP-LIKE-PRECURSORS"
+      - "beta-double-prime"
+      - "beta-prime-and-related-intermediates"
+      - "beta-Mg2Si"
+
+    peak_strengthening_precipitate:
+      commonly:
+        "beta-double-prime"
+
+    exact_sequence:
+      composition_dependent: true
+
+    uses:
+      - extrusions
+      - automotive
+      - structural_shapes
+      - architectural_systems
+
+  Al_Si:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0014"
+
+    conventional_wrought_family:
+      "4xxx"
+
+    principal_role:
+      silicon_addition: true
+
+    common_effects:
+      - lowers_melting_range
+      - improves_castability
+      - modifies_solidification
+      - useful_in_filler_materials
+
+    binary_Al_Si_is_classic_precipitation_hardening_system:
+      false
+
+    cast_Al_Si_Mg:
+
+      can_be_heat_treatable:
+        true
+
+      strengthening_relationship:
+        Mg_Si_precipitation: true
+
+  Al_Zn_Mg_Cu:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0030"
+      - "MAT:0012"
+      - "MAT:0029"
+
+    conventional_wrought_family:
+      "7xxx"
+
+    principal_family_marker:
+      zinc: true
+
+    high_strength:
+      true
+
+    heat_treatable:
+      true
+
+    simplified_ageing_sequence:
+      - "SUPERSATURATED-SOLID-SOLUTION"
+      - "GP-ZONES"
+      - "eta-prime"
+      - "eta-MgZn2"
+
+    exact_precipitate_population_depends_on:
+      - Zn_Mg_ratio
+      - Cu_content
+      - quench
+      - ageing_temperature
+      - ageing_time
+      - prestrain
+
+    overageing:
+      may_be_used_for:
+        - corrosion_resistance_control
+        - stress_corrosion_control
+        - stability
+
+  Al_Li:
+
+    parent_elements:
+      - "MAT:0013"
+      - "MAT:0003"
+
+    designation_note:
+      some_Al_Li_alloys_occur_in_8xxx_family: true
+      all_8xxx_are_Al_Li: false
+
+    principal_effects_of_Li_addition:
+      - density_reduction
+      - elastic_modulus_increase
+      - altered_precipitation
+      - altered_texture_and_anisotropy
+
+    possible_strengthening_phases:
+
+      delta_prime:
+        formula: "Al3Li"
+        structure_relation:
+          coherent_with_Al_matrix: true
+
+      T1:
+        formula: "Al2CuLi"
+        morphology:
+          plate_like: true
+
+        common_habit_plane:
+          "{111}_Al"
+
+      theta_prime:
+        formula: "Al2Cu"
+
+    dominant_strengthening_phase:
+      universal_for_all_Al_Li_alloys: false
+
+    exact_population_depends_on:
+      - Li
+      - Cu
+      - Mg
+      - Ag
+      - Zr
+      - composition
+      - prestrain
+      - ageing_history
+
+general_rules:
+
+  alloy_property_equals_weighted_average_of_elements: false
+
+  alloy_series_number_fully_specifies_composition: false
+
+  all_Al_Mg_alloys_are_precipitation_hardenable: false
+
+  all_Al_Zn_binary_alloys_equal_7xxx_high_strength_alloys: false
+
+  all_8xxx_alloys_are_Al_Li: false
+
+  parent_element_properties_equal_precipitate_properties: false
+
+source_ids:
+  - "SRC-000293"
+  - "SRC-000294"
+  - "SRC-000295"
+  - "SRC-000296"
+  - "SRC-000297"
+  - "SRC-000298"
+  - "SRC-000299"

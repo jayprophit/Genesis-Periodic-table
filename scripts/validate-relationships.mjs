@@ -7,6 +7,7 @@ const SCHEMA = "data/schema/1.0.0/mat-relationship.schema.json";
 let failed = 0;
 const knownParents = new Set(recordDirs().map((d) => "MAT:" + d.slice(0, 4)));
 const seenRel = new Map();
+const conceptLabels=new Set(loadYaml('data/registries/relationship-concepts.yaml').concepts.map(c=>c.label));
 
 const files = walkFiles("records", (f) => /relationship/i.test(f) && f.endsWith(".yaml"));
 for (const f of files) {
@@ -29,7 +30,7 @@ for (const f of files) {
     for (const key of ["relationships", "materials", "compounds", "processes", "entries", "items"]) {
       const c = doc[key];
       if (Array.isArray(c)) c.forEach((r, i) => push(r.relationship_id || `${key}[${i}]`, r));
-      else if (c && typeof c === "object") Object.entries(c).forEach(([k, v]) => push(`MAP:${k}`, v || {}));
+      else if (c && typeof c === "object") Object.entries(c).forEach(([k, v]) => push(v?.relationship_id || `MAP:${k}`, v || {}));
     }
     if (doc.relationship_id && !out.length) push(doc.relationship_id, doc);
     return out;
@@ -52,7 +53,7 @@ for (const f of files) {
       const v = String(raw ?? "");
       if (!v || v.includes(RESERVED)) continue;
       const pm = v.match(/^MAT:(\d{4})/);
-      if (!pm) { warn(f, rec, `${r.relationship_id || "noid"}.${end}`, `non-MAT concept endpoint ${v}`, "model particles/concepts as MAT entities or keep explicit concept labels"); continue; }
+      if (!pm) { if(!conceptLabels.has(v)) warn(f, rec, `${r.relationship_id || "noid"}.${end}`, `unregistered concept endpoint ${v}`, "register the exact label and its scope in relationship-concepts.yaml"); continue; }
       if (!knownParents.has("MAT:" + pm[1])) {
         const n = parseInt(pm[1], 10);
         if (n >= 0 && n <= 118) warn(f, rec, `${r.relationship_id || "noid"}.${end}`, `forward reference to unpublished record MAT:${pm[1]}`, "mark RESERVED-PENDING-RECORD or publish the record");

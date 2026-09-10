@@ -1,23 +1,11 @@
-/* MAT Codex service worker: versioned cache with stale-while-revalidate. */
-const CACHE = "mat-codex-v3";
-const CORE = ["./", "./index.html", "./3d.html", "./styles.css", "./book.js", "./reader-core.mjs",
-  "./math-config.js", "./manifest.json", "./search-index.json", "./visuals-index.json",
-  "./elements.json", "./identities.json", "./periodic.json", "./offline-index.json",
-  "./manifest.webmanifest", "./scenes/index.json",
-  "./vendor/marked.mjs", "./vendor/tex-svg.js", "./vendor/three.module.js", "./vendor/OrbitControls.js",
-  "./vendor/chart.min.js", "./data/elements-118.json", "./data/chart-datasets.json",
-  "./styles/variables.css", "./styles/base.css", "./styles/layout.css", "./styles/toc.css",
-  "./styles/sidebar-settings.css", "./styles/reader.css", "./styles/content.css",
-  "./styles/visuals.css", "./styles/responsive.css", "./styles/print.css",
-  "./styles/reading-modes.css", "./styles/codex-panels.css", "./styles/periodic-extra.css",
-  "./styles/onboarding.css",
-  "./data/russell-periodic.json", "./data/combined-periodic.json",
-  "./data/publication/metadata.json"];
+/* MAT Codex service worker: versioned offline cache. */
+importScripts('./cache-version.js');
+const CACHE = self.MAT_CACHE_NAME;
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(CACHE)
-      .then((c) => c.addAll(CORE))
+    fetch('./offline-index.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Offline index unavailable');return r.json();})
+      .then(index=>caches.open(CACHE).then(c=>c.addAll(index.app)))
       .then(() => self.skipWaiting())
   );
 });
@@ -32,16 +20,19 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  /* Stale-while-revalidate for HTML/JSON; cache-first for assets */
+  /* Network-first for documents and modules; cache-first for other assets */
   const url = new URL(e.request.url);
-  const isDynamic = /\.(html|json)$/.test(url.pathname) || url.pathname.endsWith("/");
+  if(url.origin!==self.location.origin)return;
+  const isDynamic = /\.(html|json|md|yaml|mjs|js|css)$/.test(url.pathname) || url.pathname.endsWith("/");
   e.respondWith(
     caches.open(CACHE).then((cache) =>
       cache.match(e.request).then((hit) => {
-        const fetchPromise = fetch(e.request).then((res) => {
-          if (res.ok) cache.put(e.request, res.clone());
+        // A stalled connection must not keep an already-saved chapter waiting.
+        const fetchPromise = fetch(e.request,{signal:AbortSignal.timeout(hit ? 3000 : 20000)}).then((res) => {
+          if (res.ok) e.waitUntil(cache.put(e.request, res.clone()));
           return res;
-        }).catch(() => hit);
+        }).catch(() => hit || new Response('This resource has not been saved for offline reading.',{status:503,headers:{'Content-Type':'text/plain'}}));
+        e.waitUntil(fetchPromise.then(()=>{}));
         return hit && !isDynamic ? hit : fetchPromise;
       })
     )

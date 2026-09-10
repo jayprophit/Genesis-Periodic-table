@@ -1,5 +1,176 @@
-record_id: "MAT:0011"
-manifest_id: "MAT:0011:REG:RELATIONSHIPS"
-version: "1.0.0"
-
-relationships: []
+registry_id: MAT:0011:REG:RELATIONSHIPS
+record_id: MAT:0011
+version: 1.0.0
+relationships:
+  - relationship_id: MAT:0011:REL:0001
+    source: MAT:0011
+    type: PERIODIC-ANALOGUE
+    target: MAT:0003
+    target_status: RESOLVED
+    shared_outer_configuration: ns1
+  - relationship_id: MAT:0011:REL:0002
+    source: MAT:0011:ION:Na+1
+    type: ISOELECTRONIC-WITH
+    target: MAT:0010:ATOM:Ne
+    target_status: RESOLVED
+    electron_count: 10
+  - relationship_id: MAT:0011:REL:0010
+    source: MAT:0011:ISO:Na-21
+    type: DECAYS-TO
+    target: MAT:0010:ISO:Ne-21
+    mechanism: BETA-PLUS
+    target_status: RESOLVED
+  - relationship_id: MAT:0011:REL:0011
+    source: MAT:0011:ISO:Na-22
+    type: DECAYS-TO
+    target: MAT:0010:ISO:Ne-22
+    mechanism:
+      - BETA-PLUS
+      - ELECTRON-CAPTURE
+    target_status: RESOLVED
+  - relationship_id: MAT:0011:REL:0012
+    source: MAT:0011:ISO:Na-23
+    type: NEUTRON-CAPTURE-TO
+    target: MAT:0011:ISO:Na-24
+  - relationship_id: MAT:0011:REL:0013
+    source: MAT:0011:ISO:Na-24
+    type: DECAYS-TO
+    target: MAT:0012:ISO:Mg-24
+    mechanism: BETA-MINUS
+    target_status: RESERVED-PENDING-MAGNESIUM
+  - relationship_id: MAT:0011:REL:0020
+    source:
+      - MAT:0011
+      - MAT:0001
+      - MAT:0008
+    type: REACTS-IN-WATER-SYSTEM
+    products:
+      - NaOH
+      - H2
+  - relationship_id: MAT:0011:REL:0021
+    source: MAT:0011
+    type: FORMS-HYDRIDE
+    target: NaH
+  - relationship_id: MAT:0011:REL:0022
+    source:
+      - MAT:0011
+      - MAT:0005
+      - MAT:0001
+    type: FORMS-COMPLEX-HYDRIDE
+    target: NaBH4
+  - relationship_id: MAT:0011:REL:0030
+    source: MAT:0011
+    type: FORMS-CARBONATE-NETWORK
+    target: MAT:0006
+    target_status: RESOLVED
+    products:
+      - Na2CO3
+      - NaHCO3
+  - relationship_id: MAT:0011:REL:0031
+    source: MAT:0011
+    type: FORMS-OXYGEN-SPECIES-SALTS
+    target: MAT:0008
+    target_status: RESOLVED
+    products:
+      - Na2O
+      - Na2O2
+      - NaO2
+      - NaOH
+  - relationship_id: MAT:0011:REL:0040
+    source: MAT:0011
+    type: FORMS-FLUORIDE
+    target: MAT:0009
+    target_status: RESOLVED
+    product: NaF
+  - relationship_id: MAT:0011:REL:0050
+    source: MAT:0011
+    type: FORMS-NITROGEN-CONTAINING-SALTS
+    target: MAT:0007
+    target_status: RESOLVED
+    products:
+      - NaNO3
+      - NaNO2
+      - NaN3
+      - NaNH2
+  - relationship_id: MAT:0011:REL:0060
+    source: MAT:0011
+    type: FORMS-SILICATE-NETWORK
+    target: MAT:0014
+    target_status: RESERVED-PENDING-SILICON
+    products:
+      - Na2SiO3
+      - sodium_silicate_glasses
+  - relationship_id: MAT:0011:REL:0061
+    source: MAT:0011
+    type: FORMS-PHOSPHATE-NETWORK
+    target: MAT:0015
+    target_status: RESERVED-PENDING-PHOSPHORUS
+  - relationship_id: MAT:0011:REL:0070
+    source: MAT:0011
+    type: FORMS-HALIDE
+    target: MAT:0017
+    target_status: RESERVED-PENDING-CHLORINE
+    product: NaCl
+  - relationship_id: MAT:0011:REL:0080
+    source: MAT:0011
+    type: FORMS-ALKALI-METAL-ALLOY
+    target: MAT:0019
+    target_status: RESERVED-PENDING-POTASSIUM
+    material: NaK
+  - relationship_id: MAT:0011:REL:0081
+    source:
+      - MAT:0011
+      - MAT:0019
+    type: BIOLOGICAL-ION-GRADIENT-PAIR
+    target: NA-K-ATPASE
+    target_status: RESERVED-PENDING-POTASSIUM
+  - relationship_id: MAT:0011:REL:0090
+    source: MAT:0011:ION:Na+1
+    type: MOBILE-ION-IN
+    target:
+      - hard_carbon
+      - layered_oxides
+      - polyanionic_cathodes
+      - Prussian_blue_analogues
+      - solid_electrolytes
+  - relationship_id: MAT:0011:REL:0100
+    source: MAT:0011:PHASE:BCC
+    type: PRESSURE-TRANSFORMS-THROUGH
+    targets:
+      - FCC
+      - cI16
+      - oP8
+      - tI19
+      - hP4
+  - relationship_id: MAT:0011:REL:0101
+    source: MAT:0011:PHASE:hP4
+    type: HAS-ELECTRONIC-CLASS
+    target: ELECTRIDE
+  - relationship_id: MAT:0011:REL:0110
+    source: MAT:0011:ATOM:Na
+    type: HAS-RESONANCE-DOUBLEt
+    target:
+      - D1
+      - D2
+  - relationship_id: MAT:0011:REL:0111
+    source: MAT:0011:ATOM:Na
+    type: LASER-COOLABLE
+    target: ULTRACOLD-SODIUM
+  - relationship_id: MAT:0011:REL:0999
+    source: MAT:0011
+    type: LEGACY-SUCCESSOR-OF
+    target: G0011
+rules:
+  chemical_and_nuclear_edges_are_distinct: true
+  Na_plus_role_is_context_dependent: true
+  same_charge_does_not_imply_same_transport: true
+  graph_is_exhaustive: false
+manifest_id: MAT:0011:REG:RELATIONSHIPS
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/43.txt
+  source_sha256: 6deabebe37c282ee5246e846496c422a8c636df500ffef3897be41d691815347
+  source_line: 441
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

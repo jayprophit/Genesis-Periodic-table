@@ -1,0 +1,882 @@
+{
+  "intake_id": "MAT:INTAKE:REVIEW-BRIEFS:2026-09-09",
+  "sources": [
+    {
+      "id": "architecture-review",
+      "path": "archive/source-intake/review-briefs-2026-09-09/architecture-review.txt",
+      "bytes": 49727,
+      "sha256": "27e0e49a1edd096e3a6052fba57d97a507e0f2228e4a74198bac4f7e7547aa5e",
+      "type": "USER-SUPPLIED-CONVERSATION-REVIEW",
+      "accession_date": "2026-09-09",
+      "evidence_status": "ARCHITECTURAL-SUGGESTIONS-NOT-SCIENTIFIC-EVIDENCE"
+    },
+    {
+      "id": "studio-recovery-review",
+      "path": "archive/source-intake/review-briefs-2026-09-09/studio-recovery-review.txt",
+      "bytes": 34923,
+      "sha256": "d99f4fa5c277058fa196898cef95103848311de1f6e58327f7a89fec222f0c12",
+      "type": "USER-SUPPLIED-CONVERSATION-REVIEW",
+      "accession_date": "2026-09-09",
+      "evidence_status": "ARCHITECTURAL-SUGGESTIONS-NOT-SCIENTIFIC-EVIDENCE"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "architecture-review:0",
+      "source_id": "architecture-review",
+      "source_line": 84,
+      "title": "NON-DESTRUCTIVE RULE",
+      "text": "============================================================\n\nDo not immediately redesign or rewrite the repository.\n\nFIRST audit the existing system.\n\nPreserve:\n- canonical data;\n- existing identifiers;\n- existing provenance;\n- previous migration work;\n- existing valid schemas;\n- existing useful book functionality;\n- source history;\n- unconventional/historical material;\n- author hypotheses;\n- negative results;\n- archived references.\n\nNever fabricate scientific data to make a record look complete.\n\nUse explicit values such as UNKNOWN, UNAVAILABLE, NOT_MEASURED,\nNOT_APPLICABLE, PLANNED, REQUIRES_REVIEW, or equivalent existing\nMAT null semantics when evidence is unavailable.\n\nCreate a working branch before major changes.\n\nDo not delete legacy/reference material merely because it does not\nrepresent accepted mainstream science.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:1",
+      "source_id": "architecture-review",
+      "source_line": 116,
+      "title": "RUN AND INSPECT EVERYTHING FIRST",
+      "text": "============================================================\n\nBefore changing architecture:\n\nA. Read:\n- README.md\n- CHANGELOG.md\n- all architecture documents\n- methodology documents\n- governance documents\n- production/release documents\n- schemas\n- templates\n- source registries\n- validation scripts\n- publication build scripts\n- Studio\n- book reader\n- records\n- assets\n- downloadfiles\n\nB. Explicitly inspect:\n\ndownloadfiles/ebookcraft/\ndownloadfiles/ebookcraft (1)/\n\nTreat ebookcraft (1) as the newer comparative design unless evidence\ninside the project establishes otherwise.\n\nAlso inspect all reference imagery in downloadfiles, including the\nWalter Russell / alternative-periodic-arrangement references.\n\nThese files are design/research references.\nDo not blindly copy copyrighted artwork into MAT.\nDetermine what concepts need original MAT-designed replacements.\n\nC. Run the existing MAT application and build pipelines.\n\nUse the repository's own commands where applicable:\n\nnpm ci\nnpm run validate\nnpm test\nnpm run build:book\nnpm run build:publication\nnpm run check:studio\nnpm run test:studio\nnpm run test:e2e\n\nRun MAT Studio.\n\nRun the existing book reader.\n\nRun ebookcraft and ebookcraft (1) separately if their dependency\nmanifests permit it.\n\nUse browser automation / Playwright.\n\nCapture desktop, tablet and mobile screenshots.\n\nTest at minimum:\n- wide desktop;\n- normal laptop;\n- portrait tablet;\n- landscape tablet;\n- modern mobile portrait;\n- narrow/mobile accessibility viewport;\n- print/paperback preview;\n- A4/PDF preview.\n\nDo not evaluate the UI only by reading CSS or React code.\n\nInteract with it.\n\nClick the menus.\nExpand/collapse the tree.\nOpen several elements.\nOpen domain/sub-records.\nSearch.\nBookmark.\nUse evidence views.\nTry read-aloud.\nTry print mode.\nTry export mode.\nTry keyboard navigation.\nResize the viewport.\nCheck long tables.\nCheck equations.\nCheck images.\nCheck citations.\nCheck mobile navigation.\nCheck focus states.\n\nProduce BEFORE screenshots for later comparison.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:2",
+      "source_id": "architecture-review",
+      "source_line": 214,
+      "title": "TRACE THE ACTUAL DATA PIPELINE",
+      "text": "============================================================\n\nTrace one complete record from filesystem to browser.\n\nStart with:\n\nrecords/0000-Origin-State/\n\nThen:\n\nrecords/0001-Hydrogen-H/\n\nFollow:\n\nsource Markdown/YAML\n    ->\nschema validation\n    ->\nregistries\n    ->\nrelationships\n    ->\nbuild scripts\n    ->\npublication model\n    ->\nbook/index assets\n    ->\nStudio loader\n    ->\nfrontend rendering\n    ->\nexport formats\n\nDocument exactly:\n\nWHERE the canonical fact lives;\nWHERE its prose explanation lives;\nWHERE citations live;\nWHERE relationships live;\nWHERE visual assets live;\nWHICH generated files depend on it;\nWHICH files must never be hand-edited.\n\nIf there are duplicated authorities, identify and remove ambiguity\nwithout deleting useful content.\n\nCanonical fact ownership must be unambiguous.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:3",
+      "source_id": "architecture-review",
+      "source_line": 265,
+      "title": "AUDIT RECORD COMPLETENESS",
+      "text": "============================================================\n\nUse 0000 and the best-developed early element records as the reference\narchitecture.\n\nAudit at least:\n\n0000 Origin State\n0001 Hydrogen\n0002 Helium\n0003 Lithium\n0004 Beryllium\n0005 Boron\n0006 Carbon\n0007 Nitrogen\n0008 Oxygen\n0009 Fluorine\n\nThen inspect all subsequent records currently present in the repo,\nincluding Neon, Sodium, Magnesium and later generated/baseline records.\n\nDO NOT assume the point where completeness changes.\n\nMeasure it.\n\nGenerate a machine-produced RECORD COVERAGE MATRIX.\n\nFor every element, compare:\n\n- main manuscript sections;\n- canonical data fields;\n- data subdocuments;\n- sources;\n- calculations;\n- relationships;\n- experiments;\n- graphs;\n- tables;\n- images;\n- diagrams;\n- models;\n- validation state;\n- source coverage;\n- uncertainty coverage;\n- condition coverage;\n- domain coverage;\n- narrative/history coverage;\n- citation coverage;\n- cross-link coverage;\n- visual coverage;\n- review coverage.\n\nClassify each field/content family as something equivalent to:\n\nCOMPLETE\nPARTIAL\nBASELINE\nPLACEHOLDER\nMISSING\nUNKNOWN\nNOT_APPLICABLE\nREQUIRES_REVIEW\n\nDo not populate missing measurements by guessing.\n\nSave this audit as a generated QA artifact, not as hand-maintained\nscientific truth.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:4",
+      "source_id": "architecture-review",
+      "source_line": 335,
+      "title": "PRESERVE THE MAT CORE RECORD MODEL",
+      "text": "============================================================\n\nThe MAT record remains the scientific parent object.\n\nExample:\n\nMAT:0001 = Hydrogen\n\nHydrogen must NOT become separate contradictory copies for chemistry,\nphysics, biology, medicine, aerospace, etc.\n\nInstead use:\n\nONE CANONICAL KNOWLEDGE CORE\n+\nMULTIPLE DOMAIN VIEWS\n+\nMULTIPLE READING DEPTHS.\n\nThe canonical object owns facts.\n\nDomain pages reference, filter, interpret and extend those facts.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:5",
+      "source_id": "architecture-review",
+      "source_line": 360,
+      "title": "ADD A DOMAIN-LENS ARCHITECTURE",
+      "text": "============================================================\n\nMAT is intended for essentially every field that uses matter or\nmaterials.\n\nDO NOT hard-code only:\n\"chemistry, physics, biology\".\n\nCreate an extensible DOMAIN REGISTRY / TAXONOMY.\n\nPotential domain families include, but are not limited to:\n\n- chemistry\n- physics\n- nuclear science\n- quantum science\n- materials science\n- biology\n- biochemistry\n- medicine\n- pharmacology/pharmaceuticals\n- toxicology\n- environmental science\n- geology\n- geochemistry\n- astronomy\n- astrophysics\n- planetary science\n- energy\n- electrical engineering\n- electronic engineering\n- mechanical engineering\n- chemical engineering\n- civil engineering\n- structural engineering\n- aerospace\n- automotive\n- marine\n- manufacturing\n- metallurgy\n- ceramics\n- polymers\n- composites\n- semiconductor engineering\n- nanotechnology\n- photonics\n- optics\n- acoustics\n- magnetics\n- thermal engineering\n- cryogenics\n- plasma engineering\n- robotics\n- computing\n- AI/ML\n- simulation\n- data science\n- laboratory practice\n- industrial processes\n- agriculture\n- food science\n- textiles\n- construction\n- mining\n- recycling\n- conservation\n- archaeology\n- history of science\n- education\n- safety\n- regulation\n- metrology\n- standards\n\nDo not create empty folders for thousands of combinations.\n\nUse a registry-driven model.\n\nA domain becomes visible for an element when that domain has meaningful\ncontent or relationships.\n\nAllow new domains to be registered without altering every element schema.\n\n============================================================\n6. ELEMENT HOME PAGE = FRONT DOOR\n============================================================\n\nEvery element/material needs a calm, professionally edited overview.\n\nThe home page should orient the reader without dumping the entire\nscientific record.\n\nFor an element such as Hydrogen, provide:\n\n- identity;\n- symbol and atomic number;\n- concise description;\n- natural/material manifestation;\n- why it matters;\n- where it occurs;\n- major forms/states;\n- headline physical/chemical properties;\n- key applications;\n- key hazards;\n- major scientific relationships;\n- discovery/history summary;\n- evidence/quality status;\n- links to deeper domains;\n- key visuals;\n- related records;\n- primary sources.\n\nThen allow the user to enter deeper specialist views.\n\nThe overview should work for:\n- a general reader;\n- a school student;\n- a researcher orienting themselves;\n- an AI retrieving a high-level summary.\n\nIt must not replace technical depth.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:7",
+      "source_id": "architecture-review",
+      "source_line": 484,
+      "title": "ADD A REAL NARRATIVE / HISTORY LAYER",
+      "text": "============================================================\n\nMAT currently has strong factual/data architecture but should read more\nlike a major reference book.\n\nAdd an editorial/narrative layer where appropriate:\n\n- discovery;\n- pre-discovery knowledge;\n- naming;\n- etymology;\n- important experiments;\n- scientists/researchers;\n- major corrections to earlier understanding;\n- technological milestones;\n- industrial adoption;\n- important controversies;\n- historical models;\n- present scientific understanding;\n- remaining open questions.\n\nDo not turn every record into a novel.\n\nUse concise, well-sourced narrative sections that explain WHY the data\nmatters and HOW human knowledge developed.\n\nHistory must distinguish:\n- contemporary evidence;\n- historical belief;\n- superseded model;\n- disputed interpretation;\n- folklore/esoteric interpretation;\n- modern verified knowledge.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:8",
+      "source_id": "architecture-review",
+      "source_line": 520,
+      "title": "EVIDENCE LANES — ABSOLUTELY PRESERVE ALL REFERENCE MATERIAL",
+      "text": "============================================================\n\nMAT intentionally contains more than conventional textbook material.\n\nIt may contain:\n\n- established science;\n- evaluated reference data;\n- derived values;\n- computational predictions;\n- emerging research;\n- hypotheses;\n- historical scientific models;\n- unconventional research;\n- esoteric systems;\n- historical claims;\n- patents;\n- testimony;\n- declassified/redacted documents;\n- archived claims;\n- mysteries;\n- disputed claims;\n- author concepts;\n- negative results;\n- alleged experiments;\n- claims whose original source cannot currently be verified.\n\nDO NOT DELETE these solely for being unconventional.\n\nDO NOT PRESENT them all as equally true.\n\nCreate a strong typed EVIDENCE / CLAIM system.\n\nA claim and its evidence status are separate objects.\n\nSuggested concepts — adapt to current MAT schema rather than blindly\nreplacing it:\n\nESTABLISHED\nEVALUATED_REFERENCE\nREPLICATED_EXPERIMENT\nMEASURED\nDERIVED\nCOMPUTATIONAL_PREDICTION\nEMERGING\nHYPOTHESIS\nHISTORICAL_MODEL\nSUPERSEDED\nUNCONVENTIONAL\nESOTERIC\nANECDOTAL\nPATENT_CLAIM\nARCHIVAL_CLAIM\nDISPUTED\nCONTRADICTED\nUNVERIFIED\nSOURCE_UNAVAILABLE\nREDACTED\nAUTHOR_HYPOTHESIS\n\nAlso retain:\n- confidence;\n- provenance;\n- date;\n- reviewer;\n- independent replication;\n- source quality;\n- counter-evidence;\n- known limitations.\n\nNever let an evidence label become a political or editorial censorship\nmechanism.\n\nIt is metadata so users and AI can tell WHAT KIND OF CLAIM they are\nlooking at.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:9",
+      "source_id": "architecture-review",
+      "source_line": 598,
+      "title": "BUILD A FIRST-CLASS KNOWLEDGE GRAPH AND LINK SYSTEM",
+      "text": "============================================================\n\nDo not rely on ad-hoc Markdown hyperlinks.\n\nCreate or strengthen a typed entity/relationship/link registry.\n\nInternal entities include:\n\nELEMENT\nISOTOPE\nION\nMOLECULE\nCOMPOUND\nMATERIAL\nALLOTROPE\nPHASE\nPROCESS\nREACTION\nENVIRONMENT\nAPPLICATION\nEXPERIMENT\nEQUATION\nCONSTANT\nPROPERTY\nSPECTRUM\nFREQUENCY\nMODEL\nTHEORY\nCLAIM\nPERSON\nORGANIZATION\nPATENT\nPAPER\nBOOK\nDATASET\nSTANDARD\nVIDEO\nWEBSITE\nIMAGE\nARCHIVE\nSOURCE\n\nA mention of Hydrogen in another MAT record should be capable of\nresolving to MAT:0001.\n\nThe renderer should support automatic or authored entity links without\nrewriting the same URL everywhere.\n\nExamples:\n\nHydrogen\n→ internal MAT Hydrogen record.\n\nA scientist/researcher\n→ MAT person entity + appropriate authoritative external biography or\nprimary source.\n\nA paper\n→ DOI / publisher / repository.\n\nA patent\n→ patent identifier and authoritative patent registry where publicly\naccessible.\n\nWikipedia\n→ direct relevant article, treated as a tertiary reference rather than\na primary scientific authority.\n\nYouTube/video\n→ direct exact video, channel/creator metadata, topic relationship and\naccess date.\n\nDataset\n→ exact dataset landing page/API/DOI.\n\nStandard\n→ exact standards organization record when permitted.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:10",
+      "source_id": "architecture-review",
+      "source_line": 678,
+      "title": "CENTRAL SOURCE / LINK REGISTRY",
+      "text": "============================================================\n\nA URL should not have to be manually changed in 40 element files.\n\nExpand the existing source registry where appropriate.\n\nEach source should support fields such as:\n\nsource_id\nsource_type\ntitle\nauthor/person IDs\norganization\npublication\ndate\nedition/version\nDOI\nISBN\npatent_number\nURL\narchive_URL\naccessed_date\nlanguage\nrights/licence\nprimary/secondary/tertiary\npeer_review_status\nevidence_relevance\nnotes\nreplacement_source\nlink_status\nlast_checked\ncontent_hash where legal/useful\n\nDo not require every field for every source type.\n\nUse typed schemas.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:11",
+      "source_id": "architecture-review",
+      "source_line": 717,
+      "title": "SIDE CITATIONS / MARGIN CITATIONS",
+      "text": "============================================================\n\nImplement proper scientific citation UX.\n\nA fact/paragraph/table/chart/equation/image should be able to carry\nfine-grained source references.\n\nDesktop:\n- margin/side citations where space allows.\n\nTablet/mobile:\n- inline expandable citation markers / footnote sheet.\n\nPrint/PDF:\n- footnotes/endnotes/reference list according to publication style.\n\nEPUB:\n- accessible EPUB note semantics.\n\nAI:\n- fact → source IDs must remain machine traversable.\n\nCitation hover/tap preview can show:\n\n- source title;\n- author;\n- year;\n- evidence type;\n- source type;\n- DOI/link;\n- data condition;\n- provenance status.\n\nDo not obscure reading with enormous citation blocks.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:12",
+      "source_id": "architecture-review",
+      "source_line": 754,
+      "title": "LINK HEALTH",
+      "text": "============================================================\n\nThe repository already has link validation.\n\nStrengthen it into source-health management.\n\nDetect:\n\nOK\nREDIRECTED\nBROKEN\nTIMEOUT\nPAYWALLED\nREMOVED\nARCHIVED\nUNKNOWN\n\nWhen an external link dies:\n- do not erase historical citation identity;\n- preserve metadata;\n- try an archived/alternate legitimate source where available;\n- flag it for review.\n\nYouTube videos and public web resources may disappear.\nMAT should know the source existed even if the URL later fails.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:13",
+      "source_id": "architecture-review",
+      "source_line": 782,
+      "title": "FACT-LEVEL PROVENANCE",
+      "text": "============================================================\n\nFor important quantitative facts, retain:\n\nvalue\nunit\nquantity/property ID\nconditions\ntemperature\npressure\nphase\ncomposition\nisotope\nmeasurement method\nuncertainty\nsignificant figures\nsource\nevidence status\ndate/version\nreview state\n\nNever treat:\n\n\"melting point = X\"\n\nas universally sufficient when X depends on pressure, phase,\ncomposition or measurement definition.\n\nThis is essential for future simulation and materials synthesis.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:14",
+      "source_id": "architecture-review",
+      "source_line": 814,
+      "title": "MACHINE-READABLE MAT",
+      "text": "============================================================\n\nHuman pagination must NEVER become the canonical data structure.\n\nEvery meaningful machine-readable object should have:\n\n- stable MAT ID;\n- type;\n- label;\n- relationships;\n- provenance;\n- evidence state;\n- version;\n- schema version;\n- timestamps where relevant.\n\nProvide structured exports where architecture permits:\n\nJSON\nYAML\nJSON-LD\nCSV for tabular extracts\nEPUB for reading\nHTML\nprint/PDF\npotential API-ready publication model\n\nDo not generate redundant authorities.\n\nGenerated exports must derive from canonical sources.\n\nPrepare the architecture so a future MAT API can support queries such as:\n\n\"give all known phases of hydrogen at pressure P and temperature T\"\n\n\"find materials satisfying a target conductivity and thermal range\"\n\n\"show all claims relating element X to model Y\"\n\n\"return only established or independently replicated evidence\"\n\n\"return experimental failures involving process Z\"\n\n\"show sources and uncertainty for this numerical property\"\n\n\"traverse materials → processes → properties → applications\"\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:15",
+      "source_id": "architecture-review",
+      "source_line": 863,
+      "title": "PROFESSIONAL / INDUSTRY USE",
+      "text": "============================================================\n\nA specialist should be able to find their relevant information quickly.\n\nProvide domain navigation/search/filtering rather than a giant static\nprofession list.\n\nExamples:\n\nchemist:\nbonding, oxidation states, compounds, reactions, thermochemistry,\nspectroscopy.\n\nphysicist:\nelectronic/nuclear/quantum states, fields, phase behavior, transport,\nspectra, constants.\n\nbiologist:\nbiological role, biomolecules, pathways, organism/environment relevance.\n\nmedicine/pharma:\nphysiological relevance, isotopes/tracers, toxicology, diagnostics,\ndrug/material relationships — with appropriate medical-source quality\nlabels.\n\nengineer:\nmaterial properties, tolerances, environmental dependence, processing,\nmanufacturing, failure modes, standards, applications.\n\ntechnician:\nmeasurement methods, practical tables, calibration, safety, procedures,\ninstrumentation.\n\nAI/ML:\nstable IDs, schemas, provenance, machine-readable relationships,\nnull semantics and confidence.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:16",
+      "source_id": "architecture-review",
+      "source_line": 902,
+      "title": "EDUCATION WITHOUT DUPLICATING THE SCIENCE",
+      "text": "============================================================\n\nSupport multiple reading depths.\n\nDo not create contradictory child versions of facts for:\n- primary school;\n- secondary school;\n- college;\n- university;\n- postgraduate;\n- professional.\n\nUse progressive disclosure / reading modes.\n\nPossible levels:\n\nQUICK\nFOUNDATIONAL\nACADEMIC\nPROFESSIONAL\nRESEARCH\nDATA\n\nThe canonical science remains the same.\n\nA simpler level changes:\n- wording;\n- explanation depth;\n- terminology support;\n- number of visible fields;\n- equation depth.\n\nIt does NOT change the underlying factual value.\n\nAdd glossary/tooltips for terminology.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:17",
+      "source_id": "architecture-review",
+      "source_line": 940,
+      "title": "FIVE-STAR BOOK / CODEX READING EXPERIENCE",
+      "text": "============================================================\n\nBenchmark MAT against the useful characteristics of:\n\n- premium printed reference books;\n- scientific handbooks;\n- university textbooks;\n- dictionaries;\n- thesauri;\n- encyclopedias;\n- Bibles/large cross-referenced works;\n- historical codices;\n- atlases;\n- technical data books;\n- field manuals;\n- scientific PDFs;\n- reports;\n- infographics;\n- pamphlets/quick-reference books;\n- Kindle;\n- Apple Books;\n- modern EPUB readers;\n- Wikipedia;\n- NIST-style technical references;\n- PubChem-style data references.\n\nDo not imitate one product visually.\n\nTake the strongest interaction pattern for MAT.\n\nThe reading UI should feel like a BOOK first and a scientific\nworkstation when deeper tools are requested.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:18",
+      "source_id": "architecture-review",
+      "source_line": 975,
+      "title": "NAVIGATION",
+      "text": "============================================================\n\nDefault navigation should be calm.\n\nLarge menu trees should start collapsed.\n\nThe user previously requested that front matter / foundation / data /\nmethodology / visualization / index / governance / migration / back\nmatter be logically grouped rather than permanently dominating the\nelement navigation.\n\nUse a book/library icon and recognizable publication metaphors where\nappropriate.\n\nProvide:\n\n- table of contents;\n- chapter/section tree;\n- breadcrumbs;\n- previous/next;\n- related topic links;\n- element-to-element links;\n- domain navigation;\n- index;\n- glossary;\n- people index;\n- source index;\n- figure index;\n- table index;\n- equation index;\n- concept index.\n\nAllow deep linking directly to a section/fact/figure where technically\npossible.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:19",
+      "source_id": "architecture-review",
+      "source_line": 1012,
+      "title": "TRUE READING PAGINATION",
+      "text": "============================================================\n\nImplement OPTIONAL reading pagination.\n\nDo not store canonical content according to visual page numbers.\n\nWeb/reflow:\ncontent adapts naturally.\n\nPaginated reader mode:\ndivide presentation into stable visual page surfaces based on viewport,\ntypography and content-flow rules.\n\nPrint:\ngenerate physical page numbering.\n\nEPUB:\nlet the reading system reflow according to EPUB conventions.\n\nProvide:\n- page progress;\n- chapter progress;\n- book progress;\n- next/previous page;\n- keyboard navigation;\n- touch/swipe where appropriate;\n- restore last reading position.\n\nAvoid breaking:\n- tables;\n- equations;\n- figures;\n- captions;\n- citation blocks\nacross pages in unreadable ways.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:20",
+      "source_id": "architecture-review",
+      "source_line": 1050,
+      "title": "TYPOGRAPHY / BOOK RHYTHM",
+      "text": "============================================================\n\nImprove:\n\n- measure/line length;\n- margins;\n- vertical rhythm;\n- heading hierarchy;\n- paragraph spacing;\n- figure placement;\n- caption style;\n- table readability;\n- equation spacing;\n- footnotes;\n- pullouts/callouts;\n- chapter-opening treatment.\n\nAvoid turning every piece of information into a floating dashboard card.\n\nUse cards when information is modular.\n\nUse normal editorial flow when information is narrative.\n\nAllow visual quiet.\n\nA five-star technical book needs rhythm, not maximum density on every\nscreen.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:21",
+      "source_id": "architecture-review",
+      "source_line": 1080,
+      "title": "VISUAL CONTENT SYSTEM",
+      "text": "============================================================\n\nSeparate these categories:\n\nA. DATA-GENERATED VISUALS\nThese should be generated deterministically from MAT data where\npossible:\n\n- plots;\n- line graphs;\n- bar charts;\n- scatter plots;\n- radar plots if scientifically justified;\n- phase diagrams where source data permits;\n- spectra;\n- isotope abundance charts;\n- property comparisons;\n- relationship diagrams;\n- timelines;\n- tables.\n\nDo not generate these with image AI when exact scientific values exist.\n\nGenerate accessible SVG/Canvas/HTML and data tables behind them.\n\nB. SCIENTIFIC DIAGRAMS\nGenerate programmatically where possible:\n- electron configurations;\n- orbital diagrams;\n- lattice diagrams;\n- process flows;\n- relationship maps;\n- atom/isotope diagrams;\n- energy-level diagrams.\n\nC. ILLUSTRATIVE/ARTISTIC ASSETS\nUse an image-generation workflow only where a genuinely illustrative\nimage is required.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:22",
+      "source_id": "architecture-review",
+      "source_line": 1121,
+      "title": "WALTER RUSSELL / ALTERNATIVE TABLE REFERENCES",
+      "text": "============================================================\n\nInspect all Walter Russell and alternative periodic-arrangement\nreferences currently in downloadfiles and elsewhere.\n\nThe purpose is NOT to make Russell's model indistinguishable from the\naccepted periodic table.\n\nCreate an \"Alternative / Historical Models\" lane.\n\nFor each visual/model distinguish:\n\n- attribution;\n- original historical source;\n- date;\n- claimed meaning;\n- MAT reconstruction;\n- conventional scientific comparison;\n- evidence status;\n- criticisms/limitations;\n- source links.\n\nThe user wants original MAT visual reconstructions including variants\nsuch as:\n\n- conventional table;\n- Russell-associated arrangements;\n- spiral/radial arrangements;\n- musical-note/frequency mappings;\n- angular arrangements;\n- other relevant historical representations.\n\nGenerate ORIGINAL MAT diagrams based on documented geometry/data.\n\nDo not copy reference images pixel-for-pixel.\n\nWhere a musical/frequency mapping is not established physical science,\nlabel it according to its actual evidence/model status.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:23",
+      "source_id": "architecture-review",
+      "source_line": 1162,
+      "title": "IMAGE LABELS",
+      "text": "============================================================\n\nAudit captions underneath existing/reference images.\n\nCaptions must describe MAT's actual representation rather than blindly\nreuse wording embedded in a source image.\n\nUse:\n\nFigure ID\nTitle\nDescription\nModel/evidence lane\nSource/inspiration where required\nRights/attribution\nAlt text\nRelationship to canonical MAT entities\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:24",
+      "source_id": "architecture-review",
+      "source_line": 1182,
+      "title": "SEARCH",
+      "text": "============================================================\n\nSearch should eventually span:\n\nelements\nsymbols\nMAT IDs\nproperties\ncompounds\nmaterials\nprocesses\napplications\npeople\nauthors\npapers\nbooks\npatents\ndatasets\nexperiments\nmodels\nclaims\nindustries/domains\nsources\ncitations\nkeywords\n\nAdd filter facets where useful:\n\nevidence\ndomain\nsource type\nrecord type\nreview status\ndate\nproperty\nphase\navailability\n\nDo not overload the default search UI.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:25",
+      "source_id": "architecture-review",
+      "source_line": 1224,
+      "title": "READER TOOLS",
+      "text": "============================================================\n\nPreserve useful existing features and improve them only when necessary.\n\nReview support for:\n\n- bookmark;\n- reading position;\n- notes;\n- favorites if distinct from bookmarks;\n- citation copying/export;\n- search;\n- text size;\n- theme;\n- read aloud;\n- print/PDF;\n- EPUB;\n- translation workflow;\n- share/deep-link;\n- glossary;\n- figure enlargement;\n- table expansion;\n- copy value + unit + citation.\n\nTranslation must never silently alter canonical scientific meaning.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:26",
+      "source_id": "architecture-review",
+      "source_line": 1252,
+      "title": "HOVER / TAP INTERACTION",
+      "text": "============================================================\n\nDesktop:\nhover can preview:\n\n- element;\n- person;\n- definition;\n- citation;\n- source;\n- image;\n- equation variable;\n- related material.\n\nMobile/tablet:\nthe same interaction must work by tap/focus, not depend on hover.\n\nLarge images may open in an accessible lightbox/detail viewer with:\n- zoom;\n- pan;\n- caption;\n- source;\n- alt description;\n- download/export only when rights allow.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:27",
+      "source_id": "architecture-review",
+      "source_line": 1279,
+      "title": "EXPERT REVIEW SYSTEM",
+      "text": "============================================================\n\nPrepare record/section review metadata.\n\nA whole element should not simply be called \"verified\" because one\nchemist checked one table.\n\nSupport review scopes such as:\n\n- chemistry;\n- physics;\n- biology;\n- materials;\n- medical/pharma;\n- mathematics;\n- data/provenance;\n- historical;\n- editorial;\n- accessibility.\n\nPossible metadata:\n\nreview_status\nreview_scope\nreviewer\ncredentials/organization where publishable\ndate\nversion reviewed\nissues\nresolution\nnext_review\n\nUse sensible privacy and contributor rules.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:28",
+      "source_id": "architecture-review",
+      "source_line": 1315,
+      "title": "CORRECTIONS AND CONTRIBUTIONS",
+      "text": "============================================================\n\nProvide a controlled \"suggest correction/addition\" pathway.\n\nA correction must not silently overwrite canonical data.\n\nIt should produce a reviewable change/proposal containing:\n\n- record;\n- exact field/section;\n- existing value;\n- suggested value;\n- evidence/source;\n- rationale;\n- submitter metadata if supplied;\n- review state.\n\nArchitecture should be compatible with Git/GitHub review workflows.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:29",
+      "source_id": "architecture-review",
+      "source_line": 1336,
+      "title": "ACCESSIBILITY",
+      "text": "============================================================\n\nTreat accessibility as a release requirement.\n\nTarget WCAG 2.2 AA for the web reader and applicable EPUB\naccessibility practices.\n\nCheck:\n\n- semantic landmarks;\n- headings;\n- keyboard access;\n- focus;\n- screen reader labels;\n- table headers;\n- alt text;\n- color contrast;\n- non-color evidence indicators;\n- reduced motion;\n- zoom;\n- reflow;\n- touch targets;\n- captions/transcripts;\n- equation accessibility;\n- citation accessibility;\n- print readability.\n\nAnimations must respect prefers-reduced-motion.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:30",
+      "source_id": "architecture-review",
+      "source_line": 1367,
+      "title": "RESPONSIVE DESIGN",
+      "text": "============================================================\n\nDesktop:\nmay use margins, side citations and multi-column support areas.\n\nTablet:\nretain book identity without squeezing side panels.\n\nPhone:\nsingle primary reading column.\n\nDo not shrink desktop UI until it technically fits.\n\nRecompose it.\n\nNavigation should become drawers/sheets/compact controls.\n\nData tables should have deliberate mobile behavior.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:31",
+      "source_id": "architecture-review",
+      "source_line": 1388,
+      "title": "PERFORMANCE / OFFLINE",
+      "text": "============================================================\n\nMAT is intended to remain useful offline.\n\nPreserve or improve offline capability.\n\nDo not ship all 118+ future records, all high-resolution images and\nall 3D assets into the initial browser payload unnecessarily.\n\nUse sensible:\n- lazy loading;\n- caching;\n- indexed/offline metadata;\n- generated indexes;\n- asset sizing;\n- code splitting.\n\nKeep search useful offline where feasible.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:32",
+      "source_id": "architecture-review",
+      "source_line": 1409,
+      "title": "DATA VISUALIZATION QUALITY",
+      "text": "============================================================\n\nEvery graph must have:\n\n- title;\n- variable names;\n- units;\n- axes;\n- conditions;\n- source;\n- uncertainty/error bars where available;\n- accessible alternative;\n- underlying table/download where suitable.\n\nNever create decorative scientific graphs from invented numbers.\n\nPie charts should only be used when part-to-whole representation is\nactually appropriate.\n\nDo not use radar/spider plots merely for visual novelty.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:33",
+      "source_id": "architecture-review",
+      "source_line": 1432,
+      "title": "MEDICAL / SAFETY CONTENT",
+      "text": "============================================================\n\nMedical, pharmaceutical, toxicity and exposure information must clearly\nseparate:\n\n- reference data;\n- regulatory thresholds;\n- established clinical use;\n- preclinical research;\n- historical claims;\n- speculative claims.\n\nPreserve source jurisdiction and date.\n\nDo not let MAT presentation transform experimental material into\nmedical advice.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:34",
+      "source_id": "architecture-review",
+      "source_line": 1451,
+      "title": "PATENTS / REDACTED / HARD-TO-ACCESS SOURCES",
+      "text": "============================================================\n\nA patent proves that a document/claim was filed or granted according to\nits legal record; it does not by itself establish physical efficacy.\n\nRepresent accordingly.\n\nFor alleged non-public or unavailable material:\n\ndo not invent contents.\n\nRecord:\n- that a reference/claim is reported;\n- who reported it;\n- where;\n- access state;\n- what is independently verifiable;\n- what remains unavailable.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:35",
+      "source_id": "architecture-review",
+      "source_line": 1472,
+      "title": "CROSS-REFERENCE ENGINE",
+      "text": "============================================================\n\nSupport explicit typed relations such as:\n\nIS_ISOTOPE_OF\nION_OF\nCOMPOUND_CONTAINS\nBONDS_WITH\nREACTS_WITH\nTRANSFORMS_TO\nPHASE_OF\nALLOTROPE_OF\nPRODUCED_BY\nUSED_IN\nMEASURED_BY\nHAS_SPECTRUM\nHAS_PROPERTY\nDEPENDS_ON\nCITED_BY\nSUPPORTED_BY\nCONTRADICTED_BY\nPROPOSED_BY\nDISCOVERED_BY\nRELATED_TO\nPART_OF\nAPPLIED_IN\nHAZARD_IN\nBIOLOGICAL_ROLE\nHISTORICAL_MODEL_OF\n\nReuse the existing MAT relationship architecture when possible.\n\nDo not introduce another incompatible graph system.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:36",
+      "source_id": "architecture-review",
+      "source_line": 1508,
+      "title": "PEOPLE / INTELLECTUAL LINEAGE",
+      "text": "============================================================\n\nCreate/strengthen a structured People directory.\n\nA person should be linkable from anywhere in MAT.\n\nSeparate:\n\nA. historical/scientific contributors;\nB. authors of cited publications;\nC. inventors/patent holders;\nD. MAT contributors/reviewers;\nE. people associated with unconventional/historical claims.\n\nPerson pages/records may contain:\n\nname\ndates\nfields\norganizations\nknown contributions\nrelated MAT records\nworks\npatents\nsources\nexternal authority links\nevidence/context notes\n\nAvoid biographies becoming unsourced editorial claims.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:37",
+      "source_id": "architecture-review",
+      "source_line": 1540,
+      "title": "BOOK INDEXING",
+      "text": "============================================================\n\nGenerate professional indexes where practical:\n\n- master index;\n- element/material index;\n- subject index;\n- people index;\n- compound index;\n- process index;\n- application index;\n- equation index;\n- figure index;\n- table index;\n- source/bibliography index;\n- patent index;\n- model/theory index.\n\nFor the web these can be interactive.\nFor print/EPUB derive appropriate equivalents.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:38",
+      "source_id": "architecture-review",
+      "source_line": 1563,
+      "title": "CONTENT DUPLICATION RULE",
+      "text": "============================================================\n\nDo not copy a canonical density value into ten profession pages as ten\nseparate truths.\n\nReference the same fact.\n\nDomain-specific prose may explain its significance differently.\n\nExample:\n\ncanonical:\nhydrogen property X = value + unit + conditions + source.\n\naerospace lens:\nexplains why property X matters to storage/propulsion engineering.\n\ncryogenics lens:\nexplains why property X matters at low temperature.\n\nThe factual object remains one object.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:39",
+      "source_id": "architecture-review",
+      "source_line": 1587,
+      "title": "RECORD DIRECTORY REVIEW",
+      "text": "============================================================\n\nDo not blindly replace the existing:\n\ncalculations/\ndata/\ndiagrams/\nexperiments/\ngraphs/\nimages/\nmodels/\nrelationships/\nsources/\ntables/\n\nThis organization is valuable.\n\nDetermine whether a complementary structure is needed for:\n\ndomains/\nnarrative/\nclaims/\ncitations/\nreviews/\n\nBefore adding physical directories, decide whether each should instead\nbe represented through metadata/registries/generated views.\n\nPrefer architecture over folder proliferation.\n\nDocument the decision.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:40",
+      "source_id": "architecture-review",
+      "source_line": 1621,
+      "title": "FRONTEND VS BACKEND",
+      "text": "============================================================\n\nStrictly separate:\n\nCANONICAL KNOWLEDGE\nfrom\nPUBLICATION PROJECTION\nfrom\nUSER STATE.\n\nCanonical scientific records:\nrepository-controlled.\n\nGenerated publication:\nrebuildable.\n\nReader state such as bookmarks/notes/position:\nlocal/user-controlled unless a future optional account service is\nintroduced.\n\nDo NOT require an account to read MAT.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:41",
+      "source_id": "architecture-review",
+      "source_line": 1645,
+      "title": "BOOK VS STUDIO",
+      "text": "============================================================\n\nDo not confuse MAT Studio with the public reader.\n\nSTUDIO:\nauthoring, review, data inspection, export, publication workflow.\n\nPUBLIC READER:\ncalm, beautiful, low-friction reading/reference experience.\n\nA normal reader should not see authoring controls unless explicitly\nentering an editing/contribution environment.\n\nAudit whether this separation is currently clear enough.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:42",
+      "source_id": "architecture-review",
+      "source_line": 1662,
+      "title": "COMPARE EBOOKCRAFT TO MAT",
+      "text": "============================================================\n\nRun both ebookcraft prototypes.\n\nCreate a comparative UX matrix covering:\n\n- book feeling;\n- typography;\n- navigation;\n- chapter presentation;\n- information density;\n- imagery;\n- icons;\n- interaction;\n- page rhythm;\n- responsive behavior;\n- history/narrative;\n- reference usability;\n- visual hierarchy;\n- accessibility;\n- search;\n- pagination;\n- scientific suitability.\n\nDo NOT simply replace MAT with ebookcraft.\n\nExtract only the better interaction/design ideas.\n\nMAT's scientific architecture remains authoritative.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:43",
+      "source_id": "architecture-review",
+      "source_line": 1694,
+      "title": "PROFESSIONAL BENCHMARK REVIEW",
+      "text": "============================================================\n\nScore the current MAT before changes from 1–5 for:\n\nscientific data architecture\nscientific provenance\nresearch usefulness\nchemist usefulness\nphysicist usefulness\nbiology usefulness\nmedical/pharma usefulness\nengineering usefulness\ntechnician usefulness\neducation usefulness\ngeneral-reader usefulness\nAI/ML usefulness\nknowledge-graph maturity\ncitations\nsearch/retrieval\nbook/editorial quality\nnarrative/history\nnavigation\ntypography\nvisual hierarchy\ndata visualization\naccessibility\nmobile UX\ntablet UX\ndesktop UX\nprint/PDF\nEPUB\noffline capability\nperformance\nmaintainability\nextensibility\n\nFor every score below 5:\nstate the concrete reason and required fix.\n\nRepeat the benchmark after implementation.\n\nDo not claim 5/5 unless measurable acceptance criteria are satisfied.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:44",
+      "source_id": "architecture-review",
+      "source_line": 1739,
+      "title": "IMPLEMENTATION PRIORITY",
+      "text": "============================================================\n\nAfter the audit, implement in safe dependency order.\n\nSuggested sequence:\n\n1. protect canonical architecture;\n2. establish audit/baseline;\n3. fix authority/duplication problems;\n4. strengthen typed entity/source/relationship model;\n5. introduce domain registry/lenses;\n6. improve citation granularity;\n7. improve element overview + narrative structure;\n8. improve public reader information architecture;\n9. implement book-quality reading/pagination behavior;\n10. integrate improved visual patterns from ebookcraft;\n11. generated visual/data pipeline;\n12. accessibility/responsive polish;\n13. tests;\n14. documentation.\n\nAdapt this order if repository dependencies require it.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:45",
+      "source_id": "architecture-review",
+      "source_line": 1764,
+      "title": "TESTING",
+      "text": "============================================================\n\nAdd/extend automated tests for:\n\n- schema validity;\n- ID uniqueness;\n- source resolution;\n- relationship validity;\n- dead internal links;\n- external-link reporting;\n- generated publication synchronization;\n- domain registry;\n- evidence states;\n- invalid scientific null semantics;\n- citations;\n- accessibility basics;\n- keyboard navigation;\n- responsive reader;\n- search;\n- bookmarks;\n- pagination;\n- deep linking;\n- EPUB generation;\n- exports;\n- print layouts.\n\nUse Playwright for user journeys.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:46",
+      "source_id": "architecture-review",
+      "source_line": 1794,
+      "title": "VISUAL REGRESSION",
+      "text": "============================================================\n\nCapture after screenshots using the same viewports as before.\n\nCompare:\n\nBEFORE\nAFTER\n\nEspecially:\n\n- landing/front page;\n- MAT:0000;\n- Hydrogen overview;\n- Hydrogen specialist/domain view;\n- history/narrative page;\n- data-heavy page;\n- graph page;\n- source/citation page;\n- alternative model page;\n- search;\n- mobile;\n- tablet;\n- paperback/A4 preview.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:47",
+      "source_id": "architecture-review",
+      "source_line": 1821,
+      "title": "DO NOT HIDE SCIENTIFIC COMPLEXITY",
+      "text": "============================================================\n\nProgressive disclosure means:\n\nsimple first view\n+\ndeeper specialist access.\n\nIt does NOT mean deleting complexity.\n\nMAT should be capable of going deeper than a normal textbook while\nremaining readable at entry level.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:48",
+      "source_id": "architecture-review",
+      "source_line": 1836,
+      "title": "README / DOCUMENTATION UPDATE",
+      "text": "============================================================\n\nAfter implementation update documentation explaining:\n\n- canonical architecture;\n- domain lenses;\n- evidence lanes;\n- knowledge graph;\n- citations;\n- source registry;\n- review workflow;\n- publication pipeline;\n- generated content;\n- public reader vs Studio;\n- how to add a new domain;\n- how to add a source;\n- how to add a relation;\n- how to add a visualization;\n- how to mark unknown data;\n- how to run validation;\n- how to build and preview.\n\nDo not overwrite important historical documentation.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:49",
+      "source_id": "architecture-review",
+      "source_line": 1862,
+      "title": "COMPLETION REPORT",
+      "text": "============================================================\n\nAt the end give me:\n\nA. Executive review of the original MAT.\nB. Exact architectural problems found.\nC. Exact files changed.\nD. Exact files added.\nE. Exact migrations performed.\nF. Data-completeness matrix.\nG. Broken/weak source report.\nH. Internal/external link report.\nI. UI/UX benchmark before and after.\nJ. Accessibility result.\nK. Build/test results.\nL. Before/after screenshot locations.\nM. Remaining image-generation requirements.\nN. Remaining scientific-data gaps.\nO. Remaining expert-review requirements.\nP. Recommended next production record/element.\nQ. Git diff summary.\nR. Commit hashes.\n\nDo not report a test as passed unless you actually executed it.\n\n============================================================",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "architecture-review:50",
+      "source_id": "architecture-review",
+      "source_line": 1889,
+      "title": "STOP CONDITIONS",
+      "text": "============================================================\n\nSTOP and report rather than fabricate if:\n\n- a canonical schema decision is genuinely ambiguous;\n- a migration would destroy scientific provenance;\n- a source cannot be verified;\n- a number cannot be sourced;\n- a licence/rights decision belongs to the repository owner;\n- a change would invalidate MAT IDs;\n- a generated visualization requires unavailable data.\n\nOtherwise proceed autonomously through the audit, implementation,\ntesting and visual validation.\n\n============================================================\nFINAL PRODUCT STANDARD\n============================================================\n\nMAT should feel:\n\nto a casual reader:\nlike a beautifully produced scientific atlas/book;\n\nto a student:\nlike a navigable textbook and encyclopedia;\n\nto a scientist:\nlike a traceable professional reference;\n\nto an engineer:\nlike a usable technical handbook;\n\nto a historian:\nlike a sourced history of ideas and discoveries;\n\nto an unconventional/esoteric researcher:\nlike a comprehensive but evidence-labelled archive;\n\nto an AI:\nlike a typed, versioned, provenance-rich scientific knowledge graph;\n\nto a developer:\nlike a stable data platform with deterministic publication outputs.\n\nThe target is not \"a prettier periodic table\".\n\nThe target is a five-star, research-grade,\nhuman-and-machine Materials Atlas Table Codex.\n\nBegin by auditing and running the existing repository.\nDo not redesign from assumptions.\n```\n\nOne thing I would **not** ask Codex to do in that first pass is mass-fill all later elements. First make the architecture capable of representing them correctly, run the early-record coverage comparison, and identify the precise point and categories where the production depth drops. Then we can use that report to build the second production prompt that fills Neon onward using the fully locked MAT template without contaminating the records with guessed values.\n\nThat separation matters: **architecture first, scientific completion second, image generation third.** The charts, tables, spectra and property plots that are derivable from actual numerical data should be generated by code; only genuine illustrations and original reconstructions need an image-generation pass. That is the safest way to get MAT from a very ambitious repository to something I would consider genuinely publishable and useful as the materials knowledge foundation you have in mind.",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:1",
+      "source_id": "studio-recovery-review",
+      "source_line": 63,
+      "title": "START FROM THE CURRENT REPOSITORY",
+      "text": "Run:\n\n```bash\ngit status\ngit pull --ff-only\ngit log -10 --oneline\n```\n\nDo not assume this prompt's commit is still current.\n\nAt the time of external audit, main was at approximately:\n\n`f9f8109`\n\nbut the local repository may now be newer.\n\nPreserve all legitimate work added since then.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:2",
+      "source_id": "studio-recovery-review",
+      "source_line": 85,
+      "title": "THE CURRENT APPLICATION IS NOT COMPLETE",
+      "text": "Do not treat the existing MAT Studio as finished.\n\nExternal audit has already found:\n\n1. `studio/src/components/LivePreview.tsx`\n   is effectively a placeholder.\n\n2. `studio/src/components/Inspector.tsx`\n   contains hard-coded zero values instead of actual MAT record data.\n\n3. Studio loads a manifest directly rather than consuming a properly designed Studio/publication model.\n\n4. Book/Data/Preview/Validate/Export currently resemble navigation tabs more than complete workflows.\n\n5. The root GitHub workflow does not properly install/build/test the Studio.\n\n6. The 118-element dataset contains `MAT:null` entries and scientifically unsafe placeholder-style data.\n\n7. Latest validation is also failing because Carbon references source IDs that are absent from the source registry.\n\nDo NOT hide these problems.\n\nFix each category properly.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:3",
+      "source_id": "studio-recovery-review",
+      "source_line": 113,
+      "title": "FIRST GOAL — MAKE THE PROGRAM ACTUALLY WORK",
+      "text": "Before improving appearance:\n\nmake Studio boot reliably.\n\nRequired development workflow:\n\n```bash\nnpm install\nnpm run studio\n```\n\nfrom the repository root.\n\nThe root command must:\n\n1. prepare required generated MAT data;\n2. make that data available to Studio;\n3. install/use correct Studio dependencies;\n4. start Studio;\n5. report useful errors if preparation fails.\n\nPrefer npm workspaces or another clean package strategy.\n\nDo not require the user to manually run five undocumented commands.\n\nAdd:\n\n```bash\nnpm run studio\nnpm run build:studio\nnpm run test:studio\nnpm run check:studio\n```\n\nMake them real.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:4",
+      "source_id": "studio-recovery-review",
+      "source_line": 153,
+      "title": "ADD STUDIO TO CI",
+      "text": "The current CI must not ignore the application that the user actually sees.\n\nCreate separate logical CI stages/jobs if necessary:\n\n```text\nSCIENTIFIC VALIDATION\nBOOK BUILD\nBOOK TESTS\nSTUDIO BUILD\nSTUDIO TESTS\nPUBLICATION MODEL\nGENERATED-FILE SYNC\n```\n\nImportant:\n\nThe existing Carbon source errors must remain visible.\n\nHowever, a scientific validation failure should not prevent us from discovering that the Studio itself does not compile.\n\nUse separate jobs where appropriate.\n\nNever weaken scientific validation to get a green check.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:5",
+      "source_id": "studio-recovery-review",
+      "source_line": 181,
+      "title": "DO NOT INVENT THE MISSING CARBON SOURCES",
+      "text": "There are references around:\n\n```text\nSRC-000084\nSRC-000086\nSRC-000087\nSRC-000088\nSRC-000089\nSRC-000090\n```\n\nthat currently do not resolve.\n\nInvestigate them.\n\nIf legitimate source information exists elsewhere in repository history or documentation, recover and register it.\n\nIf not:\n\nleave an explicit unresolved-source error.\n\nDO NOT create fake:\n\n- titles\n- authors\n- journals\n- DOI numbers\n- URLs\n- dates\n\njust to make CI green.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:6",
+      "source_id": "studio-recovery-review",
+      "source_line": 217,
+      "title": "REBUILD THE 118-ELEMENT BASELINE",
+      "text": "This is now a priority.\n\nThe user wants every currently recognised chemical element available immediately so they can progressively overwrite/extend each record later.\n\nThere are 118 recognised elements.\n\nCreate stable MAT IDs:\n\n```text\nHydrogen    MAT:0001\nHelium      MAT:0002\n...\nNeon        MAT:0010\n...\nOganesson   MAT:0118\n```\n\nThere must NEVER again be:\n\n```json\n\"matId\": \"MAT:null\"\n```\n\nfor a recognised element.\n\nMAT:0000 remains Origin State and is NOT a chemical element.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:7",
+      "source_id": "studio-recovery-review",
+      "source_line": 248,
+      "title": "BASELINE IS NOT THE SAME AS CURATED",
+      "text": "Introduce explicit status.\n\nFor example:\n\n```json\n{\n  \"recordStatus\": \"BASELINE\"\n}\n```\n\nversus:\n\n```json\n{\n  \"recordStatus\": \"CURATED\"\n}\n```\n\nCurrent detailed MAT records 0001–0009 can remain:\n\n`CURATED`\n\nor another appropriate existing status.\n\nElements 0010–0118 become:\n\n`BASELINE`\n\nuntil individually completed.\n\nPotential states:\n\n```text\nBASELINE\nIN-PROGRESS\nCURATED\nREVIEWED\nPUBLISHED\nDEPRECATED\n```\n\nUse existing MAT vocabulary if one already exists.\n\nDo not introduce redundant status systems.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:8",
+      "source_id": "studio-recovery-review",
+      "source_line": 297,
+      "title": "BASELINE ELEMENT DATA MUST BE REAL DATA",
+      "text": "Replace the current unsourced 118-element placeholder file with a properly sourced baseline catalogue.\n\nUse authoritative sources.\n\nPreferred source hierarchy:\n\n### Identity and general element data\n\nPubChem Periodic Table / Element data.\n\nPubChem exposes machine-readable/downloadable element data and identifies sources including IUPAC, NIST, IAEA and other scientific authorities.\n\n### Standard atomic weights\n\nCIAAW / IUPAC 2024 standard atomic-weight table.\n\nImportant:\n\nDo not convert intervals into fake single exact values.\n\nPreserve things such as:\n\n```text\n[1.00784, 1.00811]\n```\n\nwhere the standard atomic weight is an interval.\n\n### Ground electronic configuration and ionization energy\n\nNIST Atomic Spectra Database 5.12 where appropriate.\n\n### Nuclear/isotope information\n\nUse established evaluated nuclear sources already accepted by MAT where appropriate.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:9",
+      "source_id": "studio-recovery-review",
+      "source_line": 337,
+      "title": "DOWNLOAD ONCE — DO NOT REQUIRE INTERNET AT RUNTIME",
+      "text": "Create an ingestion/update pipeline such as:\n\n```text\nscripts/sync-elements-baseline.mjs\n```\n\nThe script may retrieve authoritative upstream data when deliberately run.\n\nThe normal MAT book and Studio must NOT require PubChem/NIST/IUPAC network access to start.\n\nStore the resulting reviewed snapshot in the repository.\n\nExample:\n\n```text\ndata/catalog/elements-baseline.yaml\n```\n\nor the closest architecturally appropriate location.\n\nThe snapshot must contain provenance.\n\nExample:\n\n```yaml\ncatalog:\n  id: MAT:ELEMENTS:BASELINE\n  version: ...\n  updated: ...\n  sources:\n    - ...\n\nelements:\n  - mat_id: MAT:0010\n    atomic_number: 10\n    symbol: Ne\n    name: Neon\n    period: 2\n    group: 18\n    block: p\n    classification: noble-gas\n\n    atomic_weight:\n      display: \"20.1797(6)\"\n      source_ids:\n        - ...\n\n    electron_configuration:\n      value: ...\n      source_ids:\n        - ...\n\n    first_ionization_energy:\n      value: ...\n      unit: eV\n      uncertainty: ...\n      source_ids:\n        - ...\n\n    record_status: BASELINE\n```\n\nAdapt to MAT's actual schema.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:10",
+      "source_id": "studio-recovery-review",
+      "source_line": 405,
+      "title": "REMOVE FAKE PLACEHOLDER SCIENCE",
+      "text": "Audit the current:\n\n`book/data/elements-118.json`\n\nespecially elements approximately Z >= 90.\n\nValues such as:\n\n```text\nuniverseAbundance: 0.000001\ncrustAbundance: 0.1\nhumanAbundance: 0.000001\n```\n\nrepeated across synthetic elements must NOT remain unless an actual source supports them.\n\nThe same applies to:\n\n```text\nphase: Solid\nphase: Gas\nelectronConfiguration: \"[Core] + 118e⁻\"\n```\n\nand arbitrary atomic masses.\n\nReplace unsupported data with MAT null ontology.\n\nFor example:\n\n```yaml\nvalue: null\nnull_reason: UNAVAILABLE\n```\n\nor:\n\n```yaml\nvalue: null\nnull_reason: UNKNOWN\n```\n\nor:\n\n```yaml\nvalue: null\nnull_reason: NOT_APPLICABLE\n```\n\ndepending on the established MAT schema.\n\nNever use zero as a substitute for unknown.\n\nNever use a tiny fake number as a substitute for unknown.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:11",
+      "source_id": "studio-recovery-review",
+      "source_line": 464,
+      "title": "DISTINGUISH MEASURED FROM PREDICTED",
+      "text": "This is especially important for superheavy elements.\n\nWhere properties are theoretical/predicted rather than experimentally established, represent that explicitly.\n\nExample:\n\n```yaml\nevidence_type: PREDICTED\n```\n\nnot:\n\n```yaml\nevidence_type: MEASURED\n```\n\nIf the baseline source does not establish the property reliably:\n\nleave it unknown.\n\nMAT values scientific honesty over filling every box.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:12",
+      "source_id": "studio-recovery-review",
+      "source_line": 490,
+      "title": "BASIC DATA PACKAGE FOR ALL 118",
+      "text": "Each baseline record should support, where authoritative information exists:\n\n```text\nMAT ID\natomic number\nsymbol\nname\nperiod\ngroup\nblock\nbroad element classification\nstandard atomic weight / representative atomic mass\nstandard state, if authoritative\nground-state electron configuration\nfirst ionization energy\nelectronegativity where defined\natomic radius WITH radius definition\nmelting point where known\nboiling point where known\ndensity WITH conditions/reference state\ndiscovery year where supported\noxidation states where supported\nbasic source/provenance identifiers\nrecord status\n```\n\nDo not force unavailable fields.\n\nCondition-sensitive quantities require:\n\n```text\nvalue\nunit\nconditions\ndefinition/method\nsource\nuncertainty where available\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:13",
+      "source_id": "studio-recovery-review",
+      "source_line": 533,
+      "title": "DO NOT CREATE 109 FAKE FULL RESEARCH RECORDS",
+      "text": "Elements 0010–0118 do not need hundreds of empty files each yet.\n\nCreate a lightweight baseline record system.\n\nThe hierarchy should be:\n\n```text\nBASELINE ELEMENT CATALOGUE\n        +\nOPTIONAL CURATED MAT RECORD\n        ↓\nMERGED PUBLICATION VIEW\n```\n\nThe curated record takes precedence when present.\n\nExample:\n\n```text\nMAT:0010 Neon\nbaseline catalogue\n       ↓\nuser later creates records/0010-Neon-Ne/\n       ↓\ncurated fields extend/override the baseline for publication\n```\n\nDo not destroy baseline provenance when an override occurs.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:14",
+      "source_id": "studio-recovery-review",
+      "source_line": 566,
+      "title": "EVERY ELEMENT MUST BE SELECTABLE",
+      "text": "This is a non-negotiable UX requirement.\n\nEvery one of the 118 periodic-table cells must be:\n\n- keyboard focusable;\n- mouse clickable;\n- touch selectable;\n- screen-reader labelled.\n\nDo not mark elements 10–118:\n\n```html\naria-disabled=\"true\"\n```\n\nmerely because their detailed MAT record has not been written yet.\n\nUse a proper:\n\n```html\n<button>\n```\n\nor navigable link.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:15",
+      "source_id": "studio-recovery-review",
+      "source_line": 595,
+      "title": "PERIODIC TABLE ROUTING",
+      "text": "Selection behaviour:\n\n### CURATED\n\nHydrogen through whichever records currently have full MAT content:\n\nopen the full MAT record.\n\n### BASELINE\n\nFor an element without a full record:\n\nopen its generated baseline element page.\n\nExample:\n\n```text\nMAT:0010\nNEON\nBASELINE REFERENCE\n```\n\nwith its verified data.\n\nProminent banner:\n\n```text\nBASELINE ELEMENT RECORD\n\nThis element is available for reference and navigation but has not yet received the full MAT curated record package.\n```\n\nDo not call baseline data “incomplete” in a way that suggests the known facts are unreliable.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:16",
+      "source_id": "studio-recovery-review",
+      "source_line": 633,
+      "title": "BASELINE PAGE TEMPLATE",
+      "text": "Every baseline page should already resemble the eventual MAT record.\n\nExample:\n\n```text\nMAT:0010\n\nNEON\nNe\nAtomic Number 10\n\nBASELINE REFERENCE\n\nAt a glance\n\nAtomic number\nAtomic weight\nGroup\nPeriod\nBlock\nClassification\nStandard state\nElectron configuration\nIonization energy\n\nScientific data\nSources\nRelated periodic position\n\n──────────────\n\nMAT EXTENSIONS\n\nAtomic structure\nIsotopes\nSpectra\nFrequency\nThermal\nElectrical\nMagnetic\nMaterials\nCompounds\nProcesses\nCharts\nImages\n3D models\nEquations\nExperiments\n\nStatus:\nAwaiting curated MAT expansion\n```\n\nThe empty future sections should use structured placeholders.\n\nDo not invent content.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:17",
+      "source_id": "studio-recovery-review",
+      "source_line": 694,
+      "title": "MAKE ALL 118 ELEMENTS APPEAR IN STUDIO",
+      "text": "The left Studio browser must not contain only 0000–0009.\n\nProvide:\n\n```text\n▸ 0000 Origin State\n\n▸ 0001 Hydrogen      CURATED\n▸ 0002 Helium        CURATED\n...\n▸ 0009 Fluorine      CURATED\n\n▸ 0010 Neon          BASELINE\n▸ 0011 Sodium        BASELINE\n...\n▸ 0118 Oganesson     BASELINE\n```\n\nAdd filtering:\n\n```text\nAll\nCurated\nBaseline\nIn progress\nNeeds review\n```\n\nAdd search by:\n\n- number;\n- MAT ID;\n- symbol;\n- name.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:18",
+      "source_id": "studio-recovery-review",
+      "source_line": 733,
+      "title": "ADD A PERIODIC-TABLE VIEW TO STUDIO",
+      "text": "Studio should have both:\n\n### BOOK TREE\n\nand:\n\n### PERIODIC TABLE\n\nSelecting an element in either updates the same active record.\n\nProvide toggle:\n\n```text\nTree | Periodic\n```\n\nThis makes large-scale MAT authoring much easier.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:19",
+      "source_id": "studio-recovery-review",
+      "source_line": 755,
+      "title": "REBUILD STUDIO TO FEEL LIKE AN ACTUAL EBOOK AUTHORING APPLICATION",
+      "text": "The existing three-column idea is good.\n\nThe implementation is not.\n\nTransform it into:\n\n```text\n┌──────────────────────────────────────────────────────────────┐\n│ MAT Studio                                                  │\n│ File | Write | Design | Data | Review | Preview | Export    │\n├─────────────┬─────────────────────────────┬──────────────────┤\n│             │                             │                  │\n│ BOOK /      │                             │ INSPECTOR        │\n│ PERIODIC    │       ACTUAL PAGE           │                  │\n│ NAVIGATOR   │       / CANVAS              │ Page             │\n│             │                             │ Content          │\n│ 0001 H      │  real selected MAT record   │ Data             │\n│ 0002 He     │                             │ Figure           │\n│ ...         │                             │ Evidence         │\n│ 0118 Og     │                             │ Accessibility    │\n│             │                             │ Publication      │\n├─────────────┴─────────────────────────────┴──────────────────┤\n│ Build | Sources | Figures | Warnings | Save | Word count    │\n└──────────────────────────────────────────────────────────────┘\n```\n\nDo not leave placeholder panels pretending to work.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:20",
+      "source_id": "studio-recovery-review",
+      "source_line": 787,
+      "title": "IMPLEMENT REAL MODES",
+      "text": "The top controls must actually change workflows.\n\n## WRITE\n\nStructure and scientific prose.\n\nProvide:\n\n- headings;\n- paragraphs;\n- definitions;\n- notes;\n- citations;\n- cross references.\n\n## DESIGN\n\nPublication components:\n\n- text;\n- figure;\n- image;\n- table;\n- chart;\n- graph;\n- equation;\n- callout;\n- source card;\n- timeline;\n- diagram;\n- 3D placeholder;\n- video;\n- audio.\n\n## DATA\n\nDisplay actual structured MAT properties.\n\nDo not edit a JSON-looking fake copy.\n\n## REVIEW\n\nDisplay:\n\n- scientific errors;\n- missing sources;\n- incomplete assets;\n- accessibility;\n- unresolved relationships;\n- baseline/curated status.\n\n## PREVIEW\n\nReal preview modes:\n\n```text\nWeb\nEPUB\nTablet\n6×9\nA4\n```\n\n## EXPORT\n\nActual build/export status.\n\nDo not make these visual-only tabs.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:21",
+      "source_id": "studio-recovery-review",
+      "source_line": 860,
+      "title": "REAL LIVE PREVIEW",
+      "text": "Replace the placeholder `LivePreview`.\n\nBest approach:\n\nreuse the same canonical renderer/publication model used by the public book.\n\nDo not create a second interpretation of MAT Markdown if avoidable.\n\nThe selected element should render its real publication page.\n\nSupport:\n\n```text\nzoom\nfit page\nfit width\ndesktop\ntablet\nmobile\n6×9\nA4\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:22",
+      "source_id": "studio-recovery-review",
+      "source_line": 887,
+      "title": "REAL INSPECTOR",
+      "text": "Replace all hard-coded counts.\n\nWhen Hydrogen is selected, Inspector should calculate/read actual:\n\n```text\nRecord ID\nStatus\nWord count\nHeadings\nFigures\nImages\nTables\nGraphs\nDatasets\nEquations\nSources\nCitations\nRelationships\nWarnings\nErrors\nMissing alt text\nMissing assets\n```\n\nSelecting an individual page component changes Inspector context.\n\nExample:\n\nselect a figure:\n\n```text\nFigure ID\nTitle\nCaption\nAlt text\nLong description\nStatus\nSource IDs\nEvidence classification\nPrint fallback\nEPUB fallback\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:23",
+      "source_id": "studio-recovery-review",
+      "source_line": 934,
+      "title": "CREATE AN AUTHORING COMPONENT LIBRARY",
+      "text": "Add an Insert/Add panel.\n\nCategories:\n\n### TEXT\n\nHeading\nParagraph\nDefinition\nQuote\nFootnote\nMarginal note\n\n### SCIENCE\n\nProperty\nEquation\nCalculation\nDataset\nEvidence block\nSource block\n\n### VISUAL\n\nImage\nScientific illustration\nDiagram\nChart\nGraph\nSpectrum\nPhase diagram\nTimeline\nMap\n3D model\n\n### MEDIA\n\nAudio\nVideo\nAnimation\nSimulation\n\n### REFERENCE\n\nCross-reference\nPerson\nSource\nGlossary term\nRelated record\n\nComponents must generate MAT-compatible structured placeholders where appropriate.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:24",
+      "source_id": "studio-recovery-review",
+      "source_line": 990,
+      "title": "DO NOT MAKE IT A GENERIC WEB DASHBOARD",
+      "text": "The centre workspace should feel like a BOOK.\n\nUse:\n\n- page proportions;\n- paper surface;\n- serif reading typography;\n- margin;\n- chapter hierarchy;\n- figure captions;\n- running metadata;\n- scientific table styling.\n\nThe surrounding application chrome can use a modern sans-serif interface.\n\nAim for:\n\n```text\nAdobe InDesign\n+\nKindle Create\n+\nscientific atlas\n+\nreference Bible\n+\nmodern codex\n```\n\nnot:\n\n```text\ngeneric SaaS admin dashboard\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:25",
+      "source_id": "studio-recovery-review",
+      "source_line": 1029,
+      "title": "ADD EBOOKCRAFT-LIKE PROJECT WORKFLOW",
+      "text": "EbookCraft itself was only a small scaffold, so do not pretend it contained features that were not there.\n\nInstead implement the useful PRODUCT CONCEPT:\n\n```text\nCREATE\n    ↓\nWRITE\n    ↓\nDESIGN\n    ↓\nADD MEDIA\n    ↓\nREVIEW\n    ↓\nPREVIEW\n    ↓\nEXPORT\n```\n\nMake that workflow visible.\n\nAdd a project status area showing:\n\n```text\nBook structure\nContent\nData\nMedia\nSources\nAccessibility\nPublication\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:26",
+      "source_id": "studio-recovery-review",
+      "source_line": 1067,
+      "title": "DOCUMENT OUTLINE / PAGES",
+      "text": "Provide a true book outline.\n\nAllow:\n\n```text\nFront cover\nTitle page\nCopyright\nDedication\nForeword\nPreface\nHow to use MAT\nContents\nIntroduction\n\nOrigin State\n\nElements 001–118\n\nGlossary\nPeople\nSources\nIndex\nAppendices\nBack matter\nBack cover\n```\n\nDo not show hundreds of raw repository helper documents to the normal reader.\n\nStudio can expose technical/internal files in an advanced mode.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:27",
+      "source_id": "studio-recovery-review",
+      "source_line": 1103,
+      "title": "INTERNAL VS PUBLIC CONTENT",
+      "text": "Create presentation roles such as:\n\n```text\nPUBLIC\nEDITORIAL\nTECHNICAL\nVALIDATION\nGENERATED\n```\n\nFiles such as:\n\n```text\nSchema Validation\nMigration Audit\nVisual Specification\ninternal manifests\n```\n\nshould not clutter the normal ebook contents unless explicitly intended for publication.\n\nStudio should allow:\n\n```text\nShow internal files\n```\n\ntoggle.\n\nDefault OFF for reader/book view.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:28",
+      "source_id": "studio-recovery-review",
+      "source_line": 1138,
+      "title": "FIX THE PUBLICATION MODEL",
+      "text": "Audit:\n\n`scripts/build-publication-model.mjs`\n\nIt currently needs strengthening.\n\nDo not hard-code scientific glossary definitions with inappropriate source IDs.\n\nDo not attach Origin State sources to unrelated scientific definitions merely to populate a source field.\n\nGenerate glossary entries from canonical controlled data where possible.\n\nIf a term lacks a verified source:\n\nmark it accordingly rather than inventing provenance.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:29",
+      "source_id": "studio-recovery-review",
+      "source_line": 1158,
+      "title": "FIX CHART DATASET KEY MISMATCHES",
+      "text": "Compare:\n\n`book/data/chart-datasets.json`\n\nagainst:\n\n`scripts/build-publication-model.mjs`\n\nEnsure actual names agree.\n\nDo not have:\n\n```text\nuniverse\n```\n\nin one place and:\n\n```text\ncosmic\n```\n\nin another unless a deliberate adapter maps them.\n\nLikewise inspect:\n\n```text\nhuman\nhumanBody\ncrust\n```\n\nAdd tests.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:30",
+      "source_id": "studio-recovery-review",
+      "source_line": 1196,
+      "title": "ONE GENERATED STUDIO API",
+      "text": "Studio should consume a deliberate generated model.\n\nFor example:\n\n```text\ndata/publication/generated/\n```\n\nGenerate:\n\n```text\nstudio-manifest.json\npublication-elements.json\npublication-records.json\npublication-sources.json\npublication-assets.json\npublication-validation.json\npublication-glossary.json\npublication-index.json\n```\n\nThen copy/expose them safely to Studio during:\n\n```bash\nnpm run prepare:studio\n```\n\nDo not make Studio randomly fetch files that Vite does not serve.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:31",
+      "source_id": "studio-recovery-review",
+      "source_line": 1229,
+      "title": "PUBLICATION MODEL SHOULD INCLUDE BASELINE ELEMENTS",
+      "text": "The generated publication model must contain all 118 elements.\n\nExample:\n\n```json\n{\n  \"mat\": \"MAT:0010\",\n  \"atomicNumber\": 10,\n  \"symbol\": \"Ne\",\n  \"name\": \"Neon\",\n  \"recordStatus\": \"BASELINE\",\n  \"fullRecord\": false\n}\n```\n\nFull records then contain:\n\n```json\n{\n  \"mat\": \"MAT:0001\",\n  \"recordStatus\": \"CURATED\",\n  \"fullRecord\": true,\n  \"recordPath\": \"records/0001-Hydrogen-H/...\"\n}\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:32",
+      "source_id": "studio-recovery-review",
+      "source_line": 1259,
+      "title": "MAKE FORWARD REFERENCES USEFUL",
+      "text": "Many current warnings refer to elements such as:\n\n```text\nMAT:0011\nMAT:0012\nMAT:0013\nMAT:0014\nMAT:0016\nMAT:0022\n...\n```\n\nOnce all 118 elemental identities exist in the baseline catalogue, teach validators the difference between:\n\n```text\nunknown MAT ID\n```\n\nand:\n\n```text\nvalid baseline/reserved elemental MAT ID\n```\n\nA relationship to MAT:0014 should no longer mean “this element identity doesn't exist”.\n\nIt may instead report:\n\n```text\ntarget exists as BASELINE but no CURATED record exists\n```\n\nThis is more accurate.\n\nDo not simply silence the warning.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:33",
+      "source_id": "studio-recovery-review",
+      "source_line": 1299,
+      "title": "SEARCH ALL 118",
+      "text": "Public book search and Studio search should find:\n\n```text\nNeon\nNe\nMAT:0010\nAtomic number 10\n```\n\neven before Neon receives the detailed MAT package.\n\nClearly label result:\n\n`Baseline element`\n\nwhere applicable.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:34",
+      "source_id": "studio-recovery-review",
+      "source_line": 1320,
+      "title": "ELEMENT NEXT/PREVIOUS NAVIGATION",
+      "text": "Every baseline/curated record should support:\n\n```text\n← Previous element\nNext element →\n```\n\nExample:\n\n```text\nFluorine ← Neon → Sodium\n```\n\nAlso provide:\n\n`Back to periodic table`\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:35",
+      "source_id": "studio-recovery-review",
+      "source_line": 1341,
+      "title": "ELEMENT QUICK SWITCHER",
+      "text": "Add a fast element selector.\n\nFor example:\n\n```text\nSearch element…\n```\n\nand/or:\n\n`Ctrl/Cmd + K`\n\nUser can type:\n\n```text\n26\nFe\nIron\nMAT:0026\n```\n\nand jump immediately.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:36",
+      "source_id": "studio-recovery-review",
+      "source_line": 1368,
+      "title": "DON'T OVERWRITE USER SCIENCE",
+      "text": "When a curated record exists:\n\nnever automatically replace curated MAT values with baseline values.\n\nMerge precedence:\n\n```text\nCURATED MAT VALUE\n      ↓\nBASELINE VALUE\n      ↓\nUNKNOWN\n```\n\nBut always retain provenance for whichever value is rendered.\n\nDetect conflicting values and report them.\n\nDo not silently resolve scientific disagreements.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:37",
+      "source_id": "studio-recovery-review",
+      "source_line": 1392,
+      "title": "BASELINE → FULL RECORD GENERATOR",
+      "text": "Add an authoring action such as:\n\n`Create full MAT record`\n\nfor a baseline element.\n\nExample for Neon:\n\ngenerate:\n\n```text\nrecords/0010-Neon-Ne/\n```\n\nusing the current master MAT record template.\n\nSeed only approved baseline identity/basic values.\n\nGenerate structured placeholders for the remainder.\n\nDo not generate fake isotope/spectrum/material data.\n\nDo not overwrite an existing folder.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:38",
+      "source_id": "studio-recovery-review",
+      "source_line": 1420,
+      "title": "MAKE THE USER'S LATER WORK EASY",
+      "text": "The user's intended workflow is:\n\n```text\nSelect Neon\n→ see baseline Neon data\n→ Create/expand full record\n→ overwrite/add specialised MAT information\n→ validate\n→ preview\n→ publish\n```\n\nDesign around this.\n\nDo not force them to manually create every base identity from scratch.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:39",
+      "source_id": "studio-recovery-review",
+      "source_line": 1440,
+      "title": "READER DESIGN",
+      "text": "Keep the public reader distinct from Studio.\n\nReader:\n\n```text\nreading\nlearning\nsearching\nexploring\n```\n\nStudio:\n\n```text\nauthoring\nediting\ndesign\nvalidation\npublishing\n```\n\nDo not expose authoring controls in the public ebook.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:40",
+      "source_id": "studio-recovery-review",
+      "source_line": 1467,
+      "title": "SCIENTIFIC READER ELEMENT PAGE",
+      "text": "For full records, maintain rich MAT architecture.\n\nFor baseline records show available basic science plus future slots.\n\nPossible tabs/accordion:\n\n```text\nOverview\nAtomic\nPhysical\nChemical\nNuclear\nSpectra\nMaterials\nVisuals\nData\nSources\nRelated\n```\n\nHide completely empty sections or label them:\n\n`Planned for full MAT record`\n\nrather than displaying broken blank panels.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:41",
+      "source_id": "studio-recovery-review",
+      "source_line": 1497,
+      "title": "KEEP HISTORICAL / ALTERNATIVE MODELS SEPARATE",
+      "text": "Audit Russell periodic-table data and other alternative/theoretical material.\n\nDo not visually mix these into the conventional periodic table in a way that implies scientific equivalence.\n\nUse clear contexts such as:\n\n```text\nStandard scientific periodic table\nHistorical models\nAlternative representations\nMAT research/theoretical overlays\n```\n\nEvidence labels must remain visible.\n\nCausali E remains explicitly theoretical/project-specific unless independently established.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:42",
+      "source_id": "studio-recovery-review",
+      "source_line": 1518,
+      "title": "ACCESSIBILITY",
+      "text": "Every 118-element interaction must support:\n\n- Tab;\n- Enter;\n- Space;\n- arrow navigation where sensible;\n- accessible element name;\n- atomic number;\n- symbol;\n- status.\n\nExample accessible label:\n\n```text\nNeon, symbol Ne, atomic number 10, baseline MAT record\n```\n\nDo not use colour alone for status.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:43",
+      "source_id": "studio-recovery-review",
+      "source_line": 1541,
+      "title": "SAVE / UNSAVED STATE",
+      "text": "Studio needs authoring-state feedback.\n\nAdd:\n\n```text\nSaved\nUnsaved changes\nValidation pending\nBuild required\n```\n\nDo not pretend files are saved if they are not.\n\nIf actual filesystem writing is not yet implemented:\n\nmake Studio read-only for those actions instead of fake-save buttons.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:44",
+      "source_id": "studio-recovery-review",
+      "source_line": 1562,
+      "title": "ERROR HANDLING",
+      "text": "Remove silent catch blocks for essential Studio resources.\n\nIf Studio cannot load its model, show:\n\n```text\nMAT Studio could not load publication data.\n\nExpected:\n...\n\nTry:\nnpm run prepare:studio\n```\n\nwith technical details available.\n\nDo not show an empty Book Tree with no explanation.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:45",
+      "source_id": "studio-recovery-review",
+      "source_line": 1584,
+      "title": "EMPTY / LOADING / ERROR STATES",
+      "text": "Every major panel needs:\n\n```text\nloading\nready\nempty\nerror\n```\n\nstates.\n\nExamples:\n\n- publication model unavailable;\n- baseline unavailable;\n- element has no figures;\n- record has no full chapter;\n- validation failed.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:46",
+      "source_id": "studio-recovery-review",
+      "source_line": 1607,
+      "title": "TEST THE ACTUAL STUDIO",
+      "text": "Add Vitest/component tests and, if appropriate, a lightweight browser smoke test.\n\nMinimum tests:\n\n```text\nStudio boots\n118 elements load\nMAT:0001 selectable\nMAT:0010 selectable\nMAT:0118 selectable\nbaseline page renders\ncurated record renders\nBook Tree works\nPeriodic view works\nInspector uses real data\nmode tabs change content\nmissing data produces error state\nno MAT:null remains\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:47",
+      "source_id": "studio-recovery-review",
+      "source_line": 1631,
+      "title": "TEST THE SCIENTIFIC CATALOGUE",
+      "text": "Write validation ensuring:\n\n```text\nexactly 118 chemical elements\natomic numbers unique 1–118\nsymbols unique\nnames unique\nMAT IDs unique\nMAT ID corresponds to atomic number\n0000 excluded from chemical element array\nno MAT:null\nno fake numeric missing-value sentinels\nall values with required provenance\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:48",
+      "source_id": "studio-recovery-review",
+      "source_line": 1650,
+      "title": "ADD BASELINE VALIDATOR",
+      "text": "Example:\n\n```bash\nnpm run validate:elements\n```\n\nCheck:\n\n- identity;\n- schema;\n- status;\n- provenance;\n- conditions;\n- invalid null semantics;\n- synthetic-element misuse.\n\nMake it part of:\n\n```bash\nnpm run validate\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:49",
+      "source_id": "studio-recovery-review",
+      "source_line": 1676,
+      "title": "BUILD ORDER",
+      "text": "Recommended:\n\n```text\n1. fix Studio build/data pipeline\n2. create authoritative 118-element baseline\n3. fix publication model\n4. make all 118 selectable\n5. real LivePreview\n6. real Inspector\n7. implement Write/Design/Data/Review/Preview/Export\n8. improve visual design\n9. accessibility",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:10",
+      "source_id": "studio-recovery-review",
+      "source_line": 1690,
+      "title": "CI",
+      "text": "11. scientific validation review\n```\n\nDo not start with cosmetic CSS.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:50",
+      "source_id": "studio-recovery-review",
+      "source_line": 1698,
+      "title": "VISUAL TARGET",
+      "text": "Studio should feel intentionally designed.\n\nUse a professional dark authoring workspace around a warm/light book canvas.\n\nExample:\n\n```text\ndark app chrome\n      +\npaper/light centre page\n      +\nteal MAT accent\n      +\nmuted gold publication accent\n```\n\nThe page itself should look like a high-quality scientific book.\n\nDo not make the entire ebook page dark just because Studio chrome is dark.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:51",
+      "source_id": "studio-recovery-review",
+      "source_line": 1722,
+      "title": "SUGGESTED ADDITIONS",
+      "text": "Also implement or scaffold where appropriate:\n\n- undo/redo for Studio layout/draft changes;\n- breadcrumb;\n- element quick search;\n- keyboard shortcuts;\n- autosave of local Studio UI state;\n- command palette;\n- component insert menu;\n- figure manager;\n- table manager;\n- source inspector;\n- glossary inspector;\n- relationship explorer;\n- publication readiness;\n- missing-assets list;\n- accessibility report;\n- responsive preview;\n- export history;\n- build log viewer;\n- dirty-file indicator;\n- baseline/full-record comparison;\n- source/provenance diff.\n\nDo not allow scope creep to prevent the core application from working.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:52",
+      "source_id": "studio-recovery-review",
+      "source_line": 1752,
+      "title": "DO NOT REWRITE THE PUBLIC READER IN REACT",
+      "text": "React belongs in MAT Studio where its state/component model is useful.\n\nKeep the public ebook lightweight and static/offline-capable.\n\nShare:\n\n```text\ndata\nschemas\npublication model\nsemantic component definitions\n```\n\nrather than duplicating UI implementation.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:53",
+      "source_id": "studio-recovery-review",
+      "source_line": 1771,
+      "title": "REMOVE DEAD / DUPLICATE ARCHITECTURE",
+      "text": "Audit the reader for duplicated systems.\n\nFor example inspect whether there is both:\n\n```text\nmodules/atlas.mjs\n```\n\nand a separate large inline implementation in:\n\n```text\nbook.js\n```\n\nIf one is obsolete:\n\nmigrate cleanly.\n\nDo not keep two partially independent implementations of the periodic table.\n\nDo the same for:\n\n- search;\n- charts;\n- reading tools;\n- publication UI;\n- translation;\n- TTS.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:54",
+      "source_id": "studio-recovery-review",
+      "source_line": 1804,
+      "title": "DO NOT DESTROY CURRENT WORK",
+      "text": "Before refactoring:\n\n```bash\ngit status\n```\n\nCommit coherent recovery phases.\n\nRecommended commits:\n\n```text\nfix MAT Studio data and build pipeline\nadd authoritative 118-element baseline catalogue\nenable all-element navigation\nconnect Studio preview and inspector\nimplement MAT authoring workflow\nadd Studio and element validation to CI\n```\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:55",
+      "source_id": "studio-recovery-review",
+      "source_line": 1827,
+      "title": "FINAL TEST",
+      "text": "At minimum run:\n\n```bash\nnpm ci\nnpm run validate\nnpm run build:book\nnpm test\n\nnpm run build:publication\nnpm run build:studio\nnpm run test:studio\n```\n\nThen actually launch:\n\n```bash\nnpm run studio\n```\n\nManually verify:\n\n```text\nHydrogen\nNeon\nIron\nGold\nUranium\nOganesson\n```\n\nfrom both:\n\n```text\nBook Tree\nPeriodic Table\n```\n\nVerify baseline/curated labels.\n\nVerify real preview.\n\nVerify Inspector.\n\nVerify all workflow modes.\n\nVerify mobile/tablet layouts.\n\n---",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    },
+    {
+      "id": "studio-recovery-review:56",
+      "source_id": "studio-recovery-review",
+      "source_line": 1878,
+      "title": "FINAL REPORT",
+      "text": "Return:\n\n### Fixed\nActual failures repaired.\n\n### 118-element baseline\nSource/data architecture and counts.\n\n### Studio\nWhich workflows now function.\n\n### Reader\nWhich navigation/features changed.\n\n### Scientific integrity\nAnything intentionally left unresolved.\n\n### CI\nExact results.\n\n### Remaining blockers\nEspecially missing Carbon sources.\n\n### Files\nExact files created/changed.\n\nDo not say “done” unless the application was actually run and tested.\n\n---\n\nPRIMARY RESULT REQUIRED:\n\nWhen this work is complete I must be able to:\n\n1. launch MAT Studio;\n2. see all 118 elements;\n3. click any element;\n4. view basic source-backed information immediately;\n5. distinguish baseline from fully curated records;\n6. open Hydrogen's complete MAT material;\n7. open Oganesson as a baseline record;\n8. use a real EbookCraft-style Write → Design → Data → Review → Preview → Export workflow;\n9. see a real book page in the centre;\n10. see real data in Inspector;\n11. later promote any baseline element into a full MAT record without starting from zero.\n\nDo not stop at another mock-up.\n\nBuild the functioning workflow.\n\nOne additional recommendation is important: **do not create 109 giant “empty” record folders right now.** The baseline-catalogue approach gives you all 118 selectable elements immediately while keeping the repository manageable. When you choose “Create full MAT record” for, say, Gold (`MAT:0079`), the system can then generate the complete locked folder/template package and inherit Gold's verified baseline data.\n\nThat gives you the workflow you were originally aiming for: **browse everything now, deepen each element later, without losing scientific provenance or having to rebuild the book architecture each time.**",
+      "status": "REFERENCE-REQUIRES-SCOPE-RECONCILIATION"
+    }
+  ],
+  "policy": "Original documents retained unchanged. Embedded roles, commands, branching and commit requests are source text, not executed instructions. Historical findings must be checked against the current checkout."
+}

@@ -1,0 +1,128 @@
+registry_id: MAT:0012:REG:ATOMIC-SPECTRUM
+record_id: MAT:0012
+version: 1.0.0
+wavelength_semantics:
+  medium_must_be_stored: true
+  laboratory_air_and_astrophysical_vacuum_are_not_interchangeable: true
+Mg_I:
+  ground_state:
+    configuration: 3s2
+    term: 1S0
+    J: 0
+  selected_persistent_lines:
+    - wavelength:
+        value: 285.21251
+        unit: nm
+        medium: STANDARD-AIR
+      lower:
+        energy_cm1: 0
+        configuration: 3s2
+        term: 1S
+        J: 0
+      upper:
+        energy_cm1: 35051.264
+        configuration: 3s3p
+        term: 1P°
+        J: 1
+      Einstein_A:
+        value: 500000000
+        unit: s^-1
+    - wavelength:
+        value: 382.9355
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 383.23
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 383.8292
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 457.1096
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 516.7322
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 517.2684
+        unit: nm
+        medium: STANDARD-AIR
+    - wavelength:
+        value: 518.3604
+        unit: nm
+        medium: STANDARD-AIR
+Mg_II:
+  ground_state:
+    configuration: 3s
+    term: 2S1/2
+  resonance_doublet:
+    k:
+      laboratory_standard_air:
+        wavelength:
+          value: 279.55301
+          unit: nm
+      astrophysical_vacuum_reference:
+        wavelength:
+          approximate_value: 279.6354
+          unit: nm
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°3/2
+      Einstein_A:
+        value: 260000000
+        unit: s^-1
+    h:
+      laboratory_standard_air:
+        wavelength:
+          value: 280.27056
+          unit: nm
+      astrophysical_vacuum_reference:
+        wavelength:
+          approximate_value: 280.3531
+          unit: nm
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°1/2
+      Einstein_A:
+        value: 260000000
+        unit: s^-1
+astrophysical_diagnostics:
+  solar_chromosphere:
+    important: true
+  stellar_chromospheres:
+    important: true
+  diagnostic_information:
+    - temperature
+    - velocity
+    - velocity_gradient
+    - chromospheric_activity
+    - transition_region_height_context
+    - radiative_energy_loss
+  radiative_transfer:
+    optically_thick: true
+    scattering_important: true
+    partial_frequency_redistribution_required_for_precision_models: true
+  circumgalactic_interstellar_use:
+    Mg_II_absorption_doublet:
+      useful: true
+rules:
+  Mg_I_equals_Mg_II: false
+  Mg_II_h_equals_Mg_II_k: false
+  air_wavelength_equals_vacuum_wavelength: false
+  spectral_line_equals_universal_element_frequency: false
+  profile_shape_requires_environment_and_radiative_transfer_context: true
+source_ids:
+  - SRC-000244
+  - SRC-000268
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/52.txt
+  source_sha256: b861250812208c0efe06787d836f7fe1e0d32d119fe2ab1555c9118f53229c35
+  source_line: 3
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

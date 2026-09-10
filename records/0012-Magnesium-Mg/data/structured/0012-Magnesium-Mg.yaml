@@ -1,20 +1,256 @@
+mat_id: MAT:0012
+record_name: Magnesium
+symbol: Mg
+record_class: CHEMICAL_ELEMENT
+atomic_number: 12
+legacy:
+  legacy_id: G0012
+  migration_status: CONTENT-CORE-MIGRATED
+identity:
+  proton_count: 12
+  neutral_electron_count: 12
+  period: 3
+  group: 2
+  block: s
+atomic_weight:
+  type: STANDARD-ATOMIC-WEIGHT-INTERVAL
+  minimum: 24.304
+  maximum: 24.307
+  source_id: SRC-000243
+electronic_ground_state:
+  configuration: "[Ne]3s2"
+  term: 1S0
+  source_id: SRC-000242
+periodic_architecture:
+  predecessor:
+    id: MAT:0011
+    configuration: "[Ne]3s1"
+  group_2_analogue:
+    id: MAT:0004
+    relationship: SAME-VALENCE-PATTERN-DIFFERENT-PRINCIPAL-SHELL
+  descriptor: PERIODIC-REPETITION-PLUS-RADIAL-EXPANSION
+ionization:
+  first:
+    value: 7.646236
+    uncertainty: 0.000004
+    unit: eV
+  second:
+    value: 15.035271
+    uncertainty: 0.000006
+    unit: eV
+  third:
+    value: 80.1436
+    uncertainty: 0.0006
+    unit: eV
+  fourth:
+    value: 109.2654
+    uncertainty: 0.0012
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  fifth:
+    value: 141.33
+    uncertainty: 0.03
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  sixth:
+    value: 186.76
+    uncertainty: 0.06
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  seventh:
+    value: 225.02
+    uncertainty: 0.06
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  eighth:
+    value: 265.924
+    uncertainty: 0.019
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  ninth:
+    value: 327.99
+    uncertainty: 0.04
+    unit: eV
+    qualifier: NIST-SQUARE-BRACKET
+  tenth:
+    value: 367.489
+    uncertainty: 0.007
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  eleventh:
+    value: 1761.8049
+    uncertainty: 0.001
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  twelfth:
+    value: 1962.663889
+    uncertainty: 0.000007
+    unit: eV
+    qualifier: NIST-PARENTHESIZED
+  source_id: SRC-000242
+dominant_ion:
+  id: MAT:0012:ION:Mg+2
+  charge: 2
+  electron_configuration: "[Ne]"
+  electron_count: 10
+  isoelectronic_with:
+    - MAT:0010:ATOM:Ne
+    - MAT:0011:ION:Na+1
+    - MAT:0009:ION:F-1
+    - MAT:0008:ION:O-2
+    - MAT:0007:ION:N-3
+ambient_metal:
+  phase_id: MAT:0012:PHASE:HCP-MG
+  structure:
+    type: HCP
+    space_group: P63/mmc
+    Pearson: hP2
+  lattice_parameters_reference:
+    a:
+      approximate_value: 0.32094
+      unit: nm
+    c:
+      approximate_value: 0.52108
+      unit: nm
+    c_over_a:
+      approximate_value: 1.624
+  density:
+    approximate_value: 1.74
+    unit: g/cm3
+  melting_point:
+    value: 650
+    unit: degC
+  boiling_point:
+    value: 1090
+    unit: degC
+  source_ids:
+    - SRC-000245
+    - SRC-000253
+spectroscopy:
+  Mg_I:
+    representative_resonance:
+      wavelength:
+        value: 285.21251
+        unit: nm
+  Mg_II:
+    k_line:
+      wavelength:
+        value: 279.55301
+        unit: nm
+    h_line:
+      wavelength:
+        value: 280.27056
+        unit: nm
+  source_id: SRC-000244
+isotope_branch:
+  NIST_mass_range:
+    minimum: 19
+    maximum: 40
+  stable:
+    - MAT:0012:ISO:Mg-24
+    - MAT:0012:ISO:Mg-25
+    - MAT:0012:ISO:Mg-26
+  NMR_active:
+    - MAT:0012:ISO:Mg-25
+  key_radioactive:
+    - MAT:0012:ISO:Mg-27
+    - MAT:0012:ISO:Mg-28
+hydrogen:
+  compound:
+    id: MAT:CMP:MgH2
+  theoretical_hydrogen_capacity:
+    approximate_value: 7.6
+    unit: wt%
+  challenges:
+    - thermodynamic_stability
+    - elevated_desorption_temperature
+    - kinetics
+    - cycling
+    - interfaces
+  research_controls:
+    - catalysis
+    - nanostructuring
+    - alloying
+    - composites
+    - defects
+    - phase_engineering
+  source_id: SRC-000247
+superconductivity:
+  MgB2:
+    id: MAT:CMP:MgB2
+    parents:
+      - MAT:0005
+      - MAT:0012
+    Tc:
+      approximate_range:
+        minimum: 39
+        maximum: 40
+        unit: K
+    boron_isotope_effect:
+      established: true
+    electron_phonon_coupling:
+      important: true
+    multigap:
+      established: true
+      gap_count_minimum: 2
+    source_ids:
+      - SRC-000248
+      - SRC-000249
+battery_architecture:
+  carrier: Mg2+
+  charge: 2
+  status_2026: ACTIVE-RESEARCH
+  challenges:
+    - solvation
+    - desolvation
+    - anode_passivation
+    - electrolyte_interface
+    - solid_state_diffusion
+    - cathode_structure
+    - electrolyte_voltage_window
+  source_ids:
+    - SRC-000250
+    - SRC-000251
+biology:
+  active_ion: Mg2+
+  key_roles:
+    - Mg_ATP
+    - enzyme_cofactor
+    - nucleic_acid_interaction
+    - membrane_and_ion_homeostasis
+    - bone_mineral_systems
+    - muscle_and_neural_function
+    - chlorophyll
+  source_ids:
+    - SRC-000245
+    - SRC-000252
+geochemistry:
+  major_states:
+    - dolomite
+    - magnesite
+    - brucite
+    - carnallite
+    - olivine
+    - seawater
+    - brines
+  free_native_Mg_major_reservoir: false
+  source_id: SRC-000246
+scientific_status:
+  atomic_identity: ESTABLISHED
+  Mg2_closed_shell_ion: ESTABLISHED
+  stable_isotopes: ESTABLISHED
+  HCP_metal: ESTABLISHED
+  MgH2_hydrogen_storage: ESTABLISHED-MATERIAL-RESEARCH
+  MgB2_superconductivity: ESTABLISHED
+  magnesium_battery: ACTIVE-RESEARCH
+  biological_Mg2: ESTABLISHED
+status: RESEARCHED-IN-PROGRESS
 registry_id: MAT:0012:REG:MASTER
 record_id: MAT:0012
 record_version: 1.1.0
 created: 2026-09-08
 updated: 2026-09-08
-status: BASELINE
-record_class: CHEMICAL_ELEMENT
 schema_version: 1.0.0
-identity:
-  canonical_name: Magnesium
-  symbol: Mg
-  atomic_number: 12
-  mat_id: MAT:0012
-  period: 3
-  group: 2
-  block: s
-  category: Alkaline Earth Metal
 properties:
   atomic_weight:
     value: "[24.304,24.307]"
@@ -117,3 +353,12 @@ completeness:
   safety: PLANNED
   sources: PLANNED
   visuals: PLANNED
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/50.txt
+  source_sha256: f48b140791b557fedd065c37d60e27e358ccf2d8735ab612572baa77c6e5afc5
+  source_line: 1856
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.
+scientific_validation_status: NEEDS-REVIEW

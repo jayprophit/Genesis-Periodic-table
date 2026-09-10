@@ -5,8 +5,8 @@
   "title": "0001 — Hydrogen — H",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "# 0001 — Hydrogen — H\n\n```yaml\nmat_id: MAT:0001\nrecord_name: Hydrogen\nsymbol: H\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 1\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0001\nlegacy_name: Hydrogen\n```\n\n# 0. Record Navigation\n\n## MAT Reference\n\n`MAT:0000`\n\n## Current Record\n\n`MAT:0001`\n\n```text\n0001-Hydrogen-H\n```\n\n## Primary Child Classes\n\n```text\nMAT:0001\n│\n├── ISO       isotopes / nuclides\n├── NUC       nuclear states\n├── QSTATE    quantum states\n├── ESTATE    electronic states\n├── ION       ionic states\n├── MOL       molecular states\n├── CMP       compounds\n├── PHASE     phases\n├── MAT       material states\n├── PROC      processes\n├── RXN       reactions\n├── ENV       environments\n├── APP       applications\n├── EXP       experiments\n├── GRAPH     graphs\n├── MODEL     models\n└── SRC       sources\n```\n\nHydrogen is therefore not represented by one single undifferentiated point.\n\nIts canonical elemental identity remains:\n\n$$\n\\boxed{\nH,\\quad Z=1\n}\n$$\n\nwhile its accessible physical states form a much larger network.\n\n---\n\n# 1. Elemental Identity\n\n| Property                        |              Value | Unit / Status                         |\n| ------------------------------- | -----------------: | ------------------------------------- |\n| MAT ID                          |           MAT:0001 | —                                     |\n| Element                         |           Hydrogen | —                                     |\n| Symbol                          |                  H | —                                     |\n| Atomic number                   |                  1 | dimensionless                         |\n| Proton count                    |                  1 | neutral nucleus identity              |\n| Neutral electron count          |                  1 | electron                              |\n| Period                          |                  1 | —                                     |\n| Group                           |                  1 | conventional periodic-table placement |\n| Block                           |                  s | —                                     |\n| Ground electron configuration   |                1s¹ | —                                     |\n| Ground electronic term          |    \\(^{2}S_{1/2}\\) | —                                     |\n| First ionization energy         |    13.598434599702 | eV                                    |\n| Standard atomic-weight interval | [1.00784, 1.00811] | —                                     |\n\nPrimary sources:\n\n```text\nSRC-H-001\nSRC-H-002\n```\n\n---\n\n# 2. Element Versus Material State\n\nThe elemental identity:\n\n$$\nZ=1\n$$\n\ndoes not specify whether hydrogen currently exists as:\n\n```text\n¹H\n²H\n³H\nH\nH⁻\nH⁺\nH₂\nHD\nD₂\nT₂\nHT\nDT\nexcited H\nadsorbed H\ninterstitial H\nhydride\nliquid H₂\nsolid H₂\ndense high-pressure hydrogen\nionized hydrogen plasma\n```\n\nThe MAT record therefore distinguishes:\n\n$$\n\\text{element identity}\n$$\n\nfrom:\n\n$$\n\\text{physical state}\n$$\n\nand:\n\n$$\n\\text{material manifestation}\n$$\n\n---\n\n# 3. Standard Atomic Weight\n\nNatural terrestrial hydrogen does not require one universally exact decimal atomic weight.\n\nMAT records the standard atomic-weight interval:\n\n$$\n[1.00784,\\ 1.00811]\n$$\n\nbecause isotopic composition varies among normal terrestrial materials.\n\nThis is distinct from the relative atomic mass of an individual isotope.\n\nFor example:\n\n$$\nm(^{1}H)\n=\n1.00782503223\\ \\mathrm u\n$$\n\nwhile:\n\n$$\nm(^{2}H)\n=\n2.01410177812\\ \\mathrm u\n$$\n\nThese are different concepts.\n\n---\n\n# 4. First Ionization\n\nFor neutral atomic hydrogen:\n\n$$\nH\\rightarrow H^+ + e^-\n$$\n\nwith ionization energy:\n\n$$\nE_\\mathrm{ion}\n=\n13.598434599702\\ \\mathrm{eV}\n$$\n\nfor the ground-state atom.\n\nGoverning principles include:\n\n```yaml\ngoverned_by:\n  - MAT-QM-001\n  - MAT-QM-006\n  - MAT-QM-016\n  - MAT-PHYS-010\n```\n\nEvidence classification:\n\n```yaml\nevidence_type: MEASURED\nconfidence: A\n```\n\n---\n\n# 5. Electron Attachment and H⁻\n\nHydrogen can bind an additional electron:\n\n$$\nH+e^-\n\\rightarrow\nH^-\n$$\n\ncreating the hydride anion.\n\nHigh-precision photodetachment measurements give an atomic hydrogen electron affinity close to:\n\n$$\n0.754195\\ \\mathrm{eV}\n$$\n\nwith the precise value depending on the selected evaluated measurement/source.\n\nMAT therefore stores electron-affinity measurements individually rather than pretending all historical determinations are identical.\n\nCanonical child:\n\n```text\nMAT:0001:ION:H-1\n```\n\n---\n\n# 6. Charge-State Branch\n\nThe simplest hydrogen charge-state branch is:\n\n```text\nH⁻\nH⁰\nH⁺\n```\n\nThese represent fundamentally different electronic states.\n\n## Neutral\n\n$$\nH^0\n$$\n\ncontains:\n\n```text\n1 proton\n1 electron\n```\n\nfor protium.\n\n## Positive Ion\n\n$$\nH^+\n$$\n\nfor ordinary protium corresponds to a bare proton.\n\nFor deuterium:\n\n$$\nD^+\n$$\n\ncorresponds to a deuteron.\n\nFor tritium:\n\n$$\nT^+\n$$\n\ncorresponds to a triton.\n\nThe isotope identity must therefore remain attached to the ionic state.\n\n## Negative Ion\n\n$$\nH^-\n$$\n\ncontains two electrons associated with one hydrogen nucleus.\n\n---\n\n# 7. Complete Evaluated Isotope Branch\n\nMAT currently records mass-number states:\n\n$$\n{}^1H\n$$\n\nthrough:\n\n$$\n{}^7H\n$$\n\nin the evaluated mass datasets used for this record.\n\nThey share:\n\n$$\nZ=1\n$$\n\nbut differ in neutron number:\n\n$$\nN=A-Z\n$$\n\n---\n\n## 7.1 Protium — ¹H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-1\n```\n\nNuclide:\n\n$$\n{}^1_1H\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 0\n```\n\nRelative atomic mass:\n\n$$\n1.00782503223(9)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nApproximate representative natural isotopic composition in the NIST table:\n\n$$\n0.999885(70)\n$$\n\nThis abundance is not a universal fixed number for every sample.\n\n---\n\n## 7.2 Deuterium — ²H — D\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-2\n```\n\nNuclide:\n\n$$\n{}^2_1H\n$$\n\nCommon symbol:\n\n$$\nD\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n2.01410177812(12)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nRepresentative natural isotopic composition in the NIST table:\n\n$$\n0.000115(70)\n$$\n\nDeuterium has nuclear spin:\n\n$$\nI=1\n$$\n\nand therefore differs from protium in nuclear-spin-dependent behaviour.\n\n---\n\n## 7.3 Tritium — ³H — T\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-3\n```\n\nNuclide:\n\n$$\n{}^3_1H\n$$\n\nCommon symbol:\n\n$$\nT\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n3.0160492779(24)\\ \\mathrm u\n$$\n\nNuclear spin/parity:\n\n$$\n\\frac12^+\n$$\n\nStatus:\n\n```text\nRADIOACTIVE\n```\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n12.32\\pm0.02\\ \\mathrm{y}\n$$\n\nPrincipal decay:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nDecay class:\n\n```text\nBETA-MINUS\n```\n\n---\n\n## 7.4 Hydrogen-4 — ⁴H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-4\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n4.02643(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime scale:\n\n$$\nt_{1/2}\n\\approx\n139\\pm10\\ \\mathrm{ys}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{ys}\n=\n10^{-24}\\ \\mathrm{s}\n$$\n\nPrincipal evaluated decay:\n\n```text\nneutron emission\n```\n\ninto tritium.\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n## 7.5 Hydrogen-5 — ⁵H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-5\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n5.035311(96)\\ \\mathrm u\n$$\n\nNUBASE2020 evaluated half-life:\n\n$$\nt_{1/2}\n\\approx\n86\\pm6\\ \\mathrm{ys}\n$$\n\nPrincipal decay classification:\n\n```text\n2-NEUTRON BREAKUP / EMISSION\n```\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n## 7.6 Hydrogen-6 — ⁶H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-6\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 5\n```\n\nRelative atomic mass in the NIST isotope table:\n\n$$\n6.04496(27)\\ \\mathrm u\n$$\n\nNUBASE2020 evaluated half-life:\n\n$$\nt_{1/2}\n\\approx\n294\\pm67\\ \\mathrm{ys}\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\nHydrogen-6 remains an active nuclear-research subject; later measurements may refine its evaluated ground-state parameters.\n\nMAT therefore retains:\n\n```text\nevaluation_version\nmeasurement_source\nuncertainty\n```\n\nrather than treating one historical estimate as permanent.\n\n---\n\n## 7.7 Hydrogen-7 — ⁷H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-7\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 6\n```\n\nRelative atomic mass:\n\n$$\n7.0527(11\\#)\\ \\mathrm u\n$$\n\nThe `#` indicates estimated/evaluated character in the source mass table.\n\nNUBASE2020 gives an extremely uncertain lifetime on the order of:\n\n$$\n652\\pm558\\ \\mathrm{ys}\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\nHIGH-UNCERTAINTY\n```\n\nThe uncertainty is sufficiently large that MAT must not present `652 ys` as an exact physical constant.\n\n---\n\n# 8. Nuclear Coordinate\n\nA useful isotope-state representation is:\n\n$$\n\\Gamma_N\n=\n(\nZ,\nN,\nA,\nJ^\\pi,\nt_{1/2},\nQ,\nD,\nB\n)\n$$\n\nwhere terms may include:\n\n* proton number \\(Z\\);\n* neutron number \\(N\\);\n* mass number \\(A\\);\n* spin/parity \\(J^\\pi\\);\n* half-life;\n* reaction or decay Q-values;\n* decay modes;\n* binding information.\n\nFor hydrogen:\n\n$$\nZ=1\n$$\n\nremains fixed while:\n\n$$\nN=0,1,2,\\ldots\n$$\n\nchanges.\n\nThis provides a good demonstration of why:\n\n```text\nchemical-element identity\n```\n\nand:\n\n```text\nnuclear-state distance\n```\n\nare different concepts.\n\nTwo isotopes can be chemically closely related while having dramatically different nuclear stability.\n\n---\n\n# 9. Tritium Decay-Energy Branch\n\nTritium provides MAT's first practical radioactive-energy child object.\n\nCanonical branch:\n\n```text\nMAT:0001:ISO:H-3\n    ↓\nenergy.decay.*\n```\n\nReaction:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nRadioactive population evolves approximately as:\n\n$$\nN(t)\n=\nN_0e^{-\\lambda t}\n$$\n\nwhere:\n\n$$\n\\lambda\n=\n\\frac{\\ln2}{t_{1/2}}\n$$\n\nand activity is:\n\n$$\nA(t)=\\lambda N(t)\n$$\n\nFor a fixed decay-energy distribution and suitable system definition, decay power likewise decreases exponentially with population.\n\nMAT must distinguish:\n\n```text\ntotal decay energy\n```\n\nfrom:\n\n```text\nrecoverable electrical energy\n```\n\nand:\n\n```text\nconversion efficiency\n```\n\nbecause they are not equal.\n\nPossible conversion relationships include:\n\n```text\nbeta particle\n→ semiconductor charge generation\n→ electricity\n```\n\n```text\nbeta particle\n→ radioluminescent material\n→ light\n```\n\nand:\n\n```text\ndecay energy\n→ heat\n→ thermoelectric conversion\n```\n\nThese are separate process/application relationships rather than intrinsic definitions of tritium itself.\n\n---\n\n# 10. Fusion Relationship Branch\n\nHydrogen isotopes participate in nuclear fusion reactions.\n\nA major technologically studied channel is:\n\n$$\n{}^2H+{}^3H\n\\rightarrow\n{}^4He+n\n$$\n\nwith total reaction energy approximately:\n\n$$\n17.6\\ \\mathrm{MeV}\n$$\n\ndistributed predominantly between:\n\n```text\nneutron: approximately 14.1 MeV\nhelium-4 nucleus: approximately 3.5 MeV\n```\n\nThis is an **induced nuclear transformation**.\n\nIt must remain separate from spontaneous tritium radioactive decay.\n\nCanonical relationship:\n\n```text\nMAT:0001:ISO:H-2\nFUSES-WITH\nMAT:0001:ISO:H-3\n```\n\nproducing:\n\n```text\nMAT:0002:ISO:He-4\n+\nneutron\n```\n\nunder appropriate fusion conditions.\n\nMAT must not describe this as an ordinary chemical reaction.\n\n---\n\n# 11. Atomic Quantum Structure\n\nHydrogen is the simplest neutral atom and provides a fundamental quantum-mechanical benchmark.\n\nThe nonrelativistic Coulomb model gives approximately:\n\n$$\nE_n\n=\n-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n$$\n\nfor the idealized hydrogenic level sequence.\n\nThis is an approximation to the full measured hydrogen spectrum.\n\nHigher-precision treatment requires effects including:\n\n* reduced nuclear mass;\n* relativistic corrections;\n* fine structure;\n* Lamb shift;\n* hyperfine interactions;\n* external fields.\n\n---\n\n## 11.1 Ground State\n\nGround electronic configuration:\n\n$$\n1s^1\n$$\n\nTerm:\n\n$$\n{}^2S_{1/2}\n$$\n\nFor the ideal nonrelativistic 1s state, the electron probability density is spherically symmetric about the nucleus.\n\nThis is the correct meaning of the spherical ground-state geometry.\n\nIt does **not** mean the electron is a classical sphere orbiting the proton.\n\n---\n\n# 12. Selected Excitation Energies\n\nNIST atomic collision/spectroscopic data list approximate excitation energies including:\n\n| Transition | Excitation Energy |\n| ---------- | ----------------: |\n| 1s → 2p    |        10.1988 eV |\n| 1s → 3p    |        12.0875 eV |\n| 1s → 4p    |        12.7485 eV |\n| 1s → 5p    |        13.0545 eV |\n| 1s → 6p    |        13.2207 eV |\n\nThe sequence approaches the ground-state ionization threshold.\n\nCausali E may represent this exploratorily as:\n\n```text\nstarting state:\nH(1s)\n\nintervention:\nenergy input\n\npossible outcomes:\nexcited H\nionized H\nother coupled states\n```\n\nbut each actual transition remains governed by quantum mechanics and selection rules.\n\n---\n\n# 13. Quantum-State Fields\n\nApplicable MAT fields include:\n\n```text\nprincipal quantum number\norbital angular momentum\nmagnetic quantum number\nelectron spin\nnuclear spin\ntotal angular momentum\nhyperfine quantum state\nwavefunction\nprobability density\nenergy level\ntransition probability\nselection rule\nlifetime\ncoherence\ndecoherence\nfield response\ntunnelling\n```\n\nNot every field has one single value for \"hydrogen.\"\n\nValues belong to a specified state.\n\n---\n\n# 14. Hydrogen Hyperfine Transition\n\nThe ground-state hyperfine interaction of atomic protium produces the famous 21-cm transition.\n\nMeasured unperturbed transition frequency:\n\n$$\n\\nu_H\n=\n1\\,420\\,405\\,751.768\\ \\mathrm{Hz}\n$$\n\nor:\n\n$$\n1420.405751768\\ \\mathrm{MHz}\n$$\n\nHistorically measured uncertainty in the cited precision measurement:\n\n$$\n\\approx2\\times10^{-3}\\ \\mathrm{Hz}\n$$\n\nat one standard deviation.\n\nCanonical spectral ID:\n\n```text\nMAT:0001:SPEC:HF:001\n```\n\nThis is:\n\n```text\nA hyperfine transition frequency of atomic hydrogen\n```\n\nnot:\n\n```text\nTHE frequency of hydrogen\n```\n\n---\n\n# 15. Electronic Spectrum\n\nHydrogen has many atomic spectral transitions.\n\nImportant examples include the Lyman and Balmer series.\n\nRepresentative wavelengths include approximately:\n\n```text\nLyman-alpha ≈ 121.6 nm\nH-alpha      ≈ 656.3 nm\nH-beta       ≈ 486.1 nm\n```\n\nExact component wavelengths depend on:\n\n* isotope;\n* fine structure;\n* hyperfine structure;\n* measurement convention;\n* environmental perturbations.\n\nTherefore MAT stores individual spectral lines rather than one master scalar wavelength.\n\nThe general hydrogen spectral object is:\n\n$$\n\\boldsymbol{\\nu}_H\n=\n\\{\n\\nu_1,\n\\nu_2,\n\\dots,\n\\nu_n\n\\}\n$$\n\nwhere every member has a mechanism tag.\n\n---\n\n# 16. Frequency Mechanisms\n\nFor hydrogen, relevant frequency classes may include:\n\n```text\nelectronic transitions\nfine structure\nhyperfine transitions\nH2 rotational transitions\nH2 vibrational transitions\nRaman transitions\nmolecular electronic transitions\nplasma oscillations\nmagnetic resonance\nnuclear magnetic resonance\nacoustic/macroscopic resonances\n```\n\nEach is physically different.\n\nMAT therefore prohibits the unsupported compression:\n\n$$\n\\nu_H=\\text{one universal frequency}\n$$\n\n---\n\n# 17. Molecular Hydrogen — H₂\n\nCanonical molecular child:\n\n```text\nMAT:0001:MOL:H2\n```\n\nMolecular formation:\n\n$$\n2H\n\\rightarrow\nH_2\n$$\n\ndoes not imply that the molecule behaves like two isolated atomic-H records.\n\nIt is an emergent molecular state with its own:\n\n* bond;\n* rotational states;\n* vibrational states;\n* electronic states;\n* nuclear-spin isomers;\n* thermodynamics.\n\n---\n\n# 18. H₂ Ground Electronic State\n\nGround molecular electronic state:\n\n$$\nX\\,{}^1\\Sigma_g^+\n$$\n\nSelected NIST/Huber-Herzberg spectroscopic constants include approximately:\n\n$$\n\\omega_e\n=\n4401.21\\ \\mathrm{cm^{-1}}\n$$\n\n$$\nB_e\n=\n60.8530\\ \\mathrm{cm^{-1}}\n$$\n\nand equilibrium internuclear distance:\n\n$$\nr_e\n=\n0.74144\\ \\text{\\AA}\n$$\n\nThese quantities describe different aspects of the molecule:\n\n```text\nr_e\n→ equilibrium nuclear geometry\n\nω_e\n→ vibrational spectroscopic constant\n\nB_e\n→ rotational spectroscopic constant\n```\n\nThey must not be collapsed into one frequency or one geometry metric.\n\n---\n\n# 19. Ortho- and Para-Hydrogen\n\nMolecular hydrogen branches into nuclear-spin isomers.\n\nCanonical children:\n\n```text\nMAT:0001:MOL:H2:ORTHO\nMAT:0001:MOL:H2:PARA\n```\n\nNormal hydrogen at ordinary room-temperature preparation is approximately:\n\n```text\n75% ortho-H2\n25% para-H2\n```\n\nwhile equilibrium hydrogen near 20 K becomes overwhelmingly parahydrogen.\n\nThis means:\n\n$$\n\\boxed{\nH_2\\neq\\text{one unique quantum/thermodynamic state}\n}\n$$\n\nNuclear-spin composition affects thermodynamic properties and must therefore remain part of state identity where relevant.\n\n---\n\n# 20. Phase Branch\n\nMolecular hydrogen can exist in ordinary macroscopic phases including:\n\n```text\nH2 gas\nH2 liquid\nH2 solid\n```\n\nand in additional dense/high-pressure regimes under extreme conditions.\n\nMAT also distinguishes:\n\n```text\natomic H gas\nmolecular H2 gas\nionized H plasma\ndense molecular hydrogen\nhigh-pressure atomic/metallic candidate states\n```\n\nbecause they do not share identical properties.\n\n---\n\n# 21. Normal Boiling Point\n\nFor **equilibrium hydrogen**, the 2026 NIST compilation recommends a normal boiling point close to:\n\n$$\n20.271\\ \\mathrm K\n$$\n\nat the standard atmospheric pressure convention used for the normal boiling point.\n\nThe same NIST compilation distinguishes this from normal and orthohydrogen values.\n\nTherefore the property must be stored as:\n\n```yaml\nmaterial_state: equilibrium-H2\nproperty: thermal.normal-boiling-point\nvalue: 20.271\nunit: K\n```\n\nrather than simply:\n\n```text\nhydrogen boiling point = 20.271 K\n```\n\nwithout identifying spin composition.\n\n---\n\n# 22. Record-State Principle\n\nHydrogen demonstrates the core MAT rule:\n\n$$\n\\boxed{\n\\text{element}\n\\neq\n\\text{isotope}\n\\neq\n\\text{atom state}\n\\neq\n\\text{molecule}\n\\neq\n\\text{phase}\n\\neq\n\\text{material state}\n}\n$$\n\nAll may be related to:\n\n```text\nMAT:0001\n```\n\nwhile remaining separate data objects.\n\n---\n\n# 23. Visual Placeholders — Initial\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- ASSET-ID: MAT:0001:FIG:V01:001 -->\n<!-- DESCRIPTION: Physical manifestation of molecular hydrogen -->\n\n<!-- MAT-VISUAL: V02 -->\n<!-- ASSET-ID: MAT:0001:FIG:V02:001 -->\n<!-- DESCRIPTION: Conventional element / atomic representation -->\n\n<!-- MAT-VISUAL: V04 -->\n<!-- ASSET-ID: MAT:0001:FIG:V04:001 -->\n<!-- DESCRIPTION: Hydrogen 1s probability density -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- ASSET-ID: MAT:0001:FIG:V05:001 -->\n<!-- DESCRIPTION: Hydrogen isotope map 1H through 7H -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- ASSET-ID: MAT:0001:GRAPH:V06:001 -->\n<!-- DESCRIPTION: Mechanism-resolved Hydrogen spectral fingerprint -->\n```\n\n---\n\n# 24. Core Governing Principles\n\n```yaml\ngoverned_by:\n  atomic_identity:\n    - MAT-QM-010\n    - MAT-QM-011\n\n  ionization:\n    - MAT-QM-001\n    - MAT-QM-006\n    - MAT-QM-016\n\n  spectral_transitions:\n    - MAT-QM-001\n    - MAT-QM-006\n    - MAT-QM-016\n    - MAT-QM-017\n    - MAT-PHYS-016\n\n  hyperfine:\n    - MAT-QM-019\n    - MAT-QM-023\n\n  radioactive_decay:\n    - MAT-NUC-006\n    - MAT-NUC-007\n    - MAT-NUC-008\n    - MAT-MATH-007\n    - MAT-MATH-014\n\n  fusion:\n    - MAT-NUC-004\n    - MAT-NUC-016\n    - MAT-NUC-017\n    - MAT-NUC-020\n    - MAT-NUC-021\n    - MAT-NUC-022\n\n  molecular_structure:\n    - MAT-QM-026\n    - MAT-CHEM-022\n    - MAT-CHEM-026\n```\n\n---\n\n# 25. Evidence Summary\n\n```yaml\nidentity:\n  evidence_type: REPLICATED\n  confidence: A\n\nisotope_masses:\n  evidence_type: REPLICATED\n  confidence: A\n\nshort_lived_isotope_lifetimes:\n  evidence_type: MEASURED\n  confidence: B\n  note: \"Large uncertainty for several neutron-rich hydrogen states.\"\n\ntritium_decay:\n  evidence_type: REPLICATED\n  confidence: A\n\natomic_spectrum:\n  evidence_type: REPLICATED\n  confidence: A\n\nH2_spectroscopic_constants:\n  evidence_type: REPLICATED\n  confidence: A\n\nextreme_high_pressure_states:\n  evidence_type: MIXED\n  confidence: VARIABLE\n```\n\n---\n\n# 26. Migration Status\n\nLegacy source:\n\n```text\nG0001 — Hydrogen.md\n```\n\nCurrent migration:\n\n```text\nCORE-IDENTITY-MIGRATED\nISOTOPE-BRANCH-MIGRATED\nQUANTUM-CORE-MIGRATED\nSPECTRAL-CORE-MIGRATED\nMOLECULAR-CORE-MIGRATED\nTHERMAL-CORE-IN-PROGRESS\n```\n\nStill to migrate:\n\n```text\ncomplete ionic/plasma branch\nchemistry\norganic context\ninorganic context\nbiological context\nmaterials interactions\nhydrogen storage\nprocesses\nenvironment matrix\nenergy conversion\ntime\nscale\nsafety\napplications\nrelationships\nunconventional overlays\nvisual manifest\ncalculations\nexperiments\nsources\npeople/intellectual lineage\n```\n\nDo not mark:\n\n```text\nMIGRATED\n```\n\nyet.\n\n---\n\n# 27. Revision History\n\n| Version | Status     | Change                                         |\n| ------- | ---------- | ---------------------------------------------- |\n| 1.0.0   | RESEARCHED | Initial MAT restructuring of the Hydrogen core |\n\nThe quantitative core above is grounded in current-accessible NIST data: the NIST ASD v5.12 gives the ground configuration/term and `13.598434599702 eV` ionization energy; NIST's isotope table gives the atomic-weight interval and masses through ⁷H; NIST's Chemistry WebBook gives the H₂ ground-state spectroscopic constants; and the 2026 NIST boiling-point compilation explicitly distinguishes equilibrium H₂, normal H₂ and ortho-H₂. ([NIST][2])\n\nThe 21-cm number is also worth storing with its full provenance rather than rounded to `1420 MHz`: the NBS/NIST precision measurement reported `1,420,405,751.768 Hz`. ([NIST][3])\n\n---\n\n---\n\n# 28. Ionisation and Plasma Branch\n\nHydrogen changes physical regime dramatically as ionisation increases.\n\nA simplified progression is:\n\n$$\nH_2\n\\rightarrow\n2H\n\\rightarrow\nH^+ + e^-\n$$\n\nbut real plasmas may contain mixtures of:\n\n```text\nH2\nH2+\nH3+\nH\nH+\nH-\nelectrons\nexcited H\nexcited H2\n```\n\ndepending on:\n\n* temperature;\n* pressure;\n* electron energy distribution;\n* radiation;\n* electric field;\n* RF/microwave excitation;\n* residence time;\n* surface interactions.\n\nCanonical state families:\n\n```text\nMAT:0001:MOL:H2\nMAT:0001:ION:H2+\nMAT:0001:ION:H3+\nMAT:0001:ATOM:H\nMAT:0001:ION:H+1\nMAT:0001:ION:H-1\nMAT:0001:PLASMA:H\n```\n\n---\n\n## 28.1 Charged-Particle Dynamics\n\nFor a charged particle:\n\n$$\n\\mathbf F\n=\nq(\n\\mathbf E+\n\\mathbf v\\times\\mathbf B\n)\n$$\n\nbecomes directly relevant.\n\nThis activates relationships with:\n\n* electric acceleration;\n* magnetic deflection;\n* plasma confinement;\n* plasma waves;\n* RF heating;\n* microwave heating;\n* magnetohydrodynamics;\n* fusion plasmas.\n\nThese relationships do not apply in the same way to neutral molecular H₂.\n\n---\n\n## 28.2 Plasma State Is Not a Single State\n\nA hydrogen plasma requires additional descriptors:\n\n```yaml\nelectron_temperature:\nion_temperature:\nneutral_temperature:\nelectron_density:\nion_density:\nneutral_density:\ndegree_of_ionization:\npressure:\nelectric_field:\nmagnetic_field:\nfrequency:\nspecies_distribution:\nconfinement:\ntime:\n```\n\nTherefore:\n\n$$\nH_{\\rm plasma}\n$$\n\nis a state family, not one fixed material property.\n\n---\n\n# 29. Chemical Relationship Classes\n\nHydrogen participates in several chemically distinct relationship classes.\n\n---\n\n## 29.1 Covalent Hydrogen\n\nExamples include:\n\n```text\nC-H\nN-H\nO-H\nS-H\nSi-H\nB-H\n```\n\nBond properties depend on molecular environment.\n\nMAT must not assign one universal:\n\n```text\nH-X bond energy\n```\n\nwithout specifying \\(X\\), molecular state and dissociation process.\n\n---\n\n## 29.2 Ionic Hydrides\n\nHydrogen may exist formally as hydride:\n\n$$\nH^-\n$$\n\nin compounds such as:\n\n```text\nNaH\nKH\nCaH2\nMgH2\n```\n\nThe isolated atomic hydride ion and hydrogen inside a crystalline hydride are related but not identical physical states.\n\n---\n\n## 29.3 Covalent Hydrides\n\nExamples include:\n\n```text\nCH4\nNH3\nH2O\nH2S\nSiH4\nboranes\n```\n\nEach compound becomes its own linked MAT node.\n\nHydrogen's parent element record stores the relationship rather than duplicating every compound property.\n\n---\n\n## 29.4 Interstitial and Metallic Hydrogen\n\nAtomic hydrogen can occupy interstitial positions within some metallic lattices.\n\nPossible states include:\n\n```text\ndissolved interstitial H\ntrapped H\nhydride phase\nsurface H\ngrain-boundary-associated H\ndefect-associated H\n```\n\nThese must be distinguished because their mechanical and transport effects can differ greatly.\n\n---\n\n## 29.5 Surface Adsorption\n\nMolecular hydrogen may interact with a surface through adsorption.\n\nA common process sequence is:\n\n$$\nH_2(g)\n\\rightarrow\nH_2({\\rm ads})\n$$\n\nand, where dissociative adsorption occurs:\n\n$$\nH_2\n\\rightarrow\n2H_{\\rm ads}\n$$\n\nThe outcome depends on:\n\n* surface material;\n* crystallographic face;\n* defects;\n* temperature;\n* pressure;\n* coverage;\n* catalyst state.\n\n---\n\n## 29.6 Absorption\n\nHydrogen can also enter a bulk host.\n\nMAT distinguishes:\n\n```text\nADSORPTION\n```\n\nfrom:\n\n```text\nABSORPTION\n```\n\nand:\n\n```text\nCHEMICAL HYDRIDE FORMATION\n```\n\nThese are different storage/material mechanisms.\n\n---\n\n## 29.7 Proton Transfer\n\nHydrogen chemistry frequently involves proton-transfer processes.\n\nA generic acid-base form is:\n\n$$\nHA+B\n\\rightleftharpoons\nA^-+BH^+\n$$\n\nActual proton transfer in solution is mediated by the molecular/solvent environment rather than by an isolated free proton moving through empty space.\n\n---\n\n## 29.8 Hydrogen Bonding\n\nHydrogen participates in directional intermolecular or intramolecular interactions such as:\n\n$$\nO-H\\cdots O\n$$\n\nand:\n\n$$\nN-H\\cdots O\n$$\n\nHydrogen bonding strongly influences:\n\n* water;\n* proteins;\n* nucleic acids;\n* molecular crystals;\n* polymers;\n* solvents.\n\nHydrogen bonding is not the same physical interaction as an ordinary covalent H-X bond.\n\n---\n\n# 30. Organic Context\n\nContext classification:\n\n```text\ncontext.organic\n```\n\nHydrogen has extensive relationships with carbon-based chemistry.\n\nMajor classes include:\n\n* hydrocarbons;\n* alcohols;\n* aldehydes;\n* ketones;\n* carboxylic acids;\n* amines;\n* amino acids;\n* carbohydrates;\n* lipids;\n* proteins;\n* nucleic acids;\n* polymers.\n\nPrimary element relationships include:\n\n```text\nH ↔ C\nH ↔ O\nH ↔ N\nH ↔ S\nH ↔ P\n```\n\nThese relationships do not mean elemental atomic hydrogen itself has all biological or organic properties of those compounds.\n\n---\n\n# 31. Inorganic Context\n\nContext:\n\n```text\ncontext.inorganic\n```\n\nImportant families include:\n\n* water;\n* mineral acids;\n* bases involving proton transfer;\n* ionic hydrides;\n* covalent hydrides;\n* metallic hydrides;\n* ammonia;\n* hydrogen sulfide;\n* silanes;\n* boranes;\n* complex hydrides.\n\nExample graph:\n\n```text\nMAT:0001 Hydrogen\n+\nMAT:0008 Oxygen\n        ↓\nCOMPOUND NODE\n        ↓\nH2O\n```\n\nCompound properties belong primarily to the compound record.\n\n---\n\n# 32. Biological Context\n\nContext:\n\n```text\ncontext.biological\n```\n\nHydrogen participates in biological systems through:\n\n* water;\n* proton-transfer chemistry;\n* acid-base regulation;\n* proton gradients;\n* hydrogen bonding;\n* biomolecular structure;\n* redox chemistry;\n* metabolic energy transfer.\n\nThe relevant hydrogen state may be:\n\n```text\ncovalently bound H\nproton-transfer state\nwater-associated H\nhydrogen-bonded H\nbiomolecular H\n```\n\nrather than isolated neutral atomic hydrogen.\n\nScale must therefore remain explicit.\n\n---\n\n# 33. Hydrogen as a Material Modifier\n\nAt ordinary ambient conditions hydrogen is not a conventional structural engineering solid.\n\nHowever, hydrogen can substantially alter other materials.\n\nImportant processes include:\n\n```text\nsurface adsorption\ndissociative adsorption\nbulk absorption\ndiffusion\ntrapping\nhydride formation\nphase change\nembrittlement\npermeation\ndesorption\n```\n\nA host-material interaction may be represented:\n\n$$\nM+\nH\n\\rightarrow\nM(H)\n$$\n\nwhere \\(M(H)\\) denotes a hydrogen-containing state of the host rather than necessarily a unique chemical compound.\n\n---\n\n# 34. Hydrogen Diffusion\n\nA simple continuum approximation may use Fick's law:\n\n$$\n\\mathbf J_H\n=\n-D_H\\nabla C_H\n$$\n\nand:\n\n$$\n\\frac{\\partial C_H}{\\partial t}\n=\nD_H\\nabla^2C_H\n$$\n\nunder suitable assumptions.\n\nIn real solids:\n\n$$\nD_H\n=\nF(\nT,\n\\text{phase},\n\\text{defects},\n\\text{traps},\n\\text{stress},\n\\text{composition}\n)\n$$\n\nso one universal diffusion coefficient is not valid.\n\n---\n\n# 35. Hydrogen Embrittlement\n\nCanonical relationship:\n\n```text\nMAT:0001\nAFFECTS-MECHANICAL-BEHAVIOUR-OF\nHOST MATERIAL\n```\n\nHydrogen exposure can reduce useful mechanical performance in susceptible materials through mechanisms involving hydrogen transport, trapping, microstructure and stress.\n\nPossible observed effects include:\n\n* loss of ductility;\n* reduced fracture resistance;\n* accelerated fatigue crack growth;\n* hydrogen-assisted cracking;\n* degradation under sustained stress.\n\nHydrogen embrittlement is **not** encoded as:\n\n```text\nhydrogen.embrittlement = true\n```\n\nfor every metal.\n\nInstead:\n\n$$\nHE\n=\nF(\nM,\nS,\nT,\nP_H,\nC_H,\n\\sigma,\n\\dot\\epsilon,\nt,\n\\text{microstructure},\n\\text{history}\n)\n$$\n\nwhere:\n\n* \\(M\\) = host material;\n* \\(S\\) = material state;\n* \\(P_H\\) = hydrogen pressure or chemical potential;\n* \\(C_H\\) = hydrogen concentration;\n* \\(\\sigma\\) = stress;\n* \\(\\dot\\epsilon\\) = strain rate;\n* \\(t\\) = exposure time.\n\n---\n\n## 35.1 Embrittlement Data Object\n\n```yaml\nhost_material_id:\nhydrogen_state:\nhydrogen_pressure:\nhydrogen_concentration:\ntemperature:\nstress_state:\nstrain_rate:\nmicrostructure:\nexposure_time:\nfracture_metric:\nfatigue_metric:\nresult:\nsource:\n```\n\nThis is a **relationship measurement**, not an intrinsic elemental constant.\n\n---\n\n# 36. Hydrogen Storage Relationship Layer\n\nHydrogen storage is divided into major mechanism families.\n\n```text\nPHYSICAL STORAGE\nMATERIALS-BASED STORAGE\nCHEMICAL-CARRIER STORAGE\n```\n\n---\n\n## 36.1 Compressed Gas\n\nCanonical state:\n\n```text\nH2(g), elevated pressure\n```\n\nRelevant properties:\n\n* pressure;\n* temperature;\n* vessel volume;\n* hydrogen mass;\n* density;\n* permeation;\n* vessel material;\n* cycling;\n* safety.\n\nCurrent practical systems may use very high pressures, including vehicle systems around the 700-bar class.\n\n---\n\n## 36.2 Liquid Hydrogen\n\nCanonical state:\n\n```text\nH2(l), cryogenic\n```\n\nImportant variables:\n\n* temperature;\n* pressure;\n* ortho/para composition;\n* density;\n* boil-off;\n* heat leak;\n* insulation;\n* storage duration.\n\nLiquid hydrogen storage is not equivalent to compressed ambient-temperature gas storage.\n\n---\n\n## 36.3 Cryo-Compressed Hydrogen\n\nCombines:\n\n```text\nlow temperature\n+\nelevated pressure\n```\n\nto increase stored density.\n\nThe state must retain both variables.\n\n---\n\n## 36.4 Metal Hydrides\n\nExamples of important relationship families include:\n\n```text\nH-Mg\nH-Ti\nH-La-Ni systems\nH-complex hydrides\n```\n\nA simplified relationship may be:\n\n$$\nM+xH_2\n\\rightleftharpoons\nMH_{2x}\n$$\n\nbut actual stoichiometry and phase behavior are material-specific.\n\nImportant metrics:\n\n```text\ngravimetric capacity\nvolumetric capacity\nabsorption pressure\ndesorption pressure\ntemperature\nreaction enthalpy\nreaction kinetics\ncycle life\nhysteresis\nimpurities\n```\n\n---\n\n## 36.5 Palladium Relationship\n\nPalladium is an important example of hydrogen uptake into a metallic lattice.\n\nCanonical relationship class:\n\n```text\nABSORBS-HYDROGEN\n```\n\nRelevant variables:\n\n* pressure;\n* temperature;\n* H/Pd ratio;\n* phase;\n* diffusion;\n* lattice expansion;\n* cycling history.\n\n---\n\n## 36.6 Catalytic Metals\n\nMetals such as nickel and platinum-group materials may catalyse hydrogen reactions.\n\nCanonical relationship:\n\n```text\nCATALYSES-HYDROGEN-REACTION\n```\n\nThis is different from:\n\n```text\nSTORES-HYDROGEN\n```\n\neven if both functions occur in some systems.\n\n---\n\n## 36.7 Carbon and Porous Hosts\n\nPorous materials may store molecular hydrogen through adsorption.\n\nExamples of research classes include:\n\n* activated carbons;\n* porous carbons;\n* metal-organic frameworks;\n* other high-surface-area sorbents.\n\nImportant variables include:\n\n* surface area;\n* pore volume;\n* pore-size distribution;\n* binding energy;\n* temperature;\n* pressure.\n\n---\n\n## 36.8 Boron and Complex Hydrides\n\nBoron-containing compounds appear in chemical/complex-hydride storage families.\n\nMAT represents:\n\n```text\nelement relationship\n```\n\nseparately from:\n\n```text\nspecific storage compound\n```\n\nso storage capacity is not falsely assigned directly to elemental boron or hydrogen.\n\n---\n\n# 37. Storage State Function\n\nHydrogen-storage performance is generally:\n\n$$\nS_H\n=\nF(\nM,\nC,\nX,\nT,\nP,\nt,\n\\text{cycle},\n\\text{geometry}\n)\n$$\n\nwhere:\n\n* \\(M\\) = storage material/system;\n* \\(C\\) = composition;\n* \\(X\\) = structure;\n* \\(T\\) = temperature;\n* \\(P\\) = pressure;\n* \\(t\\) = time;\n* `cycle` = cycling history.\n\nThis means storage capacity without conditions is scientifically incomplete.\n\n---\n\n# 38. Process Routes\n\nHydrogen participates in many process families.\n\n---\n\n## 38.1 Thermal\n\nExamples:\n\n$$\nH_2\n\\xrightarrow{\\Delta T}\n2H\n$$\n\nat sufficient thermal excitation.\n\nAt still higher energy:\n\n$$\nH\n\\rightarrow\nH^+ + e^-\n$$\n\nbecomes possible.\n\nThe actual populations are determined by thermodynamic and kinetic conditions.\n\n---\n\n## 38.2 Cryogenic\n\n$$\nH_2(g)\n\\rightarrow\nH_2(l)\n\\rightarrow\nH_2(s)\n$$\n\nwith ortho/para conversion also relevant to cryogenic thermodynamics.\n\n---\n\n## 38.3 Electrolysis\n\nGeneric water electrolysis:\n\n$$\n2H_2O\n\\rightarrow\n2H_2+O_2\n$$\n\ndriven by electrical energy through an electrochemical system.\n\nMAT distinguishes:\n\n```text\nelectrical energy input\nelectrochemical device\nfeed material\nhydrogen product\noxygen coproduct\nefficiency\n```\n\n---\n\n## 38.4 Fuel-Cell Conversion\n\nA hydrogen fuel-cell process may convert:\n\n```text\nchemical free energy\n→\nelectrical output\n+\nheat\n```\n\nThe simplified overall reaction for hydrogen and oxygen is:\n\n$$\n2H_2+O_2\n\\rightarrow\n2H_2O\n$$\n\nActual performance depends on cell chemistry, temperature, catalysts and operating conditions.\n\n---\n\n## 38.5 Photonic\n\nPhotons may:\n\n* excite H;\n* excite H₂;\n* dissociate H₂;\n* ionise H/H₂;\n\nwhen energy and selection conditions permit.\n\n---\n\n## 38.6 Plasma\n\nA simplified progression:\n\n$$\nH_2\n\\rightarrow\nH\n\\rightarrow\nH^++e^-\n$$\n\nmay occur in discharge/plasma systems.\n\nActual plasma chemistry is more complex.\n\n---\n\n## 38.7 Catalytic\n\nSurface process:\n\n$$\nH_2\n\\rightarrow\n2H_{\\rm ads}\n$$\n\nmay be catalysed by suitable surfaces.\n\nThe reverse process:\n\n$$\n2H_{\\rm ads}\n\\rightarrow\nH_2\n$$\n\nmay also occur.\n\n---\n\n## 38.8 High Pressure\n\nHigh pressure changes:\n\n* intermolecular spacing;\n* phase stability;\n* molecular orientation;\n* bonding;\n* electronic behavior.\n\nHigh-pressure hydrogen therefore requires dedicated phase/state records.\n\n---\n\n## 38.9 Nuclear\n\nNuclear processes include:\n\n* D-D fusion;\n* D-T fusion;\n* proton reactions;\n* neutron interactions;\n* tritium decay.\n\nThese are not chemical processing routes.\n\n---\n\n# 39. Environment Matrix\n\n| Environment        | Important Hydrogen Response                              |\n| ------------------ | -------------------------------------------------------- |\n| Vacuum             | desorption, free atomic/molecular behavior               |\n| Cryogenic          | liquid/solid states, ortho/para equilibrium              |\n| High temperature   | dissociation and increasing ionisation                   |\n| High pressure      | dense phases and altered electronic structure            |\n| Electric field     | Stark response; charged-particle acceleration            |\n| Magnetic field     | Zeeman/hyperfine/spin/plasma response                    |\n| RF / microwave     | state-dependent excitation and plasma heating            |\n| Optical            | excitation, dissociation, ionisation                     |\n| Plasma confinement | charged-particle transport and fusion relevance          |\n| Radiation          | excitation, ionisation and possible nuclear interactions |\n| Microgravity       | changed macroscopic fluid behavior                       |\n| Metal host         | absorption, diffusion, trapping, hydride formation       |\n| Porous host        | adsorption                                               |\n| Biological         | proton-transfer and hydrogen-bond networks               |\n\nEnvironment effects must be linked to the specific hydrogen state.\n\n---\n\n# 40. Frequency / Field Response Engine\n\nA field-response input should contain:\n\n$$\nI=\n(\n\\nu,\nA,\n\\phi,\n\\theta,\nT,\nP,\nt,\nS\n)\n$$\n\nwhere:\n\n* \\(\\nu\\) = frequency;\n* \\(A\\) = field amplitude;\n* \\(\\phi\\) = phase;\n* \\(\\theta\\) = orientation;\n* \\(T\\) = temperature;\n* \\(P\\) = pressure;\n* \\(t\\) = duration;\n* \\(S\\) = hydrogen state.\n\nResponse:\n\n$$\nR_H\n=\nF(I)\n$$\n\nThis is more physically meaningful than asking for:\n\n```text\nthe frequency of hydrogen\n```\n\nwithout specifying the mechanism.\n\n---\n\n# 41. Causali E Hydrogen Test Case\n\nHydrogen provides a useful controlled example for Causali E.\n\nStarting state:\n\n$$\nB=H_2\n$$\n\nPossible interventions:\n\n$$\nA=\n\\{\nT,\nP,\nh\\nu,\n\\mathbf E,\n\\mathbf B,\n\\text{catalyst},\n\\text{surface}\n\\}\n$$\n\nCandidate outcomes might include:\n\n$$\nC_1=H_2^*\n$$\n\n$$\nC_2=2H\n$$\n\n$$\nC_3=H^++e^-+H\n$$\n\n$$\nC_4=H_{\\rm ads}\n$$\n\n$$\nC_5=H_{\\rm host}\n$$\n\n$$\nC_6=MH_x\n$$\n\n$$\nC_7=H_{\\rm plasma}\n$$\n\nThe scientifically safer general form is:\n\n$$\nC_i\n=\nF(\nS_0,\nA,\nB,\nE,\nt\n)\n$$\n\nrather than assuming a single universal output.\n\nAll generated outcomes remain subject to:\n\n```text\nquantum mechanics\nthermodynamics\nkinetics\nconservation\nmaterial constraints\nevidence\n```\n\n---\n\n# 42. Energy Input / Output Matrix\n\n| Input               | Possible Hydrogen-Related Output                 |\n| ------------------- | ------------------------------------------------ |\n| electrical          | chemical H₂ through electrolysis                 |\n| chemical H₂         | heat through combustion/reaction                 |\n| chemical H₂         | electrical energy through fuel-cell conversion   |\n| D/T nuclear states  | fusion products and nuclear energy               |\n| radioactive tritium | beta decay products and heat                     |\n| optical             | excited, dissociated or ionised states           |\n| RF / microwave      | plasma excitation/heating                        |\n| electric field      | charged-particle acceleration                    |\n| magnetic field      | charged-particle trajectory/spin response        |\n| thermal             | excitation, dissociation and eventual ionisation |\n\nSystem efficiency must be recorded separately from theoretical energy availability.\n\n---\n\n# 43. Chemical Energy\n\nHydrogen possesses high specific chemical energy when reacted with an oxidant.\n\nFor comparison purposes, hydrogen's lower heating value is approximately:\n\n$$\n120\\ \\mathrm{MJ\\,kg^{-1}}\n$$\n\nbut its low volumetric density creates storage challenges.\n\nThe value belongs to a defined chemical reaction and energy convention.\n\nIt is not a generic intrinsic \"energy stored inside an isolated H atom.\"\n\n---\n\n# 44. Time Dependence\n\nHydrogen contains many distinct characteristic times.\n\n---\n\n## 44.1 Electronic Lifetime\n\n$$\n\\tau_{\\rm electronic}\n$$\n\nfor excited atomic/molecular states.\n\n---\n\n## 44.2 Molecular Collision and Reaction Time\n\n$$\n\\tau_{\\rm chemical}\n$$\n\ndepending on:\n\n* temperature;\n* pressure;\n* concentrations;\n* mechanism.\n\n---\n\n## 44.3 Diffusion Time\n\nA characteristic diffusion scale may behave approximately as:\n\n$$\nt_D\n\\sim\n\\frac{L^2}{D}\n$$\n\nfor appropriate simple diffusion geometries.\n\n---\n\n## 44.4 Tritium Radioactive Clock\n\n$$\nt_{1/2}\n\\approx\n12.32\\ {\\rm y}\n$$\n\n---\n\n## 44.5 Material-Degradation Clock\n\nHydrogen exposure may alter materials gradually over:\n\n```text\nseconds\nhours\ndays\ncycles\nyears\n```\n\ndepending on system and conditions.\n\nTherefore:\n\n$$\nMAT:0001\n=\nMAT:0001(t)\n$$\n\nfor state-dependent properties.\n\n---\n\n# 45. Scale Dependence\n\nHydrogen demonstrates MAT's multiscale architecture particularly clearly.\n\n```text\nNUCLEAR\n→ isotope stability, decay, fusion\n\nATOMIC\n→ ionisation, spin, spectrum\n\nMOLECULAR\n→ H2 bonding, vibration, rotation\n\nNANOSCALE\n→ adsorption, surface diffusion\n\nMICROSCALE\n→ trapping, defects, microstructure interaction\n\nBULK HOST\n→ permeation, hydride formation, embrittlement\n\nPLASMA\n→ collective charged-particle behavior\n\nBIOLOGICAL\n→ proton transfer, water and hydrogen bonding\n\nINDUSTRIAL\n→ production, storage, transport and conversion\n```\n\nA model valid at one scale must not automatically be transferred to another.\n\n---\n\n# 46. Safety\n\nHydrogen is not inherently toxic in the conventional chemical-toxicity sense, but hydrogen systems can present substantial physical hazards.\n\nMajor safety classes include:\n\n```text\nFLAMMABLE GAS\nIGNITION HAZARD\nPRESSURIZED GAS\nCRYOGENIC HAZARD\nOXYGEN-DISPLACEMENT / ASPHYXIATION HAZARD\nMATERIAL-COMPATIBILITY HAZARD\nNEARLY INVISIBLE FLAME\nLEAK / PERMEATION HAZARD\n```\n\n---\n\n## 46.1 Fire and Ignition\n\nHydrogen forms flammable mixtures with air over a broad concentration range and has relatively low ignition-energy requirements.\n\nSafe systems therefore require appropriate:\n\n* ventilation;\n* leak detection;\n* ignition control;\n* flame detection;\n* pressure relief;\n* engineering design.\n\n---\n\n## 46.2 Flame Visibility\n\nHydrogen flames can be difficult to see.\n\nSpecialized flame detection may therefore be required in industrial systems.\n\n---\n\n## 46.3 High Pressure\n\nCompressed hydrogen requires pressure-rated:\n\n* vessels;\n* valves;\n* piping;\n* fittings;\n* regulators;\n* seals.\n\nStored mechanical energy in the pressure system represents a hazard independently of combustion.\n\n---\n\n## 46.4 Cryogenic Hydrogen\n\nLiquid hydrogen introduces additional hazards including:\n\n* extreme cold;\n* material thermal contraction;\n* cold burns;\n* boil-off;\n* pressure rise;\n* condensation/freezing of atmospheric gases;\n* cryogenic material compatibility.\n\n---\n\n## 46.5 Material Compatibility\n\nHydrogen can affect mechanical behavior in susceptible alloys.\n\nMaterial selection must therefore consider:\n\n```text\nhydrogen compatibility\npressure\ntemperature\nstress\nfatigue\nfracture\npermeation\ncycling\n```\n\n---\n\n## 46.6 Tritium\n\nTritium introduces a separate:\n\n```text\nRADIOACTIVE\n```\n\nsafety class.\n\nIts radiological controls must remain separate from ordinary H₂ fuel safety.\n\n---\n\n# 47. Application Domains\n\nHydrogen-related applications include:\n\n```text\nchemical feedstock\nammonia production\nmethanol production\npetroleum processing\nreduction chemistry\nfuel cells\ncombustion\nenergy storage\nrocket propulsion\nmetallurgy\nsemiconductor processing\nplasma processing\ncryogenics\nfusion research\nisotope tracing\nneutron-related research\nspectroscopy\natomic physics\nastronomy\n```\n\nEach application must identify the relevant state.\n\nFor example:\n\n```text\nH2\n```\n\nmay be relevant to fuel or chemical processing while:\n\n```text\n3H\n```\n\nmay be relevant to isotope/fusion/radiotracer applications.\n\n---\n\n# 48. Sustainability and Environmental Context\n\nHydrogen is an **energy carrier and chemical feedstock**, not automatically a primary energy source.\n\nEnvironmental impact depends strongly on production pathway.\n\nRelevant MAT process fields therefore include:\n\n```text\nfeedstock\nenergy source\nelectricity source\nproduction efficiency\nwater requirement\ncarbon emissions\nmethane leakage\ncarbon capture\ntransport\nstorage losses\nhydrogen leakage\nend use\n```\n\nThe same chemical product:\n\n$$\nH_2\n$$\n\ncan therefore have very different lifecycle impacts.\n\n---\n\n# 49. Storage and Transport Sustainability\n\nHydrogen's high specific energy but low ambient volumetric density means storage and transport may require:\n\n* compression;\n* liquefaction;\n* conversion into a carrier;\n* adsorption;\n* hydride formation.\n\nEnergy consumed by storage and delivery must therefore be included in full-system analysis.\n\n---\n\n# 50. Evidence Hierarchy for Hydrogen\n\n## High-confidence measured/evaluated core\n\n```text\natomic number\natomic/isotopic masses\nstable isotope identity\ntritium decay\nionisation energy\nelectron affinity\natomic spectra\nhyperfine structure\nH2 spectroscopy\nordinary phase behaviour\nconventional chemistry\n```\n\n---\n\n## Established theoretical frameworks\n\n```text\nquantum atomic structure\nmolecular quantum mechanics\nthermodynamics\nchemical kinetics\ndiffusion\nelectromagnetism\nplasma physics\nnuclear reaction physics\n```\n\n---\n\n## Computational / active research\n\nExamples include:\n\n```text\nnovel hydrogen storage materials\nnew high-pressure phases\nnew catalysts\nnanostructured adsorption systems\nextreme-state predictions\n```\n\nThese must retain model and validation status.\n\n---\n\n# 51. Historical and Unconventional Overlays\n\nThe legacy Genesis record intentionally preserved non-mainstream frequency schemes such as historical/community \"Rife\" or Russell-related mappings.\n\nMAT does **not** delete them from project history.\n\nHowever they must reside outside the measured scientific core.\n\nRecommended future structure:\n\n```text\nrelationships/\n└── historical-overlays/\n    ├── 0001-Hydrogen-H-Russell-Overlay.yaml\n    └── 0001-Hydrogen-H-Rife-Overlay.yaml\n```\n\nClassification:\n\n```yaml\nscientific_status: HISTORICAL_OR_UNVERIFIED\nevidence_type: UNVERIFIED\ncore_property: false\n```\n\nThey may be compared against measured spectra, but they must never overwrite:\n\n```text\nMEASURED SPECTRAL DATA\n```\n\nunless reproducible evidence establishes a valid physical relationship.\n\n---\n\n# 52. Primary Hydrogen Relationship Vector\n\nHydrogen's strongest relationship groups include:\n\n## Direct Chemistry\n\n```text\nO\nC\nN\nS\nhalogens\nmany metals\n```\n\n---\n\n## Storage / Transport\n\n```text\nMg\nPd\nNi\nB\nC\nporous hosts\ncomplex hydrides\n```\n\nThe relationship mechanism must be labelled.\n\n---\n\n## Nuclear\n\n```text\n1H\n2H\n3H\nHe isotopes\nneutrons\n```\n\n---\n\n## Semiconductor / Materials Processing\n\nHydrogen may interact with:\n\n```text\nSi\nC\nGa-containing semiconductors\nmetals\noxides\n```\n\nthrough processes including:\n\n* passivation;\n* plasma treatment;\n* etching chemistry;\n* defect interaction;\n* surface chemistry.\n\n---\n\n## Biological\n\nMajor graph neighbors include:\n\n```text\nC\nO\nN\nP\nS\n```\n\nthrough biomolecular chemistry.\n\n---\n\n## Plasma / MHD\n\nThese relationships are often driven primarily by:\n\n```text\ncharge state\nelectron density\nfields\ntemperature\nconfinement\n```\n\nrather than proximity to one neighboring element.\n\n---\n\n# 53. Hydrogen State Cloud\n\nThe parent node should eventually render conceptually as:\n\n$$\n\\boxed{\nH,\\quad Z=1\n}\n$$\n\nsurrounded by state classes:\n\n$$\n\\{\n{}^1H,\n{}^2H,\n{}^3H,\n{}^4H,\n{}^5H,\n{}^6H,\n{}^7H,\nH^-,\nH,\nH^+,\nH_2,\nHD,\nD_2,\nHT,\nDT,\nT_2,\nH_2^*,\nH_{\\rm ads},\nH_{\\rm host},\nMH_x,\nH_{\\rm plasma},\n\\dots\n\\}\n$$\n\nThis is one of the defining examples of why MAT is an atlas rather than a conventional periodic table.\n\n---\n\n# 54. Updated Migration Status\n\n```yaml\nlegacy_record: \"G0001\"\n\nmigration:\n  identity: COMPLETE\n  isotopes: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  quantum: CORE-COMPLETE\n  spectroscopy: CORE-COMPLETE\n  molecular_hydrogen: CORE-COMPLETE\n  ionization: COMPLETE\n  plasma: CORE-COMPLETE\n  chemistry: CORE-COMPLETE\n  organic_context: COMPLETE\n  inorganic_context: COMPLETE\n  biological_context: COMPLETE\n  materials_interactions: CORE-COMPLETE\n  embrittlement: CORE-COMPLETE\n  storage: CORE-COMPLETE\n  processes: CORE-COMPLETE\n  environments: CORE-COMPLETE\n  energy: CORE-COMPLETE\n  time: COMPLETE\n  scale: COMPLETE\n  safety: CORE-COMPLETE\n  sustainability: CORE-COMPLETE\n  applications: CORE-COMPLETE\n\nremaining:\n  - individual compound records\n  - detailed thermophysical property tables\n  - phase datasets\n  - plasma species tables\n  - people/intellectual-lineage\n  - generated assets\n  - final audit\n```\n\n---\n\n# 55. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nschema_validation_status: \"PASS\"\nscientific_validation_status: \"CORE-VALIDATED\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  filenames: \"PASS\"\n  evidence_architecture: \"PASS\"\n  source_registry: \"PASS\"\n  forward_references: \"PASS\"\n  scientific_core: \"VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nDo not yet mark the legacy `G0001` file archived or fully migrated.\n\nThe storage and safety wording above follows DOE's current split between compressed/cryogenic storage and material-based approaches such as metal hydrides, chemical storage materials and sorbents. DOE also explicitly treats hydrogen embrittlement/material compatibility, leak detection, ventilation and flame detection as important engineering concerns. ([The Department of Energy's Energy.gov][1])\n\nNIST's hydrogen thermophysical work also supports keeping **parahydrogen, normal hydrogen and orthohydrogen as distinguishable thermodynamic models**, instead of putting every H₂ property into one generic table. ([NIST][2])\n",
-  "bodyHash": "ae3610e8ab63bdada7fcef46b61a67585dd50c7cc19bcb9b57cd524b1dd6450c",
+  "body": "# 0001 — Hydrogen — H\n\n```yaml\nmat_id: MAT:0001\nrecord_name: Hydrogen\nsymbol: H\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 1\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0001\nlegacy_name: Hydrogen\n```\n\n# 0. Record Navigation\n\n## MAT Reference\n\n`MAT:0000`\n\n## Current Record\n\n`MAT:0001`\n\n```text\n0001-Hydrogen-H\n```\n\n## Primary Child Classes\n\n```text\nMAT:0001\n│\n├── ISO       isotopes / nuclides\n├── NUC       nuclear states\n├── QSTATE    quantum states\n├── ESTATE    electronic states\n├── ION       ionic states\n├── MOL       molecular states\n├── CMP       compounds\n├── PHASE     phases\n├── MAT       material states\n├── PROC      processes\n├── RXN       reactions\n├── ENV       environments\n├── APP       applications\n├── EXP       experiments\n├── GRAPH     graphs\n├── MODEL     models\n└── SRC       sources\n```\n\nHydrogen is therefore not represented by one single undifferentiated point.\n\nIts canonical elemental identity remains:\n\n$$\n\\boxed{\nH,\\quad Z=1\n}\n$$\n\nwhile its accessible physical states form a much larger network.\n\n---\n\n# 1. Elemental Identity\n\n| Property                        |              Value | Unit / Status                         |\n| ------------------------------- | -----------------: | ------------------------------------- |\n| MAT ID                          |           MAT:0001 | —                                     |\n| Element                         |           Hydrogen | —                                     |\n| Symbol                          |                  H | —                                     |\n| Atomic number                   |                  1 | dimensionless                         |\n| Proton count                    |                  1 | neutral nucleus identity              |\n| Neutral electron count          |                  1 | electron                              |\n| Period                          |                  1 | —                                     |\n| Group                           |                  1 | conventional periodic-table placement |\n| Block                           |                  s | —                                     |\n| Ground electron configuration   |                1s¹ | —                                     |\n| Ground electronic term          |    \\(^{2}S_{1/2}\\) | —                                     |\n| First ionization energy         |    13.598434599702 | eV                                    |\n| Standard atomic-weight interval | [1.00784, 1.00811] | —                                     |\n\nPrimary sources:\n\n```text\nSRC-H-001\nSRC-H-002\n```\n\n---\n\n# 2. Element Versus Material State\n\nThe elemental identity:\n\n$$\nZ=1\n$$\n\ndoes not specify whether hydrogen currently exists as:\n\n```text\n¹H\n²H\n³H\nH\nH⁻\nH⁺\nH₂\nHD\nD₂\nT₂\nHT\nDT\nexcited H\nadsorbed H\ninterstitial H\nhydride\nliquid H₂\nsolid H₂\ndense high-pressure hydrogen\nionized hydrogen plasma\n```\n\nThe MAT record therefore distinguishes:\n\n$$\n\\text{element identity}\n$$\n\nfrom:\n\n$$\n\\text{physical state}\n$$\n\nand:\n\n$$\n\\text{material manifestation}\n$$\n\n---\n\n# 3. Standard Atomic Weight\n\nNatural terrestrial hydrogen does not require one universally exact decimal atomic weight.\n\nMAT records the standard atomic-weight interval:\n\n$$\n[1.00784,\\ 1.00811]\n$$\n\nbecause isotopic composition varies among normal terrestrial materials.\n\nThis is distinct from the relative atomic mass of an individual isotope.\n\nFor example:\n\n$$\nm(^{1}H)\n=\n1.00782503223\\ \\mathrm u\n$$\n\nwhile:\n\n$$\nm(^{2}H)\n=\n2.01410177812\\ \\mathrm u\n$$\n\nThese are different concepts.\n\n---\n\n# 4. First Ionization\n\nFor neutral atomic hydrogen:\n\n$$\nH\\rightarrow H^+ + e^-\n$$\n\nwith ionization energy:\n\n$$\nE_\\mathrm{ion}\n=\n13.598434599702\\ \\mathrm{eV}\n$$\n\nfor the ground-state atom.\n\nGoverning principles include:\n\n```yaml\ngoverned_by:\n  - MAT-QM-001\n  - MAT-QM-006\n  - MAT-QM-016\n  - MAT-PHYS-010\n```\n\nEvidence classification:\n\n```yaml\nevidence_type: MEASURED\nconfidence: A\n```\n\n---\n\n# 5. Electron Attachment and H⁻\n\nHydrogen can bind an additional electron:\n\n$$\nH+e^-\n\\rightarrow\nH^-\n$$\n\ncreating the hydride anion.\n\nHigh-precision photodetachment measurements give an atomic hydrogen electron affinity close to:\n\n$$\n0.754195\\ \\mathrm{eV}\n$$\n\nwith the precise value depending on the selected evaluated measurement/source.\n\nMAT therefore stores electron-affinity measurements individually rather than pretending all historical determinations are identical.\n\nCanonical child:\n\n```text\nMAT:0001:ION:H-1\n```\n\n---\n\n# 6. Charge-State Branch\n\nThe simplest hydrogen charge-state branch is:\n\n```text\nH⁻\nH⁰\nH⁺\n```\n\nThese represent fundamentally different electronic states.\n\n## Neutral\n\n$$\nH^0\n$$\n\ncontains:\n\n```text\n1 proton\n1 electron\n```\n\nfor protium.\n\n## Positive Ion\n\n$$\nH^+\n$$\n\nfor ordinary protium corresponds to a bare proton.\n\nFor deuterium:\n\n$$\nD^+\n$$\n\ncorresponds to a deuteron.\n\nFor tritium:\n\n$$\nT^+\n$$\n\ncorresponds to a triton.\n\nThe isotope identity must therefore remain attached to the ionic state.\n\n## Negative Ion\n\n$$\nH^-\n$$\n\ncontains two electrons associated with one hydrogen nucleus.\n\n---\n\n# 7. Complete Evaluated Isotope Branch\n\nMAT currently records mass-number states:\n\n$$\n{}^1H\n$$\n\nthrough:\n\n$$\n{}^7H\n$$\n\nin the evaluated mass datasets used for this record.\n\nThey share:\n\n$$\nZ=1\n$$\n\nbut differ in neutron number:\n\n$$\nN=A-Z\n$$\n\n---\n\n## 7.1 Protium — ¹H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-1\n```\n\nNuclide:\n\n$$\n{}^1_1H\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 0\n```\n\nRelative atomic mass:\n\n$$\n1.00782503223(9)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nApproximate representative natural isotopic composition in the NIST table:\n\n$$\n0.999885(70)\n$$\n\nThis abundance is not a universal fixed number for every sample.\n\n---\n\n## 7.2 Deuterium — ²H — D\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-2\n```\n\nNuclide:\n\n$$\n{}^2_1H\n$$\n\nCommon symbol:\n\n$$\nD\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n2.01410177812(12)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nRepresentative natural isotopic composition in the NIST table:\n\n$$\n0.000115(70)\n$$\n\nDeuterium has nuclear spin:\n\n$$\nI=1\n$$\n\nand therefore differs from protium in nuclear-spin-dependent behaviour.\n\n---\n\n## 7.3 Tritium — ³H — T\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-3\n```\n\nNuclide:\n\n$$\n{}^3_1H\n$$\n\nCommon symbol:\n\n$$\nT\n$$\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n3.0160492779(24)\\ \\mathrm u\n$$\n\nNuclear spin/parity:\n\n$$\n\\frac12^+\n$$\n\nStatus:\n\n```text\nRADIOACTIVE\n```\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n12.32\\pm0.02\\ \\mathrm{y}\n$$\n\nPrincipal decay:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nDecay class:\n\n```text\nBETA-MINUS\n```\n\n---\n\n## 7.4 Hydrogen-4 — ⁴H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-4\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n4.02643(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime scale:\n\n$$\nt_{1/2}\n\\approx\n139\\pm10\\ \\mathrm{ys}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{ys}\n=\n10^{-24}\\ \\mathrm{s}\n$$\n\nPrincipal evaluated decay:\n\n```text\nneutron emission\n```\n\ninto tritium.\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n## 7.5 Hydrogen-5 — ⁵H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-5\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n5.035311(96)\\ \\mathrm u\n$$\n\nNUBASE2020 evaluated half-life:\n\n$$\nt_{1/2}\n\\approx\n86\\pm6\\ \\mathrm{ys}\n$$\n\nPrincipal decay classification:\n\n```text\n2-NEUTRON BREAKUP / EMISSION\n```\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n## 7.6 Hydrogen-6 — ⁶H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-6\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 5\n```\n\nRelative atomic mass in the NIST isotope table:\n\n$$\n6.04496(27)\\ \\mathrm u\n$$\n\nNUBASE2020 evaluated half-life:\n\n$$\nt_{1/2}\n\\approx\n294\\pm67\\ \\mathrm{ys}\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\nHydrogen-6 remains an active nuclear-research subject; later measurements may refine its evaluated ground-state parameters.\n\nMAT therefore retains:\n\n```text\nevaluation_version\nmeasurement_source\nuncertainty\n```\n\nrather than treating one historical estimate as permanent.\n\n---\n\n## 7.7 Hydrogen-7 — ⁷H\n\nCanonical ID:\n\n```text\nMAT:0001:ISO:H-7\n```\n\nComposition:\n\n```text\nprotons: 1\nneutrons: 6\n```\n\nRelative atomic mass:\n\n$$\n7.0527(11\\#)\\ \\mathrm u\n$$\n\nThe `#` indicates estimated/evaluated character in the source mass table.\n\nNUBASE2020 gives an extremely uncertain lifetime on the order of:\n\n$$\n652\\pm558\\ \\mathrm{ys}\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\nHIGH-UNCERTAINTY\n```\n\nThe uncertainty is sufficiently large that MAT must not present `652 ys` as an exact physical constant.\n\n---\n\n# 8. Nuclear Coordinate\n\nA useful isotope-state representation is:\n\n$$\n\\Gamma_N\n=\n(\nZ,\nN,\nA,\nJ^\\pi,\nt_{1/2},\nQ,\nD,\nB\n)\n$$\n\nwhere terms may include:\n\n* proton number \\(Z\\);\n* neutron number \\(N\\);\n* mass number \\(A\\);\n* spin/parity \\(J^\\pi\\);\n* half-life;\n* reaction or decay Q-values;\n* decay modes;\n* binding information.\n\nFor hydrogen:\n\n$$\nZ=1\n$$\n\nremains fixed while:\n\n$$\nN=0,1,2,\\ldots\n$$\n\nchanges.\n\nThis provides a good demonstration of why:\n\n```text\nchemical-element identity\n```\n\nand:\n\n```text\nnuclear-state distance\n```\n\nare different concepts.\n\nTwo isotopes can be chemically closely related while having dramatically different nuclear stability.\n\n---\n\n# 9. Tritium Decay-Energy Branch\n\nTritium provides MAT's first practical radioactive-energy child object.\n\nCanonical branch:\n\n```text\nMAT:0001:ISO:H-3\n    ↓\nenergy.decay.*\n```\n\nReaction:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nRadioactive population evolves approximately as:\n\n$$\nN(t)\n=\nN_0e^{-\\lambda t}\n$$\n\nwhere:\n\n$$\n\\lambda\n=\n\\frac{\\ln2}{t_{1/2}}\n$$\n\nand activity is:\n\n$$\nA(t)=\\lambda N(t)\n$$\n\nFor a fixed decay-energy distribution and suitable system definition, decay power likewise decreases exponentially with population.\n\nMAT must distinguish:\n\n```text\ntotal decay energy\n```\n\nfrom:\n\n```text\nrecoverable electrical energy\n```\n\nand:\n\n```text\nconversion efficiency\n```\n\nbecause they are not equal.\n\nPossible conversion relationships include:\n\n```text\nbeta particle\n→ semiconductor charge generation\n→ electricity\n```\n\n```text\nbeta particle\n→ radioluminescent material\n→ light\n```\n\nand:\n\n```text\ndecay energy\n→ heat\n→ thermoelectric conversion\n```\n\nThese are separate process/application relationships rather than intrinsic definitions of tritium itself.\n\n---\n\n# 10. Fusion Relationship Branch\n\nHydrogen isotopes participate in nuclear fusion reactions.\n\nA major technologically studied channel is:\n\n$$\n{}^2H+{}^3H\n\\rightarrow\n{}^4He+n\n$$\n\nwith total reaction energy approximately:\n\n$$\n17.6\\ \\mathrm{MeV}\n$$\n\ndistributed predominantly between:\n\n```text\nneutron: approximately 14.1 MeV\nhelium-4 nucleus: approximately 3.5 MeV\n```\n\nThis is an **induced nuclear transformation**.\n\nIt must remain separate from spontaneous tritium radioactive decay.\n\nCanonical relationship:\n\n```text\nMAT:0001:ISO:H-2\nFUSES-WITH\nMAT:0001:ISO:H-3\n```\n\nproducing:\n\n```text\nMAT:0002:ISO:He-4\n+\nneutron\n```\n\nunder appropriate fusion conditions.\n\nMAT must not describe this as an ordinary chemical reaction.\n\n---\n\n# 11. Atomic Quantum Structure\n\nHydrogen is the simplest neutral atom and provides a fundamental quantum-mechanical benchmark.\n\nThe nonrelativistic Coulomb model gives approximately:\n\n$$\nE_n\n=\n-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n$$\n\nfor the idealized hydrogenic level sequence.\n\nThis is an approximation to the full measured hydrogen spectrum.\n\nHigher-precision treatment requires effects including:\n\n* reduced nuclear mass;\n* relativistic corrections;\n* fine structure;\n* Lamb shift;\n* hyperfine interactions;\n* external fields.\n\n---\n\n## 11.1 Ground State\n\nGround electronic configuration:\n\n$$\n1s^1\n$$\n\nTerm:\n\n$$\n{}^2S_{1/2}\n$$\n\nFor the ideal nonrelativistic 1s state, the electron probability density is spherically symmetric about the nucleus.\n\nThis is the correct meaning of the spherical ground-state geometry.\n\nIt does **not** mean the electron is a classical sphere orbiting the proton.\n\n---\n\n# 12. Selected Excitation Energies\n\nNIST atomic collision/spectroscopic data list approximate excitation energies including:\n\n| Transition | Excitation Energy |\n| ---------- | ----------------: |\n| 1s → 2p    |        10.1988 eV |\n| 1s → 3p    |        12.0875 eV |\n| 1s → 4p    |        12.7485 eV |\n| 1s → 5p    |        13.0545 eV |\n| 1s → 6p    |        13.2207 eV |\n\nThe sequence approaches the ground-state ionization threshold.\n\nCausali E may represent this exploratorily as:\n\n```text\nstarting state:\nH(1s)\n\nintervention:\nenergy input\n\npossible outcomes:\nexcited H\nionized H\nother coupled states\n```\n\nbut each actual transition remains governed by quantum mechanics and selection rules.\n\n---\n\n# 13. Quantum-State Fields\n\nApplicable MAT fields include:\n\n```text\nprincipal quantum number\norbital angular momentum\nmagnetic quantum number\nelectron spin\nnuclear spin\ntotal angular momentum\nhyperfine quantum state\nwavefunction\nprobability density\nenergy level\ntransition probability\nselection rule\nlifetime\ncoherence\ndecoherence\nfield response\ntunnelling\n```\n\nNot every field has one single value for \"hydrogen.\"\n\nValues belong to a specified state.\n\n---\n\n# 14. Hydrogen Hyperfine Transition\n\nThe ground-state hyperfine interaction of atomic protium produces the famous 21-cm transition.\n\nMeasured unperturbed transition frequency:\n\n$$\n\\nu_H\n=\n1\\,420\\,405\\,751.768\\ \\mathrm{Hz}\n$$\n\nor:\n\n$$\n1420.405751768\\ \\mathrm{MHz}\n$$\n\nHistorically measured uncertainty in the cited precision measurement:\n\n$$\n\\approx2\\times10^{-3}\\ \\mathrm{Hz}\n$$\n\nat one standard deviation.\n\nCanonical spectral ID:\n\n```text\nMAT:0001:SPEC:HF:001\n```\n\nThis is:\n\n```text\nA hyperfine transition frequency of atomic hydrogen\n```\n\nnot:\n\n```text\nTHE frequency of hydrogen\n```\n\n---\n\n# 15. Electronic Spectrum\n\nHydrogen has many atomic spectral transitions.\n\nImportant examples include the Lyman and Balmer series.\n\nRepresentative wavelengths include approximately:\n\n```text\nLyman-alpha ≈ 121.6 nm\nH-alpha      ≈ 656.3 nm\nH-beta       ≈ 486.1 nm\n```\n\nExact component wavelengths depend on:\n\n* isotope;\n* fine structure;\n* hyperfine structure;\n* measurement convention;\n* environmental perturbations.\n\nTherefore MAT stores individual spectral lines rather than one master scalar wavelength.\n\nThe general hydrogen spectral object is:\n\n$$\n\\boldsymbol{\\nu}_H\n=\n\\{\n\\nu_1,\n\\nu_2,\n\\dots,\n\\nu_n\n\\}\n$$\n\nwhere every member has a mechanism tag.\n\n---\n\n# 16. Frequency Mechanisms\n\nFor hydrogen, relevant frequency classes may include:\n\n```text\nelectronic transitions\nfine structure\nhyperfine transitions\nH2 rotational transitions\nH2 vibrational transitions\nRaman transitions\nmolecular electronic transitions\nplasma oscillations\nmagnetic resonance\nnuclear magnetic resonance\nacoustic/macroscopic resonances\n```\n\nEach is physically different.\n\nMAT therefore prohibits the unsupported compression:\n\n$$\n\\nu_H=\\text{one universal frequency}\n$$\n\n---\n\n# 17. Molecular Hydrogen — H₂\n\nCanonical molecular child:\n\n```text\nMAT:0001:MOL:H2\n```\n\nMolecular formation:\n\n$$\n2H\n\\rightarrow\nH_2\n$$\n\ndoes not imply that the molecule behaves like two isolated atomic-H records.\n\nIt is an emergent molecular state with its own:\n\n* bond;\n* rotational states;\n* vibrational states;\n* electronic states;\n* nuclear-spin isomers;\n* thermodynamics.\n\n---\n\n# 18. H₂ Ground Electronic State\n\nGround molecular electronic state:\n\n$$\nX\\,{}^1\\Sigma_g^+\n$$\n\nSelected NIST/Huber-Herzberg spectroscopic constants include approximately:\n\n$$\n\\omega_e\n=\n4401.21\\ \\mathrm{cm^{-1}}\n$$\n\n$$\nB_e\n=\n60.8530\\ \\mathrm{cm^{-1}}\n$$\n\nand equilibrium internuclear distance:\n\n$$\nr_e\n=\n0.74144\\ \\text{\\AA}\n$$\n\nThese quantities describe different aspects of the molecule:\n\n```text\nr_e\n→ equilibrium nuclear geometry\n\nω_e\n→ vibrational spectroscopic constant\n\nB_e\n→ rotational spectroscopic constant\n```\n\nThey must not be collapsed into one frequency or one geometry metric.\n\n---\n\n# 19. Ortho- and Para-Hydrogen\n\nMolecular hydrogen branches into nuclear-spin isomers.\n\nCanonical children:\n\n```text\nMAT:0001:MOL:H2:ORTHO\nMAT:0001:MOL:H2:PARA\n```\n\nNormal hydrogen at ordinary room-temperature preparation is approximately:\n\n```text\n75% ortho-H2\n25% para-H2\n```\n\nwhile equilibrium hydrogen near 20 K becomes overwhelmingly parahydrogen.\n\nThis means:\n\n$$\n\\boxed{\nH_2\\neq\\text{one unique quantum/thermodynamic state}\n}\n$$\n\nNuclear-spin composition affects thermodynamic properties and must therefore remain part of state identity where relevant.\n\n---\n\n# 20. Phase Branch\n\nMolecular hydrogen can exist in ordinary macroscopic phases including:\n\n```text\nH2 gas\nH2 liquid\nH2 solid\n```\n\nand in additional dense/high-pressure regimes under extreme conditions.\n\nMAT also distinguishes:\n\n```text\natomic H gas\nmolecular H2 gas\nionized H plasma\ndense molecular hydrogen\nhigh-pressure atomic/metallic candidate states\n```\n\nbecause they do not share identical properties.\n\n---\n\n# 21. Normal Boiling Point\n\nFor **equilibrium hydrogen**, the 2026 NIST compilation recommends a normal boiling point close to:\n\n$$\n20.271\\ \\mathrm K\n$$\n\nat the standard atmospheric pressure convention used for the normal boiling point.\n\nThe same NIST compilation distinguishes this from normal and orthohydrogen values.\n\nTherefore the property must be stored as:\n\n```yaml\nmaterial_state: equilibrium-H2\nproperty: thermal.normal-boiling-point\nvalue: 20.271\nunit: K\n```\n\nrather than simply:\n\n```text\nhydrogen boiling point = 20.271 K\n```\n\nwithout identifying spin composition.\n\n---\n\n# 22. Record-State Principle\n\nHydrogen demonstrates the core MAT rule:\n\n$$\n\\boxed{\n\\text{element}\n\\neq\n\\text{isotope}\n\\neq\n\\text{atom state}\n\\neq\n\\text{molecule}\n\\neq\n\\text{phase}\n\\neq\n\\text{material state}\n}\n$$\n\nAll may be related to:\n\n```text\nMAT:0001\n```\n\nwhile remaining separate data objects.\n\n---\n\n# 23. Visual Placeholders — Initial\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- ASSET-ID: MAT:0001:FIG:V01:001 -->\n<!-- DESCRIPTION: Physical manifestation of molecular hydrogen -->\n\n<!-- MAT-VISUAL: V02 -->\n<!-- ASSET-ID: MAT:0001:FIG:V02:001 -->\n<!-- DESCRIPTION: Conventional element / atomic representation -->\n\n<!-- MAT-VISUAL: V04 -->\n<!-- ASSET-ID: MAT:0001:FIG:V04:001 -->\n<!-- DESCRIPTION: Hydrogen 1s probability density -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- ASSET-ID: MAT:0001:FIG:V05:001 -->\n<!-- DESCRIPTION: Hydrogen isotope map 1H through 7H -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- ASSET-ID: MAT:0001:GRAPH:V06:001 -->\n<!-- DESCRIPTION: Mechanism-resolved Hydrogen spectral fingerprint -->\n```\n\n---\n\n# 24. Core Governing Principles\n\n```yaml\ngoverned_by:\n  atomic_identity:\n    - MAT-QM-010\n    - MAT-QM-011\n\n  ionization:\n    - MAT-QM-001\n    - MAT-QM-006\n    - MAT-QM-016\n\n  spectral_transitions:\n    - MAT-QM-001\n    - MAT-QM-006\n    - MAT-QM-016\n    - MAT-QM-017\n    - MAT-PHYS-016\n\n  hyperfine:\n    - MAT-QM-019\n    - MAT-QM-023\n\n  radioactive_decay:\n    - MAT-NUC-006\n    - MAT-NUC-007\n    - MAT-NUC-008\n    - MAT-MATH-007\n    - MAT-MATH-014\n\n  fusion:\n    - MAT-NUC-004\n    - MAT-NUC-016\n    - MAT-NUC-017\n    - MAT-NUC-020\n    - MAT-NUC-021\n    - MAT-NUC-022\n\n  molecular_structure:\n    - MAT-QM-026\n    - MAT-CHEM-022\n    - MAT-CHEM-026\n```\n\n---\n\n# 25. Evidence Summary\n\n```yaml\nidentity:\n  evidence_type: REPLICATED\n  confidence: A\n\nisotope_masses:\n  evidence_type: REPLICATED\n  confidence: A\n\nshort_lived_isotope_lifetimes:\n  evidence_type: MEASURED\n  confidence: B\n  note: \"Large uncertainty for several neutron-rich hydrogen states.\"\n\ntritium_decay:\n  evidence_type: REPLICATED\n  confidence: A\n\natomic_spectrum:\n  evidence_type: REPLICATED\n  confidence: A\n\nH2_spectroscopic_constants:\n  evidence_type: REPLICATED\n  confidence: A\n\nextreme_high_pressure_states:\n  evidence_type: MIXED\n  confidence: VARIABLE\n```\n\n---\n\n# 26. Migration Status\n\nLegacy source:\n\n```text\nG0001 — Hydrogen.md\n```\n\nCurrent migration:\n\n```text\nCORE-IDENTITY-MIGRATED\nISOTOPE-BRANCH-MIGRATED\nQUANTUM-CORE-MIGRATED\nSPECTRAL-CORE-MIGRATED\nMOLECULAR-CORE-MIGRATED\nTHERMAL-CORE-IN-PROGRESS\n```\n\nStill to migrate:\n\n```text\ncomplete ionic/plasma branch\nchemistry\norganic context\ninorganic context\nbiological context\nmaterials interactions\nhydrogen storage\nprocesses\nenvironment matrix\nenergy conversion\ntime\nscale\nsafety\napplications\nrelationships\nunconventional overlays\nvisual manifest\ncalculations\nexperiments\nsources\npeople/intellectual lineage\n```\n\nDo not mark:\n\n```text\nMIGRATED\n```\n\nyet.\n\n---\n\n# 27. Revision History\n\n| Version | Status     | Change                                         |\n| ------- | ---------- | ---------------------------------------------- |\n| 1.0.0   | RESEARCHED | Initial MAT restructuring of the Hydrogen core |\n\nThe quantitative core above is grounded in current-accessible NIST data: the NIST ASD v5.12 gives the ground configuration/term and `13.598434599702 eV` ionization energy; NIST's isotope table gives the atomic-weight interval and masses through ⁷H; NIST's Chemistry WebBook gives the H₂ ground-state spectroscopic constants; and the 2026 NIST boiling-point compilation explicitly distinguishes equilibrium H₂, normal H₂ and ortho-H₂. ([NIST][2])\n\nThe 21-cm number is also worth storing with its full provenance rather than rounded to `1420 MHz`: the NBS/NIST precision measurement reported `1,420,405,751.768 Hz`. ([NIST][3])\n\n---\n\n---\n\n# 28. Ionisation and Plasma Branch\n\nHydrogen changes physical regime dramatically as ionisation increases.\n\nA simplified progression is:\n\n$$\nH_2\n\\rightarrow\n2H\n\\rightarrow\nH^+ + e^-\n$$\n\nbut real plasmas may contain mixtures of:\n\n```text\nH2\nH2+\nH3+\nH\nH+\nH-\nelectrons\nexcited H\nexcited H2\n```\n\ndepending on:\n\n* temperature;\n* pressure;\n* electron energy distribution;\n* radiation;\n* electric field;\n* RF/microwave excitation;\n* residence time;\n* surface interactions.\n\nCanonical state families:\n\n```text\nMAT:0001:MOL:H2\nMAT:0001:ION:H2+\nMAT:0001:ION:H3+\nMAT:0001:ATOM:H\nMAT:0001:ION:H+1\nMAT:0001:ION:H-1\nMAT:0001:PLASMA:H\n```\n\n---\n\n## 28.1 Charged-Particle Dynamics\n\nFor a charged particle:\n\n$$\n\\mathbf F\n=\nq(\n\\mathbf E+\n\\mathbf v\\times\\mathbf B\n)\n$$\n\nbecomes directly relevant.\n\nThis activates relationships with:\n\n* electric acceleration;\n* magnetic deflection;\n* plasma confinement;\n* plasma waves;\n* RF heating;\n* microwave heating;\n* magnetohydrodynamics;\n* fusion plasmas.\n\nThese relationships do not apply in the same way to neutral molecular H₂.\n\n---\n\n## 28.2 Plasma State Is Not a Single State\n\nA hydrogen plasma requires additional descriptors:\n\n```yaml\nelectron_temperature:\nion_temperature:\nneutral_temperature:\nelectron_density:\nion_density:\nneutral_density:\ndegree_of_ionization:\npressure:\nelectric_field:\nmagnetic_field:\nfrequency:\nspecies_distribution:\nconfinement:\ntime:\n```\n\nTherefore:\n\n$$\nH_{\\rm plasma}\n$$\n\nis a state family, not one fixed material property.\n\n---\n\n# 29. Chemical Relationship Classes\n\nHydrogen participates in several chemically distinct relationship classes.\n\n---\n\n## 29.1 Covalent Hydrogen\n\nExamples include:\n\n```text\nC-H\nN-H\nO-H\nS-H\nSi-H\nB-H\n```\n\nBond properties depend on molecular environment.\n\nMAT must not assign one universal:\n\n```text\nH-X bond energy\n```\n\nwithout specifying \\(X\\), molecular state and dissociation process.\n\n---\n\n## 29.2 Ionic Hydrides\n\nHydrogen may exist formally as hydride:\n\n$$\nH^-\n$$\n\nin compounds such as:\n\n```text\nNaH\nKH\nCaH2\nMgH2\n```\n\nThe isolated atomic hydride ion and hydrogen inside a crystalline hydride are related but not identical physical states.\n\n---\n\n## 29.3 Covalent Hydrides\n\nExamples include:\n\n```text\nCH4\nNH3\nH2O\nH2S\nSiH4\nboranes\n```\n\nEach compound becomes its own linked MAT node.\n\nHydrogen's parent element record stores the relationship rather than duplicating every compound property.\n\n---\n\n## 29.4 Interstitial and Metallic Hydrogen\n\nAtomic hydrogen can occupy interstitial positions within some metallic lattices.\n\nPossible states include:\n\n```text\ndissolved interstitial H\ntrapped H\nhydride phase\nsurface H\ngrain-boundary-associated H\ndefect-associated H\n```\n\nThese must be distinguished because their mechanical and transport effects can differ greatly.\n\n---\n\n## 29.5 Surface Adsorption\n\nMolecular hydrogen may interact with a surface through adsorption.\n\nA common process sequence is:\n\n$$\nH_2(g)\n\\rightarrow\nH_2({\\rm ads})\n$$\n\nand, where dissociative adsorption occurs:\n\n$$\nH_2\n\\rightarrow\n2H_{\\rm ads}\n$$\n\nThe outcome depends on:\n\n* surface material;\n* crystallographic face;\n* defects;\n* temperature;\n* pressure;\n* coverage;\n* catalyst state.\n\n---\n\n## 29.6 Absorption\n\nHydrogen can also enter a bulk host.\n\nMAT distinguishes:\n\n```text\nADSORPTION\n```\n\nfrom:\n\n```text\nABSORPTION\n```\n\nand:\n\n```text\nCHEMICAL HYDRIDE FORMATION\n```\n\nThese are different storage/material mechanisms.\n\n---\n\n## 29.7 Proton Transfer\n\nHydrogen chemistry frequently involves proton-transfer processes.\n\nA generic acid-base form is:\n\n$$\nHA+B\n\\rightleftharpoons\nA^-+BH^+\n$$\n\nActual proton transfer in solution is mediated by the molecular/solvent environment rather than by an isolated free proton moving through empty space.\n\n---\n\n## 29.8 Hydrogen Bonding\n\nHydrogen participates in directional intermolecular or intramolecular interactions such as:\n\n$$\nO-H\\cdots O\n$$\n\nand:\n\n$$\nN-H\\cdots O\n$$\n\nHydrogen bonding strongly influences:\n\n* water;\n* proteins;\n* nucleic acids;\n* molecular crystals;\n* polymers;\n* solvents.\n\nHydrogen bonding is not the same physical interaction as an ordinary covalent H-X bond.\n\n---\n\n# 30. Organic Context\n\nContext classification:\n\n```text\ncontext.organic\n```\n\nHydrogen has extensive relationships with carbon-based chemistry.\n\nMajor classes include:\n\n* hydrocarbons;\n* alcohols;\n* aldehydes;\n* ketones;\n* carboxylic acids;\n* amines;\n* amino acids;\n* carbohydrates;\n* lipids;\n* proteins;\n* nucleic acids;\n* polymers.\n\nPrimary element relationships include:\n\n```text\nH ↔ C\nH ↔ O\nH ↔ N\nH ↔ S\nH ↔ P\n```\n\nThese relationships do not mean elemental atomic hydrogen itself has all biological or organic properties of those compounds.\n\n---\n\n# 31. Inorganic Context\n\nContext:\n\n```text\ncontext.inorganic\n```\n\nImportant families include:\n\n* water;\n* mineral acids;\n* bases involving proton transfer;\n* ionic hydrides;\n* covalent hydrides;\n* metallic hydrides;\n* ammonia;\n* hydrogen sulfide;\n* silanes;\n* boranes;\n* complex hydrides.\n\nExample graph:\n\n```text\nMAT:0001 Hydrogen\n+\nMAT:0008 Oxygen\n        ↓\nCOMPOUND NODE\n        ↓\nH2O\n```\n\nCompound properties belong primarily to the compound record.\n\n---\n\n# 32. Biological Context\n\nContext:\n\n```text\ncontext.biological\n```\n\nHydrogen participates in biological systems through:\n\n* water;\n* proton-transfer chemistry;\n* acid-base regulation;\n* proton gradients;\n* hydrogen bonding;\n* biomolecular structure;\n* redox chemistry;\n* metabolic energy transfer.\n\nThe relevant hydrogen state may be:\n\n```text\ncovalently bound H\nproton-transfer state\nwater-associated H\nhydrogen-bonded H\nbiomolecular H\n```\n\nrather than isolated neutral atomic hydrogen.\n\nScale must therefore remain explicit.\n\n---\n\n# 33. Hydrogen as a Material Modifier\n\nAt ordinary ambient conditions hydrogen is not a conventional structural engineering solid.\n\nHowever, hydrogen can substantially alter other materials.\n\nImportant processes include:\n\n```text\nsurface adsorption\ndissociative adsorption\nbulk absorption\ndiffusion\ntrapping\nhydride formation\nphase change\nembrittlement\npermeation\ndesorption\n```\n\nA host-material interaction may be represented:\n\n$$\nM+\nH\n\\rightarrow\nM(H)\n$$\n\nwhere \\(M(H)\\) denotes a hydrogen-containing state of the host rather than necessarily a unique chemical compound.\n\n---\n\n# 34. Hydrogen Diffusion\n\nA simple continuum approximation may use Fick's law:\n\n$$\n\\mathbf J_H\n=\n-D_H\\nabla C_H\n$$\n\nand:\n\n$$\n\\frac{\\partial C_H}{\\partial t}\n=\nD_H\\nabla^2C_H\n$$\n\nunder suitable assumptions.\n\nIn real solids:\n\n$$\nD_H\n=\nF(\nT,\n\\text{phase},\n\\text{defects},\n\\text{traps},\n\\text{stress},\n\\text{composition}\n)\n$$\n\nso one universal diffusion coefficient is not valid.\n\n---\n\n# 35. Hydrogen Embrittlement\n\nCanonical relationship:\n\n```text\nMAT:0001\nAFFECTS-MECHANICAL-BEHAVIOUR-OF\nHOST MATERIAL\n```\n\nHydrogen exposure can reduce useful mechanical performance in susceptible materials through mechanisms involving hydrogen transport, trapping, microstructure and stress.\n\nPossible observed effects include:\n\n* loss of ductility;\n* reduced fracture resistance;\n* accelerated fatigue crack growth;\n* hydrogen-assisted cracking;\n* degradation under sustained stress.\n\nHydrogen embrittlement is **not** encoded as:\n\n```text\nhydrogen.embrittlement = true\n```\n\nfor every metal.\n\nInstead:\n\n$$\nHE\n=\nF(\nM,\nS,\nT,\nP_H,\nC_H,\n\\sigma,\n\\dot\\epsilon,\nt,\n\\text{microstructure},\n\\text{history}\n)\n$$\n\nwhere:\n\n* \\(M\\) = host material;\n* \\(S\\) = material state;\n* \\(P_H\\) = hydrogen pressure or chemical potential;\n* \\(C_H\\) = hydrogen concentration;\n* \\(\\sigma\\) = stress;\n* \\(\\dot\\epsilon\\) = strain rate;\n* \\(t\\) = exposure time.\n\n---\n\n## 35.1 Embrittlement Data Object\n\n```yaml\nhost_material_id:\nhydrogen_state:\nhydrogen_pressure:\nhydrogen_concentration:\ntemperature:\nstress_state:\nstrain_rate:\nmicrostructure:\nexposure_time:\nfracture_metric:\nfatigue_metric:\nresult:\nsource:\n```\n\nThis is a **relationship measurement**, not an intrinsic elemental constant.\n\n---\n\n# 36. Hydrogen Storage Relationship Layer\n\nHydrogen storage is divided into major mechanism families.\n\n```text\nPHYSICAL STORAGE\nMATERIALS-BASED STORAGE\nCHEMICAL-CARRIER STORAGE\n```\n\n---\n\n## 36.1 Compressed Gas\n\nCanonical state:\n\n```text\nH2(g), elevated pressure\n```\n\nRelevant properties:\n\n* pressure;\n* temperature;\n* vessel volume;\n* hydrogen mass;\n* density;\n* permeation;\n* vessel material;\n* cycling;\n* safety.\n\nCurrent practical systems may use very high pressures, including vehicle systems around the 700-bar class.\n\n---\n\n## 36.2 Liquid Hydrogen\n\nCanonical state:\n\n```text\nH2(l), cryogenic\n```\n\nImportant variables:\n\n* temperature;\n* pressure;\n* ortho/para composition;\n* density;\n* boil-off;\n* heat leak;\n* insulation;\n* storage duration.\n\nLiquid hydrogen storage is not equivalent to compressed ambient-temperature gas storage.\n\n---\n\n## 36.3 Cryo-Compressed Hydrogen\n\nCombines:\n\n```text\nlow temperature\n+\nelevated pressure\n```\n\nto increase stored density.\n\nThe state must retain both variables.\n\n---\n\n## 36.4 Metal Hydrides\n\nExamples of important relationship families include:\n\n```text\nH-Mg\nH-Ti\nH-La-Ni systems\nH-complex hydrides\n```\n\nA simplified relationship may be:\n\n$$\nM+xH_2\n\\rightleftharpoons\nMH_{2x}\n$$\n\nbut actual stoichiometry and phase behavior are material-specific.\n\nImportant metrics:\n\n```text\ngravimetric capacity\nvolumetric capacity\nabsorption pressure\ndesorption pressure\ntemperature\nreaction enthalpy\nreaction kinetics\ncycle life\nhysteresis\nimpurities\n```\n\n---\n\n## 36.5 Palladium Relationship\n\nPalladium is an important example of hydrogen uptake into a metallic lattice.\n\nCanonical relationship class:\n\n```text\nABSORBS-HYDROGEN\n```\n\nRelevant variables:\n\n* pressure;\n* temperature;\n* H/Pd ratio;\n* phase;\n* diffusion;\n* lattice expansion;\n* cycling history.\n\n---\n\n## 36.6 Catalytic Metals\n\nMetals such as nickel and platinum-group materials may catalyse hydrogen reactions.\n\nCanonical relationship:\n\n```text\nCATALYSES-HYDROGEN-REACTION\n```\n\nThis is different from:\n\n```text\nSTORES-HYDROGEN\n```\n\neven if both functions occur in some systems.\n\n---\n\n## 36.7 Carbon and Porous Hosts\n\nPorous materials may store molecular hydrogen through adsorption.\n\nExamples of research classes include:\n\n* activated carbons;\n* porous carbons;\n* metal-organic frameworks;\n* other high-surface-area sorbents.\n\nImportant variables include:\n\n* surface area;\n* pore volume;\n* pore-size distribution;\n* binding energy;\n* temperature;\n* pressure.\n\n---\n\n## 36.8 Boron and Complex Hydrides\n\nBoron-containing compounds appear in chemical/complex-hydride storage families.\n\nMAT represents:\n\n```text\nelement relationship\n```\n\nseparately from:\n\n```text\nspecific storage compound\n```\n\nso storage capacity is not falsely assigned directly to elemental boron or hydrogen.\n\n---\n\n# 37. Storage State Function\n\nHydrogen-storage performance is generally:\n\n$$\nS_H\n=\nF(\nM,\nC,\nX,\nT,\nP,\nt,\n\\text{cycle},\n\\text{geometry}\n)\n$$\n\nwhere:\n\n* \\(M\\) = storage material/system;\n* \\(C\\) = composition;\n* \\(X\\) = structure;\n* \\(T\\) = temperature;\n* \\(P\\) = pressure;\n* \\(t\\) = time;\n* `cycle` = cycling history.\n\nThis means storage capacity without conditions is scientifically incomplete.\n\n---\n\n# 38. Process Routes\n\nHydrogen participates in many process families.\n\n---\n\n## 38.1 Thermal\n\nExamples:\n\n$$\nH_2\n\\xrightarrow{\\Delta T}\n2H\n$$\n\nat sufficient thermal excitation.\n\nAt still higher energy:\n\n$$\nH\n\\rightarrow\nH^+ + e^-\n$$\n\nbecomes possible.\n\nThe actual populations are determined by thermodynamic and kinetic conditions.\n\n---\n\n## 38.2 Cryogenic\n\n$$\nH_2(g)\n\\rightarrow\nH_2(l)\n\\rightarrow\nH_2(s)\n$$\n\nwith ortho/para conversion also relevant to cryogenic thermodynamics.\n\n---\n\n## 38.3 Electrolysis\n\nGeneric water electrolysis:\n\n$$\n2H_2O\n\\rightarrow\n2H_2+O_2\n$$\n\ndriven by electrical energy through an electrochemical system.\n\nMAT distinguishes:\n\n```text\nelectrical energy input\nelectrochemical device\nfeed material\nhydrogen product\noxygen coproduct\nefficiency\n```\n\n---\n\n## 38.4 Fuel-Cell Conversion\n\nA hydrogen fuel-cell process may convert:\n\n```text\nchemical free energy\n→\nelectrical output\n+\nheat\n```\n\nThe simplified overall reaction for hydrogen and oxygen is:\n\n$$\n2H_2+O_2\n\\rightarrow\n2H_2O\n$$\n\nActual performance depends on cell chemistry, temperature, catalysts and operating conditions.\n\n---\n\n## 38.5 Photonic\n\nPhotons may:\n\n* excite H;\n* excite H₂;\n* dissociate H₂;\n* ionise H/H₂;\n\nwhen energy and selection conditions permit.\n\n---\n\n## 38.6 Plasma\n\nA simplified progression:\n\n$$\nH_2\n\\rightarrow\nH\n\\rightarrow\nH^++e^-\n$$\n\nmay occur in discharge/plasma systems.\n\nActual plasma chemistry is more complex.\n\n---\n\n## 38.7 Catalytic\n\nSurface process:\n\n$$\nH_2\n\\rightarrow\n2H_{\\rm ads}\n$$\n\nmay be catalysed by suitable surfaces.\n\nThe reverse process:\n\n$$\n2H_{\\rm ads}\n\\rightarrow\nH_2\n$$\n\nmay also occur.\n\n---\n\n## 38.8 High Pressure\n\nHigh pressure changes:\n\n* intermolecular spacing;\n* phase stability;\n* molecular orientation;\n* bonding;\n* electronic behavior.\n\nHigh-pressure hydrogen therefore requires dedicated phase/state records.\n\n---\n\n## 38.9 Nuclear\n\nNuclear processes include:\n\n* D-D fusion;\n* D-T fusion;\n* proton reactions;\n* neutron interactions;\n* tritium decay.\n\nThese are not chemical processing routes.\n\n---\n\n# 39. Environment Matrix\n\n| Environment        | Important Hydrogen Response                              |\n| ------------------ | -------------------------------------------------------- |\n| Vacuum             | desorption, free atomic/molecular behavior               |\n| Cryogenic          | liquid/solid states, ortho/para equilibrium              |\n| High temperature   | dissociation and increasing ionisation                   |\n| High pressure      | dense phases and altered electronic structure            |\n| Electric field     | Stark response; charged-particle acceleration            |\n| Magnetic field     | Zeeman/hyperfine/spin/plasma response                    |\n| RF / microwave     | state-dependent excitation and plasma heating            |\n| Optical            | excitation, dissociation, ionisation                     |\n| Plasma confinement | charged-particle transport and fusion relevance          |\n| Radiation          | excitation, ionisation and possible nuclear interactions |\n| Microgravity       | changed macroscopic fluid behavior                       |\n| Metal host         | absorption, diffusion, trapping, hydride formation       |\n| Porous host        | adsorption                                               |\n| Biological         | proton-transfer and hydrogen-bond networks               |\n\nEnvironment effects must be linked to the specific hydrogen state.\n\n---\n\n# 40. Frequency / Field Response Engine\n\nA field-response input should contain:\n\n$$\nI=\n(\n\\nu,\nA,\n\\phi,\n\\theta,\nT,\nP,\nt,\nS\n)\n$$\n\nwhere:\n\n* \\(\\nu\\) = frequency;\n* \\(A\\) = field amplitude;\n* \\(\\phi\\) = phase;\n* \\(\\theta\\) = orientation;\n* \\(T\\) = temperature;\n* \\(P\\) = pressure;\n* \\(t\\) = duration;\n* \\(S\\) = hydrogen state.\n\nResponse:\n\n$$\nR_H\n=\nF(I)\n$$\n\nThis is more physically meaningful than asking for:\n\n```text\nthe frequency of hydrogen\n```\n\nwithout specifying the mechanism.\n\n---\n\n# 41. Causali E Hydrogen Test Case\n\nHydrogen provides a useful controlled example for Causali E.\n\nStarting state:\n\n$$\nB=H_2\n$$\n\nPossible interventions:\n\n$$\nA=\n\\{\nT,\nP,\nh\\nu,\n\\mathbf E,\n\\mathbf B,\n\\text{catalyst},\n\\text{surface}\n\\}\n$$\n\nCandidate outcomes might include:\n\n$$\nC_1=H_2^*\n$$\n\n$$\nC_2=2H\n$$\n\n$$\nC_3=H^++e^-+H\n$$\n\n$$\nC_4=H_{\\rm ads}\n$$\n\n$$\nC_5=H_{\\rm host}\n$$\n\n$$\nC_6=MH_x\n$$\n\n$$\nC_7=H_{\\rm plasma}\n$$\n\nThe scientifically safer general form is:\n\n$$\nC_i\n=\nF(\nS_0,\nA,\nB,\nE,\nt\n)\n$$\n\nrather than assuming a single universal output.\n\nAll generated outcomes remain subject to:\n\n```text\nquantum mechanics\nthermodynamics\nkinetics\nconservation\nmaterial constraints\nevidence\n```\n\n---\n\n# 42. Energy Input / Output Matrix\n\n| Input               | Possible Hydrogen-Related Output                 |\n| ------------------- | ------------------------------------------------ |\n| electrical          | chemical H₂ through electrolysis                 |\n| chemical H₂         | heat through combustion/reaction                 |\n| chemical H₂         | electrical energy through fuel-cell conversion   |\n| D/T nuclear states  | fusion products and nuclear energy               |\n| radioactive tritium | beta decay products and heat                     |\n| optical             | excited, dissociated or ionised states           |\n| RF / microwave      | plasma excitation/heating                        |\n| electric field      | charged-particle acceleration                    |\n| magnetic field      | charged-particle trajectory/spin response        |\n| thermal             | excitation, dissociation and eventual ionisation |\n\nSystem efficiency must be recorded separately from theoretical energy availability.\n\n---\n\n# 43. Chemical Energy\n\nHydrogen possesses high specific chemical energy when reacted with an oxidant.\n\nFor comparison purposes, hydrogen's lower heating value is approximately:\n\n$$\n120\\ \\mathrm{MJ\\,kg^{-1}}\n$$\n\nbut its low volumetric density creates storage challenges.\n\nThe value belongs to a defined chemical reaction and energy convention.\n\nIt is not a generic intrinsic \"energy stored inside an isolated H atom.\"\n\n---\n\n# 44. Time Dependence\n\nHydrogen contains many distinct characteristic times.\n\n---\n\n## 44.1 Electronic Lifetime\n\n$$\n\\tau_{\\rm electronic}\n$$\n\nfor excited atomic/molecular states.\n\n---\n\n## 44.2 Molecular Collision and Reaction Time\n\n$$\n\\tau_{\\rm chemical}\n$$\n\ndepending on:\n\n* temperature;\n* pressure;\n* concentrations;\n* mechanism.\n\n---\n\n## 44.3 Diffusion Time\n\nA characteristic diffusion scale may behave approximately as:\n\n$$\nt_D\n\\sim\n\\frac{L^2}{D}\n$$\n\nfor appropriate simple diffusion geometries.\n\n---\n\n## 44.4 Tritium Radioactive Clock\n\n$$\nt_{1/2}\n\\approx\n12.32\\ {\\rm y}\n$$\n\n---\n\n## 44.5 Material-Degradation Clock\n\nHydrogen exposure may alter materials gradually over:\n\n```text\nseconds\nhours\ndays\ncycles\nyears\n```\n\ndepending on system and conditions.\n\nTherefore:\n\n$$\nMAT:0001\n=\nMAT:0001(t)\n$$\n\nfor state-dependent properties.\n\n---\n\n# 45. Scale Dependence\n\nHydrogen demonstrates MAT's multiscale architecture particularly clearly.\n\n```text\nNUCLEAR\n→ isotope stability, decay, fusion\n\nATOMIC\n→ ionisation, spin, spectrum\n\nMOLECULAR\n→ H2 bonding, vibration, rotation\n\nNANOSCALE\n→ adsorption, surface diffusion\n\nMICROSCALE\n→ trapping, defects, microstructure interaction\n\nBULK HOST\n→ permeation, hydride formation, embrittlement\n\nPLASMA\n→ collective charged-particle behavior\n\nBIOLOGICAL\n→ proton transfer, water and hydrogen bonding\n\nINDUSTRIAL\n→ production, storage, transport and conversion\n```\n\nA model valid at one scale must not automatically be transferred to another.\n\n---\n\n# 46. Safety\n\nHydrogen is not inherently toxic in the conventional chemical-toxicity sense, but hydrogen systems can present substantial physical hazards.\n\nMajor safety classes include:\n\n```text\nFLAMMABLE GAS\nIGNITION HAZARD\nPRESSURIZED GAS\nCRYOGENIC HAZARD\nOXYGEN-DISPLACEMENT / ASPHYXIATION HAZARD\nMATERIAL-COMPATIBILITY HAZARD\nNEARLY INVISIBLE FLAME\nLEAK / PERMEATION HAZARD\n```\n\n---\n\n## 46.1 Fire and Ignition\n\nHydrogen forms flammable mixtures with air over a broad concentration range and has relatively low ignition-energy requirements.\n\nSafe systems therefore require appropriate:\n\n* ventilation;\n* leak detection;\n* ignition control;\n* flame detection;\n* pressure relief;\n* engineering design.\n\n---\n\n## 46.2 Flame Visibility\n\nHydrogen flames can be difficult to see.\n\nSpecialized flame detection may therefore be required in industrial systems.\n\n---\n\n## 46.3 High Pressure\n\nCompressed hydrogen requires pressure-rated:\n\n* vessels;\n* valves;\n* piping;\n* fittings;\n* regulators;\n* seals.\n\nStored mechanical energy in the pressure system represents a hazard independently of combustion.\n\n---\n\n## 46.4 Cryogenic Hydrogen\n\nLiquid hydrogen introduces additional hazards including:\n\n* extreme cold;\n* material thermal contraction;\n* cold burns;\n* boil-off;\n* pressure rise;\n* condensation/freezing of atmospheric gases;\n* cryogenic material compatibility.\n\n---\n\n## 46.5 Material Compatibility\n\nHydrogen can affect mechanical behavior in susceptible alloys.\n\nMaterial selection must therefore consider:\n\n```text\nhydrogen compatibility\npressure\ntemperature\nstress\nfatigue\nfracture\npermeation\ncycling\n```\n\n---\n\n## 46.6 Tritium\n\nTritium introduces a separate:\n\n```text\nRADIOACTIVE\n```\n\nsafety class.\n\nIts radiological controls must remain separate from ordinary H₂ fuel safety.\n\n---\n\n# 47. Application Domains\n\nHydrogen-related applications include:\n\n```text\nchemical feedstock\nammonia production\nmethanol production\npetroleum processing\nreduction chemistry\nfuel cells\ncombustion\nenergy storage\nrocket propulsion\nmetallurgy\nsemiconductor processing\nplasma processing\ncryogenics\nfusion research\nisotope tracing\nneutron-related research\nspectroscopy\natomic physics\nastronomy\n```\n\nEach application must identify the relevant state.\n\nFor example:\n\n```text\nH2\n```\n\nmay be relevant to fuel or chemical processing while:\n\n```text\n3H\n```\n\nmay be relevant to isotope/fusion/radiotracer applications.\n\n---\n\n# 48. Sustainability and Environmental Context\n\nHydrogen is an **energy carrier and chemical feedstock**, not automatically a primary energy source.\n\nEnvironmental impact depends strongly on production pathway.\n\nRelevant MAT process fields therefore include:\n\n```text\nfeedstock\nenergy source\nelectricity source\nproduction efficiency\nwater requirement\ncarbon emissions\nmethane leakage\ncarbon capture\ntransport\nstorage losses\nhydrogen leakage\nend use\n```\n\nThe same chemical product:\n\n$$\nH_2\n$$\n\ncan therefore have very different lifecycle impacts.\n\n---\n\n# 49. Storage and Transport Sustainability\n\nHydrogen's high specific energy but low ambient volumetric density means storage and transport may require:\n\n* compression;\n* liquefaction;\n* conversion into a carrier;\n* adsorption;\n* hydride formation.\n\nEnergy consumed by storage and delivery must therefore be included in full-system analysis.\n\n---\n\n# 50. Evidence Hierarchy for Hydrogen\n\n## High-confidence measured/evaluated core\n\n```text\natomic number\natomic/isotopic masses\nstable isotope identity\ntritium decay\nionisation energy\nelectron affinity\natomic spectra\nhyperfine structure\nH2 spectroscopy\nordinary phase behaviour\nconventional chemistry\n```\n\n---\n\n## Established theoretical frameworks\n\n```text\nquantum atomic structure\nmolecular quantum mechanics\nthermodynamics\nchemical kinetics\ndiffusion\nelectromagnetism\nplasma physics\nnuclear reaction physics\n```\n\n---\n\n## Computational / active research\n\nExamples include:\n\n```text\nnovel hydrogen storage materials\nnew high-pressure phases\nnew catalysts\nnanostructured adsorption systems\nextreme-state predictions\n```\n\nThese must retain model and validation status.\n\n---\n\n# 51. Historical and Unconventional Overlays\n\nThe legacy Genesis record intentionally preserved non-mainstream frequency schemes such as historical/community \"Rife\" or Russell-related mappings.\n\nMAT does **not** delete them from project history.\n\nHowever they must reside outside the measured scientific core.\n\nRecommended future structure:\n\n```text\nrelationships/\n└── historical-overlays/\n    ├── 0001-Hydrogen-H-Russell-Overlay.yaml\n    └── 0001-Hydrogen-H-Rife-Overlay.yaml\n```\n\nClassification:\n\n```yaml\nscientific_status: HISTORICAL_OR_UNVERIFIED\nevidence_type: UNVERIFIED\ncore_property: false\n```\n\nThey may be compared against measured spectra, but they must never overwrite:\n\n```text\nMEASURED SPECTRAL DATA\n```\n\nunless reproducible evidence establishes a valid physical relationship.\n\n---\n\n# 52. Primary Hydrogen Relationship Vector\n\nHydrogen's strongest relationship groups include:\n\n## Direct Chemistry\n\n```text\nO\nC\nN\nS\nhalogens\nmany metals\n```\n\n---\n\n## Storage / Transport\n\n```text\nMg\nPd\nNi\nB\nC\nporous hosts\ncomplex hydrides\n```\n\nThe relationship mechanism must be labelled.\n\n---\n\n## Nuclear\n\n```text\n1H\n2H\n3H\nHe isotopes\nneutrons\n```\n\n---\n\n## Semiconductor / Materials Processing\n\nHydrogen may interact with:\n\n```text\nSi\nC\nGa-containing semiconductors\nmetals\noxides\n```\n\nthrough processes including:\n\n* passivation;\n* plasma treatment;\n* etching chemistry;\n* defect interaction;\n* surface chemistry.\n\n---\n\n## Biological\n\nMajor graph neighbors include:\n\n```text\nC\nO\nN\nP\nS\n```\n\nthrough biomolecular chemistry.\n\n---\n\n## Plasma / MHD\n\nThese relationships are often driven primarily by:\n\n```text\ncharge state\nelectron density\nfields\ntemperature\nconfinement\n```\n\nrather than proximity to one neighboring element.\n\n---\n\n# 53. Hydrogen State Cloud\n\nThe parent node should eventually render conceptually as:\n\n$$\n\\boxed{\nH,\\quad Z=1\n}\n$$\n\nsurrounded by state classes:\n\n$$\n\\{\n{}^1H,\n{}^2H,\n{}^3H,\n{}^4H,\n{}^5H,\n{}^6H,\n{}^7H,\nH^-,\nH,\nH^+,\nH_2,\nHD,\nD_2,\nHT,\nDT,\nT_2,\nH_2^*,\nH_{\\rm ads},\nH_{\\rm host},\nMH_x,\nH_{\\rm plasma},\n\\dots\n\\}\n$$\n\nThis is one of the defining examples of why MAT is an atlas rather than a conventional periodic table.\n\n---\n\n# 54. Updated Migration Status\n\n```yaml\nlegacy_record: \"G0001\"\n\nmigration:\n  identity: COMPLETE\n  isotopes: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  quantum: CORE-COMPLETE\n  spectroscopy: CORE-COMPLETE\n  molecular_hydrogen: CORE-COMPLETE\n  ionization: COMPLETE\n  plasma: CORE-COMPLETE\n  chemistry: CORE-COMPLETE\n  organic_context: COMPLETE\n  inorganic_context: COMPLETE\n  biological_context: COMPLETE\n  materials_interactions: CORE-COMPLETE\n  embrittlement: CORE-COMPLETE\n  storage: CORE-COMPLETE\n  processes: CORE-COMPLETE\n  environments: CORE-COMPLETE\n  energy: CORE-COMPLETE\n  time: COMPLETE\n  scale: COMPLETE\n  safety: CORE-COMPLETE\n  sustainability: CORE-COMPLETE\n  applications: CORE-COMPLETE\n\nremaining:\n  - individual compound records\n  - detailed thermophysical property tables\n  - phase datasets\n  - plasma species tables\n  - people/intellectual-lineage\n  - generated assets\n  - final audit\n```\n\n---\n\n# 55. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nschema_validation_status: \"PASS\"\nscientific_validation_status: \"CORE-VALIDATED\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  filenames: \"PASS\"\n  evidence_architecture: \"PASS\"\n  source_registry: \"PASS\"\n  forward_references: \"PASS\"\n  scientific_core: \"VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\nDo not yet mark the legacy `G0001` file archived or fully migrated.\n\nThe storage and safety wording above follows DOE's current split between compressed/cryogenic storage and material-based approaches such as metal hydrides, chemical storage materials and sorbents. DOE also explicitly treats hydrogen embrittlement/material compatibility, leak detection, ventilation and flame detection as important engineering concerns. ([The Department of Energy's Energy.gov][1])\n\nNIST's hydrogen thermophysical work also supports keeping **parahydrogen, normal hydrogen and orthohydrogen as distinguishable thermodynamic models**, instead of putting every H₂ property into one generic table. ([NIST][2])\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0001-Hydrogen-H-Nuclear-Evaluation.md) provides 7 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "7dd433ea57a92585648ba680a35e1034d7cb2b946f5f53f2f80c7556cb0b5566",
   "header": {
     "mat_id": "MAT:0001",
     "record_name": "Hydrogen",
@@ -568,6 +568,496 @@
           "missing_value_as_zero": false,
           "isotope_mass_is_element_atomic_weight": false
         }
+      }
+    },
+    {
+      "path": "records/0001-Hydrogen-H/data/isotopes/0001-Hydrogen-H-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0001:REG:NUBASE2020",
+        "record_id": "MAT:0001",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 1,
+            "Z": 1,
+            "N": 0,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "1H",
+            "mass_excess": {
+              "value": 7288.971064,
+              "unit": "keV",
+              "raw": "7288.971064",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.000013",
+              "uncertainty": 0.000013
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "1/2+*",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1920",
+            "decay_and_abundance_raw": "IS=99.9855 78",
+            "source_line": 27,
+            "raw_line": "001 0010   1H       7288.971064   0.000013                            stbl              1/2+*         06          1920 IS=99.9855 78",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0001:ISO:H-1",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:1:0"
+          },
+          {
+            "A": 2,
+            "Z": 1,
+            "N": 1,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "2H",
+            "mass_excess": {
+              "value": 13135.722895,
+              "unit": "keV",
+              "raw": "13135.722895",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.000015",
+              "uncertainty": 0.000015
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "1+*",
+            "ensdf_update_year_raw": "03",
+            "discovery_year_raw": "1932",
+            "decay_and_abundance_raw": "IS=0.0145 78",
+            "source_line": 28,
+            "raw_line": "002 0010   2H      13135.722895   0.000015                            stbl              1+*           03          1932 IS=0.0145 78",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0001:ISO:H-2",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:2:0"
+          },
+          {
+            "A": 3,
+            "Z": 1,
+            "N": 2,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "3H",
+            "mass_excess": {
+              "value": 14949.8109,
+              "unit": "keV",
+              "raw": "14949.81090",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.00008",
+              "uncertainty": 0.00008
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 12.32,
+              "unit": "y",
+              "raw": "12.32",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.02",
+              "uncertainty": 0.02,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+*",
+            "ensdf_update_year_raw": "00",
+            "discovery_year_raw": "1934",
+            "decay_and_abundance_raw": "B-=100",
+            "source_line": 29,
+            "raw_line": "003 0010   3H      14949.81090    0.00008                              12.32   y 0.02   1/2+*         00          1934 B-=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.05626194647402153,
+                "unit": "1/y",
+                "relation": "=",
+                "uncertainty": 0.00009133432869159338
+              },
+              "mean_lifetime": {
+                "value": 17.77400290375203,
+                "unit": "y",
+                "relation": "=",
+                "uncertainty": 0.02885390081777927
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0001:ISO:H-3",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:3:0"
+          },
+          {
+            "A": 4,
+            "Z": 1,
+            "N": 3,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "4H",
+            "mass_excess": {
+              "value": 24620,
+              "unit": "keV",
+              "raw": "24620",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "100",
+              "uncertainty": 100
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 139,
+              "unit": "ys",
+              "raw": "139",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "10",
+              "uncertainty": 10,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2-",
+            "ensdf_update_year_raw": "98",
+            "discovery_year_raw": "1981",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 32,
+            "raw_line": "004 0010   4H      24620        100                                   139     ys 10     2-            98          1981 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0049866703637406135,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.00035875326357846137
+              },
+              "mean_lifetime": {
+                "value": 200.53461068356592,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 14.426950408889635
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0001:ISO:H-4",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:4:0"
+          },
+          {
+            "A": 5,
+            "Z": 1,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "5H",
+            "mass_excess": {
+              "value": 32890,
+              "unit": "keV",
+              "raw": "32890",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "90",
+              "uncertainty": 90
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 86,
+              "unit": "ys",
+              "raw": "86",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "6",
+              "uncertainty": 6,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(1/2+)",
+            "ensdf_update_year_raw": "19",
+            "discovery_year_raw": "1987",
+            "decay_and_abundance_raw": "2n=100",
+            "source_line": 35,
+            "raw_line": "005 0010   5H      32890         90                                    86     ys 6      (1/2+)        19          1987 2n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.00805985093674355,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.0005623151816332709
+              },
+              "mean_lifetime": {
+                "value": 124.07177351645086,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 8.656170245333781
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0001:ISO:H-5",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:5:0"
+          },
+          {
+            "A": 6,
+            "Z": 1,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "6H",
+            "mass_excess": {
+              "value": 41880,
+              "unit": "keV",
+              "raw": "41880",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "250",
+              "uncertainty": 250
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 294,
+              "unit": "ys",
+              "raw": "294",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "67",
+              "uncertainty": 67,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "2-#",
+            "ensdf_update_year_raw": "19",
+            "discovery_year_raw": "1984",
+            "decay_and_abundance_raw": "n ?;3n ?",
+            "source_line": 39,
+            "raw_line": "006 0010   6H      41880        250                                   294     ys 67     2-#           19          1984 n ?;3n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.002357643471292331,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.0005372860971992727
+              },
+              "mean_lifetime": {
+                "value": 424.15234202135525,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 96.66056773956055
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0001:ISO:H-6",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:6:0"
+          },
+          {
+            "A": 7,
+            "Z": 1,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "7H",
+            "mass_excess": {
+              "value": 49140,
+              "unit": "keV",
+              "raw": "49140#",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": true,
+              "uncertainty_raw": "1000#",
+              "uncertainty": 1000
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 652,
+              "unit": "ys",
+              "raw": "652",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "558",
+              "uncertainty": 558,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2+#",
+            "ensdf_update_year_raw": "17",
+            "discovery_year_raw": "2003",
+            "decay_and_abundance_raw": "2n ?",
+            "source_line": 45,
+            "raw_line": "007 0010   7H      49140#      1000#                                  652     ys 558    1/2+#         17          2003 2n ?",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.001063109172637953,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.000909838831797512
+              },
+              "mean_lifetime": {
+                "value": 940.6371666596042,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 805.0238328160416
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0001:ISO:H-7",
+            "evaluation_entry_id": "MAT:0001:NUBASE2020:7:0"
+          }
+        ]
       }
     },
     {
@@ -1158,13 +1648,15 @@
             "table_id": "MAT:0001:TABLE:002",
             "filename": "0001-Hydrogen-H-TABLE-002-Atomic-Identity.md",
             "title": "Atomic Identity and Ground-State Properties",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:003",
             "filename": "0001-Hydrogen-H-TABLE-003-Charge-States.md",
             "title": "Hydrogen Charge States",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:004",
@@ -1176,31 +1668,36 @@
             "table_id": "MAT:0001:TABLE:005",
             "filename": "0001-Hydrogen-H-TABLE-005-H2-Spectroscopic-Constants.md",
             "title": "Molecular Hydrogen Spectroscopic Constants",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:006",
             "filename": "0001-Hydrogen-H-TABLE-006-Phase-Reference-Points.md",
             "title": "Hydrogen Phase Reference Points",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:007",
             "filename": "0001-Hydrogen-H-TABLE-007-Process-Matrix.md",
             "title": "Hydrogen Process Matrix",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:008",
             "filename": "0001-Hydrogen-H-TABLE-008-Material-Interactions.md",
             "title": "Hydrogen Material Interactions",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           },
           {
             "table_id": "MAT:0001:TABLE:009",
             "filename": "0001-Hydrogen-H-TABLE-009-Evidence-and-Sources.md",
             "title": "Hydrogen Evidence and Source Matrix",
-            "status": "PLANNED"
+            "status": "EXISTS",
+            "scientific_review_status": "NEEDS-REVIEW"
           }
         ]
       }
@@ -1222,13 +1719,27 @@
             "asset_id": "MAT:0001:FIG:V02:001",
             "filename": "0001-Hydrogen-H-FIG-002-Atomic-Identity.svg",
             "path": "images/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen atomic identity (MAT:0001). H · Z = 1. 1 proton / 1 electron. [1.00784, 1.00811]. standard atomic weight. 1s1 · 2S1/2. ground state. I1 = 13.598434599702 eV. ionization (SRC-H-001). EA = 0.754195 eV. electron affinity. s-block · group 1. period 1. Values: NIST ASD / NIST isotope table via MAT:0001. Bohr-style orbits NOT literal.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/scientific/0001-Hydrogen-H-FIG-002-Atomic-Identity.svg",
+              "sha256": "766646488d3e7743c85391bfc3f30e85e781e8aab3e16c161c237e4638ea8446",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V03": {
             "asset_id": "MAT:0001:DIAGRAM:V03:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-001-H2-Bonding.svg",
             "path": "diagrams/bonding/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "H2 bonding (X1Σg+, re = 0.74144 Å). H–H. re 0.74144 Å. ωe 4401.21. cm−1 (SRC-H-006). Be 60.8530. cm−1 (SRC-H-006). H2 · HD · D2. isotopologues. HT · DT · T2. isotopologues. ortho / para. spin isomers. Geometry, vibration, rotation are distinct quantities.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/bonding/0001-Hydrogen-H-DIAGRAM-001-H2-Bonding.svg",
+              "sha256": "1671f9cd4e3b8a1a471bf85d916bbcb14d873d5d6892b88474bde3b7b2d9f463",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V04": {
             "assets": [
@@ -1242,67 +1753,152 @@
               }
             ],
             "path": "images/quantum/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "H 1s radial probability density (ideal). maximum at r = a0. r / a0. P(r)·a0. Ideal nonrelativistic 1s: Pdr/a0. Probability density is not a classical orbit. / H atomic energy levels (ideal Coulomb + measured excitations). 1s. -13.6 eV. 2p: 10.1988 eV exc.. -3.4 eV. 3p: 12.0875. -1.51 eV. 4p: 12.7485. -0.85 eV. 5p: 13.0545. -0.54 eV. 6p: 13.2207. -0.38 eV. continuum. Ideal En=−13.6/n² eV; excitations NIST ASD. Selection rules govern transitions. Units: eV.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0001-Hydrogen-H/images/quantum/0001-Hydrogen-H-FIG-003-1s-Probability-Density.svg",
+                  "sha256": "098a7bd85925b9c197141f3c8088ff6a0f15dba6625cb89ccc5952592de3124d"
+                },
+                {
+                  "source": "records/0001-Hydrogen-H/images/quantum/0001-Hydrogen-H-FIG-004-Energy-Level-Structure.svg",
+                  "sha256": "2d00fa109c0df018b419cf7a5a26aee072698e8e2905f8e3ee191ad2e2968c84"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V05": {
             "asset_id": "MAT:0001:FIG:V05:001",
             "filename": "0001-Hydrogen-H-FIG-005-Isotope-Map.svg",
             "path": "images/isotope/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen isotopes 1H–7H (NUCLEAR SCHEMATIC). 1H Protium. 1p 0n · STABLE. 2H Deuterium. 1p 1n · STABLE. 3H Tritium. 1p 2n · 12.32 y β−. 4H Hydrogen-4. 1p 3n · ~139 ys. 5H Hydrogen-5. 1p 4n · ~86 ys. 6H Hydrogen-6. 1p 5n · ~294 ys eval.. 7H Hydrogen-7. 1p 6n · highly uncertain. NUCLEAR SCHEMATIC — not literal nucleon positions. NUBASE2020 via SRC-H-004.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/isotope/0001-Hydrogen-H-FIG-005-Isotope-Map.svg",
+              "sha256": "ad27daa23ff44402dd45dc401d868e640769957c8607ef7d67010dc4a41d4eee",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V06": {
             "asset_id": "MAT:0001:FIG:V06:001",
             "filename": "0001-Hydrogen-H-FIG-006-Spectral-Fingerprint.svg",
             "path": "images/spectral/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen spectral fingerprint — NO universal frequency. Electronic. Ly-α ~121.6 nm · Hα ~656.3. Hyperfine. 1420.405751768 MHz. H2 vibration. ωe 4401.21 cm−1. H2 rotation. Be 60.8530 cm−1. Fine structure. relativistic + Lamb. Plasma / NMR. state-dependent. Mechanism-resolved. Hyperfine = 1H ground-state transition ONLY.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/spectral/0001-Hydrogen-H-FIG-006-Spectral-Fingerprint.svg",
+              "sha256": "f84906335438c6a68c6b6d47d9e53f7951a8bbc6ee5e40b32b1a50989cdf947b",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V07": {
             "asset_id": "MAT:0001:FIG:V07:001",
             "filename": "0001-Hydrogen-H-FIG-007-Physical-Property-Dashboard.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen states — properties belong to states. Atomic H. 1s · I1 13.5984 eV. H2 gas. X1Σg+ · re 0.74144 Å. para-H2. low-T equilibrium. ortho-H2. spin isomer. Liquid H2. Tb(e-H2) 20.271 K. Plasma. Te/Ti/ne dependent. No generic density/boiling point without state.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/properties/0001-Hydrogen-H-FIG-007-Physical-Property-Dashboard.svg",
+              "sha256": "bbe9990aaf17cead884d587a6868b450791ed83b80cd2f6bf85d9d4b89a23264",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V08": {
             "asset_id": "MAT:0001:DIAGRAM:V08:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-002-Charge-and-Electrical-State.svg",
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen charge states (I1 = 13.5984 eV). H−. hydride anion. H. neutral atom. H+ / D+ / T+. isotope-labeled ions. H2+. molecular ion. H3+. triatomic ion. plasma. Te/Ti/ne family. Conductivity is state-dependent.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/fields/0001-Hydrogen-H-DIAGRAM-002-Charge-and-Electrical-State.svg",
+              "sha256": "06b26358f4b2cd9cb10536fe33dd878e921bbab1a1da2664928dc784b5b7383b",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V09": {
             "asset_id": "MAT:0001:DIAGRAM:V09:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-003-Magnetic-Spin-Field-State.svg",
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen spin / field states. electron spin 1/2. Zeeman splitting. proton I = 1/2. hyperfine 1420 MHz. deuteron I = 1. spin-1 effects. triton I = 1/2. hyperfine. ortho-H2. triplet nuclear spin. para-H2. singlet nuclear spin. Not a permanent bar magnet.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/fields/0001-Hydrogen-H-DIAGRAM-003-Magnetic-Spin-Field-State.svg",
+              "sha256": "a06e6da367c92569f805cf5be6ecc723c362d1a2b3c6a88313be4706e69cee3e",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V10": {
             "asset_id": "MAT:0001:FIG:V10:001",
             "filename": "0001-Hydrogen-H-FIG-008-Thermal-Cryogenic-State.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen thermal / cryogenic states. Tb = 20.271 K. equilibrium H2 (SRC-H-007). normal-H2. 75% ortho / 25% para. para-H2. low-T favored. ortho-H2. spin isomer. H2 solid. cryogenic + pressure. H2 gas. ambient reference. Ortho/para composition affects thermodynamics.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/properties/0001-Hydrogen-H-FIG-008-Thermal-Cryogenic-State.svg",
+              "sha256": "4fb99b8d1d47d4baa7e589efce9b5c51cbb2292e4f11752582e7e9c4414ced56",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V11": {
             "asset_id": "MAT:0001:DIAGRAM:V11:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-004-Host-Material-Interaction.svg",
             "path": "diagrams/processes/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen host-material pathway. H2 gas. surface adsorption. atomic H (dissociated). absorption / diffusion. trapping. hydride / degradation (host-dependent). Embrittlement is host/state/stress/history-dependent.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/processes/0001-Hydrogen-H-DIAGRAM-004-Host-Material-Interaction.svg",
+              "sha256": "281abd95dfdf5fe4a335237e2aec5bbad2ada9102809d100b1201168da6c1e40",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V12": {
             "asset_id": "MAT:0001:FIG:V12:001",
             "filename": "0001-Hydrogen-H-FIG-009-Phase-Environment-Map.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "H2 phase reference skeleton (partial data). Tb(e-H2) = 20.271 K. triple point: DATA-REQUIRED. critical point: DATA-REQUIRED. T (K, 0–30 shown). Only Tb plotted (SRC-H-007). Curves require SRC-H-008 EOS extraction.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/properties/0001-Hydrogen-H-FIG-009-Phase-Environment-Map.svg",
+              "sha256": "a374f3ba99a4f94dee75bc302c332ae8fb0cd53b78d6c3ae57711bd817ed5f07",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V13": {
             "asset_id": "MAT:0001:DIAGRAM:V13:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-005-Transformation-Network.svg",
             "path": "diagrams/processes/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen transformation network (chemical branch). H2O electrolysis → H2. H2 compression / liquefaction. H2 dissociation → 2H. ionization → plasma. fuel-cell oxidation → H2O. D + T FUSION → 4He + n (nuclear, separate). Chemical and nuclear arrows never merged.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/processes/0001-Hydrogen-H-DIAGRAM-005-Transformation-Network.svg",
+              "sha256": "c03aafbfb89187d235ddcce884735bb06e9fe08e2a495a13ff9820e581988709",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V14": {
             "asset_id": "MAT:0001:DIAGRAM:V14:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-006-Knowledge-Graph.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "MAT:0001 knowledge-graph edge classes. MAT:0001 Hydrogen. — ISOTOPE-OF —. — ION-STATE-OF —. — ATOMIC-STATE-OF —. — FORMS-MOLECULE —. — ISOTOPOLOGUE-OF —. — NUCLEAR-SPIN-ISOMER-OF —. — DECAYS-TO —. — FUSES-WITH —. — FORMS-COMPOUNDS-WITH —. — FORMS-HYDRIDE-WITH —. Full edges: 0001-Hydrogen-H-Relationships.yaml.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/relationships/0001-Hydrogen-H-DIAGRAM-006-Knowledge-Graph.svg",
+              "sha256": "fa881b1e41ec2055931165e7dbb8e86980f4cd80c7712c313237f78d639a8444",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V15": {
             "assets": [
@@ -1316,7 +1912,22 @@
               }
             ],
             "path": "models/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "1s Probability: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result. H2 Molecule: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result.",
+            "description_provenance": {
+              "method": "Editorial description from retained filename and inspected glTF scene structure",
+              "review_status": "STRUCTURE-INSPECTED-SCIENTIFIC-GEOMETRY-UNVERIFIED",
+              "sources": [
+                {
+                  "path": "records/0001-Hydrogen-H/models/scientific/0001-Hydrogen-H-MODEL-SCI-001-1s-Probability.glb",
+                  "sha256": "5497d786f4db982b1ff19a9679366cd8cb2b7128c0af61d1bc29a454c07b9f1f"
+                },
+                {
+                  "path": "records/0001-Hydrogen-H/models/scientific/0001-Hydrogen-H-MODEL-SCI-002-H2-Molecule.glb",
+                  "sha256": "1f1ad828c45ccf743793ce97d2de69b24af77a464fcab4592f8cbdbc0d00e221"
+                }
+              ]
+            }
           },
           "V16": {
             "asset_id": "MAT:0001:MODEL:DATA:001",
@@ -1328,13 +1939,27 @@
             "asset_id": "MAT:0001:FIG:V17:001",
             "filename": "0001-Hydrogen-H-FIG-010-Applications.svg",
             "path": "images/applications/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen applications by state. H2 fuel/feedstock. fuel cells · ammonia. 2H / 3H fusion. D–T research. 3H tracer. isotope science. Atomic H. spectroscopy · plasma. LH2. rocket · cryogenics. H2 industry. refining · metals. Each use requires its state. DOE context.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/images/applications/0001-Hydrogen-H-FIG-010-Applications.svg",
+              "sha256": "08710a2c162048e1dc8fd26f166a5f8c1f69375075e735353d569e9668704028",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V18": {
             "asset_id": "MAT:0001:DIAGRAM:V18:001",
             "filename": "0001-Hydrogen-H-DIAGRAM-007-Evidence-Provenance.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Hydrogen evidence provenance. MEASUREMENT → MAT object. EVALUATION (NIST/NUBASE) → adopted value. NEW 2025 6H data → kept separate. HYPOTHESIS → test → verdict. AI extraction = method, never source. New measurement never silently rewrites evaluation.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0001-Hydrogen-H/diagrams/relationships/0001-Hydrogen-H-DIAGRAM-007-Evidence-Provenance.svg",
+              "sha256": "57fb2f7ea69cd1e9eb7647ca450ea6881fcaecb02c788fbdafc70437828b5613",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           }
         },
         "summary": {
@@ -1800,127 +2425,181 @@
         "version": "1.0.0",
         "relationships": [
           {
-            "relationship_id": "REL-H-0001",
+            "relationship_id": "MAT:0001:REL:0001",
             "source": "MAT:0001:ISO:H-1",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "ESTABLISHED"
+            "evidence": "ESTABLISHED",
+            "legacy_relationship_ids": [
+              "REL-H-0001"
+            ]
           },
           {
-            "relationship_id": "REL-H-0002",
+            "relationship_id": "MAT:0001:REL:0002",
             "source": "MAT:0001:ISO:H-2",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "ESTABLISHED"
+            "evidence": "ESTABLISHED",
+            "legacy_relationship_ids": [
+              "REL-H-0002"
+            ]
           },
           {
-            "relationship_id": "REL-H-0003",
+            "relationship_id": "MAT:0001:REL:0003",
             "source": "MAT:0001:ISO:H-3",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "ESTABLISHED"
+            "evidence": "ESTABLISHED",
+            "legacy_relationship_ids": [
+              "REL-H-0003"
+            ]
           },
           {
-            "relationship_id": "REL-H-0004",
+            "relationship_id": "MAT:0001:REL:0004",
             "source": "MAT:0001:ISO:H-4",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "MEASURED"
+            "evidence": "MEASURED",
+            "legacy_relationship_ids": [
+              "REL-H-0004"
+            ]
           },
           {
-            "relationship_id": "REL-H-0005",
+            "relationship_id": "MAT:0001:REL:0005",
             "source": "MAT:0001:ISO:H-5",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "MEASURED"
+            "evidence": "MEASURED",
+            "legacy_relationship_ids": [
+              "REL-H-0005"
+            ]
           },
           {
-            "relationship_id": "REL-H-0006",
+            "relationship_id": "MAT:0001:REL:0006",
             "source": "MAT:0001:ISO:H-6",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "MEASURED"
+            "evidence": "MEASURED",
+            "legacy_relationship_ids": [
+              "REL-H-0006"
+            ]
           },
           {
-            "relationship_id": "REL-H-0007",
+            "relationship_id": "MAT:0001:REL:0007",
             "source": "MAT:0001:ISO:H-7",
             "type": "ISOTOPE-OF",
             "target": "MAT:0001",
-            "evidence": "MEASURED"
+            "evidence": "MEASURED",
+            "legacy_relationship_ids": [
+              "REL-H-0007"
+            ]
           },
           {
-            "relationship_id": "REL-H-0010",
+            "relationship_id": "MAT:0001:REL:0008",
             "source": "MAT:0001:ION:H-1",
             "type": "ION-STATE-OF",
             "target": "MAT:0001",
-            "charge": -1
+            "charge": -1,
+            "legacy_relationship_ids": [
+              "REL-H-0010"
+            ]
           },
           {
-            "relationship_id": "REL-H-0011",
+            "relationship_id": "MAT:0001:REL:0009",
             "source": "MAT:0001:ATOM:H",
             "type": "ATOMIC-STATE-OF",
             "target": "MAT:0001",
-            "charge": 0
+            "charge": 0,
+            "legacy_relationship_ids": [
+              "REL-H-0011"
+            ]
           },
           {
-            "relationship_id": "REL-H-0012",
+            "relationship_id": "MAT:0001:REL:0010",
             "source": "MAT:0001:ION:H+1",
             "type": "ION-STATE-OF",
             "target": "MAT:0001",
             "charge": 1,
-            "note": "Nuclear identity must remain attached because H+, D+ and T+ contain different nuclei.\n"
+            "note": "Nuclear identity must remain attached because H+, D+ and T+ contain different nuclei.\n",
+            "legacy_relationship_ids": [
+              "REL-H-0012"
+            ]
           },
           {
-            "relationship_id": "REL-H-0020",
+            "relationship_id": "MAT:0001:REL:0011",
             "source": "MAT:0001",
             "type": "FORMS-MOLECULE",
             "target": "MAT:0001:MOL:H2",
-            "formula": "H2"
+            "formula": "H2",
+            "legacy_relationship_ids": [
+              "REL-H-0020"
+            ]
           },
           {
-            "relationship_id": "REL-H-0021",
+            "relationship_id": "MAT:0001:REL:0012",
             "source": "MAT:0001:MOL:HD",
             "type": "ISOTOPOLOGUE-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0021"
+            ]
           },
           {
-            "relationship_id": "REL-H-0022",
+            "relationship_id": "MAT:0001:REL:0013",
             "source": "MAT:0001:MOL:D2",
             "type": "ISOTOPOLOGUE-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0022"
+            ]
           },
           {
-            "relationship_id": "REL-H-0023",
+            "relationship_id": "MAT:0001:REL:0014",
             "source": "MAT:0001:MOL:HT",
             "type": "ISOTOPOLOGUE-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0023"
+            ]
           },
           {
-            "relationship_id": "REL-H-0024",
+            "relationship_id": "MAT:0001:REL:0015",
             "source": "MAT:0001:MOL:DT",
             "type": "ISOTOPOLOGUE-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0024"
+            ]
           },
           {
-            "relationship_id": "REL-H-0025",
+            "relationship_id": "MAT:0001:REL:0016",
             "source": "MAT:0001:MOL:T2",
             "type": "ISOTOPOLOGUE-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0025"
+            ]
           },
           {
-            "relationship_id": "REL-H-0026",
+            "relationship_id": "MAT:0001:REL:0017",
             "source": "MAT:0001:MOL:H2:ORTHO",
             "type": "NUCLEAR-SPIN-ISOMER-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0026"
+            ]
           },
           {
-            "relationship_id": "REL-H-0027",
+            "relationship_id": "MAT:0001:REL:0018",
             "source": "MAT:0001:MOL:H2:PARA",
             "type": "NUCLEAR-SPIN-ISOMER-OF",
-            "target": "MAT:0001:MOL:H2"
+            "target": "MAT:0001:MOL:H2",
+            "legacy_relationship_ids": [
+              "REL-H-0027"
+            ]
           },
           {
-            "relationship_id": "REL-H-0030",
+            "relationship_id": "MAT:0001:REL:0019",
             "source": "MAT:0001:ISO:H-3",
             "type": "DECAYS-TO",
             "target": "MAT:0002:ISO:He-3",
@@ -1929,30 +2608,39 @@
             "branching_fraction": 1,
             "source_ids": [
               "SRC-000008"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0030"
             ]
           },
           {
-            "relationship_id": "REL-H-0031",
+            "relationship_id": "MAT:0001:REL:0020",
             "source": "MAT:0001:ISO:H-4",
             "type": "DECAYS-TO",
             "target": "MAT:0001:ISO:H-3",
             "mechanism": "NEUTRON-EMISSION",
             "source_ids": [
               "SRC-000008"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0031"
             ]
           },
           {
-            "relationship_id": "REL-H-0032",
+            "relationship_id": "MAT:0001:REL:0021",
             "source": "MAT:0001:ISO:H-5",
             "type": "DECAYS-TO",
             "target": "MAT:0001:ISO:H-3",
             "mechanism": "TWO-NEUTRON-EMISSION",
             "source_ids": [
               "SRC-000008"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0032"
             ]
           },
           {
-            "relationship_id": "REL-H-0040",
+            "relationship_id": "MAT:0001:REL:0022",
             "source": "MAT:0001:ISO:H-2",
             "type": "FUSES-WITH",
             "target": "MAT:0001:ISO:H-3",
@@ -1963,10 +2651,13 @@
             ],
             "reaction": "2H + 3H -> 4He + n",
             "reaction_class": "NUCLEAR",
-            "approximate_q_value_MeV": 17.5893
+            "approximate_q_value_MeV": 17.5893,
+            "legacy_relationship_ids": [
+              "REL-H-0040"
+            ]
           },
           {
-            "relationship_id": "REL-H-0050",
+            "relationship_id": "MAT:0001:REL:0023",
             "source": "MAT:0001",
             "type": "FORMS-COMPOUNDS-WITH",
             "target_status": "RESOLVED",
@@ -1975,10 +2666,13 @@
             "examples": [
               "H2O",
               "H2O2"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0050"
             ]
           },
           {
-            "relationship_id": "REL-H-0051",
+            "relationship_id": "MAT:0001:REL:0024",
             "source": "MAT:0001",
             "type": "FORMS-COMPOUNDS-WITH",
             "target_status": "RESOLVED",
@@ -1987,10 +2681,13 @@
             "examples": [
               "hydrocarbons",
               "organic compounds"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0051"
             ]
           },
           {
-            "relationship_id": "REL-H-0052",
+            "relationship_id": "MAT:0001:REL:0025",
             "source": "MAT:0001",
             "type": "FORMS-COMPOUNDS-WITH",
             "target_status": "RESOLVED",
@@ -1998,10 +2695,13 @@
             "target_name": "Nitrogen",
             "examples": [
               "NH3"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0052"
             ]
           },
           {
-            "relationship_id": "REL-H-0053",
+            "relationship_id": "MAT:0001:REL:0026",
             "source": "MAT:0001",
             "type": "FORMS-COMPOUNDS-WITH",
             "target_status": "RESERVED-PENDING-RECORD",
@@ -2009,64 +2709,85 @@
             "target_name": "Sulfur",
             "examples": [
               "H2S"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0053"
             ]
           },
           {
-            "relationship_id": "REL-H-0060",
+            "relationship_id": "MAT:0001:REL:0027",
             "source": "MAT:0001",
             "type": "FORMS-HYDRIDE-WITH",
             "target_status": "RESERVED-PENDING-RECORD",
             "target": "MAT:0012",
             "target_name": "Magnesium",
-            "example": "MgH2"
+            "example": "MgH2",
+            "legacy_relationship_ids": [
+              "REL-H-0060"
+            ]
           },
           {
-            "relationship_id": "REL-H-0061",
+            "relationship_id": "MAT:0001:REL:0028",
             "source": "MAT:0001",
             "type": "ABSORBED-BY",
             "target_status": "RESERVED-PENDING-RECORD",
             "target": "MAT:0046",
             "target_name": "Palladium",
-            "conditions_required": true
+            "conditions_required": true,
+            "legacy_relationship_ids": [
+              "REL-H-0061"
+            ]
           },
           {
-            "relationship_id": "REL-H-0062",
+            "relationship_id": "MAT:0001:REL:0029",
             "source": "MAT:0001",
             "type": "CATALYTIC-RELATIONSHIP-WITH",
             "target_status": "RESERVED-PENDING-RECORD",
             "target": "MAT:0028",
             "target_name": "Nickel",
-            "note": "Catalytic relationship does not automatically imply storage."
+            "note": "Catalytic relationship does not automatically imply storage.",
+            "legacy_relationship_ids": [
+              "REL-H-0062"
+            ]
           },
           {
-            "relationship_id": "REL-H-0063",
+            "relationship_id": "MAT:0001:REL:0030",
             "source": "MAT:0001",
             "type": "STORAGE-MATERIAL-RELATIONSHIP-WITH",
             "target_status": "RESOLVED",
             "target": "MAT:0005",
             "target_name": "Boron",
-            "mechanism": "COMPLEX-HYDRIDE / CHEMICAL-STORAGE-FAMILY"
+            "mechanism": "COMPLEX-HYDRIDE / CHEMICAL-STORAGE-FAMILY",
+            "legacy_relationship_ids": [
+              "REL-H-0063"
+            ]
           },
           {
-            "relationship_id": "REL-H-0064",
+            "relationship_id": "MAT:0001:REL:0031",
             "source": "MAT:0001",
             "type": "ADSORPTION-RELATIONSHIP-WITH",
             "target_status": "RESERVED-PENDING-RECORD",
             "target": "MAT:0006",
             "target_name": "Carbon",
-            "mechanism": "POROUS-CARBON-ADSORPTION"
+            "mechanism": "POROUS-CARBON-ADSORPTION",
+            "legacy_relationship_ids": [
+              "REL-H-0064"
+            ]
           },
           {
-            "relationship_id": "REL-H-0070",
+            "relationship_id": "MAT:0001:REL:0032",
             "source": "MAT:0001",
             "type": "CAN-AFFECT-MECHANICAL-BEHAVIOUR-OF",
             "target_scope": "HYDROGEN-SUSCEPTIBLE-HOST-MATERIALS",
             "mechanism_family": "HYDROGEN-ASSISTED-DEGRADATION",
             "intrinsic_property_of_hydrogen": false,
-            "conditions_required": true
+            "conditions_required": true,
+            "legacy_relationship_ids": [
+              "REL-H-0070"
+            ]
           },
           {
-            "relationship_id": "REL-H-0080",
+            "relationship_id": "MAT:0001:REL:0033",
             "source": "MAT:0001",
             "type": "BIOLOGICAL-CONTEXT-WITH",
             "target_status": "RESERVED-PENDING-RECORD",
@@ -2082,13 +2803,19 @@
               "proton_transfer",
               "water",
               "hydrogen_bonding"
+            ],
+            "legacy_relationship_ids": [
+              "REL-H-0080"
             ]
           },
           {
-            "relationship_id": "REL-H-0090",
+            "relationship_id": "MAT:0001:REL:0034",
             "source": "MAT:0001",
             "type": "LEGACY-SUCCESSOR-OF",
-            "target": "G0001"
+            "target": "G0001",
+            "legacy_relationship_ids": [
+              "REL-H-0090"
+            ]
           }
         ],
         "rules": {
@@ -2509,7 +3236,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000009",

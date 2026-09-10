@@ -6,10 +6,13 @@ import { buildVisualsIndex } from "./visuals-index.mjs";
 import { buildIdentityIndex } from "./identity-index.mjs";
 import { buildPeriodicIndex } from "./periodic-index.mjs";
 import { buildOfflineIndex } from "./offline-index.mjs";
+import { buildStyles } from "./styles.mjs";
 
+buildStyles();
 const { chapters, flat } = buildManifest();
 buildSearchIndex(flat);
 buildVisualsIndex();
 buildIdentityIndex();
 buildPeriodicIndex();
+await import('../export-single.mjs');
 buildOfflineIndex({ chapters });

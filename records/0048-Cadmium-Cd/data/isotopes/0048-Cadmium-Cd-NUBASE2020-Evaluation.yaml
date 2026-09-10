@@ -1,0 +1,4130 @@
+registry_id: MAT:0048:REG:NUBASE2020
+record_id: MAT:0048
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 94
+    Z: 48
+    N: 46
+    state_index: 0
+    state_label: ground
+    source_label: 94Cd
+    mass_excess:
+      value: -40440
+      unit: keV
+      raw: -40440#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 80
+      unit: ms
+      raw: 80#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">760ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "2016"
+    decay_and_abundance_raw: B+ ?; B+p ?
+    source_line: 1579
+    raw_line: 094 0480   94Cd   -40440#       500#                                   80#    ms >760ns 0+            16          2016
+      B+ ?; B+p ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.008664339756999316
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 115.41560327111708
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-94
+    evaluation_entry_id: MAT:0048:NUBASE2020:94:0
+  - A: 95
+    Z: 48
+    N: 47
+    state_index: 0
+    state_label: ground
+    source_label: 95Cd
+    mass_excess:
+      value: -47060
+      unit: keV
+      raw: -47060#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 570#
+      uncertainty: 570
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 32
+      unit: ms
+      raw: "32"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+      status: RADIOACTIVE
+    spin_parity_raw: 9/2+#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: B+=100;B+p=4.6 11
+    source_line: 1605
+    raw_line: 095 0480   95Cd   -47060#       570#                                   32     ms 3      9/2+#                     2011
+      B+=100;B+p=4.6 11
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.02166084939249829
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0020307046305467146
+      mean_lifetime:
+        value: 46.16624130844683
+        unit: ms
+        relation: =
+        uncertainty: 4.328085122666891
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-95
+    evaluation_entry_id: MAT:0048:NUBASE2020:95:0
+  - A: 96
+    Z: 48
+    N: 48
+    state_index: 0
+    state_label: ground
+    source_label: 96Cd
+    mass_excess:
+      value: -55570
+      unit: keV
+      raw: -55570#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 410#
+      uncertainty: 410
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1003
+      unit: ms
+      raw: "1003"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "47"
+      uncertainty: 47
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2008"
+    decay_and_abundance_raw: B+=100;B+p=1.6 3
+    source_line: 1631
+    raw_line: 096 0480   96Cd   -55570#       410#                                 1003     ms 47     0+            10          2008
+      B+=100;B+p=1.6 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0006910739586838936
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003238332607990329
+      mean_lifetime:
+        value: 1447.0231260116304
+        unit: ms
+        relation: =
+        uncertainty: 67.80666692178129
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-96
+    evaluation_entry_id: MAT:0048:NUBASE2020:96:0
+  - A: 96
+    Z: 48
+    N: 48
+    state_index: 1
+    state_label: m
+    source_label: 96Cd
+    mass_excess:
+      value: -49540
+      unit: keV
+      raw: -49540#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 1450#
+      uncertainty: 1450
+    excitation_energy:
+      value: 6030
+      unit: keV
+      raw: "6030"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1390"
+      uncertainty: 1390
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 511
+      unit: ms
+      raw: "511"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "26"
+      uncertainty: 26
+      status: RADIOACTIVE
+    spin_parity_raw: 16+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: B+=100;B+p=15.4 21
+    source_line: 1632
+    raw_line: 096 0481   96Cd m -49540#      1450#       6030       1390            511     ms 26     16+           10          2011
+      B+=100;B+p=15.4 21
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001356452408140793
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0000690171479680247
+      mean_lifetime:
+        value: 737.2171658942603
+        unit: ms
+        relation: =
+        uncertainty: 37.51007106311305
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-96m
+    evaluation_entry_id: MAT:0048:NUBASE2020:96:1
+  - A: 96
+    Z: 48
+    N: 48
+    state_index: 2
+    state_label: n
+    source_label: 96Cd
+    mass_excess:
+      value: -49970
+      unit: keV
+      raw: -49970#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 410#
+      uncertainty: 410
+    excitation_energy:
+      value: 5605
+      unit: keV
+      raw: "5605"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 198
+      unit: ns
+      raw: "198"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "18"
+      uncertainty: 18
+      status: RADIOACTIVE
+    spin_parity_raw: (12-,13-)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: IT=100
+    source_line: 1633
+    raw_line: 096 0482   96Cd n -49970#       410#       5605          5            198     ns 18     (12-,13-)                 2019 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00350074333616134
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00031824939419648545
+      mean_lifetime:
+        value: 285.6536180960148
+        unit: ns
+        relation: =
+        uncertainty: 25.968510736001342
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-96n
+    evaluation_entry_id: MAT:0048:NUBASE2020:96:2
+  - A: 97
+    Z: 48
+    N: 49
+    state_index: 0
+    state_label: ground
+    source_label: 97Cd
+    mass_excess:
+      value: -60730
+      unit: keV
+      raw: "-60730"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "420"
+      uncertainty: 420
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.16
+      unit: s
+      raw: "1.16"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: (9/2+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B+=100;B+p=7.4 2
+    source_line: 1658
+    raw_line: 097 0480   97Cd   -60730        420                                     1.16   s 0.05   (9/2+)        10          1978
+      B+=100;B+p=7.4 2
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.5975406728965046
+        unit: 1/s
+        relation: =
+        uncertainty: 0.025756063486918307
+      mean_lifetime:
+        value: 1.6735262474311976
+        unit: s
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-97
+    evaluation_entry_id: MAT:0048:NUBASE2020:97:0
+  - A: 97
+    Z: 48
+    N: 49
+    state_index: 1
+    state_label: m
+    source_label: 97Cd
+    mass_excess:
+      value: -59480
+      unit: keV
+      raw: "-59480"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "420"
+      uncertainty: 420
+    excitation_energy:
+      value: 1245.1
+      unit: keV
+      raw: "1245.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 730
+      unit: us
+      raw: "730"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "70"
+      uncertainty: 70
+      status: RADIOACTIVE
+    spin_parity_raw: (1/2-)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: IT=100
+    source_line: 1659
+    raw_line: 097 0481   97Cd m -59480        420        1245.1        0.2          730     us 70     (1/2-)                    2019 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0009495166856985552
+        unit: 1/us
+        relation: =
+        uncertainty: 0.00009104954520397104
+      mean_lifetime:
+        value: 1053.1673798489433
+        unit: us
+        relation: =
+        uncertainty: 100.98865286222744
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-97m
+    evaluation_entry_id: MAT:0048:NUBASE2020:97:1
+  - A: 97
+    Z: 48
+    N: 49
+    state_index: 2
+    state_label: n
+    source_label: 97Cd
+    mass_excess:
+      value: -58110
+      unit: keV
+      raw: "-58110"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "720"
+      uncertainty: 720
+    excitation_energy:
+      value: 2620
+      unit: keV
+      raw: "2620"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "580"
+      uncertainty: 580
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.86
+      unit: s
+      raw: "3.86"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: (25/2+)
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: B+=100;B+p=25.1 5
+    source_line: 1660
+    raw_line: 097 0482   97Cd n -58110        720        2620        580              3.86   s 0.06   (25/2+)       10          1982
+      B+=100;B+p=25.1 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.179571808435219
+        unit: 1/s
+        relation: =
+        uncertainty: 0.002791271633708067
+      mean_lifetime:
+        value: 5.568802857831399
+        unit: s
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-97n
+    evaluation_entry_id: MAT:0048:NUBASE2020:97:2
+  - A: 98
+    Z: 48
+    N: 50
+    state_index: 0
+    state_label: ground
+    source_label: 98Cd
+    mass_excess:
+      value: -67640
+      unit: keV
+      raw: "-67640"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 9.29
+      unit: s
+      raw: "9.29"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B+=100;B+p<0.029
+    source_line: 1689
+    raw_line: 098 0480   98Cd   -67640         50                                     9.29   s 0.10   0+            20          1978
+      B+=100;B+p<0.029
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.074612183052739
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0008031451351209797
+      mean_lifetime:
+        value: 13.402636929858469
+        unit: s
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-98
+    evaluation_entry_id: MAT:0048:NUBASE2020:98:0
+  - A: 98
+    Z: 48
+    N: 50
+    state_index: 1
+    state_label: m
+    source_label: 98Cd
+    mass_excess:
+      value: -65210
+      unit: keV
+      raw: "-65210"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: 2428.3
+      unit: keV
+      raw: "2428.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 154
+      unit: ns
+      raw: "154"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "16"
+      uncertainty: 16
+      status: RADIOACTIVE
+    spin_parity_raw: (8+)
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "1996"
+    decay_and_abundance_raw: IT=100
+    source_line: 1690
+    raw_line: 098 0481   98Cd m -65210         50        2428.3        0.4          154     ns 16     (8+)          20          1996 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004500955717921723
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0004676317629009582
+      mean_lifetime:
+        value: 222.17503629690037
+        unit: ns
+        relation: =
+        uncertainty: 23.083120654223414
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-98m
+    evaluation_entry_id: MAT:0048:NUBASE2020:98:1
+  - A: 98
+    Z: 48
+    N: 50
+    state_index: 2
+    state_label: n
+    source_label: 98Cd
+    mass_excess:
+      value: -61010
+      unit: keV
+      raw: "-61010"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+    excitation_energy:
+      value: 6635
+      unit: keV
+      raw: "6635"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 224
+      unit: ns
+      raw: "224"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: (12+)
+    ensdf_update_year_raw: "20"
+    discovery_year_raw: "2004"
+    decay_and_abundance_raw: IT=100
+    source_line: 1691
+    raw_line: 098 0482   98Cd n -61010         50        6635          2            224     ns 5      (12+)         20          2004 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.003094407056071184
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0000690715860730175
+      mean_lifetime:
+        value: 323.16368915912784
+        unit: ns
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-98n
+    evaluation_entry_id: MAT:0048:NUBASE2020:98:2
+  - A: 99
+    Z: 48
+    N: 51
+    state_index: 0
+    state_label: ground
+    source_label: 99Cd
+    mass_excess:
+      value: -69931.1
+      unit: keV
+      raw: "-69931.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.6"
+      uncertainty: 1.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 17
+      unit: s
+      raw: "17"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B+=100;B+p=0.21 2;B+A<1e-4
+    source_line: 1714
+    raw_line: 099 0480   99Cd   -69931.1        1.6                                  17      s 1      5/2+#         17          1978
+      B+=100;B+p=0.21 2;B+A<1e-4
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.04077336356234972
+        unit: 1/s
+        relation: =
+        uncertainty: 0.002398433150726454
+      mean_lifetime:
+        value: 24.525815695112378
+        unit: s
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-99
+    evaluation_entry_id: MAT:0048:NUBASE2020:99:0
+  - A: 100
+    Z: 48
+    N: 52
+    state_index: 0
+    state_label: ground
+    source_label: 100Cd
+    mass_excess:
+      value: -74194.6
+      unit: keV
+      raw: "-74194.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.7"
+      uncertainty: 1.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 49.1
+      unit: s
+      raw: "49.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1970"
+    decay_and_abundance_raw: B+=100
+    source_line: 1741
+    raw_line: 100 0480   100Cd  -74194.6        1.7                                  49.1    s 0.5    0+            10          1970 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01411705052056915
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0001437581519406227
+      mean_lifetime:
+        value: 70.83632650764811
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-100
+    evaluation_entry_id: MAT:0048:NUBASE2020:100:0
+  - A: 101
+    Z: 48
+    N: 53
+    state_index: 0
+    state_label: ground
+    source_label: 101Cd
+    mass_excess:
+      value: -75836.5
+      unit: keV
+      raw: "-75836.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.36
+      unit: m
+      raw: "1.36"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "1969"
+    decay_and_abundance_raw: B+=100
+    source_line: 1764
+    raw_line: 101 0480   101Cd  -75836.5        1.5                                   1.36   m 0.05   5/2+*         06          1969 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.5096670445293715
+        unit: 1/m
+        relation: =
+        uncertainty: 0.018737758990050424
+      mean_lifetime:
+        value: 1.9620652556089904
+        unit: m
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-101
+    evaluation_entry_id: MAT:0048:NUBASE2020:101:0
+  - A: 102
+    Z: 48
+    N: 54
+    state_index: 0
+    state_label: ground
+    source_label: 102Cd
+    mass_excess:
+      value: -79659.7
+      unit: keV
+      raw: "-79659.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.7"
+      uncertainty: 1.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.5
+      unit: m
+      raw: "5.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1969"
+    decay_and_abundance_raw: B+=100
+    source_line: 1784
+    raw_line: 102 0480   102Cd  -79659.7        1.7                                   5.5    m 0.5    0+            09          1969 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.12602676010180824
+        unit: 1/m
+        relation: =
+        uncertainty: 0.011456978191073476
+      mean_lifetime:
+        value: 7.934822724889299
+        unit: m
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-102
+    evaluation_entry_id: MAT:0048:NUBASE2020:102:0
+  - A: 103
+    Z: 48
+    N: 55
+    state_index: 0
+    state_label: ground
+    source_label: 103Cd
+    mass_excess:
+      value: -80651.6
+      unit: keV
+      raw: "-80651.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.8"
+      uncertainty: 1.8
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.3
+      unit: m
+      raw: "7.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.1"
+      uncertainty: 0.1
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1960"
+    decay_and_abundance_raw: B+=100
+    source_line: 1803
+    raw_line: 103 0480   103Cd  -80651.6        1.8                                   7.3    m 0.1    5/2+*         09          1960 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.09495166856985553
+        unit: 1/m
+        relation: =
+        uncertainty: 0.001300707788628158
+      mean_lifetime:
+        value: 10.531673798489432
+        unit: m
+        relation: =
+        uncertainty: 0.14426950408889636
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-103
+    evaluation_entry_id: MAT:0048:NUBASE2020:103:0
+  - A: 104
+    Z: 48
+    N: 56
+    state_index: 0
+    state_label: ground
+    source_label: 104Cd
+    mass_excess:
+      value: -83968.4
+      unit: keV
+      raw: "-83968.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.7"
+      uncertainty: 1.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 57.7
+      unit: m
+      raw: "57.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1955"
+    decay_and_abundance_raw: B+=100
+    source_line: 1824
+    raw_line: 104 0480   104Cd  -83968.4        1.7                                  57.7    m 1.0    0+            07          1955 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012012949403118636
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00020819669676115486
+      mean_lifetime:
+        value: 83.2435038592932
+        unit: m
+        relation: =
+        uncertainty: 1.4426950408889634
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-104
+    evaluation_entry_id: MAT:0048:NUBASE2020:104:0
+  - A: 105
+    Z: 48
+    N: 57
+    state_index: 0
+    state_label: ground
+    source_label: 105Cd
+    mass_excess:
+      value: -84333.8
+      unit: keV
+      raw: "-84333.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.4"
+      uncertainty: 1.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 55.5
+      unit: m
+      raw: "55.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1950"
+    decay_and_abundance_raw: B+=100
+    source_line: 1844
+    raw_line: 105 0480   105Cd  -84333.8        1.4                                  55.5    m 0.4    5/2+*         19          1950 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012489138388467482
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00009001180820517104
+      mean_lifetime:
+        value: 80.06957476933748
+        unit: m
+        relation: =
+        uncertainty: 0.5770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-105
+    evaluation_entry_id: MAT:0048:NUBASE2020:105:0
+  - A: 105
+    Z: 48
+    N: 57
+    state_index: 1
+    state_label: m
+    source_label: 105Cd
+    mass_excess:
+      value: -81816.2
+      unit: keV
+      raw: "-81816.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: 2517.6
+      unit: keV
+      raw: "2517.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.5
+      unit: us
+      raw: "4.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: (21/2+)
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1976"
+    decay_and_abundance_raw: IT=100
+    source_line: 1845
+    raw_line: 105 0481   105Cdm -81816.2        1.5      2517.6        0.5            4.5   us 0.5    (21/2+)       19          1976 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.15403270679109896
+        unit: 1/us
+        relation: =
+        uncertainty: 0.017114745199010996
+      mean_lifetime:
+        value: 6.4921276840003355
+        unit: us
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-105m
+    evaluation_entry_id: MAT:0048:NUBASE2020:105:1
+  - A: 106
+    Z: 48
+    N: 58
+    state_index: 0
+    state_label: ground
+    source_label: 106Cd
+    mass_excess:
+      value: -87132.2
+      unit: keV
+      raw: "-87132.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.1"
+      uncertainty: 1.1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ">1.1Zy"
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1935"
+    decay_and_abundance_raw: IS=1.245 22;2B+ ?
+    source_line: 1865
+    raw_line: 106 0480   106Cd  -87132.2        1.1                                 stbl       >1.1Zy 0+            08          1935
+      IS=1.245 22;2B+ ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-106
+    evaluation_entry_id: MAT:0048:NUBASE2020:106:0
+  - A: 107
+    Z: 48
+    N: 59
+    state_index: 0
+    state_label: ground
+    source_label: 107Cd
+    mass_excess:
+      value: -86990.3
+      unit: keV
+      raw: "-86990.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.7"
+      uncertainty: 1.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6.5
+      unit: h
+      raw: "6.50"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1946"
+    decay_and_abundance_raw: B+=100
+    source_line: 1890
+    raw_line: 107 0480   107Cd  -86990.3        1.7                                   6.50   h 0.02   5/2+*         08          1946 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.10663802777845312
+        unit: 1/h
+        relation: =
+        uncertainty: 0.00032811700854908657
+      mean_lifetime:
+        value: 9.377517765778263
+        unit: h
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-107
+    evaluation_entry_id: MAT:0048:NUBASE2020:107:0
+  - A: 108
+    Z: 48
+    N: 60
+    state_index: 0
+    state_label: ground
+    source_label: 108Cd
+    mass_excess:
+      value: -89252.4
+      unit: keV
+      raw: "-89252.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.1"
+      uncertainty: 1.1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ">410Py"
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1935"
+    decay_and_abundance_raw: IS=0.888 11;2B+ ?
+    source_line: 1910
+    raw_line: 108 0480   108Cd  -89252.4        1.1                                 stbl       >410Py 0+            08          1935
+      IS=0.888 11;2B+ ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-108
+    evaluation_entry_id: MAT:0048:NUBASE2020:108:0
+  - A: 109
+    Z: 48
+    N: 61
+    state_index: 0
+    state_label: ground
+    source_label: 109Cd
+    mass_excess:
+      value: -88504.3
+      unit: keV
+      raw: "-88504.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 461.3
+      unit: d
+      raw: "461.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1950"
+    decay_and_abundance_raw: EC=100
+    source_line: 1934
+    raw_line: 109 0480   109Cd  -88504.3        1.5                                 461.3    d 0.5    5/2+*         16          1950 EC=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015025952320831244
+        unit: 1/d
+        relation: =
+        uncertainty: 0.0000016286529721256498
+      mean_lifetime:
+        value: 665.5152223620788
+        unit: d
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-109
+    evaluation_entry_id: MAT:0048:NUBASE2020:109:0
+  - A: 109
+    Z: 48
+    N: 61
+    state_index: 1
+    state_label: m
+    source_label: 109Cd
+    mass_excess:
+      value: -88444.7
+      unit: keV
+      raw: "-88444.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: 59.6
+      unit: keV
+      raw: "59.60"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11.8
+      unit: us
+      raw: "11.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.6"
+      uncertainty: 1.6
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1956"
+    decay_and_abundance_raw: IT=100
+    source_line: 1935
+    raw_line: 109 0481   109Cdm -88444.7        1.5        59.60       0.07          11.8   us 1.6    1/2+          16          1956 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.058741286488130956
+        unit: 1/us
+        relation: =
+        uncertainty: 0.00796492020178047
+      mean_lifetime:
+        value: 17.02380148248977
+        unit: us
+        relation: =
+        uncertainty: 2.3083120654223417
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-109m
+    evaluation_entry_id: MAT:0048:NUBASE2020:109:1
+  - A: 109
+    Z: 48
+    N: 61
+    state_index: 2
+    state_label: n
+    source_label: 109Cd
+    mass_excess:
+      value: -88041.2
+      unit: keV
+      raw: "-88041.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_energy:
+      value: 463.1
+      unit: keV
+      raw: "463.10"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.11"
+      uncertainty: 0.11
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10.6
+      unit: us
+      raw: "10.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1964"
+    decay_and_abundance_raw: IT=100
+    source_line: 1936
+    raw_line: 109 0482   109Cdn -88041.2        1.5       463.10       0.11          10.6   us 0.4    11/2-         16          1964 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06539124344905145
+        unit: 1/us
+        relation: =
+        uncertainty: 0.0024675940924170363
+      mean_lifetime:
+        value: 15.292567433423011
+        unit: us
+        relation: =
+        uncertainty: 0.5770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-109n
+    evaluation_entry_id: MAT:0048:NUBASE2020:109:2
+  - A: 110
+    Z: 48
+    N: 62
+    state_index: 0
+    state_label: ground
+    source_label: 110Cd
+    mass_excess:
+      value: -90348
+      unit: keV
+      raw: "-90348.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=12.470 61
+    source_line: 1957
+    raw_line: 110 0480   110Cd  -90348.0        0.4                                 stbl              0+            12          1925
+      IS=12.470 61
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-110
+    evaluation_entry_id: MAT:0048:NUBASE2020:110:0
+  - A: 111
+    Z: 48
+    N: 63
+    state_index: 0
+    state_label: ground
+    source_label: 111Cd
+    mass_excess:
+      value: -89252.2
+      unit: keV
+      raw: "-89252.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=12.795 12
+    source_line: 1976
+    raw_line: 111 0480   111Cd  -89252.2        0.4                                 stbl              1/2+*         09          1925
+      IS=12.795 12
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-111
+    evaluation_entry_id: MAT:0048:NUBASE2020:111:0
+  - A: 111
+    Z: 48
+    N: 63
+    state_index: 1
+    state_label: m
+    source_label: 111Cd
+    mass_excess:
+      value: -88856
+      unit: keV
+      raw: "-88856.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_energy:
+      value: 396.214
+      unit: keV
+      raw: "396.214"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.021"
+      uncertainty: 0.021
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 48.5
+      unit: m
+      raw: "48.50"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1945"
+    decay_and_abundance_raw: IT=100
+    source_line: 1977
+    raw_line: 111 0481   111Cdm -88856.0        0.4       396.214      0.021         48.50   m 0.09   11/2-*        09          1945 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.014291694444534955
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00002652067010326074
+      mean_lifetime:
+        value: 69.97070948311473
+        unit: m
+        relation: =
+        uncertainty: 0.12984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-111m
+    evaluation_entry_id: MAT:0048:NUBASE2020:111:1
+  - A: 112
+    Z: 48
+    N: 64
+    state_index: 0
+    state_label: ground
+    source_label: 112Cd
+    mass_excess:
+      value: -90574.86
+      unit: keV
+      raw: "-90574.86"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.25"
+      uncertainty: 0.25
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=24.109 7
+    source_line: 1997
+    raw_line: 112 0480   112Cd  -90574.86       0.25                                stbl              0+            15          1925
+      IS=24.109 7
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-112
+    evaluation_entry_id: MAT:0048:NUBASE2020:112:0
+  - A: 113
+    Z: 48
+    N: 65
+    state_index: 0
+    state_label: ground
+    source_label: 113Cd
+    mass_excess:
+      value: -89043.29
+      unit: keV
+      raw: "-89043.29"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.24"
+      uncertainty: 0.24
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8.04
+      unit: Py
+      raw: "8.04"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=12.227 7;B-=100
+    source_line: 2021
+    raw_line: 113 0480   113Cd  -89043.29       0.24                                  8.04  Py 0.05   1/2+*         10          1925
+      IS=12.227 7;B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.08621233589054046
+        unit: 1/Py
+        relation: =
+        uncertainty: 0.0005361463674784855
+      mean_lifetime:
+        value: 11.599268128747266
+        unit: Py
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-113
+    evaluation_entry_id: MAT:0048:NUBASE2020:113:0
+  - A: 113
+    Z: 48
+    N: 65
+    state_index: 1
+    state_label: m
+    source_label: 113Cd
+    mass_excess:
+      value: -88779.75
+      unit: keV
+      raw: "-88779.75"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.24"
+      uncertainty: 0.24
+    excitation_energy:
+      value: 263.54
+      unit: keV
+      raw: "263.54"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 13.89
+      unit: y
+      raw: "13.89"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.11"
+      uncertainty: 0.11
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1965"
+    decay_and_abundance_raw: B-=99.9036 19;IT=0.0964 19
+    source_line: 2022
+    raw_line: 113 0481   113Cdm -88779.75       0.24      263.54       0.03          13.89   y 0.11   11/2-*        10          1965
+      B-=99.9036 19;IT=0.0964 19
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0499026047919327
+        unit: 1/y
+        relation: =
+        uncertainty: 0.0003951970141909717
+      mean_lifetime:
+        value: 20.039034117947704
+        unit: y
+        relation: =
+        uncertainty: 0.158696454497786
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-113m
+    evaluation_entry_id: MAT:0048:NUBASE2020:113:1
+  - A: 114
+    Z: 48
+    N: 66
+    state_index: 0
+    state_label: ground
+    source_label: 114Cd
+    mass_excess:
+      value: -90014.93
+      unit: keV
+      raw: "-90014.93"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.28"
+      uncertainty: 0.28
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ">92Py"
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=28.754 81;2B- ?
+    source_line: 2044
+    raw_line: 114 0480   114Cd  -90014.93       0.28                                stbl       >92Py  0+            12          1925
+      IS=28.754 81;2B- ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-114
+    evaluation_entry_id: MAT:0048:NUBASE2020:114:0
+  - A: 115
+    Z: 48
+    N: 67
+    state_index: 0
+    state_label: ground
+    source_label: 115Cd
+    mass_excess:
+      value: -88084.5
+      unit: keV
+      raw: "-88084.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 53.46
+      unit: h
+      raw: "53.46"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B-=100
+    source_line: 2068
+    raw_line: 115 0480   115Cd  -88084.5        0.7                                  53.46   h 0.05   1/2+*         12          1939 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012965716059856814
+        unit: 1/h
+        relation: =
+        uncertainty: 0.000012126558230318758
+      mean_lifetime:
+        value: 77.12647688592399
+        unit: h
+        relation: =
+        uncertainty: 0.07213475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-115
+    evaluation_entry_id: MAT:0048:NUBASE2020:115:0
+  - A: 115
+    Z: 48
+    N: 67
+    state_index: 1
+    state_label: m
+    source_label: 115Cd
+    mass_excess:
+      value: -87903.5
+      unit: keV
+      raw: "-87903.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.9"
+      uncertainty: 0.9
+    excitation_energy:
+      value: 181
+      unit: keV
+      raw: "181.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 44.56
+      unit: d
+      raw: "44.56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.24"
+      uncertainty: 0.24
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1959"
+    decay_and_abundance_raw: B-~100;IT ?
+    source_line: 2069
+    raw_line: 115 0481   115Cdm -87903.5        0.9       181.0        0.5           44.56   d 0.24   11/2-*        12          1959
+      B-~100;IT ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.015555367606821033
+        unit: 1/d
+        relation: =
+        uncertainty: 0.00008378115407623536
+      mean_lifetime:
+        value: 64.28649102201221
+        unit: d
+        relation: =
+        uncertainty: 0.3462468098133512
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-115m
+    evaluation_entry_id: MAT:0048:NUBASE2020:115:1
+  - A: 116
+    Z: 48
+    N: 68
+    state_index: 0
+    state_label: ground
+    source_label: 116Cd
+    mass_excess:
+      value: -88712.49
+      unit: keV
+      raw: "-88712.49"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.16"
+      uncertainty: 0.16
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 26.9
+      unit: Ey
+      raw: "26.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.9"
+      uncertainty: 0.9
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1925"
+    decay_and_abundance_raw: IS=7.512 54;2B-=100
+    source_line: 2094
+    raw_line: 116 0480   116Cd  -88712.49       0.16                                 26.9   Ey 0.9    0+            10          1925
+      IS=7.512 54;2B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.025767553180667112
+        unit: 1/Ey
+        relation: =
+        uncertainty: 0.0008621114447063346
+      mean_lifetime:
+        value: 38.80849659991311
+        unit: Ey
+        relation: =
+        uncertainty: 1.2984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-116
+    evaluation_entry_id: MAT:0048:NUBASE2020:116:0
+  - A: 117
+    Z: 48
+    N: 69
+    state_index: 0
+    state_label: ground
+    source_label: 117Cd
+    mass_excess:
+      value: -86418.4
+      unit: keV
+      raw: "-86418.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.503
+      unit: h
+      raw: "2.503"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.005"
+      uncertainty: 0.005
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B-=100
+    source_line: 2122
+    raw_line: 117 0480   117Cd  -86418.4        1.0                                   2.503  h 0.005  1/2+*         11          1939 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.2769265603515562
+        unit: 1/h
+        relation: =
+        uncertainty: 0.0005531892935508514
+      mean_lifetime:
+        value: 3.6110656873450755
+        unit: h
+        relation: =
+        uncertainty: 0.007213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-117
+    evaluation_entry_id: MAT:0048:NUBASE2020:117:0
+  - A: 117
+    Z: 48
+    N: 69
+    state_index: 1
+    state_label: m
+    source_label: 117Cd
+    mass_excess:
+      value: -86282
+      unit: keV
+      raw: "-86282.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+    excitation_energy:
+      value: 136.4
+      unit: keV
+      raw: "136.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.441
+      unit: h
+      raw: "3.441"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.009"
+      uncertainty: 0.009
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1966"
+    decay_and_abundance_raw: B-=100
+    source_line: 2123
+    raw_line: 117 0481   117Cdm -86282.0        1.0       136.4        0.2            3.441  h 0.009  11/2-*        11          1966 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.20143771594302393
+        unit: 1/h
+        relation: =
+        uncertainty: 0.0005268641219085195
+      mean_lifetime:
+        value: 4.964313635698923
+        unit: h
+        relation: =
+        uncertainty: 0.01298425536800067
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-117m
+    evaluation_entry_id: MAT:0048:NUBASE2020:117:1
+  - A: 118
+    Z: 48
+    N: 70
+    state_index: 0
+    state_label: ground
+    source_label: 118Cd
+    mass_excess:
+      value: -86702
+      unit: keV
+      raw: "-86702"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 50.3
+      unit: m
+      raw: "50.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "95"
+    discovery_year_raw: "1961"
+    decay_and_abundance_raw: B-=100
+    source_line: 2151
+    raw_line: 118 0480   118Cd  -86702         20                                    50.3    m 0.2    0+            95          1961 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.013780262038965116
+        unit: 1/m
+        relation: =
+        uncertainty: 0.00005479229438952333
+      mean_lifetime:
+        value: 72.56756055671485
+        unit: m
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-118
+    evaluation_entry_id: MAT:0048:NUBASE2020:118:0
+  - A: 119
+    Z: 48
+    N: 71
+    state_index: 0
+    state_label: ground
+    source_label: 119Cd
+    mass_excess:
+      value: -83980
+      unit: keV
+      raw: "-83980"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.69
+      unit: m
+      raw: "2.69"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 1/2+*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1961"
+    decay_and_abundance_raw: B-=100
+    source_line: 2178
+    raw_line: 119 0480   119Cd  -83980         40                                     2.69   m 0.02   1/2+*         09          1961 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.25767553180667113
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0019158032104585215
+      mean_lifetime:
+        value: 3.880849659991312
+        unit: m
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-119
+    evaluation_entry_id: MAT:0048:NUBASE2020:119:0
+  - A: 119
+    Z: 48
+    N: 71
+    state_index: 1
+    state_label: m
+    source_label: 119Cd
+    mass_excess:
+      value: -83830
+      unit: keV
+      raw: "-83830"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 146.54
+      unit: keV
+      raw: "146.54"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.11"
+      uncertainty: 0.11
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.2
+      unit: m
+      raw: "2.20"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1974"
+    decay_and_abundance_raw: B-=100
+    source_line: 2179
+    raw_line: 119 0481   119Cdm -83830         40         146.54       0.11           2.20   m 0.02   11/2-*        09          1974 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.31506690025452055
+        unit: 1/m
+        relation: =
+        uncertainty: 0.002864244547768368
+      mean_lifetime:
+        value: 3.17392908995572
+        unit: m
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-119m
+    evaluation_entry_id: MAT:0048:NUBASE2020:119:1
+  - A: 120
+    Z: 48
+    N: 72
+    state_index: 0
+    state_label: ground
+    source_label: 120Cd
+    mass_excess:
+      value: -83957
+      unit: keV
+      raw: "-83957"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 50.8
+      unit: s
+      raw: "50.80"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.21"
+      uncertainty: 0.21
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "02"
+    discovery_year_raw: "1973"
+    decay_and_abundance_raw: B-=100
+    source_line: 2208
+    raw_line: 120 0480   120Cd  -83957          4                                    50.80   s 0.21   0+            02          1973 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.013644629538581601
+        unit: 1/s
+        relation: =
+        uncertainty: 0.000056404964627994816
+      mean_lifetime:
+        value: 73.28890807715933
+        unit: s
+        relation: =
+        uncertainty: 0.3029659585866823
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-120
+    evaluation_entry_id: MAT:0048:NUBASE2020:120:0
+  - A: 121
+    Z: 48
+    N: 73
+    state_index: 0
+    state_label: ground
+    source_label: 121Cd
+    mass_excess:
+      value: -81073.8
+      unit: keV
+      raw: "-81073.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.9"
+      uncertainty: 1.9
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 13.5
+      unit: s
+      raw: "13.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1965"
+    decay_and_abundance_raw: B-=100
+    source_line: 2237
+    raw_line: 121 0480   121Cd  -81073.8        1.9                                  13.5    s 0.3    3/2+*         10          1965 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.05134423559703299
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0011409830132673997
+      mean_lifetime:
+        value: 19.476383052001008
+        unit: s
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-121
+    evaluation_entry_id: MAT:0048:NUBASE2020:121:0
+  - A: 121
+    Z: 48
+    N: 73
+    state_index: 1
+    state_label: m
+    source_label: 121Cd
+    mass_excess:
+      value: -80858.9
+      unit: keV
+      raw: "-80858.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.9"
+      uncertainty: 1.9
+    excitation_energy:
+      value: 214.86
+      unit: keV
+      raw: "214.86"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.15"
+      uncertainty: 0.15
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8.3
+      unit: s
+      raw: "8.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: B-=100
+    source_line: 2238
+    raw_line: 121 0481   121Cdm -80858.9        1.9       214.86       0.15           8.3    s 0.8    11/2-*        10          1982 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.08351170850119823
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00804932130132031
+      mean_lifetime:
+        value: 11.974368839378398
+        unit: s
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-121m
+    evaluation_entry_id: MAT:0048:NUBASE2020:121:1
+  - A: 122
+    Z: 48
+    N: 74
+    state_index: 0
+    state_label: ground
+    source_label: 122Cd
+    mass_excess:
+      value: -80612.4
+      unit: keV
+      raw: "-80612.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.3"
+      uncertainty: 2.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5.24
+      unit: s
+      raw: "5.24"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1973"
+    decay_and_abundance_raw: B-=100
+    source_line: 2269
+    raw_line: 122 0480   122Cd  -80612.4        2.3                                   5.24   s 0.03   0+            07          1973 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1322799962900659
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0007573282230347283
+      mean_lifetime:
+        value: 7.559722014258169
+        unit: s
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-122
+    evaluation_entry_id: MAT:0048:NUBASE2020:122:0
+  - A: 123
+    Z: 48
+    N: 75
+    state_index: 0
+    state_label: ground
+    source_label: 123Cd
+    mass_excess:
+      value: -77414.2
+      unit: keV
+      raw: "-77414.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.7"
+      uncertainty: 2.7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.1
+      unit: s
+      raw: "2.10"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "04"
+    discovery_year_raw: "1983"
+    decay_and_abundance_raw: B-=100
+    source_line: 2304
+    raw_line: 123 0480   123Cd  -77414.2        2.7                                   2.10   s 0.02   3/2+*         04          1983 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.3300700859809263
+        unit: 1/s
+        relation: =
+        uncertainty: 0.003143524628389774
+      mean_lifetime:
+        value: 3.0296595858668236
+        unit: s
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-123
+    evaluation_entry_id: MAT:0048:NUBASE2020:123:0
+  - A: 123
+    Z: 48
+    N: 75
+    state_index: 1
+    state_label: m
+    source_label: 123Cd
+    mass_excess:
+      value: -77271
+      unit: keV
+      raw: "-77271"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 143
+      unit: keV
+      raw: "143"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.82
+      unit: s
+      raw: "1.82"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.03"
+      uncertainty: 0.03
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "04"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=?;IT ?
+    source_line: 2305
+    raw_line: 123 0481   123Cdm -77271          3         143          4              1.82   s 0.03   11/2-*        04          1986
+      B-=?;IT ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.3808500992087611
+        unit: 1/s
+        relation: =
+        uncertainty: 0.006277748888056501
+      mean_lifetime:
+        value: 2.6257049744179137
+        unit: s
+        relation: =
+        uncertainty: 0.0432808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-123m
+    evaluation_entry_id: MAT:0048:NUBASE2020:123:1
+  - A: 124
+    Z: 48
+    N: 76
+    state_index: 0
+    state_label: ground
+    source_label: 124Cd
+    mass_excess:
+      value: -76699.4
+      unit: keV
+      raw: "-76699.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.6"
+      uncertainty: 2.6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1.25
+      unit: s
+      raw: "1.25"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.02"
+      uncertainty: 0.02
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1974"
+    decay_and_abundance_raw: B-=100
+    source_line: 2339
+    raw_line: 124 0480   124Cd  -76699.4        2.6                                   1.25   s 0.02   0+            08          1974 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.5545177444479562
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0088722839111673
+      mean_lifetime:
+        value: 1.8033688011112043
+        unit: s
+        relation: =
+        uncertainty: 0.02885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-124
+    evaluation_entry_id: MAT:0048:NUBASE2020:124:0
+  - A: 125
+    Z: 48
+    N: 77
+    state_index: 0
+    state_label: ground
+    source_label: 125Cd
+    mass_excess:
+      value: -73348.1
+      unit: keV
+      raw: "-73348.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.9"
+      uncertainty: 2.9
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 680
+      unit: ms
+      raw: "680"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100
+    source_line: 2370
+    raw_line: 125 0480   125Cd  -73348.1        2.9                                 680     ms 40     3/2+*         11          1986 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001019334089058743
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00005996082876816136
+      mean_lifetime:
+        value: 981.0326278044952
+        unit: ms
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-125
+    evaluation_entry_id: MAT:0048:NUBASE2020:125:0
+  - A: 125
+    Z: 48
+    N: 77
+    state_index: 1
+    state_label: m
+    source_label: 125Cd
+    mass_excess:
+      value: -73162
+      unit: keV
+      raw: "-73162"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 186
+      unit: keV
+      raw: "186"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_origin: MD
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 480
+      unit: ms
+      raw: "480"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "30"
+      uncertainty: 30
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100
+    source_line: 2371
+    raw_line: 125 0481   125Cdm -73162          3         186          4       MD   480     ms 30     11/2-*        11          1986 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0014440566261665526
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00009025353913540954
+      mean_lifetime:
+        value: 692.4936196267024
+        unit: ms
+        relation: =
+        uncertainty: 43.2808512266689
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-125m
+    evaluation_entry_id: MAT:0048:NUBASE2020:125:1
+  - A: 125
+    Z: 48
+    N: 77
+    state_index: 2
+    state_label: n
+    source_label: 125Cd
+    mass_excess:
+      value: -71700
+      unit: keV
+      raw: "-71700"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: 1648
+      unit: keV
+      raw: "1648"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 19
+      unit: us
+      raw: "19"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+      status: RADIOACTIVE
+    spin_parity_raw: (19/2+)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2011"
+    decay_and_abundance_raw: IT=100
+    source_line: 2372
+    raw_line: 125 0482   125Cdn -71700          5        1648          4             19     us 3      (19/2+)                   2011 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03648143055578659
+        unit: 1/us
+        relation: =
+        uncertainty: 0.005760225877229462
+      mean_lifetime:
+        value: 27.411205776890306
+        unit: us
+        relation: =
+        uncertainty: 4.328085122666891
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-125n
+    evaluation_entry_id: MAT:0048:NUBASE2020:125:2
+  - A: 126
+    Z: 48
+    N: 78
+    state_index: 0
+    state_label: ground
+    source_label: 126Cd
+    mass_excess:
+      value: -72255.7
+      unit: keV
+      raw: "-72255.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.3"
+      uncertainty: 2.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 512
+      unit: ms
+      raw: "512"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "03"
+    discovery_year_raw: "1978"
+    decay_and_abundance_raw: B-=100
+    source_line: 2410
+    raw_line: 126 0480   126Cd  -72255.7        2.3                                 512     ms 5      0+            03          1978 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0013538030870311431
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000013220733271788508
+      mean_lifetime:
+        value: 738.6598609351493
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-126
+    evaluation_entry_id: MAT:0048:NUBASE2020:126:0
+  - A: 127
+    Z: 48
+    N: 79
+    state_index: 0
+    state_label: ground
+    source_label: 127Cd
+    mass_excess:
+      value: -68741
+      unit: keV
+      raw: "-68741"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 480
+      unit: ms
+      raw: "480"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "100"
+      uncertainty: 100
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 2443
+    raw_line: 127 0480   127Cd  -68741          6                                   480     ms 100    3/2+*         11          1986
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0014440566261665526
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00030084513045136515
+      mean_lifetime:
+        value: 692.4936196267024
+        unit: ms
+        relation: =
+        uncertainty: 144.26950408889635
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-127
+    evaluation_entry_id: MAT:0048:NUBASE2020:127:0
+  - A: 127
+    Z: 48
+    N: 79
+    state_index: 1
+    state_label: m
+    source_label: 127Cd
+    mass_excess:
+      value: -68456
+      unit: keV
+      raw: "-68456"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "4"
+      uncertainty: 4
+    excitation_energy:
+      value: 285
+      unit: keV
+      raw: "285"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_origin: MD
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 360
+      unit: ms
+      raw: "360"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2019"
+    decay_and_abundance_raw: B-=100
+    source_line: 2444
+    raw_line: 127 0481   127Cdm -68456          4         285          8       MD   360     ms 40     11/2-*                    2019 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.001925408834888737
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00021393431498763744
+      mean_lifetime:
+        value: 519.3702147200269
+        unit: ms
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-127m
+    evaluation_entry_id: MAT:0048:NUBASE2020:127:1
+  - A: 127
+    Z: 48
+    N: 79
+    state_index: 2
+    state_label: n
+    source_label: 127Cd
+    mass_excess:
+      value: -66896
+      unit: keV
+      raw: "-66896"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "10"
+      uncertainty: 10
+    excitation_energy:
+      value: 1845
+      unit: keV
+      raw: "1845"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 17.5
+      unit: us
+      raw: "17.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: (19/2+)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2010"
+    decay_and_abundance_raw: IT=100
+    source_line: 2445
+    raw_line: 127 0482   127Cdn -66896         10        1845          8             17.5   us 0.3    (19/2+)                   2010 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03960841031771116
+        unit: 1/us
+        relation: =
+        uncertainty: 0.0006790013197321913
+      mean_lifetime:
+        value: 25.24716321555686
+        unit: us
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-127n
+    evaluation_entry_id: MAT:0048:NUBASE2020:127:2
+  - A: 128
+    Z: 48
+    N: 80
+    state_index: 0
+    state_label: ground
+    source_label: 128Cd
+    mass_excess:
+      value: -67238
+      unit: keV
+      raw: "-67238"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 246
+      unit: ms
+      raw: "246"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100;B-n ?
+    source_line: 2480
+    raw_line: 128 0480   128Cd  -67238          6                                   246     ms 2      0+            15          1986
+      B-=100;B-n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0028176714656908343
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000022907898095047433
+      mean_lifetime:
+        value: 354.902980058685
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-128
+    evaluation_entry_id: MAT:0048:NUBASE2020:128:0
+  - A: 128
+    Z: 48
+    N: 80
+    state_index: 1
+    state_label: m
+    source_label: 128Cd
+    mass_excess:
+      value: -65368
+      unit: keV
+      raw: "-65368"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: 1870.5
+      unit: keV
+      raw: "1870.5"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 270
+      unit: ns
+      raw: "270"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+      status: RADIOACTIVE
+    spin_parity_raw: (5-)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: IT=100
+    source_line: 2481
+    raw_line: 128 0481   128Cdm -65368          6        1870.5        0.3          270     ns 7      (5-)          15          2009 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.002567211779851649
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.00006655734244059832
+      mean_lifetime:
+        value: 389.5276610400201
+        unit: ns
+        relation: =
+        uncertainty: 10.098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-128m
+    evaluation_entry_id: MAT:0048:NUBASE2020:128:1
+  - A: 128
+    Z: 48
+    N: 80
+    state_index: 2
+    state_label: n
+    source_label: 128Cd
+    mass_excess:
+      value: -64523
+      unit: keV
+      raw: "-64523"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: 2714.6
+      unit: keV
+      raw: "2714.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.4"
+      uncertainty: 0.4
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.56
+      unit: us
+      raw: "3.56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: (10+)
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2009"
+    decay_and_abundance_raw: IT=100
+    source_line: 2482
+    raw_line: 128 0482   128Cdn -64523          6        2714.6        0.4            3.56  us 0.06   (10+)         15          2009 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.19470426420223183
+        unit: 1/us
+        relation: =
+        uncertainty: 0.003281532542734244
+      mean_lifetime:
+        value: 5.13599434556471
+        unit: us
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-128n
+    evaluation_entry_id: MAT:0048:NUBASE2020:128:2
+  - A: 128
+    Z: 48
+    N: 80
+    state_index: 3
+    state_label: p
+    source_label: 128Cd
+    mass_excess:
+      value: -62951
+      unit: keV
+      raw: "-62951"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: 4286.6
+      unit: keV
+      raw: "4286.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.5"
+      uncertainty: 1.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6.3
+      unit: ms
+      raw: "6.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.8"
+      uncertainty: 0.8
+      status: RADIOACTIVE
+    spin_parity_raw: (15-)
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2016"
+    decay_and_abundance_raw: IT=100
+    source_line: 2483
+    raw_line: 128 0483   128Cdp -62951          6        4286.6        1.5            6.3   ms 0.8    (15-)                     2016 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.11002336199364211
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.013971220570621222
+      mean_lifetime:
+        value: 9.08897875760047
+        unit: ms
+        relation: =
+        uncertainty: 1.1541560327111708
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-128p
+    evaluation_entry_id: MAT:0048:NUBASE2020:128:3
+  - A: 129
+    Z: 48
+    N: 81
+    state_index: 0
+    state_label: ground
+    source_label: 129Cd
+    mass_excess:
+      value: -63122
+      unit: keV
+      raw: "-63122"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 147
+      unit: ms
+      raw: "147"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+      status: RADIOACTIVE
+    spin_parity_raw: 11/2-*
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "2003"
+    decay_and_abundance_raw: B-=100;B-n=?
+    source_line: 2515
+    raw_line: 129 0480   129Cd  -63122          5                                   147     ms 3      11/2-*        14          2003
+      B-=100;B-n=?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004715286942584662
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00009623034576703392
+      mean_lifetime:
+        value: 212.07617101067763
+        unit: ms
+        relation: =
+        uncertainty: 4.328085122666891
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-129
+    evaluation_entry_id: MAT:0048:NUBASE2020:129:0
+  - A: 129
+    Z: 48
+    N: 81
+    state_index: 1
+    state_label: m
+    source_label: 129Cd
+    mass_excess:
+      value: -62779
+      unit: keV
+      raw: "-62779"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+    excitation_energy:
+      value: 343
+      unit: keV
+      raw: "343"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_origin: MD
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 157
+      unit: ms
+      raw: "157"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+      status: RADIOACTIVE
+    spin_parity_raw: 3/2+*
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100;B-n=?
+    source_line: 2516
+    raw_line: 129 0481   129Cdm -62779          6         343          8       MD   157     ms 8      3/2+*         14          1986
+      B-=100;B-n=?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004414950194649333
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00022496561501397875
+      mean_lifetime:
+        value: 226.50312141956726
+        unit: ms
+        relation: =
+        uncertainty: 11.541560327111707
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-129m
+    evaluation_entry_id: MAT:0048:NUBASE2020:129:1
+  - A: 129
+    Z: 48
+    N: 81
+    state_index: 2
+    state_label: n
+    source_label: 129Cd
+    mass_excess:
+      value: -60839
+      unit: keV
+      raw: "-60839"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "9"
+      uncertainty: 9
+    excitation_energy:
+      value: 2283
+      unit: keV
+      raw: "2283"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "8"
+      uncertainty: 8
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.6
+      unit: ms
+      raw: "3.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: (21/2+)
+    ensdf_update_year_raw: "14"
+    discovery_year_raw: "2014"
+    decay_and_abundance_raw: IT=100
+    source_line: 2517
+    raw_line: 129 0482   129Cdn -60839          9        2283          8              3.6   ms 0.2    (21/2+)       14          2014 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1925408834888737
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.010696715749381872
+      mean_lifetime:
+        value: 5.193702147200269
+        unit: ms
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-129n
+    evaluation_entry_id: MAT:0048:NUBASE2020:129:2
+  - A: 130
+    Z: 48
+    N: 82
+    state_index: 0
+    state_label: ground
+    source_label: 130Cd
+    mass_excess:
+      value: -61118
+      unit: keV
+      raw: "-61118"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "22"
+      uncertainty: 22
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 126.8
+      unit: ms
+      raw: "126.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.8"
+      uncertainty: 1.8
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "1986"
+    decay_and_abundance_raw: B-=100;B-n=3.5 10
+    source_line: 2552
+    raw_line: 130 0480   130Cd  -61118         22                                   126.8   ms 1.8    0+            08          1986
+      B-=100;B-n=3.5 10
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.005466460414510609
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00007759959578958278
+      mean_lifetime:
+        value: 182.93373118472056
+        unit: ms
+        relation: =
+        uncertainty: 2.5968510736001345
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-130
+    evaluation_entry_id: MAT:0048:NUBASE2020:130:0
+  - A: 130
+    Z: 48
+    N: 82
+    state_index: 1
+    state_label: m
+    source_label: 130Cd
+    mass_excess:
+      value: -58988
+      unit: keV
+      raw: "-58988"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "22"
+      uncertainty: 22
+    excitation_energy:
+      value: 2129.6
+      unit: keV
+      raw: "2129.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.0"
+      uncertainty: 1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 240
+      unit: ns
+      raw: "240"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "16"
+      uncertainty: 16
+      status: RADIOACTIVE
+    spin_parity_raw: (8+)
+    ensdf_update_year_raw: "08"
+    discovery_year_raw: "2007"
+    decay_and_abundance_raw: IT=100
+    source_line: 2553
+    raw_line: 130 0481   130Cdm -58988         22        2129.6        1.0          240     ns 16     (8+)          08          2007 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0028881132523331052
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0001925408834888737
+      mean_lifetime:
+        value: 346.2468098133512
+        unit: ns
+        relation: =
+        uncertainty: 23.083120654223414
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-130m
+    evaluation_entry_id: MAT:0048:NUBASE2020:130:1
+  - A: 131
+    Z: 48
+    N: 83
+    state_index: 0
+    state_label: ground
+    source_label: 131Cd
+    mass_excess:
+      value: -55212
+      unit: keV
+      raw: "-55212"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "19"
+      uncertainty: 19
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 98
+      unit: ms
+      raw: "98"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2"
+      uncertainty: 2
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-#
+    ensdf_update_year_raw: "06"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;B-n=3.5 10;B-2n ?
+    source_line: 2592
+    raw_line: 131 0480   131Cd  -55212         19                                    98     ms 2      7/2-#         06          2000
+      B-=100;B-n=3.5 10;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007072930413876992
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00014434551865055085
+      mean_lifetime:
+        value: 141.38411400711843
+        unit: ms
+        relation: =
+        uncertainty: 2.8853900817779268
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-131
+    evaluation_entry_id: MAT:0048:NUBASE2020:131:0
+  - A: 132
+    Z: 48
+    N: 84
+    state_index: 0
+    state_label: ground
+    source_label: 132Cd
+    mass_excess:
+      value: -50470
+      unit: keV
+      raw: "-50470"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "60"
+      uncertainty: 60
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 84
+      unit: ms
+      raw: "84"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "18"
+    discovery_year_raw: "2000"
+    decay_and_abundance_raw: B-=100;B-n=60 15;B-2n ?
+    source_line: 2625
+    raw_line: 132 0480   132Cd  -50470         60                                    84     ms 5      0+            18          2000
+      B-=100;B-n=60 15;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.008251752149523159
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0004911757231859023
+      mean_lifetime:
+        value: 121.18638343467293
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-132
+    evaluation_entry_id: MAT:0048:NUBASE2020:132:0
+  - A: 133
+    Z: 48
+    N: 85
+    state_index: 0
+    state_label: ground
+    source_label: 133Cd
+    mass_excess:
+      value: -44140
+      unit: keV
+      raw: -44140#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 200#
+      uncertainty: 200
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 61
+      unit: ms
+      raw: "61"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 7/2-#
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "2010"
+    decay_and_abundance_raw: B-=100;B-n=?;B-2n ?
+    source_line: 2655
+    raw_line: 133 0480   133Cd  -44140#       200#                                   61     ms 6      7/2-#         11          2010
+      B-=100;B-n=?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.011363068533769595
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0011176788721740584
+      mean_lifetime:
+        value: 88.00439749422677
+        unit: ms
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-133
+    evaluation_entry_id: MAT:0048:NUBASE2020:133:0
+  - A: 134
+    Z: 48
+    N: 86
+    state_index: 0
+    state_label: ground
+    source_label: 134Cd
+    mass_excess:
+      value: -39460
+      unit: keV
+      raw: -39460#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 65
+      unit: ms
+      raw: "65"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "15"
+      uncertainty: 15
+      status: RADIOACTIVE
+    spin_parity_raw: 0+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2015"
+    decay_and_abundance_raw: B-=100;B-n ?;B-2n ?
+    source_line: 2688
+    raw_line: 134 0480   134Cd  -39460#       300#                                   65     ms 15     0+            15          2015
+      B-=100;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.010663802777845312
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.002460877564118149
+      mean_lifetime:
+        value: 93.77517765778262
+        unit: ms
+        relation: =
+        uncertainty: 21.64042561333445
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0048:ISO:Cd-134
+    evaluation_entry_id: MAT:0048:NUBASE2020:134:0
+  - A: 135
+    Z: 48
+    N: 87
+    state_index: 0
+    state_label: ground
+    source_label: 135Cd
+    mass_excess:
+      value: -32820
+      unit: keV
+      raw: -32820#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 5/2-#
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: B- ?;B-n ?
+    source_line: 2720
+    raw_line: 135
+      0480   135Cd  -32820#       400#                                                    5/2-#                          B- ?;B-n
+      ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0048:ISO:Cd-135
+    evaluation_entry_id: MAT:0048:NUBASE2020:135:0

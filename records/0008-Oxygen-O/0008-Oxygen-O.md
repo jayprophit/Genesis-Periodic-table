@@ -1552,3 +1552,7 @@ visuals:
 NIST confirms the full ionization ladder used above, including the important square-bracket and parenthesis qualifiers on several higher values. ([NIST][2]) NOAA’s dry-atmosphere reference gives **20.946% O₂**, while RSC gives Oxygen’s melting and boiling points as **54.36 K** and **90.188 K**. ([NOAA][3])
 
 The legacy ozone geometry also checks out: NIST’s CCCBDB experimental geometry gives **1.278 Å** O–O distance and **116.8°** O–O–O angle, and NIST’s WebBook lists the three principal ozone fundamentals at about **1103, 701 and 1042 cm⁻¹**. ([CCCBDB][4])
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0008-Oxygen-O-Nuclear-Evaluation.md) provides 24 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

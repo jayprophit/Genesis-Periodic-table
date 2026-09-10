@@ -1,0 +1,85 @@
+registry_id: "MAT:0010:REG:HE-NE-LASER"
+
+parents:
+  - "MAT:0002"
+  - "MAT:0010"
+
+classification:
+  gas_laser: true
+  energy_transfer_system: true
+
+historical_first_continuous_HeNe:
+
+  year: 1961
+
+  contributors:
+    - Ali_Javan
+    - William_R_Bennett_Jr
+    - Donald_R_Herriott
+
+  original_demonstrated_output:
+    near_infrared: true
+    principal_historic_line:
+      approximate_wavelength: 1.15
+      unit: "um"
+
+  important_correction:
+    "The first continuous He-Ne laser was not the later familiar 632.8-nm red version."
+
+pumping:
+
+  discharge:
+    excites_helium: true
+    directly_excites_neon: true
+
+  helium_metastable_transfer:
+    mechanism: "COLLISIONAL-NEAR-RESONANT-ENERGY-TRANSFER"
+
+    generalized:
+      "He* + Ne -> He + Ne*"
+
+    effectiveness_depends_on:
+      - level_energy_matching
+      - collision_cross_section
+      - helium_metastable_lifetime
+      - gas_density
+      - temperature
+      - discharge_distribution
+
+red_632_8nm_system:
+
+  active_species:
+    "Ne"
+
+  vacuum_transition:
+    wavelength:
+      value: 632.81646
+      unit: "nm"
+
+  common_air_description:
+    approximate_value: 632.8
+    unit: "nm"
+
+  NIST_metrology_reference:
+    uncalibrated_vacuum_wavelength:
+      value: 632.9908
+      unit: "nm"
+
+    note:
+      "Metrology reference wavelength and a specific atomic-transition line must not be silently conflated."
+
+population_inversion:
+  required: true
+
+optical_cavity:
+  required_for_lasing: true
+
+rules:
+  helium_is_lasing_species_at_632_8nm: false
+  helium_is_pump_intermediary: true
+  resonant_transfer_equals_identical_frequency: false
+  discharge_emission_equals_laser_emission: false
+
+source_ids:
+  - "SRC-000197"
+  - "SRC-000205"

@@ -44,10 +44,25 @@ export function evidenceLane(text) {
   return 'core';
 }
 export const laneLabels = {core: 'MAT Core Data', research: 'Research / Emerging', claims: 'Historical / Alternative / Claims'};
+export function readingSource(source) {
+  // The source keeps its identity YAML; the reader already presents it as an
+  // element header, so avoid duplicating implementation metadata in the prose.
+  return source.replace(/(^# [^\n]+\n\s*\n)```yaml\n(?=[\s\S]*?mat_id:)[\s\S]*?\n```\s*/, '$1');
+}
+// Heading text comes from rendered inline Markdown, so decode its entities
+// before deriving human-readable outlines and stable fragment identifiers.
+export function headingText(text) {
+  return text.replace(/<[^>]*>/g, '').replace(/&(#x[\da-f]+|#\d+|amp|lt|gt|quot|apos);/gi, (all, entity) => {
+    if (entity[0] !== '#') return ({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"})[entity.toLowerCase()];
+    const code = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2),16) : Number(entity.slice(1));
+    return code > 0 && code <= 0x10ffff ? String.fromCodePoint(code) : all;
+  });
+}
 export function slug(text) {
-  return text.toLowerCase().replace(/<[^>]*>/g, '').replace(/&\w+;/g, '').replace(/[^\p{L}\p{N}_\s-]/gu, '').trim().replace(/\s/g, '-');
+  return headingText(text).toLowerCase().replace(/&\w+;/g, '').replace(/[^\p{L}\p{N}_\s-]/gu, '').trim().replace(/\s/g, '-');
 }
 export function renderDocument(source, id, {linkFor = (target, anchor) => route(target, anchor), docs = []} = {}) {
+  source=readingSource(source);
   const outline = [], slugs = new Map();
   const multipleH1 = (source.match(/^# /gm) || []).length > 1;
   let first = true;
@@ -57,10 +72,10 @@ export function renderDocument(source, id, {linkFor = (target, anchor) => route(
     renderer: token => `<${level === 'block' ? 'div' : 'span'} class="math">${esc(token.text)}</${level === 'block' ? 'div' : 'span'}>`
   });
   const parser = new Marked({gfm:true, breaks:false, renderer: {
-    html({text}) { return esc(text); },
+    html({text}) { return /^(?:\s*<!--[\s\S]*?-->\s*)+$/.test(text) ? '' : esc(text); },
     heading({tokens, depth}) {
       const text = this.parser.parseInline(tokens);
-      const plain = text.replace(/<[^>]+>/g, '');
+      const plain = headingText(text);
       const base = slug(plain), count = slugs.get(base) || 0;
       slugs.set(base, count + 1);
       const anchor = base + (count ? '-' + count : '');
@@ -103,7 +118,8 @@ export function searchDocuments(docs, query, {titleOnly=false, section='', lane=
     const inTitle = d.title.toLowerCase().includes(q);
     const alias = d.aks?.includes(q);
     const occurrences = titleOnly ? 0 : d.text.toLowerCase().split(q).length - 1;
-    const score = (inTitle ? 100 : 0) + (!titleOnly && alias ? 80 : 0) + Math.min(occurrences, 20);
+    const mainRecord = d.id?.split('/').at(-1) === d.id?.split('/')[1]+'.md';
+    const score = (inTitle ? 100 : 0) + (!titleOnly && alias ? 80+(mainRecord?50:0) : 0) + Math.min(occurrences, 20);
     return score ? [{d,score}] : [];
   }).sort((a,b) => sort === 'title' ? a.d.title.localeCompare(b.d.title) : b.score-a.score || a.d.i-b.d.i);
 }

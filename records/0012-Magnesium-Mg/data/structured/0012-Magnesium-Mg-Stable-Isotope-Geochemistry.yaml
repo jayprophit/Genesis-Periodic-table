@@ -1,0 +1,77 @@
+registry_id: MAT:0012:REG:STABLE-ISOTOPE-GEOCHEMISTRY
+record_id: MAT:0012
+stable_isotopes:
+  - MAT:0012:ISO:Mg-24
+  - MAT:0012:ISO:Mg-25
+  - MAT:0012:ISO:Mg-26
+mass_difference:
+  Mg24_to_Mg26:
+    greater_than_percent: 8
+consequence:
+  measurable_mass_dependent_fractionation: true
+delta_notation:
+  delta26Mg:
+    equation: |
+      delta26Mg = [((26Mg/24Mg)_sample / (26Mg/24Mg)_reference) - 1] * 1000
+    unit: permil
+  delta25Mg:
+    equation: |
+      delta25Mg = [((25Mg/24Mg)_sample / (25Mg/24Mg)_reference) - 1] * 1000
+    unit: permil
+reference_scales:
+  DSM3:
+    widely_used_historical_scale_anchor: true
+    CIAAW_note:
+      internationally_recommended_delta_standard: false
+    reason: Limited general availability.
+  ERM_AE143:
+    certified_reference_material_relationship:
+      important: true
+processes_with_fractionation:
+  strong_or_significant:
+    - weathering
+    - carbonate_precipitation
+    - carbonate_dissolution
+    - low_temperature_fluid_rock_interaction
+  moderate:
+    - magmatic_processes
+  often_smaller:
+    - many_metamorphic_processes
+reservoir_examples:
+  mantle_and_igneous_silicates:
+    delta26Mg:
+      representative_center:
+        approximate_value: -0.25
+        unit: permil
+    not_universal: true
+  carbonates:
+    generally_lighter_than_mantle: true
+    range:
+      broad: true
+      mineralogy_temperature_kinetics_dependent: true
+  seawater:
+    isotopic_state:
+      distinct_from_mantle: true
+applications:
+  - weathering_tracer
+  - carbonate_cycle
+  - fluid_rock_interaction
+  - mantle_processes
+  - petrology
+  - mineralization
+  - paleogeochemistry
+rules:
+  natural_isotope_composition_equals_one_fixed_ratio: false
+  delta_value_requires_reference_scale: true
+  delta26Mg_equals_radiogenic_26Mg_excess: false
+  mass_dependent_and_radiogenic_components_must_be_separated: true
+source_ids:
+  - SRC-000269
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/52.txt
+  source_sha256: b861250812208c0efe06787d836f7fe1e0d32d119fe2ab1555c9118f53229c35
+  source_line: 166
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

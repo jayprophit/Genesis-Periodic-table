@@ -1,6 +1,8 @@
 // Validates the global source registry and canonical-vs-alias usage.
 // Run: npm run validate:sources
 import { loadYaml, walkFiles, R, validateSchema, issue, warn, summary, SRC_CANON } from "./lib.mjs";
+import YAML from "yaml";
+import {sourceReferences} from "./source-references.mjs";
 
 const SCHEMA = "data/schema/1.0.0/mat-source-registry.schema.json";
 let failed = 0;
@@ -20,30 +22,29 @@ for (const s of reg.sources || []) {
   }
   if (s.doi) {
     const d = String(s.doi).toLowerCase();
-    if (seenDoi.has(d)) warn("data/registries/sources.yaml", null, s.source_id, `DOI ${s.doi} also used by ${seenDoi.get(d)}`, "deduplicate or justify shared DOI");
-    else seenDoi.set(d, s.source_id);
+    if (seenDoi.has(d)) {
+      if(!(s.same_work_as===seenDoi.get(d)&&s.scope_note))warn("data/registries/sources.yaml", null, s.source_id, `DOI ${s.doi} also used by ${seenDoi.get(d)}`, "deduplicate or justify shared DOI");
+    } else seenDoi.set(d, s.source_id);
   }
 }
 
 // Scan canonical structured data for source references.
 const files = walkFiles("records", (f) => f.endsWith(".yaml"));
-const idRe = /source_ids?:\s*"([^"]+)"/g;
 for (const f of files) {
   const src = R(f);
   const rec = (f.match(/records\/(\d{4})-/) || [])[1];
-  for (const m of src.matchAll(idRe)) {
-    const v = m[1];
+  const documents=YAML.parseAllDocuments(src);
+  const errors=documents.flatMap(d=>d.errors);
+  if(errors.length){issue(f,rec,null,'YAML parse failure: '+errors[0].message,'all scientific data must parse');failed++;continue;}
+  for (const m of documents.flatMap(d=>sourceReferences(d.toJSON()))) {
+    const v = m.value;
     if (SRC_CANON.test(v)) {
-      if (!canon.has(v)) { issue(f, rec ? "MAT:" + rec : null, m[0].slice(0, 40), `canonical ${v} not in registry`, "every canonical reference must resolve"); failed++; }
+      if (!canon.has(v)) { issue(f, rec ? "MAT:" + rec : null, m.path, `canonical ${v} not in registry`, "every canonical reference must resolve"); failed++; }
     } else if (aliasToCanon.has(v)) {
-      warn(f, rec ? "MAT:" + rec : null, `source_id ${v}`, `alias used in canonical data (canonical: ${aliasToCanon.get(v)})`, "use canonical source_id; keep alias only as source_alias");
+      if(!m.alias)warn(f, rec ? "MAT:" + rec : null, m.path, `alias ${v} used in canonical data (canonical: ${aliasToCanon.get(v)})`, "use canonical source_id; keep alias only as source_alias");
     } else {
       issue(f, rec ? "MAT:" + rec : null, `source_id ${v}`, "unresolvable source reference", "reference a registered canonical ID or alias"); failed++;
     }
-  }
-  for (const m of src.matchAll(/source_alias:\s*"([^"]+)"/g)) {
-    if (!aliasToCanon.has(m[1]) && !SRC_CANON.test(m[1]))
-      { issue(f, rec ? "MAT:" + rec : null, `source_alias ${m[1]}`, "alias not in registry", "register every alias"); failed++; }
   }
 }
 

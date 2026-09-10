@@ -26,7 +26,17 @@
     "generate:records": "node scripts/generate-element-records.mjs",
     "setup": "npm ci && npm --prefix studio ci",
     "preview:studio": "npm --prefix studio run preview -- --host 127.0.0.1",
-    "test:e2e": "npm --prefix studio run test:e2e"
+    "test:e2e": "npm --prefix studio run test:e2e",
+    "sync:nuclear": "node scripts/sync-nuclear-evaluation.mjs",
+    "intake:preview": "node scripts/import-mat-intake.mjs",
+    "build:intake-review": "node scripts/build-intake-review.mjs",
+    "build:print": "node book/export-single.mjs",
+    "preview:book": "node book/serve.mjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "build:coverage": "node scripts/build-record-coverage.mjs",
+    "sync:asset-descriptions": "node scripts/sync-asset-descriptions.mjs",
+    "test:reader:browsers": "cd studio && npx playwright test -c playwright.reader.config.ts",
+    "sync:relationships": "node scripts/reconcile-relationship-registries.mjs"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

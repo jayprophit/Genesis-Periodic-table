@@ -2273,3 +2273,7 @@ visuals:
 The bulk reference values above are consistent with current-accessible WebElements data: about `535 kg/m³`, `4.9 GPa` Young's modulus, `9.5×10⁻⁸ Ω·m` resistivity and `85 W·m⁻¹·K⁻¹` thermal conductivity. ([WebElements][1]) DOE also describes Li-ion batteries in terms of lithium ions moving between electrodes while electrons move through the external circuit, so keeping the **ion, host and whole-cell objects separate** is the right architecture. ([The Department of Energy's Energy.gov][2])
 
 ## Individual Lithium isotope child records
+
+## Evaluated nuclear data and review
+
+The [NUBASE2020 nuclear state catalogue](0003-Lithium-Li-Nuclear-Evaluation.md) provides 16 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.

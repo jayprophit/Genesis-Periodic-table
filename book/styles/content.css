@@ -62,8 +62,9 @@ tbody tr:last-child td { border-bottom: 0 }
 .align-center { text-align: center }
 td code { overflow-wrap: anywhere }
 #page img { max-width: 100%; height: auto }
-figure { margin: 25px 0 }
-figcaption { font-size: 12px; line-height: 1.6; color: var(--muted); padding: 12px 0 }
+figure { margin: 25px 0; max-width: 100%; overflow: hidden; display: flex; flex-direction: column; align-items: center }
+figure img { width: 100%; height: auto; display: block }
+figcaption { font-size: 12px; line-height: 1.6; color: var(--muted); padding: 12px 0; width: 100%; text-align: center }
 .math { overflow-x: auto; max-width: 100% }
 div.math { margin: 25px 0; padding: 12px; text-align: center }
 mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden }

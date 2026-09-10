@@ -1,0 +1,53 @@
+# Aluminium — Research Intake and Review
+
+**Research / Emerging · imported content awaiting review.** 37 file-level records were recovered, with original source bytes and duplicate history retained. Existing baseline values are retained in the source archive and Git history. `CORE-VALIDATED` or `PASS` in the original conversation is not a result from the local validator.
+
+- [Parent record](0013-Aluminium-Al.md)
+- [Evaluated nuclear reference](0013-Aluminium-Al-Nuclear-Evaluation.md)
+- [Recovered bibliography](sources/0013-Aluminium-Al-Recovered-Bibliography.md)
+- [Intake ledger](../../data/intake/mat-42-52.json)
+- [Claims ledger](../../data/intake/mat-42-52-claims.json)
+
+## Imported record files
+
+- [0013-Aluminium-Al.yaml](data/structured/0013-Aluminium-Al.yaml) — 48.txt, line 12; review pending.
+- [0013-Aluminium-Al-Sources-Part-01.yaml](references/0013-Aluminium-Al-Sources-Part-01.yaml) — 48.txt, line 131; review pending.
+- [0013-Aluminium-Al-Isotopes.yaml](data/isotopes/0013-Aluminium-Al-Isotopes.yaml) — 49.txt, line 644; review pending.
+- [0013-Aluminium-Al-Isotope-21-Aluminium-21.yaml](data/isotopes/0013-Aluminium-Al-Isotope-21-Aluminium-21.yaml) — 48.txt, line 295; review pending.
+- [0013-Aluminium-Al-Isotope-22-Aluminium-22.yaml](data/isotopes/0013-Aluminium-Al-Isotope-22-Aluminium-22.yaml) — 48.txt, line 344; review pending.
+- [0013-Aluminium-Al-Isotope-23-Aluminium-23.yaml](data/isotopes/0013-Aluminium-Al-Isotope-23-Aluminium-23.yaml) — 48.txt, line 395; review pending.
+- [0013-Aluminium-Al-Isotope-24-Aluminium-24.yaml](data/isotopes/0013-Aluminium-Al-Isotope-24-Aluminium-24.yaml) — 48.txt, line 435; review pending.
+- [0013-Aluminium-Al-Isotope-24m-Aluminium-24m.yaml](data/isotopes/0013-Aluminium-Al-Isotope-24m-Aluminium-24m.yaml) — 48.txt, line 477; review pending.
+- [0013-Aluminium-Al-Isotope-25-Aluminium-25.yaml](data/isotopes/0013-Aluminium-Al-Isotope-25-Aluminium-25.yaml) — 48.txt, line 533; review pending.
+- [0013-Aluminium-Al-Isotope-26-Aluminium-26.yaml](data/isotopes/0013-Aluminium-Al-Isotope-26-Aluminium-26.yaml) — 48.txt, line 569; review pending.
+- [0013-Aluminium-Al-Isotope-26m-Aluminium-26m.yaml](data/isotopes/0013-Aluminium-Al-Isotope-26m-Aluminium-26m.yaml) — 48.txt, line 625; review pending.
+- [0013-Aluminium-Al-Isotope-27-Aluminium-27.yaml](data/isotopes/0013-Aluminium-Al-Isotope-27-Aluminium-27.yaml) — 48.txt, line 675; review pending.
+- [0013-Aluminium-Al-Isotope-28-Aluminium-28.yaml](data/isotopes/0013-Aluminium-Al-Isotope-28-Aluminium-28.yaml) — 48.txt, line 738; review pending.
+- [0013-Aluminium-Al-Isotope-29-Aluminium-29.yaml](data/isotopes/0013-Aluminium-Al-Isotope-29-Aluminium-29.yaml) — 48.txt, line 791; review pending.
+- [0013-Aluminium-Al-Isotope-30-Aluminium-30.yaml](data/isotopes/0013-Aluminium-Al-Isotope-30-Aluminium-30.yaml) — 48.txt, line 827; review pending.
+- [0013-Aluminium-Al-Isotope-31-Aluminium-31.yaml](data/isotopes/0013-Aluminium-Al-Isotope-31-Aluminium-31.yaml) — 48.txt, line 860; review pending.
+- [0013-Aluminium-Al-Isotope-32-Aluminium-32.yaml](data/isotopes/0013-Aluminium-Al-Isotope-32-Aluminium-32.yaml) — 48.txt, line 897; review pending.
+- [0013-Aluminium-Al-Isotope-32m-Aluminium-32m.yaml](data/isotopes/0013-Aluminium-Al-Isotope-32m-Aluminium-32m.yaml) — 48.txt, line 933; review pending.
+- [0013-Aluminium-Al-Production-Status.yaml](0013-Aluminium-Al-Production-Status.yaml) — 49.txt, line 1491; review pending.
+- [0013-Aluminium-Al-Isotope-33-Aluminium-33.yaml](data/isotopes/0013-Aluminium-Al-Isotope-33-Aluminium-33.yaml) — 49.txt, line 8; review pending.
+- [0013-Aluminium-Al-Isotope-34-Aluminium-34.yaml](data/isotopes/0013-Aluminium-Al-Isotope-34-Aluminium-34.yaml) — 49.txt, line 58; review pending.
+- [0013-Aluminium-Al-Isotope-34m-Aluminium-34m.yaml](data/isotopes/0013-Aluminium-Al-Isotope-34m-Aluminium-34m.yaml) — 49.txt, line 97; review pending.
+- [0013-Aluminium-Al-Isotope-35-Aluminium-35.yaml](data/isotopes/0013-Aluminium-Al-Isotope-35-Aluminium-35.yaml) — 49.txt, line 153; review pending.
+- [0013-Aluminium-Al-Isotope-36-Aluminium-36.yaml](data/isotopes/0013-Aluminium-Al-Isotope-36-Aluminium-36.yaml) — 49.txt, line 200; review pending.
+- [0013-Aluminium-Al-Isotope-37-Aluminium-37.yaml](data/isotopes/0013-Aluminium-Al-Isotope-37-Aluminium-37.yaml) — 49.txt, line 274; review pending.
+- [0013-Aluminium-Al-Isotope-38-Aluminium-38.yaml](data/isotopes/0013-Aluminium-Al-Isotope-38-Aluminium-38.yaml) — 49.txt, line 322; review pending.
+- [0013-Aluminium-Al-Isotope-39-Aluminium-39.yaml](data/isotopes/0013-Aluminium-Al-Isotope-39-Aluminium-39.yaml) — 49.txt, line 370; review pending.
+- [0013-Aluminium-Al-Isotope-40-Aluminium-40.yaml](data/isotopes/0013-Aluminium-Al-Isotope-40-Aluminium-40.yaml) — 49.txt, line 422; review pending.
+- [0013-Aluminium-Al-Isotope-41-Aluminium-41.yaml](data/isotopes/0013-Aluminium-Al-Isotope-41-Aluminium-41.yaml) — 49.txt, line 474; review pending.
+- [0013-Aluminium-Al-Isotope-42-Aluminium-42.yaml](data/isotopes/0013-Aluminium-Al-Isotope-42-Aluminium-42.yaml) — 49.txt, line 537; review pending.
+- [0013-Aluminium-Al-Isotope-43-Aluminium-43.yaml](data/isotopes/0013-Aluminium-Al-Isotope-43-Aluminium-43.yaml) — 49.txt, line 586; review pending.
+- [0013-Aluminium-Al-CALC-001-Al26-to-Mg26.md](calculations/0013-Aluminium-Al-CALC-001-Al26-to-Mg26.md) — 49.txt, line 694; review pending.
+- [0013-Aluminium-Al-CALC-002-Al28-to-Si28.md](calculations/0013-Aluminium-Al-CALC-002-Al28-to-Si28.md) — 49.txt, line 827; review pending.
+- [0013-Aluminium-Al-Al27-NMR.yaml](data/structured/0013-Aluminium-Al-Al27-NMR.yaml) — 49.txt, line 932; review pending.
+- [0013-Aluminium-Al-Atomic-Spectrum.yaml](data/spectra/0013-Aluminium-Al-Atomic-Spectrum.yaml) — 49.txt, line 1065; review pending.
+- [0013-Aluminium-Al-Sources-Part-02.yaml](references/0013-Aluminium-Al-Sources-Part-02.yaml) — 49.txt, line 1353; review pending.
+- [0013-Aluminium-Al-Frequency-Semantics.yaml](data/structured/0013-Aluminium-Al-Frequency-Semantics.yaml) — 49.txt, line 1414; review pending.
+
+## Completion boundary
+
+Nuclear source transcription can be checked automatically. Engineering allowables, biological context, experimental replication, equations, spectra, visual rights and source support still require domain review. Pending graphics remain specifications, not generated scientific figures.

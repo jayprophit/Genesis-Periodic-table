@@ -1,0 +1,211 @@
+registry_id: MAT:0013:REG:ATOMIC-SPECTRUM
+record_id: MAT:0013
+version: 1.0.0
+wavelength_semantics:
+  wavelength_medium_must_be_stored: true
+  vacuum_and_air_are_not_interchangeable: true
+  spectrum_requires_charge_state: true
+  observed_line_equals_universal_element_frequency: false
+Al_I:
+  species:
+    charge: 0
+    electron_count: 13
+  ground_configuration: 3s2 3p
+  ground_term: 2P°
+  selected_persistent_lines:
+    - wavelength:
+        value: 226.9096
+        unit: nm
+        medium: AIR
+      classification: Al I
+    - wavelength:
+        value: 236.7052
+        unit: nm
+        medium: AIR
+      classification: Al I
+    - wavelength:
+        value: 237.3124
+        unit: nm
+        medium: AIR
+      classification: Al I
+    - wavelength:
+        value: 257.5094
+        unit: nm
+        medium: AIR
+      classification: Al I
+    - wavelength:
+        value: 308.2153
+        unit: nm
+        medium: AIR
+      lower:
+        energy_cm1: 0
+        configuration: 3s2 3p
+        term: 2P°
+        J: 1/2
+      upper:
+        energy_cm1: 32435.453
+        configuration: 3s2 3d
+        term: 2D
+        J: 3/2
+    - wavelength:
+        value: 309.271
+        unit: nm
+        medium: AIR
+      lower:
+        energy_cm1: 112.061
+        configuration: 3s2 3p
+        term: 2P°
+        J: 3/2
+      upper:
+        energy_cm1: 32436.796
+        configuration: 3s2 3d
+        term: 2D
+        J: 5/2
+    - wavelength:
+        value: 394.4006
+        unit: nm
+        medium: AIR
+      lower:
+        energy_cm1: 0
+        configuration: 3s2 3p
+        term: 2P°
+        J: 1/2
+      upper:
+        energy_cm1: 25347.756
+        configuration: 3s2 4s
+        term: 2S
+        J: 1/2
+    - wavelength:
+        value: 396.152
+        unit: nm
+        medium: AIR
+      lower:
+        energy_cm1: 112.061
+        configuration: 3s2 3p
+        term: 2P°
+        J: 3/2
+      upper:
+        energy_cm1: 25347.756
+        configuration: 3s2 4s
+        term: 2S
+        J: 1/2
+Al_II:
+  species:
+    charge: 1
+    electron_count: 12
+  ground_configuration: 3s2
+  ground_term: 1S0
+  selected_persistent_lines:
+    - wavelength:
+        value: 153.983
+        unit: nm
+        medium: VACUUM
+    - wavelength:
+        value: 167.07886
+        unit: nm
+        medium: VACUUM
+      lower:
+        energy_cm1: 0
+        configuration: 3s2
+        term: 1S
+        J: 0
+      upper:
+        energy_cm1: 59852.02
+        configuration: 3s3p
+        term: 1P°
+        J: 1
+      Einstein_A:
+        value: 1460000000
+        unit: s^-1
+    - wavelength:
+        value: 171.944
+        unit: nm
+        medium: VACUUM
+    - wavelength:
+        value: 172.1271
+        unit: nm
+        medium: VACUUM
+    - wavelength:
+        value: 172.4984
+        unit: nm
+        medium: VACUUM
+    - wavelength:
+        value: 185.8026
+        unit: nm
+        medium: VACUUM
+    - wavelength:
+        value: 186.2311
+        unit: nm
+        medium: VACUUM
+Al_III:
+  species:
+    charge: 2
+    electron_count: 11
+  ground_configuration: "[Ne]3s"
+  ground_term: 2S1/2
+  resonance_doublet:
+    component_1:
+      wavelength:
+        value: 185.4716
+        uncertainty_last_digits: 0.0001
+        unit: nm
+        medium: VACUUM
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°3/2
+    component_2:
+      wavelength:
+        value: 186.279
+        uncertainty_last_digits: 0.0001
+        unit: nm
+        medium: VACUUM
+      transition:
+        lower: 3s 2S1/2
+        upper: 3p 2P°1/2
+  astrophysical_use:
+    absorption_diagnostics:
+      important: true
+    possible_contexts:
+      - interstellar_medium
+      - circumgalactic_medium
+      - quasar_absorption_systems
+      - stellar_atmospheres
+Al_IV_and_higher:
+  exists: true
+  NIST_ASD_contains_additional_ionization_stages: true
+  exhaustive_layer:
+    status: DEFERRED-OPTIONAL-EXTENSION
+rules:
+  Al_I_equals_Al_II: false
+  Al_II_equals_Al_III: false
+  same_element_different_charge_state_same_spectrum: false
+  emission_line_is_single_material_frequency: false
+  absorption_line_is_single_material_frequency: false
+  spectrum_depends_on:
+    - charge_state
+    - electronic_state
+    - temperature
+    - density
+    - pressure
+    - radiation_environment
+    - magnetic_field
+    - electric_field
+    - plasma_conditions
+    - line_broadening
+    - observational_geometry
+  frequency_representation:
+    wavelength_to_frequency_relation:
+      equation: nu = c / lambda
+    conversion_does_not_create_universal_element_frequency: true
+source_ids:
+  - SRC-000282
+  - SRC-000284
+  - SRC-000285
+intake_provenance:
+  intake_id: MAT:INTAKE:42-52
+  source_file: archive/source-intake/mat-42-52/49.txt
+  source_sha256: 9dd82277cc3de3dd242f14c7fb81f4a775c6bad890bfbb29e9b691c435ad4740
+  source_line: 1065
+  review_status: NEEDS-SCIENTIFIC-REVIEW
+  import_date: 2026-09-08
+  note: Recovered conversation content; imported validation assertions are not independent verification.

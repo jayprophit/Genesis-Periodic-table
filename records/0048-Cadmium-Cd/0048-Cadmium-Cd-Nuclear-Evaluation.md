@@ -1,0 +1,95 @@
+# Cadmium — Evaluated Nuclear States
+
+<!-- generated-by: sync-nuclear-evaluation.mjs -->
+
+**MAT Core Data · dated evaluation.** 68 nuclear states are transcribed from NUBASE2020, published in 2021. This is a reproducible source extraction, not independent experimental validation or a claim that later research is complete.
+
+- [Parent Cadmium record](0048-Cadmium-Cd.md)
+- [Structured evaluation](data/isotopes/0048-Cadmium-Cd-NUBASE2020-Evaluation.yaml)
+- [Retained original source](../../data/catalog/sources/nubase_4.mas20.txt)
+- [Evaluation paper](https://doi.org/10.1088/1674-1137/abddae) · SRC-000008
+
+## How to read this table
+
+A is the mass number; N is the neutron count. Ground states, isomers, levels and isobaric analogue states retain the source state index. Mass excess is in keV, not atomic mass units. A `#` means an estimate from systematics; `?`, inequalities, asymmetric uncertainty text and spin qualifiers are preserved. `stbl` means stable in this evaluation, `p-unst` means particle unstable. Blank source fields remain unavailable. The final column preserves decay/abundance notation without equating decay branching with natural abundance.
+
+## Nuclear state catalogue
+
+| Nuclide / state | N | Mass excess | Half-life | Spin / parity | Decay or abundance (source text) | Source line |
+|---|---:|---|---|---|---|---:|
+| 94Cd | 46 | -40440# keV (unc. 500#) | 80# ms (unc. >760ns) | 0+ | B+ ?; B+p ? | 1579 |
+| 95Cd | 47 | -47060# keV (unc. 570#) | 32 ms (unc. 3) | 9/2+# | B+=100;B+p=4.6 11 | 1605 |
+| 96Cd | 48 | -55570# keV (unc. 410#) | 1003 ms (unc. 47) | 0+ | B+=100;B+p=1.6 3 | 1631 |
+| 96Cd · m [1] | 48 | -49540# keV (unc. 1450#) | 511 ms (unc. 26) | 16+ | B+=100;B+p=15.4 21 | 1632 |
+| 96Cd · n [2] | 48 | -49970# keV (unc. 410#) | 198 ns (unc. 18) | (12-,13-) | IT=100 | 1633 |
+| 97Cd | 49 | -60730 keV (unc. 420) | 1.16 s (unc. 0.05) | (9/2+) | B+=100;B+p=7.4 2 | 1658 |
+| 97Cd · m [1] | 49 | -59480 keV (unc. 420) | 730 us (unc. 70) | (1/2-) | IT=100 | 1659 |
+| 97Cd · n [2] | 49 | -58110 keV (unc. 720) | 3.86 s (unc. 0.06) | (25/2+) | B+=100;B+p=25.1 5 | 1660 |
+| 98Cd | 50 | -67640 keV (unc. 50) | 9.29 s (unc. 0.10) | 0+ | B+=100;B+p<0.029 | 1689 |
+| 98Cd · m [1] | 50 | -65210 keV (unc. 50) | 154 ns (unc. 16) | (8+) | IT=100 | 1690 |
+| 98Cd · n [2] | 50 | -61010 keV (unc. 50) | 224 ns (unc. 5) | (12+) | IT=100 | 1691 |
+| 99Cd | 51 | -69931.1 keV (unc. 1.6) | 17 s (unc. 1) | 5/2+# | B+=100;B+p=0.21 2;B+A<1e-4 | 1714 |
+| 100Cd | 52 | -74194.6 keV (unc. 1.7) | 49.1 s (unc. 0.5) | 0+ | B+=100 | 1741 |
+| 101Cd | 53 | -75836.5 keV (unc. 1.5) | 1.36 m (unc. 0.05) | 5/2+* | B+=100 | 1764 |
+| 102Cd | 54 | -79659.7 keV (unc. 1.7) | 5.5 m (unc. 0.5) | 0+ | B+=100 | 1784 |
+| 103Cd | 55 | -80651.6 keV (unc. 1.8) | 7.3 m (unc. 0.1) | 5/2+* | B+=100 | 1803 |
+| 104Cd | 56 | -83968.4 keV (unc. 1.7) | 57.7 m (unc. 1.0) | 0+ | B+=100 | 1824 |
+| 105Cd | 57 | -84333.8 keV (unc. 1.4) | 55.5 m (unc. 0.4) | 5/2+* | B+=100 | 1844 |
+| 105Cd · m [1] | 57 | -81816.2 keV (unc. 1.5) | 4.5 us (unc. 0.5) | (21/2+) | IT=100 | 1845 |
+| 106Cd | 58 | -87132.2 keV (unc. 1.1) | stbl (unc. >1.1Zy) | 0+ | IS=1.245 22;2B+ ? | 1865 |
+| 107Cd | 59 | -86990.3 keV (unc. 1.7) | 6.50 h (unc. 0.02) | 5/2+* | B+=100 | 1890 |
+| 108Cd | 60 | -89252.4 keV (unc. 1.1) | stbl (unc. >410Py) | 0+ | IS=0.888 11;2B+ ? | 1910 |
+| 109Cd | 61 | -88504.3 keV (unc. 1.5) | 461.3 d (unc. 0.5) | 5/2+* | EC=100 | 1934 |
+| 109Cd · m [1] | 61 | -88444.7 keV (unc. 1.5) | 11.8 us (unc. 1.6) | 1/2+ | IT=100 | 1935 |
+| 109Cd · n [2] | 61 | -88041.2 keV (unc. 1.5) | 10.6 us (unc. 0.4) | 11/2- | IT=100 | 1936 |
+| 110Cd | 62 | -90348.0 keV (unc. 0.4) | stbl | 0+ | IS=12.470 61 | 1957 |
+| 111Cd | 63 | -89252.2 keV (unc. 0.4) | stbl | 1/2+* | IS=12.795 12 | 1976 |
+| 111Cd · m [1] | 63 | -88856.0 keV (unc. 0.4) | 48.50 m (unc. 0.09) | 11/2-* | IT=100 | 1977 |
+| 112Cd | 64 | -90574.86 keV (unc. 0.25) | stbl | 0+ | IS=24.109 7 | 1997 |
+| 113Cd | 65 | -89043.29 keV (unc. 0.24) | 8.04 Py (unc. 0.05) | 1/2+* | IS=12.227 7;B-=100 | 2021 |
+| 113Cd · m [1] | 65 | -88779.75 keV (unc. 0.24) | 13.89 y (unc. 0.11) | 11/2-* | B-=99.9036 19;IT=0.0964 19 | 2022 |
+| 114Cd | 66 | -90014.93 keV (unc. 0.28) | stbl (unc. >92Py) | 0+ | IS=28.754 81;2B- ? | 2044 |
+| 115Cd | 67 | -88084.5 keV (unc. 0.7) | 53.46 h (unc. 0.05) | 1/2+* | B-=100 | 2068 |
+| 115Cd · m [1] | 67 | -87903.5 keV (unc. 0.9) | 44.56 d (unc. 0.24) | 11/2-* | B-~100;IT ? | 2069 |
+| 116Cd | 68 | -88712.49 keV (unc. 0.16) | 26.9 Ey (unc. 0.9) | 0+ | IS=7.512 54;2B-=100 | 2094 |
+| 117Cd | 69 | -86418.4 keV (unc. 1.0) | 2.503 h (unc. 0.005) | 1/2+* | B-=100 | 2122 |
+| 117Cd · m [1] | 69 | -86282.0 keV (unc. 1.0) | 3.441 h (unc. 0.009) | 11/2-* | B-=100 | 2123 |
+| 118Cd | 70 | -86702 keV (unc. 20) | 50.3 m (unc. 0.2) | 0+ | B-=100 | 2151 |
+| 119Cd | 71 | -83980 keV (unc. 40) | 2.69 m (unc. 0.02) | 1/2+* | B-=100 | 2178 |
+| 119Cd · m [1] | 71 | -83830 keV (unc. 40) | 2.20 m (unc. 0.02) | 11/2-* | B-=100 | 2179 |
+| 120Cd | 72 | -83957 keV (unc. 4) | 50.80 s (unc. 0.21) | 0+ | B-=100 | 2208 |
+| 121Cd | 73 | -81073.8 keV (unc. 1.9) | 13.5 s (unc. 0.3) | 3/2+* | B-=100 | 2237 |
+| 121Cd · m [1] | 73 | -80858.9 keV (unc. 1.9) | 8.3 s (unc. 0.8) | 11/2-* | B-=100 | 2238 |
+| 122Cd | 74 | -80612.4 keV (unc. 2.3) | 5.24 s (unc. 0.03) | 0+ | B-=100 | 2269 |
+| 123Cd | 75 | -77414.2 keV (unc. 2.7) | 2.10 s (unc. 0.02) | 3/2+* | B-=100 | 2304 |
+| 123Cd · m [1] | 75 | -77271 keV (unc. 3) | 1.82 s (unc. 0.03) | 11/2-* | B-=?;IT ? | 2305 |
+| 124Cd | 76 | -76699.4 keV (unc. 2.6) | 1.25 s (unc. 0.02) | 0+ | B-=100 | 2339 |
+| 125Cd | 77 | -73348.1 keV (unc. 2.9) | 680 ms (unc. 40) | 3/2+* | B-=100 | 2370 |
+| 125Cd · m [1] | 77 | -73162 keV (unc. 3) | 480 ms (unc. 30) | 11/2-* | B-=100 | 2371 |
+| 125Cd · n [2] | 77 | -71700 keV (unc. 5) | 19 us (unc. 3) | (19/2+) | IT=100 | 2372 |
+| 126Cd | 78 | -72255.7 keV (unc. 2.3) | 512 ms (unc. 5) | 0+ | B-=100 | 2410 |
+| 127Cd | 79 | -68741 keV (unc. 6) | 480 ms (unc. 100) | 3/2+* | B-=100;B-n ? | 2443 |
+| 127Cd · m [1] | 79 | -68456 keV (unc. 4) | 360 ms (unc. 40) | 11/2-* | B-=100 | 2444 |
+| 127Cd · n [2] | 79 | -66896 keV (unc. 10) | 17.5 us (unc. 0.3) | (19/2+) | IT=100 | 2445 |
+| 128Cd | 80 | -67238 keV (unc. 6) | 246 ms (unc. 2) | 0+ | B-=100;B-n ? | 2480 |
+| 128Cd · m [1] | 80 | -65368 keV (unc. 6) | 270 ns (unc. 7) | (5-) | IT=100 | 2481 |
+| 128Cd · n [2] | 80 | -64523 keV (unc. 6) | 3.56 us (unc. 0.06) | (10+) | IT=100 | 2482 |
+| 128Cd · p [3] | 80 | -62951 keV (unc. 6) | 6.3 ms (unc. 0.8) | (15-) | IT=100 | 2483 |
+| 129Cd | 81 | -63122 keV (unc. 5) | 147 ms (unc. 3) | 11/2-* | B-=100;B-n=? | 2515 |
+| 129Cd · m [1] | 81 | -62779 keV (unc. 6) | 157 ms (unc. 8) | 3/2+* | B-=100;B-n=? | 2516 |
+| 129Cd · n [2] | 81 | -60839 keV (unc. 9) | 3.6 ms (unc. 0.2) | (21/2+) | IT=100 | 2517 |
+| 130Cd | 82 | -61118 keV (unc. 22) | 126.8 ms (unc. 1.8) | 0+ | B-=100;B-n=3.5 10 | 2552 |
+| 130Cd · m [1] | 82 | -58988 keV (unc. 22) | 240 ns (unc. 16) | (8+) | IT=100 | 2553 |
+| 131Cd | 83 | -55212 keV (unc. 19) | 98 ms (unc. 2) | 7/2-# | B-=100;B-n=3.5 10;B-2n ? | 2592 |
+| 132Cd | 84 | -50470 keV (unc. 60) | 84 ms (unc. 5) | 0+ | B-=100;B-n=60 15;B-2n ? | 2625 |
+| 133Cd | 85 | -44140# keV (unc. 200#) | 61 ms (unc. 6) | 7/2-# | B-=100;B-n=?;B-2n ? | 2655 |
+| 134Cd | 86 | -39460# keV (unc. 300#) | 65 ms (unc. 15) | 0+ | B-=100;B-n ?;B-2n ? | 2688 |
+| 135Cd | 87 | -32820# keV (unc. 400#) | UNAVAILABLE | 5/2-# | B- ?;B-n ? | 2720 |
+
+## Provenance and review
+
+Source snapshot SHA-256: `1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859`. Retrieved 2026-09-08. Every structured entry preserves the original line and its line number. The parser is checked against the source's published column specification and representative ground states, isomers, estimates and stable states. Post-2020 findings and supplied research batches retain separate provenance and review status.
+
+## Derived decay metrics
+
+The structured evaluation now includes a decay constant and mean lifetime for each positive numeric half-life. These use the single exponential model, \(\lambda=\ln(2)/T_{1/2}\) and \(\tau=T_{1/2}/\ln(2)\). Values retain the original time unit: a half-life in years produces a rate per source year, without silently assuming a calendar conversion. Inequalities reverse for the reciprocal decay constant. Estimates remain estimates. Stable or unavailable half-lives have no numeric result. Symmetric uncertainty is propagated to first order; asymmetric source uncertainties remain unpropagated and visible. These calculations add no new experimental evidence or significant figures.

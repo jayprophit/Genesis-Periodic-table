@@ -1,0 +1,1116 @@
+Yes. I checked the recovered production endpoint rather than relying on the earlier checkpoint: **Magnesium is ready as `CORE-VALIDATED`, and the previous generation explicitly names `0013-Aluminium-Al` as the next production record.**  The queued Aluminium pass begins with the isotope/material expansion. 
+
+So we continue the old generation workflow now. **Do not move or redesign anything—paste these into the matching MAT files.**
+
+## `0013-Aluminium-Al` — Production Chunk 01
+
+### Core + nuclear registry + ²¹Al–³²Al children
+
+The nuclear values below preserve **NUBASE2020** evaluation semantics. In particular, `#` values are estimates/systematics rather than experimentally determined values; `?` decay assignments remain uncertain rather than being converted into facts. ([Chinese Physics C][1])
+
+```text
+# FILE: records/0013-Aluminium-Al/data/structured/0013-Aluminium-Al.yaml
+```
+
+```yaml
+mat_id: "MAT:0013"
+record_name: "Aluminium"
+symbol: "Al"
+record_class: "CHEMICAL_ELEMENT"
+atomic_number: 13
+
+legacy:
+  legacy_id: "G0013"
+  migration_status: "CONTENT-MIGRATION-IN-PROGRESS"
+
+identity:
+  proton_count: 13
+  neutral_electron_count: 13
+  period: 3
+  group: 13
+  block: "p"
+
+periodic_architecture:
+  period_3_position: 3
+
+  preceding_record:
+    id: "MAT:0012"
+    symbol: "Mg"
+    transition:
+      from: "[Ne]3s2"
+      to: "[Ne]3s2 3p1"
+
+  first_period_3_p_electron:
+    value: true
+
+  periodic_analogue:
+    id: "MAT:0005"
+    element: "Boron"
+    shared_group: 13
+
+  rule:
+    statement: >
+      Aluminium repeats the Group-13 valence-electron count of Boron
+      at a larger shell scale but does not inherit Boron's bulk
+      structural or electronic behaviour unchanged.
+
+electronic_ground_state:
+  configuration: "[Ne]3s2 3p1"
+  term: "2P°1/2"
+
+ionization_architecture:
+
+  Al_to_Al_plus:
+    ionization_energy:
+      value: 5.985769
+      uncertainty: 0.000003
+      unit: "eV"
+
+  Al_plus_to_Al_2plus:
+    parent_configuration: "[Ne]3s2"
+    ionization_energy:
+      value: 18.82855
+      uncertainty: 0.00005
+      unit: "eV"
+
+  Al_2plus_to_Al_3plus:
+    parent_configuration: "[Ne]3s"
+    ionization_energy:
+      value: 28.447642
+      uncertainty: 0.000025
+      unit: "eV"
+
+  Al_3plus:
+    electron_count: 10
+    configuration: "[Ne]"
+    closed_shell_core: true
+
+    isoelectronic_relationships:
+      - "MAT:0010:ATOM:Ne"
+      - "MAT:0011:ION:Na+1"
+      - "MAT:0012:ION:Mg+2"
+
+rules:
+  proton_count_defines_elemental_identity: true
+  ionization_changes_element_identity: false
+  Al3_plus_equals_neutral_Al: false
+  same_valence_count_means_same_material_behavior: false
+  bulk_Al_equals_Al3_plus: false
+  compound_property_equals_parent_element_property: false
+
+standard_atomic_weight:
+  value: 26.9815384
+  uncertainty: 0.0000003
+  source_id: "SRC-000281"
+
+natural_isotope_architecture:
+  monoisotopic_normal_material: true
+  dominant_and_stable:
+    isotope_id: "MAT:0013:ISO:Al-27"
+    abundance_fraction: 1.0
+
+status:
+  research: "IN-PROGRESS"
+  scientific_core: "BUILDING"
+  isotope_layer: "IN-PROGRESS"
+  schema_validation: "PENDING"
+  visual_specification: "NOT-YET-LOCKED"
+  visual_assets: "NOT-GENERATED"
+
+source_ids:
+  - "SRC-000279"
+  - "SRC-000280"
+  - "SRC-000281"
+```
+
+The electronic configuration and first three ionization energies above are from the current NIST Atomic Spectra Database; CIAAW's 2024 table gives the recommended standard atomic weight as **26.9815384(3)**. ([NIST][2])
+
+---
+
+```text
+# FILE: records/0013-Aluminium-Al/references/0013-Aluminium-Al-Sources-Part-01.yaml
+```
+
+```yaml
+registry_id: "MAT:0013:REG:SOURCES:PART-01"
+record_id: "MAT:0013"
+
+sources:
+
+  - source_id: "SRC-000278"
+    title: "The NUBASE2020 evaluation of nuclear physics properties"
+    authors:
+      - "F. G. Kondev"
+      - "M. Wang"
+      - "W. J. Huang"
+      - "S. Naimi"
+      - "G. Audi"
+    publication: "Chinese Physics C"
+    volume: 45
+    article: "030001"
+    year: 2021
+    doi: "10.1088/1674-1137/abddae"
+    source_class: "EVALUATED-NUCLEAR-DATA"
+    authority: "PRIMARY-EVALUATED-REFERENCE"
+
+  - source_id: "SRC-000279"
+    title: "NIST Atomic Spectra Database — Aluminium Ionization Energies"
+    organization: "National Institute of Standards and Technology"
+    database_version: "5.12"
+    doi: "10.18434/T4W30F"
+    source_class: "REFERENCE-DATABASE"
+
+  - source_id: "SRC-000280"
+    title: "NIST Atomic Weights and Isotopic Compositions for Aluminum"
+    organization: "National Institute of Standards and Technology"
+    source_class: "REFERENCE-DATABASE"
+
+  - source_id: "SRC-000281"
+    title: "Standard Atomic Weights 2024"
+    organization:
+      "Commission on Isotopic Abundances and Atomic Weights"
+    abbreviation: "CIAAW"
+    source_class: "INTERNATIONAL-REFERENCE"
+
+  - source_id: "SRC-000282"
+    title: "Persistent Lines of Neutral Aluminum (Al I)"
+    organization: "National Institute of Standards and Technology"
+    source_class: "ATOMIC-SPECTROSCOPY-REFERENCE"
+
+  - source_id: "SRC-000283"
+    title: "Alumina: discriminative analysis using 3D correlation of solid-state NMR parameters"
+    publication: "Chemical Society Reviews"
+    doi: "10.1039/C8CS00321A"
+    source_class: "PEER-REVIEWED-REVIEW"
+    role:
+      - "27Al-NMR"
+      - "QUADRUPOLAR-NMR"
+      - "ALUMINIUM-COORDINATION"
+
+source_rules:
+  source_id_is_not_evidence_strength: true
+  historical_value_may_be_retained_with_status: true
+  evaluated_and_measured_values_must_be_distinguished: true
+  NUBASE_hash_flag_must_be_preserved: true
+```
+
+---
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotopes.yaml
+```
+
+```yaml
+registry_id: "MAT:0013:REG:ISOTOPES"
+parent_id: "MAT:0013"
+version: "1.0.0"
+
+evaluation:
+  primary: "NUBASE2020"
+  source_id: "SRC-000278"
+
+range:
+  current_core_MAT_children:
+    minimum_A: 21
+    maximum_A: 43
+
+stable:
+  - "MAT:0013:ISO:Al-27"
+
+proton_rich:
+  - "MAT:0013:ISO:Al-21"
+  - "MAT:0013:ISO:Al-22"
+  - "MAT:0013:ISO:Al-23"
+  - "MAT:0013:ISO:Al-24"
+  - "MAT:0013:ISO:Al-25"
+  - "MAT:0013:ISO:Al-26"
+
+neutron_rich:
+  - "MAT:0013:ISO:Al-28"
+  - "MAT:0013:ISO:Al-29"
+  - "MAT:0013:ISO:Al-30"
+  - "MAT:0013:ISO:Al-31"
+  - "MAT:0013:ISO:Al-32"
+  - "MAT:0013:ISO:Al-33"
+  - "MAT:0013:ISO:Al-34"
+  - "MAT:0013:ISO:Al-35"
+  - "MAT:0013:ISO:Al-36"
+  - "MAT:0013:ISO:Al-37"
+  - "MAT:0013:ISO:Al-38"
+  - "MAT:0013:ISO:Al-39"
+  - "MAT:0013:ISO:Al-40"
+  - "MAT:0013:ISO:Al-41"
+  - "MAT:0013:ISO:Al-42"
+  - "MAT:0013:ISO:Al-43"
+
+important_isomers:
+  - "MAT:0013:ISO:Al-24m"
+  - "MAT:0013:ISO:Al-26m"
+  - "MAT:0013:ISO:Al-32m"
+  - "MAT:0013:ISO:Al-34m"
+
+high_priority_roles:
+
+  Al26:
+    role:
+      - "LONG-LIVED-RADIONUCLIDE"
+      - "COSMOGENIC-NUCLIDE"
+      - "EARLY-SOLAR-SYSTEM-CHRONOMETER-PARENT"
+    daughter:
+      id: "MAT:0012:ISO:Mg-26"
+      status: "RESOLVED"
+
+  Al27:
+    role:
+      - "ONLY-STABLE-ALUMINIUM-ISOTOPE"
+      - "NATURAL-ABUNDANCE-1"
+      - "NMR-ACTIVE"
+
+  Al28:
+    role:
+      - "BETA-MINUS-DECAY"
+      - "MAGNESIUM-28-CHAIN-INTERMEDIATE"
+    parent:
+      id: "MAT:0012:ISO:Mg-28"
+      status: "RESOLVED"
+    daughter:
+      id: "MAT:0014:ISO:Si-28"
+      status: "RESERVED-PENDING-SILICON"
+
+rules:
+  mass_number_alone_predicts_stability: false
+  estimated_values_require_flag: true
+  source_qualifier_hash_must_be_preserved: true
+  question_mark_decay_is_confirmed_decay: false
+  delayed_particle_branch_is_additive_to_beta_total: false
+  isomer_equals_ground_state: false
+  stable_equals_no_possible_nuclear_reaction: false
+```
+
+---
+
+### ²¹Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-21-Aluminium-21.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-21"
+
+nucleus:
+  Z: 13
+  N: 8
+  A: 21
+
+  spin_parity:
+    value: "5/2+"
+    qualifier: "#"
+    status: "ESTIMATED-SYSTEMATICS"
+
+mass_excess:
+  value: 27090
+  uncertainty: 600
+  unit: "keV"
+  qualifier: "#"
+  status: "ESTIMATED-SYSTEMATICS"
+
+lifetime_constraint:
+  relation: "LESS-THAN"
+  value: 35
+  unit: "ns"
+
+classification:
+  proton_rich: true
+  extremely_proton_rich: true
+
+decay:
+  proton_emission:
+    NUBASE_notation: "p ?"
+    status: "UNCERTAIN"
+
+rules:
+  proton_emission_confirmed: false
+  estimated_spin_is_measured_spin: false
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²²Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-22-Aluminium-22.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-22"
+
+nucleus:
+  Z: 13
+  N: 9
+  A: 22
+  spin_parity: "(4)+"
+
+mass_excess:
+  value: 18200
+  uncertainty: 400
+  unit: "keV"
+  qualifier: "#"
+  status: "ESTIMATED-SYSTEMATICS"
+
+half_life:
+  value: 91.1
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 55
+    uncertainty: 3
+
+  beta_delayed_two_proton_percent:
+    value: 1.10
+    uncertainty: 0.11
+
+  beta_delayed_alpha_percent:
+    value: 0.038
+    uncertainty: 0.017
+
+semantics:
+  delayed_particle_percentages_are_subbranches_of_beta_decay: true
+  do_not_sum_beta_100_with_delayed_particle_percentages: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²³Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-23-Aluminium-23.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-23"
+
+nucleus:
+  Z: 13
+  N: 10
+  A: 23
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: 6748.1
+  uncertainty: 0.3
+  unit: "keV"
+
+half_life:
+  value: 446
+  uncertainty: 6
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_proton_percent:
+    value: 1.22
+    uncertainty: 0.05
+
+classification:
+  proton_rich: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²⁴Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-24-Aluminium-24.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-24"
+
+nucleus:
+  Z: 13
+  N: 11
+  A: 24
+  spin_parity: "4+"
+
+mass_excess:
+  value: -48.81
+  uncertainty: 0.23
+  unit: "keV"
+
+half_life:
+  value: 2.053
+  uncertainty: 0.004
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+  beta_delayed_alpha_percent:
+    value: 0.035
+    uncertainty: 0.006
+
+  beta_delayed_proton_percent:
+    value: 0.0016
+    uncertainty: 0.0003
+
+isomer:
+  id: "MAT:0013:ISO:Al-24m"
+
+source_id: "SRC-000278"
+```
+
+NUBASE also identifies a low-lying **²⁴Alᵐ** state at 425.8 keV with a 130 ms half-life and predominantly internal-transition decay; this needs to remain a separate nuclear state, not another isotope. ([OSTI][3])
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-24m-Aluminium-24m.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-24m"
+parent_isotope_id: "MAT:0013:ISO:Al-24"
+state_class: "NUCLEAR-ISOMER"
+
+nucleus:
+  Z: 13
+  N: 11
+  A: 24
+  spin_parity: "1+"
+
+excitation_energy:
+  value: 425.8
+  uncertainty: 0.1
+  unit: "keV"
+
+mass_excess:
+  value: 376.99
+  uncertainty: 0.25
+  unit: "keV"
+
+half_life:
+  value: 130
+  uncertainty: 3
+  unit: "ms"
+
+decay:
+
+  internal_transition_percent:
+    value: 82.5
+    uncertainty: 3.0
+
+  beta_plus_percent:
+    value: 17.5
+    uncertainty: 3.0
+
+  beta_delayed_alpha_percent:
+    value: 0.028
+    uncertainty: 0.006
+
+rules:
+  isomer_is_separate_element: false
+  isomer_is_separate_isotope_mass_number: false
+  excitation_state_must_be_preserved: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²⁵Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-25-Aluminium-25.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-25"
+
+nucleus:
+  Z: 13
+  N: 12
+  A: 25
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: -8915.97
+  uncertainty: 0.06
+  unit: "keV"
+
+half_life:
+  value: 7.1666
+  uncertainty: 0.0023
+  unit: "s"
+
+decay:
+  beta_plus_percent: 100
+
+classification:
+  proton_rich: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²⁶Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-26-Aluminium-26.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-26"
+
+nucleus:
+  Z: 13
+  N: 13
+  A: 26
+  spin_parity: "5+"
+
+mass_excess:
+  value: -12210.14
+  uncertainty: 0.07
+  unit: "keV"
+
+half_life:
+  value: 717
+  uncertainty: 24
+  unit: "kyr"
+
+stability:
+  status: "RADIOACTIVE"
+  long_lived: true
+
+decay:
+  NUBASE_beta_plus_percent: 100
+
+daughter:
+  isotope_id: "MAT:0012:ISO:Mg-26"
+  status: "RESOLVED"
+
+roles:
+  - "EXTINCT-RADIONUCLIDE-SYSTEM"
+  - "EARLY-SOLAR-SYSTEM-CHRONOMETER-PARENT"
+  - "COSMOGENIC-NUCLIDE"
+  - "ASTROPHYSICAL-RADIONUCLIDE"
+
+chronometer:
+  system: "26Al-26Mg"
+  daughter: "MAT:0012:ISO:Mg-26"
+
+  rules:
+    26Mg_abundance_alone_gives_age: false
+    initial_26Al_27Al_context_required: true
+    closed_system_assumption_required_for_interpretation: true
+    mass_dependent_26Mg_fractionation_equals_radiogenic_26Mg: false
+
+isomer:
+  id: "MAT:0013:ISO:Al-26m"
+
+source_id: "SRC-000278"
+```
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-26m-Aluminium-26m.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-26m"
+parent_isotope_id: "MAT:0013:ISO:Al-26"
+state_class: "NUCLEAR-ISOMER"
+
+nucleus:
+  Z: 13
+  N: 13
+  A: 26
+
+  spin_parity: "0+"
+  isospin: 1
+
+excitation_energy:
+  value: 228.306
+  uncertainty: 0.013
+  unit: "keV"
+
+mass_excess:
+  value: -11981.83
+  uncertainty: 0.07
+  unit: "keV"
+
+half_life:
+  value: 6346.0
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_plus_percent: 100
+
+rules:
+  Al26_ground_and_isomer_interchangeable: false
+  half_lives_are_same: false
+  nuclear_spin_is_same: false
+  astrophysical_population_must_track_state: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ²⁷Al — the stable Aluminium nucleus
+
+NIST gives a relative atomic mass of **26.98153853(11) u** and an isotopic composition of **1**, while CIAAW classifies Aluminium as monoisotopic in normal materials. ([NIST][4])
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-27-Aluminium-27.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-27"
+
+nucleus:
+  Z: 13
+  N: 14
+  A: 27
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: -17196.86
+  uncertainty: 0.05
+  unit: "keV"
+  source_id: "SRC-000278"
+
+relative_atomic_mass:
+  value: 26.98153853
+  uncertainty: 0.00000011
+  unit: "u"
+  source_id: "SRC-000280"
+
+representative_isotopic_composition:
+  value: 1.0
+
+stability:
+  status: "STABLE"
+
+natural_role:
+  only_stable_aluminium_isotope: true
+  normal_material_abundance:
+    fraction: 1.0
+
+NMR:
+  active: true
+  spin: "5/2"
+  quadrupolar: true
+  registry_status: "NEXT-DETAILED-LAYER"
+
+relationships:
+
+  parent_decay:
+    from:
+      isotope_id: "MAT:0012:ISO:Mg-27"
+      mechanism: "BETA-MINUS"
+      status: "RESOLVED"
+
+  chemical:
+    bulk_aluminium_parent: true
+
+source_ids:
+  - "SRC-000278"
+  - "SRC-000280"
+  - "SRC-000283"
+```
+
+---
+
+### ²⁸Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-28-Aluminium-28.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-28"
+
+nucleus:
+  Z: 13
+  N: 15
+  A: 28
+  spin_parity: "3+"
+
+mass_excess:
+  value: -16850.72
+  uncertainty: 0.05
+  unit: "keV"
+
+half_life:
+  value: 2.245
+  uncertainty: 0.005
+  unit: "min"
+
+decay:
+  beta_minus_percent: 100
+
+parent:
+  isotope_id: "MAT:0012:ISO:Mg-28"
+  mechanism: "BETA-MINUS"
+  status: "RESOLVED"
+
+daughter:
+  isotope_id: "MAT:0014:ISO:Si-28"
+  mechanism: "BETA-MINUS"
+  status: "RESERVED-PENDING-SILICON"
+
+chain:
+  - "MAT:0012:ISO:Mg-28"
+  - "MAT:0013:ISO:Al-28"
+  - "MAT:0014:ISO:Si-28"
+
+calculation_status:
+  beta_minus_Q: "NEXT-DETAILED-LAYER"
+
+source_id: "SRC-000278"
+```
+
+This resolves the forward references already created in Magnesium for both **²⁷Mg → ²⁷Al** and **²⁸Mg → ²⁸Al**. 
+
+---
+
+### ²⁹Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-29-Aluminium-29.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-29"
+
+nucleus:
+  Z: 13
+  N: 16
+  A: 29
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: -18207.8
+  uncertainty: 0.3
+  unit: "keV"
+
+half_life:
+  value: 6.56
+  uncertainty: 0.06
+  unit: "min"
+
+decay:
+  beta_minus_percent: 100
+
+classification:
+  neutron_rich_relative_to_stable_Al27: true
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ³⁰Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-30-Aluminium-30.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-30"
+
+nucleus:
+  Z: 13
+  N: 17
+  A: 30
+  spin_parity: "3+"
+
+mass_excess:
+  value: -15864.1
+  uncertainty: 1.9
+  unit: "keV"
+
+half_life:
+  value: 3.62
+  uncertainty: 0.06
+  unit: "s"
+
+decay:
+  beta_minus_percent: 100
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ³¹Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-31-Aluminium-31.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-31"
+
+nucleus:
+  Z: 13
+  N: 18
+  A: 31
+  spin_parity: "5/2+"
+
+mass_excess:
+  value: -14950.7
+  uncertainty: 2.2
+  unit: "keV"
+
+half_life:
+  value: 644
+  uncertainty: 25
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    relation: "LESS-THAN"
+    value: 1.6
+
+source_id: "SRC-000278"
+```
+
+---
+
+### ³²Al
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-32-Aluminium-32.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-32"
+
+nucleus:
+  Z: 13
+  N: 19
+  A: 32
+  spin_parity: "1+"
+
+mass_excess:
+  value: -11099
+  uncertainty: 7
+  unit: "keV"
+
+half_life:
+  value: 32.6
+  uncertainty: 0.5
+  unit: "ms"
+
+decay:
+  beta_minus_percent: 100
+
+  beta_delayed_neutron_percent:
+    value: 0.7
+    uncertainty: 0.5
+
+isomer:
+  id: "MAT:0013:ISO:Al-32m"
+
+source_id: "SRC-000278"
+```
+
+```text
+# FILE: records/0013-Aluminium-Al/data/isotopes/0013-Aluminium-Al-Isotope-32m-Aluminium-32m.yaml
+```
+
+```yaml
+isotope_id: "MAT:0013:ISO:Al-32m"
+parent_isotope_id: "MAT:0013:ISO:Al-32"
+state_class: "NUCLEAR-ISOMER"
+
+nucleus:
+  Z: 13
+  N: 19
+  A: 32
+  spin_parity: "(4+)"
+
+excitation_energy:
+  value: 956.6
+  uncertainty: 0.5
+  unit: "keV"
+
+half_life:
+  value: 200
+  uncertainty: 20
+  unit: "ns"
+
+decay:
+  internal_transition_percent: 100
+
+source_id: "SRC-000278"
+```
+
+---
+
+```text
+# FILE: records/0013-Aluminium-Al/0013-Aluminium-Al-Production-Status.yaml
+```
+
+```yaml
+record: "MAT:0013"
+name: "Aluminium"
+
+status: "RESEARCHED-IN-PROGRESS"
+migration_status: "CONTENT-MIGRATION-IN-PROGRESS"
+
+completion:
+
+  record_identity: true
+
+  period_3_p_block_entry: true
+  first_period_3_p_electron: true
+  boron_periodic_analogue: true
+
+  ionization_architecture: true
+  Al3_plus_closed_shell: true
+  Ne_Na_plus_Mg2_plus_Al3_plus_isoelectronic_chain: true
+
+  standard_atomic_weight: true
+  monoisotopic_natural_architecture: true
+
+  isotope_registry_Al21_to_Al43: true
+
+  child_files:
+    Al21: true
+    Al22: true
+    Al23: true
+    Al24: true
+    Al24m: true
+    Al25: true
+    Al26: true
+    Al26m: true
+    Al27: true
+    Al28: true
+    Al29: true
+    Al30: true
+    Al31: true
+    Al32: true
+    Al32m: true
+
+    Al33: false
+    Al34: false
+    Al34m: false
+    Al35: false
+    Al36: false
+    Al37: false
+    Al38: false
+    Al39: false
+    Al40: false
+    Al41: false
+    Al42: false
+    Al43: false
+
+  Mg27_to_Al27_forward_reference_resolved: true
+  Mg28_to_Al28_forward_reference_resolved: true
+  Al26_to_Mg26_edge_resolved: true
+
+remaining:
+
+  - Al33_to_Al43_nuclear_children
+  - Al34m_isomer
+  - neutron_rich_Al_semantics
+
+  - Al26_to_Mg26_decay_Q
+  - Al28_to_Si28_decay_Q
+
+  - detailed_27Al_NMR_registry
+
+  - Al_I_spectrum
+  - Al_II_spectrum
+  - Al_III_spectrum
+  - no_universal_Al_frequency_rule
+
+  - FCC_crystal_structure
+  - FCC_slip_mechanics
+  - dislocations
+  - stacking_faults
+
+  - Al_Mg_alloys
+  - Al_Cu_alloys
+  - Al_Si_alloys
+  - Al_Zn_alloys
+  - Al_Li_alloys
+
+  - precipitation_hardening
+  - GP_zones
+  - ageing_history
+  - heat_treatment_state
+
+  - native_Al2O3_surface
+  - passivation
+  - anodization
+  - porous_anodic_alumina
+
+  - corundum
+  - sapphire
+  - ruby
+  - AlN
+  - AlF3
+  - AlCl3
+  - AlH3
+
+  - bauxite
+  - Bayer_process
+  - Hall_Heroult_process
+  - recycling
+
+  - aluminium_air_battery
+  - aluminium_ion_battery
+
+  - superconducting_Al
+  - Al_AlOx_Al_Josephson_interfaces
+
+  - high_pressure_Al
+
+  - biology
+  - toxicology
+
+  - thermite_relationship_safe_descriptive_only
+
+  - complete_relationship_registry
+  - people_and_intellectual_lineage
+  - experiments
+  - tables
+  - graphs
+
+  - V01_to_V18_visual_specification
+  - G0013_migration_audit
+  - schema_validation
+
+schema_validation_status: "PENDING"
+scientific_core: "IN-PROGRESS"
+
+visual_specification: "NOT-YET-LOCKED"
+visual_assets: "NOT-GENERATED"
+```
+
+### Production checkpoint
+
+We are now **inside `0013-Aluminium-Al`**, not Magnesium. The isotope registry is established and the individual nuclear children are complete through **³²Al / ³²Alᵐ**.
+
+The **next `continue` starts exactly at `³³Al`**, then completes **³³Al–⁴³Al**, **³⁴Alᵐ**, the **²⁶Al→²⁶Mg and ²⁸Al→²⁸Si decay calculations**, followed by the full **²⁷Al NMR** and **Al I / Al II / Al III spectral-frequency layer**.
+
+[1]: https://cpc.ihep.ac.cn/article/doi/10.1088/1674-1137/abddae?utm_source=chatgpt.com "The NUBASE2020 evaluation of nuclear physics properties"
+[2]: https://www.physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=on&biblio=on&e_out=0&el_name_out=on&level_out=on&seq_out=on&shells_out=on&spectra=Al&unc_out=on&units=1&utm_source=chatgpt.com "NIST Atomic Ionization Energies Output"
+[3]: https://www.osti.gov/servlets/purl/1774641?utm_source=chatgpt.com "The NUBASE2020 evaluation of nuclear physics properties∗∗"
+[4]: https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Al&utm_source=chatgpt.com "Atomic Weights and Isotopic Compositions for Aluminum"

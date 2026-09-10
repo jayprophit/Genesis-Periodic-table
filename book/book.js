@@ -26,6 +26,7 @@ let flat = [], byId = new Map(), legacy = [];
 let searchDocs = [], searchById = new Map(), related = [];
 let visuals = [], elements = [], identities = {}, periodic = { cells: [] }, russellData = {}, combinedData = {};
 let currentId = "";
+let chapterRequest=0;
 let lastExpandedRecord = null;
 
 /* ---------- data ---------- */
@@ -188,8 +189,7 @@ function buildTOC(manifest) {
     toc.appendChild(h);
     flat.filter((d) => d.section === sec.section).forEach((d) => toc.appendChild(chapterLink(d)));
   });
-  const sideFoot = $("side-foot");
-  sideFoot.prepend(guide);
+  toc.appendChild(guide);
   $("count").textContent = `${flat.length} chapters · ${elements.length || ""} records`;
 }
 
@@ -241,7 +241,7 @@ function fillContext(doc) {
   const lane = laneOf(doc);
   const el = $("page-context");
   const notes = {
-    core: "<strong>MAT Core Data.</strong> Reference properties, conditions and traceable sources.",
+    core: "<strong>MAT Core Data.</strong> Reference properties, conditions and traceable sources. Collection membership is not a scientific validation result; individual values retain their evidence and review status.",
     research: "<strong>Research / Emerging.</strong> Models, predictions or developing results — validation limits apply.",
     claims: "<strong>Historical / Alternative / Claims.</strong> Preserved with provenance; not established measurement.",
   };
@@ -272,7 +272,7 @@ function fillSupplement(doc) {
         let html = `<h2>Record visuals — ${esc(rec.number)}</h2>`;
         if (gen.length) html += `<div class="vis-grid">` + gen.map((it) => {
           const cap = it.file.replace(/^.*-(FIG|DIAGRAM|GRAPH)-/, "").replace(/\.svg$/i, "").replace(/-/g, " ");
-          return `<figure class="vis-cell"><button class="visual-open" type="button" aria-label="Open ${esc(cap)} in image viewer"><img src="../${entry.dir}/${it.path}${it.file}" alt="${esc(it.file)}"><figcaption>${esc(cap)}</figcaption></button></figure>`;
+          return `<figure class="vis-cell"><button class="visual-open" type="button" aria-label="Open ${esc(cap)} in image viewer"><img src="../${entry.dir}/${it.path}${it.file}" alt="${esc(it.alt || cap)}"><figcaption>${esc(cap)}</figcaption></button></figure>`;
         }).join("") + `</div>`;
         if (pend.length) html += `<details class="vis-pend"><summary>Pending visuals (${pend.length}) — not yet generated</summary><ul>` +
           pend.map((it) => `<li>${esc(it.file)} — <em>${esc(String(it.status).replace(/-/g, " "))}</em></li>`).join("") + `</ul></details>`;
@@ -287,7 +287,7 @@ function fillSupplement(doc) {
     const sdoc = searchById.get(doc.id) || {};
     let topic = doc.title.replace(/^[0-9—\s–-]+/, "").split("—")[0].split(":")[0].trim();
     if (rec && rec.number !== "0000") topic = rec.name;
-    if (topic && !/^(MAT|G000|SRC|CALC|TEST)/i.test(topic)) {
+    if (rec && topic && !/^(MAT|G000|SRC|CALC|TEST)/i.test(topic)) {
       const q = encodeURIComponent(topic + " element");
       const items = [
         [`Wikipedia — ${topic}`, `https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(topic)}`],
@@ -451,6 +451,7 @@ function typeset() {
 async function showChapter(id, anchor) {
   const doc = byId.get(canonicalId(id));
   if (!doc) { location.hash = "#cover"; return; }
+  const request=++chapterRequest;
   currentId = doc.id;
   markActive();
   $("cover").hidden = true;
@@ -469,7 +470,9 @@ async function showChapter(id, anchor) {
   try {
     const res = await fetch(doc.path);
     if (!res.ok) throw new Error(res.status);
-    const { html, outline } = renderDocument(await res.text(), doc.id, { docs: flat });
+    const source=await res.text();
+    if(request!==chapterRequest)return;
+    const { html, outline } = renderDocument(source, doc.id, { docs: flat });
     page.innerHTML = html;
     enhanceChapterSections();
     const jump = $("jump");
@@ -483,6 +486,7 @@ async function showChapter(id, anchor) {
     jump.onchange = () => { if (jump.value) document.getElementById(jump.value)?.scrollIntoView(); jump.value = ""; };
     fillSummary(doc, outline);
   } catch {
+    if(request!==chapterRequest)return;
     page.innerHTML = "<p><em>Could not load this chapter. Is the preview server running?</em></p>";
     $("chapter-summary").innerHTML = "";
   }
@@ -502,6 +506,7 @@ async function showChapter(id, anchor) {
   addToHistory(doc.id, doc.title, recordOf(doc.id)?.number || null).catch(() => {});
   updateBookmarkBtn();
   getPosition(doc.id).then((pos) => {
+    if(request!==chapterRequest)return;
     if (pos && pos.scrollPct > 5) {
       const reader = $("reader");
       const h = reader.scrollHeight - reader.clientHeight;
@@ -510,6 +515,7 @@ async function showChapter(id, anchor) {
   }).catch(() => {});
 }
 function showCover() {
+  chapterRequest++;
   currentId = "";
   markActive();
   $("content").hidden = true;
@@ -980,7 +986,7 @@ function renderCodexOverview(doc) {
   const box = $("codex-overview");
   const mapBox = $("codex-map");
   const infoBox = $("info-boxes");
-  if (!box || !doc) { if (box) box.hidden = true; return; }
+  if (!box || !doc || !recordOf(doc.id)) { if (box) box.hidden = true; return; }
   box.hidden = false;
   const rec = recordOf(doc.id);
   const num = rec?.number || "";
@@ -1006,7 +1012,7 @@ function renderCodexOverview(doc) {
 /* ---------- media placeholders ---------- */
 function renderMediaPlaceholders(doc) {
   const box = $("media-placeholders");
-  if (!box || !doc) { if (box) box.innerHTML = ""; return; }
+  if (!box || !doc || !recordOf(doc.id)) { if (box) box.innerHTML = ""; return; }
   const rec = recordOf(doc.id);
   const num = rec?.number || "";
   const types = [
@@ -1023,18 +1029,21 @@ function renderMediaPlaceholders(doc) {
 function renderEvidencePanel(doc) {
   const box = $("evidence-panel");
   const srcBox = $("evidence-sources");
-  if (!box || !doc) { if (box) box.hidden = true; return; }
+  if (!box || !doc || !recordOf(doc.id)) { if (box) box.hidden = true; return; }
   box.hidden = false;
   const lane = laneOf(doc);
   const laneLabel = lane === "core" ? "Core Data" : lane === "research" ? "Research" : "Claims";
-  srcBox.innerHTML = `<div class="ev-source"><span class="ev-type ${lane}">${laneLabel}</span> ${esc(doc.title)}</div><div class="ev-source"><small>Chapter: ${esc(doc.id)}</small></div>`;
+  const refs=[...new Set(($("page").textContent||'').match(/SRC-(?:\d{6}|[A-Z0-9]+-\d+)\b/g)||[])];
+  const rec=recordOf(doc.id);
+  const bibliography=flat.filter(d=>d.id.startsWith(rec.dir+'/sources/'));
+  srcBox.innerHTML = `<div class="ev-source"><span class="ev-type ${lane}">${laneLabel}</span> ${esc(doc.title)}</div><p>${refs.length?`${refs.length} source identifiers referenced in this chapter: ${refs.map(esc).join(', ')}.`:'This chapter does not name source identifiers; consult its linked references and review status.'}</p><div class="related-links">${bibliography.map(d=>`<a href="${route(d.id)}">${esc(d.title)}</a>`).join('')}<a href="../data/registries/sources.yaml">Source registry ↗</a></div><p class="tool-note">A source identifier locates a reference. Support for each claim still requires review.</p>`;
 }
 
 /* ---------- discovery links ---------- */
 function renderDiscoveryLinks(doc) {
   const box = $("discovery-panel");
   const linksBox = $("discovery-links");
-  if (!box || !doc) { if (box) box.hidden = true; return; }
+  if (!box || !doc || !recordOf(doc.id)) { if (box) box.hidden = true; return; }
   box.hidden = false;
   const q = encodeURIComponent(doc.title || "");
   linksBox.innerHTML = [
@@ -1165,12 +1174,16 @@ function initOnboarding() {
     // Tip
     tip = document.createElement("div");
     tip.className = "tour-tip";
+    tip.setAttribute('role','dialog');
+    tip.setAttribute('aria-modal','true');
+    tip.setAttribute('aria-labelledby','tour-step-title');
     if (step.welcome) tip.innerHTML = `
       <div class="tour-welcome">
         <div class="tour-logo">MAT <span>Codex</span></div>
-        <h2>${esc(step.title)}</h2>
+        <h2 id="tour-step-title">${esc(step.title)}</h2>
         <p>${esc(step.body)}</p>
         <button class="tour-start-btn" data-action="next">Begin Tour →</button>
+        <button class="tour-skip" data-action="skip">Skip tour</button>
         <p style="margin-top:0.8rem;font-size:0.7rem;opacity:0.5">Press Esc to skip</p>
       </div>`;
     else {
@@ -1178,7 +1191,7 @@ function initOnboarding() {
       tip.innerHTML = `
         <div class="tour-arrow ${arrowDir}"></div>
         <span class="tour-step-num">${currentStep + 1} / ${steps.length}</span>
-        <h3>${esc(step.title)}</h3>
+        <h3 id="tour-step-title">${esc(step.title)}</h3>
         <p>${esc(step.body)}</p>
         <div class="tour-btns">
           <button class="tour-skip" data-action="skip">Skip tour</button>
@@ -1190,6 +1203,7 @@ function initOnboarding() {
         <div class="tour-progress">${steps.map((_, i) => `<span class="dot${i === currentStep ? " active" : ""}"></span>`).join("")}</div>`;
     }
     document.body.appendChild(tip);
+    tip.querySelector('button')?.focus();
     // Highlight target
     if (step.target) {
       highlightEl = document.querySelector(step.target);
@@ -1224,6 +1238,7 @@ function initOnboarding() {
   function finishTour() {
     cleanup();
     try { localStorage.setItem(SEEN_KEY, JSON.stringify({ version: TOUR_VERSION, ts: Date.now() })); } catch {}
+    document.getElementById('toc-toggle')?.focus();
   }
   function startTour() { currentStep = 0; renderStep(); }
   function hasSeenTour() {
@@ -1233,8 +1248,14 @@ function initOnboarding() {
   // Keyboard nav
   document.addEventListener("keydown", (e) => {
     if (!tip) return;
-    if (e.key === "Escape") skipTour();
-    else if (e.key === "ArrowRight" || e.key === "Enter") { e.preventDefault(); nextStep(); }
+    if (e.key === "Escape") {e.preventDefault();skipTour();}
+    else if (e.key === "Tab") {
+      const controls=[...tip.querySelectorAll('button:not([disabled]),a[href],[tabindex="0"]')];
+      const first=controls[0],last=controls.at(-1);
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}
+    }
+    else if (e.key === "ArrowRight") { e.preventDefault(); nextStep(); }
     else if (e.key === "ArrowLeft") { e.preventDefault(); prevStep(); }
   });
 
@@ -1244,7 +1265,7 @@ function initOnboarding() {
   relBtn.textContent = "Take the tour";
   relBtn.addEventListener("click", startTour);
   const brandEl = document.querySelector(".brand");
-  if (brandEl) brandEl.appendChild(relBtn);
+  if (brandEl) brandEl.insertAdjacentElement('afterend',relBtn);
 
   // Auto-start on first visit
   if (!hasSeenTour()) startTour();
@@ -1260,14 +1281,33 @@ function initChrome() {
     secSel.appendChild(o);
   });
   $("print-btn")?.addEventListener("click", () => window.print());
+  let printSections=null;
+  window.addEventListener('beforeprint',()=>{
+    if(printSections)return;
+    printSections=[...document.querySelectorAll('#page details')].map(el=>({el,open:el.open}));
+    printSections.forEach(({el})=>{el.open=true;});
+  });
+  window.addEventListener('afterprint',()=>{
+    printSections?.forEach(({el,open})=>{el.open=open;});printSections=null;
+  });
   const toggle = $("toc-toggle"), scrim = $("scrim");
-  if (toggle && scrim) {
-    const setToc = (open) => {
+  const narrow=window.matchMedia('(max-width:850px)');
+  const savedDesktopOpen=()=>localStorage.getItem('mat-sidebar-open')!=='false';
+  const setToc = (open,{persist=true}={}) => {
       document.body.classList.toggle("toc-open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-      scrim.hidden = !open;
+      document.body.classList.toggle('sidebar-closed',!narrow.matches&&!open);
+      toggle?.setAttribute("aria-expanded", String(open));
+      toggle?.setAttribute('aria-label',open?'Hide contents and search':'Show contents and search');
+      if($('toc-toggle-label'))$('toc-toggle-label').textContent=open?'Hide contents':'Contents & search';
+      if(scrim)scrim.hidden = !narrow.matches||!open;
+      $('sidebar').inert=!open;
+      if(!open&&$('sidebar').contains(document.activeElement))toggle?.focus();
+      if(persist&&!narrow.matches)localStorage.setItem('mat-sidebar-open',String(open));
     };
-    toggle.onclick = () => setToc(!document.body.classList.contains("toc-open"));
+  narrow.addEventListener('change',event=>setToc(event.matches?false:savedDesktopOpen(),{persist:false}));
+  setToc(narrow.matches?false:savedDesktopOpen(),{persist:false});
+  if (toggle && scrim) {
+    toggle.onclick = () => setToc(narrow.matches?!document.body.classList.contains("toc-open"):document.body.classList.contains('sidebar-closed'));
     scrim.onclick = () => setToc(false);
   }
   $("goto-studio")?.addEventListener("click", () => {
@@ -1285,7 +1325,8 @@ function initChrome() {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "");
     if (e.key === "Escape") { setToc(false); const d = $("periodic-dialog"); if (d?.open) d.close(); }
     if (typing) return;
-    if (e.key === "/" && document.activeElement !== $("search")) { e.preventDefault(); $("search")?.focus(); }
+    if (e.key === "/" && document.activeElement !== $("search")) { e.preventDefault(); if(narrow.matches)setToc(true); $("search")?.focus(); }
+    if(document.querySelector('dialog[open]'))return;
     if (e.key === "ArrowRight") $("next")?.click?.();
     if (e.key === "ArrowLeft") $("prev")?.click?.();
   });
@@ -1312,25 +1353,38 @@ function initChrome() {
   // complete save caches chapters, figures, scenes and libraries — and says so honestly.
   $("offline-btn")?.addEventListener("click", async () => {
     const st = $("offline-status");
+    $("offline-btn").disabled=true;
     try {
       const idx = await getJSON("./offline-index.json", null);
-      if (!idx || !idx.all) throw new Error("no index");
-      const c = await caches.open("mat-codex-v3");
+      if (!idx || !idx.all || !idx.cacheName) throw new Error("no versioned index");
+      if(!('serviceWorker' in navigator))throw new Error('Service worker unavailable');
+      let readyTimeout;
+      try {
+        await Promise.race([navigator.serviceWorker.ready,new Promise((_,reject)=>{
+          readyTimeout=setTimeout(()=>reject(new Error('Offline worker did not become ready')),15000);
+        })]);
+      } finally { clearTimeout(readyTimeout); }
+      const c = await caches.open(idx.cacheName);
       let ok = 0;
       const failedUrls = [];
-      for (const u of idx.all) {
-        try { await c.add(u); ok++; }
-        catch { failedUrls.push(u); }
-      }
+      let next=0;
+      await Promise.all(Array.from({length:6},async()=>{
+        while(next<idx.all.length){const u=idx.all[next++];
+          try { await c.add(new Request(u,{cache:'reload'})); ok++; }
+          catch { failedUrls.push(u); }
+          st.textContent=`Saving for offline reading: ${ok}/${idx.all.length} resources…`;
+        }
+      }));
       st.textContent = failedUrls.length
         ? `Partial save: ${ok}/${idx.all.length} cached (${failedUrls.length} failed).`
         : `Saved · complete book offline (${ok} resources).`;
       if (failedUrls.length) console.warn("offline failures", failedUrls);
-    } catch { st.textContent = "Offline save failed in this browser."; }
+    } catch { st.textContent = "Offline save failed in this browser. Keep this page online and try again."; }
+    finally {$("offline-btn").disabled=false;}
   });
   if (!navigator.onLine) $("offline-status").textContent = "Offline · showing saved pages.";
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-    navigator.serviceWorker.register("./sw.js").catch(() => {});
+    navigator.serviceWorker.register("./sw.js",{updateViaCache:'none'}).catch(() => {$("offline-status").textContent='Offline worker unavailable; online reading still works.';});
   }
 }
 
@@ -1603,27 +1657,6 @@ async function renderMyReading() {
   } catch {}
 }
 
-/* ---------- CSS concatenation ---------- */
-const CSS_MODULES = [
-  "variables.css", "base.css", "layout.css", "toc.css",
-  "sidebar-settings.css", "reader.css", "content.css",
-  "visuals.css", "responsive.css", "print.css",
-  "reading-modes.css", "codex-panels.css", "periodic-extra.css", "onboarding.css"
-];
-
-async function concatCSS() {
-  const parts = [];
-  for (const mod of CSS_MODULES) {
-    try {
-      const resp = await fetch(`styles/${mod}`);
-      if (resp.ok) parts.push(await resp.text());
-    } catch {}
-  }
-  const blob = new Blob([parts.join("\n")], { type: "text/css" });
-  const link = document.getElementById("styles-link");
-  if (link) link.href = URL.createObjectURL(blob);
-}
-
 /* ---------- 118-element data ---------- */
 let elements118 = [];
 let chartData = null;
@@ -1637,7 +1670,6 @@ async function loadChartData() {
 
 /* ---------- init ---------- */
 (async function init() {
-  await concatCSS();
   const [manifest, sidx, vidx, els, ids, per, russ, comb] = await Promise.all([
     getJSON("./manifest.json", null),
     getJSON("./search-index.json", { docs: [], related: [] }),

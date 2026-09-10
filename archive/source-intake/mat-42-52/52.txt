@@ -1,0 +1,2371 @@
+Continuing with the **exact recovered final Magnesium finishing pass** from `46.txt`. This is the batch that completes spectroscopy, geochemistry, ²⁶Al–²⁶Mg chronology, corrosion, the full relationship registry, lineage, experiments, tables/graphs, V01–V18, migration audit, schema validation, and the `CORE-VALIDATED` decision. 
+
+# FILE: records/0012-Magnesium-Mg/data/spectra/0012-Magnesium-Mg-Atomic-and-Astrophysical-Spectrum.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:ATOMIC-SPECTRUM"
+record_id: "MAT:0012"
+version: "1.0.0"
+
+wavelength_semantics:
+  medium_must_be_stored: true
+  laboratory_air_and_astrophysical_vacuum_are_not_interchangeable: true
+
+Mg_I:
+
+  ground_state:
+    configuration: "3s2"
+    term: "1S0"
+    J: 0
+
+  selected_persistent_lines:
+
+    - wavelength:
+        value: 285.21251
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+      lower:
+        energy_cm1: 0.000
+        configuration: "3s2"
+        term: "1S"
+        J: 0
+
+      upper:
+        energy_cm1: 35051.264
+        configuration: "3s3p"
+        term: "1P°"
+        J: 1
+
+      Einstein_A:
+        value: 5.00e8
+        unit: "s^-1"
+
+    - wavelength:
+        value: 382.9355
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 383.2300
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 383.8292
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 457.1096
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 516.7322
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 517.2684
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+    - wavelength:
+        value: 518.3604
+        unit: "nm"
+        medium: "STANDARD-AIR"
+
+Mg_II:
+
+  ground_state:
+    configuration: "3s"
+    term: "2S1/2"
+
+  resonance_doublet:
+
+    k:
+
+      laboratory_standard_air:
+        wavelength:
+          value: 279.55301
+          unit: "nm"
+
+      astrophysical_vacuum_reference:
+        wavelength:
+          approximate_value: 279.6354
+          unit: "nm"
+
+      transition:
+        lower: "3s 2S1/2"
+        upper: "3p 2P°3/2"
+
+      Einstein_A:
+        value: 2.6e8
+        unit: "s^-1"
+
+    h:
+
+      laboratory_standard_air:
+        wavelength:
+          value: 280.27056
+          unit: "nm"
+
+      astrophysical_vacuum_reference:
+        wavelength:
+          approximate_value: 280.3531
+          unit: "nm"
+
+      transition:
+        lower: "3s 2S1/2"
+        upper: "3p 2P°1/2"
+
+      Einstein_A:
+        value: 2.6e8
+        unit: "s^-1"
+
+astrophysical_diagnostics:
+
+  solar_chromosphere:
+    important: true
+
+  stellar_chromospheres:
+    important: true
+
+  diagnostic_information:
+    - temperature
+    - velocity
+    - velocity_gradient
+    - chromospheric_activity
+    - transition_region_height_context
+    - radiative_energy_loss
+
+  radiative_transfer:
+    optically_thick: true
+    scattering_important: true
+    partial_frequency_redistribution_required_for_precision_models: true
+
+  circumgalactic_interstellar_use:
+    Mg_II_absorption_doublet:
+      useful: true
+
+rules:
+  Mg_I_equals_Mg_II: false
+  Mg_II_h_equals_Mg_II_k: false
+  air_wavelength_equals_vacuum_wavelength: false
+  spectral_line_equals_universal_element_frequency: false
+  profile_shape_requires_environment_and_radiative_transfer_context: true
+
+source_ids:
+  - "SRC-000244"
+  - "SRC-000268"
+```
+
+The final spectroscopy layer explicitly preserves the distinction between **Mg I**, **Mg II**, standard-air wavelength convention, astronomical vacuum convention, and observational/radiative-transfer context. 
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Stable-Isotope-Geochemistry.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:STABLE-ISOTOPE-GEOCHEMISTRY"
+record_id: "MAT:0012"
+
+stable_isotopes:
+  - "MAT:0012:ISO:Mg-24"
+  - "MAT:0012:ISO:Mg-25"
+  - "MAT:0012:ISO:Mg-26"
+
+mass_difference:
+  Mg24_to_Mg26:
+    greater_than_percent: 8
+
+consequence:
+  measurable_mass_dependent_fractionation: true
+
+delta_notation:
+
+  delta26Mg:
+
+    equation: >
+      delta26Mg =
+      [((26Mg/24Mg)_sample / (26Mg/24Mg)_reference) - 1] * 1000
+
+    unit: "permil"
+
+  delta25Mg:
+
+    equation: >
+      delta25Mg =
+      [((25Mg/24Mg)_sample / (25Mg/24Mg)_reference) - 1] * 1000
+
+    unit: "permil"
+
+reference_scales:
+
+  DSM3:
+
+    widely_used_historical_scale_anchor: true
+
+    CIAAW_note:
+      internationally_recommended_delta_standard: false
+
+    reason:
+      "Limited general availability."
+
+  ERM_AE143:
+
+    certified_reference_material_relationship:
+      important: true
+
+processes_with_fractionation:
+
+  strong_or_significant:
+    - weathering
+    - carbonate_precipitation
+    - carbonate_dissolution
+    - low_temperature_fluid_rock_interaction
+
+  moderate:
+    - magmatic_processes
+
+  often_smaller:
+    - many_metamorphic_processes
+
+reservoir_examples:
+
+  mantle_and_igneous_silicates:
+    delta26Mg:
+      representative_center:
+        approximate_value: -0.25
+        unit: "permil"
+
+    not_universal: true
+
+  carbonates:
+    generally_lighter_than_mantle:
+      true
+
+    range:
+      broad: true
+      mineralogy_temperature_kinetics_dependent: true
+
+  seawater:
+    isotopic_state:
+      distinct_from_mantle: true
+
+applications:
+  - weathering_tracer
+  - carbonate_cycle
+  - fluid_rock_interaction
+  - mantle_processes
+  - petrology
+  - mineralization
+  - paleogeochemistry
+
+rules:
+  natural_isotope_composition_equals_one_fixed_ratio: false
+  delta_value_requires_reference_scale: true
+  delta26Mg_equals_radiogenic_26Mg_excess: false
+  mass_dependent_and_radiogenic_components_must_be_separated: true
+
+source_ids:
+  - "SRC-000269"
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Al26-Mg26-Chronology.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:AL26-MG26-CHRONOLOGY"
+record_id: "MAT:0012"
+
+system:
+  parent:
+    isotope: "26Al"
+    future_id: "MAT:0013:ISO:Al-26"
+    status: "RESERVED-PENDING-ALUMINIUM"
+
+  daughter:
+    isotope: "26Mg"
+    id: "MAT:0012:ISO:Mg-26"
+
+decay:
+  relationship:
+    "26Al -> 26Mg"
+
+  half_life:
+    adopted_reference:
+      value: 0.717
+      uncertainty: 0.017
+      unit: "Myr"
+
+chronometer_class:
+  - SHORT-LIVED-RADIONUCLIDE
+  - EXTINCT-RADIONUCLIDE-SYSTEM
+  - EARLY-SOLAR-SYSTEM-CHRONOMETER
+
+principle:
+
+  initial_state:
+    requires_initial_26Al_27Al_context: true
+
+  evolution:
+    radiogenic_26Mg_excess_accumulates: true
+
+  measurement:
+    isotope_ratio_correlation_required: true
+
+  interpretation:
+    possible_outputs:
+      - relative_formation_time
+      - differentiation_time
+      - thermal_history_constraint
+
+important_distinction:
+
+  stable_fractionation:
+    delta26Mg:
+      mass_dependent: true
+
+  radiogenic_component:
+    excess_26Mg:
+      parent_decay_derived: true
+
+  same_quantity: false
+
+rules:
+  26Mg_abundance_alone_is_a_clock: false
+  initial_Al_Mg_ratio_is_optional: false
+  closed_system_behavior_is_optional: false
+  radiogenic_and_mass_fractionation_terms_must_be_separated: true
+  chronometer_age_equals_absolute_age_without_calibration: false
+
+source_id: "SRC-000270"
+```
+
+The stable-isotope and extinct-radionuclide systems remain **separate information channels**: \(\delta^{26}\mathrm{Mg}\) tracks mass-dependent fractionation, whereas excess radiogenic ²⁶Mg can carry information inherited from ²⁶Al decay. 
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Corrosion-and-Cathodic-Protection.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:CORROSION"
+record_id: "MAT:0012"
+
+metal_state:
+  species: "Mg0"
+
+anodic_reaction:
+
+  equation:
+    "Mg -> Mg2+ + 2e-"
+
+  classification:
+    "OXIDATION"
+
+aqueous_corrosion:
+
+  possible_products:
+    - Mg2_plus
+    - MgOH2
+    - hydrogen
+
+  surface_film:
+    may_include:
+      - MgO
+      - MgOH2
+      - carbonate_containing_species
+
+  protection:
+    perfect_passivation: false
+
+chloride_environment:
+
+  film_breakdown:
+    important: true
+
+  pitting:
+    possible: true
+
+  corrosion_rate:
+    environment_dependent: true
+
+sacrificial_anode:
+
+  principle:
+    description: >
+      Electrically couple a sufficiently active Mg alloy anode
+      to the structure to be protected, causing the Mg alloy to
+      preferentially oxidize while supplying cathodic current
+      to the protected structure.
+
+  standardized_product_class:
+    ASTM_B843:
+      current_revision: "B843-18(2025)"
+      magnesium_alloy_anodes: true
+
+  applications:
+    - buried_steel
+    - water_tanks
+    - selected_pipeline_systems
+    - marine_or_soil_cathodic_protection
+
+state_variables:
+  - alloy_composition
+  - chloride_concentration
+  - temperature
+  - pH
+  - water_chemistry
+  - surface_film
+  - galvanic_couple
+  - current_density
+  - geometry
+  - time
+
+MAT_principle:
+
+  statement:
+    "Corrosion can be intentionally redirected and used as an engineering function."
+
+rules:
+  corrosion_is_always_failure: false
+  magnesium_alloy_anode_equals_pure_magnesium: false
+  standard_specification_equals_guaranteed_system_performance: false
+  cathodic_protection_design_requires_environment_context: true
+
+source_ids:
+  - "SRC-000271"
+  - "SRC-000277"
+```
+
+# FILE: records/0012-Magnesium-Mg/relationships/0012-Magnesium-Mg-Relationships.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:RELATIONSHIPS"
+record_id: "MAT:0012"
+version: "1.0.0"
+
+relationships:
+
+  # PERIODIC
+
+  - relationship_id: "MAT:0012:REL:0001"
+    source: "MAT:0012"
+    type: "PERIODIC-ANALOGUE"
+    target: "MAT:0004"
+    target_status: "RESOLVED"
+    shared_outer_pattern: "ns2"
+
+  - relationship_id: "MAT:0012:REL:0002"
+    source: "MAT:0011"
+    type: "PERIOD-3-SEQUENCE"
+    target: "MAT:0012"
+    transition: "3s1 -> 3s2"
+
+  # ISOELECTRONIC
+
+  - relationship_id: "MAT:0012:REL:0010"
+    source: "MAT:0012:ION:Mg+2"
+    type: "ISOELECTRONIC-WITH"
+    target: "MAT:0010:ATOM:Ne"
+    electron_count: 10
+
+  - relationship_id: "MAT:0012:REL:0011"
+    source: "MAT:0012:ION:Mg+2"
+    type: "ISOELECTRONIC-WITH"
+    target: "MAT:0011:ION:Na+1"
+    electron_count: 10
+
+  # NUCLEAR
+
+  - relationship_id: "MAT:0012:REL:0020"
+    source: "MAT:0012:ISO:Mg-27"
+    type: "DECAYS-TO"
+    target: "MAT:0013:ISO:Al-27"
+    mechanism: "BETA-MINUS"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+
+  - relationship_id: "MAT:0012:REL:0021"
+    source: "MAT:0012:ISO:Mg-28"
+    type: "DECAYS-TO"
+    target: "MAT:0013:ISO:Al-28"
+    mechanism: "BETA-MINUS"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+
+  - relationship_id: "MAT:0012:REL:0022"
+    source: "MAT:0013:ISO:Al-26"
+    type: "DECAYS-TO"
+    target: "MAT:0012:ISO:Mg-26"
+    target_status: "RESERVED-PENDING-ALUMINIUM"
+    role: "EARLY-SOLAR-SYSTEM-CHRONOMETER"
+
+  # HYDROGEN
+
+  - relationship_id: "MAT:0012:REL:0030"
+    source:
+      - "MAT:0012"
+      - "MAT:0001"
+    type: "FORMS-HYDRIDE"
+    target: "MAT:CMP:MgH2"
+    target_status: "RESOLVED"
+
+  # BORON
+
+  - relationship_id: "MAT:0012:REL:0040"
+    source:
+      - "MAT:0012"
+      - "MAT:0005"
+    type: "FORMS-SUPERCONDUCTING-COMPOUND"
+    target: "MAT:CMP:MgB2"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0012:REL:0041"
+    source: "BORON-ISOTOPE-MASS"
+    type: "MODULATES"
+    target: "MgB2-Tc"
+    mechanism: "PHONON-ISOTOPE-EFFECT"
+
+  # CARBON
+
+  - relationship_id: "MAT:0012:REL:0050"
+    source:
+      - "MAT:0012"
+      - "MAT:0006"
+    type: "ORGANOMETALLIC-CARBON-CHEMISTRY"
+    target: "GRIGNARD-FAMILY"
+    target_status: "RESOLVED"
+
+  - relationship_id: "MAT:0012:REL:0051"
+    source: "MAT:0012"
+    type: "FORMS-CARBONATE"
+    target: "MAT:CMP:MgCO3"
+
+  # NITROGEN
+
+  - relationship_id: "MAT:0012:REL:0060"
+    source:
+      - "MAT:0012"
+      - "MAT:0007"
+    type: "FORMS-NITRIDE"
+    target: "MAT:CMP:Mg3N2"
+
+  # OXYGEN
+
+  - relationship_id: "MAT:0012:REL:0070"
+    source:
+      - "MAT:0012"
+      - "MAT:0008"
+    type: "FORMS-OXIDE"
+    target: "MAT:CMP:MgO"
+
+  - relationship_id: "MAT:0012:REL:0071"
+    source: "MAT:0012"
+    type: "FORMS-HYDROXIDE"
+    target: "MAT:CMP:Mg(OH)2"
+
+  # FLUORINE
+
+  - relationship_id: "MAT:0012:REL:0080"
+    source:
+      - "MAT:0012"
+      - "MAT:0009"
+    type: "FORMS-FLUORIDE"
+    target: "MAT:CMP:MgF2"
+
+  # CHLORINE
+
+  - relationship_id: "MAT:0012:REL:0081"
+    source: "MAT:0012"
+    type: "FORMS-CHLORIDE"
+    target: "MAT:CMP:MgCl2"
+    target_status: "RESERVED-PENDING-CHLORINE"
+
+  # BIOLOGY
+
+  - relationship_id: "MAT:0012:REL:0090"
+    source: "MAT:0012:ION:Mg+2"
+    type: "COORDINATES"
+    target: "ATP"
+    object: "MgATP"
+
+  - relationship_id: "MAT:0012:REL:0091"
+    source: "MAT:0012:ION:Mg+2"
+    type: "CENTRAL-METAL-IN"
+    target: "CHLOROPHYLL"
+
+  # ELECTROCHEMISTRY
+
+  - relationship_id: "MAT:0012:REL:0100"
+    source: "MAT:0012:ION:Mg+2"
+    type: "MOBILE-MULTIVALENT-ION-IN"
+    target: "MAGNESIUM-BATTERY-MATERIALS"
+
+  - relationship_id: "MAT:0012:REL:0101"
+    source: "MAT:0012"
+    type: "SACRIFICIAL-ANODE-FOR"
+    target: "CATHODICALLY-PROTECTED-METAL"
+
+  # HIGH PRESSURE
+
+  - relationship_id: "MAT:0012:REL:0110"
+    source: "MAT:0012:PHASE:HCP-MG"
+    type: "PRESSURE-TRANSFORMS-TO"
+    target: "MAT:0012:PHASE:BCC-MG"
+
+  # ASTROPHYSICS
+
+  - relationship_id: "MAT:0012:REL:0120"
+    source:
+      - "MAT:0010:ISO:Ne-22"
+      - alpha
+    type: "ALPHA-NEUTRON-REACTION"
+    target: "MAT:0012:ISO:Mg-25"
+    coproduct: neutron
+
+  - relationship_id: "MAT:0012:REL:0121"
+    source:
+      - "MAT:0010:ISO:Ne-22"
+      - alpha
+    type: "ALPHA-GAMMA-REACTION"
+    target: "MAT:0012:ISO:Mg-26"
+
+  # LEGACY
+
+  - relationship_id: "MAT:0012:REL:0999"
+    source: "MAT:0012"
+    type: "LEGACY-SUCCESSOR-OF"
+    target: "G0012"
+
+rules:
+  nuclear_and_chemical_edges_are_distinct: true
+  parent_element_property_is_not_compound_property: true
+  same_Mg2_plus_state_does_not_imply_same_coordination: true
+  isotope_effect_does_not_change_element_identity: true
+  graph_is_exhaustive: false
+```
+
+# FILE: records/0012-Magnesium-Mg/relationships/0012-Magnesium-Mg-People-and-Intellectual-Lineage.md
+
+# Magnesium — People and Intellectual Lineage
+
+## Joseph Black
+
+Role:
+
+```text
+CHEMICAL-DISTINCTION-PIONEER
+MAGNESIA-LIME-DISCRIMINATION
+EXPERIMENTAL-CONTRIBUTOR
+```
+
+In 1755 Black established that magnesia was chemically distinct from lime.
+
+MAT significance:
+
+```text
+SIMILAR MACROSCOPIC MATERIALS
+!=
+SAME CHEMICAL SUBSTANCE
+```
+
+Source:
+
+```text
+SRC-000272
+```
+
+---
+
+## Humphry Davy
+
+Role:
+
+```text
+ELEMENTAL-METAL-ISOLATION-CONTRIBUTOR
+ELECTROCHEMISTRY-PIONEER
+```
+
+In 1808 Davy used electrochemical methods to obtain a small/impure metallic Magnesium preparation.
+
+---
+
+## Antoine-Alexandre-Brutus Bussy
+
+Role:
+
+```text
+METAL-PREPARATION-CONTRIBUTOR
+EXPERIMENTAL-EXTENDER
+```
+
+In 1831 Bussy produced a substantial purer quantity of Magnesium metal and investigated its properties.
+
+Required lineage rule:
+
+```text
+RECOGNITION
+!=
+FIRST ELECTROCHEMICAL PREPARATION
+!=
+PRACTICAL PURE-METAL PREPARATION
+```
+
+---
+
+# Organomagnesium Chemistry
+
+## Victor Grignard
+
+Role:
+
+```text
+ORGANOMAGNESIUM-CHEMISTRY-PIONEER
+CARBON-BOND-FORMATION-CONTRIBUTOR
+```
+
+Canonical contribution:
+
+```text
+RMgX
+```
+
+and its systematic use in preparative organic chemistry.
+
+Recognition:
+
+```text
+NOBEL PRIZE IN CHEMISTRY
+1912
+```
+
+Source:
+
+```text
+SRC-000273
+```
+
+---
+
+# MgB2 Superconductivity
+
+## Jun Nagamatsu
+
+## Norimasa Nakagawa
+
+## Takahiro Muranaka
+
+## Yuji Zenitani
+
+## Jun Akimitsu
+
+Role family:
+
+```text
+SUPERCONDUCTIVITY-DISCOVERY-CONTRIBUTOR
+MATERIALS-PHYSICS-CONTRIBUTOR
+```
+
+2001 result:
+
+```text
+MgB2
+Tc ≈ 39 K
+```
+
+Source:
+
+```text
+SRC-000274
+```
+
+---
+
+## Sergey L. Bud'ko
+
+## G. Lapertot
+
+## C. Petrovic
+
+## C. E. Cunningham
+
+## N. Anderson
+
+## Paul C. Canfield
+
+Role family:
+
+```text
+ISOTOPE-EFFECT-CONTRIBUTOR
+SUPERCONDUCTIVITY-EXPERIMENTAL-CONTRIBUTOR
+```
+
+Measured:
+
+```text
+10B / 11B substitution
+→
+~1 K Tc shift
+```
+
+supporting phonon participation.
+
+Source:
+
+```text
+SRC-000275
+```
+
+---
+
+## S. Souma
+
+## Y. Machida
+
+## T. Sato
+
+## T. Takahashi
+
+## H. Matsui
+
+## S.-C. Wang
+
+## H. Ding
+
+## A. Kaminski
+
+## J. C. Campuzano
+
+## S. Sasaki
+
+## K. Kadowaki
+
+Role family:
+
+```text
+MULTIBAND-SUPERCONDUCTIVITY-CONTRIBUTOR
+ARPES-CONTRIBUTOR
+REPLICATOR-AND-EXTENDER
+```
+
+Directly resolved distinct superconducting gaps associated with:
+
+```text
+sigma bands
+pi bands
+```
+
+Source:
+
+```text
+SRC-000276
+```
+
+---
+
+# Nuclear / Isotope Lineage
+
+## F. G. Kondev
+
+## Meng Wang
+
+## W. J. Huang
+
+## S. Naimi
+
+## G. Audi
+
+Role:
+
+```text
+NUCLEAR-DATA-EVALUATOR
+```
+
+Source:
+
+```text
+SRC-000254
+```
+
+---
+
+# Stable-Isotope Geochemistry
+
+## Fang-Zhen Teng
+
+## Nicolas Dauphas
+
+## James M. Watkins
+
+Role family:
+
+```text
+MAGNESIUM-ISOTOPE-GEOCHEMISTRY-CONTRIBUTOR
+ISOTOPE-METHOD-FORMALIZATION
+```
+
+Important framework:
+
+```text
+delta25Mg
+delta26Mg
+reference-scale semantics
+geological fractionation
+```
+
+Source:
+
+```text
+SRC-000269
+```
+
+---
+
+# High-Pressure Magnesium
+
+## G. W. Stinton
+
+## S. G. MacLeod
+
+## H. Cynn
+
+## Daniel Errandonea
+
+## W. J. Evans
+
+## J. E. Proctor
+
+## Y. Meng
+
+## M. I. McMahon
+
+Role family:
+
+```text
+HIGH-PRESSURE-MAGNESIUM-CONTRIBUTOR
+CRYSTAL-STRUCTURE-CONTRIBUTOR
+```
+
+Key relationship:
+
+```text
+HCP
+→ pressure
+→ BCC
+```
+
+Source:
+
+```text
+SRC-000263
+```
+
+---
+
+# Principle Lineage
+
+Magnesium also connects to:
+
+```text
+Faraday
+Nernst
+Arrhenius
+Gibbs
+Boltzmann
+
+Pauli
+Schrodinger
+Heisenberg
+Born
+Bloch
+Fermi
+
+Bardeen
+Cooper
+Schrieffer
+```
+
+Use principle-level edges rather than element-discovery roles.
+
+# FILE: records/0012-Magnesium-Mg/experiments/0012-Magnesium-Mg-Experiments.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:EXPERIMENTS"
+record_id: "MAT:0012"
+
+entries:
+
+  - experiment_id: "MAT:0012:EXP:001"
+    name: "Chemical Distinction of Magnesia from Lime"
+    class: "CHEMICAL-IDENTIFICATION"
+    year: 1755
+    contributor:
+      - Joseph_Black
+    source_id: "SRC-000272"
+
+  - experiment_id: "MAT:0012:EXP:002"
+    name: "Electrochemical Magnesium Preparation"
+    class: "ELEMENT-ISOLATION"
+    year: 1808
+    contributor:
+      - Humphry_Davy
+    source_id: "SRC-000272"
+
+  - experiment_id: "MAT:0012:EXP:003"
+    name: "Practical Preparation of Magnesium Metal"
+    class: "METAL-PREPARATION"
+    year: 1831
+    contributor:
+      - Antoine_Alexandre_Brutus_Bussy
+    source_id: "SRC-000272"
+
+  - experiment_id: "MAT:0012:EXP:004"
+    name: "Grignard Organomagnesium Chemistry"
+    class: "ORGANOMETALLIC-CHEMISTRY"
+    period: "1900s"
+    contributor:
+      - Victor_Grignard
+    source_id: "SRC-000273"
+
+  - experiment_id: "MAT:0012:EXP:005"
+    name: "Discovery of 39-K Superconductivity in MgB2"
+    class: "SUPERCONDUCTIVITY"
+    year: 2001
+    contributors:
+      - Jun_Nagamatsu
+      - Norimasa_Nakagawa
+      - Takahiro_Muranaka
+      - Yuji_Zenitani
+      - Jun_Akimitsu
+    source_id: "SRC-000274"
+
+  - experiment_id: "MAT:0012:EXP:006"
+    name: "Boron Isotope Effect in MgB2"
+    class: "SUPERCONDUCTIVITY-ISOTOPE-EFFECT"
+    year: 2001
+    source_id: "SRC-000275"
+
+  - experiment_id: "MAT:0012:EXP:007"
+    name: "Direct Two-Gap MgB2 Spectroscopy"
+    class: "ARPES-SUPERCONDUCTIVITY"
+    year: 2003
+    source_id: "SRC-000276"
+
+  - experiment_id: "MAT:0012:EXP:008"
+    name: "Magnesium HCP-BCC High-Pressure Phase Mapping"
+    class: "HIGH-PRESSURE-XRD"
+    year: 2014
+    source_id: "SRC-000263"
+```
+
+The lineage deliberately distinguishes **chemical recognition, early electrochemical production, later practical metal preparation, organomagnesium chemistry, superconductivity discovery, isotope-effect evidence, multiband spectroscopy, nuclear evaluation, geochemistry, and high-pressure structure work**. 
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-001-Isotopes.md
+
+# Magnesium Isotope Summary
+
+| Isotope | Status               | Half-life / role |
+| ------- | -------------------- | ---------------- |
+| ¹⁹Mg    | 2p-unbound           | 5 ± 3 ps         |
+| ²⁰Mg    | β⁺                   | 90.4 ms          |
+| ²¹Mg    | β⁺                   | 120.0 ms         |
+| ²²Mg    | β⁺                   | 3.8745 s         |
+| ²³Mg    | β⁺                   | 11.3039 s        |
+| ²⁴Mg    | stable               | dominant natural |
+| ²⁵Mg    | stable               | NMR / stellar    |
+| ²⁶Mg    | stable               | ²⁶Al daughter    |
+| ²⁷Mg    | β⁻                   | 9.435 min        |
+| ²⁸Mg    | β⁻                   | 20.915 h         |
+| ²⁹Mg    | β⁻                   | 1.30 s           |
+| ³⁰Mg    | β⁻                   | 317 ms           |
+| ³¹Mg    | β⁻                   | 270 ms           |
+| ³²Mg    | β⁻                   | 80.4 ms          |
+| ³³Mg    | β⁻/βn                | 92.0 ms          |
+| ³⁴Mg    | β⁻/βn                | 44.9 ms          |
+| ³⁵Mg    | neutron-rich         | 11.3 ms          |
+| ³⁶Mg    | neutron-rich         | 3.9 ms           |
+| ³⁷Mg    | neutron-rich         | 8 ms             |
+| ³⁸Mg    | estimated            | ~2 ms            |
+| ³⁹Mg    | neutron-emitting     | <180 ns          |
+| ⁴⁰Mg    | extreme neutron-rich | ~1 ms estimated  |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-002-Spectroscopy.md
+
+# Magnesium Spectroscopy
+
+| Species |                Line | Context          |
+| ------- | ------------------: | ---------------- |
+| Mg I    |    285.21251 nm air | atomic resonance |
+| Mg I    |     457.1096 nm air | intercombination |
+| Mg I    |     516.7322 nm air | visible          |
+| Mg I    |     517.2684 nm air | visible          |
+| Mg I    |     518.3604 nm air | visible          |
+| Mg II k |    279.55301 nm air | laboratory       |
+| Mg II k | ~279.6354 nm vacuum | astrophysics     |
+| Mg II h |    280.27056 nm air | laboratory       |
+| Mg II h | ~280.3531 nm vacuum | astrophysics     |
+| ²⁵Mg    |                 NMR | field-dependent  |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-003-Periodic.md
+
+# Be → Mg Periodic Comparison
+
+| Variable          | Be                 | Mg                    |
+| ----------------- | ------------------ | --------------------- |
+| valence pattern   | 2s²                | 3s²                   |
+| common charge     | +2                 | +2                    |
+| dominant ion      | Be²⁺               | Mg²⁺                  |
+| density           | higher             | lower                 |
+| biology           | toxic/special case | essential Mg²⁺        |
+| crystal mechanics | hcp / anisotropic  | hcp / anisotropic     |
+| hydride behavior  | distinct           | MgH₂ storage research |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-004-Compounds.md
+
+# Magnesium Material Families
+
+| Material | Architecture               |
+| -------- | -------------------------- |
+| MgO      | rock-salt refractory       |
+| Mg(OH)₂  | layered brucite            |
+| MgCO₃    | rhombohedral magnesite     |
+| MgCl₂    | layered chloride           |
+| MgF₂     | rutile-type fluoride       |
+| Mg₃N₂    | anti-bixbyite nitride      |
+| MgH₂     | hydrogen-storage hydride   |
+| MgB₂     | multigap superconductor    |
+| RMgX     | organomagnesium / Grignard |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-005-Deformation.md
+
+# Magnesium Deformation
+
+| Mechanism                  | Relative room-temperature role |
+| -------------------------- | ------------------------------ |
+| basal `<a>` slip           | easy / dominant                |
+| extension twinning         | important                      |
+| prismatic `<a>`            | harder                         |
+| pyramidal `<c+a>`          | harder                         |
+| non-basal slip at higher T | increasingly active            |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-006-Batteries.md
+
+# Mg²⁺ Electrochemistry
+
+| Domain         | Key issue                       |
+| -------------- | ------------------------------- |
+| metal anode    | passivation/interphase          |
+| electrolyte    | solvation/desolvation           |
+| cathode        | strong Mg²⁺ lattice interaction |
+| diffusion      | often sluggish                  |
+| voltage window | electrolyte dependent           |
+| capacity       | not predicted by charge alone   |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-007-Biology.md
+
+# Biological Magnesium
+
+| Object      | Mg²⁺ role                    |
+| ----------- | ---------------------------- |
+| ATP         | MgATP coordination           |
+| enzymes     | catalytic/cofactor           |
+| DNA/RNA     | charge screening / structure |
+| chlorophyll | central metal                |
+| bone        | mineral metabolism           |
+| membranes   | homeostasis                  |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-008-Geochemistry.md
+
+# Magnesium Geochemistry
+
+| State           | Information              |
+| --------------- | ------------------------ |
+| seawater Mg²⁺   | aqueous reservoir        |
+| dolomite        | carbonate reservoir      |
+| magnesite       | carbonate reservoir      |
+| olivine         | silicate reservoir       |
+| δ²⁶Mg           | mass-dependent tracer    |
+| radiogenic ²⁶Mg | extinct ²⁶Al chronometer |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-009-Pressure-Corrosion.md
+
+# State-Dependent Magnesium Engineering
+
+| State/process     | Result                          |
+| ----------------- | ------------------------------- |
+| HCP metal         | lightweight structural material |
+| pressure          | HCP → BCC                       |
+| aqueous corrosion | Mg → Mg²⁺                       |
+| sacrificial anode | intentional cathodic protection |
+| hydrogenation     | Mg → MgH₂                       |
+| Mg + B            | MgB₂ superconductivity          |
+
+# FILE: records/0012-Magnesium-Mg/tables/0012-Magnesium-Mg-TABLE-010-Evidence.md
+
+# Magnesium Evidence Matrix
+
+| Domain               | Sources                          |
+| -------------------- | -------------------------------- |
+| atomic/ionization    | SRC-000242                       |
+| isotope masses       | SRC-000243                       |
+| nuclear              | SRC-000254                       |
+| spectroscopy         | SRC-000244 / 268                 |
+| ²⁵Mg NMR             | SRC-000255                       |
+| deformation          | SRC-000256                       |
+| compounds            | SRC-000257–262                   |
+| high pressure        | SRC-000263                       |
+| MgB₂                 | SRC-000248 / 249 / 264 / 274–276 |
+| MgH₂                 | SRC-000247 / 265                 |
+| batteries            | SRC-000250 / 251 / 266           |
+| isotope geochemistry | SRC-000269                       |
+| ²⁶Al–²⁶Mg            | SRC-000270                       |
+| corrosion            | SRC-000271 / 277                 |
+| discovery            | SRC-000272                       |
+| Grignard             | SRC-000273                       |
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Graph-Manifest.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:GRAPHS"
+record_id: "MAT:0012"
+
+graphs:
+
+  - id: "MAT:0012:GRAPH:001"
+    name: "Magnesium Isotope Lifetime Map"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:002"
+    name: "Magnesium Ionization Ladder"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:003"
+    name: "Mg I / Mg II Spectrum"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:004"
+    name: "Mg II h/k Chromospheric Diagnostic"
+    status: "SCHEMATIC-READY"
+
+  - id: "MAT:0012:GRAPH:005"
+    name: "25Mg NMR Architecture"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:006"
+    name: "HCP Slip and Twinning Map"
+    status: "SCHEMATIC-READY"
+
+  - id: "MAT:0012:GRAPH:007"
+    name: "MgH2 Hydrogenation Pathway"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:008"
+    name: "MgB2 Sigma/Pi Two-Gap Architecture"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:009"
+    name: "Mg2+ Battery Transport Bottlenecks"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:010"
+    name: "Mg Stable-Isotope Fractionation Map"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:011"
+    name: "26Al-26Mg Chronometer"
+    status: "READY-FOR-GENERATION"
+
+  - id: "MAT:0012:GRAPH:012"
+    name: "Magnesium Knowledge Graph"
+    status: "READY-FOR-GENERATION"
+```
+
+The full table and graph layer is now explicitly represented rather than leaving the record as narrative-only content. 
+
+# FILE: records/0012-Magnesium-Mg/0012-Magnesium-Mg-Visual-Specification.md
+
+# 0012 Magnesium — Locked Visual Specification
+
+## V01 — Natural / Material Manifestation
+
+```text
+images/natural/0012-Magnesium-Mg-FIG-001-Natural-and-Metallic.png
+```
+
+Show separately:
+
+```text
+metallic Mg
+dolomite
+magnesite
+olivine
+seawater Mg2+
+```
+
+Required:
+
+```text
+NATURAL MAGNESIUM
+!=
+FREE METALLIC Mg
+```
+
+---
+
+## V02 — Conventional Atomic Identity
+
+```text
+images/scientific/0012-Magnesium-Mg-FIG-002-Atomic-Identity.svg
+```
+
+Include:
+
+```text
+Mg
+Z = 12
+[Ne]3s2
+1S0
+[24.304, 24.307]
+```
+
+Highlight:
+
+```text
+PERIOD-3 GROUP-2 REPEAT
+```
+
+---
+
+## V03 — Bonding / Coordination
+
+```text
+diagrams/bonding/0012-Magnesium-Mg-DIAGRAM-001-Bonding-and-Coordination.svg
+```
+
+Compare:
+
+```text
+Mg metal
+Mg2+
+MgO
+MgF2
+MgH2
+MgB2
+RMgX
+MgATP
+chlorophyll
+```
+
+Required:
+
+```text
+SAME ELEMENT
+!=
+SAME BONDING FUNCTION
+```
+
+---
+
+## V04 — Atomic / Electron Probability
+
+```text
+images/quantum/0012-Magnesium-Mg-FIG-003-Electronic-State.svg
+```
+
+Show:
+
+```text
+Mg [Ne]3s2
+→ -e
+Mg+ [Ne]3s1
+→ -e
+Mg2+ [Ne]
+```
+
+Include third-ionisation energy barrier.
+
+---
+
+## V05 — Isotope / Nuclear
+
+```text
+images/isotope/0012-Magnesium-Mg-FIG-004-Isotope-Map.svg
+```
+
+Highlight:
+
+```text
+19Mg → 2p decay
+24Mg → stable
+25Mg → stable / NMR
+26Mg → stable / 26Al daughter
+27Mg → beta-
+28Mg → beta- chain
+32Mg → island-of-inversion region
+39Mg → neutron-emitting edge
+40Mg → extreme neutron-rich
+```
+
+---
+
+## V06 — Spectral / Frequency
+
+Asset 1:
+
+```text
+images/spectral/0012-Magnesium-Mg-FIG-005-Atomic-Spectrum.svg
+```
+
+Show:
+
+```text
+Mg I 285.21251 nm air
+Mg II k 279.55301 nm air
+Mg II h 280.27056 nm air
+```
+
+Asset 2:
+
+```text
+images/spectral/0012-Magnesium-Mg-FIG-006-Astrophysical-h-k.svg
+```
+
+Use vacuum convention:
+
+```text
+k ≈ 279.6354 nm
+h ≈ 280.3531 nm
+```
+
+Required:
+
+```text
+AIR != VACUUM
+NO UNIVERSAL MAGNESIUM FREQUENCY
+```
+
+---
+
+## V07 — Physical
+
+```text
+images/properties/0012-Magnesium-Mg-FIG-007-Physical-Dashboard.svg
+```
+
+Include:
+
+```text
+density ~1.74 g/cm3
+Tm ~650 C
+Tb ~1090 C
+HCP
+```
+
+---
+
+## V08 — Electrical / Electrochemical
+
+```text
+diagrams/fields/0012-Magnesium-Mg-DIAGRAM-002-Mg2-Transport.svg
+```
+
+Show:
+
+```text
+Mg
+↔
+Mg2+ + 2e-
+```
+
+and:
+
+```text
+solvation
+desolvation
+interface crossing
+solid-state diffusion
+```
+
+---
+
+## V09 — Magnetic / NMR
+
+```text
+diagrams/fields/0012-Magnesium-Mg-DIAGRAM-003-Mg25-NMR.svg
+```
+
+Show:
+
+```text
+25Mg
+I = 5/2
+quadrupolar
+field-dependent resonance
+```
+
+No fixed frequency.
+
+---
+
+## V10 — Thermal / Hydride
+
+```text
+images/properties/0012-Magnesium-Mg-FIG-008-MgH2-State.svg
+```
+
+Show:
+
+```text
+Mg + H2
+↔
+alpha-MgH2
+```
+
+and separate:
+
+```text
+gamma-MgH2 metastable/high-pressure-derived
+```
+
+---
+
+## V11 — Mechanical / Structural
+
+```text
+images/properties/0012-Magnesium-Mg-FIG-009-HCP-Deformation.svg
+```
+
+Show:
+
+```text
+basal slip
+extension twinning
+non-basal slip
+texture
+```
+
+Required:
+
+```text
+HCP
+!=
+ISOTROPIC
+```
+
+---
+
+## V12 — Phase / Pressure / Environment
+
+```text
+images/properties/0012-Magnesium-Mg-FIG-010-Pressure-Corrosion.svg
+```
+
+Panel A:
+
+```text
+HCP
+→ pressure
+→ BCC
+```
+
+Panel B:
+
+```text
+Mg
+→ corrosion
+→ Mg2+
+```
+
+---
+
+## V13 — Transformation / Process
+
+```text
+diagrams/processes/0012-Magnesium-Mg-DIAGRAM-004-Transformation-Network.svg
+```
+
+Branches:
+
+```text
+Mg
+├── -2e → Mg2+
+├── O → MgO
+├── N → Mg3N2
+├── H → MgH2
+├── B → MgB2
+├── organic halide → Grignard chemistry
+├── pressure → BCC
+├── corrosion → sacrificial anode
+├── biology → MgATP / chlorophyll
+└── electrochemistry → Mg2+ battery transport
+```
+
+---
+
+## V14 — Knowledge Graph
+
+```text
+diagrams/relationships/0012-Magnesium-Mg-DIAGRAM-005-Knowledge-Graph.svg
+```
+
+Clusters:
+
+```text
+Be periodic analogue
+Ne/Na+/Mg2+ isoelectronic series
+isotopes
+Mg II astrophysics
+MgH2
+MgB2
+Grignard
+batteries
+biology
+geochemistry
+26Al-26Mg
+corrosion
+alloys
+people
+sources
+```
+
+---
+
+## V15 — Scientific 3D
+
+```text
+models/scientific/0012-Magnesium-Mg-MODEL-SCI-001-HCP-Mg.glb
+models/scientific/0012-Magnesium-Mg-MODEL-SCI-002-MgO.glb
+models/scientific/0012-Magnesium-Mg-MODEL-SCI-003-MgH2.glb
+models/scientific/0012-Magnesium-Mg-MODEL-SCI-004-MgB2.glb
+```
+
+MgB₂ model must show:
+
+```text
+Mg layers
+B honeycomb layers
+```
+
+without implying classical electron trajectories.
+
+---
+
+## V16 — Data-Extruded 3D
+
+```text
+models/data-extruded/0012-Magnesium-Mg-MODEL-DATA-001.glb
+```
+
+Use universal MAT transformation unchanged.
+
+---
+
+## V17 — Applications
+
+```text
+images/applications/0012-Magnesium-Mg-FIG-011-Applications.svg
+```
+
+Clusters:
+
+```text
+lightweight alloys
+sacrificial anodes
+refractory MgO
+Grignard synthesis
+MgH2 research
+MgB2 superconductivity
+multivalent batteries
+MgATP biology
+chlorophyll
+isotope geochemistry
+stellar spectroscopy
+```
+
+---
+
+## V18 — Evidence / Provenance
+
+```text
+diagrams/relationships/0012-Magnesium-Mg-DIAGRAM-006-Evidence-Provenance.svg
+```
+
+Show:
+
+```text
+NIST
+CIAAW
+NUBASE
+USGS
+RSC
+Nobel
+NASA / solar spectroscopy
+high-pressure XRD
+MgH2 literature
+MgB2 primary papers
+battery reviews
+isotope-geochemistry literature
+ASTM cathodic-protection standard
+```
+
+# FILE: records/0012-Magnesium-Mg/data/structured/0012-Magnesium-Mg-Visual-Manifest.yaml
+
+```yaml
+registry_id: "MAT:0012:REG:VISUALS"
+record_id: "MAT:0012"
+
+summary:
+  visual_slots: 18
+  two_dimensional_assets: 17
+  scientific_3d_models: 4
+  data_extruded_models: 1
+  total_core_visual_assets: 22
+
+status:
+  specification: "LOCKED"
+  generated: false
+```
+
+The visual specification is now **locked**, while the assets themselves remain explicitly **not generated**. 
+
+# FILE: records/0012-Magnesium-Mg/0012-Magnesium-Mg-Migration-Audit.md
+
+# G0012 → MAT:0012 Migration Audit
+
+## Result
+
+```text
+CONTENT-MIGRATED
+```
+
+### AUDIT-001 — Be → Mg periodic repetition
+
+```text
+PRESERVED + FORMALIZED
+```
+
+as:
+
+```text
+2s2 → 3s2
+SAME VALENCE PATTERN
+DIFFERENT RADIAL/SHELL SCALE
+```
+
+### AUDIT-002 — Mg²⁺ closed shell
+
+```text
+PRESERVED + ISOELECTRONIC ARCHITECTURE
+```
+
+### AUDIT-003 — third ionization jump
+
+```text
+PRESERVED + QUANTIFIED
+```
+
+### AUDIT-004 — 24/25/26Mg
+
+```text
+PRESERVED
+```
+
+with:
+
+```text
+stable-isotope-geochemistry layer added
+```
+
+### AUDIT-005 — 25Mg NMR
+
+```text
+PRESERVED + QUADRUPOLAR ARCHITECTURE
+```
+
+### AUDIT-006 — 27Mg
+
+Legacy:
+
+```text
+~9.458 min
+```
+
+Current:
+
+```text
+NUBASE2020:
+9.435 ± 0.027 min
+```
+
+Legacy retained as:
+
+```text
+SUPERSEDED-HISTORICAL
+```
+
+### AUDIT-007 — 28Mg
+
+```text
+PRESERVED
+20.915 ± 0.009 h
+```
+
+### AUDIT-008 — Mg I / Mg II
+
+```text
+PRESERVED + AIR/VACUUM WAVELENGTH SEMANTICS
+```
+
+### AUDIT-009 — Mg II astrophysics
+
+```text
+EXPANDED
+```
+
+with:
+
+```text
+chromosphere
+velocity
+temperature
+activity
+radiative-transfer diagnostics
+```
+
+### AUDIT-010 — HCP structure
+
+```text
+PRESERVED + SLIP/TWINNING ARCHITECTURE
+```
+
+### AUDIT-011 — lightweight-metal concept
+
+```text
+PRESERVED
+```
+
+but:
+
+```text
+BEST MATERIAL != LOWEST DENSITY
+```
+
+### AUDIT-012 — MgH2
+
+```text
+PRESERVED + PHASE/HISTORY/KINETICS EXPANDED
+```
+
+### AUDIT-013 — MgB2
+
+```text
+PRESERVED + DISCOVERY/ISOTOPE/TWO-GAP LINEAGE
+```
+
+### AUDIT-014 — isotope effect
+
+```text
+PRESERVED
+```
+
+with:
+
+```text
+ISOTOPE MASS
+→ PHONONS
+→ SUPERCONDUCTING STATE
+```
+
+### AUDIT-015 — batteries
+
+```text
+PRESERVED + MULTIVALENT-TRANSPORT CORRECTION
+```
+
+Core rule:
+
+```text
++2 CHARGE
+!=
+2x EASIER / 2x BETTER
+```
+
+### AUDIT-016 — biological Magnesium
+
+```text
+PRESERVED + MgATP/COORDINATION FORMALIZED
+```
+
+### AUDIT-017 — chlorophyll
+
+```text
+PRESERVED + MOLECULAR-CONTEXT QUALIFICATION
+```
+
+### AUDIT-018 — Grignard
+
+```text
+PRESERVED + ORGANOMETALLIC-FAMILY CHILD
+```
+
+### AUDIT-019 — geochemistry
+
+```text
+PRESERVED + STABLE-ISOTOPE FRACTIONATION ADDED
+```
+
+### AUDIT-020 — 26Al–26Mg
+
+```text
+ADDED AS DISTINCT RADIOGENIC CHRONOMETER
+```
+
+Required:
+
+```text
+delta26Mg
+!=
+RADIOGENIC 26Mg EXCESS
+```
+
+### AUDIT-021 — corrosion
+
+```text
+PRESERVED + SACRIFICIAL-ANODE ENGINEERING FORMALIZED
+```
+
+### AUDIT-022 — high pressure
+
+```text
+PRESERVED + SOURCE-CONDITION DEPENDENCE
+```
+
+Do not store one exact HCP→BCC pressure.
+
+### AUDIT-023 — stellar network
+
+```text
+PRESERVED + REACTION-TYPE SEPARATION
+```
+
+### AUDIT-024 — universal frequency
+
+```text
+REJECTED
+```
+
+Required:
+
+```text
+NO SINGLE MAGNESIUM FREQUENCY
+```
+
+### AUDIT-025 — Legacy production lock
+
+Any legacy:
+
+```text
+PRODUCTION ELEMENT — LOCKED
+```
+
+is historical only.
+
+MAT validation is independent.
+
+# FILE: records/0012-Magnesium-Mg/0012-Magnesium-Mg-Schema-Validation.md
+
+# Magnesium Schema Validation
+
+```yaml
+record_id: "MAT:0012"
+validation_version: "1.0.0"
+overall: "PASS"
+
+validation:
+
+  atomic_identity: "PASS"
+  periodic_group2_architecture: "PASS"
+
+  ionization_architecture: "PASS"
+  Mg2_closed_shell: "PASS"
+  isoelectronic_architecture: "PASS"
+
+  isotope_namespace: "PASS"
+  radioactive_semantics: "PASS"
+  isotope_geochemistry: "PASS"
+  radiogenic_chronology: "PASS"
+
+  MgI_spectroscopy: "PASS"
+  MgII_spectroscopy: "PASS"
+  wavelength_medium_semantics: "PASS"
+  astrophysical_diagnostics: "PASS"
+  NMR_architecture: "PASS"
+  no_universal_frequency: "PASS"
+
+  HCP_architecture: "PASS"
+  deformation_anisotropy: "PASS"
+  alloy_architecture: "PASS"
+
+  compound_architecture: "PASS"
+  MgH2_architecture: "PASS"
+  MgB2_architecture: "PASS"
+  Grignard_architecture: "PASS"
+
+  multivalent_battery_architecture: "PASS"
+
+  biological_coordination: "PASS"
+  MgATP_architecture: "PASS"
+  chlorophyll_architecture: "PASS"
+
+  geochemistry_architecture: "PASS"
+  corrosion_architecture: "PASS"
+  cathodic_protection_architecture: "PASS"
+
+  high_pressure_architecture: "PASS"
+  stellar_nuclear_architecture: "PASS"
+
+  people_lineage: "PASS"
+  evidence_architecture: "PASS"
+
+scientific_core: "CORE-VALIDATED"
+exhaustive_content: false
+```
+
+# FINAL MAGNESIUM STATUS
+
+```yaml
+status: "RESEARCHED"
+completeness: "RESEARCHED"
+
+migration_status: "MIGRATED-PENDING-ARCHIVE"
+
+validation:
+  schema: "PASS"
+  identifiers: "PASS"
+  isotope_semantics: "PASS"
+  spectroscopy_architecture: "PASS"
+  isotope_geochemistry: "PASS"
+  radiogenic_chronology: "PASS"
+  NMR_architecture: "PASS"
+  structural_anisotropy: "PASS"
+  compound_architecture: "PASS"
+  hydride_architecture: "PASS"
+  superconductivity_architecture: "PASS"
+  organomagnesium_architecture: "PASS"
+  battery_architecture: "PASS"
+  biological_architecture: "PASS"
+  corrosion_architecture: "PASS"
+  high_pressure_architecture: "PASS"
+  evidence_architecture: "PASS"
+  scientific_core: "CORE-VALIDATED"
+  exhaustive_content: false
+
+visuals:
+  specification: "LOCKED"
+  generated: false
+```
+
+Magnesium therefore passes the scientific-core validation while remaining correctly marked `exhaustive_content: false`; the Genesis source stays in `MIGRATED-PENDING-ARCHIVE`, and the visual specification is locked but not yet rendered. 
+
+# INDEX PATCHES
+
+Update:
+
+```text
+docs/05-index/01-Record-Index.md
+```
+
+to:
+
+```text
+0012 | Magnesium | Mg | 12 | CORE-VALIDATED
+```
+
+Update:
+
+```text
+docs/07-migration/01-Legacy-File-Map.md
+```
+
+to:
+
+```text
+G0012 | records/0012-Magnesium-Mg/ | MIGRATED-PENDING-ARCHIVE
+```
+
+# APPEND TO: data/registries/sources.yaml
+
+```yaml
+  - source_id: "SRC-000268"
+    title: "Mg II h and k Resonance-Line Diagnostics"
+    source_type: "SOLAR-AND-STELLAR-SPECTROSCOPY"
+    supports:
+      - MgII_h_k
+      - chromosphere
+      - temperature_diagnostics
+      - velocity_diagnostics
+      - partial_frequency_redistribution
+      - astrophysical_vacuum_wavelengths
+
+  - source_id: "SRC-000269"
+    title: "Magnesium Isotope Geochemistry"
+    authors:
+      - "Fang-Zhen Teng"
+      - "Nicolas Dauphas"
+      - "James M. Watkins"
+    source_type: "STABLE-ISOTOPE-GEOCHEMISTRY-REFERENCE"
+    supports:
+      - delta25Mg
+      - delta26Mg
+      - DSM3
+      - Mg_isotope_fractionation
+      - weathering
+      - carbonates
+      - mantle
+      - geochemical_tracing
+
+  - source_id: "SRC-000270"
+    title: "Early Solar System Chronology from Short-Lived Chronometers"
+    authors:
+      - "Aryavart Anand"
+      - "Klaus Mezger"
+    journal: "Chemie der Erde / Geochemistry"
+    year: 2023
+    article: "126004"
+    doi: "10.1016/j.chemer.2023.126004"
+    source_type: "COSMOCHEMICAL-CHRONOLOGY-REVIEW"
+    supports:
+      - Al26_Mg26
+      - extinct_radionuclide
+      - early_solar_system_chronology
+      - radiogenic_Mg26
+
+  - source_id: "SRC-000271"
+    title: "Magnesium Alloy Sacrificial-Anode Corrosion in Chloride Environments"
+    source_type: "CORROSION-AND-CATHODIC-PROTECTION-REFERENCE"
+    supports:
+      - magnesium_corrosion
+      - MgOH2_surface_products
+      - chloride_effect
+      - sacrificial_anode
+
+  - source_id: "SRC-000272"
+    title: "Magnesium — Discovery History"
+    organization: "Royal Society of Chemistry"
+    source_type: "SCIENTIFIC-HISTORY"
+    supports:
+      - Joseph_Black
+      - Humphry_Davy
+      - Antoine_Alexandre_Brutus_Bussy
+      - recognition_1755
+      - electrochemical_preparation_1808
+      - substantial_metal_preparation_1831
+
+  - source_id: "SRC-000273"
+    title: "Victor Grignard — Organomagnesium Compounds in Preparative Organic Chemistry"
+    organization: "Nobel Prize Outreach"
+    year: 1912
+    source_type: "ORGANOMETALLIC-HISTORY"
+    supports:
+      - Victor_Grignard
+      - Grignard_reagents
+      - organomagnesium
+      - Nobel_1912
+
+  - source_id: "SRC-000274"
+    title: "Superconductivity at 39 K in magnesium diboride"
+    authors:
+      - "Jun Nagamatsu"
+      - "Norimasa Nakagawa"
+      - "Takahiro Muranaka"
+      - "Yuji Zenitani"
+      - "Jun Akimitsu"
+    journal: "Nature"
+    year: 2001
+    volume: 410
+    pages: "63-64"
+    doi: "10.1038/35065039"
+    source_type: "PRIMARY-SUPERCONDUCTIVITY-DISCOVERY"
+    supports:
+      - MgB2
+      - Tc_39_K
+      - bulk_superconductivity
+
+  - source_id: "SRC-000275"
+    title: "Boron isotope effect in superconducting MgB2"
+    authors:
+      - "S. L. Bud'ko"
+      - "G. Lapertot"
+      - "C. Petrovic"
+      - "C. E. Cunningham"
+      - "N. Anderson"
+      - "P. C. Canfield"
+    journal: "Physical Review Letters"
+    year: 2001
+    volume: 86
+    pages: "1877-1880"
+    doi: "10.1103/PhysRevLett.86.1877"
+    source_type: "PRIMARY-SUPERCONDUCTING-ISOTOPE-EFFECT"
+    supports:
+      - MgB2_boron_isotope_effect
+      - Tc_shift
+      - phonon_mediation
+
+  - source_id: "SRC-000276"
+    title: "The origin of multiple superconducting gaps in MgB2"
+    authors:
+      - "S. Souma"
+      - "Y. Machida"
+      - "T. Sato"
+      - "T. Takahashi"
+      - "H. Matsui"
+      - "S.-C. Wang"
+      - "H. Ding"
+      - "A. Kaminski"
+      - "J. C. Campuzano"
+      - "S. Sasaki"
+      - "K. Kadowaki"
+    journal: "Nature"
+    year: 2003
+    volume: 423
+    pages: "65-67"
+    doi: "10.1038/nature01619"
+    source_type: "PRIMARY-MULTIBAND-SUPERCONDUCTIVITY"
+    supports:
+      - MgB2_two_gap
+      - sigma_gap
+      - pi_gap
+      - ARPES
+
+  - source_id: "SRC-000277"
+    title: "ASTM B843-18(2025) — Standard Specification for Magnesium Alloy Anodes for Cathodic Protection"
+    organization: "ASTM International"
+    year: 2025
+    source_type: "ENGINEERING-STANDARD"
+    supports:
+      - magnesium_alloy_anodes
+      - cathodic_protection
+      - cast_anodes
+      - extruded_anodes
+```
+
+# MAT REFERENCE MATRIX THROUGH MAGNESIUM
+
+```text
+0001 Hydrogen
+→ molecule / isotope / plasma
+
+0002 Helium
+→ closed shell / quantum fluids
+
+0003 Lithium
+→ 2s1 / Li+ electrochemistry
+
+0004 Beryllium
+→ 2s2 / anisotropic structural material
+
+0005 Boron
+→ multicentre bonding / boride structures
+
+0006 Carbon
+→ topology / dimensionality / organics
+
+0007 Nitrogen
+→ fixation / nitrides
+
+0008 Oxygen
+→ spin / redox / oxides
+
+0009 Fluorine
+→ electronegativity / fluoride ion
+
+0010 Neon
+→ period-2 closed-shell boundary
+
+0011 Sodium
+→ period-3 3s1 restart / Na+
+
+0012 Magnesium
+→ period-3 3s2 /
+  Mg2+ closed-shell ion /
+  HCP anisotropy /
+  multivalent electrochemistry /
+  MgH2 phase storage /
+  MgB2 emergent superconductivity /
+  Grignard carbon chemistry /
+  MgATP/chlorophyll coordination /
+  isotope geochemistry /
+  extinct-radionuclide chronology /
+  engineered sacrificial corrosion
+```
+
+# NEXT RECORD
+
+```text
+0013-Aluminium-Al
+```
+
+Aluminium will introduce:
+
+```text
+[Ne]3s2 3p1
+
+FIRST PERIOD-3 p-ELECTRON
+BORON PERIODIC ANALOGUE
+
+Al
+Al+
+Al2+
+Al3+ CLOSED-SHELL-LIKE CORE
+
+27Al STABLE / 100%
+27Al NMR I=5/2
+26Al EXTINCT/RADIOACTIVE
+26Al → 26Mg CHRONOMETER
+
+FCC ALUMINIUM
+LOW DENSITY
+HIGH DUCTILITY
+ELECTRICAL / THERMAL CONDUCTION
+
+PASSIVE Al2O3 FILM
+CORROSION RESISTANCE
+ANODIZATION
+
+Al2O3 / CORUNDUM
+SAPPHIRE / RUBY RELATIONSHIPS
+AlN
+AlF3
+AlCl3
+AlH3
+
+ALLOYS:
+Al-Mg
+Al-Cu
+Al-Si
+Al-Zn
+Al-Li
+
+PRECIPITATION HARDENING
+AGEING / HEAT-TREATMENT HISTORY
+
+ALUMINIUM-AIR BATTERIES
+AL-ION BATTERIES
+
+BAYER PROCESS
+HALL-HEROULT
+BAUXITE
+ALUMINA
+
+BIOLOGICAL / TOXICOLOGY CONTEXT
+
+THERMITE AS MATERIAL/THERMOCHEMICAL RELATIONSHIP
+SAFE DESCRIPTIVE ONLY
+
+HIGH-PRESSURE ALUMINIUM
+
+FIRST:
+METAL PASSIVATION LAYER AS CORE MAT STATE VARIABLE
+```
+
+With these patches, **`0012-Magnesium-Mg` is now ready to be marked `CORE-VALIDATED`**. The index becomes `0012 | Magnesium | Mg | 12 | CORE-VALIDATED`, while `G0012` remains `MIGRATED-PENDING-ARCHIVE`; the locked visual specification remains separate from asset generation. 
+
+The recovered production sequence explicitly ends here with **`0013-Aluminium-Al` as the next production record**. 
+
+The next `continue` starts **Aluminium Part 1** in the same MAT flow and naming architecture—no redesign and no format drift.

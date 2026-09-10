@@ -5,8 +5,8 @@
   "title": "0002 — Helium — He",
   "section": "Material Atlas Table",
   "lane": "science",
-  "body": "# 0002 — Helium — He\n\n```yaml\nmat_id: MAT:0002\nrecord_name: Helium\nsymbol: He\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 2\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0002\nlegacy_name: Helium\nreference_implementation: MAT:0001\n```\n\n# 0. Record Navigation\n\n## MAT Reference\n\n```text\nMAT:0000\n```\n\n## Previous Primary Record\n\n```text\nMAT:0001\n0001-Hydrogen-H\n```\n\n## Current Record\n\n```text\nMAT:0002\n0002-Helium-He\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                      |       Value | Unit / Status |\n| ----------------------------- | ----------: | ------------- |\n| MAT ID                        |    MAT:0002 | —             |\n| Element                       |      Helium | —             |\n| Symbol                        |          He | —             |\n| Atomic number                 |           2 | dimensionless |\n| Proton count                  |           2 | proton        |\n| Neutral electron count        |           2 | electron      |\n| Period                        |           1 | —             |\n| Group                         |          18 | noble gas     |\n| Block                         |           s | —             |\n| Ground electron configuration |         1s² | —             |\n| Ground electronic level       | \\(^{1}S_0\\) | —             |\n| Standard atomic weight        | 4.002602(2) | —             |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000019\n```\n\n---\n\n# 2. Closed-Shell Ground State\n\nNeutral ground-state helium has:\n\n$$\n1s^2\n$$\n\nwith ground level:\n\n$$\n{}^1S_0\n$$\n\nThe two electrons occupy the 1s orbital with opposite spin projection in the ground-state configuration.\n\nThis produces a closed electronic shell.\n\nHelium is therefore chemically much less reactive under ordinary conditions than Hydrogen.\n\nThis does **not** mean that Helium can never participate in:\n\n* ions;\n* excited states;\n* excimers;\n* molecular ions;\n* plasma states;\n* high-pressure interactions.\n\n---\n\n# 3. First Ionisation\n\nFor neutral helium:\n\n$$\nHe\n\\rightarrow\nHe^+\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I1}\n=\n24.587389011\\ \\mathrm{eV}\n$$\n\nwith uncertainty:\n\n$$\n2.5\\times10^{-8}\\ \\mathrm{eV}\n$$\n\nCanonical ion:\n\n```text\nMAT:0002:ION:He+1\n```\n\n---\n\n# 4. Second Ionisation\n\nFor singly ionized helium:\n\n$$\nHe^+\n\\rightarrow\nHe^{2+}\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I2}\n=\n54.4177655282\\ \\mathrm{eV}\n$$\n\nCanonical fully stripped ion:\n\n```text\nMAT:0002:ION:He+2\n```\n\n---\n\n# 5. Charge-State Family\n\nCanonical primary charge states:\n\n```text\nMAT:0002:ATOM:He\nMAT:0002:ION:He+1\nMAT:0002:ION:He+2\n```\n\nThey correspond conceptually to:\n\n```text\nHe\nHe+\nHe2+\n```\n\nThe fully ionized ⁴He nucleus is also an alpha particle:\n\n$$\n{}^4He^{2+}\n\\equiv\n\\alpha\n$$\n\nwhen nuclear identity is explicitly ⁴He.\n\nThe generic identifier:\n\n```text\nMAT:0002:ION:He+2\n```\n\nmust therefore retain isotope identity when nuclear properties matter.\n\n---\n\n# 6. Neutral Helium Is Monatomic\n\nUnlike Hydrogen under ordinary conditions, neutral elemental Helium is predominantly monatomic.\n\nTherefore the ordinary material manifestation is:\n\n$$\nHe\n$$\n\nrather than a stable neutral:\n\n$$\nHe_2\n$$\n\nground-state molecule analogous to H₂.\n\nHowever specialized species can exist, including:\n\n```text\nHe2+\nexcited helium dimers / excimers\ncluster ions\nhelium plasma\n```\n\nThese are dedicated child states and must not be confused with ordinary ground-state gaseous Helium.\n\n---\n\n# 7. Isotope Family\n\nCurrent MAT evaluated isotope branch:\n\n$$\n{}^3He\n$$\n\nthrough:\n\n$$\n{}^{10}He\n$$\n\nThe proton number remains:\n\n$$\nZ=2\n$$\n\nwhile neutron number changes:\n\n$$\nN=A-2\n$$\n\n---\n\n# 8. Helium-3 — ³He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n3.0160293201(25)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n\\frac12^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.00000134(3)\n$$\n\nThis number is not universal for every terrestrial or extraterrestrial helium source.\n\n³He has half-integer nuclear spin and is a **fermionic isotope**.\n\nThis distinction becomes critically important at ultralow temperatures.\n\n---\n\n# 9. Helium-4 — ⁴He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-4\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n4.00260325413(6)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n0^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.99999866(3)\n$$\n\n⁴He is a **bosonic isotope** because the nucleus has integer spin.\n\nIts low-temperature collective behavior is therefore fundamentally different from ³He.\n\n---\n\n# 10. Stable-Isotope Quantum Statistics\n\nThe contrast:\n\n$$\n{}^3He\n$$\n\nversus:\n\n$$\n{}^4He\n$$\n\nis one of MAT's clearest examples of isotope identity producing emergent macroscopic differences.\n\n### ³He\n\n```text\nnuclear spin: 1/2\nstatistics: fermionic\n```\n\n### ⁴He\n\n```text\nnuclear spin: 0\nstatistics: bosonic\n```\n\nThis difference contributes directly to their very different quantum-fluid behavior.\n\nThe element name alone:\n\n```text\nHelium\n```\n\nis therefore insufficient to specify all cryogenic properties.\n\n---\n\n# 11. Helium-5 — ⁵He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-5\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n5.012057(21)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n602\\pm22\\ \\mathrm{ys}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{ys}=10^{-24}\\ \\mathrm s\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 12. Helium-6 — ⁶He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-6\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n6.018885891(57)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nRADIOACTIVE\n```\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n806.92\\pm0.24\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay class:\n\n```text\nBETA-MINUS\n```\n\nCanonical daughter family:\n\n```text\nMAT:0003:ISO:Li-6\n```\n\nThe ⁶He nucleus is also an important neutron-rich nuclear-structure research system.\n\nDetailed halo-nucleus properties belong to its child nuclear record rather than the parent element summary.\n\n---\n\n# 13. Helium-7 — ⁷He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-7\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 5\n```\n\nRelative atomic mass:\n\n$$\n7.0279907(81)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n2.51\\pm0.07\\ \\mathrm{zs}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{zs}=10^{-21}\\ \\mathrm s\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac32\\right)^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 14. Helium-8 — ⁸He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-8\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 6\n```\n\nRelative atomic mass:\n\n$$\n8.033934390(95)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n119.5\\pm1.5\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nDominant decay family:\n\n```text\nBETA-MINUS\n```\n\nwith evaluated delayed-particle branches also present.\n\nThese branches should be represented explicitly in the dedicated isotope object.\n\n---\n\n# 15. Helium-9 — ⁹He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-9\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 7\n```\n\nRelative atomic mass:\n\n$$\n9.043946(50)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n\\approx\n2.5\\pm2.3\\ \\mathrm{zs}\n$$\n\nAdopted spin/parity:\n\n$$\n\\frac12^{(+)}\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\nLarge relative lifetime uncertainty must remain visible.\n\n---\n\n# 16. Helium-10 — ¹⁰He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-10\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 8\n```\n\nRelative atomic mass:\n\n$$\n10.05279(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n260\\pm40\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal evaluated decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n# 17. Nuclear-State Summary\n\n| Isotope |  p |  n | Stability / Half-Life | Spin-Parity |\n| ------- | -: | -: | --------------------- | ----------- |\n| ³He     |  2 |  1 | STABLE                | 1/2+        |\n| ⁴He     |  2 |  2 | STABLE                | 0+          |\n| ⁵He     |  2 |  3 | 602 ± 22 ys           | 3/2−        |\n| ⁶He     |  2 |  4 | 806.92 ± 0.24 ms      | 0+          |\n| ⁷He     |  2 |  5 | 2.51 ± 0.07 zs        | (3/2)−      |\n| ⁸He     |  2 |  6 | 119.5 ± 1.5 ms        | 0+          |\n| ⁹He     |  2 |  7 | 2.5 ± 2.3 zs          | 1/2(+)      |\n| ¹⁰He    |  2 |  8 | 260 ± 40 ys           | 0+          |\n\nStable isotopes use:\n\n```text\nhalf_life: NOT-APPLICABLE\n```\n\nrather than:\n\n```text\ninfinity\n```\n\n---\n\n# 18. Atomic Excitation\n\nSelected neutral-helium excitation energies include approximately:\n\n| Transition Family | Excitation Energy |\n| ----------------- | ----------------: |\n| 1s² → 1s2p        |        21.2180 eV |\n| 1s² → 1s3p        |        23.0870 eV |\n| 1s² → 1s4p        |        23.7421 eV |\n| 1s² → 1s5p        |        24.0458 eV |\n| 1s² → 1s6p        |        24.2110 eV |\n\nThe excitation series approaches the first ionization threshold.\n\nThese simplified transition labels do not replace full singlet/triplet and fine-structure-resolved spectroscopy.\n\n---\n\n# 19. Singlet and Triplet Electronic Structure\n\nHelium's two-electron system introduces behavior absent from one-electron Hydrogen.\n\nElectronic states may be classified into:\n\n```text\nSINGLET\nTRIPLET\n```\n\nspin families.\n\nThis provides an important MAT progression:\n\n```text\nHydrogen\n→ one-electron benchmark\n\nHelium\n→ interacting two-electron benchmark\n```\n\nElectron-electron interaction means Helium is no longer exactly described by the simplest one-electron Coulomb solution.\n\nApproximation and numerical methods become much more important.\n\n---\n\n# 20. Quantum-Mechanical Importance\n\nHelium is a fundamental test system for:\n\n* electron correlation;\n* variational methods;\n* perturbation theory;\n* quantum electrodynamics;\n* precision spectroscopy;\n* many-body approximations.\n\nThe basic Hamiltonian includes:\n\n```text\nelectron-nucleus attraction\n+\nelectron-nucleus attraction\n+\nelectron-electron repulsion\n```\n\nThe electron-electron term is what prevents simple separation into two completely independent Hydrogen-like electrons.\n\n---\n\n# 21. Ordinary Chemical State\n\nUnder ordinary conditions Helium is a noble gas with very low chemical reactivity.\n\nCanonical ordinary state:\n\n```text\nmonatomic neutral He\n```\n\nHelium therefore differs fundamentally from Hydrogen's ordinary molecular state:\n\n```text\nH2\n```\n\nOrdinary bulk elemental Helium is monatomic.\n\nHowever, neutral \\(^{4}He_2\\) does possess an extraordinarily weak\nvan-der-Waals bound state.\n\nTherefore:\n\n\\[\n\\boxed{\n\\text{He}_2\\text{ exists as a fragile quantum dimer}\n\\neq\n\\text{ordinary bulk Helium is molecular}\n}\n\\]\n\nThis differs fundamentally from Hydrogen, whose ordinary elemental\ngas is predominantly \\(H_2\\).\n\n---\n\n# 22. Excited Molecular and Ionic Helium\n\nSpecialized Helium species can nevertheless include:\n\n```text\nHe2+\nexcited He2*\ncluster ions\nexcited atomic He*\n```\n\nThese states matter in:\n\n* electrical discharges;\n* plasma;\n* spectroscopy;\n* excimer physics;\n* ion chemistry.\n\nThey must remain separate from the ordinary neutral atomic state.\n\n---\n\n# 23. Cryogenic ⁴He Branch\n\nCanonical branch:\n\n```text\nMAT:0002:ISO:He-4\n    ↓\nMAT:0002:PHASE:He4-LIQUID\n```\n\nImportant reference values include:\n\n### Normal boiling point\n\n$$\nT_b\n=\n4.2221\\ \\mathrm K\n$$\n\nat:\n\n$$\nP=101325\\ \\mathrm{Pa}\n$$\n\n### Critical point\n\n$$\nT_c\n=\n5.1953\\ \\mathrm K\n$$\n\n$$\nP_c\n=\n227460\\ \\mathrm{Pa}\n$$\n\n### Lower lambda point\n\n$$\nT_\\lambda\n=\n2.1768\\ \\mathrm K\n$$\n\nThe lambda transition separates:\n\n```text\nHe I\nnormal liquid\n```\n\nfrom:\n\n```text\nHe II\nsuperfluid liquid\n```\n\nunder the specified pressure/state conditions.\n\n---\n\n# 24. He I and He II\n\nFor ⁴He:\n\n```text\nHe I\n```\n\ndenotes the normal liquid phase above the lambda transition within the relevant liquid region.\n\n```text\nHe II\n```\n\ndenotes the superfluid phase below the lambda transition.\n\nThis is an emergent collective quantum state.\n\nIt is not a change in chemical element identity.\n\n$$\n{}^4He\n$$\n\nremains ⁴He on both sides of the phase transition.\n\n---\n\n# 25. Helium-3 Quantum Fluid\n\nLiquid ³He also develops superfluid phases, but at temperatures far below the ordinary ⁴He lambda transition.\n\nThe exact transition depends on:\n\n* pressure;\n* phase;\n* magnetic conditions.\n\nTherefore MAT does **not** assign one universal:\n\n```text\nhelium_superfluid_temperature\n```\n\nproperty.\n\nInstead:\n\n```text\n3He superfluid state\n```\n\nand:\n\n```text\n4He He-II state\n```\n\nare separate phase records.\n\n---\n\n# 26. Solidification\n\nHelium has an unusual phase diagram.\n\nAt low pressure, ordinary cooling does not produce the conventional liquid-solid triple-point sequence found in many substances.\n\nSolid Helium requires elevated pressure.\n\nMAT will therefore store:\n\n```text\nmelting pressure\ntemperature\nisotope\nphase\n```\n\ntogether.\n\nA generic:\n\n```text\nhelium melting point\n```\n\nwithout pressure is scientifically incomplete.\n\n---\n\n# 27. Frequency and Spectral Structure\n\nHelium has many distinct spectral mechanisms.\n\nRelevant categories include:\n\n```text\natomic electronic transitions\nfine structure\nmetastable-state transitions\nisotope shifts\nhyperfine structure in 3He\nplasma emission\nion spectra\nexcimer spectra\nNMR for 3He\ncollective excitations in liquid helium\n```\n\nThere is no universal scalar:\n\n```text\nhelium_frequency\n```\n\n---\n\n# 28. Magnetic-State Distinction\n\nGround-state ⁴He has:\n\n$$\nI=0\n$$\n\nwhile ³He has:\n\n$$\nI=\\frac12\n$$\n\nTherefore magnetic-resonance and nuclear-spin behavior are isotope-dependent.\n\nHelium is **not** represented as a conventional permanent-magnet material.\n\nEngineered magnetization fields such as:\n\n```text\naxial\nradial\nmultipole permanent magnetisation\n```\n\nare:\n\n```text\nNOT-APPLICABLE\n```\n\nto free bulk Helium as a conventional permanent magnetic solid.\n\n---\n\n# 29. Plasma Branch\n\nCanonical family:\n\n```text\nMAT:0002:PLASMA:He\n```\n\nPossible species include:\n\n```text\nHe\nHe*\nHe+\nHe2+\nelectrons\nmolecular/cluster ions\n```\n\nA Helium plasma record requires:\n\n```yaml\nelectron_temperature:\nion_temperature:\nelectron_density:\nion_density:\nneutral_density:\nspecies_distribution:\npressure:\nelectric_field:\nmagnetic_field:\nfrequency:\ntime:\n```\n\n---\n\n# 30. Material Interaction\n\nHelium can interact with materials through:\n\n* implantation;\n* diffusion;\n* trapping;\n* bubble formation;\n* irradiation damage coupling;\n* leak/permeation behavior;\n* cryogenic thermal contact.\n\nThese are host-material relationships.\n\nThey are not intrinsic mechanical properties of elemental Helium.\n\n---\n\n# 31. Nuclear Relationship to Hydrogen\n\nThe Hydrogen record already contains:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nTherefore:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nis the daughter nucleus of tritium beta decay.\n\nLikewise the D-T fusion branch produces:\n\n$$\n{}^4He\n$$\n\nplus a neutron.\n\nThese forward relationships should now be changed from:\n\n```text\nRESERVED-PENDING-RECORD\n```\n\nto:\n\n```text\nRESOLVED\n```\n\nonce the corresponding Helium isotope child files exist.\n\n---\n\n# 32. Applications\n\nMajor Helium application relationships include:\n\n```text\nCRYOGENICS\nSUPERCONDUCTING MAGNET COOLING\nLOW-TEMPERATURE PHYSICS\nLEAK DETECTION\nPRESSURIZATION / PURGING\nINERT ATMOSPHERES\nSEMICONDUCTOR PROCESSING\nSHIELDING GAS\nBALLOONS / LIFT\nMASS SPECTROMETRY\nGAS CHROMATOGRAPHY\nPLASMA / SPECTROSCOPY\nNUCLEAR SCIENCE\nNEUTRON DETECTION WITH 3He\nQUANTUM RESEARCH\n```\n\nEach application should eventually specify the relevant isotope and material state.\n\n---\n\n# 33. Safety\n\nHelium is not ordinarily a flammable gas.\n\nImportant hazards are primarily physical and state-dependent:\n\n```text\nCOMPRESSED-GAS HAZARD\nCRYOGENIC HAZARD\nOXYGEN-DISPLACEMENT / ASPHYXIATION\nPRESSURE BUILDUP\nMATERIAL BRITTLENESS AT CRYOGENIC TEMPERATURE\n```\n\nCryogenic Helium also requires consideration of very high expansion from liquid to gas and appropriate ventilation/pressure-relief design.\n\n³He and ⁴He are stable and nonradioactive.\n\nShort-lived artificial Helium isotopes require isotope-specific nuclear/radiological treatment.\n\n---\n\n# 34. MAT State Cloud\n\nThe Helium parent should eventually resolve to a state network such as:\n\n$$\n\\{\n{}^3He,\n{}^4He,\n{}^5He,\n{}^6He,\n{}^7He,\n{}^8He,\n{}^9He,\n{}^{10}He,\nHe,\nHe^+,\nHe^{2+},\nHe^*,\nHe_2^+,\nHe_2^*,\nHe_{\\rm I},\nHe_{\\rm II},\n{}^3He_{\\rm liquid},\n{}^3He_{\\rm superfluid},\nHe_{\\rm solid},\nHe_{\\rm plasma},\n\\dots\n\\}\n$$\n\nThis demonstrates again:\n\n$$\n\\boxed{\n\\text{element identity}\n\\neq\n\\text{complete state identity}\n}\n$$\n\n---\n\n# 35. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- ASSET-ID: MAT:0002:FIG:V01:001 -->\n<!-- DESCRIPTION: Physical manifestation of liquid/gaseous Helium -->\n\n<!-- MAT-VISUAL: V02 -->\n<!-- ASSET-ID: MAT:0002:FIG:V02:001 -->\n<!-- DESCRIPTION: Conventional Helium atomic identity -->\n\n<!-- MAT-VISUAL: V04 -->\n<!-- ASSET-ID: MAT:0002:FIG:V04:001 -->\n<!-- DESCRIPTION: Two-electron Helium ground-state probability representation -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- ASSET-ID: MAT:0002:FIG:V05:001 -->\n<!-- DESCRIPTION: Helium isotope map 3He through 10He -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- ASSET-ID: MAT:0002:FIG:V06:001 -->\n<!-- DESCRIPTION: Mechanism-resolved Helium spectral fingerprint -->\n\n<!-- MAT-VISUAL: V10 -->\n<!-- ASSET-ID: MAT:0002:FIG:V10:001 -->\n<!-- DESCRIPTION: He-I / He-II / cryogenic phase visualization -->\n```\n\n---\n\n# 36. Governing Principle Families\n\n```yaml\ngoverned_by:\n\n  atomic_structure:\n    - MAT-QM-003\n    - MAT-QM-006\n    - MAT-QM-010\n    - MAT-QM-011\n    - MAT-QM-026\n\n  electron_correlation:\n    - MAT-QM-034\n    - MAT-QM-035\n\n  ionization:\n    - MAT-QM-016\n\n  isotope_nuclear_state:\n    - MAT-NUC-001\n    - MAT-NUC-002\n    - MAT-NUC-003\n    - MAT-NUC-006\n    - MAT-NUC-007\n\n  phase_behavior:\n    - MAT-THERMO-010\n    - MAT-THERMO-012\n    - MAT-THERMO-023\n    - MAT-THERMO-024\n\n  quantum_statistics:\n    - MAT-QM-011\n    - MAT-QM-030\n    - MAT-QM-031\n\n  field_response:\n    - MAT-PHYS-021\n    - MAT-QM-019\n```\n\n---\n\n# 37. Evidence Summary\n\n```yaml\natomic_identity:\n  evidence_type: REPLICATED\n  confidence: A\n\nionization_energies:\n  evidence_type: EVALUATED\n  confidence: A\n\nstable_isotope_masses:\n  evidence_type: EVALUATED\n  confidence: A\n\nshort_lived_isotope_states:\n  evidence_type: EVALUATED-NUCLEAR-DATA\n  confidence: A-B\n\nhelium4_thermophysics:\n  evidence_type: EVALUATED\n  confidence: A\n\nhelium3_quantum_fluid:\n  evidence_type: ESTABLISHED-EXPERIMENTAL-FIELD\n  confidence: A\n\nhigh_pressure_and_extreme_states:\n  evidence_type: MIXED\n  confidence: VARIABLE\n```\n\n---\n\n# 38. Migration Status\n\n```yaml\nlegacy_record: G0002\n\nmigration:\n  identity: CORE-COMPLETE\n  electronic: CORE-COMPLETE\n  ionization: CORE-COMPLETE\n  isotope_branch: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  quantum_fluid: CORE-COMPLETE\n  cryogenic: CORE-COMPLETE\n  spectroscopy: PARTIAL\n  chemistry: CORE-COMPLETE\n  plasma: CORE-COMPLETE\n  material_interactions: CORE-COMPLETE\n  applications: CORE-COMPLETE\n  safety: CORE-COMPLETE\n\nremaining:\n  - full spectral dataset\n  - detailed He3 thermophysical data\n  - detailed He4 thermophysical data\n  - phase diagrams\n  - molecular ion children\n  - excimer children\n  - calculations\n  - experiment registry\n  - relationship registry\n  - people and intellectual lineage\n  - visual manifest\n  - graph manifest\n  - table manifest\n  - legacy G0002 audit\n```\n\n---\n\n# 39. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_registry: \"PASS\"\n  relationship_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n",
-  "bodyHash": "4a01d8bab9d51d2cacf1c06d167be3c8d6200f1e6400e56ee0a4f8a0b075ed26",
+  "body": "# 0002 — Helium — He\n\n```yaml\nmat_id: MAT:0002\nrecord_name: Helium\nsymbol: He\nrecord_class: CHEMICAL_ELEMENT\natomic_number: 2\nparent_id: MAT:0000\nschema_version: 1.0.0\nrecord_version: 1.0.0\nstatus: RESEARCHED\nlegacy_id: G0002\nlegacy_name: Helium\nreference_implementation: MAT:0001\n```\n\n# 0. Record Navigation\n\n## MAT Reference\n\n```text\nMAT:0000\n```\n\n## Previous Primary Record\n\n```text\nMAT:0001\n0001-Hydrogen-H\n```\n\n## Current Record\n\n```text\nMAT:0002\n0002-Helium-He\n```\n\n---\n\n# 1. Elemental Identity\n\n| Property                      |       Value | Unit / Status |\n| ----------------------------- | ----------: | ------------- |\n| MAT ID                        |    MAT:0002 | —             |\n| Element                       |      Helium | —             |\n| Symbol                        |          He | —             |\n| Atomic number                 |           2 | dimensionless |\n| Proton count                  |           2 | proton        |\n| Neutral electron count        |           2 | electron      |\n| Period                        |           1 | —             |\n| Group                         |          18 | noble gas     |\n| Block                         |           s | —             |\n| Ground electron configuration |         1s² | —             |\n| Ground electronic level       | \\(^{1}S_0\\) | —             |\n| Standard atomic weight        | 4.002602(2) | —             |\n\nPrimary sources:\n\n```text\nSRC-000005\nSRC-000019\n```\n\n---\n\n# 2. Closed-Shell Ground State\n\nNeutral ground-state helium has:\n\n$$\n1s^2\n$$\n\nwith ground level:\n\n$$\n{}^1S_0\n$$\n\nThe two electrons occupy the 1s orbital with opposite spin projection in the ground-state configuration.\n\nThis produces a closed electronic shell.\n\nHelium is therefore chemically much less reactive under ordinary conditions than Hydrogen.\n\nThis does **not** mean that Helium can never participate in:\n\n* ions;\n* excited states;\n* excimers;\n* molecular ions;\n* plasma states;\n* high-pressure interactions.\n\n---\n\n# 3. First Ionisation\n\nFor neutral helium:\n\n$$\nHe\n\\rightarrow\nHe^+\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I1}\n=\n24.587389011\\ \\mathrm{eV}\n$$\n\nwith uncertainty:\n\n$$\n2.5\\times10^{-8}\\ \\mathrm{eV}\n$$\n\nCanonical ion:\n\n```text\nMAT:0002:ION:He+1\n```\n\n---\n\n# 4. Second Ionisation\n\nFor singly ionized helium:\n\n$$\nHe^+\n\\rightarrow\nHe^{2+}\n+\ne^-\n$$\n\nNIST evaluated ionization energy:\n\n$$\nE_{I2}\n=\n54.4177655282\\ \\mathrm{eV}\n$$\n\nCanonical fully stripped ion:\n\n```text\nMAT:0002:ION:He+2\n```\n\n---\n\n# 5. Charge-State Family\n\nCanonical primary charge states:\n\n```text\nMAT:0002:ATOM:He\nMAT:0002:ION:He+1\nMAT:0002:ION:He+2\n```\n\nThey correspond conceptually to:\n\n```text\nHe\nHe+\nHe2+\n```\n\nThe fully ionized ⁴He nucleus is also an alpha particle:\n\n$$\n{}^4He^{2+}\n\\equiv\n\\alpha\n$$\n\nwhen nuclear identity is explicitly ⁴He.\n\nThe generic identifier:\n\n```text\nMAT:0002:ION:He+2\n```\n\nmust therefore retain isotope identity when nuclear properties matter.\n\n---\n\n# 6. Neutral Helium Is Monatomic\n\nUnlike Hydrogen under ordinary conditions, neutral elemental Helium is predominantly monatomic.\n\nTherefore the ordinary material manifestation is:\n\n$$\nHe\n$$\n\nrather than a stable neutral:\n\n$$\nHe_2\n$$\n\nground-state molecule analogous to H₂.\n\nHowever specialized species can exist, including:\n\n```text\nHe2+\nexcited helium dimers / excimers\ncluster ions\nhelium plasma\n```\n\nThese are dedicated child states and must not be confused with ordinary ground-state gaseous Helium.\n\n---\n\n# 7. Isotope Family\n\nCurrent MAT evaluated isotope branch:\n\n$$\n{}^3He\n$$\n\nthrough:\n\n$$\n{}^{10}He\n$$\n\nThe proton number remains:\n\n$$\nZ=2\n$$\n\nwhile neutron number changes:\n\n$$\nN=A-2\n$$\n\n---\n\n# 8. Helium-3 — ³He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 1\n```\n\nRelative atomic mass:\n\n$$\n3.0160293201(25)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n\\frac12^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.00000134(3)\n$$\n\nThis number is not universal for every terrestrial or extraterrestrial helium source.\n\n³He has half-integer nuclear spin and is a **fermionic isotope**.\n\nThis distinction becomes critically important at ultralow temperatures.\n\n---\n\n# 9. Helium-4 — ⁴He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-4\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 2\n```\n\nRelative atomic mass:\n\n$$\n4.00260325413(6)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nSTABLE\n```\n\nNuclear spin/parity:\n\n$$\n0^+\n$$\n\nRepresentative isotopic composition:\n\n$$\n0.99999866(3)\n$$\n\n⁴He is a **bosonic isotope** because the nucleus has integer spin.\n\nIts low-temperature collective behavior is therefore fundamentally different from ³He.\n\n---\n\n# 10. Stable-Isotope Quantum Statistics\n\nThe contrast:\n\n$$\n{}^3He\n$$\n\nversus:\n\n$$\n{}^4He\n$$\n\nis one of MAT's clearest examples of isotope identity producing emergent macroscopic differences.\n\n### ³He\n\n```text\nnuclear spin: 1/2\nstatistics: fermionic\n```\n\n### ⁴He\n\n```text\nnuclear spin: 0\nstatistics: bosonic\n```\n\nThis difference contributes directly to their very different quantum-fluid behavior.\n\nThe element name alone:\n\n```text\nHelium\n```\n\nis therefore insufficient to specify all cryogenic properties.\n\n---\n\n# 11. Helium-5 — ⁵He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-5\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 3\n```\n\nRelative atomic mass:\n\n$$\n5.012057(21)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n602\\pm22\\ \\mathrm{ys}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{ys}=10^{-24}\\ \\mathrm s\n$$\n\nSpin/parity:\n\n$$\n\\frac32^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 12. Helium-6 — ⁶He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-6\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 4\n```\n\nRelative atomic mass:\n\n$$\n6.018885891(57)\\ \\mathrm u\n$$\n\nStatus:\n\n```text\nRADIOACTIVE\n```\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n806.92\\pm0.24\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal decay class:\n\n```text\nBETA-MINUS\n```\n\nCanonical daughter family:\n\n```text\nMAT:0003:ISO:Li-6\n```\n\nThe ⁶He nucleus is also an important neutron-rich nuclear-structure research system.\n\nDetailed halo-nucleus properties belong to its child nuclear record rather than the parent element summary.\n\n---\n\n# 13. Helium-7 — ⁷He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-7\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 5\n```\n\nRelative atomic mass:\n\n$$\n7.0279907(81)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n2.51\\pm0.07\\ \\mathrm{zs}\n$$\n\nwhere:\n\n$$\n1\\ \\mathrm{zs}=10^{-21}\\ \\mathrm s\n$$\n\nAdopted spin/parity:\n\n$$\n\\left(\\frac32\\right)^-\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\n---\n\n# 14. Helium-8 — ⁸He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-8\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 6\n```\n\nRelative atomic mass:\n\n$$\n8.033934390(95)\\ \\mathrm u\n$$\n\nEvaluated half-life:\n\n$$\nt_{1/2}\n=\n119.5\\pm1.5\\ \\mathrm{ms}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nDominant decay family:\n\n```text\nBETA-MINUS\n```\n\nwith evaluated delayed-particle branches also present.\n\nThese branches should be represented explicitly in the dedicated isotope object.\n\n---\n\n# 15. Helium-9 — ⁹He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-9\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 7\n```\n\nRelative atomic mass:\n\n$$\n9.043946(50)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n\\approx\n2.5\\pm2.3\\ \\mathrm{zs}\n$$\n\nAdopted spin/parity:\n\n$$\n\\frac12^{(+)}\n$$\n\nPrincipal decay:\n\n```text\nNEUTRON EMISSION\n```\n\nLarge relative lifetime uncertainty must remain visible.\n\n---\n\n# 16. Helium-10 — ¹⁰He\n\nCanonical ID:\n\n```text\nMAT:0002:ISO:He-10\n```\n\nComposition:\n\n```text\nprotons: 2\nneutrons: 8\n```\n\nRelative atomic mass:\n\n$$\n10.05279(11)\\ \\mathrm u\n$$\n\nEvaluated lifetime:\n\n$$\nt_{1/2}\n=\n260\\pm40\\ \\mathrm{ys}\n$$\n\nSpin/parity:\n\n$$\n0^+\n$$\n\nPrincipal evaluated decay:\n\n```text\nTWO-NEUTRON EMISSION\n```\n\nStatus:\n\n```text\nEXTREMELY-SHORT-LIVED\n```\n\n---\n\n# 17. Nuclear-State Summary\n\n| Isotope |  p |  n | Stability / Half-Life | Spin-Parity |\n| ------- | -: | -: | --------------------- | ----------- |\n| ³He     |  2 |  1 | STABLE                | 1/2+        |\n| ⁴He     |  2 |  2 | STABLE                | 0+          |\n| ⁵He     |  2 |  3 | 602 ± 22 ys           | 3/2−        |\n| ⁶He     |  2 |  4 | 806.92 ± 0.24 ms      | 0+          |\n| ⁷He     |  2 |  5 | 2.51 ± 0.07 zs        | (3/2)−      |\n| ⁸He     |  2 |  6 | 119.5 ± 1.5 ms        | 0+          |\n| ⁹He     |  2 |  7 | 2.5 ± 2.3 zs          | 1/2(+)      |\n| ¹⁰He    |  2 |  8 | 260 ± 40 ys           | 0+          |\n\nStable isotopes use:\n\n```text\nhalf_life: NOT-APPLICABLE\n```\n\nrather than:\n\n```text\ninfinity\n```\n\n---\n\n# 18. Atomic Excitation\n\nSelected neutral-helium excitation energies include approximately:\n\n| Transition Family | Excitation Energy |\n| ----------------- | ----------------: |\n| 1s² → 1s2p        |        21.2180 eV |\n| 1s² → 1s3p        |        23.0870 eV |\n| 1s² → 1s4p        |        23.7421 eV |\n| 1s² → 1s5p        |        24.0458 eV |\n| 1s² → 1s6p        |        24.2110 eV |\n\nThe excitation series approaches the first ionization threshold.\n\nThese simplified transition labels do not replace full singlet/triplet and fine-structure-resolved spectroscopy.\n\n---\n\n# 19. Singlet and Triplet Electronic Structure\n\nHelium's two-electron system introduces behavior absent from one-electron Hydrogen.\n\nElectronic states may be classified into:\n\n```text\nSINGLET\nTRIPLET\n```\n\nspin families.\n\nThis provides an important MAT progression:\n\n```text\nHydrogen\n→ one-electron benchmark\n\nHelium\n→ interacting two-electron benchmark\n```\n\nElectron-electron interaction means Helium is no longer exactly described by the simplest one-electron Coulomb solution.\n\nApproximation and numerical methods become much more important.\n\n---\n\n# 20. Quantum-Mechanical Importance\n\nHelium is a fundamental test system for:\n\n* electron correlation;\n* variational methods;\n* perturbation theory;\n* quantum electrodynamics;\n* precision spectroscopy;\n* many-body approximations.\n\nThe basic Hamiltonian includes:\n\n```text\nelectron-nucleus attraction\n+\nelectron-nucleus attraction\n+\nelectron-electron repulsion\n```\n\nThe electron-electron term is what prevents simple separation into two completely independent Hydrogen-like electrons.\n\n---\n\n# 21. Ordinary Chemical State\n\nUnder ordinary conditions Helium is a noble gas with very low chemical reactivity.\n\nCanonical ordinary state:\n\n```text\nmonatomic neutral He\n```\n\nHelium therefore differs fundamentally from Hydrogen's ordinary molecular state:\n\n```text\nH2\n```\n\nOrdinary bulk elemental Helium is monatomic.\n\nHowever, neutral \\(^{4}He_2\\) does possess an extraordinarily weak\nvan-der-Waals bound state.\n\nTherefore:\n\n\\[\n\\boxed{\n\\text{He}_2\\text{ exists as a fragile quantum dimer}\n\\neq\n\\text{ordinary bulk Helium is molecular}\n}\n\\]\n\nThis differs fundamentally from Hydrogen, whose ordinary elemental\ngas is predominantly \\(H_2\\).\n\n---\n\n# 22. Excited Molecular and Ionic Helium\n\nSpecialized Helium species can nevertheless include:\n\n```text\nHe2+\nexcited He2*\ncluster ions\nexcited atomic He*\n```\n\nThese states matter in:\n\n* electrical discharges;\n* plasma;\n* spectroscopy;\n* excimer physics;\n* ion chemistry.\n\nThey must remain separate from the ordinary neutral atomic state.\n\n---\n\n# 23. Cryogenic ⁴He Branch\n\nCanonical branch:\n\n```text\nMAT:0002:ISO:He-4\n    ↓\nMAT:0002:PHASE:He4-LIQUID\n```\n\nImportant reference values include:\n\n### Normal boiling point\n\n$$\nT_b\n=\n4.2221\\ \\mathrm K\n$$\n\nat:\n\n$$\nP=101325\\ \\mathrm{Pa}\n$$\n\n### Critical point\n\n$$\nT_c\n=\n5.1953\\ \\mathrm K\n$$\n\n$$\nP_c\n=\n227460\\ \\mathrm{Pa}\n$$\n\n### Lower lambda point\n\n$$\nT_\\lambda\n=\n2.1768\\ \\mathrm K\n$$\n\nThe lambda transition separates:\n\n```text\nHe I\nnormal liquid\n```\n\nfrom:\n\n```text\nHe II\nsuperfluid liquid\n```\n\nunder the specified pressure/state conditions.\n\n---\n\n# 24. He I and He II\n\nFor ⁴He:\n\n```text\nHe I\n```\n\ndenotes the normal liquid phase above the lambda transition within the relevant liquid region.\n\n```text\nHe II\n```\n\ndenotes the superfluid phase below the lambda transition.\n\nThis is an emergent collective quantum state.\n\nIt is not a change in chemical element identity.\n\n$$\n{}^4He\n$$\n\nremains ⁴He on both sides of the phase transition.\n\n---\n\n# 25. Helium-3 Quantum Fluid\n\nLiquid ³He also develops superfluid phases, but at temperatures far below the ordinary ⁴He lambda transition.\n\nThe exact transition depends on:\n\n* pressure;\n* phase;\n* magnetic conditions.\n\nTherefore MAT does **not** assign one universal:\n\n```text\nhelium_superfluid_temperature\n```\n\nproperty.\n\nInstead:\n\n```text\n3He superfluid state\n```\n\nand:\n\n```text\n4He He-II state\n```\n\nare separate phase records.\n\n---\n\n# 26. Solidification\n\nHelium has an unusual phase diagram.\n\nAt low pressure, ordinary cooling does not produce the conventional liquid-solid triple-point sequence found in many substances.\n\nSolid Helium requires elevated pressure.\n\nMAT will therefore store:\n\n```text\nmelting pressure\ntemperature\nisotope\nphase\n```\n\ntogether.\n\nA generic:\n\n```text\nhelium melting point\n```\n\nwithout pressure is scientifically incomplete.\n\n---\n\n# 27. Frequency and Spectral Structure\n\nHelium has many distinct spectral mechanisms.\n\nRelevant categories include:\n\n```text\natomic electronic transitions\nfine structure\nmetastable-state transitions\nisotope shifts\nhyperfine structure in 3He\nplasma emission\nion spectra\nexcimer spectra\nNMR for 3He\ncollective excitations in liquid helium\n```\n\nThere is no universal scalar:\n\n```text\nhelium_frequency\n```\n\n---\n\n# 28. Magnetic-State Distinction\n\nGround-state ⁴He has:\n\n$$\nI=0\n$$\n\nwhile ³He has:\n\n$$\nI=\\frac12\n$$\n\nTherefore magnetic-resonance and nuclear-spin behavior are isotope-dependent.\n\nHelium is **not** represented as a conventional permanent-magnet material.\n\nEngineered magnetization fields such as:\n\n```text\naxial\nradial\nmultipole permanent magnetisation\n```\n\nare:\n\n```text\nNOT-APPLICABLE\n```\n\nto free bulk Helium as a conventional permanent magnetic solid.\n\n---\n\n# 29. Plasma Branch\n\nCanonical family:\n\n```text\nMAT:0002:PLASMA:He\n```\n\nPossible species include:\n\n```text\nHe\nHe*\nHe+\nHe2+\nelectrons\nmolecular/cluster ions\n```\n\nA Helium plasma record requires:\n\n```yaml\nelectron_temperature:\nion_temperature:\nelectron_density:\nion_density:\nneutral_density:\nspecies_distribution:\npressure:\nelectric_field:\nmagnetic_field:\nfrequency:\ntime:\n```\n\n---\n\n# 30. Material Interaction\n\nHelium can interact with materials through:\n\n* implantation;\n* diffusion;\n* trapping;\n* bubble formation;\n* irradiation damage coupling;\n* leak/permeation behavior;\n* cryogenic thermal contact.\n\nThese are host-material relationships.\n\nThey are not intrinsic mechanical properties of elemental Helium.\n\n---\n\n# 31. Nuclear Relationship to Hydrogen\n\nThe Hydrogen record already contains:\n\n$$\n{}^3H\n\\rightarrow\n{}^3He\n+\ne^-\n+\n\\bar{\\nu}_e\n$$\n\nTherefore:\n\n```text\nMAT:0002:ISO:He-3\n```\n\nis the daughter nucleus of tritium beta decay.\n\nLikewise the D-T fusion branch produces:\n\n$$\n{}^4He\n$$\n\nplus a neutron.\n\nThese forward relationships should now be changed from:\n\n```text\nRESERVED-PENDING-RECORD\n```\n\nto:\n\n```text\nRESOLVED\n```\n\nonce the corresponding Helium isotope child files exist.\n\n---\n\n# 32. Applications\n\nMajor Helium application relationships include:\n\n```text\nCRYOGENICS\nSUPERCONDUCTING MAGNET COOLING\nLOW-TEMPERATURE PHYSICS\nLEAK DETECTION\nPRESSURIZATION / PURGING\nINERT ATMOSPHERES\nSEMICONDUCTOR PROCESSING\nSHIELDING GAS\nBALLOONS / LIFT\nMASS SPECTROMETRY\nGAS CHROMATOGRAPHY\nPLASMA / SPECTROSCOPY\nNUCLEAR SCIENCE\nNEUTRON DETECTION WITH 3He\nQUANTUM RESEARCH\n```\n\nEach application should eventually specify the relevant isotope and material state.\n\n---\n\n# 33. Safety\n\nHelium is not ordinarily a flammable gas.\n\nImportant hazards are primarily physical and state-dependent:\n\n```text\nCOMPRESSED-GAS HAZARD\nCRYOGENIC HAZARD\nOXYGEN-DISPLACEMENT / ASPHYXIATION\nPRESSURE BUILDUP\nMATERIAL BRITTLENESS AT CRYOGENIC TEMPERATURE\n```\n\nCryogenic Helium also requires consideration of very high expansion from liquid to gas and appropriate ventilation/pressure-relief design.\n\n³He and ⁴He are stable and nonradioactive.\n\nShort-lived artificial Helium isotopes require isotope-specific nuclear/radiological treatment.\n\n---\n\n# 34. MAT State Cloud\n\nThe Helium parent should eventually resolve to a state network such as:\n\n$$\n\\{\n{}^3He,\n{}^4He,\n{}^5He,\n{}^6He,\n{}^7He,\n{}^8He,\n{}^9He,\n{}^{10}He,\nHe,\nHe^+,\nHe^{2+},\nHe^*,\nHe_2^+,\nHe_2^*,\nHe_{\\rm I},\nHe_{\\rm II},\n{}^3He_{\\rm liquid},\n{}^3He_{\\rm superfluid},\nHe_{\\rm solid},\nHe_{\\rm plasma},\n\\dots\n\\}\n$$\n\nThis demonstrates again:\n\n$$\n\\boxed{\n\\text{element identity}\n\\neq\n\\text{complete state identity}\n}\n$$\n\n---\n\n# 35. Initial Visual Placeholders\n\n```markdown\n<!-- MAT-VISUAL: V01 -->\n<!-- ASSET-ID: MAT:0002:FIG:V01:001 -->\n<!-- DESCRIPTION: Physical manifestation of liquid/gaseous Helium -->\n\n<!-- MAT-VISUAL: V02 -->\n<!-- ASSET-ID: MAT:0002:FIG:V02:001 -->\n<!-- DESCRIPTION: Conventional Helium atomic identity -->\n\n<!-- MAT-VISUAL: V04 -->\n<!-- ASSET-ID: MAT:0002:FIG:V04:001 -->\n<!-- DESCRIPTION: Two-electron Helium ground-state probability representation -->\n\n<!-- MAT-VISUAL: V05 -->\n<!-- ASSET-ID: MAT:0002:FIG:V05:001 -->\n<!-- DESCRIPTION: Helium isotope map 3He through 10He -->\n\n<!-- MAT-VISUAL: V06 -->\n<!-- ASSET-ID: MAT:0002:FIG:V06:001 -->\n<!-- DESCRIPTION: Mechanism-resolved Helium spectral fingerprint -->\n\n<!-- MAT-VISUAL: V10 -->\n<!-- ASSET-ID: MAT:0002:FIG:V10:001 -->\n<!-- DESCRIPTION: He-I / He-II / cryogenic phase visualization -->\n```\n\n---\n\n# 36. Governing Principle Families\n\n```yaml\ngoverned_by:\n\n  atomic_structure:\n    - MAT-QM-003\n    - MAT-QM-006\n    - MAT-QM-010\n    - MAT-QM-011\n    - MAT-QM-026\n\n  electron_correlation:\n    - MAT-QM-034\n    - MAT-QM-035\n\n  ionization:\n    - MAT-QM-016\n\n  isotope_nuclear_state:\n    - MAT-NUC-001\n    - MAT-NUC-002\n    - MAT-NUC-003\n    - MAT-NUC-006\n    - MAT-NUC-007\n\n  phase_behavior:\n    - MAT-THERMO-010\n    - MAT-THERMO-012\n    - MAT-THERMO-023\n    - MAT-THERMO-024\n\n  quantum_statistics:\n    - MAT-QM-011\n    - MAT-QM-030\n    - MAT-QM-031\n\n  field_response:\n    - MAT-PHYS-021\n    - MAT-QM-019\n```\n\n---\n\n# 37. Evidence Summary\n\n```yaml\natomic_identity:\n  evidence_type: REPLICATED\n  confidence: A\n\nionization_energies:\n  evidence_type: EVALUATED\n  confidence: A\n\nstable_isotope_masses:\n  evidence_type: EVALUATED\n  confidence: A\n\nshort_lived_isotope_states:\n  evidence_type: EVALUATED-NUCLEAR-DATA\n  confidence: A-B\n\nhelium4_thermophysics:\n  evidence_type: EVALUATED\n  confidence: A\n\nhelium3_quantum_fluid:\n  evidence_type: ESTABLISHED-EXPERIMENTAL-FIELD\n  confidence: A\n\nhigh_pressure_and_extreme_states:\n  evidence_type: MIXED\n  confidence: VARIABLE\n```\n\n---\n\n# 38. Migration Status\n\n```yaml\nlegacy_record: G0002\n\nmigration:\n  identity: CORE-COMPLETE\n  electronic: CORE-COMPLETE\n  ionization: CORE-COMPLETE\n  isotope_branch: CORE-COMPLETE\n  nuclear: CORE-COMPLETE\n  quantum_fluid: CORE-COMPLETE\n  cryogenic: CORE-COMPLETE\n  spectroscopy: PARTIAL\n  chemistry: CORE-COMPLETE\n  plasma: CORE-COMPLETE\n  material_interactions: CORE-COMPLETE\n  applications: CORE-COMPLETE\n  safety: CORE-COMPLETE\n\nremaining:\n  - full spectral dataset\n  - detailed He3 thermophysical data\n  - detailed He4 thermophysical data\n  - phase diagrams\n  - molecular ion children\n  - excimer children\n  - calculations\n  - experiment registry\n  - relationship registry\n  - people and intellectual lineage\n  - visual manifest\n  - graph manifest\n  - table manifest\n  - legacy G0002 audit\n```\n\n---\n\n# 39. Current Record Status\n\n```yaml\nstatus: \"RESEARCHED\"\ncompleteness: \"RESEARCHED\"\nmigration_status: \"MIGRATED-PENDING-ARCHIVE\"\nvalidation:\n  schema: \"PASS\"\n  identifiers: \"PASS\"\n  source_registry: \"PASS\"\n  relationship_architecture: \"PASS\"\n  evidence_architecture: \"PASS\"\n  scientific_core: \"CORE-VALIDATED\"\n  exhaustive_content: false\nvisuals:\n  specification: \"LOCKED\"\n  generated: false\n```\n\n## Evaluated nuclear data and review\n\nThe [NUBASE2020 nuclear state catalogue](0002-Helium-He-Nuclear-Evaluation.md) provides 8 evaluated states with uncertainties, qualifiers and source-line provenance. This dated evaluation does not make the whole material record complete.\n",
+  "bodyHash": "d03731a40c2a82b53c1cd299f47f29ace51130b61a5d3672815d04181be6cfc9",
   "header": {
     "mat_id": "MAT:0002",
     "record_name": "Helium",
@@ -604,6 +604,564 @@
       }
     },
     {
+      "path": "records/0002-Helium-He/data/isotopes/0002-Helium-He-NUBASE2020-Evaluation.yaml",
+      "data": {
+        "registry_id": "MAT:0002:REG:NUBASE2020",
+        "record_id": "MAT:0002",
+        "evaluation": {
+          "source_id": "SRC-000008",
+          "title": "The NUBASE2020 evaluation of nuclear physics properties",
+          "authors": [
+            "F. G. Kondev",
+            "M. Wang",
+            "W. J. Huang",
+            "S. Naimi",
+            "G. Audi"
+          ],
+          "doi": "10.1088/1674-1137/abddae",
+          "evaluation_year": 2020,
+          "publication_year": 2021,
+          "retrieved": "2026-09-08",
+          "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+          "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+          "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+          "evidence_type": "EVALUATED",
+          "scope": "Dated evaluation; later measurements remain separate. Not a claim of present-day completeness."
+        },
+        "interpretation": {
+          "hash_sign": "Estimate from systematics; not a measurement",
+          "question_mark": "Uncertain assignment or decay branch; retained literally",
+          "stbl": "Stable in this evaluation; no numeric half-life substituted",
+          "p_unst": "Particle unstable",
+          "blank": "Unavailable; not zero",
+          "decay_branch_sum": "Delayed branches are not summed as independent decay probabilities",
+          "state_index": "Original NUBASE ground/isomer/level/IAS index; distinct states are not merged"
+        },
+        "entries": [
+          {
+            "A": 3,
+            "Z": 2,
+            "N": 1,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "3He",
+            "mass_excess": {
+              "value": 14931.21888,
+              "unit": "keV",
+              "raw": "14931.21888",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.00006",
+              "uncertainty": 0.00006
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "1/2+*",
+            "ensdf_update_year_raw": "98",
+            "discovery_year_raw": "1934",
+            "decay_and_abundance_raw": "IS=0.0002 2",
+            "source_line": 30,
+            "raw_line": "003 0020   3He     14931.21888    0.00006                             stbl              1/2+*         98          1934 IS=0.0002 2",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0002:ISO:He-3",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:3:0"
+          },
+          {
+            "A": 4,
+            "Z": 2,
+            "N": 2,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "4He",
+            "mass_excess": {
+              "value": 2424.91587,
+              "unit": "keV",
+              "raw": "2424.91587",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.00015",
+              "uncertainty": 0.00015
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": null,
+              "unit": null,
+              "raw": "stbl",
+              "null_reason": "NOT_APPLICABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null,
+              "status": "STABLE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "98",
+            "discovery_year_raw": "1908",
+            "decay_and_abundance_raw": "IS=99.9998 2",
+            "source_line": 33,
+            "raw_line": "004 0020   4He      2424.91587    0.00015                             stbl              0+            98          1908 IS=99.9998 2",
+            "derived_decay": {
+              "status": "NOT-CALCULATED",
+              "reason": "Stable in the dated evaluation; no finite half-life supplied",
+              "decay_constant": null,
+              "mean_lifetime": null
+            },
+            "isotope_ref": "MAT:0002:ISO:He-4",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:4:0"
+          },
+          {
+            "A": 5,
+            "Z": 2,
+            "N": 3,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "5He",
+            "mass_excess": {
+              "value": 11231,
+              "unit": "keV",
+              "raw": "11231",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "20",
+              "uncertainty": 20
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 602,
+              "unit": "ys",
+              "raw": "602",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "22",
+              "uncertainty": 22,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "3/2-",
+            "ensdf_update_year_raw": "02",
+            "discovery_year_raw": "1937",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 36,
+            "raw_line": "005 0020   5He     11231         20                                   602     ys 22     3/2-          02          1937 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0011514072766776499,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.00004207800678888421
+              },
+              "mean_lifetime": {
+                "value": 868.502414615156,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 31.739290899557197
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-5",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:5:0"
+          },
+          {
+            "A": 6,
+            "Z": 2,
+            "N": 4,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "6He",
+            "mass_excess": {
+              "value": 17592.1,
+              "unit": "keV",
+              "raw": "17592.10",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.05",
+              "uncertainty": 0.05
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 806.92,
+              "unit": "ms",
+              "raw": "806.92",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.24",
+              "uncertainty": 0.24,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "02",
+            "discovery_year_raw": "1936",
+            "decay_and_abundance_raw": "B-=100;B-d=0.000278 18",
+            "source_line": 40,
+            "raw_line": "006 0020   6He     17592.10       0.05                                806.92  ms 0.24   0+            02          1936 B-=100;B-d=0.000278 18",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.0008590035946065847,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 2.5549108053534464e-7
+              },
+              "mean_lifetime": {
+                "value": 1164.1394823941223,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 0.3462468098133512
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-6",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:6:0"
+          },
+          {
+            "A": 7,
+            "Z": 2,
+            "N": 5,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "7He",
+            "mass_excess": {
+              "value": 26073,
+              "unit": "keV",
+              "raw": "26073",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "8",
+              "uncertainty": 8
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.51,
+              "unit": "zs",
+              "raw": "2.51",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.07",
+              "uncertainty": 0.07,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "(3/2)-",
+            "ensdf_update_year_raw": "03",
+            "discovery_year_raw": "1967",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 46,
+            "raw_line": "007 0020   7He     26073          8                                     2.51  zs 0.07   (3/2)-        03          1967 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.2761542552031655,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.007701513093315374
+              },
+              "mean_lifetime": {
+                "value": 3.621164552631298,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 0.10098865286222745
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-7",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:7:0"
+          },
+          {
+            "A": 8,
+            "Z": 2,
+            "N": 6,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "8He",
+            "mass_excess": {
+              "value": 31609.68,
+              "unit": "keV",
+              "raw": "31609.68",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "0.09",
+              "uncertainty": 0.09
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 119.5,
+              "unit": "ms",
+              "raw": "119.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "1.5",
+              "uncertainty": 1.5,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "05",
+            "discovery_year_raw": "1965",
+            "decay_and_abundance_raw": "B-=100;B-n=16 1;B-t=0.9 1",
+            "source_line": 52,
+            "raw_line": "008 0020   8He     31609.68       0.09                                119.5   ms 1.5    0+            05          1965 B-=100;B-n=16 1;B-t=0.9 1",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.005800394816401216,
+                "unit": "1/ms",
+                "relation": "=",
+                "uncertainty": 0.0000728083031347433
+              },
+              "mean_lifetime": {
+                "value": 172.40205738623112,
+                "unit": "ms",
+                "relation": "=",
+                "uncertainty": 2.1640425613334453
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-8",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:8:0"
+          },
+          {
+            "A": 9,
+            "Z": 2,
+            "N": 7,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "9He",
+            "mass_excess": {
+              "value": 40940,
+              "unit": "keV",
+              "raw": "40940",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "50",
+              "uncertainty": 50
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 2.5,
+              "unit": "zs",
+              "raw": "2.5",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "2.3",
+              "uncertainty": 2.3,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "1/2(+)",
+            "ensdf_update_year_raw": "06",
+            "discovery_year_raw": "1987",
+            "decay_and_abundance_raw": "n=100",
+            "source_line": 61,
+            "raw_line": "009 0020   9He     40940         50                                     2.5   zs 2.3    1/2(+)        06          1987 n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.2772588722239781,
+                "unit": "1/zs",
+                "relation": "=",
+                "uncertainty": 0.25507816244605985
+              },
+              "mean_lifetime": {
+                "value": 3.6067376022224087,
+                "unit": "zs",
+                "relation": "=",
+                "uncertainty": 3.3181985940446155
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-9",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:9:0"
+          },
+          {
+            "A": 10,
+            "Z": 2,
+            "N": 8,
+            "state_index": 0,
+            "state_label": "ground",
+            "source_label": "10He",
+            "mass_excess": {
+              "value": 49200,
+              "unit": "keV",
+              "raw": "49200",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "90",
+              "uncertainty": 90
+            },
+            "excitation_energy": {
+              "value": null,
+              "unit": "keV",
+              "raw": "",
+              "null_reason": "UNAVAILABLE",
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "",
+              "uncertainty": null
+            },
+            "excitation_origin": "",
+            "ordering_uncertain": false,
+            "ordering_inverted": false,
+            "half_life": {
+              "value": 260,
+              "unit": "ys",
+              "raw": "260",
+              "null_reason": null,
+              "relation": "=",
+              "estimated": false,
+              "uncertainty_raw": "40",
+              "uncertainty": 40,
+              "status": "RADIOACTIVE"
+            },
+            "spin_parity_raw": "0+",
+            "ensdf_update_year_raw": "07",
+            "discovery_year_raw": "1994",
+            "decay_and_abundance_raw": "2n=100",
+            "source_line": 68,
+            "raw_line": "010 0020   10He    49200         90                                   260     ys 40     0+            07          1994 2n=100",
+            "derived_decay": {
+              "status": "DERIVED-FROM-EVALUATION",
+              "model": "Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)",
+              "decay_constant": {
+                "value": 0.002665950694461328,
+                "unit": "1/ys",
+                "relation": "=",
+                "uncertainty": 0.0004101462606863582
+              },
+              "mean_lifetime": {
+                "value": 375.1007106311305,
+                "unit": "ys",
+                "relation": "=",
+                "uncertainty": 57.70780163555854
+              },
+              "uncertainty_method": "First-order propagation of the source symmetric uncertainty; no new confidence level assigned",
+              "caveat": "Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed floating-point digits do not imply additional precision."
+            },
+            "isotope_ref": "MAT:0002:ISO:He-10",
+            "evaluation_entry_id": "MAT:0002:NUBASE2020:10:0"
+          }
+        ]
+      }
+    },
+    {
       "path": "records/0002-Helium-He/data/properties/0002-Helium-He-Core-Properties.yaml",
       "data": {
         "property_registry_id": "MAT:0002:REG:CORE-PROPERTIES",
@@ -1193,12 +1751,26 @@
           "V02": {
             "filename": "0002-Helium-He-FIG-002-Atomic-Identity.svg",
             "path": "images/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Helium atomic identity (MAT:0002). He · Z = 2. 2 protons / 2 electrons. 4.002602(2). standard atomic weight. 1s2 · 1S0. closed shell. I1 = 24.587389011 eV. SRC-000005. I2 = 54.4177655282 eV. He+ → He2+. monatomic gas. no stable He2. Closed shell ≠ no excited/ionic/plasma states.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/scientific/0002-Helium-He-FIG-002-Atomic-Identity.svg",
+              "sha256": "6cdcdc7bb4bfe2b0a884ef0f121e1ea602e0c9e510468db825a6a4287acbda89",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V03": {
             "filename": "0002-Helium-He-DIAGRAM-001-Atomic-and-Excimer-States.svg",
             "path": "diagrams/bonding/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He states: monatomic bulk + specialized branches. Bulk He: MONATOMIC. ordinary gas/liquid. 4He2 dimer. weak vdW bound state. He2+1. molecular ion. He2*. excimer family. HeH+1. observed (SRC-000031). Na2He. >113 GPa (SRC-000032). Bulk monatomic ≠ dimer nonexistent. SRC-000031/32/33.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/bonding/0002-Helium-He-DIAGRAM-001-Atomic-and-Excimer-States.svg",
+              "sha256": "063011a0f157bb8383374e544d47568952be8f67278ca8395b1e8dcda977d645",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V04": {
             "files": [
@@ -1206,42 +1778,106 @@
               "0002-Helium-He-FIG-004-Singlet-Triplet-Energy-Structure.svg"
             ],
             "path": "images/quantum/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He: two-electron quantum system. 1s2 · 1S0. closed shell ground. SINGLET states. spin-paired family. TRIPLET states. spin-parallel family. e–e repulsion. no exact separation. variational methods. correlation benchmark. metastable He*. long-lived excited. Electron correlation included conceptually. SCIENTIFIC-SCHEMATIC. / He singlet / triplet structure. ground 1s2 1S0. 0 eV reference. 1s2p triplet. ~21.2 eV region. 1s3p 23.0870 eV. NIST ASD. I1 24.5874 eV. continuum threshold. He+ hydrogen-like. I2 54.4178 eV. selection rules. intercombination weak. Simplified labels; full fine structure in child records.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "sources": [
+                {
+                  "source": "records/0002-Helium-He/images/quantum/0002-Helium-He-FIG-003-Two-Electron-Probability.svg",
+                  "sha256": "469db2108f265af66fd03d667ffd2cd9d06ba6cc38ed3d05d5a6e3e120e94c61"
+                },
+                {
+                  "source": "records/0002-Helium-He/images/quantum/0002-Helium-He-FIG-004-Singlet-Triplet-Energy-Structure.svg",
+                  "sha256": "13b5c6066efd8f88d678ddcb8633527780bca895b872675235f0e2f2c536a29e"
+                }
+              ],
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V05": {
             "filename": "0002-Helium-He-FIG-005-Isotope-Map.svg",
             "path": "images/isotope/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Helium isotopes 3He–10He (NUCLEAR SCHEMATIC). 3He. 2p 1n · STABLE fermion. 4He. 2p 2n · STABLE boson. 5He. 2p 3n · 602 ys. 6He. 2p 4n · 806.92 ms. 7He. 2p 5n · 2.51 zs. 8He. 2p 6n · 119.5 ms. 9He. 2p 7n · 2.5 zs ±2.3. 10He. 2p 8n · 260 ys. NUCLEAR SCHEMATIC. 3He fermion vs 4He boson → different quantum fluids.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/isotope/0002-Helium-He-FIG-005-Isotope-Map.svg",
+              "sha256": "18630dd0cb1abb3331f0534dcfebd5026c3855196c91bc903837cbc052175db9",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V06": {
             "filename": "0002-Helium-He-FIG-006-Spectral-Fingerprint.svg",
             "path": "images/spectral/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He spectral fingerprint — NO universal frequency. Electronic. singlet + triplet series. Metastable lines. trapped-state transitions. 3He hyperfine. I=1/2 isotope shift. He+ spectrum. hydrogen-like ion. Excimer bands. He2* emission. Plasma emission. discharge-dependent. Mechanism-resolved only.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/spectral/0002-Helium-He-FIG-006-Spectral-Fingerprint.svg",
+              "sha256": "d7dce74d6cdfa01702988f9e7faa254d37b18b0c929ec7d15967884dbcbffd24",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V07": {
             "filename": "0002-Helium-He-FIG-007-Physical-Property-Dashboard.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He states need their own cards. 4He gas. monatomic, ambient. He-I liquid. normal, > Tλ(P). He-II liquid. superfluid, < Tλ(P). 3He liquid. fermionic fluid. 3He superfluid. mK, A/B phases. solid He. pressure-required. No generic density without state.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/properties/0002-Helium-He-FIG-007-Physical-Property-Dashboard.svg",
+              "sha256": "6c5bac667e70db96800ec2663c8e8110b27abfaf44bd1d5fd032d9b60ff770ff",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V08": {
             "filename": "0002-Helium-He-DIAGRAM-002-Ionization-State.svg",
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He ionization chain. He  (1s2). He+  (I1 = 24.587389011 eV). He2+  (I2 = 54.4177655282 eV; 4He2+ = α). NIST ASD via SRC-000005.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/fields/0002-Helium-He-DIAGRAM-002-Ionization-State.svg",
+              "sha256": "196424919f01ab90b9df4f3eb6cafb9b6ad28820b9e04bb67a10f45b60c88a3a",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V09": {
             "filename": "0002-Helium-He-DIAGRAM-003-Isotope-Spin-Magnetic-State.svg",
             "path": "diagrams/fields/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He spin: isotope-dependent. 3He I = 1/2. NMR + neutron spin filter. 4He I = 0. no nuclear moment. e- diamagnetism. ground state only. magnetization. NOT-APPLICABLE bulk. Nuclear magnetism is 3He-specific.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/fields/0002-Helium-He-DIAGRAM-003-Isotope-Spin-Magnetic-State.svg",
+              "sha256": "cccb20c91f3ac23426afb08f6e0afcc0e55f4e029b1700479a48fa1910c55e55",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V10": {
             "filename": "0002-Helium-He-FIG-008-Quantum-Fluid-Phase.svg",
             "path": "images/properties/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "4He cryogenic reference points (SRC-000025). Tb = 4.2221 K. 101325 Pa. Tc = 5.1953 K. Pc 227460 Pa. Tλ = 2.1768 K. He-I → He-II. 3He superfluid. far below Tλ. solid He. pressure required. no 1-atm melt. NOT-APPLICABLE. 3He and 4He are separate phase records.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/properties/0002-Helium-He-FIG-008-Quantum-Fluid-Phase.svg",
+              "sha256": "da8f2f8bde45085a99051df5e9b65969c18abab85a79509b7b43ade642b9812d",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V11": {
             "filename": "0002-Helium-He-DIAGRAM-004-Implantation-Bubble-Formation.svg",
             "path": "diagrams/processes/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He implantation → bubbles (host relationship). incoming He / α. implantation. diffusion / trapping. vacancy interaction. He cluster → bubble. HOST-MATERIAL RELATIONSHIP, not intrinsic property.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/processes/0002-Helium-He-DIAGRAM-004-Implantation-Bubble-Formation.svg",
+              "sha256": "90970cce5ac1405d115aff63e18462e7a6ff443b66d2a6a7c8b3ffca4e94ed98",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V12": {
             "filename": "0002-Helium-He-FIG-009-Phase-Diagram.svg",
@@ -1251,12 +1887,26 @@
           "V13": {
             "filename": "0002-Helium-He-DIAGRAM-005-Transformation-Network.svg",
             "path": "diagrams/processes/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He transformation network. He → He+ → He2+ (ionization). He → He* (excitation). gas → He-I → He-II (cooling). pressure + cooling → solid. 3H → 3He · D+T → 4He+n (nuclear, separate). Chemical and nuclear arrows never merged.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/processes/0002-Helium-He-DIAGRAM-005-Transformation-Network.svg",
+              "sha256": "b5a3606be578c0d49f30b5b8ad4d8008ca29eeb158ffe8ec4e0d285d1e7c799a",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V14": {
             "filename": "0002-Helium-He-DIAGRAM-006-Knowledge-Graph.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "MAT:0002 knowledge-graph edge classes. MAT:0002 Helium. — ISOTOPE-OF —. — DECAYS-TO —. — FUSES-WITH —. — HAS-PHASE —. — TRANSFORMS-TO —. — HAS-QUANTUM-FLUID-PHASE —. — CAPTURES —. — FORMS-ION —. — FORMS-EXCITED-DIMER —. — FORMS-MOLECULAR-ION —. — CAN-BE-IMPLANTED-IN —. — LEGACY-SUCCESSOR-OF —. Full edges: He relationships registry.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/relationships/0002-Helium-He-DIAGRAM-006-Knowledge-Graph.svg",
+              "sha256": "3e7ba5aa1fbb10bda4e08375d723f526edfbab08271e26c40b4fa2165ea2d679",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V15": {
             "files": [
@@ -1264,7 +1914,22 @@
               "0002-Helium-He-MODEL-SCI-002-Isotope-Nuclear-Schematic.glb"
             ],
             "path": "models/scientific/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "Electron Density: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result. Isotope Nuclear Schematic: retained illustrative 3D model with 1 mesh and 1 scene node. The filename identifies the intended subject; the geometry has no embedded scientific units or calibration. It must not be read as a measured structure, electron trajectory or quantitative density result.",
+            "description_provenance": {
+              "method": "Editorial description from retained filename and inspected glTF scene structure",
+              "review_status": "STRUCTURE-INSPECTED-SCIENTIFIC-GEOMETRY-UNVERIFIED",
+              "sources": [
+                {
+                  "path": "records/0002-Helium-He/models/scientific/0002-Helium-He-MODEL-SCI-001-Electron-Density.glb",
+                  "sha256": "6f10ff85e2c5e15085e8473dd681ea59b6db1407c6ea5b26de86c87fa097b8fe"
+                },
+                {
+                  "path": "records/0002-Helium-He/models/scientific/0002-Helium-He-MODEL-SCI-002-Isotope-Nuclear-Schematic.glb",
+                  "sha256": "f472de0f8d3cc3da1e152b0d8994b1870738795b43f21d3556894396db413730"
+                }
+              ]
+            }
           },
           "V16": {
             "filename": "0002-Helium-He-MODEL-DATA-001.glb",
@@ -1274,12 +1939,26 @@
           "V17": {
             "filename": "0002-Helium-He-FIG-010-Applications.svg",
             "path": "images/applications/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He applications by state. 4He cryogenics. magnet cooling. dilution fridge. 3He/4He mixtures. neutron detection. 3He capture. leak detection. He mobility. inert gas. welding · semi. quantum research. fluids · vortices. Isotope + state required.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/images/applications/0002-Helium-He-FIG-010-Applications.svg",
+              "sha256": "2e842f1fcfdef76d9a67a1d71161863fd1639f72360f777eb6954a8748a70188",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           },
           "V18": {
             "filename": "0002-Helium-He-DIAGRAM-007-Evidence-Provenance.svg",
             "path": "diagrams/relationships/",
-            "status": "GENERATED"
+            "status": "GENERATED",
+            "alt_text": "He evidence provenance. NIST ASD → atomic/ionization. NIST isotopes → masses. NUBASE2020 → unstable states. NIST TN1334 → 4He physics. history → liquefaction/superfluids. Overlays never overwrite core.",
+            "description_provenance": {
+              "method": "Transcribed from existing SVG title/description or visible text; no new scientific interpretation",
+              "source": "records/0002-Helium-He/diagrams/relationships/0002-Helium-He-DIAGRAM-007-Evidence-Provenance.svg",
+              "sha256": "43952ea6733424f4b80c9f6d00717e9d3c4cef9a274930a581a1d0d50d841cdd",
+              "review_status": "TRANSCRIBED-NEEDS-ACCESSIBILITY-REVIEW"
+            }
           }
         },
         "summary": {
@@ -1633,7 +2312,12 @@
         "F14_to_F31_nuclear_semantics",
         "fluorine_half_lives",
         "historical_F30_limit"
-      ]
+      ],
+      "url": "https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt",
+      "snapshot": "data/catalog/sources/nubase_4.mas20.txt",
+      "sha256": "1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859",
+      "retrieved": "2026-09-08",
+      "verification_status": "PRIMARY-DATASET-RETRIEVED"
     },
     {
       "source_id": "SRC-000019",

@@ -1,0 +1,1001 @@
+registry_id: MAT:0111:REG:NUBASE2020
+record_id: MAT:0111
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 272
+    Z: 111
+    N: 161
+    state_index: 0
+    state_label: ground
+    source_label: 272Rg
+    mass_excess:
+      value: 142770
+      unit: keV
+      raw: 142770#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 230#
+      uncertainty: 230
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.2
+      unit: ms
+      raw: "4.2"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.1"
+      uncertainty: 1.1
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "1995"
+    decay_and_abundance_raw: A=100
+    source_line: 5751
+    raw_line: 272 1110   272Rg  142770#       230#                                    4.2   ms 1.1                  19          1995 A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.16503504299046315
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.043223463640359394
+      mean_lifetime:
+        value: 6.059319171733647
+        unit: ms
+        relation: =
+        uncertainty: 1.58696454497786
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-272
+    evaluation_entry_id: MAT:0111:NUBASE2020:272:0
+  - A: 273
+    Z: 111
+    N: 162
+    state_index: 0
+    state_label: ground
+    source_label: 273Rg
+    mass_excess:
+      value: 142890
+      unit: keV
+      raw: 142890#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2
+      unit: ms
+      raw: 2#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?
+    source_line: 5759
+    raw_line: 273 1110   273Rg  142890#       400#                                    2#    ms                                       A ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34657359027997264
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 2.8853900817779268
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-273
+    evaluation_entry_id: MAT:0111:NUBASE2020:273:0
+  - A: 274
+    Z: 111
+    N: 163
+    state_index: 0
+    state_label: ground
+    source_label: 274Rg
+    mass_excess:
+      value: 144610
+      unit: keV
+      raw: 144610#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 210#
+      uncertainty: 210
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 20
+      unit: ms
+      raw: "20"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "11"
+      uncertainty: 11
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "2004"
+    decay_and_abundance_raw: A~100
+    source_line: 5764
+    raw_line: 274 1110   274Rg  144610#       210#                                   20     ms 11                   05          2004 A~100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03465735902799726
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.019061547465398496
+      mean_lifetime:
+        value: 28.85390081777927
+        unit: ms
+        relation: =
+        uncertainty: 15.869645449778599
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-274
+    evaluation_entry_id: MAT:0111:NUBASE2020:274:0
+  - A: 275
+    Z: 111
+    N: 164
+    state_index: 0
+    state_label: ground
+    source_label: 275Rg
+    mass_excess:
+      value: 145400
+      unit: keV
+      raw: 145400#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 450#
+      uncertainty: 450
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 5
+      unit: ms
+      raw: 5#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?
+    source_line: 5770
+    raw_line: 275 1110   275Rg  145400#       450#                                    5#    ms                                       A ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.13862943611198905
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 7.213475204444817
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-275
+    evaluation_entry_id: MAT:0111:NUBASE2020:275:0
+  - A: 276
+    Z: 111
+    N: 165
+    state_index: 0
+    state_label: ground
+    source_label: 276Rg
+    mass_excess:
+      value: 147390
+      unit: keV
+      raw: 147390#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 630#
+      uncertainty: 630
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10
+      unit: ms
+      raw: 10#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?;SF ?
+    source_line: 5776
+    raw_line: 276 1110   276Rg  147390#       630#                                   10#    ms                                       A
+      ?;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 14.426950408889635
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-276
+    evaluation_entry_id: MAT:0111:NUBASE2020:276:0
+  - A: 277
+    Z: 111
+    N: 166
+    state_index: 0
+    state_label: ground
+    source_label: 277Rg
+    mass_excess:
+      value: 148410
+      unit: keV
+      raw: 148410#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 470#
+      uncertainty: 470
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4
+      unit: ms
+      raw: 4#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?;SF ?
+    source_line: 5784
+    raw_line: 277 1110   277Rg  148410#       470#                                    4#    ms                                       A
+      ?;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.17328679513998632
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 5.7707801635558535
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-277
+    evaluation_entry_id: MAT:0111:NUBASE2020:277:0
+  - A: 278
+    Z: 111
+    N: 167
+    state_index: 0
+    state_label: ground
+    source_label: 278Rg
+    mass_excess:
+      value: 150520
+      unit: keV
+      raw: 150520#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 390#
+      uncertainty: 390
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 8
+      unit: ms
+      raw: "8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "2007"
+    decay_and_abundance_raw: A=100
+    source_line: 5791
+    raw_line: 278 1110   278Rg  150520#       390#                                    8     ms 5                    19          2007 A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.08664339756999316
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.05415212348124573
+      mean_lifetime:
+        value: 11.541560327111707
+        unit: ms
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-278
+    evaluation_entry_id: MAT:0111:NUBASE2020:278:0
+  - A: 279
+    Z: 111
+    N: 168
+    state_index: 0
+    state_label: ground
+    source_label: 279Rg
+    mass_excess:
+      value: 151720
+      unit: keV
+      raw: 151720#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 420#
+      uncertainty: 420
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 170
+      unit: ms
+      raw: "170"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "110"
+      uncertainty: 110
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "05"
+    discovery_year_raw: "2004"
+    decay_and_abundance_raw: A=100
+    source_line: 5798
+    raw_line: 279 1110   279Rg  151720#       420#                                  170     ms 110                  05          2004 A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.004077336356234972
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0026382764657990995
+      mean_lifetime:
+        value: 245.2581569511238
+        unit: ms
+        relation: =
+        uncertainty: 158.696454497786
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-279
+    evaluation_entry_id: MAT:0111:NUBASE2020:279:0
+  - A: 279
+    Z: 111
+    N: 168
+    state_index: 3
+    state_label: p
+    source_label: 279Rg
+    mass_excess:
+      value: 151760
+      unit: keV
+      raw: 151760#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 430#
+      uncertainty: 430
+    excitation_energy:
+      value: 40
+      unit: keV
+      raw: 40#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 100#
+      uncertainty: 100
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 5799
+    raw_line: "279 1113   279Rgp 151760#       430#         40#       100#                 "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0111:ISO:Rg-279p
+    evaluation_entry_id: MAT:0111:NUBASE2020:279:3
+  - A: 280
+    Z: 111
+    N: 169
+    state_index: 0
+    state_label: ground
+    source_label: 280Rg
+    mass_excess:
+      value: 153890
+      unit: keV
+      raw: 153890#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 530#
+      uncertainty: 530
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4.3
+      unit: s
+      raw: "4.3"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "2004"
+    decay_and_abundance_raw: A=100
+    source_line: 5805
+    raw_line: 280 1110   280Rg  153890#       530#                                    4.3    s 0.5                  19          2004 A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.161197018734871
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0187438393877757
+      mean_lifetime:
+        value: 6.203588675822543
+        unit: s
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-280
+    evaluation_entry_id: MAT:0111:NUBASE2020:280:0
+  - A: 281
+    Z: 111
+    N: 170
+    state_index: 0
+    state_label: ground
+    source_label: 281Rg
+    mass_excess:
+      value: 155330
+      unit: keV
+      raw: 155330#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 770#
+      uncertainty: 770
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 19
+      unit: s
+      raw: "19"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "5"
+      uncertainty: 5
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "2010"
+    decay_and_abundance_raw: SF=87 8;A=13 8
+    source_line: 5812
+    raw_line: 281 1110   281Rg  155330#       770#                                   19      s 5                    10          2010
+      SF=87 8;A=13 8
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03648143055578659
+        unit: 1/s
+        relation: =
+        uncertainty: 0.009600376462049103
+      mean_lifetime:
+        value: 27.411205776890306
+        unit: s
+        relation: =
+        uncertainty: 7.213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-281
+    evaluation_entry_id: MAT:0111:NUBASE2020:281:0
+  - A: 282
+    Z: 111
+    N: 171
+    state_index: 0
+    state_label: ground
+    source_label: 282Rg
+    mass_excess:
+      value: 157740
+      unit: keV
+      raw: 157740#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 590#
+      uncertainty: 590
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 130
+      unit: s
+      raw: "130"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "50"
+      uncertainty: 50
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "2010"
+    decay_and_abundance_raw: A=100
+    source_line: 5817
+    raw_line: 282 1110   282Rg  157740#       590#                                  130      s 50                   19          2010 A=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.005331901388922656
+        unit: 1/s
+        relation: =
+        uncertainty: 0.002050731303431791
+      mean_lifetime:
+        value: 187.55035531556524
+        unit: s
+        relation: =
+        uncertainty: 72.13475204444818
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-282
+    evaluation_entry_id: MAT:0111:NUBASE2020:282:0
+  - A: 283
+    Z: 111
+    N: 172
+    state_index: 0
+    state_label: ground
+    source_label: 283Rg
+    mass_excess:
+      value: 159380
+      unit: keV
+      raw: 159380#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 680#
+      uncertainty: 680
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2
+      unit: m
+      raw: 2#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?;SF ?
+    source_line: 5821
+    raw_line: 283 1110   283Rg  159380#       680#                                    2#     m                                       A
+      ?;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.34657359027997264
+        unit: 1/m
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 2.8853900817779268
+        unit: m
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-283
+    evaluation_entry_id: MAT:0111:NUBASE2020:283:0
+  - A: 284
+    Z: 111
+    N: 173
+    state_index: 0
+    state_label: ground
+    source_label: 284Rg
+    mass_excess:
+      value: 161970
+      unit: keV
+      raw: 161970#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 1
+      unit: m
+      raw: 1#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?;SF ?
+    source_line: 5825
+    raw_line: 284 1110   284Rg  161970#       500#                                    1#     m                                       A
+      ?;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.6931471805599453
+        unit: 1/m
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 1.4426950408889634
+        unit: m
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-284
+    evaluation_entry_id: MAT:0111:NUBASE2020:284:0
+  - A: 285
+    Z: 111
+    N: 174
+    state_index: 0
+    state_label: ground
+    source_label: 285Rg
+    mass_excess:
+      value: 163730
+      unit: keV
+      raw: 163730#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 600#
+      uncertainty: 600
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 30
+      unit: s
+      raw: 30#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: ""
+    discovery_year_raw: ""
+    decay_and_abundance_raw: A ?;SF ?
+    source_line: 5829
+    raw_line: 285 1110   285Rg  163730#       600#                                   30#     s                                       A
+      ?;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.023104906018664842
+        unit: 1/s
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 43.2808512266689
+        unit: s
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-285
+    evaluation_entry_id: MAT:0111:NUBASE2020:285:0
+  - A: 286
+    Z: 111
+    N: 175
+    state_index: 0
+    state_label: ground
+    source_label: 286Rg
+    mass_excess:
+      value: 166510
+      unit: keV
+      raw: 166510#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 460#
+      uncertainty: 460
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10
+      unit: s
+      raw: 10#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ""
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "19"
+    discovery_year_raw: "2016"
+    decay_and_abundance_raw: A~100;SF ?
+    source_line: 5834
+    raw_line: 286 1110   286Rg  166510#       460#                                   10#     s                      19          2016
+      A~100;SF ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06931471805599453
+        unit: 1/s
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 14.426950408889635
+        unit: s
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0111:ISO:Rg-286
+    evaluation_entry_id: MAT:0111:NUBASE2020:286:0

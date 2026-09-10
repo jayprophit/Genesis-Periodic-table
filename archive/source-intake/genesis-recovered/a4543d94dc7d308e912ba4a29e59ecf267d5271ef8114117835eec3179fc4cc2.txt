@@ -1,0 +1,220 @@
+registry_id: "MAT:0013:REG:PLASTICITY"
+record_id: "MAT:0013"
+
+parent_phase:
+  structure: "FCC"
+
+primary_slip:
+
+  family:
+    plane: "{111}"
+    direction: "<110>"
+
+  notation:
+    "{111}<110>"
+
+  number_of_conventional_slip_systems:
+    value: 12
+
+physical_reason:
+
+  close_packed_planes:
+    "{111}": true
+
+  close_packed_directions:
+    "<110>": true
+
+dislocations:
+
+  perfect:
+
+    burgers_vector:
+      vector_family:
+        "a/2<110>"
+
+      representative_magnitude:
+        value: 0.28634
+        unit: "nm"
+
+  Shockley_partial:
+
+    burgers_vector_family:
+      "a/6<112>"
+
+    role:
+      - perfect_dislocation_dissociation
+      - stacking_fault_boundary
+
+  reaction_schematic:
+
+    description: >
+      A perfect a/2<110> dislocation may dissociate into
+      two Shockley partial dislocations on an FCC {111}
+      plane, leaving a stacking fault between them.
+
+stacking_fault:
+
+  intrinsic_stacking_fault_energy:
+
+    representative_room_temperature:
+      approximate_value: 166
+      unit: "mJ/m2"
+
+    literature_scatter:
+      important: true
+
+    single_exact_universal_value:
+      false
+
+  aluminium_classification:
+    comparatively_high_SFE_FCC_metal: true
+
+consequences_of_high_SFE:
+
+  wide_partial_separation:
+    generally: false
+
+  cross_slip:
+    relatively_facilitated: true
+
+  dynamic_recovery:
+    relatively_facilitated: true
+
+  conventional_deformation_twinning:
+    generally_less_favoured: true
+
+  twinning_impossible:
+    false
+
+twinning:
+
+  bulk_conventional_Al:
+    dominant_room_temperature_mechanism:
+      false
+
+  can_occur_under:
+    - nanoscale_grain_conditions
+    - severe_deformation
+    - special_texture
+    - high_strain_rate
+    - constrained_geometries
+
+resolved_shear:
+
+  Schmid_law:
+
+    equation:
+      "tau_RSS = sigma * cos(phi) * cos(lambda)"
+
+    variables:
+
+      tau_RSS:
+        meaning: "resolved shear stress"
+
+      sigma:
+        meaning: "applied uniaxial stress"
+
+      phi:
+        meaning: "angle between load axis and slip-plane normal"
+
+      lambda:
+        meaning: "angle between load axis and slip direction"
+
+    implication:
+      crystallographic_orientation_controls_slip_activation: true
+
+work_hardening:
+
+  mechanism:
+
+    cold_deformation:
+      increases_dislocation_density: true
+
+    increasing_dislocation_interactions:
+      raises_flow_stress: true
+
+  generic_dislocation_relation:
+
+    equation:
+      "Delta_sigma ~= M * alpha * G * b * sqrt(rho_d)"
+
+    variables:
+
+      M:
+        meaning: "Taylor/orientation factor"
+
+      alpha:
+        meaning: "dislocation interaction coefficient"
+
+      G:
+        meaning: "shear modulus"
+
+      b:
+        meaning: "Burgers-vector magnitude"
+
+      rho_d:
+        meaning: "dislocation density"
+
+    aluminium_specific_constant_set:
+      provided: false
+
+grain_size_strengthening:
+
+  Hall_Petch_relation:
+
+    equation:
+      "sigma_y = sigma_0 + k_y*d^(-1/2)"
+
+    rule:
+      coefficients_are_material_state_specific: true
+
+texture:
+
+  produced_by:
+    - rolling
+    - extrusion
+    - drawing
+    - forging
+    - recrystallization
+    - additive_manufacturing
+
+  can_change:
+    - yield_anisotropy
+    - formability
+    - r_value
+    - earing
+    - fatigue_response
+    - slip_distribution
+
+MAT_state_variables:
+
+  - crystal_orientation
+  - grain_size
+  - texture
+  - dislocation_density
+  - precipitate_state
+  - solute_content
+  - strain
+  - strain_rate
+  - temperature
+  - prior_heat_treatment
+  - recovery_state
+  - recrystallization_state
+
+rules:
+
+  FCC_means_zero_work_hardening: false
+
+  high_SFE_means_no_stacking_faults: false
+
+  high_SFE_means_twinning_impossible: false
+
+  slip_system_count_predicts_strength_alone: false
+
+  dislocation_density_is_element_constant: false
+
+  texture_is_optional_for_engineering_prediction: false
+
+source_ids:
+  - "SRC-000292"
+  - "SRC-000289"

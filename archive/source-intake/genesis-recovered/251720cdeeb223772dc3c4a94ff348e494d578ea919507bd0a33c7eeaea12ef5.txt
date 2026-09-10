@@ -1,0 +1,72 @@
+registry_id: "MAT:0010:REG:EXCITED-STATES"
+record_id: "MAT:0010"
+
+ground:
+  configuration: "2p6"
+  term: "1S0"
+  energy_cm1: 0
+
+excitation_families:
+
+  3s_family:
+    configuration_family: "2p5 3s"
+    role:
+      - metastable_states
+      - discharge_kinetics
+      - lower_excited_manifold
+
+  3p_family:
+    configuration_family: "2p5 3p"
+    role:
+      - visible_emission
+      - laser_lower_levels
+
+  4s_and_5s_families:
+    role:
+      - He_Ne_energy_transfer
+      - laser_upper_levels
+
+selected_633nm_transition:
+
+  wavelength_vacuum:
+    value: 632.81646
+    unit: "nm"
+
+  upper:
+    energy:
+      value: 166656.5114
+      unit: "cm-1"
+
+    configuration:
+      "2s2 2p5(2P°1/2)5s"
+
+    term:
+      "2[1/2]°"
+
+    J: 1
+
+  lower:
+    energy:
+      value: 150858.5079
+      unit: "cm-1"
+
+    configuration:
+      "2s2 2p5(2P°1/2)3p"
+
+    term:
+      "2[3/2]"
+
+    J: 2
+
+  Einstein_A:
+    value: 3.39e6
+    unit: "s^-1"
+
+source_ids:
+  - "SRC-000194"
+  - "SRC-000205"
+
+rules:
+  excited_neon_equals_ground_neon_property: false
+  Paschen_notation_requires_mapping: true
+  metastable_equals_permanently_stable: false

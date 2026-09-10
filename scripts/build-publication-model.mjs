@@ -1,5 +1,5 @@
 // Canonical publication projection; Studio never reparses YAML.
-import {readFileSync,writeFileSync,mkdirSync,existsSync,cpSync} from 'node:fs';
+import {readFileSync,writeFileSync,renameSync,mkdirSync,existsSync,cpSync} from 'node:fs';
 import {join,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import YAML from 'yaml';
@@ -8,7 +8,14 @@ const root=join(import.meta.dirname,'..'), out=join(root,'data/publication/gener
 mkdirSync(out,{recursive:true});
 const read=p=>readFileSync(join(root,p),'utf8').replace(/\r\n/g,'\n');
 const json=p=>JSON.parse(read(p));
-const write=(p,v)=>{mkdirSync(dirname(p),{recursive:true});writeFileSync(p,JSON.stringify(v,null,2)+'\n');};
+const write=(p,v)=>{
+ const text=JSON.stringify(v,null,2)+'\n';
+ // Avoid needless rewrites of unchanged chapters, including files open in a reader.
+ if(existsSync(p)&&readFileSync(p,'utf8').replace(/\r\n/g,'\n')===text)return;
+ mkdirSync(dirname(p),{recursive:true});
+ const temporary=p+'.'+process.pid+'.tmp';
+ writeFileSync(temporary,text);renameSync(temporary,p);
+};
 const registry=YAML.parse(read('data/registries/sources.yaml')).sources;
 const sourceMap=new Map(registry.map(s=>[s.source_id,s]));
 const catalog=json('data/catalog/elements-baseline.json');

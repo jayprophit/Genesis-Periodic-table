@@ -2,6 +2,39 @@
 export function initCharts({ $, chartData }) {
   if (typeof Chart === "undefined" || !chartData) return;
 
+  const ink = () => getComputedStyle(document.body).getPropertyValue('--ink').trim();
+  // Every visual has a readable data alternative and an explicit review status.
+  function describe(canvas, title, columns, rows, unit) {
+    canvas.setAttribute('role','img');
+    canvas.setAttribute('aria-label',title+'. Illustrative compilation; source review pending. Data table follows.');
+    const card=canvas.closest('.viz-card');
+    if(!card || card.querySelector('.chart-evidence'))return;
+    const note=document.createElement('p');note.className='chart-evidence evidence-label research';
+    note.textContent='Illustrative compilation · source review pending';card.append(note);
+    const details=document.createElement('details'),summary=document.createElement('summary');
+    summary.textContent='Read chart values and limitations';details.append(summary);
+    const limit=document.createElement('p');limit.textContent=(unit||'Scale not specified')+'. '+(chartData.provenance_note||'');details.append(limit);
+    const wrap=document.createElement('div');wrap.className='table-scroll';wrap.tabIndex=0;wrap.setAttribute('role','region');wrap.setAttribute('aria-label',title+' values');
+    const table=document.createElement('table'),caption=document.createElement('caption');caption.textContent=title;table.append(caption);
+    const head=table.createTHead().insertRow();for(const name of columns){const cell=document.createElement('th');cell.scope='col';cell.textContent=name;head.append(cell);}
+    const body=table.createTBody();for(const values of rows){const row=body.insertRow();for(const value of values)row.insertCell().textContent=String(value);}
+    wrap.append(table);details.append(wrap);card.append(details);
+  }
+  const updateTheme = () => {
+    for(const chart of Object.values(Chart.instances)) {
+      const color=ink();
+      if(chart.options.plugins.legend)chart.options.plugins.legend.labels.color=color;
+      if(chart.options.plugins.title)chart.options.plugins.title.color=color;
+      for(const scale of Object.values(chart.options.scales||{})){
+        if(scale.ticks)scale.ticks.color=color;
+        if(scale.title)scale.title.color=color;
+        if(scale.pointLabels)scale.pointLabels.color=color;
+      }
+      chart.update('none');
+    }
+  };
+  new MutationObserver(updateTheme).observe(document.body,{attributes:true,attributeFilter:['class']});
+
   const COLORS = {
     core: "#8dd4c6", research: "#dec38b", claims: "#d4b4d5",
     accent: "#8dd4c6", gold: "#edc777", muted: "#acbbb9",
@@ -11,6 +44,7 @@ export function initCharts({ $, chartData }) {
   function renderAbundancePie(canvasId, dataset) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
+    describe(canvas,dataset.title,['Constituent',dataset.unit||'Value'],dataset.data.map(d=>[d.name,d.value]),dataset.unit);
     new Chart(canvas, {
       type: "pie",
       data: {
@@ -26,6 +60,7 @@ export function initCharts({ $, chartData }) {
         },
       },
     });
+    updateTheme();
   }
 
   /* --- Ionization Ladder Bar Chart --- */
@@ -60,6 +95,7 @@ export function initCharts({ $, chartData }) {
     if (!data.length) return;
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
+    describe(canvas,'Carbon allotropes',['Property','Diamond','Graphite','Graphene','CNT'],data.map(d=>[d.property,d.diamond,d.graphite,d.graphene,d.cnt]),'Illustrative 0–10 scores; normalization and measurement conditions are not documented. These are not engineering allowables');
     const props = data.map((d) => d.property);
     new Chart(canvas, {
       type: "radar",
@@ -78,6 +114,7 @@ export function initCharts({ $, chartData }) {
         plugins: { legend: { labels: { color: "#e9efea" } }, title: { display: true, text: "Carbon Allotrope Properties (normalized)", color: "#e9efea", font: { size: 14, family: "Georgia, serif" } } },
       },
     });
+    updateTheme();
   }
 
   /* --- Periodic Trend Scatter --- */

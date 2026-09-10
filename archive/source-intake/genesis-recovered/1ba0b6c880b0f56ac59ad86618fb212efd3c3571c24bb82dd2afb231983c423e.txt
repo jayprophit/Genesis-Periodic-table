@@ -1,0 +1,127 @@
+registry_id: "MAT:0010:REG:ISOTOPE-GEOCHEMISTRY"
+record_id: "MAT:0010"
+
+stable_isotopes:
+  - "MAT:0010:ISO:Ne-20"
+  - "MAT:0010:ISO:Ne-21"
+  - "MAT:0010:ISO:Ne-22"
+
+reservoir_classes:
+
+  atmospheric:
+
+    description:
+      "Terrestrial atmospheric Neon reference."
+
+    approximate_ratios:
+
+      Ne20_over_Ne22:
+        value: 9.8
+
+      Ne21_over_Ne22:
+        approximate_value: 0.029
+
+    source_id: "SRC-000211"
+
+  primordial_solar_like:
+
+    dominant_information:
+      - Ne20
+      - Ne22
+
+    solar_wind_reference:
+
+      Ne20_over_Ne22:
+        approximate_value: 13.8
+
+    significance:
+      - early_solar_system_material
+      - mantle_source_component
+      - meteorite_component
+
+  mantle:
+
+    characteristics:
+
+      Ne20_over_Ne22:
+        can_exceed_atmospheric: true
+
+      Ne21_excess:
+        possible: true
+
+    interpreted_components:
+      - atmospheric_contamination
+      - solar_or_primordial_component
+      - nucleogenic_Ne21
+
+    analytical_challenges:
+      - low_Ne_abundance
+      - atmospheric_contamination
+      - mass_spectrometric_interferences
+
+  nucleogenic:
+
+    principal_isotope:
+      "MAT:0010:ISO:Ne-21"
+
+    generation_classes:
+      - neutron_reactions_in_rocks
+      - U_Th_decay_chain_associated_neutron_production
+
+    example_target_reactions:
+      - "24Mg(n,alpha)21Ne"
+      - "18O(n,alpha)21Ne"
+
+    context:
+      - deep_crust
+      - mantle
+      - geological_materials
+
+  cosmogenic:
+
+    principal_isotope:
+      "MAT:0010:ISO:Ne-21"
+
+    mechanism:
+      "COSMIC-RAY-INDUCED-NUCLEAR-REACTIONS"
+
+    environments:
+      - exposed_rock
+      - quartz
+      - meteorites
+
+    applications:
+      - surface_exposure_dating
+      - erosion_rate
+      - glacial_chronology
+      - meteorite_exposure_history
+
+    current_example:
+      year: 2024
+      context: "Lassen Volcanic National Park moraines"
+
+      ages_ka:
+        - "22.1 ± 3.8"
+        - "20.2 ± 2.4"
+        - "15.3 ± 3.8"
+
+      source_id: "SRC-000213"
+
+  meteoritic:
+
+    possible_components:
+      - solar_wind_implanted
+      - primordial
+      - cosmogenic
+      - trapped_presolar_or_chondritic_components
+
+rules:
+  stable_Ne21_equals_only_primordial: false
+  Ne21_excess_equals_only_cosmogenic: false
+  cosmogenic_equals_nucleogenic: false
+  atmospheric_ratio_equals_universal_ratio: false
+  isotope_ratio_requires_reservoir_context: true
+
+source_ids:
+  - "SRC-000211"
+  - "SRC-000213"

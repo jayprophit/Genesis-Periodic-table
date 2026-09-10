@@ -1,0 +1,48 @@
+registry_id: "MAT:0010:REG:MATRIX-ISOLATION"
+record_id: "MAT:0010"
+
+host_material:
+  element: "MAT:0010"
+  phase: "SOLID-NEON"
+
+classification:
+  cryogenic_matrix_host: true
+  chemically_low_reactivity_host: true
+
+typical_temperature:
+  approximate_value: 5
+  unit: "K"
+
+guest_species_can_include:
+  - free_radicals
+  - molecular_ions
+  - transient_molecules
+  - reactive_intermediates
+  - metal_atoms
+  - molecular_complexes
+
+advantages:
+  - reduced_diffusion
+  - suppressed_guest_guest_reaction
+  - low_temperature_population
+  - simplified_rotational_structure
+  - relatively_small_vibrational_matrix_shifts
+
+limitations:
+  - matrix_shift
+  - cage_effect
+  - site_splitting
+  - host_guest_interaction
+  - difference_from_true_gas_phase
+
+scientific_principle:
+
+  statement:
+    "Low-reactivity host does not imply zero perturbation."
+
+rules:
+  matrix_isolation_equals_gas_phase: false
+  neon_matrix_is_completely_noninteracting: false
+  matrix_shift_must_be_considered: true
+
+source_id: "SRC-000210"

@@ -1,0 +1,1923 @@
+registry_id: MAT:0013:REG:NUBASE2020
+record_id: MAT:0013
+evaluation:
+  source_id: SRC-000008
+  title: The NUBASE2020 evaluation of nuclear physics properties
+  authors:
+    - F. G. Kondev
+    - M. Wang
+    - W. J. Huang
+    - S. Naimi
+    - G. Audi
+  doi: 10.1088/1674-1137/abddae
+  evaluation_year: 2020
+  publication_year: 2021
+  retrieved: 2026-09-08
+  url: https://www-nds.iaea.org/amdc/ame2020/nubase_4.mas20.txt
+  snapshot: data/catalog/sources/nubase_4.mas20.txt
+  sha256: 1585a5eea86c5e17e90307c7e6e786d060049c4039e392a261ff6db977df9859
+  evidence_type: EVALUATED
+  scope: Dated evaluation; later measurements remain separate. Not a claim of present-day completeness.
+interpretation:
+  hash_sign: Estimate from systematics; not a measurement
+  question_mark: Uncertain assignment or decay branch; retained literally
+  stbl: Stable in this evaluation; no numeric half-life substituted
+  p_unst: Particle unstable
+  blank: Unavailable; not zero
+  decay_branch_sum: Delayed branches are not summed as independent decay probabilities
+  state_index: Original NUBASE ground/isomer/level/IAS index; distinct states are not merged
+entries:
+  - A: 21
+    Z: 13
+    N: 8
+    state_index: 0
+    state_label: ground
+    source_label: 21Al
+    mass_excess:
+      value: 27090
+      unit: keV
+      raw: 27090#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 600#
+      uncertainty: 600
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: <35ns
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: p ?
+    source_line: 192
+    raw_line: 021 0130   21Al    27090#       600#                                             <35ns  5/2+#         15               p ?
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-21
+    evaluation_entry_id: MAT:0013:NUBASE2020:21:0
+  - A: 22
+    Z: 13
+    N: 9
+    state_index: 0
+    state_label: ground
+    source_label: 22Al
+    mass_excess:
+      value: 18200
+      unit: keV
+      raw: 18200#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 91.1
+      unit: ms
+      raw: "91.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: (4)+
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "1982"
+    decay_and_abundance_raw: B+=100;B+p=55 3;B+2p=1.10 11;B+A=0.038 17
+    source_line: 204
+    raw_line: 022 0130   22Al    18200#       400#                                   91.1   ms 0.5    (4)+          15          1982
+      B+=100;B+p=55 3;B+2p=1.10 11;B+A=0.038 17
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00760864084039457
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000041759828981309383
+      mean_lifetime:
+        value: 131.42951822498458
+        unit: ms
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-22
+    evaluation_entry_id: MAT:0013:NUBASE2020:22:0
+  - A: 23
+    Z: 13
+    N: 10
+    state_index: 0
+    state_label: ground
+    source_label: 23Al
+    mass_excess:
+      value: 6748.1
+      unit: keV
+      raw: "6748.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 446
+      unit: ms
+      raw: "446"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "6"
+      uncertainty: 6
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+
+    ensdf_update_year_raw: "21"
+    discovery_year_raw: "1969"
+    decay_and_abundance_raw: B+=100;B+p=1.22 5
+    source_line: 216
+    raw_line: 023 0130   23Al     6748.1        0.3                                 446     ms 6      5/2+          21          1969
+      B+=100;B+p=1.22 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0015541416604483078
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.000020907735342353918
+      mean_lifetime:
+        value: 643.4419882364778
+        unit: ms
+        relation: =
+        uncertainty: 8.656170245333781
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-23
+    evaluation_entry_id: MAT:0013:NUBASE2020:23:0
+  - A: 23
+    Z: 13
+    N: 10
+    state_index: 8
+    state_label: i
+    source_label: 23Al
+    mass_excess:
+      value: 18470
+      unit: keV
+      raw: "18470"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_energy:
+      value: 11720
+      unit: keV
+      raw: "11720"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+    excitation_origin: p
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: (5/2)+  T=5/2
+    ensdf_update_year_raw: "21"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: p=0.10 5;2p=3.6 4
+    source_line: 217
+    raw_line: 023 0138   23Al i  18470         40       11720         40       p                      (5/2)+  T=5/2 21          1997
+      p=0.10 5;2p=3.6 4
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-23i
+    evaluation_entry_id: MAT:0013:NUBASE2020:23:8
+  - A: 24
+    Z: 13
+    N: 11
+    state_index: 0
+    state_label: ground
+    source_label: 24Al
+    mass_excess:
+      value: -48.81
+      unit: keV
+      raw: "-48.81"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.23"
+      uncertainty: 0.23
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.053
+      unit: s
+      raw: "2.053"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.004"
+      uncertainty: 0.004
+      status: RADIOACTIVE
+    spin_parity_raw: 4+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1953"
+    decay_and_abundance_raw: B+=100;B+A=0.035 6;B+p=0.0016 3
+    source_line: 229
+    raw_line: 024 0130   24Al      -48.81       0.23                                  2.053  s 0.004  4+            07          1953
+      B+=100;B+A=0.035 6;B+p=0.0016 3
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.33762648833898945
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0006578207274018304
+      mean_lifetime:
+        value: 2.9618529189450418
+        unit: s
+        relation: =
+        uncertainty: 0.005770780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-24
+    evaluation_entry_id: MAT:0013:NUBASE2020:24:0
+  - A: 24
+    Z: 13
+    N: 11
+    state_index: 1
+    state_label: m
+    source_label: 24Al
+    mass_excess:
+      value: 376.99
+      unit: keV
+      raw: "376.99"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.25"
+      uncertainty: 0.25
+    excitation_energy:
+      value: 425.8
+      unit: keV
+      raw: "425.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.1"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 130
+      unit: ms
+      raw: "130"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+      status: RADIOACTIVE
+    spin_parity_raw: 1+
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: "1968"
+    decay_and_abundance_raw: IT=82.5 30;B+=17.5 30;B+A=0.028 6
+    source_line: 230
+    raw_line: 024 0131   24Al m    376.99       0.25      425.8        0.1          130     ms 3      1+            07          1968
+      IT=82.5 30;B+=17.5 30;B+A=0.028 6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.005331901388922656
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00012304387820590744
+      mean_lifetime:
+        value: 187.55035531556524
+        unit: ms
+        relation: =
+        uncertainty: 4.328085122666891
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-24m
+    evaluation_entry_id: MAT:0013:NUBASE2020:24:1
+  - A: 24
+    Z: 13
+    N: 11
+    state_index: 8
+    state_label: i
+    source_label: 24Al
+    mass_excess:
+      value: 5900
+      unit: keV
+      raw: "5900"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_energy:
+      value: 5949
+      unit: keV
+      raw: "5949"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "3"
+      uncertainty: 3
+    excitation_origin: p
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+      T=2
+    ensdf_update_year_raw: "07"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 231
+    raw_line: "024 0138   24Al i   5900          3        5949          3       p                      0+      T=2   07               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-24i
+    evaluation_entry_id: MAT:0013:NUBASE2020:24:8
+  - A: 25
+    Z: 13
+    N: 12
+    state_index: 0
+    state_label: ground
+    source_label: 25Al
+    mass_excess:
+      value: -8915.97
+      unit: keV
+      raw: "-8915.97"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.1666
+      unit: s
+      raw: "7.1666"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.0023"
+      uncertainty: 0.0023
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: "1953"
+    decay_and_abundance_raw: B+=100
+    source_line: 241
+    raw_line: 025 0130   25Al    -8915.97       0.06                                  7.1666 s 0.0023 5/2+          09          1953 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.09671911095358263
+        unit: 1/s
+        relation: =
+        uncertainty: 0.00003104037551882902
+      mean_lifetime:
+        value: 10.339218280034846
+        unit: s
+        relation: =
+        uncertainty: 0.003318198594044616
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-25
+    evaluation_entry_id: MAT:0013:NUBASE2020:25:0
+  - A: 25
+    Z: 13
+    N: 12
+    state_index: 8
+    state_label: i
+    source_label: 25Al
+    mass_excess:
+      value: -1014.9
+      unit: keV
+      raw: "-1014.9"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.8"
+      uncertainty: 1.8
+    excitation_energy:
+      value: 7901.1
+      unit: keV
+      raw: "7901.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.8"
+      uncertainty: 1.8
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 5/2+    T=3/2
+    ensdf_update_year_raw: "09"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 242
+    raw_line: "025 0138   25Al i  -1014.9        1.8      7901.1        1.8                            5/2+    T=3/2 09               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-25i
+    evaluation_entry_id: MAT:0013:NUBASE2020:25:8
+  - A: 26
+    Z: 13
+    N: 13
+    state_index: 0
+    state_label: ground
+    source_label: 26Al
+    mass_excess:
+      value: -12210.14
+      unit: keV
+      raw: "-12210.14"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 717
+      unit: ky
+      raw: "717"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "24"
+      uncertainty: 24
+      status: RADIOACTIVE
+    spin_parity_raw: 5+
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: B+=100
+    source_line: 252
+    raw_line: 026 0130   26Al   -12210.14       0.07                                717     ky 24     5+            16          1934 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0009667324694002026
+        unit: 1/ky
+        relation: =
+        uncertainty: 0.00003235924583766369
+      mean_lifetime:
+        value: 1034.412344317387
+        unit: ky
+        relation: =
+        uncertainty: 34.624680981335125
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-26
+    evaluation_entry_id: MAT:0013:NUBASE2020:26:0
+  - A: 26
+    Z: 13
+    N: 13
+    state_index: 1
+    state_label: m
+    source_label: 26Al
+    mass_excess:
+      value: -11981.83
+      unit: keV
+      raw: "-11981.83"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.07"
+      uncertainty: 0.07
+    excitation_energy:
+      value: 228.306
+      unit: keV
+      raw: "228.306"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.013"
+      uncertainty: 0.013
+    excitation_origin: MD
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6346
+      unit: ms
+      raw: "6346.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 0+      T=1
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: B+=100
+    source_line: 253
+    raw_line: 026 0131   26Al m -11981.83       0.07      228.306      0.013   MD  6346.0   ms 0.5    0+      T=1   16          1934 B+=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.00010922583998738501
+        unit: 1/ms
+        relation: =
+        uncertainty: 8.605880868845337e-9
+      mean_lifetime:
+        value: 9155.342729481363
+        unit: ms
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-26m
+    evaluation_entry_id: MAT:0013:NUBASE2020:26:1
+  - A: 27
+    Z: 13
+    N: 14
+    state_index: 0
+    state_label: ground
+    source_label: 27Al
+    mass_excess:
+      value: -17196.86
+      unit: keV
+      raw: "-17196.86"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: stbl
+      null_reason: NOT_APPLICABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: STABLE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1922"
+    decay_and_abundance_raw: IS=100
+    source_line: 264
+    raw_line: 027 0130   27Al   -17196.86       0.05                                stbl              5/2+*         11          1922 IS=100
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: Stable in the dated evaluation; no finite half-life supplied
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-27
+    evaluation_entry_id: MAT:0013:NUBASE2020:27:0
+  - A: 27
+    Z: 13
+    N: 14
+    state_index: 8
+    state_label: i
+    source_label: 27Al
+    mass_excess:
+      value: -10383.1
+      unit: keV
+      raw: "-10383.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+    excitation_energy:
+      value: 6813.8
+      unit: keV
+      raw: "6813.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 1/2+    T=3/2
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: IT=100
+    source_line: 265
+    raw_line: 027 0138   27Al i -10383.1        0.7      6813.8        0.7                            1/2+    T=3/2 11               IT=100
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-27i
+    evaluation_entry_id: MAT:0013:NUBASE2020:27:8
+  - A: 28
+    Z: 13
+    N: 15
+    state_index: 0
+    state_label: ground
+    source_label: 28Al
+    mass_excess:
+      value: -16850.72
+      unit: keV
+      raw: "-16850.72"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.05"
+      uncertainty: 0.05
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 2.245
+      unit: m
+      raw: "2.245"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.005"
+      uncertainty: 0.005
+      status: RADIOACTIVE
+    spin_parity_raw: 3+*
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1934"
+    decay_and_abundance_raw: B-=100
+    source_line: 276
+    raw_line: 028 0130   28Al   -16850.72       0.05                                  2.245  m 0.005  3+*           13          1934 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.3087515280890625
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0006876426015346603
+      mean_lifetime:
+        value: 3.238850366795723
+        unit: m
+        relation: =
+        uncertainty: 0.007213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-28
+    evaluation_entry_id: MAT:0013:NUBASE2020:28:0
+  - A: 28
+    Z: 13
+    N: 15
+    state_index: 8
+    state_label: i
+    source_label: 28Al
+    mass_excess:
+      value: -10858.14
+      unit: keV
+      raw: "-10858.14"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.11"
+      uncertainty: 0.11
+    excitation_energy:
+      value: 5992.58
+      unit: keV
+      raw: "5992.58"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.10"
+      uncertainty: 0.1
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: null
+      unit: null
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+      status: UNAVAILABLE
+    spin_parity_raw: 0+      T=2
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: ""
+    decay_and_abundance_raw: ""
+    source_line: 277
+    raw_line: "028 0138   28Al i -10858.14       0.11     5992.58       0.10                           0+      T=2   13               "
+    derived_decay:
+      status: NOT-CALCULATED
+      reason: A positive numeric half-life and unit are required
+      decay_constant: null
+      mean_lifetime: null
+    isotope_ref: MAT:0013:ISO:Al-28i
+    evaluation_entry_id: MAT:0013:NUBASE2020:28:8
+  - A: 29
+    Z: 13
+    N: 16
+    state_index: 0
+    state_label: ground
+    source_label: 29Al
+    mass_excess:
+      value: -18207.8
+      unit: keV
+      raw: "-18207.8"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6.56
+      unit: m
+      raw: "6.56"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1939"
+    decay_and_abundance_raw: B-=100
+    source_line: 290
+    raw_line: 029 0130   29Al   -18207.8        0.3                                   6.56   m 0.06   5/2+*         12          1939 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.1056626799634063
+        unit: 1/m
+        relation: =
+        uncertainty: 0.0009664269508848136
+      mean_lifetime:
+        value: 9.4640794682316
+        unit: m
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-29
+    evaluation_entry_id: MAT:0013:NUBASE2020:29:0
+  - A: 30
+    Z: 13
+    N: 17
+    state_index: 0
+    state_label: ground
+    source_label: 30Al
+    mass_excess:
+      value: -15864.1
+      unit: keV
+      raw: "-15864.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.9"
+      uncertainty: 1.9
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3.62
+      unit: s
+      raw: "3.62"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.06"
+      uncertainty: 0.06
+      status: RADIOACTIVE
+    spin_parity_raw: 3+*
+    ensdf_update_year_raw: "10"
+    discovery_year_raw: "1961"
+    decay_and_abundance_raw: B-=100
+    source_line: 302
+    raw_line: 030 0130   30Al   -15864.1        1.9                                   3.62   s 0.06   3+*           10          1961 B-=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.19147712170164233
+        unit: 1/s
+        relation: =
+        uncertainty: 0.0031736539508559498
+      mean_lifetime:
+        value: 5.222556048018048
+        unit: s
+        relation: =
+        uncertainty: 0.0865617024533378
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-30
+    evaluation_entry_id: MAT:0013:NUBASE2020:30:0
+  - A: 31
+    Z: 13
+    N: 18
+    state_index: 0
+    state_label: ground
+    source_label: 31Al
+    mass_excess:
+      value: -14950.7
+      unit: keV
+      raw: "-14950.7"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.2"
+      uncertainty: 2.2
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 644
+      unit: ms
+      raw: "644"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "25"
+      uncertainty: 25
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "13"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: B-=100;B-n<1.6
+    source_line: 313
+    raw_line: 031 0130   31Al   -14950.7        2.2                                 644     ms 25     5/2+*         13          1971
+      B-=100;B-n<1.6
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0010763154977638902
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00004178243391940568
+      mean_lifetime:
+        value: 929.0956063324925
+        unit: ms
+        relation: =
+        uncertainty: 36.06737602222409
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-31
+    evaluation_entry_id: MAT:0013:NUBASE2020:31:0
+  - A: 32
+    Z: 13
+    N: 19
+    state_index: 0
+    state_label: ground
+    source_label: 32Al
+    mass_excess:
+      value: -11099
+      unit: keV
+      raw: "-11099"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 32.6
+      unit: ms
+      raw: "32.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+      status: RADIOACTIVE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: B-=100;B-n=0.7 5
+    source_line: 326
+    raw_line: 032 0130   32Al   -11099          7                                    32.6   ms 0.5    1+*           11          1971
+      B-=100;B-n=0.7 5
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.021262183452759056
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00032610710817115114
+      mean_lifetime:
+        value: 47.031858332980214
+        unit: ms
+        relation: =
+        uncertainty: 0.7213475204444817
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-32
+    evaluation_entry_id: MAT:0013:NUBASE2020:32:0
+  - A: 32
+    Z: 13
+    N: 19
+    state_index: 1
+    state_label: m
+    source_label: 32Al
+    mass_excess:
+      value: -10142
+      unit: keV
+      raw: "-10142"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+    excitation_energy:
+      value: 956.6
+      unit: keV
+      raw: "956.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.5"
+      uncertainty: 0.5
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 200
+      unit: ns
+      raw: "200"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "20"
+      uncertainty: 20
+      status: RADIOACTIVE
+    spin_parity_raw: (4+)
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1996"
+    decay_and_abundance_raw: IT=100
+    source_line: 327
+    raw_line: 032 0131   32Al m -10142          7         956.6        0.5          200     ns 20     (4+)          11          1996 IT=100
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0034657359027997266
+        unit: 1/ns
+        relation: =
+        uncertainty: 0.0003465735902799727
+      mean_lifetime:
+        value: 288.5390081777927
+        unit: ns
+        relation: =
+        uncertainty: 28.85390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-32m
+    evaluation_entry_id: MAT:0013:NUBASE2020:32:1
+  - A: 33
+    Z: 13
+    N: 20
+    state_index: 0
+    state_label: ground
+    source_label: 33Al
+    mass_excess:
+      value: -8497
+      unit: keV
+      raw: "-8497"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 41.46
+      unit: ms
+      raw: "41.46"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.09"
+      uncertainty: 0.09
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+*
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1971"
+    decay_and_abundance_raw: B-=100;B-n=8.5 7
+    source_line: 342
+    raw_line: 033 0130   33Al    -8497          7                                    41.46  ms 0.09   5/2+*         11          1971
+      B-=100;B-n=8.5 7
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.016718455874576585
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003629187237607074
+      mean_lifetime:
+        value: 59.814136395256426
+        unit: ms
+        relation: =
+        uncertainty: 0.12984255368000672
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-33
+    evaluation_entry_id: MAT:0013:NUBASE2020:33:0
+  - A: 34
+    Z: 13
+    N: 21
+    state_index: 0
+    state_label: ground
+    source_label: 34Al
+    mass_excess:
+      value: -2997.6
+      unit: keV
+      raw: "-2997.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.1"
+      uncertainty: 2.1
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 53.73
+      unit: ms
+      raw: "53.73"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.13"
+      uncertainty: 0.13
+      status: RADIOACTIVE
+    spin_parity_raw: 4-
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1977"
+    decay_and_abundance_raw: B-=100;B-n=26 4;B-2n ?
+    source_line: 355
+    raw_line: 034 0130   34Al    -2997.6        2.1                                  53.73  ms 0.13   4-            12          1977
+      B-=100;B-n=26 4;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.012900561707797234
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00003121297267845972
+      mean_lifetime:
+        value: 77.516004546964
+        unit: ms
+        relation: =
+        uncertainty: 0.18755035531556524
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-34
+    evaluation_entry_id: MAT:0013:NUBASE2020:34:0
+  - A: 34
+    Z: 13
+    N: 21
+    state_index: 1
+    state_label: m
+    source_label: 34Al
+    mass_excess:
+      value: -2951.1
+      unit: keV
+      raw: "-2951.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "2.1"
+      uncertainty: 2.1
+    excitation_energy:
+      value: 46.47
+      unit: keV
+      raw: "46.47"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.17"
+      uncertainty: 0.17
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 22.1
+      unit: ms
+      raw: "22.1"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.2"
+      uncertainty: 0.2
+      status: RADIOACTIVE
+    spin_parity_raw: 1+*
+    ensdf_update_year_raw: ""
+    discovery_year_raw: "2012"
+    decay_and_abundance_raw: B-~100;B-n=11 4;B-2n ?
+    source_line: 356
+    raw_line: 034 0131   34Al m  -2951.1        2.1        46.47       0.17          22.1   ms 0.2    1+*                       2012
+      B-~100;B-n=11 4;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.03136412581719209
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00028383824268952116
+      mean_lifetime:
+        value: 31.883560403646094
+        unit: ms
+        relation: =
+        uncertainty: 0.2885390081777927
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-34m
+    evaluation_entry_id: MAT:0013:NUBASE2020:34:1
+  - A: 35
+    Z: 13
+    N: 22
+    state_index: 0
+    state_label: ground
+    source_label: 35Al
+    mass_excess:
+      value: -224
+      unit: keV
+      raw: "-224"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "7"
+      uncertainty: 7
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 38.16
+      unit: ms
+      raw: "38.16"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.21"
+      uncertainty: 0.21
+      status: RADIOACTIVE
+    spin_parity_raw: (5/2+,3/2+)
+    ensdf_update_year_raw: "11"
+    discovery_year_raw: "1979"
+    decay_and_abundance_raw: B-=100;B-n=35.8 17;B-2n ?
+    source_line: 369
+    raw_line: 035 0130   35Al     -224          7                                    38.16  ms 0.21   (5/2+,3/2+)   11          1979
+      B-=100;B-n=35.8 17;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.01816423429140318
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.00009996040883633826
+      mean_lifetime:
+        value: 55.05324276032284
+        unit: ms
+        relation: =
+        uncertainty: 0.3029659585866823
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-35
+    evaluation_entry_id: MAT:0013:NUBASE2020:35:0
+  - A: 36
+    Z: 13
+    N: 23
+    state_index: 0
+    state_label: ground
+    source_label: 36Al
+    mass_excess:
+      value: 5950
+      unit: keV
+      raw: "5950"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "150"
+      uncertainty: 150
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 90
+      unit: ms
+      raw: "90"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "40"
+      uncertainty: 40
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1979"
+    decay_and_abundance_raw: B-=100;B-n<31;B-2n ?
+    source_line: 384
+    raw_line: 036 0130   36Al     5950        150                                    90     ms 40                   12          1979
+      B-=100;B-n<31;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.007701635339554948
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.003422949039802199
+      mean_lifetime:
+        value: 129.84255368000672
+        unit: ms
+        relation: =
+        uncertainty: 57.70780163555854
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-36
+    evaluation_entry_id: MAT:0013:NUBASE2020:36:0
+  - A: 37
+    Z: 13
+    N: 24
+    state_index: 0
+    state_label: ground
+    source_label: 37Al
+    mass_excess:
+      value: 9810
+      unit: keV
+      raw: "9810"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "180"
+      uncertainty: 180
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 11.4
+      unit: ms
+      raw: "11.4"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.3"
+      uncertainty: 0.3
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "12"
+    discovery_year_raw: "1979"
+    decay_and_abundance_raw: B-=100;B-n=52 5;B-2n>1
+    source_line: 399
+    raw_line: 037 0130   37Al     9810        180                                    11.4   ms 0.3    5/2+#         12          1979
+      B-=100;B-n=52 5;B-2n>1
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06080238425964432
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.0016000627436748504
+      mean_lifetime:
+        value: 16.446723466134184
+        unit: ms
+        relation: =
+        uncertainty: 0.43280851226668904
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-37
+    evaluation_entry_id: MAT:0013:NUBASE2020:37:0
+  - A: 38
+    Z: 13
+    N: 25
+    state_index: 0
+    state_label: ground
+    source_label: 38Al
+    mass_excess:
+      value: 16470
+      unit: keV
+      raw: 16470#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 150#
+      uncertainty: 150
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 9
+      unit: ms
+      raw: "9.0"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "0.7"
+      uncertainty: 0.7
+      status: RADIOACTIVE
+    spin_parity_raw: 0-#
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1989"
+    decay_and_abundance_raw: B-=100;B-n=84 19;B-2n ?
+    source_line: 414
+    raw_line: 038 0130   38Al    16470#       150#                                    9.0   ms 0.7    0-#           17          1989
+      B-=100;B-n=84 19;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.07701635339554948
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.005990160819653848
+      mean_lifetime:
+        value: 12.984255368000671
+        unit: ms
+        relation: =
+        uncertainty: 1.0098865286222745
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-38
+    evaluation_entry_id: MAT:0013:NUBASE2020:38:0
+  - A: 39
+    Z: 13
+    N: 26
+    state_index: 0
+    state_label: ground
+    source_label: 39Al
+    mass_excess:
+      value: 21490
+      unit: keV
+      raw: 21490#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 7.6
+      unit: ms
+      raw: "7.6"
+      null_reason: null
+      relation: =
+      estimated: false
+      uncertainty_raw: "1.6"
+      uncertainty: 1.6
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "18"
+    discovery_year_raw: "1989"
+    decay_and_abundance_raw: B-=100;B-n=97 22;B-2n ?
+    source_line: 433
+    raw_line: 039 0130   39Al    21490#       300#                                    7.6   ms 1.6    5/2+#         18          1989
+      B-=100;B-n=97 22;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-EVALUATION
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.0912035763894665
+        unit: 1/ms
+        relation: =
+        uncertainty: 0.019200752924098213
+      mean_lifetime:
+        value: 10.964482310756122
+        unit: ms
+        relation: =
+        uncertainty: 2.3083120654223417
+      uncertainty_method: First-order propagation of the source symmetric uncertainty; no new confidence level assigned
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-39
+    evaluation_entry_id: MAT:0013:NUBASE2020:39:0
+  - A: 40
+    Z: 13
+    N: 27
+    state_index: 0
+    state_label: ground
+    source_label: 40Al
+    mass_excess:
+      value: 28820
+      unit: keV
+      raw: 28820#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 300#
+      uncertainty: 300
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 10
+      unit: ms
+      raw: 10#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">260ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "17"
+    discovery_year_raw: "1996"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 449
+    raw_line: 040 0130   40Al    28820#       300#                                   10#    ms >260ns               17          1996
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.06931471805599453
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 14.426950408889635
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-40
+    evaluation_entry_id: MAT:0013:NUBASE2020:40:0
+  - A: 41
+    Z: 13
+    N: 28
+    state_index: 0
+    state_label: ground
+    source_label: 41Al
+    mass_excess:
+      value: 34590
+      unit: keV
+      raw: 34590#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 400#
+      uncertainty: 400
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 6
+      unit: ms
+      raw: 6#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">260ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "1997"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 466
+    raw_line: 041 0130   41Al    34590#       400#                                    6#    ms >260ns 5/2+#         16          1997
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.11552453009332421
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 8.656170245333781
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-41
+    evaluation_entry_id: MAT:0013:NUBASE2020:41:0
+  - A: 42
+    Z: 13
+    N: 29
+    state_index: 0
+    state_label: ground
+    source_label: 42Al
+    mass_excess:
+      value: 41990
+      unit: keV
+      raw: 41990#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 500#
+      uncertainty: 500
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 3
+      unit: ms
+      raw: 3#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">170ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: ""
+    ensdf_update_year_raw: "16"
+    discovery_year_raw: "2007"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 482
+    raw_line: 042 0130   42Al    41990#       500#                                    3#    ms >170ns               16          2007
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.23104906018664842
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 4.328085122666891
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-42
+    evaluation_entry_id: MAT:0013:NUBASE2020:42:0
+  - A: 43
+    Z: 13
+    N: 30
+    state_index: 0
+    state_label: ground
+    source_label: 43Al
+    mass_excess:
+      value: 48270
+      unit: keV
+      raw: 48270#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: 600#
+      uncertainty: 600
+    excitation_energy:
+      value: null
+      unit: keV
+      raw: ""
+      null_reason: UNAVAILABLE
+      relation: =
+      estimated: false
+      uncertainty_raw: ""
+      uncertainty: null
+    excitation_origin: ""
+    ordering_uncertain: false
+    ordering_inverted: false
+    half_life:
+      value: 4
+      unit: ms
+      raw: 4#
+      null_reason: null
+      relation: =
+      estimated: true
+      uncertainty_raw: ">170ns"
+      uncertainty: null
+      status: RADIOACTIVE
+    spin_parity_raw: 5/2+#
+    ensdf_update_year_raw: "15"
+    discovery_year_raw: "2007"
+    decay_and_abundance_raw: B- ?;B-n ?;B-2n ?
+    source_line: 498
+    raw_line: 043 0130   43Al    48270#       600#                                    4#    ms >170ns 5/2+#         15          2007
+      B- ?;B-n ?;B-2n ?
+    derived_decay:
+      status: DERIVED-FROM-ESTIMATE
+      model: Single exponential decay; lambda = ln(2)/T_half; tau = T_half/ln(2)
+      decay_constant:
+        value: 0.17328679513998632
+        unit: 1/ms
+        relation: =
+        uncertainty: null
+      mean_lifetime:
+        value: 5.7707801635558535
+        unit: ms
+        relation: =
+        uncertainty: null
+      uncertainty_method: "Not propagated: limit, absent or asymmetric source uncertainty retained in half_life"
+      caveat: Arithmetic model result, not a new measurement. Source estimates and bounds remain estimates and bounds; displayed
+        floating-point digits do not imply additional precision.
+    isotope_ref: MAT:0013:ISO:Al-43
+    evaluation_entry_id: MAT:0013:NUBASE2020:43:0

@@ -17,6 +17,7 @@
 #fallback { padding: 40px; max-width: 640px; }
 #back { display: inline-block; margin-bottom: 10px; color: var(--accent); }
 .hint { font-size: 12px; color: var(--muted); }
+@media(max-width:700px){#view3d{display:block}#panel3d{width:auto;border-right:0;border-bottom:1px solid var(--line)}#stage{height:60vh;min-height:400px}}
 </style>
 </head>
 <body>
@@ -43,11 +44,12 @@
 } }
 </script>
 <script type="module">
+import {normalizeScene} from './modules/scene-data.mjs';
 const stage = document.getElementById("stage");
 const fallback = (msg) => {
   const f = document.getElementById("fallback");
   f.hidden = false;
-  f.innerHTML = `<h2>3D unavailable offline</h2><p>${msg}</p><p>The scene data below is still the record-derived geometry:</p><pre id="raw"></pre>`;
+  f.innerHTML = `<h2>3D view unavailable</h2><p>${msg}</p><p><a href="./scenes/index.json">Open the model catalogue and source scene files</a>.</p>`;
   return f;
 };
 let scenes = [];
@@ -86,7 +88,11 @@ try {
   fallback("The local 3D libraries could not start. Scene files remain available under book/scenes/.");
   throw new Error("no three");
 }
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ antialias: true }); }
+catch(error){fallback('This browser could not create a WebGL view. The source scenes remain available.');throw error;}
+renderer.domElement.setAttribute('role','img');
+renderer.domElement.setAttribute('aria-label','Interactive model. Its description and source are shown beside the view.');
 renderer.setClearColor(0x0f141b);
 stage.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
@@ -106,7 +112,15 @@ function sizeStage() {
 window.addEventListener("resize", sizeStage);
 const groups = {};
 function clearGroup(name) {
-  if (groups[name]) { scene.remove(groups[name]); groups[name] = null; }
+  if (groups[name]) {
+    groups[name].traverse(object=>{
+      object.geometry?.dispose();
+      for(const material of Array.isArray(object.material)?object.material:[object.material]){
+        material?.map?.dispose();material?.dispose();
+      }
+    });
+    scene.remove(groups[name]); groups[name] = null;
+  }
 }
 function textSprite(text) {
   const c = document.createElement("canvas");
@@ -122,9 +136,13 @@ function textSprite(text) {
   s.scale.set(1.4, 0.35, 1);
   return s;
 }
+let sceneRequest=0;
 async function loadScene(i) {
+  const request=++sceneRequest;
   const meta = scenes[i];
-  const d = await fetch("./scenes/" + meta.file).then((r) => r.json());
+  const d = normalizeScene(await fetch("./scenes/" + meta.file).then((r) => {if(!r.ok)throw new Error('Scene unavailable');return r.json();}));
+  if(request!==sceneRequest)return;
+  document.getElementById('fallback').hidden=true;
   document.getElementById("cap").textContent = d.title + " — " + d.caption + ` [${d.units}]`;
   ["atoms", "bonds", "cell", "labels"].forEach(clearGroup);
   // normalize coordinates into view
@@ -178,13 +196,14 @@ function applyLayers() {
 }
 ["lay-atoms", "lay-bonds", "lay-cell", "lay-labels", "lay-spin"].forEach((id) =>
   document.getElementById(id).addEventListener("change", applyLayers));
-sel.addEventListener("change", () => loadScene(+sel.value));
+const showScene=()=>loadScene(+sel.value).catch(()=>fallback('The selected scene could not be loaded or contains unsupported geometry. Choose another model or inspect its source.'));
+sel.addEventListener("change", showScene);
 document.getElementById("reset").addEventListener("click", () => {
   camera.position.set(5.5, 4, 6.5);
   controls.target.set(0, 0, 0);
 });
 (function tick() { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); })();
-loadScene(0);
+showScene();
 sizeStage();
 </script>
 </body>

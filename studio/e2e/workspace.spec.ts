@@ -31,10 +31,9 @@ test('periodic navigation, keyboard search, mobile and accessibility',async({pag
  await page.setViewportSize({width:390,height:844});await expect(page.locator('#manuscript')).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
 });
-test('Carbon review blocks publication and failed loads can retry',async({page})=>{
+test('resolved Carbon citations retain draft review and failed loads can retry',async({page})=>{
  await page.goto('/');await page.getByRole('button',{name:'Open Carbon',exact:true}).click();await expect(page.locator('#manuscript')).toBeVisible();
- await page.getByRole('button',{name:/04Review/}).click();await expect(page.locator('.review')).toContainText('SRC-000084');await expect(page.locator('.review')).toContainText('BLOCKED');
+ await page.getByRole('button',{name:/04Review/}).click();await expect(page.locator('.review')).toContainText('SRC-000084');await expect(page.locator('.review')).toContainText('No unresolved registry IDs detected');await expect(page.locator('.review')).toContainText('Scientific and editorial review remain required');
  await page.route('**/publication-elements.json',r=>r.fulfill({status:503,body:'offline'}));await page.reload();await expect(page.getByRole('alert')).toContainText('503');
  await page.unroute('**/publication-elements.json');await page.getByRole('button',{name:'Retry',exact:true}).click();await expect(page.locator('#manuscript')).toBeVisible();
 });
-

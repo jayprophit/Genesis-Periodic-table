@@ -5,8 +5,8 @@
 .vis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin: 18px 0 }
 .vis-item { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--paper); text-decoration: none; color: var(--ink); transition: border-color .12s }
 .vis-item:hover { border-color: var(--accent) }
-.vis-item img { width: 100%; height: 160px; object-fit: cover; display: block }
-.vis-cell { min-width: 0; overflow: hidden; }
+.vis-item img { width: 100%; height: 160px; object-fit: contain; background: var(--bg); display: block }
+.vis-cell { min-width: 0; overflow: hidden; border-radius: 4px; }
 .vis-cell img, #page figure img { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; }
 .vis-item .vis-caption { padding: 10px 12px; font-size: 12px }
 .vis-item .vis-caption strong { display: block; margin-bottom: 2px }
@@ -57,10 +57,10 @@ a.periodic-cell { background: var(--accent); color: var(--bg); border-color: var
 .periodic-cell[aria-disabled=true].heat-6,
 .periodic-cell[aria-disabled=true].heat-7 { opacity: .5 }
 .data-viz-section { margin-top: 40px }
-.viz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0 }
-.viz-card { border: 1px solid var(--line); border-radius: 6px; padding: 16px; background: var(--paper) }
+.viz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0; min-width: 0 }
+.viz-card { border: 1px solid var(--line); border-radius: 6px; padding: 16px; background: var(--paper); overflow: hidden; min-width: 0 }
 .viz-card h3 { font: 600 14px var(--serif); margin: 0 0 12px; color: var(--muted) }
-.chart-container { position: relative; height: 220px; min-width: 0; overflow: hidden }
+.chart-container { position: relative; height: 220px; min-width: 0; max-width: 100%; overflow: hidden }
 .chart-container canvas { display: block; max-width: 100%; max-height: 100%; }
 .cite-options { display: flex; gap: 8px; margin: 12px 0 }
 .cite-options button { padding: 8px 16px; font-size: 12px }
